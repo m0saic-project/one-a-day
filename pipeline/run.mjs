@@ -19,6 +19,7 @@ import { runProcess } from "./lib/spawn.mjs";
 import { currentBranch, isClean, porcelain, pullFfOnly } from "./lib/git.mjs";
 import { dayDir as dayDirOf, ensureDay, isIsoDate, patchRun, patchState, readRun, readState, renderTemplate, todayIso, dayNumber, readJson } from "./lib/journal.mjs";
 import { runGate } from "./lib/gate.mjs";
+import { appendTrace } from "./lib/trace.mjs";
 
 const PIPELINE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(PIPELINE, "..");
@@ -114,6 +115,12 @@ async function runPhase(adapter, phase) {
     say(`[${phase.id}] ▶ call ${call}/${maxCalls} via ${AGENT}${MODEL ? ` (${MODEL})` : ""}, cap ${(timeoutMs / 60000).toFixed(0)} min`);
     const t0 = Date.now();
     const res = await adapter.run({ prompt, cwd: REPO, logDir: path.join(DAY_DIR, "logs"), label, timeoutMs, model: MODEL, config: CONFIG.adapters?.[AGENT] ?? {}, env: CHILD_ENV });
+    // journal/<date>/trace.json: the phase's tool calls, tokens and timing, from the
+    // agent CLI's own stream — the ship phase copies it into WHY.timeline.
+    if (res.trace) {
+      const declared = readRun(DAY_DIR).model?.selfDeclared ?? MODEL ?? CONFIG.adapters?.[AGENT]?.model ?? AGENT;
+      try { appendTrace(DAY_DIR, res.trace, { model: declared, pricing: CONFIG.pricing ?? null }); } catch (e) { say(`[${phase.id}] ⚠ trace not recorded: ${e.message}`); }
+    }
     const done = phaseDone(phase);
     patchRun(DAY_DIR, { phases: { [phase.id]: { calls: call, lastExitCode: res.exitCode, timedOut: !!res.timedOut, ms: Date.now() - t0, done } } });
     say(`[${phase.id}] ◀ exit ${res.exitCode}${res.timedOut ? " (timed out)" : ""} after ${((Date.now() - t0) / 60000).toFixed(1)} min — ${done ? "done" : "not done"}`);

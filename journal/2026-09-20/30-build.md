@@ -3,7 +3,7 @@
 ## Template: @one-a-day/dev/og-card/v1
 
 Scaffolded with `npm run new -- dev/og-card --title "OG Card"` (new pack
-`dev`, ordinal 02). The scaffold's shape is kept: typed props with
+`dev`; titled by its date since the naming convention landed the same day). The scaffold's shape is kept: typed props with
 deterministic defaults, every drawn prop bound to its rect, svg-rasterized
 copy measured before it is placed, geometry from `ctx.target`, fail-fast
 validation in `render()`, `outputHints.format = png`. The geometry is a pure
@@ -66,5 +66,23 @@ kicker still uses the raw accent as ink, so a pale accent on the light preset
 - **Scout tooling:** `pipeline/research/reddit.mjs` gets HTTP 403 from this
   machine for every subreddit (reddit blocks anonymous JSON); the scout used
   HN's Algolia API, web search and `fetch-text.mjs` instead.
+
+## Why-tutorial (added with the convention, same day)
+
+The problem page quotes dev.to's "hand-craft social images for every blog
+post ... Twitter shows the old version" and names the three 2026 Show HNs
+that rebuilt the same plumbing, with six of the nine scout sources listed
+(the rest pointed at `10-scout.md`). The solution page says what shipped:
+front matter in, PNG out, measured text, the band that survives thumbnails.
+
+## Layout contract + timeline (added with the conventions, same day)
+
+`layoutContract()` declares measured `textFits` for every text label, the
+band's full width and bottom position, the title's margins; the test sweeps
+it at seven canvases for four prop cases; `tools/check-layout.mjs` sweeps
+the defaults on every build. The tutorial's sixth page is the harness
+agent-timeline card; day 001 ran interactively, so its numbers are
+self-reported (phase boundaries from the journal's timestamps, tool calls
+counted by the agent, no tokens, no cost) and the card says so.
 
 ## In place now: c

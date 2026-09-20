@@ -7,6 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { runProcess } from "../lib/spawn.mjs";
 import { patchRun, patchState, readState } from "../lib/journal.mjs";
+import { createTraceRecorder } from "../lib/trace.mjs";
 
 export async function available() { return true; }
 
@@ -20,9 +21,18 @@ export async function run({ prompt, cwd, logDir, label, env = {} }) {
   const pack = process.env.ONE_A_DAY_FAKE_PACK ?? "dev";
   const sh = (cmd, args) => runProcess({ cmd, args, cwd, env, timeoutMs: 10 * 60 * 1000, logFile: log });
   fs.appendFileSync(log, `[fake] phase ${phase}\n`);
+  // A canned trace, so the day's WHY.timeline has runner numbers like a real day.
+  const startedAt = Date.now();
+  const m = /^(.*?)-(\d+)$/.exec(label);
+  const trace = createTraceRecorder({ phase: m ? m[1] : label, call: m ? Number(m[2]) : 1, startedAt });
+  trace.onLine(JSON.stringify({ type: "assistant", message: { usage: { input_tokens: 1200, output_tokens: 300 }, content: [{ type: "tool_use", id: `${label}-1`, name: "Bash", input: { command: `fake ${phase}` } }] } }));
+  trace.onLine(JSON.stringify({ type: "user", message: { content: [{ type: "tool_result", tool_use_id: `${label}-1` }] } }));
+  trace.onLine(JSON.stringify({ type: "result", total_cost_usd: 0.01, num_turns: 1 }));
   if (phase === "scout") {
     w("10-scout.md", `# Scout — ${date}\n\nCandidate: a fake use case (test double).\n\nSources: none.\n\nPick: fake.\n`);
-    patchState(dayDir, { scout: "done", useCase: "fake use case", sources: [], tags: ["fake"] });
+    // `who` + one source: the scaffold pre-fills the WHY spec from these, and the
+    // why-tutorial gate refuses a placeholder - a fake day must still explain itself.
+    patchState(dayDir, { scout: "done", useCase: "fake use case", who: "fake people, found nowhere", sources: ["https://example.com/fake-use-case"], tags: ["fake"] });
     patchRun(dayDir, { model: { selfDeclared: "fake-model" } });
   } else if (phase === "plan") {
     w("20-brief.md", `# Brief — ${date}\n\nPack: ${pack}. Slug: ${slug}. A static card. Canvas 1280x720.\n`);
@@ -50,5 +60,5 @@ export async function run({ prompt, cwd, logDir, label, env = {} }) {
     w("50-ship.md", `# Ship — ${date}\n\nShipped @one-a-day/${st.pack}/${st.slug}/v1 (fake).\n`);
     patchState(dayDir, { ship: "done" });
   }
-  return { exitCode: 0, timedOut: false, ms: 1, transcript: null, log };
+  return { exitCode: 0, timedOut: false, ms: Date.now() - startedAt, transcript: null, log, trace: trace.finish({ exitCode: 0 }) };
 }

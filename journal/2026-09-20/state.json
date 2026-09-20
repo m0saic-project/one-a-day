@@ -35,5 +35,6 @@
   "decision": "ship",
   "pick": "c",
   "critique": "done",
-  "ship": "done"
+  "ship": "done",
+  "who": "Developers and technical bloggers who publish from a build pipeline; found on Hacker News and dev.to."
 }

@@ -42,11 +42,11 @@ exports.robotMark = exports.ROBOT_M_AVAILABLE
 /** The canonical card, built by the factory. */
 const card = (0, template_utils_1.defineHelloWorldTemplate)({
     id: exports.HELLO_WORLD_ID,
-    label: "01 · Hello World",
+    label: "Hello World",
     // The subline — the muted line under the greeting. One string, one edit.
     subline: `by ${repo_1.TEMPLATE_REPO.displayName}`,
     tags: ["basics", "starter", "brand", "hello", "robots"],
-    description: "The canonical m0saic hello-world card with this repo's mark: the brand field wipes in, a navy card rises, the M appears as 33 robot faces — the agents that write this repo — then the wordmark and the greeting. The front door: what `m0saic hello-world --template-repo .` renders. Template 01; every template after it is one day of the agent's work.",
+    description: "The canonical m0saic hello-world card with this repo's mark: the brand field wipes in, a navy card rises, the M appears as 33 robot faces — the agents that write this repo — then the wordmark and the greeting. The front door: what `m0saic hello-world --template-repo .` renders. The one human-placed template; every other public template is one day of the agent's work, titled by its date.",
     ...(exports.robotMark ? { mark: exports.robotMark } : {}),
 });
 // Spelled out as a literal (not just `card`) on purpose: the repo's

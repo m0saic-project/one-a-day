@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { runProcess } from "../lib/spawn.mjs";
 import { formatEvent } from "../lib/stream-log.mjs";
+import { createTraceRecorder } from "../lib/trace.mjs";
 
 export async function available() {
   const r = await runProcess({ cmd: "codex", args: ["--version"], timeoutMs: 20_000 });
@@ -13,6 +14,8 @@ export async function run({ prompt, cwd, logDir, label, timeoutMs, model, config
   const transcript = path.join(logDir, `${label}.jsonl`);
   const log = path.join(logDir, `${label}.log`);
   const raw = fs.createWriteStream(transcript, { flags: "a" });
+  const m = /^(.*?)-(\d+)$/.exec(label);
+  const trace = createTraceRecorder({ phase: m ? m[1] : label, call: m ? Number(m[2]) : 1 });
   const args = [
     "exec",
     "-s", config.sandbox ?? "workspace-write",
@@ -29,9 +32,9 @@ export async function run({ prompt, cwd, logDir, label, timeoutMs, model, config
   const res = await runProcess({
     cmd: "codex", args, cwd, env, input: prompt, timeoutMs, logFile: log,
     onLine: (line, stream) => {
-      if (stream === "stdout") { raw.write(line + "\n"); const f = formatEvent(line, label); if (f) fs.appendFileSync(log, f + "\n"); }
+      if (stream === "stdout") { raw.write(line + "\n"); trace.onLine(line); const f = formatEvent(line, label); if (f) fs.appendFileSync(log, f + "\n"); }
     },
   });
   raw.end();
-  return { exitCode: res.exitCode, timedOut: res.timedOut, ms: res.ms, transcript, log };
+  return { exitCode: res.exitCode, timedOut: res.timedOut, ms: res.ms, transcript, log, trace: trace.finish({ exitCode: res.exitCode, timedOut: res.timedOut }) };
 }

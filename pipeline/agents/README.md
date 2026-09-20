@@ -19,8 +19,17 @@ export async function run({
   model,      // optional model name from --model / ONE_A_DAY_MODEL / config
   config,     // this adapter's block from pipeline/config.json
   env,        // extra env for the child (M0SAIC_TELEMETRY, ONE_A_DAY_*)
-}) → { exitCode, timedOut, ms, transcript, log }
+}) → { exitCode, timedOut, ms, transcript, log, trace? }
 ```
+
+`trace` is the phase call's record from `pipeline/lib/trace.mjs`
+(`createTraceRecorder` fed every stdout line, then `finish()`): tool calls
+with tool, target and timing, tokens, cost, wall time — read off the CLI's
+own event stream, never self-reported. The runner merges it into
+`journal/<date>/trace.json`; the ship-phase agent copies it into the
+template's `WHY.timeline`, the last page of its why-tutorial. An adapter
+whose CLI has no event stream may omit it (the timeline is then
+`self-reported`, and the card says so).
 
 Rules every adapter keeps:
 

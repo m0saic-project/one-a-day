@@ -27,14 +27,23 @@ is paid, `npm run verify` green on the untouched tree. Any failure = no run.
 `timeoutMin` each, and the whole day inside `dayTimeoutMin`. `ship` runs only
 when the critique set `decision=ship`.
 
+**Trace** (`lib/trace.mjs`): after every phase call the runner merges the
+adapter's record — tool calls with tool, target and timing, tokens, cost as
+the CLI reported it (Claude Code) or estimated from `config.json` `pricing`
+(dated; edit it to the list prices of the day) — into
+`journal/<date>/trace.json`. The ship-phase agent copies it into the
+template's `WHY.timeline` (`node pipeline/lib/trace.mjs --timeline
+journal/<date>/trace.json`), the last page of its why-tutorial.
+
 **Gate** (`lib/gate.mjs`, deterministic):
 
 1. Scope guard — only today's allowed paths may differ from HEAD
    (`lib/git.mjs` `classifyChanges`). Anything else is reverted and the day fails.
 2. No-ship day — everything but the journal is reverted.
 3. `npm run verify`, `tools/check-freeze.mjs`, `m0saic doctor . --json` ok.
-4. Exactly one new `src/<pack>/<slug>/vN/`; it is in the manifest; only its
+4. Exactly one new `src/<pack>/<slug>/vN/` (never in `src/harness/`); it is in the manifest; only its
    preview assets were touched; `--validate-only` exits 0 (3 = error mosaic);
+   `--tutorial --validate-only` exits 0 (the why-tutorial renders);
    `preview.png` is real; `50-ship.md` exists.
 5. `tools/check-freeze.mjs --update --tag <date>` freezes the new folder.
 6. One commit `day NNN: <id> — <title>` with `Agent:` / `Model:` trailers; push.
@@ -64,3 +73,35 @@ self-declared value stays as the record of what the agent said.
 ## Scheduling
 
 `schedule/install.md` — launchd on macOS, Task Scheduler on Windows.
+
+## Maintenance commits — `npm run submit`
+
+Work ON the repo (conventions, pipeline, harness, docs) by a human or an
+agent the human is driving ends with one command:
+
+```
+npm run submit -- "<one-line summary>" [--agent claude --model claude-opus-5] [--refreeze] [--e2e] [--push]
+```
+
+The ritual runs in order and stops before git on any failure: the branch and
+a non-empty tree; the freeze (unchanged, or `--refreeze` re-mints
+`frozen.manifest.json` and the commit names the re-frozen files — a shipped
+template never changes on `main`, so this is for pre-publication work or a
+deliberate human act); `npm run verify`; `m0saic doctor . --json`; `--e2e`
+for the fake day in all three modes. Then one commit in the day commits'
+shape:
+
+```
+maintain <date>: <summary>
+
+Areas: <folders touched (file counts)>
+Re-frozen: <shipped files whose hash moved against HEAD>   (only with --refreeze)
+Frozen: <files frozen for the first time>
+
+Ritual: verify ok - doctor ok (<n> rendered, <w> warnings) - freeze <n> files @ <tag> - e2e <ok|skipped>
+Agent: <name>
+Model: <name> (self-declared)
+```
+
+A daily run never calls it (it refuses when `ONE_A_DAY_DAY_DIR` is set); the
+runner's gate is the day's commit.

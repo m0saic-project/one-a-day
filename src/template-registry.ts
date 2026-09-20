@@ -1,5 +1,6 @@
 import type { StarterChapter, StarterRegistryEntry } from "./registry-types";
 import { basicsRegistry } from "./basics/registry";
+import { harnessRegistry } from "./harness/registry";
 import { devRegistry } from "./dev/registry";
 
 /**
@@ -9,6 +10,7 @@ import { devRegistry } from "./dev/registry";
  */
 export const CHAPTERS: StarterChapter[] = [
   { pack: "basics", entries: basicsRegistry },
+  { pack: "harness", entries: harnessRegistry },
   { pack: "dev", entries: devRegistry },
 ];
 

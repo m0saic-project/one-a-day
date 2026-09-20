@@ -7,23 +7,27 @@
  *
  * Writes:
  *   src/<pack>/<slug>/v1/<slug>.ts        the template (typed props, bound
- *                                         text, fitted copy, deterministic)
+ *                                         text, fitted copy, deterministic) with
+ *                                         its WHY spec + renderTutorial (the
+ *                                         why-tutorial convention, src/_shared/why.ts),
+ *                                         pre-filled from today's journal when
+ *                                         ONE_A_DAY_DAY_DIR (or journal/<today>/) exists
  *   src/<pack>/<slug>/v1/<slug>.test.ts   locks bindings, floors, determinism
  * and appends a row to src/<pack>/registry.ts + the import / array entry /
  * `export *` in src/<pack>/index.ts. A NEW pack also gets registry.ts +
  * index.ts and is wired into src/repo.ts, src/template-registry.ts and
  * src/index.ts (and CURRICULUM.md, where one exists).
  *
- * Ordinals: the new template is appended to its pack. If that pack is not
- * the last one, every later ordinal shifts — tools/stamp-ordinals.mjs is run
- * for you where it exists.
+ * The title is "<date> · <Title>" and the tags carry the date and the day
+ * ("2026-09-20", "day-001"): hosts sort the grid by name or by first tag, so
+ * the day is the ordinal (a repo that ships daily outgrows "NN ·" fast).
  *
  * Then: npm run build && npm run previews && npm run build && npm run verify
  */
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const argv = process.argv.slice(2);
@@ -51,14 +55,54 @@ const packDir = `src/${pack}`;
 const packExists = fs.existsSync(path.join(ROOT, packDir, "registry.ts"));
 if (fs.existsSync(path.join(ROOT, packDir, slug))) { console.error(`new-template: ${packDir}/${slug} already exists`); process.exit(1); }
 
-// ── ordinal: position in the whole repo (chapters in CHAPTERS order) ──
-const chapters = [...read("src/template-registry.ts").matchAll(/\{\s*pack:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]);
-const entriesIn = (p) => (fs.existsSync(path.join(ROOT, `src/${p}/registry.ts`)) ? (read(`src/${p}/registry.ts`).match(/^\s*slug:\s*"/gm) ?? []).length : 0);
-let ordinal = 0;
-for (const p of chapters) { ordinal += entriesIn(p); if (p === pack) break; }
-ordinal += 1; // this template, appended to its pack
-const packIsLast = !packExists || chapters[chapters.length - 1] === pack;
-const NN = String(ordinal).padStart(2, "0");
+// The `harness` pack is internal fixtures (hidden, unnumbered): a day's
+// template never lands there (the gate refuses it too).
+const INTERNAL_PACKS = new Set(["harness"]);
+if (INTERNAL_PACKS.has(pack)) { console.error(`new-template: ${pack}/ is the internal harness pack — a day's template goes in a public pack (see pipeline/config.json packs.vocabulary)`); process.exit(1); }
+
+// ── the WHY skeleton: pre-filled from today's journal where it already knows ──
+// The runner sets ONE_A_DAY_DAY_DIR / ONE_A_DAY_DATE; an interactive session
+// gets journal/<today>/ when it exists. Anything the journal cannot supply is
+// the placeholder the gate refuses, so an unfilled WHY cannot ship.
+const PLACEHOLDER = "[fill me]";
+const readJson = (file) => { try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { return null; } };
+const todayIso = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+const DATE = process.env.ONE_A_DAY_DATE ?? todayIso();
+const DAY_DIR = process.env.ONE_A_DAY_DAY_DIR ?? path.join(ROOT, "journal", DATE);
+const dayState = readJson(path.join(DAY_DIR, "state.json")) ?? {};
+const dayRun = readJson(path.join(DAY_DIR, "run.json")) ?? {};
+const indexRows = (() => { const v = readJson(path.join(ROOT, "journal", "index.json")); return Array.isArray(v) ? v : []; })();
+const dayNumber = (() => { const row = indexRows.find((r) => r.date === DATE); return row?.day ?? indexRows.filter((r) => r.date < DATE).length + 1; })();
+const ascii = (v) => String(v).replace(/[^\x20-\x7e]/g, "?").replace(/\s+/g, " ").trim();
+const WHY = {
+  day: dayNumber,
+  date: DATE,
+  agent: ascii(dayRun.runner?.adapter ?? PLACEHOLDER),
+  model: ascii(dayRun.model?.selfDeclared ?? PLACEHOLDER),
+  id: ID,
+  title,
+  who: dayState.who ? ascii(dayState.who) : `${PLACEHOLDER} who has the problem, and where they were found`,
+  problem: [dayState.useCase ? ascii(dayState.useCase) : `${PLACEHOLDER} what was observed, in the evidence's words`],
+  sources: Array.isArray(dayState.sources) && dayState.sources.length ? dayState.sources.map(ascii).slice(0, 12) : [`https://example.com/${PLACEHOLDER.replace(/[^a-z]/g, "")}`],
+  solution: [ascii(description)],
+  usage: { command: `m0saic make ${ID} --template-repo . -w 1280 -h 720 -o out.png`, try: [] },
+};
+// timeline: the runner's trace so far (scout, plan, this build call) - the ship
+// phase re-copies it once every phase has run. No trace = self-reported, and a
+// placeholder phase name so the gate refuses an unfilled one.
+const trace = readJson(path.join(DAY_DIR, "trace.json"));
+if (trace && Array.isArray(trace.phases) && trace.phases.length) {
+  const { timelineFromTrace } = await import(pathToFileURL(path.join(ROOT, "pipeline", "lib", "trace.mjs")).href);
+  WHY.timeline = timelineFromTrace(trace);
+} else {
+  WHY.timeline = { source: "self-reported", phases: [{ name: `${PLACEHOLDER} scout`, startMs: 0, durMs: 0 }] };
+}
+const whyLiteral = JSON.stringify(WHY, null, 2);
+// The display title carries the day it shipped; the tags make it sortable
+// and searchable by date and by day number.
+const DAY_TAG = `day-${String(dayNumber).padStart(3, "0")}`;
+const DATED_TITLE = `${DATE} · ${title}`;
+const TAGS = [pack, DATE, DAY_TAG];
 
 // ── the template ──
 const tutorialImport = STARTER ? `\nimport { lessonTutorial } from "../../../_shared/tutorial";\n` : "";
@@ -90,7 +134,12 @@ import {
   makeColorTile,
   placeInsetPieces,
   svgLabel,
+  tag,
 } from "@m0saic/template-utils";
+import type { LayoutConstraint } from "@m0saic/template-utils";
+import { TEXT_EM, textFitsAll, withLayoutIntent } from "../../../_shared/layout";
+import { whyTutorial } from "../../../_shared/why";
+import type { WhySpec } from "../../../_shared/why";
 ${tutorialImport}
 /**
  * \`${ID}\` — one line on what it draws.
@@ -110,6 +159,8 @@ export type ${pascal(slug)}Props = {
   title?: string;
   /** Backdrop (#rrggbb). */
   pageColor?: string;
+  /** Dev-only: check the layout contract and draw it over the card. */
+  debugLayout?: boolean;
 };
 
 const ID = ${JSON.stringify(ID)};
@@ -135,15 +186,45 @@ const propsSchema = definePropsSchema<${pascal(slug)}Props>({
       ui: { label: "Page color", order: 2 },
     },
   },
+  debugLayout: {
+    type: "boolean",
+    required: false,
+    description: "Dev-only: check the layout contract (every text fits its box, the title sits in its band) and draw it over the card.",
+    meta: { ui: { label: "Debug layout", order: 99 } },
+  },
 });
+
+/**
+ * What the geometry promises, as canvas-independent invariants against the
+ * source labels - the layout contract (src/_shared/layout.ts). Every text
+ * gets textFits with the bundled font's calibrated ruler (TEXT_EM.prose;
+ * a template that measures the block itself uses textFitsMeasured, exact);
+ * the chrome the design depends on gets a band. Only labels that rendered.
+ */
+function layoutContract(): LayoutConstraint[] {
+  return [
+    ...textFitsAll(["title", "caption"], { charWidthEm: TEXT_EM.prose }),
+    { label: "title", within: { yFrac: [0.2, 0.6] }, minWidthFrac: 0.5 },
+    { label: "caption", within: { yFrac: [0.5, 0.8] } },
+  ];
+}
+
+/**
+ * Why this template exists - rendered by \`renderTutorial\` (the why-tutorial
+ * convention, src/_shared/why.ts): the run, the problem with the sources the
+ * agent opened, the solution, how to use it, then the template itself.
+ * Pre-filled from journal/${DATE}/ - replace every "${PLACEHOLDER}" and say it
+ * in the evidence's own words. The build refuses a placeholder.
+ */
+const WHY: WhySpec = ${whyLiteral};
 
 export const ${exportName} = defineMosaicTemplate<${pascal(slug)}Props>({
   id: asTemplateId(ID),
-  label: ${JSON.stringify(`${NN} · ${title}`)},
+  label: ${JSON.stringify(DATED_TITLE)},
   version: 1,
   description: ${JSON.stringify(description)},
   capabilities: { tier: "core" },
-  tags: [${JSON.stringify(pack)}, "starter"],
+  tags: ${JSON.stringify(TAGS)},
 
   outputHints: {
     width: 1280,
@@ -158,12 +239,19 @@ export const ${exportName} = defineMosaicTemplate<${pascal(slug)}Props>({
   defaultProps: {
     title: DEFAULT_TITLE,
     pageColor: "#1c2833",
+    debugLayout: false,
   },
 
-  async render(
-    props: ${pascal(slug)}Props,
-    ctx: MosaicEngineContext,
-  ): Promise<MosaicDocument> {
+  render,
+  renderTutorial: whyTutorial(WHY, render),
+${tutorial}});
+
+export default ${exportName};
+
+async function render(
+  props: ${pascal(slug)}Props,
+  ctx: MosaicEngineContext,
+): Promise<MosaicDocument> {
     // The schema is documentation; render() is the gate.
     const title = props.title ?? DEFAULT_TITLE;
     if (typeof title !== "string") throw new Error(\`\${ID}: title must be a string.\`);
@@ -188,14 +276,15 @@ export const ${exportName} = defineMosaicTemplate<${pascal(slug)}Props>({
 
     // The title rect is BOUND to the prop it shows (bind what you display).
     const head = px(0.06, 0.3, 0.88, 0.2);
-    piece(head, 2, bindProp(svgLabel(title || " ", head.w, head.h, { maxPx: Math.round(H * 0.08), maxLines: 1, color: INK }), "title"));
+    // Every text source is TAGGED (editor.label) so the layout contract can find it.
+    piece(head, 2, bindProp(tag(svgLabel(title || " ", head.w, head.h, { maxPx: Math.round(H * 0.08), maxLines: 1, color: INK }), "title"), "title"));
 
     // Static caption - not a prop, so nothing to bind.
     const cap = px(0.06, 0.6, 0.88, 0.08);
-    piece(cap, 2, svgLabel("replace this scaffold with the one thing this template teaches", cap.w, cap.h, { maxPx: Math.round(H * 0.026), maxLines: 1, color: DIM }));
+    piece(cap, 2, tag(svgLabel("replace this scaffold with the one thing this template teaches", cap.w, cap.h, { maxPx: Math.round(H * 0.026), maxLines: 1, color: DIM }), "caption"));
 
     const placed = placeInsetPieces({ rootW: W, rootH: H, pieces });
-    return {
+    const doc: MosaicDocument = {
       kind: "mosaic_document",
       version: 1,
       m0: toM0String(placed.m0, ID),
@@ -203,16 +292,15 @@ export const ${exportName} = defineMosaicTemplate<${pascal(slug)}Props>({
       backgroundColor: page,
       sources: placed.sources,
     };
-  },
-${tutorial}});
-
-export default ${exportName};
+    return withLayoutIntent(doc, ctx, { templateId: ID, constraints: layoutContract(), debug: props.debugLayout === true });
+}
 `;
 
 const testTs = `import { evaluateM0 } from "@m0saic/dsl-stdlib";
 import { resolvePropBindings } from "@m0saic/template-utils";
 
 import { asDocument, targetCtx } from "../../../__testutils__/render";
+import { layoutIntentOf, sweepLayout } from "../../../_shared/layout";
 import { ${exportName} } from "./${slug}";
 
 const render = (
@@ -234,6 +322,14 @@ describe(${JSON.stringify(ID)}, () => {
     expect(ev.feasible && ev.meetsPrecision).toBe(true);
   });
 
+  it("keeps its layout contract at the seven contract canvases - defaults, a long title, an empty one", async () => {
+    expect(layoutIntentOf(await render())).not.toBeNull();
+    for (const over of [{}, { title: "A title long enough to have to shrink before it fits the band on a narrow canvas" }, { title: "" }]) {
+      await sweepLayout((p, ctx) => ${exportName}.render(p, ctx).then(asDocument), ${JSON.stringify(ID)}, { ...${exportName}.defaultProps, ...over }, (w, h) => targetCtx(w, h));
+    }
+    expect((await render({ debugLayout: true })).editor).toMatchObject({ layoutContract: { ok: true } });
+  });
+
   it("is deterministic and rejects a bad colour", async () => {
     expect(await render()).toEqual(await render());
     await expect(render({ pageColor: "red" })).rejects.toThrow(/#rrggbb/);
@@ -248,10 +344,10 @@ const row = `  {
     slug: ${JSON.stringify(slug)},
     templateId: ${JSON.stringify(ID)},
     exportName: ${JSON.stringify(exportName)},
-    title: ${JSON.stringify(`${NN} · ${title}`)},
+    title: ${JSON.stringify(DATED_TITLE)},
     description:
       ${JSON.stringify(description)},
-    tags: [${JSON.stringify(pack)}, "starter"],
+    tags: ${JSON.stringify(TAGS)},
   },
 `;
 const registryVar = `${camel(pack)}Registry`;
@@ -327,7 +423,7 @@ export * from "./${slug}/v1/${slug}";
   // CURRICULUM.md (starter): the dep policy lints for a `## <pack>` heading
   if (fs.existsSync(path.join(ROOT, "CURRICULUM.md"))) {
     let cur = read("CURRICULUM.md");
-    const section = `## ${pack}\n\nWhat this chapter teaches, in a paragraph.\n\n| # | Template | id |\n|---|---|---|\n| ${ordinal} | ${title} | \`${pack}/${slug}/v1\` |\n`;
+    const section = `## ${pack}\n\nWhat this chapter teaches, in a paragraph.\n\n| # | Template | id |\n|---|---|---|\n| ${DATE} | ${title} | \`${pack}/${slug}/v1\` |\n`;
     const anchor = "\n---\n\n## What is not here yet\n";
     cur = cur.includes(anchor) ? cur.replace(anchor, `\n${section}${anchor}`) : cur.trimEnd() + `\n\n${section}`;
     write("CURRICULUM.md", cur);
@@ -343,18 +439,12 @@ if (STARTER && packExists) {
       const tableEnd = (() => { let i = cur.indexOf("\n|", h); let last = -1; while (i >= 0 && i < (cur.indexOf("\n## ", h + 1) < 0 ? cur.length : cur.indexOf("\n## ", h + 1))) { last = i; i = cur.indexOf("\n|", i + 1); } return last; })();
       if (tableEnd >= 0) {
         const lineEnd = cur.indexOf("\n", tableEnd + 1);
-        write(rel, cur.slice(0, lineEnd) + `\n| ${ordinal} | ${title} | \`${pack}/${slug}/v1\` |` + cur.slice(lineEnd));
+        write(rel, cur.slice(0, lineEnd) + `\n| ${DATE} | ${title} | \`${pack}/${slug}/v1\` |` + cur.slice(lineEnd));
       }
     }
   }
 }
 
-// ── ordinals: a non-last pack shifts everything after it ──
-if (!packIsLast && fs.existsSync(path.join(ROOT, "tools/stamp-ordinals.mjs"))) {
-  const r = spawnSync(process.execPath, [path.join(ROOT, "tools/stamp-ordinals.mjs")], { stdio: "inherit" });
-  if (r.status !== 0) console.warn("new-template: stamp-ordinals reported a problem — check ordinals before building.");
-}
-
-console.log(`new-template: ${ID}  (${NN} · ${title})`);
+console.log(`new-template: ${ID}  (${DATED_TITLE})`);
 for (const f of touched) console.log(`  ${fs.existsSync(path.join(ROOT, f)) ? "wrote" : "?"}  ${f}`);
-console.log("\nNext:\n  npm run build && npm run previews && npm run build && npm run fingerprints:update && npm run verify\n  then edit " + `${packDir}/${slug}/v1/${slug}.ts` + " — the header comment is the lesson; " + `${slug}.layout.m0` + " beside it is the layout fingerprint.");
+console.log("\nNext:\n  npm run build && npm run previews && npm run build && npm run fingerprints:update && npm run verify\n  then edit " + `${packDir}/${slug}/v1/${slug}.ts` + " — the header comment is the lesson; " + `${slug}.layout.m0` + " beside it is the layout fingerprint;\n  fill WHY (the why-tutorial: who, the observed problem, its sources, the solution, how to use it) — the build refuses a " + PLACEHOLDER + ".");

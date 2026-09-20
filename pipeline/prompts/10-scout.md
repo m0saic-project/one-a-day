@@ -51,5 +51,7 @@ pixels are bad fits.
 - <name>: <one line>
 ```
 
-Then, in `state.json`, set `useCase` (one short line), `sources` (the URLs you
-cited for the pick), `tags` (3–6 lowercase words) and finally `scout: "done"`.
+Then, in `state.json`, set `useCase` (one short line), `who` (one line: the
+audience and where they gather - it seeds the template's why-tutorial),
+`sources` (the URLs you cited for the pick), `tags` (3–6 lowercase words) and
+finally `scout: "done"`.

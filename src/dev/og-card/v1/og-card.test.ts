@@ -2,6 +2,7 @@ import { evaluateM0 } from "@m0saic/dsl-stdlib";
 import { resolvePropBindings } from "@m0saic/template-utils";
 
 import { asDocument, targetCtx } from "../../../__testutils__/render";
+import { layoutIntentOf, sweepLayout } from "../../../_shared/layout";
 import { OgCardV1, layoutOgCard } from "./og-card";
 import type { Rect } from "./og-card";
 
@@ -121,6 +122,27 @@ describe(ID, () => {
     expect(byProp.kicker).toBeUndefined();
     expect(byProp.title).toHaveLength(1);
     expect(doc.sources).toHaveLength(3); // bar, title, site
+  });
+
+  it("keeps its layout contract at the seven contract canvases, for the copy that stresses it", async () => {
+    const doc = await render();
+    const intent = layoutIntentOf(doc);
+    expect(intent).not.toBeNull();
+    // every text source is tagged and covered by a textFits constraint
+    const textLabels = (doc.sources ?? []).filter((s) => (s as { type: string }).type === "text").map((s) => (s as { editor?: { label?: string } }).editor?.label);
+    for (const label of textLabels) expect(intent!.constraints.some((c) => c.label === label && c.textFits)).toBe(true);
+    const cases = [
+      {},
+      { title: LONG_TITLE, summary: LONG_SUMMARY },
+      { kicker: "", summary: "", author: "" },
+      { preset: "light" as const, accent: "#facc15", title: "Short" },
+    ];
+    for (const over of cases) {
+      await sweepLayout((p, ctx) => OgCardV1.render(p, ctx).then(asDocument), ID, { ...OgCardV1.defaultProps, ...over }, (w, h) => targetCtx(w, h));
+    }
+    // the debug knob turns the contract into a visible check that passes at the hint
+    const debug = await render({ debugLayout: true });
+    expect((debug.editor as { layoutContract?: { ok: boolean } }).layoutContract?.ok).toBe(true);
   });
 
   it("is deterministic, follows the preset, and rejects an empty title or a bad colour", async () => {

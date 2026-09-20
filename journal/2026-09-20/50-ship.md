@@ -20,6 +20,13 @@ Preview at `assets/templates/@one-a-day__dev__og-card__v1/preview.png`
 m0saic make @one-a-day/dev/og-card/v1 --template-repo . -w 1200 -h 630 -o og.png
 ```
 
+Why it exists (the tutorial: the run, the problem with its sources, the
+solution, how to use it, then the card):
+
+```
+m0saic make @one-a-day/dev/og-card/v1 --template-repo . --tutorial -w 1280 -h 720 -o why.mp4
+```
+
 Props worth trying:
 
 ```
@@ -60,3 +67,15 @@ Props worth trying:
   not care about.
 - A release-notes sibling (version, date, three bullets) was candidate #4
   in the scout; it is this template with a list prop.
+
+## Retrofit note (same day, by the human)
+
+The why-tutorial convention (`renderTutorial: whyTutorial(WHY, render)`,
+src/_shared/why.ts) landed on 2026-09-20 after this day's gate had run. The
+template file gained its `WHY` spec and the tutorial wiring, the freeze was
+re-minted by the human before the first push (nothing was on `main` upstream
+yet), and `variants/c/stills/tutorial-<n>.png` were rendered from the
+retrofitted template. The layout-contract convention and the tutorial's
+sixth page (how the day was made) landed the same way. The fit budget
+inside a cell became `cell * 0.94 - 2px`, so the title wraps a few pixels
+earlier than the gate's render did; the design is unchanged.

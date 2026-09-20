@@ -65,6 +65,36 @@
       "canvas": "square",
       "at": null,
       "file": "stills/square.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 3.5,
+      "file": "stills/tutorial-1.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 14,
+      "file": "stills/tutorial-2.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 27,
+      "file": "stills/tutorial-3.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 38,
+      "file": "stills/tutorial-4.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 46,
+      "file": "stills/tutorial-5.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 54,
+      "file": "stills/tutorial-6.png"
     }
   ],
   "srcSnapshot": "src/",
@@ -73,5 +103,14 @@
   "validate": {
     "code": 0,
     "degraded": false
+  },
+  "tutorial": {
+    "canvas": "tutorial",
+    "width": 1280,
+    "height": 720,
+    "file": "renders/tutorial.mp4",
+    "exitCode": 0,
+    "degraded": false,
+    "note": "rendered after the why-tutorial + layout-contract conventions landed on 2026-09-20 (retrofit of day 001); six pages"
   }
 }

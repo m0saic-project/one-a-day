@@ -138,20 +138,28 @@ function buildStarterManifest() {
     const seenSlugKeys = new Set();
     const seenTemplateIds = new Set();
     const seenExports = new Set();
-    /* Curriculum ordinals. Browse UIs sort by name or slug, so array order
-     * never reaches the reader — the number in the title is what carries the
-     * reading order across. It is derived from CHAPTERS order here and only
-     * CHECKED against what the files say, so a renumber is a build error
-     * rather than a silent disagreement. */
+    /* Day dates. This repo ships one template a day for longer than a year,
+     * and hosts sort the grid by name (the label) or by the first tag — so the
+     * DATE is the ordinal: every day's title starts with "YYYY-MM-DD · " and
+     * its tags carry the date and the day number ("day-001"). Internal
+     * fixtures (the harness) and the front door carry no date. Checked against
+     * what the files say, so a stray title is a build error. */
     const labelById = new Map(index_1.templates.map((t) => { var _a; return [String(t.id), String((_a = t.label) !== null && _a !== void 0 ? _a : "")]; }));
-    const ordinalOf = (index) => String(index + 1).padStart(2, "0");
-    for (const [index, entry] of template_registry_1.templateRegistry.entries()) {
-        const expected = `${ordinalOf(index)} · `;
-        assert(entry.title.startsWith(expected), `Entry "${entry.templateId}" is #${ordinalOf(index)} in curriculum order, so its ` +
-            `title must start with "${expected}" — got "${entry.title}"`);
+    const internalIds = new Set(index_1.templates.filter((t) => t.internal === true).map((t) => String(t.id)));
+    const frontDoor = repo_1.TEMPLATE_REPO.helloWorld ? String(repo_1.TEMPLATE_REPO.helloWorld) : null;
+    const DATE_PREFIX = /^(\d{4}-\d{2}-\d{2}) · /;
+    for (const entry of template_registry_1.templateRegistry) {
+        const dated = !internalIds.has(entry.templateId) && entry.templateId !== frontDoor;
+        const m = DATE_PREFIX.exec(entry.title);
+        if (!dated) {
+            assert(!m, `Entry "${entry.templateId}" is ${internalIds.has(entry.templateId) ? "internal (a harness fixture)" : "the front door"} and carries no date — got "${entry.title}"`);
+            continue;
+        }
+        assert(m !== null, `Entry "${entry.templateId}" is a day's template, so its title must start with "YYYY-MM-DD · " (the day it shipped) — got "${entry.title}"`);
+        const date = m[1];
+        assert(entry.tags.includes(date) && entry.tags.some((t) => /^day-\d{3,}$/.test(t)), `Entry "${entry.templateId}" must carry its date ("${date}") and its day ("day-NNN") as tags, so the grid's Tag sort and a search find it — got [${entry.tags.join(", ")}]`);
         const label = labelById.get(entry.templateId);
-        assert(label === undefined || label.startsWith(expected), `Template "${entry.templateId}" label must start with "${expected}" to match its ` +
-            `registry row — got "${label}"`);
+        assert(label === undefined || label === entry.title, `Template "${entry.templateId}" label must equal its registry title "${entry.title}" — got "${label}"`);
     }
     for (const entry of template_registry_1.templateRegistry) {
         const parsed = STARTER_ID_RE.exec(entry.templateId);

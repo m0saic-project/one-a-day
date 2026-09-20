@@ -41,6 +41,12 @@ export const TEMPLATE_PACKS: MosaicTemplatePackDescriptor[] = [
     description: "The front door. Every other pack is a day's work by the agent.",
   },
   {
+    id: "harness",
+    title: "Harness",
+    description:
+      "Fixtures the daily templates and the shared pages build on - the agent timeline the why-tutorial ends with. Human-maintained, every entry internal; never a day's work.",
+  },
+  {
     id: "dev",
     title: "Dev",
     description:

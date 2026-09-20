@@ -67,7 +67,9 @@ if (mode === "ship") {
   if (!changed.includes("frozen.manifest.json")) fail("freeze manifest not updated");
   const frozen = JSON.parse(fs.readFileSync(path.join(clone, "frozen.manifest.json"), "utf8"));
   if (!frozen.files["src/dev/e2e-card/v1/e2e-card.ts"]) fail("new template not frozen"); else ok("new template frozen");
-  if (!changed.includes("dist/index.js")) fail("dist not committed"); else ok("dist + manifest + preview committed");
+  // dist/index.js only changes when the day adds a NEW pack; the template's own
+  // built file changes on every shipped day.
+  if (!changed.includes("dist/dev/e2e-card/v1/e2e-card.js")) fail("dist not committed"); else ok("dist + manifest + preview committed");
 } else if (mode === "no-ship") {
   if (run.result?.status !== "no-ship") fail(`result ${run.result?.status}`); else ok("result no-ship");
   if (changed.some((p) => p.startsWith("src/") || p.startsWith("dist/"))) fail(`src/dist leaked on a no-ship day: ${changed.join(", ")}`); else ok("only the journal landed");

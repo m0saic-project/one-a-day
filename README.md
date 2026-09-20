@@ -51,6 +51,25 @@ m0saic make @one-a-day/<pack>/<slug>/v1 --template-repo ./one-a-day -w 1920 -h 1
 clone loads with no build step. Each day's `journal/<date>/50-ship.md` has the
 render one-liner and the props worth trying.
 
+Titles carry the day (`2026-09-20 · OG Card`) and every template is tagged
+with its date and its day number, so sorting the grid by name or by tag in
+Mosaic Desktop reads as a calendar, and a date finds the template.
+
+**Every template explains itself.** Its tutorial — the "?" pill on the Make
+page in Mosaic Desktop, or on the CLI:
+
+```
+m0saic make @one-a-day/<pack>/<slug>/v1 --template-repo ./one-a-day --tutorial -w 1280 -h 720 -o why.mp4
+```
+
+is six pages: the run (day, date, which agent and which model it said it
+was), the problem that was observed and the online sources the agent opened,
+the solution this template attempts, how to use it, the template itself at
+its defaults, and how the day was made — the run's phases as a waterfall
+with tool calls, tokens and dollars (as the agent CLI reported them, or
+estimated at the dated list prices in `pipeline/config.json`). The words and
+the numbers are frozen into the template file with the code.
+
 ## The journal
 
 [`journal/index.json`](journal/index.json) is the table of contents: one row

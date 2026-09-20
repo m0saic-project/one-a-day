@@ -14,6 +14,11 @@ You are the planning agent: you decide WHAT gets built, not how to code it.
   Keep it to the few props that matter — five to ten, not thirty.
 - Text: the rendered copy must fit its cell (there is a textFits gate) and use
   ASCII in defaults.
+- The layout contract: say what the geometry PROMISES, as canvas-independent
+  invariants the build will sweep at seven canvases (AGENTS.md "The layout
+  contract"): every text fits; where the chrome lives (a footer band in the
+  bottom 40%, a full-width bar, a square mark); what must be present. Pin an
+  exact fraction only when the use case asks for it.
 - Pack: prefer an existing pack under `src/` or one from this vocabulary:
   {{PACKS}}. A new pack needs one sentence of justification. Slug: lowercase,
   dashes, says what it is.
@@ -30,10 +35,11 @@ linked from `AGENTS.md`. Mirror shapes that exist.
 ## The use case (two sentences, from the scout)
 ## The template
 - id: @one-a-day/<pack>/<slug>/v1   (new pack? why, in one sentence)
-- title: <Human Title>   (the registry stamps the ordinal)
+- title: <Human Title>   (the scaffold prefixes the date: "YYYY-MM-DD · Title")
 - kind: image | video; canvas hint WxH; aspects that must work
 - duration: <n> ms from ctx.target, or "still"
 ## Layout (regions, ratios, what goes where; a small ASCII sketch is welcome)
+## Layout contract (the invariants the build sweeps: text fits, bands, presence)
 ## Props (name · type · default · what it changes · required?)
 ## Beats (video only: t=0…end, what moves)
 ## Defaults must show: what a viewer sees with no inputs

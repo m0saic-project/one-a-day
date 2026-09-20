@@ -1,3 +1,4 @@
+import type { LayoutConstraint } from "@m0saic/template-utils";
 /**
  * `@one-a-day/dev/og-card/v1` — an Open Graph preview card from five strings.
  *
@@ -20,8 +21,16 @@
  * rect (Make double-click edits it in place); the band binds `accent`;
  * `background` is the document colour and has no rect.
  *
+ * The layout contract (`layoutContract()`, stamped on every render by
+ * `withLayoutIntent`, swept at seven canvases in the test and by the build):
+ * every text fits its box, the band spans the full width on the bottom
+ * edge, the footer sits inside it, the title stays inside the margins and
+ * is at least half the canvas wide.
+ *
  * Day 001 of one-a-day. Scouted from HN / dev.to: people run headless
- * browsers and paid APIs to put five strings on a rectangle.
+ * browsers and paid APIs to put five strings on a rectangle. The WHY spec
+ * below is the template's own account of that (`renderTutorial`: the run,
+ * the problem with its sources, the solution, how to use it, then the card).
  */
 export type OgCardProps = {
     /** Headline, 1-3 lines. Required, but it carries a default so the card shows itself. */
@@ -42,6 +51,8 @@ export type OgCardProps = {
     background?: string;
     /** Title ink override (#rrggbb); empty = the preset's. */
     ink?: string;
+    /** Dev-only: check the layout contract and draw it over the card. */
+    debugLayout?: boolean;
 };
 export type Fit = {
     text: string;
@@ -86,5 +97,11 @@ export declare function layoutOgCard(text: {
     site: string;
     author: string;
 }, W: number, H: number): OgCardLayout;
+/**
+ * What the geometry promises, as canvas-independent invariants against the
+ * source labels. Only the rows that exist are constrained (a missing label
+ * is a violation - that is the presence check).
+ */
+export declare function layoutContract(L: OgCardLayout): LayoutConstraint[];
 export declare const OgCardV1: import("@m0saic/types").MosaicTemplate<OgCardProps, import("@m0saic/types").MosaicTemplateOutputs, import("@m0saic/types").MosaicTemplateUpstreamVariables, import("@m0saic/types").MosaicTemplateUpstreamData, import("@m0saic/types").MosaicTemplateSidecars>;
 export default OgCardV1;

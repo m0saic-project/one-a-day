@@ -17,8 +17,8 @@
     {
       "slug": "hello-world",
       "templateKey": "@one-a-day/basics/hello-world/v1",
-      "title": "01 · Hello World",
-      "description": "The canonical m0saic hello-world card with this repo's mark: the brand field wipes in, a navy card rises, the M appears as 33 robot faces — the agents that write this repo — then the wordmark and the greeting. The front door: what `m0saic hello-world --template-repo .` renders. Template 01; every template after it is one day of the agent's work.",
+      "title": "Hello World",
+      "description": "The canonical m0saic hello-world card with this repo's mark: the brand field wipes in, a navy card rises, the M appears as 33 robot faces — the agents that write this repo — then the wordmark and the greeting. The front door: what `m0saic hello-world --template-repo .` renders. The one human-placed template; every other public template is one day of the agent's work, titled by its date.",
       "tags": [
         "basics",
         "starter",
@@ -34,12 +34,32 @@
       }
     },
     {
+      "slug": "agent-timeline",
+      "templateKey": "@one-a-day/harness/agent-timeline/v1",
+      "title": "Harness · Agent Timeline",
+      "description": "How a day was made: the agent's phases as a waterfall - one lane per phase on a shared time axis, tool calls, tokens and the tools it leaned on, with the run totals and where the numbers came from. A harness fixture the why-tutorial renders as its last page; never a top-level pick.",
+      "tags": [
+        "harness",
+        "agents",
+        "timeline",
+        "trace",
+        "tokens",
+        "internal"
+      ],
+      "pack": "harness",
+      "preview": {
+        "image": "assets/templates/@one-a-day__harness__agent-timeline__v1/preview.png"
+      }
+    },
+    {
       "slug": "og-card",
       "templateKey": "@one-a-day/dev/og-card/v1",
-      "title": "02 · OG Card",
+      "title": "2026-09-20 · OG Card",
       "description": "Open Graph preview card from five strings - title, summary, kicker, site, author - as a deterministic PNG for a build step. 1200x630 by default; the same props also lay out square and story crops.",
       "tags": [
         "dev",
+        "2026-09-20",
+        "day-001",
         "og-image",
         "social",
         "card",
@@ -58,6 +78,11 @@
       "id": "basics",
       "title": "Basics",
       "description": "The front door. Every other pack is a day's work by the agent."
+    },
+    {
+      "id": "harness",
+      "title": "Harness",
+      "description": "Fixtures the daily templates and the shared pages build on - the agent timeline the why-tutorial ends with. Human-maintained, every entry internal; never a day's work."
     },
     {
       "id": "dev",

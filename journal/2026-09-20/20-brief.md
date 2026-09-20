@@ -13,7 +13,7 @@ strings that already live in the post's front matter.
 - id: `@one-a-day/dev/og-card/v1` (new pack `dev`: templates a developer
   runs from a build step or a terminal, fed by the repo's own metadata -
   cards, badges, banners; none of the existing vocabulary says "runs in CI")
-- title: OG Card (the registry stamps the ordinal)
+- title: OG Card (displayed as "2026-09-20 · OG Card": the date is the ordinal)
 - kind: image (png); canvas hint 1200x630 (the Open Graph standard); must
   also hold at 1920x1080, 1080x1080 and 1080x1920 (the gate's three, and
   the square / story crops people re-make by hand)
@@ -55,6 +55,14 @@ the cells are carved to the MEASURED block, not the other way round.
 Font caps (px, from `S`): kicker 0.034, title 0.115 (3 lines max), summary
 0.042 (2 lines max), footer 0.036. Every fit uses the template-utils
 measured search, so a 90-character title shrinks before it clips.
+
+## Layout contract (added with the convention, same day)
+
+Every text fits its box (measured against the bundled font, so the ruler is
+the true width); the band spans the full width on the bottom edge and holds
+the footer; the title stays inside the margins, at least half the canvas
+wide, above the band. Swept at the seven contract canvases for the default
+copy, the 106-character title, emptied rows and the light preset.
 
 ## Props (name · type · default · what it changes · required?)
 

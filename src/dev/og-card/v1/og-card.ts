@@ -16,6 +16,10 @@ import {
   placeInsetPieces,
   resolveFontFile,
 } from "@m0saic/template-utils";
+import type { LayoutConstraint } from "@m0saic/template-utils";
+import { textFitsMeasured, withLayoutIntent } from "../../../_shared/layout";
+import { whyTutorial } from "../../../_shared/why";
+import type { WhySpec } from "../../../_shared/why";
 
 /**
  * `@one-a-day/dev/og-card/v1` — an Open Graph preview card from five strings.
@@ -39,8 +43,16 @@ import {
  * rect (Make double-click edits it in place); the band binds `accent`;
  * `background` is the document colour and has no rect.
  *
+ * The layout contract (`layoutContract()`, stamped on every render by
+ * `withLayoutIntent`, swept at seven canvases in the test and by the build):
+ * every text fits its box, the band spans the full width on the bottom
+ * edge, the footer sits inside it, the title stays inside the margins and
+ * is at least half the canvas wide.
+ *
  * Day 001 of one-a-day. Scouted from HN / dev.to: people run headless
- * browsers and paid APIs to put five strings on a rectangle.
+ * browsers and paid APIs to put five strings on a rectangle. The WHY spec
+ * below is the template's own account of that (`renderTutorial`: the run,
+ * the problem with its sources, the solution, how to use it, then the card).
  */
 
 export type OgCardProps = {
@@ -62,6 +74,8 @@ export type OgCardProps = {
   background?: string;
   /** Title ink override (#rrggbb); empty = the preset's. */
   ink?: string;
+  /** Dev-only: check the layout contract and draw it over the card. */
+  debugLayout?: boolean;
 };
 
 const ID = "@one-a-day/dev/og-card/v1";
@@ -163,6 +177,12 @@ const propsSchema = definePropsSchema<OgCardProps>({
       control: { placeholder: "preset ink", colorPicker: true },
       ui: { label: "Ink", order: 9 },
     },
+  },
+  debugLayout: {
+    type: "boolean",
+    required: false,
+    description: "Dev-only: check the layout contract (every text fits its box, the band spans the bottom edge, the block stays inside the margins) and draw it over the card.",
+    meta: { ui: { label: "Debug layout", order: 10 } },
   },
 });
 
@@ -300,13 +320,17 @@ export function layoutOgCard(
   const margin = Math.max(8, Math.round(MARGIN_FRAC * S));
   const textX = margin;
   const interiorW = Math.max(16, W - 2 * margin);
+  // The fit budget inside a cell: `cell * 0.94 - 2px` (the layout contract's
+  // rule) - quantization hands a leaf a pixel or two less than its share, and
+  // the contract's ruler checks the realized box, so the copy keeps slack.
+  const budget = (cellW: number) => Math.max(8, Math.floor(cellW * 0.94 - 2));
   const pad = (px: number) => Math.max(1, Math.round(px * 0.12));
 
   // ── footer: site left, author right, on the bottom margin ──
   const footerCap = CAP.footer * S;
   const halfW = Math.max(8, Math.floor((interiorW - Math.round(0.04 * S)) / 2));
-  const siteFit = text.site.length > 0 ? fitCopy(text.site, halfW, footerCap * 2, { maxPx: footerCap, maxLines: 1 }) : null;
-  const authorFit = text.author.length > 0 ? fitCopy(text.author, halfW, footerCap * 2, { maxPx: footerCap, maxLines: 1 }) : null;
+  const siteFit = text.site.length > 0 ? fitCopy(text.site, budget(halfW), footerCap * 2, { maxPx: footerCap, maxLines: 1 }) : null;
+  const authorFit = text.author.length > 0 ? fitCopy(text.author, budget(halfW), footerCap * 2, { maxPx: footerCap, maxLines: 1 }) : null;
   const footerPx = Math.max(siteFit?.fontSize ?? 0, authorFit?.fontSize ?? 0);
   const footerH = footerPx > 0 ? Math.ceil(Math.max(siteFit?.height ?? 0, authorFit?.height ?? 0)) + 2 * pad(footerPx) : 0;
   // The footer sits inside an accent band across the bottom. With no footer
@@ -319,9 +343,9 @@ export function layoutOgCard(
   const blockTop = margin;
   const blockBottom = H - bandH - Math.round(0.6 * margin);
   const blockH = Math.max(16, blockBottom - blockTop);
-  const titleFit = fitCopy(text.title, interiorW, blockH * 0.62, { maxPx: CAP.title * S, maxLines: 3, bold: true });
-  const kickerFit = text.kicker.length > 0 ? fitCopy(text.kicker, interiorW, blockH * 0.12, { maxPx: CAP.kicker * S, maxLines: 1, bold: true }) : null;
-  const summaryFit = text.summary.length > 0 ? fitCopy(text.summary, interiorW, blockH * 0.3, { maxPx: CAP.summary * S, maxLines: 2 }) : null;
+  const titleFit = fitCopy(text.title, budget(interiorW), blockH * 0.62, { maxPx: CAP.title * S, maxLines: 3, bold: true });
+  const kickerFit = text.kicker.length > 0 ? fitCopy(text.kicker, budget(interiorW), blockH * 0.12, { maxPx: CAP.kicker * S, maxLines: 1, bold: true }) : null;
+  const summaryFit = text.summary.length > 0 ? fitCopy(text.summary, budget(interiorW), blockH * 0.3, { maxPx: CAP.summary * S, maxLines: 2 }) : null;
 
   const titleH = Math.ceil(titleFit.height) + 2 * pad(titleFit.fontSize);
   const kickerH = kickerFit ? Math.ceil(kickerFit.height) + 2 * pad(kickerFit.fontSize) : 0;
@@ -374,14 +398,94 @@ function textCell(opts: {
   } as MosaicSource;
 }
 
+/**
+ * What the geometry promises, as canvas-independent invariants against the
+ * source labels. Only the rows that exist are constrained (a missing label
+ * is a violation - that is the presence check).
+ */
+export function layoutContract(L: OgCardLayout): LayoutConstraint[] {
+  const texts: Array<[string, Placed | null]> = [["title", L.title], ["kicker", L.kicker], ["summary", L.summary], ["site", L.site], ["author", L.author]];
+  return [
+    ...texts.flatMap(([label, p]) => (p ? [textFitsMeasured(label, p.fit.text, p.fit.fontSize, p.fit.width)] : [])),
+    { label: "band", minWidthFrac: 0.98, within: { yFrac: [0.6, 1] } },
+    { label: "title", minWidthFrac: 0.5, within: { xFrac: [0.02, 0.98], yFrac: [0, 0.9] } },
+    ...(L.kicker ? [{ label: "kicker", within: { yFrac: [0, 0.8] } } as LayoutConstraint] : []),
+    ...(L.site ? [{ label: "site", within: { yFrac: [0.6, 1] } } as LayoutConstraint] : []),
+    ...(L.author ? [{ label: "author", within: { yFrac: [0.6, 1] } } as LayoutConstraint] : []),
+  ];
+}
+
+/**
+ * Why this template exists - rendered by `renderTutorial` (the why-tutorial
+ * convention, src/_shared/why.ts). Filled from journal/2026-09-20/.
+ */
+const WHY: WhySpec = {
+  day: 1,
+  date: "2026-09-20",
+  agent: "claude",
+  model: "claude-opus-5[1m]",
+  id: ID,
+  title: "OG Card",
+  who: "Developers and technical bloggers who publish from a build pipeline; found on Hacker News and dev.to.",
+  problem: [
+    "Every post, docs page and changelog entry needs a 1200x630 og:image, or the link shows up bare on Slack, X and LinkedIn. It is regenerated whenever the title changes, one per post.",
+    "dev.to: \"You hand-craft social images for every blog post. Hours spent in Figma. Then you update the post, forget to update the image, and Twitter shows the old version.\" The offered fix was an HTML template POSTed to a paid screenshot API.",
+    "Three separate Show HNs in 2026 built the same plumbing (Cardstock, an OG image designer, OG images on Cloudflare Workers) because the default answer is a headless browser.",
+  ],
+  sources: [
+    "https://dev.to/custodiaadmin/how-to-automate-og-image-generation-for-every-blog-post-2k2j",
+    "https://huijer.co/notes/going-out-of-my-way-to-prove-im-not-an-ai-og-images",
+    "https://news.ycombinator.com/item?id=49399851",
+    "https://news.ycombinator.com/item?id=49139151",
+    "https://news.ycombinator.com/item?id=49141504",
+    "https://news.ycombinator.com/item?id=48811451",
+    "https://news.ycombinator.com/item?id=48902665",
+    "https://news.ycombinator.com/item?id=49328884",
+    "https://news.ycombinator.com/item?id=48072451",
+  ],
+  solution: [
+    "The inputs already exist as front matter: title, summary, a section, the site, the author. This template turns that props file into the PNG with no browser, no API key and no render server - the same bytes every build, so a stale card is a git diff.",
+    "Text is measured against the bundled font and the cells are carved to the measured block, so a 106-character title shrinks and balances instead of clipping. The same props lay out 1080x1080 and 1080x1920 for the square and story crops.",
+    "Three variants were built; the accent band on the bottom edge shipped because it is the one accent that survives thumbnail scaling, where OG images actually live.",
+  ],
+  usage: {
+    command: "m0saic make @one-a-day/dev/og-card/v1 --template-repo . -w 1200 -h 630 --props @post.json -o og.png",
+    try: [
+      "preset: light with accent: #dc2626",
+      "an empty kicker, summary or author: the row disappears, the band stays",
+      "-w 1080 -h 1920 from the same props file: the story crop",
+      "a 100-character title: it shrinks to three balanced lines",
+    ],
+  },
+  caveats: [
+    "A pale accent on the light preset inks the kicker faintly.",
+    "No logo, date or avatar in v1; every prop must show at defaults.",
+  ],
+  // Day 001 ran as an interactive Claude Code session, not through the
+  // runner, so there is no trace.json: phase boundaries come from the
+  // journal files' timestamps (run.json startedAt 20:54:32Z -> the gate's
+  // commit 21:16:46Z), tool calls are the agent's own count, tokens are
+  // unknown and left out.
+  timeline: {
+    source: "self-reported",
+    phases: [
+      { name: "scout", startMs: 0, durMs: 293000, calls: 25, tools: "Bash 15, WebSearch 6, Write 1" },
+      { name: "plan", startMs: 293000, durMs: 92000, calls: 6, tools: "Bash 5, Write 1" },
+      { name: "build", startMs: 385000, durMs: 719000, calls: 36, tools: "Bash 26, Read 8, Write 2" },
+      { name: "critique", startMs: 1104000, durMs: 119000, calls: 4, tools: "Read 2, Write 1, Bash 1" },
+      { name: "ship", startMs: 1223000, durMs: 111000, calls: 11, tools: "Bash 9, Write 1, Read 1" },
+    ],
+  },
+};
+
 export const OgCardV1 = defineMosaicTemplate<OgCardProps>({
   id: asTemplateId(ID),
-  label: "02 · OG Card",
+  label: "2026-09-20 · OG Card",
   version: 1,
   description:
     "Open Graph preview card from five strings - title, summary, kicker, site, author - as a deterministic PNG for a build step. 1200x630 by default; the same props also lay out square and story crops.",
   capabilities: { tier: "core" },
-  tags: ["dev", "og-image", "social", "card", "blog", "build-step", "still"],
+  tags: ["dev", "2026-09-20", "day-001", "og-image", "social", "card", "blog", "build-step", "still"],
   // 1200x630 is the Open Graph size the platforms mandate; its height carries
   // a 7 the template cannot move. Declared so the gate charges the rough axis
   // to the canvas, not the construction - which stays 5-smooth by itself
@@ -408,85 +512,90 @@ export const OgCardV1 = defineMosaicTemplate<OgCardProps>({
     preset: "dark",
     background: "",
     ink: "",
+    debugLayout: false,
   },
 
-  async render(props: OgCardProps, ctx: MosaicEngineContext): Promise<MosaicDocument> {
-    // The schema is documentation; render() is the gate.
-    const title = pickText(props.title, DEFAULT_TITLE, "title");
-    if (title.length === 0) throw new Error(`${ID}: title must not be empty.`);
-    const summary = pickText(props.summary, DEFAULT_SUMMARY, "summary");
-    const kicker = pickText(props.kicker, DEFAULT_KICKER, "kicker");
-    const site = pickText(props.site, DEFAULT_SITE, "site");
-    const author = pickText(props.author, DEFAULT_AUTHOR, "author");
-    const preset = props.preset === "light" ? PRESETS.light : PRESETS.dark;
-    const accent = pickColor(props.accent, DEFAULT_ACCENT as MosaicColor, "accent");
-    const bg = pickColor(props.background, preset.bg, "background");
-    const ink = pickColor(props.ink, preset.ink, "ink");
-
-    const W = Math.max(1, Math.round(ctx.target.width));
-    const H = Math.max(1, Math.round(ctx.target.height));
-    const L = layoutOgCard({ title, summary, kicker, site, author }, W, H);
-
-    // ── pieces: exact rects, packed as zero-drift laundered m0 ──
-    const pieces: Parameters<typeof placeInsetPieces>[0]["pieces"] = [];
-    const piece = (rect: Rect, importance: number, source: MosaicSource) =>
-      pieces.push({ rect: { ...rect, importance }, source });
-
-    // The band shows `accent` - it is the swatch handle. Footer ink flips for contrast.
-    const bandInk = onColor(accent);
-    piece(L.bar, 1, bindProp(makeColorTile(accent), "accent"));
-    if (L.kicker) {
-      piece(
-        L.kicker.rect,
-        2,
-        bindProps(textCell({ text: L.kicker.fit.text, fontSize: L.kicker.fit.fontSize, color: accent, hAlign: "left", bold: true, label: "kicker" }), [
-          { propKey: "kicker" },
-          { propKey: "accent" },
-        ]),
-      );
-    }
-    piece(
-      L.title.rect,
-      2,
-      bindProps(textCell({ text: L.title.fit.text, fontSize: L.title.fit.fontSize, color: ink, hAlign: "left", bold: true, label: "title" }), [
-        { propKey: "title" },
-        { propKey: "ink" },
-      ]),
-    );
-    if (L.summary) {
-      piece(
-        L.summary.rect,
-        2,
-        bindProp(textCell({ text: L.summary.fit.text, fontSize: L.summary.fit.fontSize, color: preset.muted, hAlign: "left", label: "summary" }), "summary"),
-      );
-    }
-    if (L.site) {
-      piece(
-        L.site.rect,
-        2,
-        bindProp(textCell({ text: L.site.fit.text, fontSize: L.site.fit.fontSize, color: bandInk, hAlign: "left", label: "site" }), "site"),
-      );
-    }
-    if (L.author) {
-      piece(
-        L.author.rect,
-        2,
-        bindProp(textCell({ text: L.author.fit.text, fontSize: L.author.fit.fontSize, color: bandInk, hAlign: "right", label: "author" }), "author"),
-      );
-    }
-
-    const placed = placeInsetPieces({ rootW: W, rootH: H, pieces, basis: INSET_BASIS });
-    return {
-      kind: "mosaic_document",
-      version: 1,
-      m0: toM0String(placed.m0, ID),
-      assets: {},
-      size: { width: W, height: H },
-      backgroundColor: bg,
-      sources: placed.sources,
-      editor: { label: `OG Card · ${site.length > 0 ? site : "no site"} · ${props.preset === "light" ? "light" : "dark"}` },
-    };
-  },
+  render,
+  renderTutorial: whyTutorial(WHY, render),
 });
 
 export default OgCardV1;
+
+async function render(props: OgCardProps, ctx: MosaicEngineContext): Promise<MosaicDocument> {
+  // The schema is documentation; render() is the gate.
+  const title = pickText(props.title, DEFAULT_TITLE, "title");
+  if (title.length === 0) throw new Error(`${ID}: title must not be empty.`);
+  const summary = pickText(props.summary, DEFAULT_SUMMARY, "summary");
+  const kicker = pickText(props.kicker, DEFAULT_KICKER, "kicker");
+  const site = pickText(props.site, DEFAULT_SITE, "site");
+  const author = pickText(props.author, DEFAULT_AUTHOR, "author");
+  const preset = props.preset === "light" ? PRESETS.light : PRESETS.dark;
+  const accent = pickColor(props.accent, DEFAULT_ACCENT as MosaicColor, "accent");
+  const bg = pickColor(props.background, preset.bg, "background");
+  const ink = pickColor(props.ink, preset.ink, "ink");
+
+  const W = Math.max(1, Math.round(ctx.target.width));
+  const H = Math.max(1, Math.round(ctx.target.height));
+  const L = layoutOgCard({ title, summary, kicker, site, author }, W, H);
+
+  // ── pieces: exact rects, packed as zero-drift laundered m0 ──
+  const pieces: Parameters<typeof placeInsetPieces>[0]["pieces"] = [];
+  const piece = (rect: Rect, importance: number, source: MosaicSource) =>
+    pieces.push({ rect: { ...rect, importance }, source });
+
+  // The band shows `accent` - it is the swatch handle. Footer ink flips for contrast.
+  const bandInk = onColor(accent);
+  piece(L.bar, 1, bindProp({ ...makeColorTile(accent), editor: { owner: "template", label: "band" } } as MosaicSource, "accent"));
+  if (L.kicker) {
+    piece(
+      L.kicker.rect,
+      2,
+      bindProps(textCell({ text: L.kicker.fit.text, fontSize: L.kicker.fit.fontSize, color: accent, hAlign: "left", bold: true, label: "kicker" }), [
+        { propKey: "kicker" },
+        { propKey: "accent" },
+      ]),
+    );
+  }
+  piece(
+    L.title.rect,
+    2,
+    bindProps(textCell({ text: L.title.fit.text, fontSize: L.title.fit.fontSize, color: ink, hAlign: "left", bold: true, label: "title" }), [
+      { propKey: "title" },
+      { propKey: "ink" },
+    ]),
+  );
+  if (L.summary) {
+    piece(
+      L.summary.rect,
+      2,
+      bindProp(textCell({ text: L.summary.fit.text, fontSize: L.summary.fit.fontSize, color: preset.muted, hAlign: "left", label: "summary" }), "summary"),
+    );
+  }
+  if (L.site) {
+    piece(
+      L.site.rect,
+      2,
+      bindProp(textCell({ text: L.site.fit.text, fontSize: L.site.fit.fontSize, color: bandInk, hAlign: "left", label: "site" }), "site"),
+    );
+  }
+  if (L.author) {
+    piece(
+      L.author.rect,
+      2,
+      bindProp(textCell({ text: L.author.fit.text, fontSize: L.author.fit.fontSize, color: bandInk, hAlign: "right", label: "author" }), "author"),
+    );
+  }
+
+  const placed = placeInsetPieces({ rootW: W, rootH: H, pieces, basis: INSET_BASIS });
+  const doc: MosaicDocument = {
+    kind: "mosaic_document",
+    version: 1,
+    m0: toM0String(placed.m0, ID),
+    assets: {},
+    size: { width: W, height: H },
+    backgroundColor: bg,
+    sources: placed.sources,
+    editor: { label: `OG Card · ${site.length > 0 ? site : "no site"} · ${props.preset === "light" ? "light" : "dark"}` },
+  };
+  return withLayoutIntent(doc, ctx, { templateId: ID, constraints: layoutContract(L), debug: props.debugLayout === true });
+}

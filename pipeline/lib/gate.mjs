@@ -7,6 +7,7 @@
 //   3. verify        — npm run verify, tools/check-freeze.mjs, m0saic doctor --json
 //   4. the template  — exactly one new src/<pack>/<slug>/vN/, validate-only exit 0
 //                      (never 3: an error mosaic is a picture of a failure),
+//                      its why-tutorial validates through the CLI (--tutorial),
 //                      a preview.png of real size
 //   5. freeze        — the new folder is added to frozen.manifest.json
 //   6. commit + push — one commit with Agent:/Model: trailers
@@ -76,6 +77,7 @@ export async function runGate({ repo, date, dayDir, noPush = false, remote = "or
     return finishFailed();
   }
   const newDir = changes.newTemplateDirs[0];
+  if (/^src\/harness\//.test(newDir)) { fail(`${newDir} is in the harness pack - internal fixtures are human-maintained; a day's template goes in a public pack`); return finishFailed(); }
   const manifest = readJson(path.join(repo, "template-manifest.json"), null);
   const repoId = manifest?.repo?.repoId;
   const templateId = repoId ? templateIdForDir(repoId, newDir) : null;
@@ -103,6 +105,9 @@ export async function runGate({ repo, date, dayDir, noPush = false, remote = "or
   r = await run("m0saic", ["make", templateId, "--template-repo", ".", "--validate-only", "--quiet"]);
   if (r.exitCode !== 0) { fail(`validate-only exited ${r.exitCode}${r.exitCode === 3 ? " — the render would be an error mosaic" : ""}`); return finishFailed(); }
   ok("validate-only exit 0");
+  r = await run("m0saic", ["make", templateId, "--template-repo", ".", "--tutorial", "--validate-only", "--quiet"]);
+  if (r.exitCode !== 0) { fail(`tutorial validate-only exited ${r.exitCode} — the why-tutorial does not render (npm run build ran tools/check-why.mjs; see its report)`); return finishFailed(); }
+  ok("why-tutorial validates (--tutorial)");
   const previewPng = path.join(repo, "assets", "templates", encodeTemplateKey(templateId), "preview.png");
   const size = fs.existsSync(previewPng) ? fs.statSync(previewPng).size : 0;
   if (size < PREVIEW_MIN_BYTES) { fail(`preview.png missing or tiny (${size} bytes) at ${path.relative(repo, previewPng)}`); return finishFailed(); }

@@ -1,0 +1,103 @@
+{
+  "query": "og image",
+  "days": 120,
+  "count": 12,
+  "results": [
+    {
+      "title": "Show HN: Tech Event Bingo – Track Events in Tech on a Bingo Card",
+      "url": "https://techeventbingo.com/",
+      "hn": "https://news.ycombinator.com/item?id=49629447",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-09-09T16:47:31Z"
+    },
+    {
+      "title": "Show HN: N8n community node for Shotium – screenshot and OG image API",
+      "url": "https://github.com/shotium/n8n-nodes-shotium",
+      "hn": "https://news.ycombinator.com/item?id=49495905",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-30T05:16:54Z"
+    },
+    {
+      "title": "Another Webpage Screenshot and OG Image Generation API",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49464305",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-27T13:07:10Z"
+    },
+    {
+      "title": "Going out of my way to prove I'm not an AI – Ep. #1 – OG images",
+      "url": "https://huijer.co/notes/going-out-of-my-way-to-prove-im-not-an-ai-og-images",
+      "hn": "https://news.ycombinator.com/item?id=49399851",
+      "points": 3,
+      "comments": 10,
+      "createdAt": "2026-08-22T14:03:09Z"
+    },
+    {
+      "title": "Show HN: Free SEO checker that finds redirect chains and www issues",
+      "url": "https://redirectiq.com/tools/seo-checker",
+      "hn": "https://news.ycombinator.com/item?id=49168984",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-04T13:49:42Z"
+    },
+    {
+      "title": "Cardstock – dynamic OG images from one URL (no render server)",
+      "url": "https://cardstock.dev",
+      "hn": "https://news.ycombinator.com/item?id=49141504",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-08-02T05:50:12Z"
+    },
+    {
+      "title": "Show HN: I built a free Open Graph image designer",
+      "url": "https://mosaicora.io/tools/og-image-designer",
+      "hn": "https://news.ycombinator.com/item?id=49139151",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-08-01T22:30:21Z"
+    },
+    {
+      "title": "Show HN: MakerStack: a pay-once maker page (SSR, OG images, custom domains)",
+      "url": "https://makerstack.altuzar.dev/",
+      "hn": "https://news.ycombinator.com/item?id=49136683",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-01T17:51:20Z"
+    },
+    {
+      "title": "Show HN: Imagerry – client-side image customizer and converter (WASM / WebGPU)",
+      "url": "https://imagerry.com/",
+      "hn": "https://news.ycombinator.com/item?id=49004013",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-07-22T09:33:33Z"
+    },
+    {
+      "title": "Generating Dynamic Open Graph Images on Cloudflare Workers",
+      "url": "https://vinayakkulkarni.dev/articles/dynamic-og-images-on-cloudflare-workers/",
+      "hn": "https://news.ycombinator.com/item?id=48811451",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-07-06T22:42:12Z"
+    },
+    {
+      "title": "Show HN: Validating an OG-image API before I build the back end",
+      "url": "https://autogranthunter.com/og/",
+      "hn": "https://news.ycombinator.com/item?id=48801438",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-07-06T06:54:16Z"
+    },
+    {
+      "title": "Show HN: Wax Spinner, a \"now playing\" social app for vinyl record collectors",
+      "url": "https://www.waxspinner.com",
+      "hn": "https://news.ycombinator.com/item?id=48774122",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-07-03T12:16:23Z"
+    }
+  ]
+}

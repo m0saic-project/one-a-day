@@ -1,0 +1,95 @@
+{
+  "query": "countdown timer",
+  "days": 120,
+  "count": 11,
+  "results": [
+    {
+      "title": "Show HN: Halo 3's Guardian, playable in the browser, as my personal website",
+      "url": "https://runboli.com",
+      "hn": "https://news.ycombinator.com/item?id=49732259",
+      "points": 27,
+      "comments": 9,
+      "createdAt": "2026-09-16T20:08:16Z"
+    },
+    {
+      "title": "Show HN: ZenTabTimer, an HTML timer where browser favicon is the timer",
+      "url": "https://github.com/kevinpondmind/ZenTabTimer",
+      "hn": "https://news.ycombinator.com/item?id=49721889",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-09-16T03:51:01Z"
+    },
+    {
+      "title": "Show HN: Cucumbero, a(nother) focus timer to help you (well, me) focus (maybe)",
+      "url": "https://chromewebstore.google.com/detail/cucumbero/olcepfohjjcdnmejpabcbdbcjbacafea",
+      "hn": "https://news.ycombinator.com/item?id=49587617",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-06T15:42:51Z"
+    },
+    {
+      "title": "Show HN: TimerVana a Local-first scheduler for real world routines",
+      "url": "https://timervana.net/browse",
+      "hn": "https://news.ycombinator.com/item?id=49571102",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-04T22:47:59Z"
+    },
+    {
+      "title": "Show HN: OwnTime – a chess clock for your day's priorities",
+      "url": "https://owntime.app/",
+      "hn": "https://news.ycombinator.com/item?id=49528506",
+      "points": 118,
+      "comments": 67,
+      "createdAt": "2026-09-01T21:29:24Z"
+    },
+    {
+      "title": "Show HN: Classroom Timer – Free Online Countdown for Teachers",
+      "url": "https://classroomtimers.app",
+      "hn": "https://news.ycombinator.com/item?id=49474925",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-28T06:09:29Z"
+    },
+    {
+      "title": "Show HN: Dashi – a 214KB Chrome new tab dashboard with no servers or analytics",
+      "url": "https://trydashi.app/",
+      "hn": "https://news.ycombinator.com/item?id=49419837",
+      "points": 9,
+      "comments": 2,
+      "createdAt": "2026-08-24T13:55:21Z"
+    },
+    {
+      "title": "Show HN: Roll Solver – daily multiplayer word puzzle PWA",
+      "url": "https://rollsolver.com",
+      "hn": "https://news.ycombinator.com/item?id=48982389",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-07-20T17:58:55Z"
+    },
+    {
+      "title": "Tell HN: We need an accounting system for cognitive debt",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48760460",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-07-02T12:30:56Z"
+    },
+    {
+      "title": "Show HN: QuickRetro – Open-source sprint retrospective app",
+      "url": "https://github.com/vijeeshr/quickretro",
+      "hn": "https://news.ycombinator.com/item?id=48597884",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-06-19T12:38:50Z"
+    },
+    {
+      "title": "Show HN: Attagram, a tiny printer that gives kids a magical daily digest",
+      "url": "https://www.attagram.com/",
+      "hn": "https://news.ycombinator.com/item?id=48580986",
+      "points": 9,
+      "comments": 6,
+      "createdAt": "2026-06-18T04:56:34Z"
+    }
+  ]
+}

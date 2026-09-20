@@ -1,0 +1,23 @@
+{
+  "query": "changelog video",
+  "days": 90,
+  "count": 2,
+  "results": [
+    {
+      "title": "GitHub CLI: Images and videos in issues, pull requests, and comments",
+      "url": "https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments/",
+      "hn": "https://news.ycombinator.com/item?id=49547454",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-03T08:36:53Z"
+    },
+    {
+      "title": "Show HN: Trace – Offline Mac meeting transcription, overhauled from HN feedback",
+      "url": "https://traceapp.info/changelog",
+      "hn": "https://news.ycombinator.com/item?id=49432395",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-25T11:57:45Z"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "query": "og image",
+  "days": 365,
+  "count": 30,
+  "results": [
+    {
+      "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+      "url": "https://github.com/arnegiacomo/fugleramme",
+      "hn": "https://news.ycombinator.com/item?id=49714064",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-15T15:30:08Z",
+      "text": "Here are the parts I bought, I&#x27;m still getting it all setup (I have my pictures displaying, working on designing the 3D printed case now, and testing it all) but according to OpenDisplay&#x27;s calculator [0] I can expect 3.4 years if I refresh the screen once every 4 hours (and currently I&#x27;m doing closer to once a day to mimic my ESP32s which need deep sleep and once-a-day refresh to get even month&#x2F;months of battery on a charge). Screen: 7.5&quot; Monochrome eInk &#x2F; ePaper Display with 800x480 Pixels ( https:&#x2F;&#x2F;www.seeedstudio.com&#x2F;7-5-Monochrome-ePaper-Display"
+    },
+    {
+      "title": "Show HN: A Curated Library of Hero Sections from Fast-Growing Startups",
+      "url": "https://www.herotxt.page/",
+      "hn": "https://news.ycombinator.com/item?id=49518503",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-01T06:06:48Z",
+      "text": "Nice collection. I’m building a free OG image generator at https:&#x2F;&#x2F;tinapps.com&#x2F;design&#x2F;og-image and will use this as inspiration for adding more templates."
+    },
+    {
+      "title": "Going out of my way to prove I'm not an AI – Ep. #1 – OG images",
+      "url": "https://huijer.co/notes/going-out-of-my-way-to-prove-im-not-an-ai-og-images",
+      "hn": "https://news.ycombinator.com/item?id=49400371",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-22T14:51:06Z",
+      "text": "What is an &quot;OG image&quot;?"
+    },
+    {
+      "title": "WPD won't replace stolen Flock cameras, citing public trust",
+      "url": "https://www.winonapost.com/news/wpd-wont-replace-stolen-flock-cameras-citing-public-trust/article_06a67859-2d97-414b-aa8f-d8751ad214bb.html",
+      "hn": "https://news.ycombinator.com/item?id=49396316",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-22T03:26:21Z",
+      "text": "Alternative to archive.ph No risk of CAPTCHA or geo-blocking No cookies, no Javascript, text-only curl -A &quot;&quot; -Haccept: https:&#x2F;&#x2F;www.winonapost.com&#x2F;news&#x2F;wpd-wont-replace-stolen-flock-cameras-citing-public-trust&#x2F;article_06a67859-2d97-414b-aa8f-d8751ad214bb.html \\ |egrep -o &#x27;(og:image.*https:&#x2F;&#x2F;.*..image.jpg)|(&lt;p[ ]class=\\&quot;p1\\&quot;.*div&gt;)&#x27; \\ |sed &#x27;1s&#x2F;^&#x2F;&lt;meta charset=utf-8&gt;&#x2F;; s|og:image\\&quot; content=\\&quot;|&lt;a href=|; s|\\.jpg|&amp;&gt;Photo&lt;&#x2F;a&gt;|&#x27; &gt; 1.htm firefox .&#x2F;1.htm #links ht"
+    },
+    {
+      "title": "Show HN: Fix every weak social card/OG preview on your site",
+      "url": "https://myog.social/tools/og-preview",
+      "hn": "https://news.ycombinator.com/item?id=49328884",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-17T10:41:34Z",
+      "text": "The OG preview tool shows the preview on various social network sites and missing&#x2F;erroneous OG tag values. Also gives a preview of what could if you used the API to generate OG images automatically. All feedback welcome. Thanks."
+    },
+    {
+      "title": "GIMP Development Update",
+      "url": "https://www.gimp.org/news/2026/08/16/dev-update-august-2026/",
+      "hn": "https://news.ycombinator.com/item?id=49328324",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-17T09:26:42Z",
+      "text": "Except MoPaQ weren&#x27;t zips IIRC, they had their own clever format here - at least the OG StarCraft &#x2F; SCBW MoPaQs were, playing with that is what I learned binary data handling on :). The idea of zipping data files applies, of course (and many a game used a literal ZIP with custom extension). But there&#x27;s one material difference between StarCraft&#x2F;Warcraft and Gimp: in Blizzard games, those were &quot;zips&quot; of heavy data files, notably read only data blobs . The game would read them, unpack in memory, and serve appropriately. Most of that data was key-value, text resources"
+    },
+    {
+      "title": "Why tiny JPEGs look different in Chrome",
+      "url": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
+      "hn": "https://news.ycombinator.com/item?id=49274567",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-12T16:02:42Z",
+      "text": "You can over ride lib-jpeg-turbo with the moz-jpeg &#x27;update&#x27; if you want much nicer jpeg things going on. Mozilla wringed out more from JPEG for Meta&#x2F;Instagram about a decade or so ago, and their library would be noteworthy in this article, for comparison. The basic idea was that JPEG was devised when CPU cycles were expensive and displays were analogue, meaning that only a limited effort was made to optimise, resulting in things like banding, that OG CRTs handled well, unlike modern digital displays (on systems with 1000000 more CPU). Regardless of what tools you are using, goin"
+    },
+    {
+      "title": "GitHub Star History, Revived",
+      "url": "https://star-history.dera.page",
+      "hn": "https://news.ycombinator.com/item?id=49195536",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-06T12:06:27Z",
+      "text": "As you may know, the OG project star-history.com is dying because of github deprecating the API it relied on ( https:&#x2F;&#x2F;www.star-history.com&#x2F;blog&#x2F;github-stargazer-api-restr... ). README.md files that relied on it now show dead links&#x2F;images. I have forked the project and replaced the mechanism it used to retrieve data, so that it provides the same experience as before: no API token needed. The code is also public: https:&#x2F;&#x2F;github.com&#x2F;Mubelotix&#x2F;star-history I provide the service for free at https:&#x2F;&#x2F;star-history.dera.page and will maintain it a"
+    },
+    {
+      "title": "Show HN: Firemaps Spain – Live wildfire map with wind flow for ES and PT",
+      "url": "https://firemapsspain.online/",
+      "hn": "https://news.ycombinator.com/item?id=49105080",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-30T01:17:07Z",
+      "text": "Hi again, author here. First of all, slau, I&#x27;m sorry about what you had to go through. I know exactly what it&#x27;s like, because my family lived it last Thursday. Aldea del Fresno, in Madrid, sits right next to the village where the biggest fire in local history started, and they were evacuated. The day before yesterday, in the afternoon, they were finally all able to go back home. I&#x27;ll answer and explain the thing you rightly pointed out about the social image, but first let me thank pjmlp. Not for defending me, but because he said exactly what I would have said in his place. I&#x"
+    },
+    {
+      "title": "Show HN: Firemaps Spain – Live wildfire map with wind flow for ES and PT",
+      "url": "https://firemapsspain.online/",
+      "hn": "https://news.ycombinator.com/item?id=49096431",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-29T12:11:29Z",
+      "text": "Je peux aussi te répondre en Français, mais je ne vois pas du tout le rapport avec la discussion. Have you actually seen the image I&#x27;m talking about? This is the one: https:&#x2F;&#x2F;firemapsspain.online&#x2F;og-image-v3.jpg It shows a straight line across all of France, which appears to be a 100km wide line of fire. Considering my family, in France, had to be evacuated, I have friends who lost absolutely everything, yes, I get annoyed when people use AI slop that doesn&#x27;t care about accuracy. Especially coming from a website that tries to improve information about wildfires! I neve"
+    },
+    {
+      "title": "OnePlus halts operations in USA and Europe",
+      "url": "https://community.oneplus.com/thread/2170715118587871237",
+      "hn": "https://news.ycombinator.com/item?id=48939574",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-16T20:09:18Z",
+      "text": "&gt; Then they flushed nearly all of it down the toilet. The day they stopped posting factory images was the day I saw the writing on the wall. For me, it was when the killed the headphone jack with the OnePlus 6T. Around the time OP6 was released, the then CEO Carl Pei posted a poll around the headphone jack - a overwhelming majority of users said they used&#x2F;wanted the jack - something like 80%+). Then they go ahead and release the 6T (and subsequent models) with no jack. At this point most of the OG fans (including myself) felt incredibly betrayed and vowed to never buy another OnePlus a"
+    },
+    {
+      "title": "Ask HN: What Are You Working On? (July 2026)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48902665",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-14T05:34:39Z",
+      "text": "Working on improving https:&#x2F;&#x2F;dartsva.com&#x2F; (Mainly content marketing). A new idea that spun up from that is an agentic OpenGraph image tool. E.g. for the blogs for dartsva I am creating og images with that script and via agents which works very well."
+    },
+    {
+      "title": "Xbox 'OG' Adventures",
+      "url": "https://mamoniem.com/xbox-og-adventures/",
+      "hn": "https://news.ycombinator.com/item?id=48881075",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-12T13:29:30Z",
+      "text": "&gt; Dive and read the official documentations for that hardware (pure RTFM kid), at this case the SDK&#x2F;API docuements. And red through the samples that comes with the SDK, compile them, and learn even more tricks from them. Unfortunately nxdk does not have (any) great docs and it is much lower level than what you&#x27;d (probably) get with the official SDK - you basically have to write your own GPU driver for example (though i think nowadays there is a partial implementation of OpenGL that has enough functionality to port a modern-ish Quake engine). I made a simple engine[0] some time ago"
+    },
+    {
+      "title": "StreetComplete: Fixing OpenStreetMap, one tiny quest at a time",
+      "url": "https://streetcomplete.app/",
+      "hn": "https://news.ycombinator.com/item?id=48821560",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-07T18:23:18Z",
+      "text": "In the app I&#x27;m developing, cartes.app, we acknowledged this lack of pictures. We show local Wikimedia common pictures, osm tag pictures, og:image pictures of the website if any, Wikipedia article infobox pictures, Panoramax for street-view, and last but not least, any picture dropped by an ATproto place review. Lots remain to be done, especially building the latter community of reviews."
+    },
+    {
+      "title": "Show HN: A graph paper generator that renders vector PDFs in the browser",
+      "url": "https://freegraphpaper.net/",
+      "hn": "https://news.ycombinator.com/item?id=48761320",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-02T13:30:45Z",
+      "text": "I got tired of graph-paper sites that print at the wrong scale, hide the PDF behind a signup, or slap a watermark on it. So I built one that&#x27;s free, has no login, and prints true-to-scale. The interesting part for me was the architecture: a single pure function buildPaper(config) emits geometric primitives (lines &#x2F; circles &#x2F; text), and everything is derived from it - the on-screen SVG preview, the in-browser PDF, and the build-time PDF and OG-image generation. No drawing logic is duplicated across output formats, so adding a new paper style is one renderer function plus about fi"
+    },
+    {
+      "title": "Show HN: Submarius – Global water clarity for divers",
+      "url": "https://submarius.com",
+      "hn": "https://news.ycombinator.com/item?id=48619784",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-21T15:30:49Z",
+      "text": "Oh good feedback! I can add deep links. Currently there is a share button on the verdict card (big number at the top of the app landing page). I know its small, but it generates an OG image for sharing for a specific location :)"
+    },
+    {
+      "title": "Show HN: Garden of Flowers – an archive of pictorial typography before ASCII art",
+      "url": "https://garden-of-flowers.heikkilotvonen.com/",
+      "hn": "https://news.ycombinator.com/item?id=48552665",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-16T09:23:54Z",
+      "text": "Thank you! If you click on the images, you get a zoomable, full resolution view."
+    },
+    {
+      "title": "Why AI hasn't replaced software engineers, and won't",
+      "url": "https://www.normaltech.ai/p/why-ai-hasnt-replaced-software-engineers",
+      "hn": "https://news.ycombinator.com/item?id=48495734",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-11T20:06:56Z",
+      "text": "So what I do with AI art is start with a photo I took. I then extract its Lin Canny lines or other descriptive features algorithmically. From there, I apply various models to re-express the image in an interesting way. IMO it looks more like Digital Art out of photoshop and I would refute any claim that this isn&#x27;t remotely artistic given I was the one that took the photo that is the base image. And it doesn&#x27;t end up looking like obvious AI art, but rather more Andy Warholish than anything else IMO. And sure, the model was trained on other people&#x27;s art but so are we. It may not b"
+    },
+    {
+      "title": "Show HN: Claw Patrol, a security firewall for agents",
+      "url": "https://github.com/denoland/clawpatrol",
+      "hn": "https://news.ycombinator.com/item?id=48494778",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-11T18:50:55Z",
+      "text": "The product looks great and I&#x27;m really interested in trying it out. Very cool, congrats on shipping! Also...as a parent of young kids: this name made me laugh out loud. The OG image on the marketing site is a fun easter egg. For those here without young kids in their life: https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Paw_Patrol "
+    },
+    {
+      "title": "Making Graphics Like it's 1993",
+      "url": "https://staniks.github.io/articles/catlantean-3d-blog-1/",
+      "hn": "https://news.ycombinator.com/item?id=48461083",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-09T13:45:03Z",
+      "text": "Yeah, even this model[0] i made a few years ago for a game i wanted to make for the OG xbox (which has a GeForce3-like GPU) has ~2230 triangles and the entire first level of Post Apocalyptic Petra is ~5800 triangles, so you could say that even a turn of the century 3D character has more or less the same polycount as an entire 90s level (the game i wanted to make would have many characters on screen so i kept the polycount low but i&#x27;ve heard games having 5-6K character or more - e.g. Kingdom Under Fire had ~10K triangles for the main character and a game like Dead or Alive where there are "
+    },
+    {
+      "title": "I design with Claude more than Figma now",
+      "url": "https://blog.janestreet.com/i-design-with-claude-code-more-than-figma-now-index/",
+      "hn": "https://news.ycombinator.com/item?id=48434758",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-07T13:40:00Z",
+      "text": "Claude is pretty great at designing certain images. For favicons, logos, og cards, it does extremely well. For full image generation, I go elsewhere."
+    },
+    {
+      "title": "Sony Launches Bravia 9 II and Bravia 7 II with 'True RGB'",
+      "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1779897602",
+      "hn": "https://news.ycombinator.com/item?id=48354298",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-01T09:01:12Z",
+      "text": "What&#x27;s with the recent trend of putting matte coatings on the most &quot;premium&quot; devices? This TV does it, the Steam Deck&#x27;s done it, and it almost always looks terrible (the nano-etching on recent MBPs is _fine_; but still makes the text noticeably fuzzier). The market for top-end TVs is the people who _really_ care about image quality, why would you jeopardize that with a coating that makes it _worse_? I&#x27;m fine with this being an option for those who want it, but associating &quot;top-end&quot; with matte is bizarre to me. I regularly regret buying the OG 512 GB Steam Dec"
+    },
+    {
+      "title": "Hacker News front page as a site",
+      "url": "https://thefrontpage.dev/",
+      "hn": "https://news.ycombinator.com/item?id=48273166",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-25T23:40:19Z",
+      "text": "Some of them are really large and I&#x27;m not resizing them or storing them, just proxying their og image directly. So they might be taking long to respond from the original source. Also getting hammerred by being in the front page."
+    },
+    {
+      "title": "Screenshots of Old Desktop OSes",
+      "url": "http://www.typewritten.org/Media/",
+      "hn": "https://news.ycombinator.com/item?id=48120777",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-13T12:00:31Z",
+      "text": "Thanks! Is it me or do 3&#x2F;4 of the pages not load any images? The title took me a moment to work out. I suppose it was written by someone who speaks in an accent where &quot;OS-some&quot; sounds like &quot;awesome&quot;. It does not to me. It was 20 or 30 years after the last time I saw a Hauppuage TV card that I saw an explanation of how it&#x27;s meant to be pronounced: https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Hauppauge_Computer_Works Then some years later, I mentioned this to someone, and he said it aloud and I realised that my mental effort to pronounce &quot;HAWP-og&quot; was"
+    },
+    {
+      "title": "Turn any title into thumbnail, OG image or blogpost cover",
+      "url": "https://thumbapi.dev",
+      "hn": "https://news.ycombinator.com/item?id=48072451",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-09T06:39:37Z",
+      "text": "I built ThumbAPI to simplify generating thumbnails, OG images, blog images and socials posts covers for automations and apps. Visual types: - Faceless (abstract) - Personalized with photo - Branded with logo - Custom assets as dataset - REST API Main focus was making it simple and fast to integrate. Would appreciate feedback on: - API design - documentation - pricing&#x2F;free tier - integrations people would want Happy to answer technical questions."
+    },
+    {
+      "title": "Apple, Intel have reached preliminary chip-making deal",
+      "url": "https://www.reuters.com/business/apple-intel-have-reached-preliminary-chip-making-deal-wsj-reports-2026-05-08/",
+      "hn": "https://news.ycombinator.com/item?id=48068158",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-08T20:12:47Z",
+      "text": "Technically speaking, Bootcamp is an iBoot problem. Apple stopped shipping Macs with firmware UEFI which breaks 99% of generic OS installers out of the box. Microsoft is pretty justified not wanting to support that, versus UEFI on OG Bootcamp. The majority of Linux distros don&#x27;t ship image support for iBoot either."
+    },
+    {
+      "title": "OpenTrafficMap",
+      "url": "https://opentrafficmap.org/",
+      "hn": "https://news.ycombinator.com/item?id=47968248",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-30T21:08:14Z",
+      "text": "I&#x27;m the founder and main developer. &gt; Where does it get this cool image from? Dog Eared Books https:&#x2F;&#x2F;cartes.app&#x2F;?allez=Dog+Eared+Books%7Cn6780338385%7C-1 ... We extract the og image from the website. https:&#x2F;&#x2F;codeberg.org&#x2F;cartes&#x2F;web&#x2F;src&#x2F;branch&#x2F;master&#x2F;app&#x2F;getOgI... &gt; Also, I noticed the map is at least a few days behind in my area, how long does it take for you to get updates? Yes, we have a double problem : first, the planet dump is not available every day. Then, our tilemaker script runs every week. https:&#x2F;&#x2F;carte"
+    },
+    {
+      "title": "Show HN: At Your Own Risk – Disclaimer pages for things that don't need them",
+      "url": "https://atyourownri.sk/",
+      "hn": "https://news.ycombinator.com/item?id=47638476",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-04T12:30:41Z",
+      "text": "This is delightful. The legalese version had me until &quot;governing disputes by coin flip&quot; — perfect escalation. Curious about the tech — Workers + D1 is a great fit for something like this. How are you handling the wildcard subdomain routing? And is the resvg-wasm for generating OG images per disclaimer?"
+    },
+    {
+      "title": "I prefer OG style websites – what are yours?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47627742",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-03T15:21:57Z",
+      "text": "Richard Stallman&#x27;s site? Very OG. https:&#x2F;&#x2F;stallman.org&#x2F; Although I see someone has put a 1.5MB image at the top, whose intrinsic size is 2000 × 2588 px, but which was downsized to 320 × 400 px. That&#x27;s not prioritizing function."
+    },
+    {
+      "title": "5-in-1 media API for developers (screenshots, PDFs, OG images,QR codes,unfurling",
+      "url": "https://snap-apii.com",
+      "hn": "https://news.ycombinator.com/item?id=47599150",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-01T10:47:04Z",
+      "text": "Built a developer media toolkit on Cloudflare Workers. One API key, five tools. Free tier: 100 ops&#x2F;day. Try the free tools without signing up: - QR generator: https:&#x2F;&#x2F;snap-apii.com&#x2F;tools&#x2F;qr - OG image generator: https:&#x2F;&#x2F;snap-apii.com&#x2F;tools&#x2F;og-image - Screenshot tool: https:&#x2F;&#x2F;snap-apii.com&#x2F;tools&#x2F;screenshot "
+    }
+  ]
+}

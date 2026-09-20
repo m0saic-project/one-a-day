@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.templateRegistry = exports.CHAPTERS = void 0;
 const registry_1 = require("./basics/registry");
+const registry_2 = require("./dev/registry");
 /**
  * Every template, chapter by chapter. Array order is display order — the
  * manifest generator flattens this verbatim into template-manifest.json
@@ -9,6 +10,7 @@ const registry_1 = require("./basics/registry");
  */
 exports.CHAPTERS = [
     { pack: "basics", entries: registry_1.basicsRegistry },
+    { pack: "dev", entries: registry_2.devRegistry },
 ];
 /** Flat view over every chapter, in order. */
 exports.templateRegistry = exports.CHAPTERS.flatMap((chapter) => chapter.entries);

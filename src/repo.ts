@@ -40,4 +40,10 @@ export const TEMPLATE_PACKS: MosaicTemplatePackDescriptor[] = [
     title: "Basics",
     description: "The front door. Every other pack is a day's work by the agent.",
   },
+  {
+    id: "dev",
+    title: "Dev",
+    description:
+      "Templates a developer runs from a build step or a terminal, fed by the repo's own metadata: preview cards, badges, banners. Deterministic, so a stale image is a diff.",
+  },
 ];

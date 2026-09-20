@@ -32,6 +32,25 @@
         "video": "assets/templates/@one-a-day__basics__hello-world__v1/preview.mp4",
         "poster": "assets/templates/@one-a-day__basics__hello-world__v1/poster.png"
       }
+    },
+    {
+      "slug": "og-card",
+      "templateKey": "@one-a-day/dev/og-card/v1",
+      "title": "02 · OG Card",
+      "description": "Open Graph preview card from five strings - title, summary, kicker, site, author - as a deterministic PNG for a build step. 1200x630 by default; the same props also lay out square and story crops.",
+      "tags": [
+        "dev",
+        "og-image",
+        "social",
+        "card",
+        "blog",
+        "build-step",
+        "still"
+      ],
+      "pack": "dev",
+      "preview": {
+        "image": "assets/templates/@one-a-day__dev__og-card__v1/preview.png"
+      }
     }
   ],
   "packs": [
@@ -39,6 +58,11 @@
       "id": "basics",
       "title": "Basics",
       "description": "The front door. Every other pack is a day's work by the agent."
+    },
+    {
+      "id": "dev",
+      "title": "Dev",
+      "description": "Templates a developer runs from a build step or a terminal, fed by the repo's own metadata: preview cards, badges, banners. Deterministic, so a stale image is a diff."
     }
   ]
 }

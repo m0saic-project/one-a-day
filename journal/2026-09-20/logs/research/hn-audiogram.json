@@ -1,0 +1,31 @@
+{
+  "query": "audiogram",
+  "days": 120,
+  "count": 3,
+  "results": [
+    {
+      "title": "A new era of biohacking in a retro medium",
+      "url": "https://elasticstage.com/36n9/releases/36n9-genetics-audiotransduction-album",
+      "hn": "https://news.ycombinator.com/item?id=49357003",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-08-19T04:53:57Z"
+    },
+    {
+      "title": "When you're stuck, just do something",
+      "url": "https://www.autogram.id/alex/thoughts/when-you-re-stuck-just-do-something",
+      "hn": "https://news.ycombinator.com/item?id=48698097",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-06-27T13:26:06Z"
+    },
+    {
+      "title": "We have more impact than we know",
+      "url": "https://www.autogram.id/alex/thoughts/we-have-more-impact-than-we-know",
+      "hn": "https://news.ycombinator.com/item?id=48671781",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-06-25T11:14:54Z"
+    }
+  ]
+}

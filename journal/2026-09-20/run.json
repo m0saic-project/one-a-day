@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-20",
+  "day": 1,
+  "startedAt": "2026-09-20T20:54:32.109Z",
+  "model": {
+    "selfDeclared": "claude-opus-5[1m]",
+    "corrected": null
+  },
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": null,
+    "note": "interactive Claude Code session driving every phase by hand; the gate ran via --gate-only",
+    "host": "Quentins-Air",
+    "platform": "darwin",
+    "node": "v20.20.2",
+    "noPush": true,
+    "m0saic": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/dev/og-card/v1",
+    "title": "02 · OG Card",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 0,
+    "at": "2026-09-20T21:16:46.315Z"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "mode": "render",
+  "ok": true,
+  "exitCode": 0,
+  "renderStatus": "ok",
+  "run": {
+    "id": "f18cf410-a9b9-4bfb-bfab-3ac307cdcdde",
+    "startedAtIso": "2026-09-20T21:11:37.460Z",
+    "finishedAtIso": "2026-09-20T21:11:37.566Z",
+    "elapsedMs": 106,
+    "estimatedMs": 422,
+    "costModelVersion": 3,
+    "machineFactor": 2.6878980891719744,
+    "setupFactor": 3.536987462158482,
+    "slopeFactor": 0.646239450361873
+  },
+  "versions": {
+    "cli": {
+      "name": "m0saic",
+      "version": "0.2.0"
+    },
+    "engine": {
+      "name": "@m0saic/core",
+      "version": "0.2.0"
+    },
+    "dsl": {
+      "name": "@m0saic/dsl",
+      "version": "2.0.0"
+    },
+    "packages": {
+      "@m0saic/templates": "0.2.0",
+      "@m0saic/types": "0.2.0"
+    },
+    "ffmpeg": {
+      "baseline": {
+        "snapshot": "N-124279-g0f6ba39122",
+        "profile": "gpl",
+        "libx264": true,
+        "source": "martin-riedl.de (macOS arm64 snapshot, signed)"
+      },
+      "runtime": {
+        "found": true,
+        "version": "ffmpeg version N-124279-g0f6ba39122-https://www.martin-riedl.de Copyright (c) 2000-2026 the FFmpeg developers",
+        "libavfilterMajor": 11,
+        "libx264": true
+      }
+    },
+    "ffprobe": {
+      "runtime": {
+        "found": true,
+        "version": "ffprobe version N-124279-g0f6ba39122-https://www.martin-riedl.de Copyright (c) 2007-2026 the FFmpeg developers"
+      }
+    }
+  },
+  "paths": {
+    "cwd": {
+      "path": ".",
+      "absolutePath": "/Users/qusimone/src/one-a-day"
+    },
+    "output": {
+      "path": "journal/2026-09-20/variants/b/renders/square.png",
+      "absolutePath": "/Users/qusimone/src/one-a-day/journal/2026-09-20/variants/b/renders/square.png"
+    },
+    "reportFile": {
+      "path": "journal/2026-09-20/variants/b/renders/square.output.json",
+      "absolutePath": "/Users/qusimone/src/one-a-day/journal/2026-09-20/variants/b/renders/square.output.json"
+    }
+  },
+  "output": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 30,
+    "durationMs": 2000,
+    "format": {
+      "kind": "image",
+      "container": "png",
+      "pixelFormat": "rgb24",
+      "hasAlpha": false
+    }
+  },
+  "template": {
+    "id": "@one-a-day/dev/og-card/v1",
+    "props": {
+      "title": "Ship a preview image for every post",
+      "summary": "One props file in, one 1200x630 PNG out. No browser, no API key, the same bytes every build.",
+      "kicker": "ENGINEERING BLOG",
+      "site": "example.dev",
+      "author": "by one-a-day",
+      "accent": "#2f81f7",
+      "preset": "dark",
+      "background": "",
+      "ink": ""
+    }
+  },
+  "layout": {
+    "rootM0": "90[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72(0,0,0,-,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-]{90[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,0,0,0,36(0,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-),0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36(0,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-),0,-,0,0,0,0,0,0,0,0,36(0,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,0,0,0,36(0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-),0,0,0,0,-]}",
+    "rootSourceCount": 6,
+    "rootFlattenedM0": "90[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72(0,0,0,-,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-]{90[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,0,0,0,36(0,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-),0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36(0,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-),0,-,0,0,0,0,0,0,0,0,36(0,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-,0,0,0,36(0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,-),0,0,0,0,-]}",
+    "rootFlattenedSourceCount": 6,
+    "minWidthPx": 35,
+    "minHeightPx": 80,
+    "feasible": true
+  },
+  "toolchain": {
+    "name": "gpl",
+    "ffmpegPath": "/Users/qusimone/m0saic/toolchains/ffmpeg/1.0.0-gpl/bin/ffmpeg",
+    "ffprobePath": "/Users/qusimone/m0saic/toolchains/ffmpeg/1.0.0-gpl/bin/ffprobe",
+    "source": "golden"
+  },
+  "errors": [],
+  "warnings": []
+}

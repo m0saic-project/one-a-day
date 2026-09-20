@@ -1,0 +1,39 @@
+{
+  "query": "thumbnail generator",
+  "days": 120,
+  "count": 4,
+  "results": [
+    {
+      "title": "AI Thumbnail Generator for YouTube – Try Free – Thumbrix",
+      "url": "https://thumbrix.com/",
+      "hn": "https://news.ycombinator.com/item?id=49653500",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-11T04:18:30Z"
+    },
+    {
+      "title": "Show HN: Built myself a super YouTube post-prod studio",
+      "url": "https://twitter.com/xucian_/status/2096626717531992342",
+      "hn": "https://news.ycombinator.com/item?id=49611999",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-08T15:44:13Z"
+    },
+    {
+      "title": "Ask HN: It's World Social Media Day. Which current ones you do and don't enjoy?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48734528",
+      "points": 1,
+      "comments": 2,
+      "createdAt": "2026-06-30T15:53:47Z"
+    },
+    {
+      "title": "Show HN: ssh late.sh - a cozy command-line Clubhouse for computer people",
+      "url": "https://late.sh",
+      "hn": "https://news.ycombinator.com/item?id=48396398",
+      "points": 18,
+      "comments": 4,
+      "createdAt": "2026-06-04T10:01:17Z"
+    }
+  ]
+}

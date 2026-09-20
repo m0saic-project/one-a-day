@@ -1,0 +1,103 @@
+{
+  "query": "demo gif",
+  "days": 120,
+  "count": 12,
+  "results": [
+    {
+      "title": "Show HN: ColliePWA, a self-hosted mobile terminal for coding agents, with alerts",
+      "url": "https://colliepwa.dev/",
+      "hn": "https://news.ycombinator.com/item?id=49775454",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2026-09-20T13:04:12Z"
+    },
+    {
+      "title": "Show HN: Stardrift – A 3D galaxy of all music, to explore and learn",
+      "url": "https://stardrift.gerlach.dev/",
+      "hn": "https://news.ycombinator.com/item?id=49769137",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-19T18:46:38Z"
+    },
+    {
+      "title": "Show HN: MNIST64 – 99.5% accuracy MNIST BNN on a stock Commodore 64",
+      "url": "https://github.com/jarnoh/mnist64",
+      "hn": "https://news.ycombinator.com/item?id=49767689",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-09-19T16:07:01Z"
+    },
+    {
+      "title": "Show HN: VisionLaya: Jev with Vision capabilities",
+      "url": "https://huggingface.co/thaitea/laya-vision-smolvlm-256m",
+      "hn": "https://news.ycombinator.com/item?id=49767430",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-09-19T15:37:34Z"
+    },
+    {
+      "title": "Radar: An Expert-Level Generalist AI for Abdominal CT Diagnosis",
+      "url": "https://github.com/alibaba-damo-academy/damo-radar",
+      "hn": "https://news.ycombinator.com/item?id=49761981",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-19T00:16:12Z"
+    },
+    {
+      "title": "Show HN: ReacherX – Open-source platform to find and reach the right people",
+      "url": "https://github.com/VecterAI/reacher-x",
+      "hn": "https://news.ycombinator.com/item?id=49760135",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-18T20:55:14Z"
+    },
+    {
+      "title": "I got tired of taking screenshots and explaining everything to AI agents",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49759108",
+      "points": 5,
+      "comments": 2,
+      "createdAt": "2026-09-18T19:35:22Z"
+    },
+    {
+      "title": "TypeSafe / Jev latency-focused demos built by Devin",
+      "url": "https://github.com/dabit3/jev-experiments",
+      "hn": "https://news.ycombinator.com/item?id=49757995",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-18T18:05:24Z"
+    },
+    {
+      "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
+      "url": "https://cactuscompute.com/needle",
+      "hn": "https://news.ycombinator.com/item?id=49748553",
+      "points": 230,
+      "comments": 91,
+      "createdAt": "2026-09-18T00:11:44Z"
+    },
+    {
+      "title": "Show HN: Jev routing coding tasks to Grok Build or Codex Astra",
+      "url": "https://github.com/jcpsimmons/jev-model-router-demo",
+      "hn": "https://news.ycombinator.com/item?id=49747155",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-17T21:55:28Z"
+    },
+    {
+      "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49743049",
+      "points": 65,
+      "comments": 58,
+      "createdAt": "2026-09-17T16:22:15Z"
+    },
+    {
+      "title": "Show HN: Video uploader for React/RN – drop in or headless UI, any back end",
+      "url": "https://github.com/hyper-serve/video-uploader",
+      "hn": "https://news.ycombinator.com/item?id=49741778",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-17T14:56:43Z"
+    }
+  ]
+}

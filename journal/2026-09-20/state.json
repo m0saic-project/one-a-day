@@ -1,0 +1,39 @@
+{
+  "useCase": "Open Graph / social preview cards for developers posts and pages, generated from props in a build step",
+  "sources": [
+    "https://dev.to/custodiaadmin/how-to-automate-og-image-generation-for-every-blog-post-2k2j",
+    "https://huijer.co/notes/going-out-of-my-way-to-prove-im-not-an-ai-og-images",
+    "https://news.ycombinator.com/item?id=49399851",
+    "https://news.ycombinator.com/item?id=49139151",
+    "https://news.ycombinator.com/item?id=49141504",
+    "https://news.ycombinator.com/item?id=48811451",
+    "https://news.ycombinator.com/item?id=48902665",
+    "https://news.ycombinator.com/item?id=49328884",
+    "https://news.ycombinator.com/item?id=48072451"
+  ],
+  "tags": [
+    "og-image",
+    "social-card",
+    "developers",
+    "blog",
+    "still",
+    "build-step"
+  ],
+  "scout": "done",
+  "pack": "dev",
+  "slug": "og-card",
+  "title": "OG Card",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "c",
+  "build": "done",
+  "decision": "ship",
+  "pick": "c",
+  "critique": "done",
+  "ship": "done"
+}

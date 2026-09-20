@@ -1,0 +1,9 @@
+{
+  "title": "How we cut our CI bill in half by rendering every social preview image at build time instead of in a browser",
+  "summary": "A deterministic template, one JSON file per post, and a diff you can review. Here is the pipeline, the numbers, and the three mistakes we made along the way before it worked.",
+  "kicker": "CASE STUDY",
+  "site": "blog.example.dev",
+  "author": "by Jo Example",
+  "preset": "light",
+  "accent": "#facc15"
+}

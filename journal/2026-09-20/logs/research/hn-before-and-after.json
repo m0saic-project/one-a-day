@@ -1,0 +1,103 @@
+{
+  "query": "before and after",
+  "days": 120,
+  "count": 12,
+  "results": [
+    {
+      "title": "Show HN: Seal – Letters and passwords that open for your family after you die",
+      "url": "https://github.com/jasonepage/Seal",
+      "hn": "https://news.ycombinator.com/item?id=49763311",
+      "points": 12,
+      "comments": 7,
+      "createdAt": "2026-09-19T04:28:22Z"
+    },
+    {
+      "title": "Show HN: ReacherX – Open-source platform to find and reach the right people",
+      "url": "https://github.com/VecterAI/reacher-x",
+      "hn": "https://news.ycombinator.com/item?id=49760135",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-18T20:55:14Z"
+    },
+    {
+      "title": "SHOW HN: I built the fastest PHP webserver in the world",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49748067",
+      "points": 6,
+      "comments": 1,
+      "createdAt": "2026-09-17T23:18:42Z"
+    },
+    {
+      "title": "Show HN: MCPJam - the first testing & evaluations platform for MCP servers",
+      "url": "https://www.mcpjam.com",
+      "hn": "https://news.ycombinator.com/item?id=49745351",
+      "points": 11,
+      "comments": 6,
+      "createdAt": "2026-09-17T19:23:47Z"
+    },
+    {
+      "title": "Show HN: dnswer – browser-based DNS change approval and multi-provider sync",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49740831",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-17T13:56:59Z"
+    },
+    {
+      "title": "Show HN: I built a simple couples app that explores a new way of connecting them",
+      "url": "https://www.luneapp.in/",
+      "hn": "https://news.ycombinator.com/item?id=49740575",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-17T13:37:01Z"
+    },
+    {
+      "title": "Show HN: Halo 3's Guardian, playable in the browser, as my personal website",
+      "url": "https://runboli.com",
+      "hn": "https://news.ycombinator.com/item?id=49732259",
+      "points": 27,
+      "comments": 9,
+      "createdAt": "2026-09-16T20:08:16Z"
+    },
+    {
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49731216",
+      "points": 34,
+      "comments": 26,
+      "createdAt": "2026-09-16T18:43:57Z"
+    },
+    {
+      "title": "Show HN: Deiko – point at your screen, talk, and hand the brief to your agent",
+      "url": "https://deiko.app/",
+      "hn": "https://news.ycombinator.com/item?id=49731089",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-16T18:34:33Z"
+    },
+    {
+      "title": "Show HN: SeasonMap – when to travel where? visualized with climate data",
+      "url": "https://seasonmap.app",
+      "hn": "https://news.ycombinator.com/item?id=49728781",
+      "points": 23,
+      "comments": 11,
+      "createdAt": "2026-09-16T15:43:07Z"
+    },
+    {
+      "title": "Show HN: Skill to generate change preview pages",
+      "url": "https://github.com/steveharrison/change-preview",
+      "hn": "https://news.ycombinator.com/item?id=49726919",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-16T13:41:44Z"
+    },
+    {
+      "title": "Show HN: Modern RSS reader with social capabilities based on AT Proto",
+      "url": "https://sunred.app/",
+      "hn": "https://news.ycombinator.com/item?id=49724533",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-09-16T10:42:39Z"
+    }
+  ]
+}

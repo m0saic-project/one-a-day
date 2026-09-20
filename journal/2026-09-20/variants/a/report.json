@@ -1,0 +1,77 @@
+{
+  "templateId": "@one-a-day/dev/og-card/v1",
+  "at": "2026-09-20T21:10:46.532Z",
+  "props": null,
+  "build": {
+    "code": 0
+  },
+  "kind": "image",
+  "renders": [
+    {
+      "canvas": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "file": "renders/landscape.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 21705,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "png"
+      }
+    },
+    {
+      "canvas": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "file": "renders/portrait.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 20458,
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "png"
+      }
+    },
+    {
+      "canvas": "square",
+      "width": 1080,
+      "height": 1080,
+      "file": "renders/square.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 15788,
+      "probe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "png"
+      }
+    }
+  ],
+  "stills": [
+    {
+      "canvas": "landscape",
+      "at": null,
+      "file": "stills/landscape.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": null,
+      "file": "stills/portrait.png"
+    },
+    {
+      "canvas": "square",
+      "at": null,
+      "file": "stills/square.png"
+    }
+  ],
+  "srcSnapshot": "src/",
+  "ok": true,
+  "degraded": false,
+  "validate": {
+    "code": 0,
+    "degraded": false
+  }
+}

@@ -1,0 +1,150 @@
+
+> one-a-day@0.1.0 verify
+> npm run build && npm run lint && npm test && npm run test:contract && npm run check:deps
+
+
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/check-registry.mjs
+
+[check-freeze] ✓ freeze (2026-09-20): 1 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (2 templates, 2 packs, 2 with preview assets)
+[check-registry] ✓ 2 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ✓ layout fingerprints: 2 unchanged, 0 missing, 0 changed.
+[check-registry] ✓ 2 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+
+> one-a-day@0.1.0 lint
+> eslint .
+
+
+> one-a-day@0.1.0 test
+> jest && node --test tools/check-freeze.test.mjs tools/robot-faces.test.mjs pipeline/lib/
+
+
+Test Suites: 3 passed, 3 total
+Tests:       14 passed, 14 total
+Snapshots:   0 total
+Time:        3.097 s
+Ran all test suites.
+TAP version 13
+# Subtest: template id from a new folder; asset key encoding
+ok 1 - template id from a new folder; asset key encoding
+  ---
+  duration_ms: 1.601208
+  ...
+# Subtest: commit messages carry the day, the id, and the Agent/Model trailers
+ok 2 - commit messages carry the day, the id, and the Agent/Model trailers
+  ---
+  duration_ms: 0.239041
+  ...
+# Subtest: stream-log formats Claude and Codex events and drops noise
+ok 3 - stream-log formats Claude and Codex events and drops noise
+  ---
+  duration_ms: 1.583709
+  ...
+# Subtest: a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+ok 4 - a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+  ---
+  duration_ms: 1.378708
+  ...
+# Subtest: protected files and folders are forbidden whatever the status
+ok 5 - protected files and folders are forbidden whatever the status
+  ---
+  duration_ms: 0.160875
+  ...
+# Subtest: editing or deleting an existing template folder is forbidden; a second new folder is counted
+ok 6 - editing or deleting an existing template folder is forbidden; a second new folder is counted
+  ---
+  duration_ms: 0.236208
+  ...
+# Subtest: another day's journal is forbidden, today's is allowed
+ok 7 - another day's journal is forbidden, today's is allowed
+  ---
+  duration_ms: 0.604583
+  ...
+# Subtest: todayIso and isIsoDate
+ok 8 - todayIso and isIsoDate
+  ---
+  duration_ms: 3.888125
+  ...
+# Subtest: ensureDay creates the folder once; state and run patches merge
+ok 9 - ensureDay creates the folder once; state and run patches merge
+  ---
+  duration_ms: 3.509875
+  ...
+# Subtest: index rows upsert by date, stay sorted; day numbers count earlier rows
+ok 10 - index rows upsert by date, stay sorted; day numbers count earlier rows
+  ---
+  duration_ms: 2.106875
+  ...
+# Subtest: renderTemplate substitutes known keys and leaves unknown ones
+ok 11 - renderTemplate substitutes known keys and leaves unknown ones
+  ---
+  duration_ms: 0.152708
+  ...
+# Subtest: seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+ok 12 - seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+  ---
+  duration_ms: 1.946917
+  ...
+# Subtest: the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+ok 13 - the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+  ---
+  duration_ms: 10.866208
+  ...
+# Subtest: import scan ignores commented-out imports
+ok 14 - import scan ignores commented-out imports
+  ---
+  duration_ms: 0.102916
+  ...
+# Subtest: hashes are CRLF-agnostic
+ok 15 - hashes are CRLF-agnostic
+  ---
+  duration_ms: 0.463291
+  ...
+# Subtest: checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+ok 16 - checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+  ---
+  duration_ms: 7.708625
+  ...
+# Subtest: judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+ok 17 - judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+  ---
+  duration_ms: 180.758292
+  ...
+# Subtest: faces are deterministic per (seed, index) and differ across indexes
+ok 18 - faces are deterministic per (seed, index) and differ across indexes
+  ---
+  duration_ms: 1.217083
+  ...
+# Subtest: 33 faces are 33 distinct, well-formed SVG documents
+ok 19 - 33 faces are 33 distinct, well-formed SVG documents
+  ---
+  duration_ms: 3.601084
+  ...
+# Subtest: data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+ok 20 - data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+  ---
+  duration_ms: 0.371208
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 264.137834
+
+> one-a-day@0.1.0 test:contract
+> node tools/contract-check.mjs
+
+contract-check: clean — 2 template(s), CJS entry, manifest agrees
+
+> one-a-day@0.1.0 check:deps
+> node tools/check-deps.mjs
+
+check-deps: CURRICULUM.md not present yet — skipping curriculum lint
+check-deps: clean (dependencies, imports, packs, curriculum, notices)

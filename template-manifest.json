@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "repo": {
+    "repoId": "@one-a-day",
+    "displayName": "One a Day",
+    "schemaVersion": 1,
+    "description": "One m0saic template a day, written by an AI agent and built in public. Each morning the agent scouts the web for a media workflow that needs support, plans a media solution, writes a template (with variants), critiques it, and ships the one that passes every gate. The journal/ folder is the full record. Third-party, unsigned, by design.",
+    "curator": "an AI agent, built in public",
+    "homepage": "https://github.com/m0saic-project/one-a-day",
+    "assets": {
+      "templatesDir": "assets/templates"
+    },
+    "helloWorld": "@one-a-day/basics/hello-world/v1"
+  },
+  "entryModule": "./dist/index.js",
+  "templates": [
+    {
+      "slug": "hello-world",
+      "templateKey": "@one-a-day/basics/hello-world/v1",
+      "title": "01 · Hello World",
+      "description": "The canonical m0saic hello-world card with this repo's mark: the brand field wipes in, a navy card rises, the M appears as 33 robot faces — the agents that write this repo — then the wordmark and the greeting. The front door: what `m0saic hello-world --template-repo .` renders. Template 01; every template after it is one day of the agent's work.",
+      "tags": [
+        "basics",
+        "starter",
+        "brand",
+        "hello",
+        "robots"
+      ],
+      "pack": "basics",
+      "preview": {
+        "image": "assets/templates/@one-a-day__basics__hello-world__v1/preview.png",
+        "video": "assets/templates/@one-a-day__basics__hello-world__v1/preview.mp4",
+        "poster": "assets/templates/@one-a-day__basics__hello-world__v1/poster.png"
+      }
+    }
+  ],
+  "packs": [
+    {
+      "id": "basics",
+      "title": "Basics",
+      "description": "The front door. Every other pack is a day's work by the agent."
+    }
+  ]
+}

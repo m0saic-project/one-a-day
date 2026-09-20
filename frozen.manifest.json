@@ -1,0 +1,11 @@
+{
+  "release": "2026-09-20",
+  "commit": "unknown",
+  "mintedAt": "2026-09-20T20:18:43.575Z",
+  "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
+  "hashVersion": 1,
+  "excluded": [],
+  "files": {
+    "src/basics/hello-world/v1/hello-world.ts": "79d061a48e57f2b0152427e0ca2e6956383a84969a89317e6de1a4ec79613721"
+  }
+}

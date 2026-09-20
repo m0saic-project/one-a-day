@@ -1,0 +1,22 @@
+# LF everywhere so dist/ built on Windows and macOS diffs clean against the
+# committed copy (tsconfig also sets "newLine": "lf"). Binaries opt out.
+* text=auto eol=lf
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
+*.mp4 -text
+*.m4v -text
+*.mov -text
+*.mkv -text
+*.webm -text
+*.mp3 -text
+*.wav -text
+*.woff -text
+*.woff2 -text
+*.ttf -text
+*.otf -text
+# Generated build output: collapse it in GitHub diffs (it is regenerated daily).
+dist/** linguist-generated=true
+template-manifest.json linguist-generated=true
+frozen.manifest.json linguist-generated=true

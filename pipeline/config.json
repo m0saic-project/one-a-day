@@ -1,0 +1,24 @@
+{
+  "$comment": "The daily run. Edited by humans only — the agent never touches pipeline/. Times are wall-clock caps per agent call; a phase is re-called until it marks itself done in journal/<date>/state.json or runs out of calls.",
+  "agent": "claude",
+  "branch": "main",
+  "remote": "origin",
+  "dayTimeoutMin": 270,
+  "variantsMax": 3,
+  "phases": [
+    { "id": "scout",    "prompt": "10-scout.md",    "output": "10-scout.md",    "timeoutMin": 20, "maxCalls": 2 },
+    { "id": "plan",     "prompt": "20-plan.md",     "output": "20-brief.md",    "timeoutMin": 15, "maxCalls": 2 },
+    { "id": "build",    "prompt": "30-build.md",    "output": "30-build.md",    "timeoutMin": 45, "maxCalls": 3 },
+    { "id": "critique", "prompt": "40-critique.md", "output": "40-critique.md", "timeoutMin": 15, "maxCalls": 2 },
+    { "id": "ship",     "prompt": "50-ship.md",     "output": "50-ship.md",     "timeoutMin": 30, "maxCalls": 2, "onlyIf": "decision=ship" }
+  ],
+  "packs": {
+    "$comment": "Preferred pack vocabulary. The plan phase picks an existing pack when one fits; a new pack needs one sentence of justification and at most one new pack lands per day.",
+    "vocabulary": ["social", "dev", "music", "education", "business", "science", "news", "personal", "ops", "community", "sports", "events", "health", "finance"]
+  },
+  "adapters": {
+    "claude": { "permissionMode": "bypassPermissions", "budgetUsd": 25, "model": null, "effort": "high" },
+    "codex":  { "sandbox": "workspace-write", "model": null },
+    "kimi":   { "model": null }
+  }
+}

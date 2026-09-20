@@ -1,0 +1,32 @@
+# dependencies
+node_modules
+
+# NOTE: dist/ and template-manifest.json are COMMITTED on purpose — hosts
+# load dist/index.js straight from a clone (there is no src/ load path), and
+# the daily run rebuilds both before every commit. Never hand-edit them.
+
+# local render output
+test-output
+
+# the daily run's raw agent transcripts (large; the trimmed .log beside each is committed)
+journal/**/logs/*.jsonl
+journal/**/logs/*.raw.txt
+# the runner's own console mirror (written after the commit too; the scheduler keeps the console log)
+journal/**/logs/runner.log
+journal/**/logs/preflight.log
+# variant renders: the stills are committed, the clips are not
+journal/**/renders/*.mp4
+journal/**/renders/*.mov
+journal/**/renders/*.webm
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env
+.env

@@ -24,8 +24,13 @@ const sh = (cmd, args, opts = {}) => execFileSync(cmd, args, { cwd: clone, encod
 
 console.log(`e2e (${mode}): cloning working tree → ${clone}`);
 fs.mkdirSync(clone, { recursive: true });
-execFileSync("rsync", ["-a", "--exclude", ".git", "--exclude", "node_modules", "--exclude", "journal/20*", "--exclude", "test-output", `${ROOT}/`, `${clone}/`]);
-fs.symlinkSync(path.join(ROOT, "node_modules"), path.join(clone, "node_modules"), "dir");
+// Copy with node, not rsync: this harness has to run on the machine that runs
+// the pipeline, and that machine may be Windows. Same exclusions as before —
+// the repo minus its history, its installed modules, past days and renders.
+const SKIP = [/^\.git([\\/]|$)/, /^node_modules([\\/]|$)/, /^test-output([\\/]|$)/, /^journal[\\/]20/];
+fs.cpSync(ROOT, clone, { recursive: true, filter: (src) => { const rel = path.relative(ROOT, src); return rel === "" || !SKIP.some((re) => re.test(rel)); } });
+// A junction needs no elevation on Windows; elsewhere it is an ordinary dir symlink.
+fs.symlinkSync(path.join(ROOT, "node_modules"), path.join(clone, "node_modules"), process.platform === "win32" ? "junction" : "dir");
 fs.writeFileSync(path.join(clone, "journal", "index.json"), "[]\n");
 const env = { ...process.env, GIT_AUTHOR_NAME: "e2e", GIT_AUTHOR_EMAIL: "e2e@test", GIT_COMMITTER_NAME: "e2e", GIT_COMMITTER_EMAIL: "e2e@test" };
 sh("git", ["init", "-q", "-b", "main"], { env });

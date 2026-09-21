@@ -9,13 +9,74 @@ reverts any change here before committing).
 node pipeline/run.mjs                 # today: preflight → scout → plan → build → critique → ship → gate → push
 node pipeline/run.mjs --no-push       # same, the commit stays local
 node pipeline/run.mjs --agent codex   # pick the adapter (or ONE_A_DAY_AGENT, or config.json)
+node pipeline/run.mjs --agent random  # draw today's agent + model from the roster (what the scheduler runs)
+node pipeline/run.mjs --roster claude-opus-ultracode   # pin one roster slot by name (or ONE_A_DAY_ROSTER)
 node pipeline/run.mjs --model <name>  # pass a model to the adapter (or ONE_A_DAY_MODEL)
+node pipeline/run.mjs --context "..." # an operator note appended to every phase prompt (or --context-file)
 node pipeline/run.mjs --phase build   # run one phase only, no gate (re-runnable: phases read the journal)
 node pipeline/run.mjs --from critique # resume from a phase, then gate
 node pipeline/run.mjs --gate-only     # no agent; gate the working tree as it is
 node pipeline/run.mjs --date 2026-09-21
 node pipeline/run.mjs --agent fake --no-push   # a canned day with no model (tests the machinery)
 ```
+
+## Who runs today — the roster
+
+The project is more interesting the more models attempt the same kind of brief,
+so the scheduler does not name an agent: it runs `--agent random` and
+`config.json` `roster` decides. One slot is drawn per day, weighted, and the
+runner walks the draw order taking the first CLI that is **installed and logged
+in** — an agent that is not on this machine costs a log line, not the day.
+
+```
+roster.entries[].id       slot name; --roster <id> pins it
+              .agent      which adapter in agents/
+              .model      handed to the adapter; null = that CLI's own default
+              .weight     relative odds, > 0
+              .adapter    overrides merged over adapters.<agent> for this slot
+              .enabled    false sits the slot out without deleting it
+```
+
+`avoidRepeat` reads yesterday off `journal/index.json`:
+
+- `"hard"` (default) — yesterday's agent is ordered behind every other agent,
+  and yesterday's exact slot behind its siblings. **With exactly two agents
+  installed this is a strict alternation**, and the weights then only choose
+  which slot of the chosen agent runs.
+- `"soft"` — nothing is excluded, only damped by `repeatPenalty`, so the draw
+  stays genuinely random and a repeat day is possible.
+- `false` — a pure weighted draw with no memory.
+
+No mode can stall: every enabled slot always stays in the order.
+
+The pick is recorded in `run.json` (`runner.roster`) and in the day's
+`journal/index.json` row (`rosterId`), which is how tomorrow's draw knows what
+ran today. **A resumed day keeps its agent**: `--from`, or a second call after a
+crash, re-reads the slot out of `run.json` instead of drawing again, so the
+phases of one day never disagree about who wrote them. `--agent <name>`,
+`--roster <id>` and `--model` always win over the draw.
+
+Two slot knobs are worth knowing, because both fail *silently* if you get them
+wrong by hand:
+
+- **claude `ultracode: true`** — there is no `--ultracode` flag; it is a session
+  setting that rides in `--settings`, and it needs `xhigh`. An explicit
+  `--effort high` alongside it turns ultracode back off with no warning, so the
+  adapter forces the effort up and writes the settings it actually used to
+  `journal/<date>/logs/claude.settings.effective.json`.
+- **codex `reasoningEffort`** — `low · medium · high · xhigh · max · ultra`
+  (`ultra` is "maximum reasoning with automatic task delegation"). Each codex
+  model carries its own default and some ship at `low`, so a slot that wants
+  depth has to say so.
+
+## The operator note
+
+`--context "<text>"` (or `--context-file <path>`, `ONE_A_DAY_CONTEXT`,
+`ONE_A_DAY_CONTEXT_FILE`) appends one message from whoever started the run to
+**every** phase prompt, and keeps it in the journal as
+`journal/<date>/context.md`. Use it to steer a day — a theme to chase, a pack to
+prefer, something yesterday got wrong. It never overrides `AGENTS.md` or the
+hard rules, and the gate does not know it exists.
 
 **Preflight** (runner, deterministic): on `main`, clean tree, `git pull --ff-only`,
 `npm ci` if the lockfile moved, `m0saic versions` sees ffmpeg, `m0saic license`
@@ -52,8 +113,11 @@ journal/<date>/trace.json`), the last page of its why-tutorial.
 
 | Variable | Purpose |
 |---|---|
-| `ONE_A_DAY_AGENT` | `claude` \| `codex` \| `kimi` \| `fake` (default `config.json`) |
+| `ONE_A_DAY_AGENT` | `claude` \| `codex` \| `kimi` \| `fake` \| `random` (default `config.json`) |
+| `ONE_A_DAY_ROSTER` | pin one roster slot by id; beats `ONE_A_DAY_AGENT` |
 | `ONE_A_DAY_MODEL` | model name handed to the adapter (recorded as `runner.modelFlag`) |
+| `ONE_A_DAY_CONTEXT` | an operator note appended to every phase prompt |
+| `ONE_A_DAY_CONTEXT_FILE` | the same, read from a file (repo-relative or absolute) |
 | `M0SAIC_PRODUCT_KEY` | paid tier for the CLI on this machine — previews are minted clean. Free tier stamps a QR and re-encodes; preflight refuses |
 | `M0SAIC_TELEMETRY` | set to `ghost` by the runner unless you set it |
 | `M0SAIC_NO_UPDATE_CHECK` | set to `1` by the runner unless you set it |

@@ -13,12 +13,12 @@
     <string>cd "$HOME/src/one-a-day" &amp;&amp; node pipeline/run.mjs &gt;&gt; "$HOME/one-a-day-logs/$(date +%F).console.log" 2&gt;&amp;1</string>
   </array>
   <key>StartCalendarInterval</key>
-  <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>0</integer></dict>
+  <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>0</integer></dict>
   <key>EnvironmentVariables</key>
   <dict>
     <key>PATH</key><string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
     <!-- Fill these in (or export them from ~/.zshenv, which -l loads): -->
-    <key>ONE_A_DAY_AGENT</key><string>claude</string>
+    <key>ONE_A_DAY_AGENT</key><string>random</string>
     <key>M0SAIC_TELEMETRY</key><string>ghost</string>
     <key>M0SAIC_NO_UPDATE_CHECK</key><string>1</string>
   </dict>

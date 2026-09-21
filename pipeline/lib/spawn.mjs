@@ -76,8 +76,14 @@ export function runProcess({ cmd, args = [], cwd, env, input, timeoutMs, logFile
       if (hardTimer) clearTimeout(hardTimer);
       for (const s of ["stdout", "stderr"]) if (onLine && lineBuffers[s]) { try { onLine(lineBuffers[s], s); } catch { /* ignore */ } }
       const ms = Date.now() - started;
-      if (log) { log.write(`\n===== exit ${code ?? signal} after ${ms}ms${timedOut ? " (TIMED OUT)" : ""}\n`); log.end(); }
-      resolve({ exitCode: code, signal, timedOut, stdout, stderr, ms });
+      // Resolve only once the log file is flushed and closed. Ending the
+      // stream is asynchronous, so returning early let a late write land
+      // AFTER the gate had staged and committed that log — which leaves the
+      // tree dirty and aborts the next morning's preflight on a clean-tree
+      // check. Intermittent by nature; the e2e caught it.
+      const done = () => resolve({ exitCode: code, signal, timedOut, stdout, stderr, ms });
+      if (log) { log.write(`\n===== exit ${code ?? signal} after ${ms}ms${timedOut ? " (TIMED OUT)" : ""}\n`); log.end(done); }
+      else done();
     });
 
     if (input !== undefined) child.stdin.write(input);

@@ -16,8 +16,9 @@ export async function run({
   logDir,     // journal/<date>/logs — write <label>.jsonl (raw) and <label>.log (readable) here
   label,      // e.g. "build-2"
   timeoutMs,  // hard wall-clock cap; the adapter must pass it to runProcess
-  model,      // optional model name from --model / ONE_A_DAY_MODEL / config
-  config,     // this adapter's block from pipeline/config.json
+  model,      // optional model name from --model / ONE_A_DAY_MODEL / the roster slot
+  config,     // adapters.<name> from pipeline/config.json, with the drawn roster
+              // slot's `adapter` overrides merged over it
   env,        // extra env for the child (M0SAIC_TELEMETRY, ONE_A_DAY_*)
 }) → { exitCode, timedOut, ms, transcript, log, trace? }
 ```
@@ -55,5 +56,20 @@ the agent during the scout phase per `_preamble.md`). The human may set
 |---|---|---|
 | `claude.mjs` | Claude Code (`claude -p`) | stream-json transcript; permission mode from config (`bypassPermissions` for an unattended laptop); `claude.settings.json` denies git push/commit/reset, npm publish, sudo |
 | `codex.mjs` | OpenAI Codex (`codex exec`) | `-s workspace-write`, `--json` events, `--skip-git-repo-check`; network for the scout phase via config override (verify the key name against your installed `codex --help`) |
+
+### Config keys these two read
+
+| Key | Adapter | Effect |
+|---|---|---|
+| `permissionMode` | claude | `--permission-mode` (default `bypassPermissions`) |
+| `effort` | claude | `--effort`; **forced to `xhigh` when `ultracode` is on** |
+| `budgetUsd` | claude | `--max-budget-usd`, per phase call — not per day |
+| `ultracode` | claude | there is no `--ultracode` flag: it is a session setting merged into `--settings`, and `--effort` below `xhigh` silently cancels it. The settings actually passed are written to `journal/<date>/logs/claude.settings.effective.json` |
+| `sandbox` | codex | `-s` (default `workspace-write`) |
+| `networkConfig` | codex | `-c <key=value>` for sandbox network access (the key name moves between versions) |
+| `reasoningEffort` | codex | `-c model_reasoning_effort=<level>`: `low · medium · high · xhigh · max · ultra`. Models carry their own default and some ship at `low`, so ask for depth explicitly |
+
+A roster slot's `adapter` block is merged over `adapters.<name>` before the call,
+so one CLI can appear several times at different depths and budgets.
 | `kimi.mjs` | Kimi CLI | **not wired** — fill in `available()` and `run()` once the CLI is on the laptop; the contract above is all it needs |
 | `fake.mjs` | none | test double: performs a canned day (scaffold + journal files) without any model — used by `pipeline/lib/*.test.mjs` and `--agent fake` dry runs |

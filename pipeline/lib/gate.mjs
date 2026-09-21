@@ -47,6 +47,9 @@ export async function runGate({ repo, date, dayDir, noPush = false, remote = "or
   const day = dayNumber(repo, date);
   const agent = runRec.runner?.adapter ?? "unknown";
   const model = runRec.model?.selfDeclared ?? null;
+  // Which roster slot drew today (null when the agent was named by hand).
+  // Tomorrow's draw reads it back out of the index to avoid a repeat.
+  const rosterId = runRec.runner?.roster?.id ?? null;
   const wantShip = state.decision === "ship";
 
   // ── 1. scope guard ──
@@ -65,7 +68,7 @@ export async function runGate({ repo, date, dayDir, noPush = false, remote = "or
     const reason = scopeViolated ? "scope violation" : (state.noShipReason ?? "critique rejected every variant");
     const status = scopeViolated ? "failed" : "no-ship";
     patchRun(dayDir, { result: { status, templateId: null, reason }, gate: { reasons, at: new Date().toISOString() } });
-    upsertIndex(repo, { date, day, agent, model, status, templateId: null, title: null, useCase: state.useCase ?? null, tags: state.tags ?? [], sources: state.sources ?? [] });
+    upsertIndex(repo, { date, day, agent, model, rosterId, status, templateId: null, title: null, useCase: state.useCase ?? null, tags: state.tags ?? [], sources: state.sources ?? [] });
     const sha = commitAll(repo, commitMessage({ day, agent, model, reason }));
     if (!noPush) { try { push(repo, remote, branch); ok(`pushed ${sha?.slice(0, 7)}`); } catch (e) { fail(`push failed: ${e.message}`); } }
     return { ok: !scopeViolated, status, templateId: null, reasons, sha };
@@ -119,7 +122,7 @@ export async function runGate({ repo, date, dayDir, noPush = false, remote = "or
   r = await run("node", ["tools/check-freeze.mjs", "--update", "--tag", date]);
   if (r.exitCode !== 0) { fail(`check-freeze --update exited ${r.exitCode}`); return finishFailed(); }
   patchRun(dayDir, { result: { status: "shipped", templateId, title: entry.title ?? null, reason: null }, gate: { reasons, doctorWarnings: doctor.warnings?.length ?? 0, at: new Date().toISOString() } });
-  upsertIndex(repo, { date, day, agent, model, status: "shipped", templateId, title: entry.title ?? null, pack: entry.pack ?? null, useCase: state.useCase ?? null, tags: entry.tags ?? [], sources: state.sources ?? [] });
+  upsertIndex(repo, { date, day, agent, model, rosterId, status: "shipped", templateId, title: entry.title ?? null, pack: entry.pack ?? null, useCase: state.useCase ?? null, tags: entry.tags ?? [], sources: state.sources ?? [] });
   const sha = commitAll(repo, commitMessage({ day, templateId, title: entry.title, agent, model }));
   ok(`committed ${sha?.slice(0, 7)}`);
   if (!noPush) { try { push(repo, remote, branch); ok(`pushed to ${remote}/${branch}`); } catch (e) { fail(`push failed: ${e.message} (the commit is local; tomorrow's preflight pulls first)`); } }
@@ -131,7 +134,7 @@ export async function runGate({ repo, date, dayDir, noPush = false, remote = "or
     const rest = classifyChanges(porcelain(repo), { date }).allowed.filter((e) => !e.path.startsWith("journal/"));
     if (rest.length) revertPaths(repo, rest);
     patchRun(dayDir, { result: { status: "failed", templateId: null, reason: reasons[reasons.length - 1] ?? "gate failed" }, gate: { reasons, at: new Date().toISOString() } });
-    upsertIndex(repo, { date, day, agent, model, status: "failed", templateId: null, title: null, useCase: state.useCase ?? null, tags: state.tags ?? [], sources: state.sources ?? [] });
+    upsertIndex(repo, { date, day, agent, model, rosterId, status: "failed", templateId: null, title: null, useCase: state.useCase ?? null, tags: state.tags ?? [], sources: state.sources ?? [] });
     const sha = commitAll(repo, commitMessage({ day, agent, model, reason: `gate failed — ${reasons[reasons.length - 1] ?? ""}` }));
     if (!noPush) { try { push(repo, remote, branch); } catch (e) { fail(`push failed: ${e.message}`); } }
     return { ok: false, status: "failed", templateId: null, reasons, sha };

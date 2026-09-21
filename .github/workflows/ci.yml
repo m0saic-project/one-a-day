@@ -28,7 +28,9 @@ jobs:
       - name: Freeze (shipped templates never change)
         run: node tools/check-freeze.mjs
       - name: Pipeline unit tests
-        run: node --test tools/check-freeze.test.mjs pipeline/lib/
+        # A glob, not the bare directory: Node 22 rejects `pipeline/lib/` as a
+        # test target on some platforms and the whole folder is skipped silently.
+        run: node --test tools/check-freeze.test.mjs "pipeline/lib/*.test.mjs"
 
   build:
     runs-on: ubuntu-latest

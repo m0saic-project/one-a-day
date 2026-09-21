@@ -16,6 +16,25 @@
     "$comment": "Preferred pack vocabulary. The plan phase picks an existing pack when one fits; a new pack needs one sentence of justification and at most one new pack lands per day.",
     "vocabulary": ["social", "dev", "music", "education", "business", "science", "news", "personal", "ops", "community", "sports", "events", "health", "finance"]
   },
+  "roster": {
+    "$comment": "Who runs today when the runner is called with --agent random (the scheduler is). One slot is drawn per day, weighted; the runner walks the draw order and takes the first CLI that is installed and logged in, so an agent that is not on this machine costs a log line, not the day. --roster <id> pins one slot by hand. avoidRepeat \"hard\" ranks yesterday agent behind every other one, so with two agents installed the CLI alternates and the weights choose WHICH slot of it runs; \"soft\" only damps the repeat (repeatPenalty) so the draw stays genuinely random; false forgets yesterday. entries[].adapter is merged over adapters.<agent> for that slot only. The spread is deliberate: the journal is more interesting when the same brief is attempted by a heavyweight one day and a cheap model the next, and a no-ship day from a small model is a real result, not a failure.",
+    "avoidRepeat": "hard",
+    "repeatPenalty": { "agent": 0.3, "slot": 0.1 },
+    "$models": "claude: aliases fable|opus|sonnet (+[1m] for the 1M-context variant) and haiku. codex: model slugs from the account, best to cheapest - gpt-6-astra (most capable), gpt-5.6-terra (balanced), gpt-5.6-sol (workhorse), gpt-5.6-luna (fast and affordable), gpt-5.5 (previous generation). Codex reasoning levels: low|medium|high|xhigh|max|ultra.",
+    "entries": [
+      { "id": "claude-opus-ultracode", "agent": "claude", "model": "opus[1m]",     "weight": 4, "adapter": { "ultracode": true, "effort": "xhigh", "budgetUsd": 75 } },
+      { "id": "claude-opus",           "agent": "claude", "model": "opus[1m]",     "weight": 3, "adapter": { "effort": "high", "budgetUsd": 30 } },
+      { "id": "claude-fable",          "agent": "claude", "model": "fable[1m]",    "weight": 3, "adapter": { "effort": "high", "budgetUsd": 30 } },
+      { "id": "claude-sonnet",         "agent": "claude", "model": "sonnet[1m]",   "weight": 2, "adapter": { "effort": "high", "budgetUsd": 15 } },
+      { "id": "claude-haiku",          "agent": "claude", "model": "haiku",        "weight": 1, "adapter": { "effort": "medium", "budgetUsd": 8 } },
+      { "id": "codex-astra-ultra",     "agent": "codex",  "model": "gpt-6-astra",  "weight": 4, "adapter": { "reasoningEffort": "ultra" } },
+      { "id": "codex-astra",           "agent": "codex",  "model": "gpt-6-astra",  "weight": 3, "adapter": { "reasoningEffort": "high" } },
+      { "id": "codex-terra",           "agent": "codex",  "model": "gpt-5.6-terra","weight": 3, "adapter": { "reasoningEffort": "high" } },
+      { "id": "codex-sol",             "agent": "codex",  "model": "gpt-5.6-sol",  "weight": 2, "adapter": { "reasoningEffort": "high" } },
+      { "id": "codex-luna",            "agent": "codex",  "model": "gpt-5.6-luna", "weight": 1, "adapter": { "reasoningEffort": "medium" } },
+      { "id": "codex-5.5",             "agent": "codex",  "model": "gpt-5.5",      "weight": 1, "adapter": { "reasoningEffort": "high" } }
+    ]
+  },
   "pricing": {
     "$comment": "USD per MILLION tokens, by model-name substring (first match wins), for the cost ESTIMATE on the why-tutorial's timeline page when the agent CLI reports no cost itself (Claude Code reports total_cost_usd; Codex does not). Edit to the list prices of the day and bump pricedAt - the card prints the date. Missing model = no estimate, tokens only.",
     "pricedAt": "2026-09-20",

@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="UTF-16"?>
-<!-- Windows Task Scheduler: schtasks /Create /TN "one-a-day" /XML pipeline\schedule\one-a-day.task.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Windows Task Scheduler. Edit the Set-Location path below to this clone, then
+     register from PowerShell — NOT with schtasks /Create /XML, which insists the
+     file be UTF-16 and fails with "unable to switch the encoding":
+       $xml = (Get-Content -Raw -Encoding UTF8 pipeline\schedule\one-a-day.task.xml) -replace '<\?xml[^>]*\?>\s*', ''
+       Register-ScheduledTask -TaskName "one-a-day" -Xml $xml -Force
+     See install.md. -->
 <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
-  <RegistrationInfo><Description>one-a-day: one m0saic template a day, agent-run.</Description></RegistrationInfo>
+  <RegistrationInfo><Description>one-a-day: one m0saic template a day, agent-run. Runs 09:00 machine-local; on a machine set to Eastern that is 9am ET year-round, since Windows shifts the trigger with DST.</Description></RegistrationInfo>
   <Triggers>
-    <CalendarTrigger><StartBoundary>2026-09-21T02:00:00</StartBoundary><Enabled>true</Enabled><ScheduleByDay><DaysInterval>1</DaysInterval></ScheduleByDay></CalendarTrigger>
+    <CalendarTrigger><StartBoundary>2026-09-22T09:00:00</StartBoundary><Enabled>true</Enabled><ScheduleByDay><DaysInterval>1</DaysInterval></ScheduleByDay></CalendarTrigger>
   </Triggers>
+  <Principals>
+    <Principal id="Author"><LogonType>InteractiveToken</LogonType><RunLevel>LeastPrivilege</RunLevel></Principal>
+  </Principals>
   <Settings>
     <AllowStartOnDemand>true</AllowStartOnDemand>
     <ExecutionTimeLimit>PT6H</ExecutionTimeLimit>
@@ -17,7 +25,7 @@
   <Actions Context="Author">
     <Exec>
       <Command>powershell.exe</Command>
-      <Arguments>-NoProfile -ExecutionPolicy Bypass -Command "$env:ONE_A_DAY_AGENT='claude'; $env:M0SAIC_TELEMETRY='ghost'; $env:M0SAIC_NO_UPDATE_CHECK='1'; Set-Location $HOME\src\one-a-day; node pipeline/run.mjs *&gt;&gt; ($HOME + '\one-a-day-logs\' + (Get-Date -Format yyyy-MM-dd) + '.console.log')"</Arguments>
+      <Arguments>-NoProfile -ExecutionPolicy Bypass -Command "$env:ONE_A_DAY_AGENT='random'; $env:M0SAIC_TELEMETRY='ghost'; $env:M0SAIC_NO_UPDATE_CHECK='1'; Set-Location $HOME\src\one-a-day; node pipeline/run.mjs *&gt;&gt; ($HOME + '\one-a-day-logs\' + (Get-Date -Format yyyy-MM-dd) + '.console.log')"</Arguments>
     </Exec>
   </Actions>
 </Task>

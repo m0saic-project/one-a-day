@@ -17,15 +17,10 @@
       "Bash(rm -rf ~*)",
       "Bash(node tools/check-freeze.mjs --update*)",
       "Edit(pipeline/**)",
-      "Write(pipeline/**)",
       "Edit(tools/**)",
-      "Write(tools/**)",
       "Edit(AGENTS.md)",
-      "Write(AGENTS.md)",
       "Edit(.github/**)",
-      "Write(.github/**)",
-      "Edit(frozen.manifest.json)",
-      "Write(frozen.manifest.json)"
+      "Edit(frozen.manifest.json)"
     ]
   }
 }

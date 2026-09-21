@@ -26,6 +26,13 @@ export async function run({ prompt, cwd, logDir, label, timeoutMs, model, config
     // moved between versions — check `codex exec --help` / config docs on the
     // laptop and adjust `networkConfig` in pipeline/config.json if it errors.
     ...(config.networkConfig ? ["-c", config.networkConfig] : ["-c", "sandbox_workspace_write.network_access=true"]),
+    // Reasoning depth, the knob that matters most on a build day. Each model
+    // carries its own default (astra ships at "low"), so a roster slot that
+    // wants depth has to say so. Levels: low · medium · high · xhigh · max ·
+    // ultra ("maximum reasoning with automatic task delegation"). The value is
+    // passed unquoted: codex parses it as TOML and falls back to the raw
+    // string, which keeps Windows argument quoting out of it.
+    ...(config.reasoningEffort ? ["-c", `model_reasoning_effort=${config.reasoningEffort}`] : []),
     "-",
   ];
   if (model) args.splice(1, 0, "-m", model);

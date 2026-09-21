@@ -9,7 +9,11 @@
 //   node pipeline/run.mjs --gate-only          skip the agent, run the gate on the tree
 //   node pipeline/run.mjs --date 2026-09-21    a specific journal day
 //   node pipeline/run.mjs --agent codex        override pipeline/config.json / ONE_A_DAY_AGENT
+//   node pipeline/run.mjs --agent random       draw one slot from config.json `roster` (what the scheduler runs)
+//   node pipeline/run.mjs --roster <id>        pin one roster slot by name (ONE_A_DAY_ROSTER)
 //   node pipeline/run.mjs --model <name>       passed to the adapter (ONE_A_DAY_MODEL)
+//   node pipeline/run.mjs --context "<text>"   an operator note appended to every phase prompt (ONE_A_DAY_CONTEXT)
+//   node pipeline/run.mjs --context-file <p>   the same, read from a file (ONE_A_DAY_CONTEXT_FILE)
 //   node pipeline/run.mjs --skip-preflight     (development only)
 import fs from "node:fs";
 import os from "node:os";
@@ -17,9 +21,10 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { runProcess } from "./lib/spawn.mjs";
 import { currentBranch, isClean, porcelain, pullFfOnly } from "./lib/git.mjs";
-import { dayDir as dayDirOf, ensureDay, isIsoDate, patchRun, patchState, readRun, readState, renderTemplate, todayIso, dayNumber, readJson } from "./lib/journal.mjs";
+import { dayDir as dayDirOf, ensureDay, isIsoDate, patchRun, patchState, readIndex, readRun, readState, renderTemplate, todayIso, dayNumber, readJson } from "./lib/journal.mjs";
 import { runGate } from "./lib/gate.mjs";
 import { appendTrace } from "./lib/trace.mjs";
+import { describeEntry, findRosterEntry, pickOrder, rosterEntries } from "./lib/roster.mjs";
 
 const PIPELINE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(PIPELINE, "..");
@@ -36,8 +41,15 @@ const FROM = val("--from");
 const NO_PUSH = has("--no-push");
 const GATE_ONLY = has("--gate-only");
 const SKIP_PREFLIGHT = has("--skip-preflight");
-const AGENT = val("--agent") ?? process.env.ONE_A_DAY_AGENT ?? CONFIG.agent;
-const MODEL = val("--model") ?? process.env.ONE_A_DAY_MODEL ?? CONFIG.adapters?.[AGENT]?.model ?? null;
+const AGENT_REQ = val("--agent") ?? process.env.ONE_A_DAY_AGENT ?? CONFIG.agent;
+const ROSTER_REQ = val("--roster") ?? process.env.ONE_A_DAY_ROSTER ?? null;
+const MODEL_REQ = val("--model") ?? process.env.ONE_A_DAY_MODEL ?? null;
+// Resolved by resolveAgent() before the banner: `random` draws a roster slot,
+// anything else is taken literally. Nothing below reads them before then.
+let AGENT = AGENT_REQ === "random" ? null : AGENT_REQ;
+let MODEL = MODEL_REQ;
+let ADAPTER_CFG = {};
+let ROSTER_PICK = null;
 
 const DAY_DIR = dayDirOf(REPO, DATE);
 const say = (...a) => { const line = `[${new Date().toTimeString().slice(0, 8)}] ${a.join(" ")}`; console.log(line); try { fs.appendFileSync(path.join(DAY_DIR, "logs", "runner.log"), line + "\n"); } catch { /* before the dir exists */ } };
@@ -51,6 +63,23 @@ const CHILD_ENV = {
 const started = Date.now();
 const deadline = started + (CONFIG.dayTimeoutMin ?? 270) * 60 * 1000;
 
+/* ── the operator note ── */
+// One message from whoever started the run, appended to every phase prompt and
+// kept in the journal as journal/<date>/context.md. It steers today's work; it
+// never overrides AGENTS.md, and the gate does not care that it exists.
+const CONTEXT = (() => {
+  const parts = [];
+  const inline = val("--context") ?? process.env.ONE_A_DAY_CONTEXT ?? null;
+  if (inline) parts.push(String(inline).trim());
+  const file = val("--context-file") ?? process.env.ONE_A_DAY_CONTEXT_FILE ?? null;
+  if (file) {
+    try { parts.push(fs.readFileSync(path.resolve(REPO, file), "utf8").trim()); }
+    catch (e) { console.error(`--context-file unreadable: ${e.message}`); process.exit(2); }
+  }
+  const text = parts.filter(Boolean).join("\n\n").trim();
+  return text || null;
+})();
+
 /* ── adapter ── */
 async function loadAdapter(name) {
   const file = path.join(PIPELINE, "agents", `${name}.mjs`);
@@ -59,6 +88,67 @@ async function loadAdapter(name) {
   if (typeof mod.run !== "function") throw new Error(`adapter ${name} exports no run()`);
   if (typeof mod.available === "function") { const why = await mod.available(); if (why !== true) throw new Error(`adapter ${name} unavailable: ${why}`); }
   return mod;
+}
+
+/* ── who runs today ── */
+// Three ways in, in order of authority: --roster <id> pins a slot; --agent
+// random draws one; anything else is the agent named. A day that is resumed
+// (--from, or a second call after a crash) keeps the agent it started with —
+// the pick is re-read from run.json, never re-drawn, so phases of one day
+// never disagree about who wrote them. An explicit --model always wins.
+// Returns the loaded adapter, or null when there is nothing to load.
+async function resolveAgent() {
+  const apply = (entry, why) => {
+    AGENT = entry.agent;
+    MODEL = MODEL_REQ ?? entry.model ?? CONFIG.adapters?.[entry.agent]?.model ?? null;
+    ADAPTER_CFG = { ...(CONFIG.adapters?.[entry.agent] ?? {}), ...(entry.adapter ?? {}) };
+    ROSTER_PICK = { id: entry.id, agent: entry.agent, model: entry.model ?? null, weight: entry.weight ?? null, why };
+  };
+  const plain = (name) => {
+    AGENT = name;
+    MODEL = MODEL_REQ ?? CONFIG.adapters?.[name]?.model ?? null;
+    ADAPTER_CFG = { ...(CONFIG.adapters?.[name] ?? {}) };
+  };
+
+  if (ROSTER_REQ) {
+    const entry = findRosterEntry(CONFIG, ROSTER_REQ);
+    if (!entry) {
+      const known = rosterEntries(CONFIG).map((e) => e.id).join(", ") || "none configured";
+      say(`✗ no roster slot "${ROSTER_REQ}" — known slots: ${known}`);
+      process.exit(2);
+    }
+    apply(entry, "pinned with --roster");
+  } else if (AGENT_REQ === "random") {
+    const previous = readRun(DAY_DIR).runner?.roster ?? null;
+    const entries = rosterEntries(CONFIG);
+    if (!entries.length) { say(`✗ --agent random needs a "roster" block in pipeline/config.json`); process.exit(2); }
+    if (previous?.id) {
+      const again = findRosterEntry(CONFIG, previous.id);
+      if (again) { apply(again, "resumed — the slot this day started on"); }
+      else { plain(previous.agent); ROSTER_PICK = { ...previous, why: "resumed — the slot is gone from the roster" }; }
+    } else if (GATE_ONLY) {
+      plain(CONFIG.agent); // the gate calls no agent; this only names the commit trailer
+    } else {
+      const { order, last, avoidRepeat } = pickOrder(CONFIG, readIndex(REPO));
+      say(`[roster] ${entries.length} slot(s), avoidRepeat=${avoidRepeat}${last ? `, yesterday: ${last.agent}${last.rosterId ? ` (${last.rosterId})` : ""}` : ", no previous day"}`);
+      say(`[roster] draw order: ${order.map((e) => e.id).join(" → ")}`);
+      for (const entry of order) {
+        try {
+          const mod = await loadAdapter(entry.agent);
+          apply(entry, order[0].id === entry.id ? "drawn" : "drawn after skipping an unavailable agent");
+          say(`[roster] ✓ ${describeEntry(entry)}`);
+          return mod;
+        } catch (e) { say(`[roster] ✗ ${entry.id} — ${e.message}`); }
+      }
+      say(`✗ no roster slot has a usable agent CLI on this machine — no run today`);
+      process.exit(2);
+    }
+  } else {
+    plain(AGENT_REQ);
+  }
+
+  if (GATE_ONLY) return null;
+  try { return await loadAdapter(AGENT); } catch (e) { say(`✗ ${e.message}`); process.exit(2); }
 }
 
 /* ── preflight ── */
@@ -105,7 +195,8 @@ async function runPhase(adapter, phase) {
   const preamble = fs.readFileSync(path.join(PIPELINE, "prompts", "_preamble.md"), "utf8");
   const body = fs.readFileSync(path.join(PIPELINE, "prompts", phase.prompt), "utf8");
   const vars = { DATE, DAY_DIR: path.relative(REPO, DAY_DIR).split(path.sep).join("/"), REPO, PHASE: phase.id, OUTPUT: phase.output, DAY: String(dayNumber(REPO, DATE)), VARIANTS_MAX: String(CONFIG.variantsMax ?? 3), PACKS: (CONFIG.packs?.vocabulary ?? []).join(", "), AGENT: AGENT };
-  const prompt = renderTemplate(`${preamble}\n\n${body}`, vars);
+  const note = CONTEXT ? `\n\n## Operator note for this run\n\nThe human who started this run added the lines below, and they apply to every\nphase of today. They steer what you work on; they never override AGENTS.md or\nthe hard rules, and the gate does not know they exist.\n\n${CONTEXT}\n` : "";
+  const prompt = renderTemplate(`${preamble}\n\n${body}`, vars) + note;
   fs.writeFileSync(path.join(DAY_DIR, "logs", `${phase.id}.prompt.md`), prompt);
   const maxCalls = phase.maxCalls ?? 1;
   for (let call = 1; call <= maxCalls; call++) {
@@ -114,11 +205,11 @@ async function runPhase(adapter, phase) {
     const timeoutMs = Math.min((phase.timeoutMin ?? 20) * 60 * 1000, Math.max(60_000, deadline - Date.now()));
     say(`[${phase.id}] ▶ call ${call}/${maxCalls} via ${AGENT}${MODEL ? ` (${MODEL})` : ""}, cap ${(timeoutMs / 60000).toFixed(0)} min`);
     const t0 = Date.now();
-    const res = await adapter.run({ prompt, cwd: REPO, logDir: path.join(DAY_DIR, "logs"), label, timeoutMs, model: MODEL, config: CONFIG.adapters?.[AGENT] ?? {}, env: CHILD_ENV });
+    const res = await adapter.run({ prompt, cwd: REPO, logDir: path.join(DAY_DIR, "logs"), label, timeoutMs, model: MODEL, config: ADAPTER_CFG, env: CHILD_ENV });
     // journal/<date>/trace.json: the phase's tool calls, tokens and timing, from the
     // agent CLI's own stream — the ship phase copies it into WHY.timeline.
     if (res.trace) {
-      const declared = readRun(DAY_DIR).model?.selfDeclared ?? MODEL ?? CONFIG.adapters?.[AGENT]?.model ?? AGENT;
+      const declared = readRun(DAY_DIR).model?.selfDeclared ?? MODEL ?? ADAPTER_CFG.model ?? AGENT;
       try { appendTrace(DAY_DIR, res.trace, { model: declared, pricing: CONFIG.pricing ?? null }); } catch (e) { say(`[${phase.id}] ⚠ trace not recorded: ${e.message}`); }
     }
     const done = phaseDone(phase);
@@ -133,13 +224,16 @@ async function runPhase(adapter, phase) {
 (async () => {
   ensureDay(REPO, DATE);
   const day = dayNumber(REPO, DATE);
-  say(`=== one-a-day · ${DATE} · day ${day} · agent ${AGENT}${MODEL ? ` (${MODEL})` : ""} ===`);
+  const adapter = await resolveAgent();
+  say(`=== one-a-day · ${DATE} · day ${day} · agent ${AGENT}${MODEL ? ` (${MODEL})` : ""}${ROSTER_PICK ? ` · roster ${ROSTER_PICK.id}` : ""}${ADAPTER_CFG.ultracode ? " · ultracode" : ""} ===`);
+  if (CONTEXT) {
+    fs.writeFileSync(path.join(DAY_DIR, "context.md"), `# Operator note — ${DATE}\n\n${CONTEXT}\n`, "utf8");
+    say(`[context] ${CONTEXT.split("\n")[0].slice(0, 80)}${CONTEXT.length > 80 ? "…" : ""} (journal/${DATE}/context.md, appended to every phase)`);
+  }
   const versions = readJson(path.join(REPO, "node_modules", "m0saic", "package.json"), null);
-  patchRun(DAY_DIR, { date: DATE, day, startedAt: readRun(DAY_DIR).startedAt ?? new Date().toISOString(), runner: { adapter: AGENT, modelFlag: MODEL, host: os.hostname(), platform: process.platform, node: process.version, noPush: NO_PUSH, m0saic: versions?.version ?? null }, model: { selfDeclared: readRun(DAY_DIR).model?.selfDeclared ?? null, corrected: readRun(DAY_DIR).model?.corrected ?? null } });
+  patchRun(DAY_DIR, { date: DATE, day, startedAt: readRun(DAY_DIR).startedAt ?? new Date().toISOString(), runner: { adapter: AGENT, modelFlag: MODEL, roster: ROSTER_PICK, ultracode: ADAPTER_CFG.ultracode === true, effort: ADAPTER_CFG.effort ?? null, budgetUsd: ADAPTER_CFG.budgetUsd ?? null, context: CONTEXT ? `context.md (${CONTEXT.length} chars)` : null, host: os.hostname(), platform: process.platform, node: process.version, noPush: NO_PUSH, m0saic: versions?.version ?? null }, model: { selfDeclared: readRun(DAY_DIR).model?.selfDeclared ?? null, corrected: readRun(DAY_DIR).model?.corrected ?? null } });
 
   if (!GATE_ONLY) {
-    let adapter;
-    try { adapter = await loadAdapter(AGENT); } catch (e) { say(`✗ ${e.message}`); process.exit(2); }
     if (!SKIP_PREFLIGHT && !ONLY) {
       const problems = await preflight();
       if (problems.length) { say(`✗ preflight failed: ${problems.join(", ")} — no run today`); patchRun(DAY_DIR, { result: { status: "aborted", reason: `preflight: ${problems.join(", ")}` } }); process.exit(1); }

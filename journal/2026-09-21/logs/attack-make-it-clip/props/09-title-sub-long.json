@@ -1,0 +1,4 @@
+{
+  "title": "v1.5.0-rc3+build.20260921 compared against the long-term support baseline v1.4.7 on every machine v1.5.0-rc3+build.20260921 compared against the long-term support baseline v1.4.7 on every machine v1.5",
+  "subtitle": "best of 10 runs on an 8-core M4 Pro with cold caches, hyperfine 1.19, warmup 3, shell none, and the full methodology in docs best of 10 runs on an 8-core M4 Pro with cold caches, hyperfine 1.19, warmu"
+}

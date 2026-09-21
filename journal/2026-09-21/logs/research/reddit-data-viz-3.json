@@ -1,0 +1,40 @@
+{
+  "source": "https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=analytics&selftext=every+week&limit=3&sort=desc",
+  "fetchedAt": "2026-09-21T04:20:55.439Z",
+  "count": 3,
+  "results": [
+    {
+      "id": "1wjq6u9",
+      "title": "Holiday ad reports lie to you twice, and it's easy to blame your campaigns",
+      "permalink": "https://www.reddit.com/r/analytics/comments/1wjq6u9/holiday_ad_reports_lie_to_you_twice_and_its_easy/",
+      "sub": "analytics",
+      "author": "WickedReports",
+      "score": 0,
+      "numComments": 3,
+      "date": "2026-09-18",
+      "text": "Every Q4 I watch people cut channels that were fine. Two things are quietly warping the report and both look like bad performance. The week isn't done converting. Holiday buyers take longer to come back, so a fresh report undercounts sales and overstates your cost per new customer. The conversions just haven't landed yet. The other is that the holiday moves your buyers. People go into browse mode and buy off feeds, so discovery gets cheaper. The person who'd have searched your brand gets caught by a feed ad first, so search fills with tyre-kickers and gets pricier. Your two biggest channels drift apart on the same weekend. The trap is when both hit one channel. Search in a holiday week can look expensive AND weak at once for two unrelated reasons and neither is the channel actually failing. Cut it and you might've killed something that would've been fine a week later. What's worked for me is I don't touch budget till the conversion window closes and never benchmark a holiday week against a normal one. How do you tell \"this channel's genuinely tanking\" from \"the calendar made it look that way\"?"
+    },
+    {
+      "id": "1wi3fjw",
+      "title": "Solo junior student analyst, 15 hours a week, drowning in scaling and other issues, how do I even approach this?",
+      "permalink": "https://www.reddit.com/r/analytics/comments/1wi3fjw/solo_junior_student_analyst_15_hours_a_week/",
+      "sub": "analytics",
+      "author": "mesayaa2",
+      "score": 8,
+      "numComments": 5,
+      "date": "2026-09-16",
+      "text": "I'm a junior data analyst working as a student assistant, 10-15 hours a week, at a startup - alongside my master's in data science. I've been in this role for the last eight months and started noticing these issues around the 4-month mark - back then I always found a solution to these, felt manageable but lately they feel like big red blinking lights I'm not sure how to tackle. I'm the only person handling analytics, supporting both customer-facing dashboards and internal company data, so I feel like I have little to no room for trial and error. I took this job because it genuinely seemed right in my alley - I had so much fun and joy so far in this position, but lately I feel like maybe this is not suited for just one part-time junior. (This is my first time EVER working with real life data and customers, not just example datasets from Kaggle or the Pokemon API.) I don't have too much technical support on the team, as I'm the only analyst in the team yet, my boss is rather customer facing, and he's helping me out with positioning analytics within the company. Sorry, that's going to be a looong post. **TL;DR:** Part-time solo student analyst next to her studies seeking advice on handling customer dashboards (100+ customers) without 1 ground truth data model (due to custom data per customer), looking for advice on: * **Q1, process:** How to build a solid, repeatable analytics process as a junior when you're constantly context-switching between customers with no time to finish anything properly? What should a general analytics workflow look like? * **Q2, architecture:** Should I stick with Supabase plus MongoDB Analytics Nodes, or look at something like Databricks, for an ETL and analytics setup that can scale past 100k+ rows per customer? * **Q3, requirements:** Is it okay that I'm not there when the requirements are discussed with the stakeholders? How to get direct access to stakeholders instead of secondhand requirements, and how to gather requirements well when you do? * **Q4, AI dashboards:** Is pushing back on AI-generated reports the right call when you can't validate the numbers or maintain the tooling yourself? * **Q5, internal support:** How to raise the bigger picture with the CTO, and how to find a mentor when you're the only data person in the company? # 1. Process and prioritization As I'm solo and part time, I would love to hear some words on how to prioritize and build good habits in this scenario. My documentation right now is nearly non-existent due to lack of time - I'm trying my best documenting how my metrics work in Notion, but it's tedious and slow so I often don't get to finish them. I also don't have a solidified process yet for my tasks, as I rarely have tasks which I can finish fully - I always have a new customer to work with, or I'm jumping to another task unrelated to the previous one. I also can't just push the models into Claude for documentation, as there are some sensitive data in the models. (Like API keys etc.) A"
+    },
+    {
+      "id": "1wflg2e",
+      "title": "Semantic layer learnings",
+      "permalink": "https://www.reddit.com/r/analytics/comments/1wflg2e/semantic_layer_learnings/",
+      "sub": "analytics",
+      "author": "CommitteeImmediate66",
+      "score": 20,
+      "numComments": 14,
+      "date": "2026-09-13",
+      "text": "We've recently been looking at consolidating our semantic layer. An example of why my manager has decided we need to focus on this is we had \"net sales\" defined like six different ways. Finance took out returns and markdowns, the merch dashboard took out returns but not markdowns, my weekly report did something in between because I inherited the query from a guy who left two years ago. Every leadership meeting had that awkward moment where two numbers didn't match and nobody could say why except \"different SQL.\" All our analytics data is in Databricks, so we decided to rest metric views. A metric view in Databricks is basically a governed definition of a metric that lives in Unity Catalog instead of buried inside a dashboard. You point it at a source (your fact table plus whatever joins), you list your dimensions - the stuff you slice by, like store, region, category, channel, week - and then you define your measures, which is the actual metric math. The key thing is you write that math once. So net\\_sales = SUM(sales\\_amount - returns - markdowns) lives in exactly one place, and everything downstream inherits it. We defined them all through YAML. Honestly the hardest part wasn't technical at all. It was getting finance, merch, and ops in a room to agree on what net sales even means. Encoding it took an afternoon; agreeing on it took three meetings. But that's kind of the point - you do that fight once, write it down in the metric view, and you never have to have it again. When a business rule changes, you change it in one spot. We were also able to roll out genie agents because previously the definitions varied so much it was impossible to maintain them. "
+    }
+  ]
+}

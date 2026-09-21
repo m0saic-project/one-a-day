@@ -1,0 +1,24 @@
+{
+  "note": "DEAD END - reddit was unreachable from this environment on 2026-09-21. Recorded so the journal can audit the attempts.",
+  "angle": "reddit-music-sports",
+  "date": "2026-09-21",
+  "attempts": [
+    { "tool": "node pipeline/research/reddit.mjs r/WeAreTheMusicMakers --q \"lyric video\" --t year", "result": "403" },
+    { "tool": "node pipeline/research/reddit.mjs r/Twitch --q \"stream schedule graphic\" --t year", "result": "403" },
+    { "url": "https://www.reddit.com/r/*/search.json", "result": "403 on every retry; 3 rounds with backoff, two user-agents" },
+    { "url": "https://old.reddit.com/r/*/search", "result": "200 but body is only 'Welcome to Reddit / Skip to main content' (JS wall)" },
+    { "url": "https://api.pullpush.io/reddit/search/submission/", "result": "429 then 403 on every retry" },
+    { "url": "https://safereddit.com", "result": "Anubis proof-of-work anti-scraper interstitial" },
+    { "url": "https://redlib.privacyredirect.com", "result": "'Making sure you are not a bot!' interstitial" },
+    { "url": "https://redlib.catsarch.com", "result": "429 (3 rounds)" },
+    { "url": "https://l.opnxng.com", "result": "429 (3 rounds)" },
+    { "url": "https://redlib.perennialte.ch", "result": "410" },
+    { "url": "https://libreddit.privacydev.net", "result": "502" },
+    { "url": "https://redlib.freedit.eu", "result": "403" },
+    { "url": "https://rl.bloat.cat", "result": "ECONNRESET" },
+    { "url": "https://redlib.kittywi.re", "result": "TLS altname mismatch" },
+    { "tool": "WebFetch on www.reddit.com and old.reddit.com", "result": "'Claude Code is unable to fetch from www.reddit.com' / old.reddit.com - host blocked by the agent fetcher" },
+    { "tool": "WebSearch site:reddit.com r/fantasyfootball power rankings graphic", "result": "zero reddit results; only wikipedia/press" }
+  ],
+  "consequence": "Angle 6 was run through real web search, GitHub READMEs, vendor pages and the repo HN helper instead. Every URL cited in 10-scout was opened in this session; raw text saved as reddit-music-sports-3..11.json."
+}

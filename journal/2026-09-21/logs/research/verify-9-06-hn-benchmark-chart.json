@@ -1,0 +1,47 @@
+{
+  "query": "benchmark chart README",
+  "days": 540,
+  "count": 5,
+  "results": [
+    {
+      "title": "Show HN: Neither HTML nor Markdown is enough: a way out of the AI doc dilemma",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49432443",
+      "points": 1,
+      "comments": 2,
+      "createdAt": "2026-08-25T12:02:03Z"
+    },
+    {
+      "title": "Show HN: SlickFast Deterministic Chart/Dash Renderer, No Browser(JSON → SVG/PNG)",
+      "url": "https://slickfast.com/",
+      "hn": "https://news.ycombinator.com/item?id=49183949",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-08-05T15:01:09Z"
+    },
+    {
+      "title": "Show HN: BetterDB, MIT Valkey-native context layer for AI agents",
+      "url": "https://github.com/BetterDB-inc/monitor/tree/master/packages",
+      "hn": "https://news.ycombinator.com/item?id=48687650",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-06-26T15:16:24Z"
+    },
+    {
+      "title": "Show HN: GreenKube – Open-source K8s cost and CO2 optimization engine",
+      "url": "https://github.com/GreenKubeCloud/GreenKube",
+      "hn": "https://news.ycombinator.com/item?id=48384180",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-06-03T13:56:49Z"
+    },
+    {
+      "title": "Show HN: Qwen-2.5-32B is now the best open source OCR model",
+      "url": "https://github.com/getomni-ai/benchmark/blob/main/README.md",
+      "hn": "https://news.ycombinator.com/item?id=43549072",
+      "points": 211,
+      "comments": 47,
+      "createdAt": "2025-04-01T17:00:49Z"
+    }
+  ]
+}

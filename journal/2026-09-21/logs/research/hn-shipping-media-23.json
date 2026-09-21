@@ -1,0 +1,188 @@
+{
+  "query": "\"tokens\" \"cost\" \"chart\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22tokens%22%20%22cost%22%20%22chart%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=20",
+  "count": 20,
+  "results": [
+    {
+      "title": "The Kimi K3 Moment",
+      "url": "https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment/",
+      "hn": "https://news.ycombinator.com/item?id=48963589",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-18T23:46:35Z",
+      "text": "The artificialanalysis cost per task chart has DeepSeek as the clear winner and Fable as the clear loser. But I would still pick Fable for some tasks, so that also can't be all there is to it. But I agree that price per token figure is not great. It seems even the tokens per character can vary between models, so it's basically useless."
+    },
+    {
+      "title": "Meta caps internal AI token spending",
+      "url": "https://mlq.ai/news/meta-caps-internal-ai-token-spending-after-costs-approach-billions-in-2026/",
+      "hn": "https://news.ycombinator.com/item?id=48760361",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-02T12:23:35Z",
+      "text": "Right, so you're sane. :D Unfortunately I think we're entering (have entered?) a period of insanity. The trouble is AI is being sold as an individual engineering accelerant. I suspect at the most AI pilled orgs you'll then see a commensurate push that starts off with measuring usage (tokens), then measuring output (PRs, code reviews), and then a lot of talk about impact while everyone quietly admits that remains as impossible now as it was fifty years ago. Why? Because leadership is looking to (and selling, both internally and to the market) AI as the solution to all of their problems, which means they have to prove outcomes that justify their sky high AI budgets. Higher level metrics at the org/division/product/project level aren't satisfying and flashy enough as they're slow moving and attenuated. And squishy individual or team level assessments that rely on strong management won't show well on a cost-benefit comparison chart to the board. At bottom I suspect AI pilled leadership wants to turn software into an assembly line and measure accordingly. Your post perfectly captures why it's still not that easy, and that the real problems in software remains the same and are unsolved by AI: building the right thing, at the right time, and then later figuring out what went well, what didn't, and trying to make those successes more repeatable and failures less likely."
+    },
+    {
+      "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+      "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
+      "hn": "https://news.ycombinator.com/item?id=49612992",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-08T16:54:50Z",
+      "text": "This confirms a theory I have to explain the minimal loss in quality when using lower quants (I use IQ3_XXS with an 8-bit KV cache) and the XHIGH (default) thinking level. It's well-known that while quantization affects the sampling probability distribution (given the same context, which next token is the most probable), Qwen 3.8 27b seems to offset that by just thinking more and as a result eventually finishing the task (benchmark or otherwise). So as long as the thinking (albeit longer) is sound, this leads to the same success rate (as shown in the article) but potentially at the cost of more tokens and hence more time. I think it'll be further useful to chart each quantization's used tokens as well, in addition to the success rate. Thanks for doing and sharing the research!"
+    },
+    {
+      "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "hn": "https://news.ycombinator.com/item?id=49539265",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-02T17:07:41Z",
+      "text": "3.8 uses nearly twice as many tokens as 3.7. One might be inclined to think that they just increased the thinking budgets... 3.7 used 64M on high: https://artificialanalysis.ai/models/gemini-3-7-flash 3.8 used 120M on high: https://artificialanalysis.ai/models/gemini-3-8-flash Even their own chart showed more than 2x higher cost compared to 3.7: https://storage.googleapis.com/gweb-uniblog-publish-prod/ima..."
+    },
+    {
+      "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "hn": "https://news.ycombinator.com/item?id=49539258",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-02T17:06:54Z",
+      "text": "3.8 uses nearly twice as many tokens as 3.7. One might be inclined to think that they just uppsed the thinking budgets... 3.7 used 64M on high: https://artificialanalysis.ai/models/gemini-3-7-flash 3.8 used 120M on high: https://artificialanalysis.ai/models/gemini-3-8-flash Even their own chart showed more than 2x higher cost compared to 3.7: https://storage.googleapis.com/gweb-uniblog-publish-prod/ima..."
+    },
+    {
+      "title": "OpenAI reduces Codex Model Context Size from 372k to 272k",
+      "url": "https://github.com/openai/codex/pull/33972/files",
+      "hn": "https://news.ycombinator.com/item?id=48973311",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-20T01:07:21Z",
+      "text": "The chart makes sense and is describing the cumulative cost of a trajectory. Cache tokens are created when a trajectory’s prefix is used more than once. A larger pre-compaction context window means that a greater number of cache tokens are used per turn, and a larger number of turns are completed before compaction runs. So you get a cumulative cost that grows quadratically until the compaction event."
+    },
+    {
+      "title": "Show HN: Claude's innerworkings: turn 170 costs 2.1x turn 20, over 14,640 turns",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49556925",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-03T21:01:25Z",
+      "text": "No, let me expand using some of the items in my post. When I talk about my own flavor of \"one thinking session, short task sessions\", it takes into account exactly what you're asking. The thinking sessions write to a series of documents, throughout the session. So if I'm talking about how I want Claude to code or how I want it to think about my voice, it takes notes in these documents. Meaning, when I shut down that thinking session, it dies and all the in-memory context dies, BUT the important stuff it learned got saved to the docs. Those documents become the scaffolding of newer sessions. When I spin up a new thinking session, Claude reads that scaffolding first, then says \"Okay, I know everything about you and your project. We left off with these three things, which do you want to work on today?\" The chart on our stats page actually prints that trade: at 2.1x, a re-seat that costs ten turns of getting up to speed pays for itself after ten more turns of work. Past 180 turns, at 2.86x, after six. https://my-status.app/stats#aging It's that same scaffolding that we saw creeping up over time in this bit: \"the scaffolding trend (the cost of our own rules, creeping 87,999 → 92,619 → 93,809 across three seats)\" That meant that over three sessions, my initial token count for \"getting up to speed\" increased by roughly 6K tokens. \"Don't let me repeat myself.\" and \"Don't try to make a new table for everything.\" and other such rules got added during those sessions and thus upped the token size of the scaffolding. But that was okay to me because it meant there was no penalty for me killing sessions. Now, what's interesting is a couple of days ago Anthropic cut cache-read pricing by another 75% on Fable 5.1. That was sweet music to my ears, because they basically said, \"The way you work is smart and we should reward that.\" LOL That's not what they really said, but that's how I read them. :)"
+    },
+    {
+      "title": "DeepSeek planning to significantly raise prices",
+      "url": "https://platform.deepseek.com/usage",
+      "hn": "https://news.ycombinator.com/item?id=49200026",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-06T17:54:24Z",
+      "text": "> Good thing I invested in an eGPU! Curious: Which one? > MiMo-V2.5-Pro to be a pretty cost-effective alternative ... I found it after spotting it on a chart of different models and it was listed as being near DeepSeek v4 Flash's price/performance levels. MiMo v2.5 Pro is at DeepSeek v4 Pro price level (but consumes lesser tokens per task, so cheaper overall). DeepSeek v4 Flash costs ~3x lesser than the Pro variant!"
+    },
+    {
+      "title": "Opus 5 is currently #1 on Artificial Analysis Intelligence Leaderboard",
+      "url": "https://artificialanalysis.ai/models",
+      "hn": "https://news.ycombinator.com/item?id=49044937",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-25T06:06:30Z",
+      "text": "There is a blog post waiting to be written (that I won't write) about the size/effort tradeoffs, and particularly how small models get some surprisingly good results with lots of turns and reasoning. DeepSWE will let you chart turns taken or tokens used, and FrontierCode will chart tokens. If you use that, you can see Sol high and Terra max get about the same DeepSWE number, but Terra max takes twice the turns. Luna max scores a smidgen lower with even more turns. Smaller models relying on lots reasoning may \"scale down\" better on easier tasks, because unlike size, reasoning effort is dynamic: the model can see the task looks easy and stop. On DeepSWE, the cost curves for the three 5.6 models are almost on top of each other, but on FrontierCode Extended, the version of FrontierCode with the most everyday tasks in the mix, there's a spread of costs at the ~55% level. The recent Laguna S 2.1 model (118B, 8B active) puts up surprising coding numbers for its size, and the lab behind it specifically credits its \"way of working (persistence, verification, willingness to backtrack)\". Some other open models that folks report getting good mileage out of seem to get there partly by throwing a lot of reasoning at the problem. There is a little bit of a question, if some models rely on getting it wrong a bit more at first and external checks catching the problems, of whether they're also more frequently getting things wrong they can't self-verify (say, quality of UI or API design) and then it falls to the human to find it. Still, getting the results they're getting at all is neat. Some benchmarks historically favored reporting only on the max variants, maybe because they want to show the frontier? but that is not always what you need for practical decision. (AA has the full effort sweep for Opus 5 and Sol/Luna/Terra at least.) And at least FrontierCode finds Opus 5 taking a hit in performance above 'medium'. I am not trying to pick a winner here. I'm probably not going to use tiny models on max for everything, but I think it's cool that you can get so much more out of a small model by amping up reasoning, tool use, and persistence."
+    },
+    {
+      "title": "Claude Opus 5",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "hn": "https://news.ycombinator.com/item?id=49041773",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-24T21:26:11Z",
+      "text": "I have no idea. Seems like normal stuff. I used Kimi Code with K3 to add support for Kimi Code to flar ( https://swelljoe.com/post/i-let-every-agent-implement-its-ow... ), a task I've done with almost every major model/agent combo. Most show up as a blip on the usage chart...it's basically usually one file, a README update, and adding the agent name to the CLI. Then, I added it to my benchmark of security vulnerability auditing capability, and it burned a bazillion tokens, burned through the 5-hour limit, burned through $100 in extra usage I'd allocated, and was only 11% finished. That's more expensive than any model I've tested other than GPT 5.5 Pro on this task. These are things I've done with a bunch of other models, I feel like I have a notion of what they ought to cost, and with K3, they end up being crazy expensive. (And it seems to be a function of how many tokens it burns accomplishing the tasks.)"
+    },
+    {
+      "title": "FrontierCode: An eval to measure whether you would actually merge the code",
+      "url": "https://cognition.ai/blog/frontier-code",
+      "hn": "https://news.ycombinator.com/item?id=48456137",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-09T03:50:57Z",
+      "text": "This isn't a fair way to chart this: \"Each model is run 5 times at every available reasoning effort. For each effort, we average the metric across the 5 trials, then report each model’s score at its best performing reasoning level.\" For example, Anthropic's \"medium\" might involve 3x the amount of thinking and take 5x as long as OpenAI's idea of \"medium\". So now you've skewed all the results. It assumes that they're linear and equivalent ranges. You should compare apples to apples. Weight them in a way that factors in total task completion time as the measure of \"effort\", not the arbitrary effort settings provided by the AI company. I don't care what the underlying effort level is, I care which model out of multiple, if running for the same amount of time, completes my task to a more accurate degree. Total token consumption would also be another thing to consider as well, to rule out TPS. But generally, if the goal is ultimate productivity, the main factor is what does it faster. If cost is a concern factor then token count+speed, or token count alone, is the main factor. The second chart paints a more clear picture though, GPT 5.5 xhigh gets 44.7% at 21k tokens, and Opus 4.8 max gets 49.9% at 75k tokens. So basically, 4x the amount of tokens from Opus 4.8 resulted in an increase of 5.2%. If you were to loop GPT 5.5 xhigh over the same set of tasks, an extra 4x, would it surpass the 49.9%? That's the real question here. And I'd wager it probably would. But the framing of this whole thing makes it sound like Opus has some massive lead. In reality though, it just loops harder and consumes more tokens. Their effort levels are not equivalent. Now take this even further, and emulate what Anthropic is likely doing behind the scenes. Running the prompt through multiple prompts and converging on the end result. Give GPT 4 generic skills that cover different aspects of the benchmark in a general way. Run it 4x to get that same token count usage, and use each of those different skills for each one. Now what is the result? I'd wager it blows Opus out of the water. The end result is this: Anthropic gives you all of the bloat in a single, slow package. GPT gives you the ability to build your own equivalent harness. I'd much rather have the freedom and flexibility to do it myself. Once people actually focus on building strong harnesses around open-source, we'll have models that are competing at the same level as the closed labs. Especially now that we have models like Nemotron 3 Ultra. But it involves a lot of clever approaches, like using small fast models to help with routing and determining what \"skills\" and prompts to load, using static analysis, local tools and vector databases. Using a pipeline of all of the specialized, fast, small models to handle the various aspects of the specific task in a cooperative tree. The amount of underutilized specialized AI models out there is insane, no one seems to be building harnesses around them. Things like semantic code duplication detection for example. We don't need to be using the big model to do everything, the big model should be the orchestrator of all of the tools and little models. This is why the big labs have a lead that no one seems to be able to crack, because they're not just building a model and calling it a day, they utilize all of these other approaches on top of the big model. Now that we have strong open source models, we can start building these things too."
+    },
+    {
+      "title": "New U.S. college grads now have higher unemployment than the average worker",
+      "url": "https://www.randalolson.com/2026/06/04/recent-grad-unemployment-flip/",
+      "hn": "https://news.ycombinator.com/item?id=48429666",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-06T22:30:20Z",
+      "text": "I would postulate that there are two reasons why this is happening. 1. Pessimistic, harsh, etc: the quality of US graduates has been falling. Reading comprehension has been on a downward trend over the past decade. Mental illness, depression, and attention disorders are on the rise. Grade inflation, social media, AI availability, we spent years talking about how all of these things would be bad, and now the experimental cohort of kids growing up in this world are graduating and can't find jobs; maybe its not a coincidence. 2. AI automates processes. It doesn't just \"do stuff\" broadly speaking. AI has increased the leverage that process experts bring to the table: Doing 100x more of the right thing is infinitely more valuable than 100x more of the wrong thing, and with AI proliferating at the rate it is, the differentiator actually isn't in the 100x; its in the driver. Companies need senior talent; its like low-background steel. I doubt we will see reversal on this in the near term. If anything I expect the \"unemployment in their field\" chart for every seniority bucket to continue up-and-to-the-right, just lagging behind new grads. But, whether that surfaces in general unemployment remains to be seen: Generally, I think the value of a college education is just going to drop. Like, legitimately: AI automates college for 85% of college graduates and degrees. The true benefit of college was always immaterial and unrelated to the degree you got; it was in the liberal arts, unfurling your wings, making social connections, just stressing your brain out, hard, for four years to build neuroplasticity, that was always the point. But at some point along the way college became about the little piece of paper they gave out at the end and the words it said on it. All of our capitalistic forces beat college into \"the optimal pipeline for that degree\"; kill liberal arts, online classes, screw social connection, grade inflation, maximize enrollment, make it easy. Great. And then AI comes along and makes that one thing we optimized everything around pointless. I'm very much a \"it'll all work out in the end\" kind of guy, and I think in this case: the societal benefits of a college degree being available for $25/million tokens will far outweigh the societal costs. But we're doing a very bad job of managing those costs, and the first thing we need to be realistic with on this cost management is: about half as many people who currently attend college should actually be there."
+    },
+    {
+      "title": "Ed Zitron loses his mind annotating an AI doomer macro memo",
+      "url": "https://www.dropbox.com/scl/fi/1p1n0y1ip48ianok9dvbp/Annotation-The-Global-Intelligence-Crisis.pdf?dl=0&e=1&noscript=1&rlkey=qaar8ea6l5hh6jqls4x6g8q4b",
+      "hn": "https://news.ycombinator.com/item?id=47160141",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-02-26T00:26:40Z",
+      "text": "Okay, I'm tired of reading the debate about costs going down and therefore Ed is wrong. The cost of running the inference is not the problem. The cost of the input CHIPS is the problem. Let's return to Dario Amodei's interview [0] with Dwarkesh, shall we, for AI Economics 101? Here goes: The Epoch data everyone keeps citing measures the price per token charged to API customers. That's the sticker price. It tells you nothing about whether the business is viable, because the existential risk for AI companies isn't the marginal cost of running a query. It's the upfront capital expenditure on chips and datacenters, committed years before you know what demand looks like. Anthropic CEO Dario Amodei spelled this out in his Dwarkesh interview. Here's the short version: 1. Data centers take 1-2 years to build out. 2. Each gigawatt costs roughly $10-15B per year. 3. The industry is currently at ~10-15 GW, scaling roughly 3x annually. 4. By 2028, ~100 GW. By 2029, ~300 GW. 5. We're talking multiple trillions per year in committed infrastructure spend across the industry. Now NVIDIA's Q4 earnings [1], which printed today: 1. $68.1B in quarterly revenue, $62.3B from data center alone. 2. Full-year: $215.9B, up 65% YoY. Guiding $78B next quarter. 3. Someone is writing those checks. Those checks are not refundable. Dario, who believes we're 1-3 years from a \"country of geniuses in a data center,\" described his own demand prediction as a \"hellish\" problem. His exact framing: If this revenue comes in at $800B instead of $1T, \"there's no force on earth, there's no hedge on earth\" that could stop him from going bankrupt if he'd bought compute at the higher projection. He's at ~$10B annualized revenue today, and he won't commit to buying at the scale his own thesis demands, because being off by a single year is fatal. This is the actual argument (I'm not saying this is Ed's argument, but this is the argument against these companies). Not \"inference tokens are expensive.\" The argument is structural: these companies must pre-commit billions in non-recoverable CAPEX based on demand projections that are, by the CEO's own admission, a coin flip. The gross margins on serving tokens might be great. But the training spend for next-gen models grows exponentially, and it has to be funded before that model earns a dollar. The Epoch chart measures what customers pay per token. It doesn't measure the $215.9B NVIDIA invoice those customers collectively funded this year, or that these chip purchases are one-way bets against future demand that may or may not materialize. Inference costs going down 20x is wonderful for consumers. It tells you almost nothing about whether the companies making those chips, or the companies buying them, will survive the demand prediction gauntlet. And if we're being honest, the Epoch data showing 9x to 900x price drops per year should make you more nervous, not less, because it means the asset you bought last year is depreciating at a rate that makes used cars look like gold bars. [0] https://www.youtube.com/watch?v=n1E9IZfvGMA&t=2298s [1] https://nvidianews.nvidia.com/news/nvidia-announces-financia..."
+    },
+    {
+      "title": "GPT-5.2-Codex",
+      "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+      "hn": "https://news.ycombinator.com/item?id=46318419",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-12-18T20:44:41Z",
+      "text": "If you look at benchmarks, the Claude models score significantly higher intelligence per token. I'm not sure how that works exactly, but they are offset from the entire rest of the chart on that metric. It seems they need less tokens to get the same result. (I can't speak for how that affects performance on very difficult tasks though, since most of mine are pretty straightforward.) So if you look at the total cost of running the benchmark, it's surprisingly similar to other models -- the higher price per token is offset by the significantly fewer tokens required to complete a task. See \"Cost to Run Artificial Analysis Index\" and \"Intelligence vs Output Tokens\" here https://artificialanalysis.ai/ ...With the obligatory caveat that benchmarks are largely irrelevant for actual real world tasks and you need to test the thing on your actual task to see how well it does!"
+    },
+    {
+      "title": "Gemini 3 Flash: Frontier intelligence built for speed",
+      "url": "https://blog.google/products/gemini/gemini-3-flash/",
+      "hn": "https://news.ycombinator.com/item?id=46316133",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-12-18T17:55:52Z",
+      "text": "It's not an error, Gemini 3 Pro is just somehow able to complete the benchmark while using way fewer tokens than any other model. Gemini 3 Flash is way cheaper per token, but it also tends to generate a ton of reasoning tokens to get to its answer. They have a similar chart that compares results across all their benchmarks vs. cost and 3 Flash is about half as expensive as 3 Pro there despite being four times cheaper per token."
+    },
+    {
+      "title": "Forecaster reacts: METR's bombshell paper about AI acceleration",
+      "url": "https://peterwildeford.substack.com/p/forecaster-reacts-metrs-bombshell",
+      "hn": "https://news.ycombinator.com/item?id=43761022",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-04-22T11:48:16Z",
+      "text": "As usual with these bombastic blog posts, you have to follow the paper trail to find the caveats that deflate the whole thing. From the papers about the tasks used in this estimation, we can easily find out that: LLMs never exceed 20% success rate on tasks taking more than 4h: HCAST: Human-Calibrated Autonomy Software Tasks https://metr.org/hcast.pdf LLMs hit a score ceiling at around 1-2h mark; LLM performance drops off steeply with increase in LOC count, never breaching 50% success rate after 800 lines and below 40% at the longest one at ~1600 lines. RE-Bench: Evaluating frontier AI R&D capabilities of language model agents against human experts https://arxiv.org/pdf/2411.15114 And from the METR paper itself, only one model exceeds the 30 min \"human task length\" with 50% success, reaching that rate at 59 min \"human task length\", and at 80% no models but one can go over 4 min and one gets to 15 min \"human task length\" at that rate. It goes on to talk about extrapolating from this SOTA 59 min \"time horizon\" to ~168h, arguing that this is about one month of full time work and models that could breach 50% success rates at that time span could be considered transformative because they \"would necessarily exceed human performance both at tasks including writing large software applications or founding startups (clearly economically valuable), and including novel scientific discoveries.\" Now despite the fact that \"The mean messiness score amongst HCAST and RE-Bench tasks is 3.2/16. None of these tasks have a messiness score above 8/16. For comparison, a task like ’write a good research paper’ would score between 9/16 and 15/16, depending on the specifics of the task.\" But according to the METR paper, on the 22 '50% most messy' >1h tasks no model even breaches 20% success rates. And that is for tasks above \"messiness = 3.0\" on a set of tasks that goes to 3.2 \"messiness\". So there is absolutely no record of LLMs exceeding 50% success rates above 3.0 messiness ratings 1h long tasks but they are happy to claim that they see a trend towards 50% success rates at 168h long tasks approaching 9-15/16 messiness ratings? That's even assuming that their own estimate for the messiness of 'writing a good research paper' tops the chart is comparable to 'novel scientific discoveries', or 'writing large software applications or founding startups', which would seem to be many times messier than 'writing a good research paper', let alone doable in one month. Measuring AI Ability to Complete Long Tasks https://arxiv.org/pdf/2503.14499 So let's talk about the blog post claims that are not backed by the contents in these papers: \"Claude 3.7 could complete tasks at the end of February 2025 that would take a professional software engineer about one hour.\" This is incredibly misleading. Claude 3.7 is the only model that was able to achieve a 50% success rate on tasks that are estimated to take humans at least 1h to complete. We should note that the METR paper also shows that for the 50% \"messier\" tasks no model even breaches 20% success rate. It should be noted that the HCAST set of tasks has 189 tasks of which only 45 breach 1h baseline estimates. The METR paper uses a 'subset' of HCAST tasks but it is not clear which ones and what the baseline time cost estimates for these look like. \"o3 gives us a chance to test these projections. We can see this curve is still on trend, if not going faster than expected\" This was a rushed evaluation conducted on a set of tasks that is different from that in the original paper, making the comparison between datasets spurious. Also, this seems relevant: \"For the HCAST tasks, the main resource constraint is in the form of a token budget which is set to a high enough number that we do not expect it to be a limiting factor to the agent’s performance. For our basic agent scaffold, this budget is 2 million tokens across input and output (including reasoning) tokens. For the token-hungry scaffolds used with o1 this budget is 8 million tokens. For o3 and o4-mini, which used the same scaffold as o1 but did not support generating multiple completions in a single request, this budget is 16 million tokens.\" https://metr.github.io/autonomy-evals-guide/openai-o3-report... Back to the blog post: \"We can actually attempt to use the METR paper to try to derive AGI timelines using the following equation: days until AGI = log2({AGI task length} / {Starting task length}) * {doubling time}\" To find numbers to plug there, it makes some assumptions like \"1h45 upper bound seems low let's boost by 1.5x\" and then \"but real world is messy so let's just divide the time by 10\" which flies in the face of the fact that for tasks above messiness of 3/15 the models never breach 20% success rates. And considering the whole task set goes to 3.2/15 messiness score, that means that anything above that is a null data point. So this \"Let’s assume true AGI tasks are 10x harder\" assumption alone should drive \"task length\" to zero. \"Additionally, we likely need more than 50% reliability. Let’s assume we need 80% reliability, which adds a 4x penalty, plunging starting task length down further to 3min45sec.\" At 80% reliability, only 2 models breach 4 minutes, with the best one approaching 15 minutes. And that is at messiness score of at most 3.2. But the best model regresses from the 2 bellow it on the overall estimation, and none breach even 20% reliability above that. So none of the modelling is valid, but the sleight of hand is offering the AGI formula and the 168h task length value for 'AGI' which of course is spurious because we're than talking about an AGI that cannot do any task messier than a 3.2/15, and a doubling rate of 3 to 7 months, we are stuck with accepting AGI is at most 10 years away as the blog post claims. But at most we can expect models that can do a few hundred lines of code edition at a 50% reliability rate on projects that would take around a month. And the METR paper has it's own projection of a \"1-month AI\" (which it never claims to be AGI) with 50% chance between end of 2027 and early 2028. So let me know if you have any 1 month projects under 800 LOC that you may need, with a 50% chance to be able to use an LLM to have a 50% shot at eventually getting it right, in about 2-3 years!"
+    },
+    {
+      "title": "OpenAI Codex CLI: Lightweight coding agent that runs in your terminal",
+      "url": "https://github.com/openai/codex",
+      "hn": "https://news.ycombinator.com/item?id=43712977",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-04-17T03:56:40Z",
+      "text": "OpenAI shared chart about performance drop with large context like 500k tokens etc. So you still want to limit the context not only for the cost but performance as well. You also probably want to limit context to speedup inference and get reponse faster. I agree though that a lot of those agents are black boxes and hard to even learn how to best combine .rules, llms.txt, prd, mcp, web search, function call, memory. Most IDEs don't provide output where you can inspect final prompts etc to see how those are executed - maybe you have to use some MITMproxy to inspect requests etc but some tool would be useful to learn best practices. I will be trying more roo code and cline since they open source and you can at least see system prompts etc."
+    },
+    {
+      "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via RL",
+      "url": "https://arxiv.org/abs/2501.12948",
+      "hn": "https://news.ycombinator.com/item?id=42825704",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-01-25T22:46:34Z",
+      "text": "i mean the sheet is public https://docs.google.com/spreadsheets/d/1x9bQVlm7YJ33HVb3AGb9... go fiddle with it yourself but you'll soon see most models hve approx the same input:output token ratio cost (roughly 4) and changing the input:output ratio assumption doesnt affect in the slightest what the overall macro chart trends say because i'm plotting over several OoMs here and your criticisms have the impact of <1 OoM (input:output token ratio cost of ~4 with variance even lower than that). actually the 100:1 ratio starts to trend back toward parity now because of the reasoning tokens, so the truth is somewhere between 3:1 and 100:1."
+    },
+    {
+      "title": "Parsing Techniques - A Practical Guide",
+      "url": "http://dickgrune.com/Books/PTAPG_1st_Edition/",
+      "hn": "https://news.ycombinator.com/item?id=3610093",
+      "points": null,
+      "comments": null,
+      "createdAt": "2012-02-19T19:17:41Z",
+      "text": "Regular expressions are for lexing (breaking up input into tokens, AKA \"tokenizing\"), parsers are for assembling a stream of tokens into a parse tree (according to a grammar). You can kinda-sorta get away with parsing via regular expressions, but \"surprisingly complex\" regular expressions ( http://www.ex-parrot.com/~pdw/Mail-RFC822-Address.html ) should be a sign that you're using the wrong tool . De-coupling lexing from parsing also means that your grammar won't be cluttered by issues like whitespace handling. Perl's RE extensions can be used to do some parsing, albeit at the cost of potentially exponential runtime ( http://swtch.com/~rsc/regexp/regexp1.html * ), since they're NP-complete ( http://perl.plover.com/NPC/NPC-3SAT.html ). (Congrats, your parser is now a denial-of-service attack vector!) * If you find this article interesting, you'll probably love _Parsing Techniques_. &#62; I'm going to upvote this on the general principle that I've seen a lot of programmers who don't quite know what parsing is, but reading a 310-page book is perhaps not the best way to familiarize them with it. This book is a _reference_. For someone who wants to learn basic parsing techniques, I'd first direct them to something like Niklaus Wirth's _Compiler Construction_ (PDF: http://www.ethoberon.ethz.ch/WirthPubl/CBEAll.pdf ), which has a quick and clear introduction to recursive descent parsing, but only briefly touches on other methods. The Grune book is for when you need to understand the trade-offs between (say) different kinds of chart parsers, how parser generators work, classic performance optimizations in Earley parsers, or error handling strategies. It has quite a bit more depth to it, as well as an excellent bibliography. The second edition was updated in 2008, and adds a lot of new content."
+    },
+    {
+      "title": "Tether starting to lose its peg too, after Terra did",
+      "url": "https://community.intercoin.org/t/what-backs-a-currency-terra-luna-drops-nearly-100/2518",
+      "hn": "https://news.ycombinator.com/item?id=31358803",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-05-12T19:07:36Z",
+      "text": ">But why is anyone else buying Tether at above $1 If I want to pay Bob $100, I will buy 100 coins, never mind whether they currently cost $0.998 or $1.002 each on my particular exchange. So the issuer needs to constantly mint or burn tokens to match the market demand in such a way that it stays as close to $1 as possible.[1] >For someone to sell something someone else needs to buy the same thing. That someone is not some rando person, that someone is marketmaker whose business is in filling out the orderbook. [1] https://www.coingecko.com/en/coins/tether – see the chart for market cap, since the tokens costs $1 it is almost the same as the chart of total number of tokens over time"
+    }
+  ]
+}

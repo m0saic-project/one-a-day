@@ -6,7 +6,7 @@
     "model": "claude-opus-5[1m]",
     "status": "shipped",
     "templateId": "@one-a-day/dev/og-card/v1",
-    "title": "2026-09-20 \u00b7 OG Card",
+    "title": "2026-09-20 · OG Card",
     "pack": "dev",
     "useCase": "Open Graph / social preview cards for developers posts and pages, generated from props in a build step",
     "tags": [
@@ -30,6 +30,41 @@
       "https://news.ycombinator.com/item?id=48902665",
       "https://news.ycombinator.com/item?id=49328884",
       "https://news.ycombinator.com/item?id=48072451"
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "day": 2,
+    "agent": "claude",
+    "model": "claude-opus-5[1m]",
+    "rosterId": null,
+    "status": "shipped",
+    "templateId": "@one-a-day/dev/bench-delta/v1",
+    "title": "2026-09-21 · Bench Delta",
+    "pack": "dev",
+    "useCase": "Before/after benchmark pictures that library, compiler and dev-tool maintainers re-publish every release, from the rows their bench harness already prints",
+    "tags": [
+      "dev",
+      "2026-09-21",
+      "day-002",
+      "benchmark",
+      "regression",
+      "before-after",
+      "variance",
+      "readme",
+      "still"
+    ],
+    "sources": [
+      "https://github.com/benchmark-action/github-action-benchmark",
+      "https://github.com/sharkdp/hyperfine/tree/master/scripts",
+      "https://github.com/evanw/esbuild",
+      "https://github.com/oxc-project/bench-resolver/pull/184",
+      "https://github.com/zackees/llvm-ld/issues/32",
+      "https://news.ycombinator.com/item?id=49370832",
+      "https://news.ycombinator.com/item?id=49770064",
+      "https://news.ycombinator.com/item?id=30268920",
+      "https://news.ycombinator.com/item?id=21535972",
+      "https://news.ycombinator.com/item?id=49727511"
     ]
   }
 ]

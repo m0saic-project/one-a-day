@@ -1,0 +1,247 @@
+{
+  "query": "we benchmarked",
+  "days": 560,
+  "count": 30,
+  "results": [
+    {
+      "title": "We found defects in 37 of DeepSWE's 113 tasks",
+      "url": "https://www.scrimdata.com/blog/deep-swe-benchmark-defects-ambiguities",
+      "hn": "https://news.ycombinator.com/item?id=49766208",
+      "points": 9,
+      "comments": 0,
+      "createdAt": "2026-09-19T12:56:19Z"
+    },
+    {
+      "title": "Show HN: OnPanda – Steer LLMs and agents at the token level",
+      "url": "https://onpanda.diyer22.com/",
+      "hn": "https://news.ycombinator.com/item?id=49759013",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-09-18T19:26:50Z"
+    },
+    {
+      "title": "Trust, but benchmark: How we let an AI agent optimize Elasticsearch",
+      "url": "https://www.elastic.co/search-labs/blog/ai-code-optimization-elasticsearch-agent-harness",
+      "hn": "https://news.ycombinator.com/item?id=49740769",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-17T13:52:33Z"
+    },
+    {
+      "title": "Show HN: Swift-Qwen3.8-27B, -58.3% thinking, x1.95 speed, accuracy of xhigh",
+      "url": "https://huggingface.co/ukisai/Swift-Qwen3.8-27b",
+      "hn": "https://news.ycombinator.com/item?id=49727511",
+      "points": 31,
+      "comments": 17,
+      "createdAt": "2026-09-16T14:24:05Z"
+    },
+    {
+      "title": "We Benchmark Analytics Agents, this explains how",
+      "url": "https://benchouse.ai/blog/how-we-benchmark-analytics-agents",
+      "hn": "https://news.ycombinator.com/item?id=49713355",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-09-15T14:45:28Z"
+    },
+    {
+      "title": "Show HN: Nari Qwen3-TTS and Qwen3-ASR – High accuracy, low latency and cost",
+      "url": "https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/",
+      "hn": "https://news.ycombinator.com/item?id=49699267",
+      "points": 91,
+      "comments": 31,
+      "createdAt": "2026-09-14T16:07:58Z"
+    },
+    {
+      "title": "We blind-tested ChatGPT, Claude, and Gemini on 20 everyday tasks (Open Dataset)",
+      "url": "https://dailyskill.ai/ai-benchmark-2026/",
+      "hn": "https://news.ycombinator.com/item?id=49668966",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-09-12T04:56:31Z"
+    },
+    {
+      "title": "Ask HN: Did Google kill its enterprise workhorse model?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49668196",
+      "points": 27,
+      "comments": 18,
+      "createdAt": "2026-09-12T02:41:49Z"
+    },
+    {
+      "title": "Spanda: Sub-microsecond LLM epistemic uncertainty in Rust",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49663329",
+      "points": 17,
+      "comments": 2,
+      "createdAt": "2026-09-11T18:48:16Z"
+    },
+    {
+      "title": "We Benchmarked 83 Frontier AI Repos–None Passed with an A",
+      "url": "https://opsera.ai/blog/frontier-ai-software-readiness-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49647376",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-10T17:28:15Z"
+    },
+    {
+      "title": "Show HN: We served 5k dynamic websites from a 2-vCPU, 4 GB VPS",
+      "url": "https://github.com/Kooboo/Kooboo/blob/main/Docs/5000-sites-benchmark.md",
+      "hn": "https://news.ycombinator.com/item?id=49644915",
+      "points": 9,
+      "comments": 3,
+      "createdAt": "2026-09-10T14:59:43Z"
+    },
+    {
+      "title": "Show HN: Filament – Fast data movement engine in Go",
+      "url": "https://github.com/galaxy-io/filament",
+      "hn": "https://news.ycombinator.com/item?id=49611112",
+      "points": 31,
+      "comments": 6,
+      "createdAt": "2026-09-08T14:48:17Z"
+    },
+    {
+      "title": "We tested frontier models on slide creation",
+      "url": "https://slidely.ai/slides-creation-benchmark",
+      "hn": "https://news.ycombinator.com/item?id=49609311",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-08T12:19:08Z"
+    },
+    {
+      "title": "Ask HN: Anyone else feeling uneasy with the latest developments in AI?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49605395",
+      "points": 17,
+      "comments": 25,
+      "createdAt": "2026-09-08T03:30:01Z"
+    },
+    {
+      "title": "Show HN: Run open-weight OCR, VLM and vision models behind one API",
+      "url": "https://www.vlmrun.com/gateway",
+      "hn": "https://news.ycombinator.com/item?id=49568379",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-09-04T18:31:25Z"
+    },
+    {
+      "title": "Ask HN: Why don't we talk about context window size anymore?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49566388",
+      "points": 6,
+      "comments": 1,
+      "createdAt": "2026-09-04T15:53:19Z"
+    },
+    {
+      "title": "Are we measuring AI coding ability wrong?",
+      "url": "https://bitbin.de/qualitative-benchmarks/",
+      "hn": "https://news.ycombinator.com/item?id=49563287",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-04T11:46:32Z"
+    },
+    {
+      "title": "Ask HN: Why don't LLM APIs have a first-class test mode?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49556909",
+      "points": 1,
+      "comments": 5,
+      "createdAt": "2026-09-03T20:59:59Z"
+    },
+    {
+      "title": "Show HN: A Context Registry for AI coding agents",
+      "url": "https://context.apimatic.io/",
+      "hn": "https://news.ycombinator.com/item?id=49552209",
+      "points": 9,
+      "comments": 1,
+      "createdAt": "2026-09-03T16:00:26Z"
+    },
+    {
+      "title": "We analyzed the code published by 29 frontier AI labs. Here's the data",
+      "url": "https://opsera.ai/blog/frontier-ai-software-readiness-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49545682",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-03T03:42:28Z"
+    },
+    {
+      "title": "Show HN: The Fastest Local H3 Video Generation on Mac",
+      "url": "https://github.com/tgo-app-dev/vpipe",
+      "hn": "https://news.ycombinator.com/item?id=49523873",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-09-01T16:03:04Z"
+    },
+    {
+      "title": "Show HN: 10x token savings for AI Web Scraping",
+      "url": "https://www.makralabs.org/about",
+      "hn": "https://news.ycombinator.com/item?id=49512846",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-31T18:11:31Z"
+    },
+    {
+      "title": "African-hosted 4-vCPU / 8-GB / 200-GB VPS for $5.89/month",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49506792",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2026-08-31T07:43:44Z"
+    },
+    {
+      "title": "Show HN: Beating GPT5.5-xhigh for Coding agent security with SLMs and IRM",
+      "url": "https://harden.run/blog/aif-research-and-evidence",
+      "hn": "https://news.ycombinator.com/item?id=49472151",
+      "points": 9,
+      "comments": 5,
+      "createdAt": "2026-08-27T22:33:19Z"
+    },
+    {
+      "title": "We benchmarked our VS Code fork against VS Code, Cursor, Antigravity and Zed",
+      "url": "https://hyperlaneide.com/blog/hyperlane-vs-code-cursor-antigravity-zed-benchmark",
+      "hn": "https://news.ycombinator.com/item?id=49437933",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-08-25T17:54:34Z"
+    },
+    {
+      "title": "Show HN: CookWing, an AI chef that doesn't hallucinate quantities",
+      "url": "https://play.google.com/store/apps/details?id=com.redwing.vibecooking&hl=en_US",
+      "hn": "https://news.ycombinator.com/item?id=49429600",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-25T05:53:45Z"
+    },
+    {
+      "title": "Show HN: Knowl – CLAUDE.md hit 1000 lines, so I built memory that prunes itself",
+      "url": "https://github.com/dat999zx/knowl",
+      "hn": "https://news.ycombinator.com/item?id=49399942",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-08-22T14:13:22Z"
+    },
+    {
+      "title": "We burned 11.7B tokens to find the best cyber AI model",
+      "url": "https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026",
+      "hn": "https://news.ycombinator.com/item?id=49386885",
+      "points": 15,
+      "comments": 7,
+      "createdAt": "2026-08-21T12:09:07Z"
+    },
+    {
+      "title": "Show HN: Icebug-format: immutable, interoperable graph standard",
+      "url": "https://github.com/Ladybug-Memory/icebug-format",
+      "hn": "https://news.ycombinator.com/item?id=49381909",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-20T23:57:45Z"
+    },
+    {
+      "title": "Show HN: Pond – lossless archive for agent sessions in your own S3",
+      "url": "https://github.com/tenequm/pond",
+      "hn": "https://news.ycombinator.com/item?id=49376500",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-20T16:04:21Z"
+    }
+  ]
+}

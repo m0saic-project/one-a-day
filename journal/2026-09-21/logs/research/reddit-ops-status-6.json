@@ -1,0 +1,16 @@
+{
+  "query": "on-call handover report",
+  "days": 720,
+  "count": 1,
+  "results": [
+    {
+      "title": "Log level 'error' should mean that something needs to be fixed",
+      "url": "https://utcc.utoronto.ca/~cks/space/blog/programming/ErrorsShouldRequireFixing",
+      "hn": "https://news.ycombinator.com/item?id=46337049",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-12-20T15:57:03Z",
+      "text": "This is the standard I use as well. In general, my rule of thumb is that if something is logging error, it would have been perfectly reasonable for the program to respond by crashing, and the only reason it didn&#x27;t is that it&#x27;s executing in some kind of larger context that wants to stay up in the event of the failure of an individual component (like one handler suffering a query that hangs it and having to be terminated by its monitoring program in a program with multiple threads serving web requests). In contrast, something like an ill-formed web query from an untrusted source isn&#x"
+    }
+  ]
+}

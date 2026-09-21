@@ -1,0 +1,64 @@
+{
+  "source": "https://arctic-shift.photon-reddit.com/api/comments/search?link_id=t3_1pd1v2r&limit=40",
+  "thread": "https://www.reddit.com/comments/1pd1v2r/",
+  "fetchedAt": "2026-09-21T04:18:21.978Z",
+  "count": 7,
+  "results": [
+    {
+      "id": "oeyl46v",
+      "author": "Dangerous-Guava-9232",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/_/oeyl46v/",
+      "date": "2026-04-08",
+      "body": "I’ve used Vizard for similar tasks, particularly video work; it allows you to generate graphics using AI and insert them directly into the video timeline, without the need for exporting and importing them separately."
+    },
+    {
+      "id": "ocjeua3",
+      "author": "Both_Fig_7291",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/_/ocjeua3/",
+      "date": "2026-03-26",
+      "body": "[aecharts.com](http://aecharts.com) is an animated chart maker built for this. you can create any chart and export it with animations as mp4 video. every part of the chart is customisable i.e colors, fonts, size, spacing etc. It supports line chart, bar chart (horizontal, vertical, stacked, grouped), pie chart, donut chart, bar race chart, line race chart and more."
+    },
+    {
+      "id": "nsmgqpu",
+      "author": "Competitive_Run_5287",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/_/nsmgqpu/",
+      "date": "2025-12-06",
+      "body": "I’ve been using Dashrr, [https://dashrr.app](https://dashrr.app), AI powered, creates charts/sharable dashboards from excel/Google sheet in seconds. Solid free tier and tons of visual customisation options"
+    },
+    {
+      "id": "ns6tiwh",
+      "author": "[deleted]",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/_/ns6tiwh/",
+      "date": "2025-12-04",
+      "body": "[removed]"
+    },
+    {
+      "id": "ns2ceod",
+      "author": "Cheap-Silver9900",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/_/ns2ceod/",
+      "date": "2025-12-03",
+      "body": "Thanks, these tools look great. I'll deep dive into them. I'm also curious if there’s something a bit more generic or design-oriented for animations. For example, I'd love a tool where I can provide some text and it generates an animated explanation or visual story. At the extreme, imagine giving it a LeetCode problem and solution, or the abstract of a paper, and getting back an animated walkthrough or visual story explaining it"
+    },
+    {
+      "id": "ns27gbs",
+      "author": "Infamous-Win834",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/_/ns27gbs/",
+      "date": "2025-12-03",
+      "body": "You may try easy ai bridge for creating the time series or bar chart automatically on your data and present the result in the dynamic dashboard in less than 45 seconds."
+    },
+    {
+      "id": "ns1x4fg",
+      "author": "fravil92",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/_/ns1x4fg/",
+      "date": "2025-12-03",
+      "body": "Yes, I'm the developer of Plotivy.app and you can do exactly that. Just make sure to select the \"animation\" mode when you write your prompt. It is python based, so it can do basically everything and you can fine tune it until you get what you want. Good luck and feel free to ask any questions."
+    }
+  ]
+}

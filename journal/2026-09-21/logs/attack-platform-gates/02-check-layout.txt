@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "templates": 4,
+  "checked": 3,
+  "skipped": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "@one-a-day/basics/hello-world/v1: the front door is exempt (human-placed)"
+  ]
+}

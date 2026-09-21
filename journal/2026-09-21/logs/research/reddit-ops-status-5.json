@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "note": "fetch failed; recorded for audit",
+  "error": "reddit: 403 (reddit rate-limits anonymous clients; wait a minute)"
+}

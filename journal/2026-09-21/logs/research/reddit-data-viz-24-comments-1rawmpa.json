@@ -1,0 +1,80 @@
+{
+  "source": "https://arctic-shift.photon-reddit.com/api/comments/search?link_id=t3_1rawmpa&limit=60",
+  "thread": "https://www.reddit.com/comments/1rawmpa/",
+  "fetchedAt": "2026-09-21T04:18:57.116Z",
+  "count": 9,
+  "results": [
+    {
+      "id": "o7w9rs6",
+      "author": "DataLeadershipGeek",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o7w9rs6/",
+      "date": "2026-02-28",
+      "body": "What I’d do next is frame this as a role conversation, not a salary conversation: • What role do you want to grow into (Analytics Lead, BI Manager, Product Analytics, Reporting Strategy)? • What problems will you own next now that the reporting ops work is automated? • How will you keep driving business value (better decisions, faster partner action, stronger retention, fewer escalations)? Then walk in with a 90-day plan: 2–3 additional automations plus 1–2 decision-focused improvements (alerts, partner segmentation, “what changed and what to do” insights). If the company needs that role, the salary increase becomes the natural next step."
+    },
+    {
+      "id": "o7vqgse",
+      "author": "leahmberry",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o7vqgse/",
+      "date": "2026-02-28",
+      "body": "What I’d do next is frame this as a role conversation, not a salary conversation: • What role do you want to grow into (Analytics Lead, BI Manager, Product Analytics, Reporting Strategy)? • What problems will you own next now that the reporting ops work is automated? • How will you keep driving business value (better decisions, faster partner action, stronger retention, fewer escalations)? Then walk in with a 90-day plan: 2–3 additional automations plus 1–2 decision-focused improvements (alerts, partner segmentation, “what changed and what to do” insights). If the company needs that role, the salary increase becomes the natural next step."
+    },
+    {
+      "id": "o6qfxbn",
+      "author": "Hairy-Share8065",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o6qfxbn/",
+      "date": "2026-02-22",
+      "body": "saving 3 people from copy paste hell is not a small thing..but instead of “i saved 120k so pay me 120k” i’d frame it as impact. you reduced errors, sped things up, and probably made customers happier. that’s leverage..just make sure the change actually sticks long term and isn’t a one time cleanup. then yeah, totally fair to ask for a raise or at least a bigger role. if you don’t advocate for it, nobody will."
+    },
+    {
+      "id": "o6oukr2",
+      "author": "Edit_7-2521",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o6oukr2/",
+      "date": "2026-02-22",
+      "body": "If they appreciate it they could throw you a one-time bonus. Otherwise, as others have stated, it’ll be about pushing for a promotion based on a skill that’s beyond your current pay grade. This is sort of a comment on semantics, but unless those 3 FTEs got laid off, you didn’t save the company any money, you just freed up time. Not a bad thing, obviously, but very different from hard savings."
+    },
+    {
+      "id": "o6ndyuu",
+      "author": "parkerauk",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o6ndyuu/",
+      "date": "2026-02-21",
+      "body": "So, what pipeline tool do you use, have you hived off your golden-data? What data quality and governance do you have? Have your got controls in place and are your numbers auditable and recruitable? If so, great job. If not, more work to be done."
+    },
+    {
+      "id": "o6n5cci",
+      "author": "byebybuy",
+      "score": 5,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o6n5cci/",
+      "date": "2026-02-21",
+      "body": "Depends on the company, but that's generally not how it works. You should keep track of all the improvement work you do throughout the year and the targets you're hitting or hopefully surpassing, and then at your annual review you can discuss a salary increase. If I asked for a piece of every dollar I saved my company I'd be a millionaire. But I *am* making a lot more than I made a few years ago. (Part of that is changing jobs tbh.) However, nothing should stop you from asking questions to your line manager like \"What are the expectations from me in order to be considered for a salary increase/promotion?\" Level set with them so they know you're looking for it, and they can set expectations for you. Keep finding ways to improve processes at the company, be a person that other people *want* to work with and *want* to have involved, and don't expect to get immediately rewarded every time you save the company money. I wish it worked like that!"
+    },
+    {
+      "id": "o6n4n2f",
+      "author": "ThePonderousBear",
+      "score": 18,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o6n4n2f/",
+      "date": "2026-02-21",
+      "body": "Think about it from a business standpoint. You already did the work for the salary. Why would they give you more? What is a pay increase giving them? You need to frame the conversation as here is what i did, but more importantly here is what I can/will do. You need to bring in ideas that will save them additional money or increase revenue."
+    },
+    {
+      "id": "o6mpzie",
+      "author": "setemupknockem",
+      "score": 4,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o6mpzie/",
+      "date": "2026-02-21",
+      "body": "If they don't, find someone who will."
+    },
+    {
+      "id": "o6moasq",
+      "author": "WowReverseEngineer",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/_/o6moasq/",
+      "date": "2026-02-21",
+      "body": "Very simple solution, we build an internal tool to create those layout connect to our datamodel [https://imgur.com/a/oXTIFxX](https://imgur.com/a/oXTIFxX)"
+    }
+  ]
+}

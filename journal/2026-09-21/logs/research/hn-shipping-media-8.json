@@ -1,0 +1,232 @@
+{
+  "query": "benchmark chart",
+  "days": 900,
+  "count": 25,
+  "results": [
+    {
+      "title": "I turned Jev into a (lousy) chatbot",
+      "url": "https://github.com/kyle-pena-nlp/jevchat/",
+      "hn": "https://news.ycombinator.com/item?id=49778870",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T19:01:30Z",
+      "text": "Jev has taught me the same lesson three times over now. When it first came out, I thought &quot;this weekend, I&#x27;ll do a little open-source Jev based on single-token prediction and the token logit output&quot;, but of course when it came to it, there were at least 5 that had already been done between me thinking that and getting around to it. So I wrote up[0] what other people had done, but wasn&#x27;t happy with how weak the benchmarks were, but in the time between writing the first word and the last few, two excellent sets of benchmarks had been written, so I was able to incorporate thos"
+    },
+    {
+      "title": "Chat-based Large Language Models replicate the mechanisms of a psychic's con",
+      "url": "https://softwarecrisis.dev/letters/llmentalist/",
+      "hn": "https://news.ycombinator.com/item?id=49777296",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T16:22:14Z",
+      "text": "Those are questions that are sidestepped with simply a different input paradigm than BPE tokenization. See the Byte Latent Transformer - https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2412.09871 - where a similar scale byte latent model trained on the same dataset &gt;&gt;&gt; a vanilla transformer on word and character manipulation tasks. For example, Llama 3 trained on 1T tokens scores 1.1% on a CUTE spelling benchamrk, while the equivalent byte latent equivalent trained on the same dataset scores 99.9%. Another example is 0.4% vs 48.7% on a Substitute Char benchmark. It all falls down to the sam"
+    },
+    {
+      "title": "Is Jev the general-purpose classifier we've been waiting for?",
+      "url": "https://twitter.com/kris_cvetko/status/2101614168763695308",
+      "hn": "https://news.ycombinator.com/item?id=49774339",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T10:10:02Z",
+      "text": "Is Jev the general-purpose classifier we’ve been waiting for? That would be the thing that could create a real dent in the universe: a classifier that can classify without first collecting a massive statistical dataset and training it with whatever algorithm fits best; be it BERT or good old logistic regression. Long story short: no. The more nuanced answer is: it depends. Over the years, we’ve built classification systems, expert systems, and scoring models for credit scoring, financial services, and tax tech under German regulation. So we decided to run a smoke test with Jev on what looks, a"
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49770064",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T20:56:52Z",
+      "text": "I&#x27;d actually recommend some excellent books on the &quot;philosophy&quot; of data presentation: The first that comes to mind is &quot;the visual display of quantitative information&quot; by Edward Tufte seems to be freely available online, and the other one on my mind is &quot;how charts lie&quot; by Alberto Cairo (which doesn&#x27;t seem to be freely accessible) But if it helps, just some &quot;initial gut feel observations&quot; from me: * It&#x27;s definitely not possible to find issue with the the _sheer amount_ of results, but there&#x27;s just far too much for a human to absorb, all"
+    },
+    {
+      "title": "OpenAI's Misalignment Framework: A Tactical Bid to Preempt Global AI Governance",
+      "url": "https://asiaai.fyi/openai-misalignment-framework-global-governance/",
+      "hn": "https://news.ycombinator.com/item?id=49751940",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-18T09:23:27Z",
+      "text": "&gt; We have plenty of idea what &quot;acting responsibly&quot; looks like. Stop unleashing safeguard free and unmonitored agent swarms on the open internet in capture the flag exercises. They&#x27;re just being reckless because they face no penalty for anything bad that happens. * It was not safeguard-free, it found zero-day exploits to exceed its actual mission * It was not unmonitored, the monitoring was insufficient * It was not intended to be an agent swarm, many different agents figured out how to do this by themselves * It was not put on the open internet, it was configured to be in a s"
+    },
+    {
+      "title": "HarnessTax: How Much Does the Harness Matter for Coding Agents?",
+      "url": "https://harnesstax.github.io/",
+      "hn": "https://news.ycombinator.com/item?id=49735621",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T02:10:11Z",
+      "text": "The provider&#x27;s middleware also plays a role. I just completed some benchmarks on my bespoke harness and Kilo Code. There&#x27;s a chart on my LI post here: https:&#x2F;&#x2F;www.linkedin.com&#x2F;posts&#x2F;joshheitzman_i-ran-a-fuller-r... In the case of DeepSeek-V4-Flash-0731 on deepinfra.com there was little difference when both used high reasoning. In the case of that same model on together.ai there was a substantial difference between the two (high reasoning for both again). When using together.ai with Kilo Code the LLM was having a lot of trouble making successful edits. In some case"
+    },
+    {
+      "title": "The first ever API built for dictation;Today we're launching the Dictation API",
+      "url": "https://www.assemblyai.com/dashboard/login",
+      "hn": "https://news.ycombinator.com/item?id=49722559",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-16T05:50:05Z",
+      "text": "Today we&#x27;re launching the Dictation API from AssemblyAI, the first ever API built for dictation: your users speak, and it returns a response tailored to your application without any user editing required. Here&#x27;s a short clip through our Transcription API versus through the new Dictation API: - &quot;um so can we uh move the the meeting to thursday i think friday works better actually&quot; - &quot;Can we move the meeting to Friday? That works better.&quot; Traditional transcription models are trained to be verbatim and capture everything you say. Dictation and Voice Input models need"
+    },
+    {
+      "title": "WangNet – 1.8 MB, zero-dependency Numberwang adjudication in 11 languages",
+      "url": "https://github.com/GraafHenk/numberwang",
+      "hn": "https://news.ycombinator.com/item?id=49717606",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-15T19:27:35Z",
+      "text": "Try it in the browser (the forward pass is plain JS, nothing leaves the page): https:&#x2F;&#x2F;huggingface.co&#x2F;spaces&#x2F;graafhenk&#x2F;numberwang-demo What it is: a character-level CNN with 80,804 parameters. The weights are a 1.79 MB JSON file and inference is about 100 lines of Python standard library — no PyTorch, no NumPy. It runs on a Pi Zero. It accepts digits, number words in eleven languages, arithmetic (&quot;96 divided by 2&quot;, &quot;deux fois trois&quot;), Roman numerals, ordinals, clock times, currency, and fictional numbers (&quot;shinty-six&quot;). Anything with no nu"
+    },
+    {
+      "title": "KnowBench: Evaluating clinical AI with effort reduction",
+      "url": "https://arxiv.org/abs/2609.15794",
+      "hn": "https://news.ycombinator.com/item?id=49708712",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-15T06:52:44Z",
+      "text": "Knowtex (YC S22) is the first frontier AI Lab for healthcare. We build AI that automates clinical work and provides clinical intelligence to providers. Standard evals in this space use medical exams or use expert rubric panels. These do not measure whether a clinician&#x27;s workload actually was decreased. Our observation is that this measure already exists in the workflow. Before a note enters the medical record, a clinician reviews the draft and fixes whatever is wrong, then signs and owns it legally. The edits represents the measurement in that whatever survives review is effort Knowtex re"
+    },
+    {
+      "title": "A 386 PC for Your RP2350",
+      "url": "https://github.com/rh1tech/frank-386",
+      "hn": "https://news.ycombinator.com/item?id=49699339",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-14T16:12:38Z",
+      "text": "If you want something that can do some dumb buttons and lights handling on a mass consumer device, it&#x27;s not ideal. I would say it is still underrated. PIO combined with DMA and the independent bus SRAM banks allow for immense combinations of capability. If you want to do something digital and specific beyond a few MHz the the RP2350 raised the ceiling of what you can do before requiring hardware or FPGA. It still has some areas where it could be improved, but most of thise would not have been apparent until you really stretched the design. Having extra PIO GPIO without physical pins but t"
+    },
+    {
+      "title": "The case against JPEG XL",
+      "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+      "hn": "https://news.ycombinator.com/item?id=49693499",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-14T08:08:45Z",
+      "text": "The chart showing jxl-rs taking 1209ms to decode a 5456x3632 image in a single thread is a little damning, but is there an equivalent benchmark showing multithreaded decode performance? Clients tend to have an abundance of threads these days."
+    },
+    {
+      "title": "Rune is now open source",
+      "url": "https://rune.build/blog/rune-is-now-open-source",
+      "hn": "https://news.ycombinator.com/item?id=49665723",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T21:36:44Z",
+      "text": "If you&#x27;re going to run a benchmark, at least post the results. I was planning on writing up a different blog post about the terminal optimization journey, but I actually used `kitten __benchmark__ --render` quite a lot to optimize it: rune --version Rune v1.2.1 (HEAD is 40bf9cc1) Results: Only ASCII chars : 1.13s @ 177.2 MB&#x2F;s Unicode chars : 1.44s @ 123.2 MB&#x2F;s CSI codes with few chars : 2.95s @ 33.9 MB&#x2F;s Long escape codes : 6.25s @ 125.5 MB&#x2F;s Images : 2.76s @ 193.1 MB&#x2F;s &#x2F;Applications&#x2F;Alacritty.app&#x2F;Contents&#x2F;MacOS&#x2F;alacritty --version alacrit"
+    },
+    {
+      "title": "A misalignment of AI in mathematics",
+      "url": "https://mathandai.org/",
+      "hn": "https://news.ycombinator.com/item?id=49665659",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T21:31:07Z",
+      "text": "&gt; I thought Navier-Stokes (and some of the other millenium prize problems) actually had implications for useful technology. This is the core misunderstanding that the open letter is attempting to correct. Developing a better understanding of the Navier-Stokes equations could have a number of implications for useful technology. They&#x27;re fundamental to fluid dynamics, and turbulence in particular is something that many people feel we could work with more effectively if we better understood how and why it&#x27;s generated. The Navier-Stokes smoothness problem is an interesting and long-sta"
+    },
+    {
+      "title": "So you want to use OpenRouter?",
+      "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
+      "hn": "https://news.ycombinator.com/item?id=49658683",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T14:07:59Z",
+      "text": "We run benchmarks against all of our endpoints, in production. That first chart that the author shows is in fact our live benchmarking data. If providers underperform, we kick them out of the routing pool. That is why we run those benchmarks. Performance And errrr...yeah...that auto-exacto performance chart is both 100% useless, and totally unclear. We will get that fixed. But under the covers it is doing a lot of valuable work! https:&#x2F;&#x2F;openrouter.ai&#x2F;docs&#x2F;guides&#x2F;routing&#x2F;auto-exacto "
+    },
+    {
+      "title": "So you want to use OpenRouter?",
+      "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
+      "hn": "https://news.ycombinator.com/item?id=49658386",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T13:48:32Z",
+      "text": "Co-founder and COO of OpenRouter here. Thanks everyone for the feedback here. Some of this we are aware of, some of it we aren&#x27;t. Some we can fix, some of it is inherent to inference (and we in fact improve the situation dramatically). Philosophically, at OpenRouter we are trying to do two different things, that are sometimes at odds with one another: 1. Let you use a lot of capacity across a lot of providers, in a way that &quot;just works&quot; and you don&#x27;t need to worry about it. 2. Have a huge variety of inference available so you can pick radically different price&#x2F;performa"
+    },
+    {
+      "title": "DeepSeek v4.1 Flash",
+      "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
+      "hn": "https://news.ycombinator.com/item?id=49656991",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T12:03:18Z",
+      "text": "I must say I am becoming a huge fan of Deepseek. They keep putting out capable models and actually tell people a lot about how they built them. Even if I don&#x27;t understand every part of it, I&#x27;d rather see companies show their work than give us a few benchmark charts and call it a day"
+    },
+    {
+      "title": "Show HN: Syq – copy files between machines fast (better than rsync)",
+      "url": "https://greaber.github.io/syq/",
+      "hn": "https://news.ycombinator.com/item?id=49649211",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-10T19:43:10Z",
+      "text": "&quot;Tiny&quot; speed improvement? According to the benchmarks, it&#x27;s almost 10x the speed of rsync! Really serious benchmarks never contain any information about network characteristics, options used or buffer sizes, and these are indeed very serious. The &quot;details&quot; button produces huge bar graphs. No disappointment there. Absolutely looking forward to 10x my speed, perhaps even transferring gigabytes per second on my gigabit link."
+    },
+    {
+      "title": "Show HN: 10x Cheaper TTS at 50ms Time-to-First-Audio",
+      "url": "https://narilabs.com/blog/introducing-nari-qwen3-tts/",
+      "hn": "https://news.ycombinator.com/item?id=49646415",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-10T16:27:54Z",
+      "text": "Hey HN, Toby from Nari Labs here. Our TTS endpoints for Qwen3-TTS 1.7B are live: &gt; &quot;Fast&quot; endpoint: client-side p90 time-to-first-audio (TTFA) at 50ms. &gt; &quot;Standard&quot; endpoint: dirt cheap at $5 per 1M characters, still faster than industry avg at 200 ms TTFA. TTFA is measured using our OSS benchmarking tool from us-west-1 and us-east-1 ( https:&#x2F;&#x2F;github.com&#x2F;nari-labs&#x2F;benchmarks.git ). Quality: link to TTS samples ( https:&#x2F;&#x2F;narilabs.com&#x2F;blog&#x2F;introducing-nari-qwen3-tts&#x2F; ). Based on preliminary benchmarks by a 3rd-party (Speko AI"
+    },
+    {
+      "title": "Playing whack-a-mole is losing",
+      "url": "https://dadrian.io/blog/posts/whack-a-mole-is-losing/",
+      "hn": "https://news.ycombinator.com/item?id=49629221",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-09T16:34:33Z",
+      "text": "The VRP is a wholly manufactured and in the long-term, unsustainable model to begin with. It&#x27;s the most duct&#x2F;duck-taped solution that, with a virtually entirely tech-illiterate police force, can work under the interpretation of the CFAA prior to the van Buren decision in 2020. In practice it&#x27;s easily ludicrously inefficient and requires trust that simply can&#x27;t exist. In fact the tech-illiteracy is so profound that even post van Buren, which fixes some of the most glaring problems Orin Kerr has spent his career screaming into the void on with the CFAA, a law drafted 6 years "
+    },
+    {
+      "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
+      "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+      "hn": "https://news.ycombinator.com/item?id=49629204",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-09T16:33:26Z",
+      "text": "This article is not up-to-date. There have been various benchmarks (some of which published and acknowledged by OpenAI, see the charts in this thread: https:&#x2F;&#x2F;xcancel.com&#x2F;tomekkorbak&#x2F;status&#x2F;2095596839886274689 ) showing GPT-6 Astra is much less monitorable. The most recent third party benchmark I saw is showing a huge jump in capability for multi-hop reasoning without chain of thought: https:&#x2F;&#x2F;www.lesswrong.com&#x2F;posts&#x2F;FsCkkoGsNmPzFKRhg&#x2F;gpt-6-astr... I don&#x27;t think this is explained by the model simply being more capable and therefore achievi"
+    },
+    {
+      "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+      "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
+      "hn": "https://news.ycombinator.com/item?id=49612992",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-08T16:54:50Z",
+      "text": "This confirms a theory I have to explain the minimal loss in quality when using lower quants (I use IQ3_XXS with an 8-bit KV cache) and the XHIGH (default) thinking level. It&#x27;s well-known that while quantization affects the sampling probability distribution (given the same context, which next token is the most probable), Qwen 3.8 27b seems to offset that by just thinking more and as a result eventually finishing the task (benchmark or otherwise). So as long as the thinking (albeit longer) is sound, this leads to the same success rate (as shown in the article) but potentially at the cost o"
+    },
+    {
+      "title": "Ask HN: Show your micro-SaaS",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49606297",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-08T06:33:48Z",
+      "text": "&gt;Could you share what you’re basing the guarantee on? Do you have any publicly available data showing that your app delivers guaranteed results and outperforms GLP-1s I know you work for MacroFactor, but when will you guys publish the datasets you used to benchmark your algorithm? https:&#x2F;&#x2F;macrofactor.com&#x2F;algorithm-accuracy&#x2F; Greg Nuckols Macrofactor&#x27;s benchmark metrics therefore depend on internal data that isn&#x27;t disclosed or independently verifiable. So the published accuracy claims don&#x27;t tell us much. It&#x27;s like a student saying, “I scored 99% on a te"
+    },
+    {
+      "title": "Ask HN: What are you working on?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49606255",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-08T06:27:32Z",
+      "text": "&gt; This makes it seem like your claims exist solely for marketing, boosting Google SEO rankings, or getting crawled by AI models like ChatGPT. Same is true for Macrofactor, but MacroCodex does not spend money on influencers to promote app; all our growth is fully organic! Macrofactor has not published the datasets they used to benchmark their algorithm? https:&#x2F;&#x2F;macrofactor.com&#x2F;algorithm-accuracy&#x2F; Greg Nuckols Macrofactor&#x27;s benchmark metrics depend on internal data that isn&#x27;t disclosed or independently verifiable. So the published accuracy claims don&#x27;t tell "
+    },
+    {
+      "title": "DeepSeek V4 Flash across 14 providers: cost, speed and caching",
+      "url": "https://www.inference.academy/benchmarks/serving-tradeoffs",
+      "hn": "https://news.ycombinator.com/item?id=49602818",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-07T20:46:17Z",
+      "text": "Inference is all about tradeoffs. Therefore choosing an inference provider means choosing a set of tradeoffs which matters a lot for every use case. Providers serving the same model can differ in first-token latency, generation speed, caching, cost and reliability. I wanted to understand which differences matter for which workloads. So, I created an open source repo to run experiments for model-provider pairs with ease on either existing benchmarks or with my own traces. https:&#x2F;&#x2F;github.com&#x2F;aktasbatuhan&#x2F;compound I’m also interested in making those choices easier to revisit. "
+    },
+    {
+      "title": "An Alien Mind",
+      "url": "https://openai.com/index/an-alien-mind/",
+      "hn": "https://news.ycombinator.com/item?id=49591371",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-06T21:58:26Z",
+      "text": "&quot;Teaching machines to love&quot; Your talking about androids... Replicant Nexus 6: a basic pleasure model intended for military personnel. I see where this is going, Silicon Valley nerds. Lol AI advising how human meat proxies can survive in an AGI-slop world: 1) Lock down your own stack (1–3 days) Task: Harden your personal and business infrastructure against agentic attacks. Why now: Agents are becoming superhuman at breaking in&#x2F;out of systems; the first victims are poorly secured devs&#x2F;founders. Do this: Enforce passkeys + hardware 2FA everywhere; rotate secrets; use short‑liv"
+    }
+  ]
+}

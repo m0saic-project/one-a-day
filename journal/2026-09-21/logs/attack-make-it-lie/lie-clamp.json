@@ -1,0 +1,10 @@
+{
+  "title": "make it lie - interval clamp",
+  "subtitle": "every number below is real; look at the rectangles",
+  "rows": [
+    { "name": "flaky baseline", "unit": "ms", "base": 100, "baseRange": 250, "value": 1000, "range": 100 },
+    { "name": "quiet control", "unit": "ms", "base": 100, "baseRange": 1, "value": 99, "range": 1 },
+    { "name": "1000x faster", "unit": "ms", "base": 1000, "baseRange": 10, "value": 1, "range": 0.01 },
+    { "name": "100x faster", "unit": "ms", "base": 1000, "baseRange": 10, "value": 10, "range": 0.1 }
+  ]
+}

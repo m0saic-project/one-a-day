@@ -1,0 +1,128 @@
+{
+  "source": "https://api.pullpush.io/reddit/search/submission/?subreddit=datavisualization&q=bar+chart+race&size=60&sort=desc&sort_type=created_utc",
+  "fetchedAt": "2026-09-21T04:09:37.639Z",
+  "count": 11,
+  "results": [
+    {
+      "id": "1pd1v2r",
+      "title": "Best tool to generates an animated chart for presentations/videos?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/best_tool_to_generates_an_animated_chart_for/",
+      "sub": "datavisualization",
+      "author": "Cheap-Silver9900",
+      "score": 4,
+      "numComments": 4,
+      "date": "2025-12-03",
+      "text": "I'm a data analyst and I want to improve how I present my findings with animated charts or mini data videos. I don't wanna use templates already found online but using something more customisable. Is there an AI tool where I can prompt like 'show me a timeseries of this data' or 'make a bar chart race' and get back a ready to use animation for slides or videos?"
+    },
+    {
+      "id": "1ir0ydl",
+      "title": "Non Electric Car Sales Are BOOMING Globally From 2011 To 2022",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1ir0ydl/non_electric_car_sales_are_booming_globally_from/",
+      "sub": "datavisualization",
+      "author": "OrxanMirzayev",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-02-16",
+      "text": "In the battle between gas guzzlers and green machines, who is winning? This bar chart race tracks the decline of non-electric car sales, highlighting the countries that are shifting towards electric vehicles. Explore the factors driving this change and the potential impact on the automotive industry."
+    },
+    {
+      "id": "1ijcapi",
+      "title": "Where Do We Roam?: Mapping the Flow of Tourists Across Borders",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1ijcapi/where_do_we_roam_mapping_the_flow_of_tourists/",
+      "sub": "datavisualization",
+      "author": "OrxanMirzayev",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-02-06",
+      "text": "This dynamic bar chart race visualizes the flow of tourists across borders, revealing the most popular travel routes and destinations. Explore the global patterns of tourism and the factors that drive international travel “International tourist trips by region of departure”. Published online at OurWorldinData.org. "
+    },
+    {
+      "id": "1ii89bh",
+      "title": "Who Cuts the Cheese?: A Bar Chart Race of the World's Top Producers",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1ii89bh/who_cuts_the_cheese_a_bar_chart_race_of_the/",
+      "sub": "datavisualization",
+      "author": "OrxanMirzayev",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-02-05",
+      "text": "Who are the cheese champions of the world? This bar chart race reveals the top cheese-producing countries, highlighting the nations that dominate the global dairy market. Expect surprising twists and turns as countries compete for the title of \"Big Cheese.\" Source: data.un.org "
+    },
+    {
+      "id": "1i8pw54",
+      "title": "Honeycomb Heroes: Which Countries Produce the Most Honey?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1i8pw54/honeycomb_heroes_which_countries_produce_the_most/",
+      "sub": "datavisualization",
+      "author": "OrxanMirzayev",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-01-24",
+      "text": "Who are the champions of honey production? This bar chart race tracks the leading honey-producing countries, highlighting the nations that dominate the global honey market. Expect surprising shifts and changes as countries compete for the title of \"Honeycomb Hero.\""
+    },
+    {
+      "id": "1i3k4lk",
+      "title": "Fun and Educational Bar Chart Races: Watch the Data Come Alive!\n",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1i3k4lk/fun_and_educational_bar_chart_races_watch_the/",
+      "sub": "datavisualization",
+      "author": "OrxanMirzayev",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-01-17",
+      "text": null
+    },
+    {
+      "id": "1hnkzg3",
+      "title": "which tool is the best to visualize my data?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1hnkzg3/which_tool_is_the_best_to_visualize_my_data/",
+      "sub": "datavisualization",
+      "author": "xucai",
+      "score": 1,
+      "numComments": 0,
+      "date": "2024-12-27",
+      "text": "hi im kinda new in this field and right now I want to try to visualize a kinda simple data so we are having a running competition based on mileage on strava, there 7 team consist of 7 people who will compete to run the longest mile cumulatively during 4 weeks, so I will collect the data and input it manually to spreadsheet since I dont know yet how to make strava API, and visualize it with a real time dashboard the chart that come up on my mind is horizontal stacked bar chart with each bar represent the total mileage of each group and each bar consist of the mileage of each member mileage which stacked together so you can see the portion or maybe the percentage of the contribution of each member when you click on the part of the stacked bar chart, im also thinking of making animation of the stacked bar chart during the race time frame later but it depends if I could learn how to make it in time where i can learn this in kinda effective and short time or is there any tutorial to make this and which data viz tool I should use?"
+    },
+    {
+      "id": "16m1al0",
+      "title": "Bar Chart Races in Flourish - Time data?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/16m1al0/bar_chart_races_in_flourish_time_data/",
+      "sub": "datavisualization",
+      "author": "ESOrSomething",
+      "score": 1,
+      "numComments": 0,
+      "date": "2023-09-18",
+      "text": "Hey, Does anyone know how to create a bar chart race in Flourish that can display times instead of numbers? I want to make a speedrunning video."
+    },
+    {
+      "id": "101i0xt",
+      "title": "Bar Chart Race Glitch",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/101i0xt/bar_chart_race_glitch/",
+      "sub": "datavisualization",
+      "author": "ChawieDude",
+      "score": 2,
+      "numComments": 0,
+      "date": "2023-01-02",
+      "text": "I was trying to make a bar chart race on Flourish with me and my brother's heights, where the x-axis is our age rather than the date, since we are different ages. However, when I tried to preview the bar chart race, he and I kept randomly dropping off and reappearing. I tried checking Number Formatting-&gt;Invalid Cells, but it was set to interpolate, just like it was supposed to be. Does anyone know why it doesn't work?"
+    },
+    {
+      "id": "rfdyuf",
+      "title": "LivingCharts.com - new data visualization app",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/rfdyuf/livingchartscom_new_data_visualization_app/",
+      "sub": "datavisualization",
+      "author": "LivingCharts",
+      "score": 5,
+      "numComments": 0,
+      "date": "2021-12-13",
+      "text": "I recently released a data visualization web app - [LivingCharts.com](https://livingcharts.com/) The main idea of the application is to create animation from Time-series Data and direct export these animations to a video file. Types of animations available now: Bar Chart Race, Column Chart Race, and Bubble Chart Race. Live demo: [http://livingcharts.com/watch/AcZG2SuWtVIB1S4c6M3R](http://livingcharts.com/edit/AcZG2SuWtVIB1S4c6M3R) Bubble Chart Race Example: [https://youtu.be/gPeVimjbl04](https://youtu.be/gPeVimjbl04) I have a lot of ideas for further development of the app, for example, adding new types of animations (Line Chart Race, Pie Chart Race, Events Map and others). I want to ask you for feedback. Is it useful for you? What would you add to the app? It is really important for me. Thank you in advance!"
+    },
+    {
+      "id": "eumvi4",
+      "title": "Age Distribution In The US 1900 - 2100 (Projected) ✔ Bar Chart Race",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/eumvi4/age_distribution_in_the_us_1900_2100_projected/",
+      "sub": "datavisualization",
+      "author": "video-archive",
+      "score": 4,
+      "numComments": 3,
+      "date": "2020-01-27",
+      "text": null
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "openedAt": "2026-09-21",
+  "deadOrUnusable": [
+    {
+      "url": "https://www.xmatters.com/blog/incident-management/control-incidents-visual-event-timeline/",
+      "status": "fetch: 404",
+      "note": "Surfaced by WebSearch as 'Manage Incidents with the Visual Event Timeline'. Dead. NOT cited.",
+      "source": "found by verifier, not by the original scout"
+    },
+    {
+      "url": "https://devrimozcay1.substack.com/p/the-anatomy-of-a-six-hour-outage",
+      "status": "200 but PAYWALLED",
+      "note": "Loads; title + section list visible; the timeline itself is behind 'Continue reading this post for free'. The quoted sentence IS present verbatim in the free preview. Author = Devrim Ozcay = 'devrimozcay', the same person who posted the ProdRescue Show HN. Not an independent source."
+    },
+    {
+      "url": "https://sreschool.com/blog/incident-timeline/",
+      "status": "200 but machine-generated SEO filler",
+      "note": "Contains literal scaffolding strings 'Tool - Observability Platform A', 'Diagram description (text-only)', '(TABLE REQUIRED)'. Contains NO occurrence of 'Gantt' despite a search summary attributing that word to it. REJECTED as evidence."
+    }
+  ],
+  "blocked": [
+    {
+      "target": "r/sre  --q 'postmortem timeline' --t year",
+      "status": "reddit: 403 (reddit rate-limits anonymous clients; wait a minute)"
+    },
+    {
+      "target": "r/devops --q 'incident timeline' --t year",
+      "status": "reddit: 403 (reddit rate-limits anonymous clients; wait a minute)"
+    }
+  ],
+  "verdict": "The original scout's claim that reddit was hard-blocked is TRUE and reproduced independently. Its consequence is that the 'r/sre and r/devops' half of the stated audience is asserted, never observed."
+}

@@ -1,0 +1,70 @@
+{
+  "query": "hyperfine benchmarking tool",
+  "days": 900,
+  "count": 7,
+  "results": [
+    {
+      "title": "Modern Linux tools",
+      "url": "https://ikrima.dev/dev-notes/linux/linux-modern-tools/",
+      "hn": "https://news.ycombinator.com/item?id=45578001",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-14T09:38:32Z",
+      "text": "That&#x27;s nice, but there&#x27;s value in a fuzzy finder existing as a standalone tool. Also if I had to guess, the type of person who criticizes tools like jq, fzf, and ripgrep and struggles to understand some people&#x27;s need for benchmarking tools like hyperfine would likely disapprove of fish as well."
+    },
+    {
+      "title": "Modern Linux tools",
+      "url": "https://ikrima.dev/dev-notes/linux/linux-modern-tools/",
+      "hn": "https://news.ycombinator.com/item?id=45568430",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-13T14:00:20Z",
+      "text": "&quot;servers&quot; is the key word here. Some of the tools listed on that page are just slightly &quot;improved&quot; versions of common sysadmin utilities, and indeed, those are probably not worth it. But some are really development tools, things that you&#x27;d install on the small number of machines where you do programming. Those might be. The ones that leap out at me are ripgrep (a genuinely excellent recursive grepper), jq (a JSON processor - there is no alternative to this in the standard unix toolkit), and hyperfine (benchmarking)."
+    },
+    {
+      "title": "I stopped everything and started writing C again",
+      "url": "https://www.kmx.io/blog/why-stopped-everything-and-started-writing-C-again",
+      "hn": "https://news.ycombinator.com/item?id=43355374",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-03-13T17:17:20Z",
+      "text": "&gt; Do you have any examples of C outperforming Rust? I don&#x27;t have a pony in that race. &gt; uutils&#x2F;sort outperforms coreutils&#x2F;sort by 6x &quot;He used the hyperfine command-line benchmarking tool to run a test ten times; sorting a text file containing all of Shakespeare&#x27;s works to see which implementation was faster. The first time he performed the test, he used a debug build of the Rust version of sort. In that demo, Rust&#x27;s version was 1.45x faster than the GNU version. Then he ran the test again using a non-debug version, which showed the Rust version performing th"
+    },
+    {
+      "title": "Hyperfine: A command-line benchmarking tool",
+      "url": "https://github.com/sharkdp/hyperfine",
+      "hn": "https://news.ycombinator.com/item?id=42193488",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-11-20T12:51:10Z",
+      "text": "The comment about statistics that I wanted to reply to has disappeared. That commenter said: &gt; I stand firm in my belief that unless you can prove how CLT applies to your input distributions, you should not assume normality. And if you don&#x27;t know what you are doing, stop reporting means. I agree. My research group stopped using Hyperfine because it ranks benchmarked commands by mean, and provides standard deviation as a substitute for a confidence measure. These are not appropriate for heavy-tailed, skewed, and otherwise non-normal distributions. It&#x27;s easy to demonstrate that most"
+    },
+    {
+      "title": "Hyperfine: A command-line benchmarking tool",
+      "url": "https://github.com/sharkdp/hyperfine",
+      "hn": "https://news.ycombinator.com/item?id=42184064",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-11-19T14:54:34Z",
+      "text": "I&#x27;ve only seen such things in internal tools so far, unfortunately, so if you see anything in public, please tell me :-) I&#x27;m just confused why everything thinks hyperfine is so awesome, when it does not meet what I&#x27;d consider a fairly low bar for benchmarking tools? (“Best publicly available” != “great”, in my book.)"
+    },
+    {
+      "title": "Command Line Tools I Like (2022)",
+      "url": "https://rwblickhan.org/newsletters/command-line-tools-i-like-2022/",
+      "hn": "https://news.ycombinator.com/item?id=41797045",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-10-10T09:12:33Z",
+      "text": "One rarely mentioned tool I absolutely love is hyperfine: https:&#x2F;&#x2F;github.com&#x2F;sharkdp&#x2F;hyperfine It’s a benchmarking CLI tool that can be used as an alternative to `time`. I often use it to detect flacky tests, I run something like `hyperfine —show-output -n=100 &#x27;go test .&#x2F;… -count=1&#x27; and it helps me catch tests that fail unreliably"
+    },
+    {
+      "title": "The new APT 3.0 solver",
+      "url": "https://blog.jak-linux.org/2024/05/14/solver3/",
+      "hn": "https://news.ycombinator.com/item?id=40361710",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-05-15T00:26:33Z",
+      "text": "prefix-dev&#x2F;pixi is a successor to Mamba and Conda which wraps libsolv like dnf. https:&#x2F;&#x2F;github.com&#x2F;prefix-dev&#x2F;pixi OpenSUSE&#x2F;libsolv: https:&#x2F;&#x2F;github.com&#x2F;openSUSE&#x2F;libsolv OpenSUSE&#x2F;zypper may have wrapped or may still wrap libsolv? TIL libsolv also supports arch .apk and .deb; there&#x27;s a deb2solv utility to create libsolv .solv files: https:&#x2F;&#x2F;github.com&#x2F;openSUSE&#x2F;libsolv&#x2F;blob&#x2F;master&#x2F;tools&#x2F;deb2so... &quot;[mamba-org&#x2F;rattler:] A new memory-safe SAT solver for package management in Rust (port of li"
+    }
+  ]
+}

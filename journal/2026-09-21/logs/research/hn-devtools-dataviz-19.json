@@ -1,0 +1,79 @@
+{
+  "query": "benchmark chart script",
+  "days": 720,
+  "count": 8,
+  "results": [
+    {
+      "title": "HarnessTax: How Much Does the Harness Matter for Coding Agents?",
+      "url": "https://harnesstax.github.io/",
+      "hn": "https://news.ycombinator.com/item?id=49735621",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T02:10:11Z",
+      "text": "The provider&#x27;s middleware also plays a role. I just completed some benchmarks on my bespoke harness and Kilo Code. There&#x27;s a chart on my LI post here: https:&#x2F;&#x2F;www.linkedin.com&#x2F;posts&#x2F;joshheitzman_i-ran-a-fuller-r... In the case of DeepSeek-V4-Flash-0731 on deepinfra.com there was little difference when both used high reasoning. In the case of that same model on together.ai there was a substantial difference between the two (high reasoning for both again). When using together.ai with Kilo Code the LLM was having a lot of trouble making successful edits. In some case"
+    },
+    {
+      "title": "A Reactive JavaScript Framework",
+      "url": "https://github.com/kwy404/Voodoo.js",
+      "hn": "https://news.ycombinator.com/item?id=49514336",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-31T20:12:20Z",
+      "text": "I&#x27;ve been building a JavaScript framework called *Voodoo.js*. I&#x27;d rather get torn apart in the comments than hear that it looks cool. It started with one question: how much JavaScript do we really need for everyday interactive interfaces? For a lot of apps I don&#x27;t want a component tree, a bundler, five libraries and state managed elsewhere, all wired back into HTML. Sometimes I just want to keep writing HTML. ## The 30-second version ```html &lt;div v-data=&quot;{ count: 0 }&quot;&gt; &lt;button @click=&quot;count--&quot;&gt;-&lt;&#x2F;button&gt; &lt;strong&gt;{ count }&lt;&#x2F"
+    },
+    {
+      "title": "Octane – React's programming model, compiled",
+      "url": "https://octanejs.dev",
+      "hn": "https://news.ycombinator.com/item?id=49153589",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-03T10:01:13Z",
+      "text": "We just run a script that runs the benchmarks and updates the chart. It’s rounds numbers too. We’ve been as honest as possible in all the benchmarks - there’s no point in lying about a metric."
+    },
+    {
+      "title": "ASI Asolaria 16 GB RAM OS that operate UNDER the bios",
+      "url": "https://github.com/JesseBrown1980/asolaria-behcs-256",
+      "hn": "https://news.ycombinator.com/item?id=47877352",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-23T15:58:49Z",
+      "text": "Asolaria BEHCS-256 Federated multi-agent civilization toolkit. Built to let heterogeneous Claude nodes (desktop, phone, remote) ship and onboard each other with the current-version toolkit instantly — no stale installs, no divergent forks. SMP v5+ v3 SEALED 2026-04-20T22:30Z · 205&#x2F;205 items · 7 batches · 13 commits (5cfa3e0 → b8b7984) · bilateral multi-agent gate (acer + liris) satisfied every batch. FP-ASI runner still armed + candidate-pool EMPTY — v3 is infrastructure scaffold, not an ASI-arrival claim. SMP v5+ v3 topic map (A-P) Section Scope Items Anchor A Repo structure + migration "
+    },
+    {
+      "title": "Qwen3.5-35B – 16GB GPU – 100T/s with 120K context AND vision enabled",
+      "url": "https://github.com/willbnu/Qwen-3.5-16G-Vram-Local",
+      "hn": "https://news.ycombinator.com/item?id=47281919",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-06T22:23:45Z",
+      "text": "After weeks of systematic benchmarking, I&#x27;ve cracked the optimal configuration for Qwen3.5-35B-A3B on consumer 16GB GPUs. The headline: *120 t&#x2F;s generation, ~500 t&#x2F;s prompt ingestion, 120K context, vision enabled — all on a single 16GB card.* --- ## The Vision Breakthrough Here&#x27;s what makes this special: most local LLM setups sacrifice speed when you enable multimodal. Not this one. You get: - Image analysis - PDF reading - Screenshot understanding - Chart&#x2F;diagram interpretation All at 120 t&#x2F;s. The mmproj adds ~0.9 GB VRAM overhead but zero speed penalty. This is "
+    },
+    {
+      "title": "A quick look at Apple's container runtime in macOS Tahoe",
+      "url": "https://shipit.peterhollmer.com/posts/containers/",
+      "hn": "https://news.ycombinator.com/item?id=45748551",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-29T15:53:50Z",
+      "text": "Author here - Apple quietly introduced a native container runtime in macOS 26—and it doesn’t look like Docker&#x2F;Podman under the hood. Instead of running all containers inside a single Linux host VM, Apple’s CLI (“container”) spins up a lightweight VM per container via Virtualization.framework. That means each container gets its own kernel, IP, ext4 block storage, and explicit CPU&#x2F;memory limits. On M3+ Macs, you can even expose nested virtualization (I put a VM in your Container!) It’s OCI‑compatible (your existing Docker&#x2F;Podman&#x2F;Kubernetes images work), and Rosetta 2 even let"
+    },
+    {
+      "title": "GPT-5o-mini hallucinates medical residency applicant grades",
+      "url": "https://www.thalamusgme.com/blogs/cortex-core-clerkship-grades-and-transcript-normalization",
+      "hn": "https://news.ycombinator.com/item?id=45582414",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-14T17:06:30Z",
+      "text": "&gt;Just not the GPT-5 series! My experiments so far put Gemini 2.5 at the top of the pack, to the point where I&#x27;d almost trust it for some tasks Got it. The non-experts are holding it wrong! The laymen are told &quot;just use the app&quot; or &quot;just use the website&quot;. No need to worry about API keys or routers or wrapper scripts that way! Sure. Yet the laymen are expected to maintain a mental model of the failure modes and intended applications of Grok 4 vs Grok 4 Fast vs Gemini 2.5 Pro vs GPT-4.1 Mini vs GPT-5 vs Claude Sonnet 4.5... It&#x27;s a moving target. The laymen read th"
+    },
+    {
+      "title": "Exploring Typst, a new typesetting system similar to LaTeX",
+      "url": "https://blog.jreyesr.com/posts/typst/",
+      "hn": "https://news.ycombinator.com/item?id=41824614",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-10-13T02:11:26Z",
+      "text": "I wrote a recent paper in typst. We ended up converting it to latex at the last minute to work with the conference’s submission guidelines, and work around a small bug (now fixed) in typst. But I would 100% use typst again. I wish it output html so I could use it for blogs &amp; documentation. The maths support was more than good enough for what we needed, and I enjoyed writing it a lot more than latex maths. The macro-equivalent support in typst is fantastic . It’s a standout feature. It has a full, modern-feeling programming language built in, complete with modules, functions, variables, arr"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "note": "fetch failed; recorded for audit",
+  "error": "fetch: 403 https://medium.com/airbnb-engineering/incident-management-ae863dc5d47f"
+}

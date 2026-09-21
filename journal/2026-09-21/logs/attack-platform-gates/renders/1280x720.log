@@ -1,0 +1,13 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/dev/bench-delta/v1
+  output:      journal/2026-09-21/logs/attack-platform-gates/renders/1280x720.png
+  Building plan... done (1.0s)
+  plan built with size: 1280 x 720
+  duration:      2s (60 frames @ 30fps)
+✅ Template render complete: journal/2026-09-21/logs/attack-platform-gates/renders/1280x720.png
+Render ok. Report: journal\2026-09-21\logs\attack-platform-gates\renders\1280x720.output.json

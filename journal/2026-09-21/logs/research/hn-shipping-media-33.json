@@ -1,0 +1,107 @@
+{
+  "query": "\"error bars\" \"benchmark\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22error%20bars%22%20%22benchmark%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=20",
+  "count": 11,
+  "results": [
+    {
+      "title": "What is BPF and why is it taking over Linux Performance Analysis?",
+      "url": "http://blog.memsql.com/bpf-linux-performance/",
+      "hn": "https://news.ycombinator.com/item?id=12332122",
+      "points": null,
+      "comments": null,
+      "createdAt": "2016-08-21T18:39:52Z",
+      "text": "I'd like to agree about scientific experience, but it's tragic how much trouble many professional scientists, or ex-scientists, seem to have with anything outside their specialism, like quantitative analysis of their computational techniques. When did you last see error bars on a benchmark, even?"
+    },
+    {
+      "title": "Artificial Analysis Intelligence Index v4.2",
+      "url": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2",
+      "hn": "https://news.ycombinator.com/item?id=49574713",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-05T09:07:22Z",
+      "text": "The Epoch Capabilities Index uses an Elo-based aggregation method that dynamically adjusts for benchmark difficulty and they put error bars on their scores, both of which put them miles ahead of Artificial Analysis: https://epoch.ai/eci?view=graph&tab=leaderboard"
+    },
+    {
+      "title": "Some are more equal than others",
+      "url": "http://www.economist.com/blogs/graphicdetail/2014/11/daily-chart-2?fsrc=scn/fb/te/bl/ed/somearemoreequalthanothers",
+      "hn": "https://news.ycombinator.com/item?id=8584436",
+      "points": null,
+      "comments": null,
+      "createdAt": "2014-11-10T16:25:14Z",
+      "text": "I find it hard to take this sort of analysis seriously, when the authors admit that they don't even understand the order of magnitude of the error bars on the data. Not to mention that the regulatory landscape has changed over time, and since that directly influences several classes of errors (from waiters under-reporting tips to \"the 1%\" hiding money in now-illegal tax shelters) estimating historical trends is an exercise in futility. And we effectively have no way to benchmark how well these different studies are doing at measuring the underlying phenomena that they're trying to measure, this is really just making up numbers and calling it \"wealth distribution\"."
+    },
+    {
+      "title": "$500 GPU outperforms Claude Sonnet on coding benchmarks",
+      "url": "https://github.com/itigges22/ATLAS",
+      "hn": "https://news.ycombinator.com/item?id=47542199",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-27T13:03:11Z",
+      "text": "Any other benchmark at that sample size would have similarly huge error bars. Unless Anthropic makes a model that works 100% of the time or writes a bug that brings it all the way to zero, it's going to work sometimes and fail sometimes, and anyone who thinks they can spot small changes in how often it works without running an astonishingly large number of tests is fooling themselves with measurement noise."
+    },
+    {
+      "title": "Qwen3-Coder-Next",
+      "url": "https://qwen.ai/blog?id=qwen3-coder-next",
+      "hn": "https://news.ycombinator.com/item?id=46873689",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-02-03T17:03:55Z",
+      "text": "That's a box plot, so those are not error bars but a visualization of the distribution of a metric (min, max, median, 25th percentile, 75th percentile). The benchmark consists of a bunch of tasks. The chart shows the distribution of the number of turns taken over all those tasks."
+    },
+    {
+      "title": "Measuring AI Ability to Complete Long Tasks",
+      "url": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+      "hn": "https://news.ycombinator.com/item?id=46343324",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-12-21T09:01:02Z",
+      "text": "Big error bars and METR people are saying the longer end of the benchmark are less accurate right now. I think they mean this is a lower bound!"
+    },
+    {
+      "title": "John Carmack's arguments against building a custom XR OS at Meta",
+      "url": "https://twitter.com/ID_AA_Carmack/status/1961172409920491849",
+      "hn": "https://news.ycombinator.com/item?id=45156302",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-09-07T07:58:23Z",
+      "text": "> No, because it's subjective whether your interpretation of \"fiduciary duty\" precludes them from developing an OS. I think it does not, for example. We can disagree in our best assessment if \"developing an OS\" is a good strategy for achieving our goals. But no, that is not subjective. There's a right answer. We can try to use our experience and place subjective weights on probabilities, but if we could A/B history, there's definitely an objective right answer. Boiling down \"building an OS\" to the math of spending dollars on OS development and the return on this investment in dollars, this is objective. In your estimation of how much it'll cost, you turn to experts who use objective and subjective resources to try to estimate the true objective numbers. > for you \"objective\" points to a different idea than it does for most people. Me, the dictionary, and the world disagrees with you. > It is very much not an objective discussion if you are discussing whether it makes sense to develop a new operating system. I don't know what kind of discussions you have, but if you were in the room would you be saying \"I just have this gut feeling that we need to develop an OS\"? I would hope that instead you would be making objective arguments such as \"The cost of this OS development, because we control the hardware and will need drivers for video, audio, bluetooth, and inertial sensors, is (based on similar projects here) about $X in labor cost. The benefits are (just making this up) battery times because we won't need a write path and cache coherence on the storage system, which per this benchmark consumes Y% of clock cycles. And this should cause our product to be better to the tune of $Z based on these previous product statistics\" Now, an objective counter argument could be that the cost isn't $X, it should be $X2, because the people working on this have an opportunity cost. And there's another cost $W, which is delayed time to market. And $X in any case would need to be compared with patching the Linux kernel for the needed features. And so on, and so on. It's also an objective discussion to appeal to your experience, or experience of others: \"Look, when company X, Y, and Z did this, the eventually abandoned that approach. It never worked for those companies. Why would it instead work for us? How is the problem space different?\". A subjective discussion would be \"I just feel like it'll be cleaner if we had our own OS, and that should allow us to leapfrog competition\", being countered with \"well Linux is battle tested and just works\". \"I don't think anybody cares about battery times\" — subjective. \"Game Boy Classic was good for 30h play time, whereas Game Boy Color only for 10. Here's sentiment analysis on the Game Boy forum indicating with so-and-so error bars that people did care for that use case, and people returned their puchases indicating battery life at a rate of so-and-so higher for Color\" — Objective. — \"Well, we're not making Game Boy\" — Subjective. If you're having the latter discussion, then you're not actually having a discussion whether it makes sense to develop a new operating system. Whatever you decide will just have the rationale \"it felt right\". Having seen Carmack's talks and writings, it's my assumption that his case against writing an OS was not \"just trust me bro, I'm experienced\". It was likely painfully specific both about the technical complexities, and how those are connected to the bottom line (the end goals). Your argument seems to be one against the idea of expertise. Experts need to be able to communicate objectively, but the other end of the spectrum where it appears you are, is that \"it's all subjective, your data is as good as my guess, there's no such thing as truth\". Subjective is of course not wrong. My examples above may imply that, but just because a visionary can have a subjective vision that predicted the future correctly, doesn't make objective counters not objective. Just objectively wrong. \"You have a one-in-a-billion chance to win the lottery\" — \"Well I felt I would and I did!\" — \"Congrats. I was not wrong though\". > Words do mean nothing, they are pointers to ideas. Are you a philosophy student? Seems a bit entry level."
+    },
+    {
+      "title": "Internet Archive: Security breach alert",
+      "url": "https://www.theverge.com/2024/10/9/24266419/internet-archive-ddos-attack-pop-up-message",
+      "hn": "https://news.ycombinator.com/item?id=41793479",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-10-09T22:34:01Z",
+      "text": "> or at least say how confident they are in what they know This I can very much underwrite. Error bars or rough confidence indicators are missing far too often, also from sites reporting on e.g. benchmark values of hardware they've been testing... such professional organisations yet such basic omissions"
+    },
+    {
+      "title": "Apple M2 vs. AMD Ryzen 7 Pro 6850U Performance in Nearly 200 Benchmarks",
+      "url": "https://www.phoronix.com/review/apple-m2-amd-ryzen",
+      "hn": "https://news.ycombinator.com/item?id=32521892",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-08-19T15:04:40Z",
+      "text": "Not to mention the usual problems with Phoronix benchmarks: it doesn't say how many benchmark runs were done, where are the error bars, was the software actually compiled properly etc. Phoronix folks don't understand what they are measuring; they also don't really care - I remember one of their benchmarks measured the execution time of a command that was erroring out. Phoronix Test Suite isn't a benchmark, it's a marketing tool."
+    },
+    {
+      "title": "Minimum Times Tend to Mislead When Benchmarking",
+      "url": "https://tratt.net/laurie/blog/entries/minimum_times_tend_to_mislead_when_benchmarking.html",
+      "hn": "https://news.ycombinator.com/item?id=20719702",
+      "points": null,
+      "comments": null,
+      "createdAt": "2019-08-16T21:05:54Z",
+      "text": "I think I figured out the confusion. Benchmarking is a comparison and each test is a fixed sample size. A test might collect 100 or 100,000 samples by running the task repeatedly, but the data is not aggregated across multiple tests as the data is generally not saved. So, running the benchmark test again keep’s n the same when calculating the confidence interval. This means error bars are showing the calculated mean and standard * arbitrary scaling factor all lined up on an easy to read graph. PS: A lot of statistical tools are poor fits as the data is rarely a normal distribution. But, rigger is not the goal here."
+    },
+    {
+      "title": "Why Rust for Low-Level Linux Programming?",
+      "url": "http://groveronline.com/2016/06/why-rust-for-low-level-linux-programming/",
+      "hn": "https://news.ycombinator.com/item?id=11886569",
+      "points": null,
+      "comments": null,
+      "createdAt": "2016-06-12T03:56:38Z",
+      "text": "> Not much of an issue unless you actually need the performace ofcourse. Ime, simd intrinsics is everywhere in code optimized to run as quickly as possible on x86. That about half of The Benchmark Game's benchmarks uses sse proves that point. My point is that the Benchmark Game is not representative of real world code. The website says as much. Because the benchmarks use sse everywhere does not mean that most code, even perf-sensitive code will use simd everywhere. Again, if you need simd, use a nightly. There's little to no drawback there. I fixed it up to run on modern rust ( https://gist.github.com/Manishearth/5fc73c405641162f0712951c... , compile with cargo build --release), and the numbers I get are: (Ranges are just what I got from 5 runs, nothing scientific) Rust: 610-630 c: 706-716 c_fast: 919? cpp_clang: 669-694 cpp_plain: 717-728 I'm on a new (i7, 16gb) Mac so I don't yet have g++ around (nor do I know how to obtain it without messing things up; I'm used to linux), everything here done with clang. Of course, this isn't an indication that Rust is faster than C. But it is an indication that it can be just as fast, and a reinforcement of my point about microbenchmarks having large error bars. Edit: On my older x86 linux laptop (with gcc): Rust: 844-987 c_fast: 808-860 (perhaps clang somehow made c_fast slower than c on the mac? shrug ) c: 982-1025 cpp_plain: 977-1019 cpp_gcc: 925-947 I think I've proven my point."
+    }
+  ]
+}

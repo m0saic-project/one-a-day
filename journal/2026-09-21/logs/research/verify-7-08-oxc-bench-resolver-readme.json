@@ -1,0 +1,7 @@
+{
+  "url": "https://raw.githubusercontent.com/oxc-project/bench-resolver/main/README.md",
+  "contentType": "text/plain; charset=utf-8",
+  "title": null,
+  "truncated": false,
+  "text": "# Bench Resolver\n\n- [enhanced-resolve](https://npmx.dev/package/enhanced-resolve)\n- [oxc-resolver](https://npmx.dev/package/oxc-resolver)\n\n## Benchmark Results\n\n<!-- BENCHMARK_RESULTS_START -->\n\n`oxc-resolver` is 8x faster than webpack's `enhanced-resolve`.\n\n```\n BENCH  Summary\n\noxc-resolver sync - src/index.bench.mjs > bench\n    1.11x faster than oxc-resolver sync Promise.all\n    5.70x faster than oxc-resolver async Promise.all\n    5.91x faster than enhanced-resolve Promise.all\n    7.60x faster than enhanced-resolve async\n    19.99x faster than oxc-resolver async\n```\n\n<!-- BENCHMARK_RESULTS_END -->\n\n## Run\n\n```bash\npnpm install\npnpm run bench\n```\n\n# [Sponsored By](https://oxc.rs/sponsor)\n\n<p align=\"center\">\n  <a href=\"https://oxc.rs/sponsor\">\n    <img src=\"https://raw.githubusercontent.com/oxc-project/sponsors/main/sponsors.svg\" alt=\"Our sponsors\" />\n  </a>\n</p>\n"
+}

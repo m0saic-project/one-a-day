@@ -1,0 +1,34 @@
+{
+  "query": "bundle size regression",
+  "days": 900,
+  "count": 3,
+  "results": [
+    {
+      "title": "Solid 2.0 RC: The Big <Reveal>",
+      "url": "https://www.solidjs.com/blog/solid-2-0-rc-the-big-reveal",
+      "hn": "https://news.ycombinator.com/item?id=49291978",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-13T21:16:03Z",
+      "text": "Yeah and I always found that really unfortunate. The truth is the JS Framework Benchmark hasn&#x27;t really moved more that fractions of a percentage since we first hit the mark 7 years ago. Sure many frameworks have been on their way to catch up or have matched us since, especially in the last 2 years when they started adopting our architecture. But nothing is moving the dial. We might not be the fastest on there today but I view now as a line to hold, not as a place where any measurable gains can be made. We can throw up a JS Framework Benchmark.. I obviously tested it a bunch locally, but m"
+    },
+    {
+      "title": "The distinction between Testing Library and unit testing",
+      "url": "https://www.echooff.dev/blog/why-testing-library-is-not-unit-testing",
+      "hn": "https://news.ycombinator.com/item?id=47912642",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-26T18:34:17Z",
+      "text": "I agree with the author that precise terminology matters, calling something “unit testing” when it isn’t can definitely blur discussions. That said, I think the underlying issue isn’t Testing Library itself, but the broader reality that testability in React is inherently limited by its design. As J. B. Rainsberger put it: &quot;If it’s hard to test your code, it’s a sign of a design problem.&quot; In my experience, this is one of the most reliable heuristics for evaluating a framework or library. When I look at a new technology, testability is the very first thing I evaluate, by far the most i"
+    },
+    {
+      "title": "Bundle didn't suddenly get bigger. You just never saw it change",
+      "url": "https://github.com/q1sh101/build-size-diff",
+      "hn": "https://news.ycombinator.com/item?id=46710957",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-01-21T20:15:38Z",
+      "text": "Most bundle size regressions don’t come from bad code. They come from small, reasonable decisions that add up quietly. A helper here. One more dependency there. Everything makes sense in isolation. This kept bothering me, not because I don’t care about size, but because managing it properly always meant extra setup, extra rules, extra friction. What actually helped wasn’t optimizing harder. It was seeing size changes automatically, at the exact moment code is reviewed. When size becomes part of the pull request, behavior shifts naturally. No enforcement. No policing. Just visibility and better"
+    }
+  ]
+}

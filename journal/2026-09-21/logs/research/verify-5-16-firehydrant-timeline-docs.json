@@ -1,0 +1,8 @@
+{
+  "url": "https://docs.firehydrant.com/docs/incident-timeline",
+  "method": "WebFetch (page is JS-rendered; fetch-text returns shell only)",
+  "openedAt": "2026-09-21",
+  "finding": "FireHydrant's incident timeline is a chronological TEXT list of events, not a proportional chart. Export is CSV only (columns: Timestamp, Event Type, Author Type, Name, Email, Summary). No image export, no graphical timeline, no embedding of a rendered timeline into a postmortem.",
+  "quote": "all events that unfold during an incident-such as Runbook steps execution, user actions, task completions, chat messages, and more",
+  "relevance": "Supports the candidate's claim that incumbent tools ship text/CSV and nobody ships the picture. Also shows the structured rows DO exist inside the vendor tool (CSV export), which is where a template would get its props."
+}

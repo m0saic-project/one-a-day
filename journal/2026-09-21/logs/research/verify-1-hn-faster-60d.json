@@ -1,0 +1,207 @@
+{
+  "query": "faster",
+  "days": 60,
+  "count": 25,
+  "results": [
+    {
+      "title": "Memoization application that you have used but might not know",
+      "url": "https://github.com/prashant2400/prashant2400.github.io/blob/master/_posts/2026-08-15-Memoization-that-you-already-know.md",
+      "hn": "https://news.ycombinator.com/item?id=49782441",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-21T02:37:41Z"
+    },
+    {
+      "title": "Show HN: Lightspeed, build real time apps the Laravel way (+asteroids demo)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49781032",
+      "points": 7,
+      "comments": 2,
+      "createdAt": "2026-09-20T23:02:28Z"
+    },
+    {
+      "title": "How to Build the Fastest Drone in the World (600km/h FPV Drone)",
+      "url": "https://www.youtube.com/watch?v=KwRSAfoW5uo",
+      "hn": "https://news.ycombinator.com/item?id=49778218",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-20T17:58:15Z"
+    },
+    {
+      "title": "Karen Nikoghosyan Is Building AI Operating Layers for Multichannel Commerce",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49776683",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-09-20T15:15:00Z"
+    },
+    {
+      "title": "Fastest Coding Agent (5x faster than Codex)",
+      "url": "https://cotyper.com/",
+      "hn": "https://news.ycombinator.com/item?id=49774620",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-20T11:10:17Z"
+    },
+    {
+      "title": "Jev is the fastest-adopted model in AI Gateway history",
+      "url": "https://vercel.com/blog/ai-gateway-jev-model-launch",
+      "hn": "https://news.ycombinator.com/item?id=49774164",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-09-20T09:38:26Z"
+    },
+    {
+      "title": "Show HN: I created an open source locally usable full fledged AI platform",
+      "url": "https://github.com/theguysudo/ENZO",
+      "hn": "https://news.ycombinator.com/item?id=49771118",
+      "points": 16,
+      "comments": 13,
+      "createdAt": "2026-09-19T23:47:35Z"
+    },
+    {
+      "title": "How did Apple Silicon get 50% faster in three years? – Daniel Lemire's blog",
+      "url": "https://lemire.me/blog/2026/09/19/how-did-apple-silicon-get-50-faster-in-three-years/",
+      "hn": "https://news.ycombinator.com/item?id=49770894",
+      "points": 26,
+      "comments": 12,
+      "createdAt": "2026-09-19T23:08:48Z"
+    },
+    {
+      "title": "Meek Fronted Requests test specification",
+      "url": "https://github.com/ooni/spec/blob/master/nettests/ts-014-meek-fronted-requests.md",
+      "hn": "https://news.ycombinator.com/item?id=49769913",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-19T20:37:27Z"
+    },
+    {
+      "title": "Technitium DNS Server v15.5 Released",
+      "url": "https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md",
+      "hn": "https://news.ycombinator.com/item?id=49769703",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-19T20:04:49Z"
+    },
+    {
+      "title": "A Hurricane of Pseudoscience",
+      "url": "https://fasterik.substack.com/p/a-hurricane-of-pseudoscience",
+      "hn": "https://news.ycombinator.com/item?id=49768418",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-19T17:23:39Z"
+    },
+    {
+      "title": "A 1938 television miracle: BBC television signals from across the Atlantic",
+      "url": "https://www.kasterborous.co.uk/a-1938-television-miracle-bbc-television-signals-from-across-the-atlantic/",
+      "hn": "https://news.ycombinator.com/item?id=49766593",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-19T13:48:09Z"
+    },
+    {
+      "title": "Splash Engine – The Fastest Local Qwen3.8 on Apple Silicon",
+      "url": "https://lmstudio.ai/blog/splash-engine",
+      "hn": "https://news.ycombinator.com/item?id=49765787",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-19T11:54:19Z"
+    },
+    {
+      "title": "Building the fastest LLMs: why we're starting with diffusion",
+      "url": "https://celeris.ai/building-the-worlds-fastest-llms",
+      "hn": "https://news.ycombinator.com/item?id=49765134",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-09-19T10:16:47Z"
+    },
+    {
+      "title": "The Destruction of the Scottish Canon",
+      "url": "https://asteriskmag.com/issues/15/the-destruction-of-the-scottish-canon",
+      "hn": "https://news.ycombinator.com/item?id=49763137",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2026-09-19T03:49:32Z"
+    },
+    {
+      "title": "Master of Malt Hacked, User Data Compromised",
+      "url": "https://www.masterofmalt.com/sorry/",
+      "hn": "https://news.ycombinator.com/item?id=49762559",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-19T01:57:14Z"
+    },
+    {
+      "title": "Faster JSON parsing with SVE2 on ARM processors",
+      "url": "https://lemire.me/blog/2026/09/18/faster-json-parsing-with-sve2-on-arm-processors/",
+      "hn": "https://news.ycombinator.com/item?id=49761445",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-18T23:05:35Z"
+    },
+    {
+      "title": "Enhance Page Elements with Custom Glow Effects and Masks",
+      "url": "https://blog.master.dev/custom-glow-rings-inside-of-elements/",
+      "hn": "https://news.ycombinator.com/item?id=49761439",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-18T23:05:04Z"
+    },
+    {
+      "title": "Parallel vector graphics rasterization on CPU",
+      "url": "https://gasiulis.name/parallel-rasterization-on-cpu/",
+      "hn": "https://news.ycombinator.com/item?id=49761288",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-18T22:47:07Z"
+    },
+    {
+      "title": "How did AMD Ryzen get 50% faster in two years?",
+      "url": "https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/",
+      "hn": "https://news.ycombinator.com/item?id=49758709",
+      "points": 71,
+      "comments": 10,
+      "createdAt": "2026-09-18T19:01:03Z"
+    },
+    {
+      "title": "We made Playwright 2x faster and 80% more token efficient",
+      "url": "https://github.com/browserbase/stagehand",
+      "hn": "https://news.ycombinator.com/item?id=49756671",
+      "points": 150,
+      "comments": 36,
+      "createdAt": "2026-09-18T16:25:23Z"
+    },
+    {
+      "title": "Extracting Grid Information Using CSS",
+      "url": "https://blog.master.dev/extracting-grid-information-using-css/",
+      "hn": "https://news.ycombinator.com/item?id=49756007",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-18T15:40:31Z"
+    },
+    {
+      "title": "Build Faster Feedback Loops Using Qualitative User Research",
+      "url": "https://blog.nseldeib.com/p/build-faster-feedback-loops-using",
+      "hn": "https://news.ycombinator.com/item?id=49755337",
+      "points": 27,
+      "comments": 3,
+      "createdAt": "2026-09-18T14:58:09Z"
+    },
+    {
+      "title": "Qbix Server – PHP 100× faster than Nginx and PHP-fpm",
+      "url": "https://github.com/Qbix/webserver",
+      "hn": "https://news.ycombinator.com/item?id=49753689",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-18T12:51:08Z"
+    },
+    {
+      "title": "I built the fastest PHP webserver in the world",
+      "url": "https://qbixserver.com",
+      "hn": "https://news.ycombinator.com/item?id=49749789",
+      "points": 44,
+      "comments": 75,
+      "createdAt": "2026-09-18T03:08:04Z"
+    }
+  ]
+}

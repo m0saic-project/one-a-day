@@ -1,0 +1,31 @@
+{
+  "verifier": "scout-verify-3 (opus 5 1M, ultracode)",
+  "date": "2026-09-21",
+  "candidate": "ranking race clip (animated ranked-bar race from a small table)",
+  "citedUrlsOpened": [
+    { "url": "https://livingcharts.com/blog/how-to-make-ranking-videos", "status": "OK", "file": "verify-3-livingcharts-ranking.json", "quotesConfirmed": 2, "note": "both cited quotes verbatim; page also says inputs include 'Optional logos, flags, or images'" },
+    { "url": "https://viraldatarace.com/templates/most-subscribed-youtube-channels", "status": "OK", "file": "verify-3-viraldatarace-template.json", "quotesConfirmed": 2, "note": "verbatim; quoted fragments are step headings stitched with '/' by the original scout" },
+    { "url": "https://alienart.io/blog/7-no-code-tools-to-create-bar-chart-race-videos", "status": "OK", "file": "verify-3-alienart-7tools.json", "quotesConfirmed": 1, "note": "verbatim; 5 of the 7 'tools' require screen-recording, i.e. not really exporters" },
+    { "url": "https://alienart.io/blog/top-10-data-sources-for-bar-chart-race-videos", "status": "OK", "file": "verify-3-alienart-datasources.json", "quotesConfirmed": 1, "note": "verbatim" }
+  ],
+  "newSourcesOpened": [
+    { "url": "https://github.com/wini83/stravit_companion/issues/20", "status": "OK", "file": "verify-3-gh-items.json", "date": "2026-09-13", "why": "a real maintainer specifying a headless CLI bar-chart-race for his own recurring Strava leaderboard snapshots" },
+    { "url": "https://github.com/wini83/stravit_companion/issues/21", "status": "OK", "file": "verify-3-gh-items.json", "date": "2026-09-13" },
+    { "url": "https://github.com/Zihuanana/beijing-metro-weekly-video-history", "status": "OK", "file": "verify-3-gh-items.json", "date": "2026-09-02", "why": "a WEEKLY video repo whose output is a bar chart race of metro ridership" },
+    { "url": "https://github.com/BRCV/gdp-g7-brics-race", "status": "OK", "file": "verify-3-gh-items.json", "date": "2026-09-01", "why": "World Bank CSV -> Flourish race, two language builds for two channels" },
+    { "url": "https://github.com/PlantingFlowersRabbit/ranking-race-video", "status": "OK", "file": "verify-3-gh-items.json", "date": "2026-08-03", "why": "independent builder names smooth rank sliding (no teleport) as the load-bearing requirement" },
+    { "url": "https://github.com/boraedis/data-diary/issues/295", "status": "OK", "file": "verify-3-gh-items.json", "date": "2026-09-09" },
+    { "url": "https://news.ycombinator.com/item?id=21506901", "status": "OK via hn.algolia.com/api/v1/items", "file": "verify-3-hn-threads-raw.json", "date": "2019-11-14", "why": "HN's own verdict on the format, incl. mbostock" },
+    { "url": "https://news.ycombinator.com/item?id=19484260", "status": "OK via hn.algolia.com/api/v1/items", "file": "verify-3-hn-threads-raw.json", "date": "2019-03-25" },
+    { "url": "https://www.datatovid.com/templates/bar-chart-race", "status": "OK", "file": "verify-3-datatovid.json", "why": "vendor claim of daily/weekly cadence" },
+    { "url": "https://movrank.com/", "status": "OK", "file": "verify-3-movrank.json" },
+    { "url": "https://apps.apple.com/us/app/chart-race/id6756600404", "status": "OK (WebFetch)", "why": "recency: a 2026 iOS app for exactly this, v2.1 updated Jul 27" },
+    { "url": "https://api.github.com/search/repositories?q=%22bar+chart+race%22&sort=updated", "status": "OK", "file": "verify-3-gh-reddit-search.json", "note": "515 repos; 15 pushed in the last 7 weeks" },
+    { "url": "https://api.github.com/search/issues?q=%22bar+chart+race%22&sort=created", "status": "OK", "file": "verify-3-gh-reddit-search.json", "note": "1094 issues/PRs, top 20 all 2026-09" }
+  ],
+  "deadOrBlocked": [
+    { "url": "https://www.reddit.com/r/dataisbeautiful/search.json?q=%22bar+chart+race%22", "status": 403, "note": "confirms the original scout's claim that reddit was unreachable; pipeline/research/reddit.mjs also returns 403" },
+    { "url": "https://www.quora.com/How-do-I-make-racing-bar-graph-videos-like-the-YouTube-channel-the-ranking", "status": 403, "note": "surfaced by WebSearch, could not be opened - NOT cited" },
+    { "url": "https://news.ycombinator.com/item?id=21506901 (via fetch-text.mjs)", "status": 429, "note": "HN HTML rate-limited; read through the Algolia items API instead" }
+  ]
+}

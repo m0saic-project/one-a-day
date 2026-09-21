@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "note": "fetch failed; recorded for audit",
+  "error": "fetch: 403 https://statusgator.com/blog/25-best-status-page-examples/"
+}

@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "name": "resolve nested module graph with dedupe on rxx",
+      "unit": "ms",
+      "base": 100,
+      "value": 50,
+      "baseRange": 2,
+      "range": 2
+    },
+    {
+      "name": "resolve nested module graph with dedupe on rxx",
+      "unit": "ms",
+      "base": 110,
+      "value": 60,
+      "baseRange": 2,
+      "range": 2
+    },
+    {
+      "name": "resolve nested module graph with dedupe on rxx",
+      "unit": "ms",
+      "base": 120,
+      "value": 70,
+      "baseRange": 2,
+      "range": 2
+    },
+    {
+      "name": "resolve nested module graph with dedupe on rxx",
+      "unit": "ms",
+      "base": 130,
+      "value": 80,
+      "baseRange": 2,
+      "range": 2
+    },
+    {
+      "name": "resolve nested module graph with dedupe on rxx",
+      "unit": "ms",
+      "base": 140,
+      "value": 90,
+      "baseRange": 2,
+      "range": 2
+    },
+    {
+      "name": "resolve nested module graph with dedupe on rxx",
+      "unit": "ms",
+      "base": 150,
+      "value": 100,
+      "baseRange": 2,
+      "range": 2
+    },
+    {
+      "name": "resolve nested module graph with dedupe on rxx",
+      "unit": "ms",
+      "base": 160,
+      "value": 110,
+      "baseRange": 2,
+      "range": 2
+    },
+    {
+      "name": "resolve nested module graph with dedupe on rxx",
+      "unit": "ms",
+      "base": 170,
+      "value": 120,
+      "baseRange": 2,
+      "range": 2
+    }
+  ]
+}

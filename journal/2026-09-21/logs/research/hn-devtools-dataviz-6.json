@@ -1,0 +1,39 @@
+{
+  "query": "p99 latency comparison",
+  "days": 720,
+  "count": 4,
+  "results": [
+    {
+      "title": "A disk-first C++ vector engine",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48317054",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-05-28T23:38:29Z"
+    },
+    {
+      "title": "Show HN: I couldn't compare storage topologies without 3 forks, so I built this",
+      "url": "https://github.com/AnishMulay/sandstore",
+      "hn": "https://news.ycombinator.com/item?id=47600639",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-04-01T13:32:56Z"
+    },
+    {
+      "title": "Show HN: Email API benchmarks – Real-world performance data for email providers",
+      "url": "https://knock.app/email-api-benchmarks",
+      "hn": "https://news.ycombinator.com/item?id=47354963",
+      "points": 8,
+      "comments": 3,
+      "createdAt": "2026-03-12T18:13:22Z"
+    },
+    {
+      "title": "Precision-Based Sampling of LLM Judges",
+      "url": "https://www.sunnybak.net/blog/precision-based-sampling",
+      "hn": "https://news.ycombinator.com/item?id=44111553",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-05-27T23:33:57Z"
+    }
+  ]
+}

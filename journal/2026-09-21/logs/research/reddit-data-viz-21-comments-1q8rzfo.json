@@ -1,0 +1,216 @@
+{
+  "source": "https://arctic-shift.photon-reddit.com/api/comments/search?link_id=t3_1q8rzfo&limit=60",
+  "thread": "https://www.reddit.com/comments/1q8rzfo/",
+  "fetchedAt": "2026-09-21T04:18:07.304Z",
+  "count": 26,
+  "results": [
+    {
+      "id": "ownpp1m",
+      "author": "[deleted]",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/ownpp1m/",
+      "date": "2026-07-10",
+      "body": "[removed]"
+    },
+    {
+      "id": "nyzb406",
+      "author": "sebasvisser",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyzb406/",
+      "date": "2026-01-11",
+      "body": "Maybe everyone just tries to ignore this part and holding back their tears… Exporting to ppt and pdf for review. Jokes aside: OP create a power automate flow to have this done TODAY. Postpone all other work until it’s finished. Then all the pain you mentioned is basically gone as the exports and files are automagically. Still this is just a patch on an otherwise bad nightmare that should go from request -> requirements -> development-> dev-testing -> business-validation -> delivery workflow."
+    },
+    {
+      "id": "nyzaakb",
+      "author": "newmacbookpro",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyzaakb/",
+      "date": "2026-01-11",
+      "body": "Great discussion around here. I’d like to had that when a stakeholder asks for these « quick and easy » additions, just tell them it’s going to take Time away from more valuable developments. “Of course I could make a slicer that allows to completely change the visuals and a FX slicer to display a currency of your choice from 20 rates with history. Or you could just look at each region individually, or the consolidated view in USD. But while I’m playing with ASOF JOIN in snowflake, I’m not going to develop the new model that shows the new KPIs we decided to track in 2026. “"
+    },
+    {
+      "id": "nyvfe1b",
+      "author": "SkylineAnalytics",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyvfe1b/",
+      "date": "2026-01-10",
+      "body": "Have you considered just embedding the dashboards in the ppt? You can also use something like power bi robots to automate extraction and delivery"
+    },
+    {
+      "id": "nyud7b8",
+      "author": "blind512",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyud7b8/",
+      "date": "2026-01-10",
+      "body": "Are these minor changes a priority? Are they preventing the dashboards from functioning properly? if not, tell them it's out of scope right now."
+    },
+    {
+      "id": "nyrgnhk",
+      "author": "mongoose8909",
+      "score": 4,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyrgnhk/",
+      "date": "2026-01-10",
+      "body": "Oh. You live in the real world."
+    },
+    {
+      "id": "nyr6at7",
+      "author": "TheTjalian",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyr6at7/",
+      "date": "2026-01-10",
+      "body": "Two things: Couldn't you just publish the report to a Workspace for review, then once it's given the green light, THEN export to PPTX? Your manual workflow for this is kinda crazy. Power Automate could handle exporting and copying over to folders, saving you some time there."
+    },
+    {
+      "id": "nyr4jpa",
+      "author": "080bne",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyr4jpa/",
+      "date": "2026-01-10",
+      "body": "If you replaced some who got laid off, it means they didn't get laid off. They got fired. So change what they did wrong and don't get fired 😁"
+    },
+    {
+      "id": "nyquw7p",
+      "author": "Natural_Ad_8911",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyquw7p/",
+      "date": "2026-01-10",
+      "body": "Better tooling for project management can help to an extent, but the most sustainable benefits are skills issues. Building up your stakeholder management skills will help a lot more than relying on another tool to solve the problems. Tooling does help, for sure. But tooling won't change stakeholder expectations."
+    },
+    {
+      "id": "nyqggq9",
+      "author": "OkSky145",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyqggq9/",
+      "date": "2026-01-10",
+      "body": "I’m actually a CS student working on automating this workflow right now! I had an internship recently and worked with some of my best friends and they always hated their lives because of this dashboard work. Working overtime and losing sleep because of all the last minute changes from their managers. If I built a collaborative workspace for project management oriented for dashboard work in terms of pushing back on deadlines, approval ( just in a more organized space like a web app ) to prevent you guys from being worked would you actually find it helpful ? What features would you want added and what annoys you the most about this problem ?"
+    },
+    {
+      "id": "nyqdv0s",
+      "author": "Stevie-bezos",
+      "score": 7,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyqdv0s/",
+      "date": "2026-01-10",
+      "body": "If you need them in pdf form, you can automate this from PBI directly depending on your license tier. Realistically you need to wean your customers off ppt and pdf, and start providing them with PBI Apps so they can self service. This workflow seems terrible, deeply anti best practice and is why youre loosing so much time. Been there myself, and ditching those ppts is the best thing"
+    },
+    {
+      "id": "nyqdilg",
+      "author": "Dismal-Cow4502",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyqdilg/",
+      "date": "2026-01-10",
+      "body": "I also have the same issue at my company . Usually it’s just the manager being picky and not understand how long it takes to find the root of the problem . In their head , they thinks it’s just a quick number change . I wonder if anyone else is struggling with the same issue . I’m working on automating this with my team too. What part was the worst ? Re-exports , approvals , tracing numbers upstream etc .?"
+    },
+    {
+      "id": "nyqc8uw",
+      "author": "SysAdminSysSadmin",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyqc8uw/",
+      "date": "2026-01-10",
+      "body": "Eh…in a case like that could always try rls in an embedded pbi report in PowerPoint. Instead of exporting …all the time. Or email subscription to the report, either going to stakeholders or a sharepoint configured email box. Lot of ways to skin a cat, but goes back to “why are we skinning this cat”."
+    },
+    {
+      "id": "nyqbxy4",
+      "author": "Iabe01",
+      "score": 8,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyqbxy4/",
+      "date": "2026-01-10",
+      "body": "Exactly. This seems like an case of over eager engineer or unchecked business user. - You create a list of requested changes from users, users are happy that they can submit changes anytime - appoint an authority to verify if the changes are needed and have minimal implication on other users, have the authority to reject - Authority also checks cost benefit analysis - Engineers can implement the changes before the next export cycle so that all exports can be done once. This is adopted from supply demand planning process where key account manager serving different retailers can enter forecast but a control is needed so that there changes don't overwhelm production machines."
+    },
+    {
+      "id": "nyqb2cl",
+      "author": "Iabe01",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyqb2cl/",
+      "date": "2026-01-10",
+      "body": "In one of my experiences, the ppt collated reports from multiple organisations that could not be merged in to 1 dashboard for monthly review meetings. OP likely works in an agency dealing with different clients and the same dashboard is used for them. Export to ppt and saving to different folders is most likely their way of keeping data from one client getting released to another client. It's a pain but genuine business concern."
+    },
+    {
+      "id": "nyqa59x",
+      "author": "xl129",
+      "score": 6,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyqa59x/",
+      "date": "2026-01-10",
+      "body": "The most diplomatic way to do this is having them fill a form and assign a priority to those request. Then you maintain a request list with prioritization. All minor low impact change will happen all at once on a big update instead of when they ask."
+    },
+    {
+      "id": "nyq9nns",
+      "author": "Easy-Paramedic-3142",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq9nns/",
+      "date": "2026-01-10",
+      "body": "This sounds interesting . Just DMed you for details."
+    },
+    {
+      "id": "nyq9ip9",
+      "author": "Easy-Paramedic-3142",
+      "score": 0,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq9ip9/",
+      "date": "2026-01-10",
+      "body": "I inherited it. Got hired right as the previous data analyst team got laid off, so I was doing knowledge transfers with them for like two weeks before they left. This was just the workflow they'd been using for a couple years and we had to pick up all the client dashboards and start delivering and presenting in front of higher ups within weeks. There wasn't really time to question it or rebuild anything from scratch , just had to keep things running:(."
+    },
+    {
+      "id": "nyq8zqe",
+      "author": "Accomplished-Sun9344",
+      "score": 0,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq8zqe/",
+      "date": "2026-01-10",
+      "body": "Yeah we dealt with this all the time. Power BI exporting visuals to PPT as images sucks. If a number or formatting is off you cant fix it in PowerPoint gotta re export the whole deck. Embedding live reports had security issues and wasnt ideal for client presentations so every review note meant rerunning the pipeline. Often the problem was upstream (Snowflake for us) hunting saved queries exporting CSV refreshing PBI re exporting PPT then manual tables like odds ratios. With tweaks \"this looks off\" explanations and monthly runs for multiple clients it ate hours weekly. My boss was overloaded so it fell on me as intern. We built a quick internal workflow for change requests and approvals to avoid constant re exports. Wish wed done it sooner saved tons of time made it way less painful. If you want more info on how we automated our workflow i can dm it to you lol"
+    },
+    {
+      "id": "nyq8p1h",
+      "author": "Easy-Paramedic-3142",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq8p1h/",
+      "date": "2026-01-10",
+      "body": "Yeah we dealt with this all the time. Power BI exporting visuals to PPT as images sucks. If a number or formatting is off you cant fix it in PowerPoint gotta re export the whole damn deck. Embedding live reports had security issues and wasnt ideal for client presentations so every review note meant rerunning the pipeline. Often the problem was upstream (Snowflake for us) hunting saved queries exporting CSV refreshing PBI re exporting PPT then manual tables like odds ratios. With tweaks \"this looks off\" explanations and monthly runs for multiple clients it ate hours weekly. My boss was overloaded so it fell on me when I first started as an analyst. We built a quick internal workflow for change requests and approvals to avoid constant re exports. Wish wed done it sooner saved tons of time made it way less painful. Also, I hate dashboard work and automating it let me spend time on the actual data engineering part of my job rather then all the energy I put into all the dumb dashboard formatting shit I got. If you want more info on how we automated our workflow i can dm it to you lol"
+    },
+    {
+      "id": "nyq7rjm",
+      "author": "Fidlefadle",
+      "score": 3,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq7rjm/",
+      "date": "2026-01-10",
+      "body": "Yes OP what's the reason for this workflow? "
+    },
+    {
+      "id": "nyq5qd2",
+      "author": "SysAdminSysSadmin",
+      "score": 23,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq5qd2/",
+      "date": "2026-01-10",
+      "body": "* Our workflow is building in Power BI, exporting to PowerPoint, uploading the PPT to SharePoint, then saving a final PDF and uploading that to another folder for review. The problem is Power BI exports to PPT as images, so every small change means re-exporting the entire deck. One minor request can turn into multiple re-exports.* Nobody wanted to tackle this part of the post? That in itself made me…..sad inside."
+    },
+    {
+      "id": "nyq4d67",
+      "author": "SQLGene",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq4d67/",
+      "date": "2026-01-10",
+      "body": "4 hour minimum for change requests?"
+    },
+    {
+      "id": "nyq274z",
+      "author": "Flimsy-Ad-4805",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq274z/",
+      "date": "2026-01-10",
+      "body": "Design decisions are made and finalized within the first week or two of development. All work after that is about the data, cleaning, uploading, incorporating."
+    },
+    {
+      "id": "nyq00v4",
+      "author": "Possible_Ground_9686",
+      "score": 10,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nyq00v4/",
+      "date": "2026-01-10",
+      "body": "Learning to say no was a big turning point in my career."
+    },
+    {
+      "id": "nypyd62",
+      "author": "Natural_Ad_8911",
+      "score": 15,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1q8rzfo/_/nypyd62/",
+      "date": "2026-01-10",
+      "body": "You say no. More diplomatically, you can give them a MS form and let them know that you're outside of the development cycle at the moment and if they would like to register ideas for the next phase of work they can use the form provided. In the meantime, support will be limited to fixing errors rather than major or minor improvements."
+    }
+  ]
+}

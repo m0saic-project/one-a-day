@@ -1,0 +1,278 @@
+{
+  "query": "\\\"benchmark\\\" \\\"chart\\\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%5C%22benchmark%5C%22%20%5C%22chart%5C%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=30",
+  "count": 30,
+  "results": [
+    {
+      "title": "Advancing the price-performance frontier with GPT‑5.6",
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+      "hn": "https://news.ycombinator.com/item?id=49113267",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-30T17:47:47Z",
+      "text": "This is one of the things OpenAI has been focused on for an year or so that led to the doomed autoswitcher in ChatGPT .com (switching models based on estimated task complexity) that was quickly reverted Whereas Google with Gemini 3.x, Anthropic with Fable etc are happy to just go for 'big model with dense params' It's hard to guess from the outside of course but just this kind of talking points focus on GPU efficacy is what we see from OpenAI and Chinese open source labs more often than from Anthropic or Google Deepmind and this benchmark chart seems to concur"
+    },
+    {
+      "title": "Launch HN: Tokenless (YC S26) – Automatic model switching to save money",
+      "url": "https://usetokenless.com/",
+      "hn": "https://news.ycombinator.com/item?id=49101522",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-29T18:56:10Z",
+      "text": "Ah I didn’t see the tabs in the benchmark chart. Performance is worse on the two coding benchmarks and cheaper which makes sense. I did read the blog post and I’m not sure what you mean by your reply. I don’t think the blog post addresses my comment."
+    },
+    {
+      "title": "Let's talk about LLMs",
+      "url": "https://www.b-list.org/weblog/2026/apr/09/llms/",
+      "hn": "https://news.ycombinator.com/item?id=48029122",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-05T21:51:16Z",
+      "text": "If you read my entire comment and thought that showing me a benchmark chart remotely addresses the point I'm making, well... I don't know what to tell you."
+    },
+    {
+      "title": "Google releases Gemma 4 open models",
+      "url": "https://deepmind.google/models/gemma/gemma-4/",
+      "hn": "https://news.ycombinator.com/item?id=47617188",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-02T17:12:03Z",
+      "text": "I can't find what ELO score specifically the benchmark chart is referring to, it's just labeled \"Elo Score\". It's not Codeforces ELO as that Gemma 4 31B has 2150 for that which would be off the given chart."
+    },
+    {
+      "title": "Google releases Gemma 4 open models",
+      "url": "https://deepmind.google/models/gemma/gemma-4/",
+      "hn": "https://news.ycombinator.com/item?id=47616709",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-02T16:35:12Z",
+      "text": "Featuring the ELO score as the main benchmark in chart is very misleading. The big dense Gemma 4 model does not seem to reach Qwen 3.5 27B dense model in most benchmarks. This is obviously what matters. The small 2B &#x2F; 4B models are interesting and may potentially be better ASR models than specialized ones (not just for performances but since they are going to be easily served via llama.cpp &#x2F; MLX and front-ends). Also interesting for \"fast\" OCR, given they are vision models as well. But other than that, the release is a bit disappointing."
+    },
+    {
+      "title": "Gemini 3",
+      "url": "https://blog.google/products/gemini/gemini-3/",
+      "hn": "https://news.ycombinator.com/item?id=45970350",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-11-18T18:51:18Z",
+      "text": "This comment was moved from another thread. The original thread included a benchmark chart with ARC performance: https:&#x2F;&#x2F;blog.google&#x2F;products&#x2F;gemini&#x2F;gemini-3&#x2F;#gemini-3 "
+    },
+    {
+      "title": "Claude Sonnet 4.5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "hn": "https://news.ycombinator.com/item?id=45416260",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-09-29T17:14:46Z",
+      "text": "Their benchmark chart doesn't match what's published on https:&#x2F;&#x2F;www.swebench.com&#x2F; . I understand that they may have not published the results for sonnet 4.5 yet, but I would expect the other models to match..."
+    },
+    {
+      "title": "Geekbench Result for iPhone5",
+      "url": "http://browser.primatelabs.com/geekbench2/1030202",
+      "hn": "https://news.ycombinator.com/item?id=4530647",
+      "points": null,
+      "comments": null,
+      "createdAt": "2012-09-16T22:47:01Z",
+      "text": "Not all handsets are included in the chart. The Geekbench Browser has a list of handsets which it uses to build the benchmark chart. This list contains model and processor information and is manually maintained; if a handset isn't in the list, it's not included in the chart. I thought all of the S3 models were included in this list, but apparently I'm wrong. I'll make sure this list is up to date. Geekbench is built with the NDK (since all of the benchmarks are written in C or C++). There was a bug in Android 4.0.3 and earlier that caused Android to select the ARMv5 libraries instead of the ARMv7 libraries (which caused a massive drop in performance). This was fixed in 4.0.4 which is why there's a huge jump in performance between the two versions on the One X."
+    },
+    {
+      "title": "So how well is Claude playing Pokémon?",
+      "url": "https://www.lesswrong.com/posts/HyD3khBjnBhvsp8Gb/so-how-well-is-claude-playing-pokemon",
+      "hn": "https://news.ycombinator.com/item?id=43292264",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-03-07T17:45:34Z",
+      "text": "A notable error in the article: > The second attempt got all the way to Vermilion City, finding a way through the infamous Mt. Moon maze and achieving two badges, so pretty close to the benchmark. It did not make it to Vermillion City: it got Misty's badge (with some fun battle RNG), then got stuck in Cerulean City and could not get out : the next objective was to go north to Bill's House to get the S.S Anne ticket which is required before going to Vermillion City, but it just couldn't do that. Given the amount of loops in this livestream, I am somewhat skeptical of that benchmark results chart. There's no way it somehow made it to Vermillion, beat the S.S Anne for HM Cut, and also beat Surge with the relative amount of actions implied by the chart."
+    },
+    {
+      "title": "Show HN: I built a memory-safe web server in Rust",
+      "url": "https://www.ferronweb.org/",
+      "hn": "https://news.ycombinator.com/item?id=43255790",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-03-04T15:19:41Z",
+      "text": "I have updated the web server performance benchmark chart (there's now Ferron 1.0.0-beta1 instead of Project Karpacz 0.3.0), you can check it out."
+    },
+    {
+      "title": "Show HN: I built a memory-safe web server in Rust",
+      "url": "https://www.ferronweb.org/",
+      "hn": "https://news.ycombinator.com/item?id=43228555",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-03-02T08:38:09Z",
+      "text": "I will later update the performance benchmark chart, since the current one features an earlier alpha version of my web server (Project Karpacz 0.3.0)."
+    },
+    {
+      "title": "PapersTok – AI ArXiv Papers with a TikTok Like UX",
+      "url": "https://papers.infitok.com",
+      "hn": "https://news.ycombinator.com/item?id=43126042",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-02-21T10:35:57Z",
+      "text": "Great idea! I would totally swipe through. One small recommendation, consider having the title and a short description written by an LLM making it as dumb and sensational as possible, for a true tiktok like experience for instance the this title and abstract could be transformed into the following Instead of: \"Benchmarking Multimodal RAG through a Chart-based Document Question-Answering Generation Framework Multimodal Retrieval-Augmented Generation (MRAG) enhances reasoning capabilities by integrating external knowledge. However, existing benchmarks primarily focus on simple image-text interactions, overlooking complex visual formats like charts that are prevalent in real-world applications. In this work, we introduce a novel task, Chart-based MRAG, to address this limitation. To semi-automatically generate high-quality evaluation samples, we propose CHARt-based document question-answering GEneration (CHARGE), a framework that produces evaluation data through structured keypoint extraction, crossmodal verification, and keypoint-based generation. By combining CHARGE with expert validation, we construct Chart-MRAG Bench, a comprehensive benchmark for chart-based MRAG evaluation, featuring 4,738 question-answering pairs across 8 domains from real-world documents. Our evaluation reveals three critical limitations in current approaches: (1) unified multimodal embedding retrieval methods struggles in chart-based scenarios, (2) even with ground-truth retrieval, state-of-the-art MLLMs achieve only 58.19% Correctness and 73.87% Coverage scores, and (3) MLLMs demonstrate consistent text-over-visual modality bias during Chart-based MRAG reasoning. The CHARGE and Chart-MRAG Bench are released at https:&#x2F;&#x2F;github.com&#x2F;Nomothings&#x2F;CHARGE.git .\" Give me: \" \"AI Fails Hard at Reading Charts: New Study Exposes Shocking Weaknesses!\" A groundbreaking study reveals that even the smartest AI models struggle with charts, scoring just 58% accuracy—proving your brain might still be better than AI at decoding data! \""
+    },
+    {
+      "title": "Llama.cpp AI Performance with the GeForce RTX 5090",
+      "url": "https://www.phoronix.com/review/nvidia-rtx5090-llama-cpp",
+      "hn": "https://news.ycombinator.com/item?id=42847284",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-01-27T23:55:23Z",
+      "text": "The first benchmark chart of LLama.cpp is effectively a memory bandwidth chart, unsurprisingly. Each of the cards except the 5090 gets almost exactly 0.1 token&#x2F;s per GB&#x2F;s memory bandwidth. Mem GB&#x2F;s tok&#x2F;s tok&#x2F;s pr GB&#x2F;s RTX 5090 1792 158.77 0.089 RTX 4090 1008 100.51 0.100 RTX 3090 936 90.88 0.097 RTX 4080S 736 77.08 0.105 RTX 4080 717 74.56 0.104 RTX 4070TiS 672 70.83 0.105 RTX 4070S 504 54.59 0.108 RTX 4070 504 54.47 0.108 The 5090 is an outlier in that it has 78% more memory bandwidth than the 4090, and \"only\" gets 0.09 token&#x2F;s per GB&#x2F;s. So it seems to start running into compute limitations."
+    },
+    {
+      "title": "LLMs know more than what they say",
+      "url": "https://arjunbansal.substack.com/p/llms-know-more-than-what-they-say",
+      "hn": "https://news.ycombinator.com/item?id=41296070",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-08-20T01:46:35Z",
+      "text": "Thanks for the reply! Re question #3: I'm not sure I understand why you need to vary the base model or how doing so would allow LSR to take advantage? Isn't your LSR technique used on the activations of the evaluator model? As a note of feedback, I found the original article a bit hard to understand even with multiple reads. I would have really benefited from a traditional \"methodology\" section like in an ML paper! The graphs upfront don't make sense to someone who isn't familiar with the problem setting, and even now I'm not sure if the x-axis in the HaluEval Benchmark bar chart refers to the base model or the evaluator model. Maybe it's just me."
+    },
+    {
+      "title": "Hot take on OpenAI’s new GPT-4o",
+      "url": "https://garymarcus.substack.com/p/hot-take-on-openais-new-gpt-4o",
+      "hn": "https://news.ycombinator.com/item?id=40365835",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-05-15T12:09:24Z",
+      "text": "> They don’t have GPT-5 after 14 months of trying. They didn't have GPT-4 until 3 years after GPT-3. > The most important figure in the blogpost is attached below. And the most important thing about the figure is that 4o is not a lot different from Turbo, which is not hugely different from 4. The chart shows, for instance, 67% on HumanEval with GPT-4 to 90.2% to with GPT-4o. Future increments will inherently be smaller just by nature of the benchmarks - there's a hard cap of 100%, and 90%->99.9% represents far more progress than 50%->60%. Even reaching omniscience wouldn't look all that impressive on the benchmark chart."
+    },
+    {
+      "title": "The One Billion Row Challenge in Go: from 1m45s to 4s in nine solutions",
+      "url": "https://benhoyt.com/writings/go-1brc/",
+      "hn": "https://news.ycombinator.com/item?id=39579126",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-03-03T07:17:21Z",
+      "text": "Oh, and what the basic research you speak of constitutes? Surely you looked at ASM emitted by compilers for these languages and HPC-adjacent APIs each of them offers? No? Then let me tell you - Go is pretty much consigned to having to use its special flavour of non-portable bespoke hand-written ASM which is the only way to access SIMD instructions necessary to achieve optimal hardware utilization in the benchmark. This takes a lot of effort and skill, so, as you may have noticed, if you can't do it, Go simply cannot come close to better options you can see on the benchmark chart. And yet, this is something that can be trivially done in C#, C++ and Rust (albeit C# has the best UX with crossplat SIMD API introduced in .NET 7, with C++ close second with its own take on this being in preview). Java OTOH manages to be in the same category by having extremely advanced JIT that allows it to have comparable codegen quality even though it lacks comparable SIMD API for now (Panama vectors are problematic currently), so benchmarks implementations using it are forced to do SWAR. My main gripe is of course an extremely common misconception about Go's speed which it just does not have the moment you write anything sufficiently advanced or want to express a particular problem in a terser way than writing thousands of open coded loops."
+    },
+    {
+      "title": "Changing std:sort at Google’s scale and beyond",
+      "url": "https://danlark.org/2022/04/20/changing-stdsort-at-googles-scale-and-beyond/",
+      "hn": "https://news.ycombinator.com/item?id=31099688",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-04-20T16:47:03Z",
+      "text": "xeus-cling didn't exist back then: https:&#x2F;&#x2F;github.com&#x2F;jupyter-xeus&#x2F;xeus-cling#a-c-notebook https:&#x2F;&#x2F;github.com&#x2F;fffaraz&#x2F;awesome-cpp#debug A standard way to benchmark and chart {sorting algorithms, web framework benchmarks,} would be great. The TechEmpower \"framework overhead\" benchmarks might have at least average case sorting in there somewhere: https:&#x2F;&#x2F;www.techempower.com&#x2F;benchmarks&#x2F;#section=data-r20&hw=... "
+    },
+    {
+      "title": "Zero-cost functional reactive programming for the web",
+      "url": "https://github.com/pauan/rust-dominator",
+      "hn": "https://news.ycombinator.com/item?id=27253264",
+      "points": null,
+      "comments": null,
+      "createdAt": "2021-05-23T08:16:32Z",
+      "text": "Thanks for the link, missed it because \"as fast as inferno\" is not a synonym to benchmark chart."
+    },
+    {
+      "title": "Benchmarking TensorFlow on Nvidia GeForce RTX 3090",
+      "url": "https://www.evolution.ai/post/benchmarking-deep-learning-workloads-with-tensorflow-on-the-nvidia-geforce-rtx-3090",
+      "hn": "https://news.ycombinator.com/item?id=24630243",
+      "points": null,
+      "comments": null,
+      "createdAt": "2020-09-29T17:02:57Z",
+      "text": "Oh interesting. Is there a benchmark chart or something like that where I can review the performance of something like YOLOv3 across cards?"
+    },
+    {
+      "title": "Why we chose Rust",
+      "url": "https://bitbucket.org/blog/why-rust",
+      "hn": "https://news.ycombinator.com/item?id=20240214",
+      "points": null,
+      "comments": null,
+      "createdAt": "2019-06-21T06:00:10Z",
+      "text": "It's not clear what the chart is actually demonstrating, or why it had a \"Source\" link that just goes to a 4-year-old blog post about concurrency in Rust that contains no benchmarks. My guess is the benchmark chart is just that: a benchmark. They didn't actually write their target program in 6 different languages. They probably just found a set of benchmarks that they believed to be at least somewhat representative. I really wish the article would actually explain this though."
+    },
+    {
+      "title": "Why we chose Rust",
+      "url": "https://bitbucket.org/blog/why-rust",
+      "hn": "https://news.ycombinator.com/item?id=20239804",
+      "points": null,
+      "comments": null,
+      "createdAt": "2019-06-21T04:10:21Z",
+      "text": "I guess I misunderstood the benchmark chart. The Java line shows it taking 500mb, which is absurd, but I assumed that they were running on the target platform and therefore had 500mb of RAM."
+    },
+    {
+      "title": "Claude Desktop spawns 1.8 GB Hyper-V VM on every launch, even for chat-only use",
+      "url": "https://github.com/anthropics/claude-code/issues/29045",
+      "hn": "https://news.ycombinator.com/item?id=48486140",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-11T04:17:06Z",
+      "text": "> Ever hear of a large K8s migration going well ...well, AI infra stacks are more or less k8s&#x2F;cloud native, especially on the inference side. Nvidia GPU operator plus KubeFlow makes deploying models easy, and I did that manually as well using just the ollama, llama.cpp containers and especially vllm operator. I'm not sure about what's the measuring notation of \"large\" is, but OpenAI had a blog post about how to manage 7500+ nodes Kubernetes ( https:&#x2F;&#x2F;openai.com&#x2F;index&#x2F;scaling-kubernetes-to-7500-nodes&#x2F; ). That's 5 years ago and I speculate it will only be even more. > completely re-implemented under the hood for anything halfway serious ...an example please? I'm building a platform to deploy hundreds of open source apps on Kubernetes, you know, the boring thing you can do with a VPS and maybe use Docker Compose to start -- with an ergonomic twist. I relied on so many features of what Kubernetes and its ecosystem provided, especially with persistent volume, volume snapshot, CRDs and cron job, and all of it is just composed from open source and cloud native software...I'm not sure if that sounds \"half way serious\" to you. I know those boring monolithic apps can be done with a VPS, as I exactly came from that background, and I know what the shitty points of having just a VPS are. You don't have a clean control plane, you don't have HA, you don't have distributed storage, and you have to be super aware of the apps that you are deploying with Docker Compose. What you would think \"completely re-implemented under the hood for anything halfway serious\", perhaps it means that you don't want to get in the fuzz to manage the complexity and prefer to trade for a far simpler but more primitive solution, and that's totally fine. Pro tip: Codex seems to love generating great Helm charts so much for some reason unknown. I tried GPT-5.4 high in codex and it easily beats Opus 4.7 max on my own internal helm chart generation benchmark evaluation, which measures HA, deployment and app-specific probes. I've given source code to both Codex and Opus and research about the app config structure, and Codex did so well to just generate secret key-value and convert it to JSON and environ, while Opus insisted on using a dynamic generator at runtime. > Nomad was cool though Ahem. I used to deploy Nomad too, but I found it too underwhelming, especially with the networking side of thing. Consul is perhaps one of the most hated thing in my entire career that I would call it bullshit. I know that later Nomad has its own Raft mode, but the Consul brain rot to me is already very sickening such that I don't want to touch Nomad no more. Vault is fine though, but I prefer OpenBao now. > Dart is also complete shit: Speed of javascript with verbosity of Java I don't get where the \"speed of javascript\" is from. Dart&#x2F;Flutter is JIT on dev mode, and AOT compiled on production, is that you didn't get the compiler options right?"
+    },
+    {
+      "title": "Ask HN: I built an AI money coach for new grads and it might be awesome",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46502509",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-01-05T18:18:33Z",
+      "text": "I like the instinct, but I think the framing is off. Most people already know what to do. They know eating out less saves money. They know carrying a balance is bad. The problem isn’t knowledge, it’s that the consequences don’t feel real in the moment. Money decisions are made by present-you and judged by future-you. Most tools talk to neither. If your real advantage is memory, then the product isn’t advice. It’s continuity. It’s reminding me that past-me cared about something and current-me is quietly changing the deal. “Three months ago you said this mattered” is more powerful than any chart or benchmark. If you lean into that, this could be super interesting but pls don't blend into optimizations for consumer ai. And I agree on your point that this isn’t about income but about impulse and right steps"
+    },
+    {
+      "title": "Django Async: What's new and what's next?",
+      "url": "https://deepsource.io/blog/django-async-support/",
+      "hn": "https://news.ycombinator.com/item?id=24169793",
+      "points": null,
+      "comments": null,
+      "createdAt": "2020-08-15T15:58:39Z",
+      "text": ">The benchmark used different number of processes for sync and async workloads. Wrong. Workers amounts are the same. See the chart with benchmark results. http:&#x2F;&#x2F;calpaterson.com&#x2F;async-python-is-not-faster.html >The benchmark was run on the same machine where Postgres was operating. This wouldn't affect the variance between sync and async results very much because both frameworks were run on the same machine. >the connection pool was not setup to prevent blocking when a coroutine tries to acquire a connection from the pool when the pool is exhausted. Real world connection pools have an upper bound limit. I don't see why setting an upper bound limit to be closer to reality is not a good test. Also you're completely wrong about the connection pool blocking when it is exhausted. See source code: https:&#x2F;&#x2F;github.com&#x2F;calpaterson&#x2F;python-web-perf&#x2F;blob&#x2F;master&#x2F;a... If all connections are exhausted then the system still yields to compute and incoming requests. >(for benchmark purposes it should not have upper bound limit and to be pre-populated with already established connections). Disagree. The real world sets an upper bound. There's nothing wrong with simulating this in a test."
+    },
+    {
+      "title": "Pancake HTTP Server faster than nginx running PHP",
+      "url": "http://pancakehttp.net/",
+      "hn": "https://news.ycombinator.com/item?id=4771275",
+      "points": null,
+      "comments": null,
+      "createdAt": "2012-11-12T01:49:23Z",
+      "text": "Can you do a benchmark demonstrating the performance nginx + php-fpm + APC versus Pancake + CodeCache under high concurrent load, including serving of large (&#62;50kb) assets? Ideally, a benchmark that produces a chart of response time (Y) against concurrency (X) for each product would be great, because \"serves one user really fast\" is practically worthless for real world purposes. I want to know what the point is at which each server buckles."
+    },
+    {
+      "title": "Show HN: A microservice framework, listed in CNCF Landscape, 1 year 10k+ stars",
+      "url": "https://github.com/zeromicro/go-zero",
+      "hn": "https://news.ycombinator.com/item?id=28595361",
+      "points": null,
+      "comments": null,
+      "createdAt": "2021-09-20T16:09:53Z",
+      "text": "Little bit confused by the chart in the benchmark section: https:&#x2F;&#x2F;github.com&#x2F;zeromicro&#x2F;go-zero#7-benchmark What is it trying to show?"
+    },
+    {
+      "title": "Case shiller 100 year chart",
+      "url": "http://www.ritholtz.com/blog/2011/04/case-shiller-100-year-chart-2011-update/",
+      "hn": "https://news.ycombinator.com/item?id=2453798",
+      "points": null,
+      "comments": null,
+      "createdAt": "2011-04-16T12:02:11Z",
+      "text": "Well, C-S Index was begun in 1890 where it was given a value of 100. Notes from the chart: \"The 1890 benchmark is 100 on the chart. If a standard house sold for $100,000 (inflation-adjusted to today's dollars), an equivalent standard house would have sold for $66,000 in 1920 (66 on the index scale) and $199,000 in 2006 (199 on the index scale, or 99% higher than in 1890).\""
+    },
+    {
+      "title": "Why You Shouldn’t Use ReactJS for Complex Projects",
+      "url": "https://www.infoq.com/articles/more-than-react-part-i",
+      "hn": "https://news.ycombinator.com/item?id=13575450",
+      "points": null,
+      "comments": null,
+      "createdAt": "2017-02-05T23:45:29Z",
+      "text": "Having no experiences with it. The author calmed that is faster but the benchmark result in below chart was shown different word: http:&#x2F;&#x2F;www.stefankrause.net&#x2F;js-frameworks-benchmark5&#x2F;webdriv... "
+    },
+    {
+      "title": "The sigmoids won't save you",
+      "url": "https://www.astralcodexten.com/p/the-sigmoids-wont-save-you",
+      "hn": "https://news.ycombinator.com/item?id=48151132",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-15T17:07:28Z",
+      "text": "According to this article: whenever someone games a benchmark to make an upward chart on some y-axis, it's YOUR responsibility to prove how and why that trend can't continue indefinitely. emoji face with eyes rolling upward"
+    },
+    {
+      "title": "Ask HN: Claude Opus performance affected by time of day?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46652423",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-01-16T21:25:59Z",
+      "text": "I've had the same suspicion for various providers - if I had time and motivation I would put together a private benchmark that runs hourly and chart performance over time. If anyone wants to do that I'll upvote your Show HN :)"
+    }
+  ]
+}

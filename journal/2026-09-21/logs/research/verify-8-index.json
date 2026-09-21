@@ -1,0 +1,150 @@
+{
+  "verifier": "scout-verify, angle #8",
+  "candidate": "bundle / dependency weight treemap, before to after",
+  "date": "2026-09-21",
+  "verdict": "THIN",
+  "candidateCitations": [
+    {
+      "url": "https://rangle.io/blog/bundle-size-optimization-a-practical-guide-using-webpack-and-statoscope",
+      "opened": true,
+      "raw": "verify-8-rangle-statoscope.json",
+      "quotesChecked": [
+        {
+          "claimed": "The interactive Treemap illustrates your bundle's size and structure. Each nested rectangle represents a module or dependency, with larger rectangles denoting larger sizes.",
+          "found": "VERBATIM at offset 6011"
+        },
+        {
+          "claimed": "Upon reevaluating the bundle analyzer's Treemap, our total parsed size shrunk from 1.84 MB to 931.14 KB - a near 50% reduction.",
+          "found": "VERBATIM at offset 9917; source uses an en-dash, candidate normalized it correctly"
+        }
+      ],
+      "dateClaimed": "2023-09-11",
+      "dateVerified": "2023-09-11, byline 'LW Leah Williams - Sep 11, 2023 - 8 min read' (WebFetch)",
+      "skepticNote": "Consultancy marketing post, 3 years old. Describes the tool, not a person's recurring pain.",
+      "bonusQuote": "Hovering over a module displays a tooltip with additional information like module size, name, and path."
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=46710957",
+      "opened": true,
+      "raw": "verify-8-hn-46710957.json",
+      "quotesChecked": [
+        {
+          "claimed": "They come from small, reasonable decisions that add up quietly. A helper here. One more dependency there. Everything makes sense in isolation.",
+          "found": "VERBATIM"
+        }
+      ],
+      "dateClaimed": "2026-01-21",
+      "dateVerified": "consistent - HN renders 'q1sh101 8 months ago' as of 2026-09-21",
+      "skepticNote": "MATERIALLY WEAKER THAN PRESENTED. Author is q1sh101, the author of build-size-diff, promoting his own tool ('I built this because the problem wouldn't go away'). Parent story 'Bundle didn't suddenly get bigger. You just never saw it change' scored 1 POINT on HN (confirmed via hn.mjs 'bundle size' --days 730). Not a community voice."
+    },
+    {
+      "url": "https://github.com/q1sh101/build-size-diff",
+      "opened": true,
+      "raw": "verify-8-gh-build-size-diff.json",
+      "quotesChecked": [
+        {
+          "claimed": "GitHub Action for automated bundle size tracking in CI/CD. Catch performance regressions before merging with instant PR comments showing gzip/brotli metrics.",
+          "found": "VERBATIM"
+        }
+      ],
+      "skepticNote": "4 stars, 1 fork, 15 commits. Same person as the HN comment above - so candidate evidence items 3 and 4 are ONE person, not two. Supports 'numbers ship as tables' (PR comment with per-file +/- markers); proves nothing about demand."
+    },
+    {
+      "url": "https://github.com/exoego/esbuild-bundle-analyzer/blob/main/README.md",
+      "opened": true,
+      "raw": "verify-8-gh-esbuild-analyzer.json",
+      "quotesChecked": [
+        {
+          "claimed": "A comma-separated list of paths to esbuild's meta file. Glob (`dist/**/meta.json`) is supported.",
+          "found": "VERBATIM (full row reads 'A required comma-separated list of paths to esbuild's meta file. Glob ( dist/**/meta.json ) is supported.')"
+        }
+      ],
+      "skepticNote": "23 stars. The quote is a config-table row for an input path - it proves the metafile input format exists and is globbable, not that anyone wants a picture. Grepped the README: the word 'treemap' does NOT appear; output is an analysis TABLE. Usefully confirms the candidate's own premise that the numbers ship as tables."
+    }
+  ],
+  "deadLinks": [],
+  "newEvidenceFound": [
+    {
+      "url": "https://ckeditor.com/blog/how-we-reduced-ckeditor-bundle-size/",
+      "opened": true,
+      "raw": "verify-8-ckeditor-bundle.json",
+      "date": "2025-06-18",
+      "author": "Filip Sobol (CKEditor), also the author of Sonda",
+      "community": "dev-tool vendor engineering blog - different from all cited sources",
+      "why": "STRONGEST PIECE. Three treemap screenshots in one release post, each captioned with its total.",
+      "quotes": [
+        "Treemap of the CKEditor 5 bundle (297 KiB total; 231 KiB from CKEditor 5, rest from node_modules).",
+        "Updated treemap (76 KiB total; 32 KiB from CKEditor 5).",
+        "Updated treemap (33 KiB total; 28.4 KiB from CKEditor 5).",
+        "Let's also take a look at the final Sonda report. This one has far fewer squares than the original.",
+        "That's a lot of squares, but we can see the biggest offenders right away.",
+        "we can use Sonda to analyze all bundles, which I created after having to deal with half a dozen tools to investigate this issue at the time"
+      ],
+      "captionsCrossChecked": "fetch-text.mjs extraction and an independent WebFetch read returned the same three captions"
+    },
+    {
+      "url": "https://qaskills.sh/blog/lighthouse-treemap-bundle-analysis",
+      "opened": true,
+      "raw": "verify-8-lighthouse-treemap.json",
+      "date": "2026-08-08",
+      "community": "QA / web-perf, not JS library maintainers",
+      "quotes": [
+        "Rectangles represent resources and, when source maps are available, their constituent source files. Area communicates byte size. Color and labels help navigation, but area is the core signal.",
+        "Treemap review is exploratory, while CI needs a stable scalar rule."
+      ],
+      "why": "First quote is independent validation of 'layout IS the data'. Second quote is the honest counterweight: the recurring CI artifact is a NUMBER, not a picture."
+    },
+    {
+      "url": "https://github.com/evanw/esbuild/issues/2848",
+      "opened": true,
+      "raw": "verify-8-esbuild-issue-2848.json",
+      "date": "2023-01-19",
+      "author": "fabiospampinato, on a 40.1k-star repo",
+      "status": "Closed, no comments, no reactions shown",
+      "quotes": [
+        "I think a treemap is often the most natural way to browse a bundle size analysis, because it makes better use of available screen real-estate, so it'd be really nice to see one implemented for esbuild."
+      ],
+      "skepticNote": "One requester, three years old, closed without discussion. Thin on its own."
+    },
+    {
+      "url": "https://dev.to/yaseenyk04/shrinking-a-react-bundle-what-actually-moved-the-number-50ba",
+      "opened": true,
+      "raw": "verify-8-devto-shrinking.json",
+      "date": "2026-09-14 (page shows 'Sep 14'), author Yaseen Khatib, 0 comments",
+      "community": "DEV",
+      "quotes": [
+        "Measure compressed bytes, not raw; a treemap showing raw sizes will send you after the wrong dependency.",
+        "Raw sizes lie: minified JavaScript compresses extremely well and highly repetitive code compresses better still, so raw numbers will point you at a dependency that costs a third of what the picture claims.",
+        "Import the specific icons, and check the treemap afterwards to confirm it worked."
+      ],
+      "why": "Hard design constraint: the unit (gzip/brotli vs raw) must be a labelled prop or the picture lies. Last quote is the recurring change -> re-read-the-treemap loop."
+    },
+    {
+      "url": "https://github.com/webpack/webpack-bundle-analyzer",
+      "opened": true,
+      "method": "WebFetch (not saved raw)",
+      "date": "opened 2026-09-21",
+      "findings": "12.7k stars. analyzerMode is server | static ('single HTML file with bundle report') | json ('single JSON file with bundle report') | disabled. NO image output of any kind. Confirms the candidate's structural claim at the source."
+    },
+    {
+      "url": "https://github.com/filipsobol/sonda",
+      "opened": true,
+      "method": "WebFetch (not saved raw)",
+      "date": "opened 2026-09-21",
+      "findings": "787 stars. 'Universal visualizer and analyzer for JavaScript and CSS.' Output is an 'interactive HTML report'. No before/after build comparison documented."
+    }
+  ],
+  "searchesThatCameUpEMPTY": [
+    "hn.mjs 'bundle analyzer treemap' --days 1800 -> count 0",
+    "hn.mjs 'webpack-bundle-analyzer' --days 1800 -> 1 result, 3 points, 2022",
+    "WebSearch for additional engineering blogs publishing before/after treemaps -> only CKEditor surfaced",
+    "WebSearch for a GitHub issue requesting PNG/SVG export from a bundle analyzer -> none found",
+    "reddit.mjs r/webdev, r/javascript, r/reactjs -> HTTP 403 (anonymous rate limit) on every attempt; NO reddit evidence was obtained and none is claimed"
+  ],
+  "claimDecomposition": {
+    "A_numbers_ship_as_tables": "TRUE - verified in both PR-comment actions",
+    "B_treemap_is_the_canonical_picture_and_area_is_the_signal": "TRUE - verified across four independent sources",
+    "C_no_tool_emits_a_shareable_image": "TRUE - verified at source (webpack-bundle-analyzer modes, Sonda, rollup-plugin-visualizer templates are all HTML)",
+    "D_maintainers_repeatedly_publish_a_before_after_picture": "UNPROVEN - exactly one unambiguous instance (CKEditor, 2025). Searches for more came up dry, and QASkills says out loud that the recurring CI artifact is a scalar, not a treemap."
+  }
+}

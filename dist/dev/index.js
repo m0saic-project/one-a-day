@@ -16,9 +16,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.devTemplates = void 0;
 const og_card_1 = require("./og-card/v1/og-card");
+const bench_delta_1 = require("./bench-delta/v1/bench-delta");
 /** Pack `dev`, in registry order (mirrors ./registry.ts). */
 exports.devTemplates = [
     og_card_1.OgCardV1,
+    bench_delta_1.BenchDeltaV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./og-card/v1/og-card"), exports);
+__exportStar(require("./bench-delta/v1/bench-delta"), exports);

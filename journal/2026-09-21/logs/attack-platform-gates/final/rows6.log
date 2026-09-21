@@ -1,0 +1,17 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (4 templates) from .
+Rendering template:
+  template id: @one-a-day/dev/bench-delta/v1
+  output:      journal/2026-09-21/logs/attack-platform-gates/final/rows6.png
+  Building plan... done (0.8s)
+  plan built with size: 1600 x 900
+  duration:      2s (60 frames @ 30fps)
+  [warn] OVERLAY_CHAIN_DEEP: Mosaic node "root" emits an overlay chain 28 deep (threshold 20) with inline masks riding it. Past ~25 nested overlays ffmpeg SILENTLY degrades inline masks — shapes collapse to their bounding box, glyph masks tofu; no error is raised. Tiles stayed off the grid sheet because their rects overlap. Consider splitting the layout into nested sub-mosaics, or removing per-cell blend/enable/opacity/position expressions so tiles can lower onto the xstack sheet.
+  Estimated render time: ~6 s
+  Rendering in ffmpeg [0/5 |   0% | 0:00 elapsed | ETA 0:06]  Rendering in ffmpeg [1/5 |  20% | 0:00 elapsed | ETA 0:06].    Rendering in ffmpeg [1/5 |  20% | 0:01 elapsed | ETA 0:06]..   Rendering in ffmpeg [1/5 |  20% | 0:01 elapsed | ETA 0:05]...  Rendering in ffmpeg [1/5 |   8% | 0:02 elapsed | ETA 0:13 | 0.38x]     Rendering in ffmpeg [1/5 |  23% | 0:02 elapsed | ETA 0:06 | 0.51x].    Rendering in ffmpeg [1/5 |  38% | 0:02 elapsed | ETA 0:04 | 0.56x]..   Rendering in ffmpeg [1/5 |  52% | 0:03 elapsed | ETA 0:02 | 0.58x]...  Rendering in ffmpeg [1/5 |  52% | 0:03 elapsed | ETA 0:02 | 0.58x]     Rendering in ffmpeg [1/5 |  67% | 0:04 elapsed | ETA 0:02 | 0.59x].    Rendering in ffmpeg [1/5 |  82% | 0:04 elapsed | ETA 0:01 | 0.60x]..   Rendering in ffmpeg [3/5 |  97% | 0:04 elapsed | ETA 0:00 | 10.20x]...  Rendering in ffmpeg [5/5 |  99% | 0:05 elapsed | ETA 0:00 | 0.56x]... done (4 s)
+✅ Template render complete: journal/2026-09-21/logs/attack-platform-gates/final/rows6.png
+Render ok. Report: journal\2026-09-21\logs\attack-platform-gates\final\rows6.output.json

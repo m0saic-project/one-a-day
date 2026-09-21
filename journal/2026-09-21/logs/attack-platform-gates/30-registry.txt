@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "mode": "gate",
+  "templates": 4,
+  "rendered": 4,
+  "skipped": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    {
+      "templateId": "@one-a-day/dev/og-card/v1",
+      "note": "latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it"
+    }
+  ],
+  "fingerprints": {
+    "srcRoot": "src",
+    "fallbackDir": "layout-fingerprints",
+    "minted": 0,
+    "unchanged": 4,
+    "missing": 0,
+    "changed": 0
+  }
+}

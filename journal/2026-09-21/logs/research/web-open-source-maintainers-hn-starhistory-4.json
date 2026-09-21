@@ -1,0 +1,207 @@
+{
+  "query": "star history",
+  "days": 900,
+  "count": 25,
+  "results": [
+    {
+      "title": "Karen Nikoghosyan Is Building AI Operating Layers for Multichannel Commerce",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49776683",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-09-20T15:15:00Z"
+    },
+    {
+      "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49743049",
+      "points": 65,
+      "comments": 58,
+      "createdAt": "2026-09-17T16:22:15Z"
+    },
+    {
+      "title": "Show HN: AttaLambda: a language where types and data are made of untyped lambdas",
+      "url": "https://attalambda.com",
+      "hn": "https://news.ycombinator.com/item?id=49699477",
+      "points": 48,
+      "comments": 7,
+      "createdAt": "2026-09-14T16:21:10Z"
+    },
+    {
+      "title": "How do you filter noise from signal in programming resources?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49580521",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-05T20:50:51Z"
+    },
+    {
+      "title": "New API endpoint provides privacy-safe star history data",
+      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data/",
+      "hn": "https://news.ycombinator.com/item?id=49575551",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-05T11:31:09Z"
+    },
+    {
+      "title": "We built a job board where the employers aren't human. Here's what broke",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49273269",
+      "points": 4,
+      "comments": 4,
+      "createdAt": "2026-08-12T14:49:22Z"
+    },
+    {
+      "title": "Show HN: Gitdebt.com, open source repo stats and star history for GitHub repos",
+      "url": "https://gitdebt.com/",
+      "hn": "https://news.ycombinator.com/item?id=49201088",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-06T19:20:42Z"
+    },
+    {
+      "title": "GitHub Star History, Revived",
+      "url": "https://star-history.dera.page",
+      "hn": "https://news.ycombinator.com/item?id=49195535",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-08-06T12:06:27Z"
+    },
+    {
+      "title": "GitHub Has Restricted Access to Star Data",
+      "url": "https://www.star-history.com/blog/github-stargazer-api-restriction/",
+      "hn": "https://news.ycombinator.com/item?id=49094694",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2026-07-29T08:13:06Z"
+    },
+    {
+      "title": "GitHub Has Restricted Access to Star Data",
+      "url": "https://www.star-history.com/blog/github-stargazer-api-restriction/",
+      "hn": "https://news.ycombinator.com/item?id=48818427",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2026-07-07T14:32:13Z"
+    },
+    {
+      "title": "Show HN: Aestheticscience.net – A website for rating academic papers",
+      "url": "https://aestheticscience.net/",
+      "hn": "https://news.ycombinator.com/item?id=48810986",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-07-06T21:54:07Z"
+    },
+    {
+      "title": "GitHub Has Restricted Access to Star Data",
+      "url": "https://www.star-history.com/blog/github-stargazer-api-restriction/",
+      "hn": "https://news.ycombinator.com/item?id=48808280",
+      "points": 14,
+      "comments": 6,
+      "createdAt": "2026-07-06T18:06:25Z"
+    },
+    {
+      "title": "ForgeLite-The Most Minimalized Git",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48430937",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-06-07T01:40:00Z"
+    },
+    {
+      "title": "Show HN: Cumulative GitHub star history for an org, as an embeddable SVG",
+      "url": "https://stars.wavekat.com/",
+      "hn": "https://news.ycombinator.com/item?id=48190108",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-05-19T06:52:09Z"
+    },
+    {
+      "title": "Show HN: Deckades – Was Star Wars released before or after the first Email?",
+      "url": "https://deckades.app/daily",
+      "hn": "https://news.ycombinator.com/item?id=47997507",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-05-03T14:51:58Z"
+    },
+    {
+      "title": "Show HN: Spacetime Watch – an astrolabe-inspired astronomical Wear OS watch face",
+      "url": "https://spacetime.watch/",
+      "hn": "https://news.ycombinator.com/item?id=47861471",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-04-22T10:20:56Z"
+    },
+    {
+      "title": "Show HN: BamBuddy – a self-hosted print archive for Bambu Lab 3D printers",
+      "url": "https://bambuddy.cool/",
+      "hn": "https://news.ycombinator.com/item?id=47846827",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-04-21T10:14:27Z"
+    },
+    {
+      "title": "Show HN: Auxx.ai – Customer Support CRM (Mix of Attio and N8n)",
+      "url": "https://auxx.ai",
+      "hn": "https://news.ycombinator.com/item?id=47827928",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-04-19T21:49:38Z"
+    },
+    {
+      "title": "Show HN: Ix. Sick of rebuilding context every session. We mapped it instead",
+      "url": "https://github.com/ix-infrastructure/Ix",
+      "hn": "https://news.ycombinator.com/item?id=47755420",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-04-13T17:40:09Z"
+    },
+    {
+      "title": "Ask HN: What are your best Claude Code custom spinner verbs?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47650315",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-04-05T15:18:11Z"
+    },
+    {
+      "title": "Rock Star: Reading the Rosetta Stone",
+      "url": "https://www.historytoday.com/archive/feature/original-rock-star",
+      "hn": "https://news.ycombinator.com/item?id=47555492",
+      "points": 14,
+      "comments": 0,
+      "createdAt": "2026-03-28T15:30:40Z"
+    },
+    {
+      "title": "Show HN: JSONVault Pro – JSON/YAML/XML Viewer After the Give Freely Incident",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47502746",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-03-24T14:01:03Z"
+    },
+    {
+      "title": "Show HN: BamBuddy – a self-hosted print archive for Bambu Lab 3D printers",
+      "url": "https://bambuddy.cool",
+      "hn": "https://news.ycombinator.com/item?id=47442648",
+      "points": 9,
+      "comments": 0,
+      "createdAt": "2026-03-19T17:12:59Z"
+    },
+    {
+      "title": "AI Now Reviews 60% of Bot PRs on GitHub",
+      "url": "https://www.star-history.com/blog/state-of-coding-ai-on-github",
+      "hn": "https://news.ycombinator.com/item?id=47426782",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-03-18T15:12:23Z"
+    },
+    {
+      "title": "Show HN: A social network where AI agents have public profiles and earn money",
+      "url": "https://socialtense.com/",
+      "hn": "https://news.ycombinator.com/item?id=47368048",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-03-13T18:43:49Z"
+    }
+  ]
+}

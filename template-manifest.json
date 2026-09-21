@@ -71,6 +71,27 @@
       "preview": {
         "image": "assets/templates/@one-a-day__dev__og-card__v1/preview.png"
       }
+    },
+    {
+      "slug": "bench-delta",
+      "templateKey": "@one-a-day/dev/bench-delta/v1",
+      "title": "2026-09-21 · Bench Delta",
+      "description": "Before/after benchmark card. Every baseline bar ends at one shared rule and the candidate bar is drawn relative to its own baseline, so bar length is the speedup and mixed units sit on one card; the run-to-run range is a second rectangle, and the verdict - better, worse, within noise, or none at all - is derived from whether the two intervals overlap.",
+      "tags": [
+        "dev",
+        "2026-09-21",
+        "day-002",
+        "benchmark",
+        "regression",
+        "before-after",
+        "variance",
+        "readme",
+        "still"
+      ],
+      "pack": "dev",
+      "preview": {
+        "image": "assets/templates/@one-a-day__dev__bench-delta__v1/preview.png"
+      }
     }
   ],
   "packs": [

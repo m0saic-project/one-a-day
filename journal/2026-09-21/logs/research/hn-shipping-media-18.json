@@ -1,0 +1,89 @@
+{
+  "query": "\"animated\" \"bar chart\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22animated%22%20%22bar%20chart%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=25",
+  "count": 9,
+  "results": [
+    {
+      "title": "Bar Chart Race, Explained",
+      "url": "https://observablehq.com/@d3/bar-chart-race-explained",
+      "hn": "https://news.ycombinator.com/item?id=21535754",
+      "points": null,
+      "comments": null,
+      "createdAt": "2019-11-14T14:49:47Z",
+      "text": "What's the advantage of an animated bar chart compared to an area chart? I personally think they're incredibly painful to look at but since I keep seeing them pop up on reddit I'm sure there must be advantages I haven't thought of, right?"
+    },
+    {
+      "title": "Librem 5 general development report",
+      "url": "https://puri.sm/posts/librem5-progress-report-17/",
+      "hn": "https://news.ycombinator.com/item?id=17727017",
+      "points": null,
+      "comments": null,
+      "createdAt": "2018-08-09T18:28:22Z",
+      "text": "Could it be that heating issues are also because of the choice of their UI toolkit? It looked like they're writing their apps in gtk, using the CPU for any animation and rendering - as opposed to some OpenGL solution that would do this much more efficiently on the GPU.. For reference, Rendering a simple, animated bar chart using QtQuick canvas, at 720p@60fps maxed out our iMX6 cpus - while doing the same on the GPU took like 30% cpu and the result was much more smooth."
+    },
+    {
+      "title": "Why We Hate Infographics",
+      "url": "http://insights.qunb.com/why-we-hate-infographics-and-why-you-should",
+      "hn": "https://news.ycombinator.com/item?id=6437690",
+      "points": null,
+      "comments": null,
+      "createdAt": "2013-09-24T13:27:32Z",
+      "text": "Ending an article on data presentation with an animated gif of a bar chart is... curious."
+    },
+    {
+      "title": "Why fastDOOM is fast",
+      "url": "https://fabiensanglard.net/fastdoom/index.html",
+      "hn": "https://news.ycombinator.com/item?id=43269855",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-03-05T17:49:43Z",
+      "text": "This reminds me of having to go into spotify's package files to track down their version of this animation (an animated svg of a bar chart) and kill it, because it would destroy performance on my PC so badly that it was affecting other programs, causing hitches and freezes. The animation's still there — and my PC is better now, so it doesn't stutter — but I'm willing to bet it's still burning waaay too many watts, for something so trivial."
+    },
+    {
+      "title": "Microsoft, Apple, and Google: where does the money come from?",
+      "url": "http://www.zdnet.com/blog/bott/microsoft-apple-and-google-where-does-the-money-come-from/4469?tag=mantle_skin;content",
+      "hn": "https://news.ycombinator.com/item?id=3546499",
+      "points": null,
+      "comments": null,
+      "createdAt": "2012-02-03T09:43:28Z",
+      "text": "If we want to see the change over time then it would be much nicer to see something like a stacked line/bar chart than an animated pie chart. This could also show how the absolute amount of revenue has changed. I suspect that in MS's case it would be roughly similar, whereas for Apple the iPhone has come from nothing and total revenue has exploded."
+    },
+    {
+      "title": "Home Assistant waters my plants",
+      "url": "https://finnian.io/blog/home-assistant-waters-my-plants/",
+      "hn": "https://news.ycombinator.com/item?id=47401775",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-16T17:10:06Z",
+      "text": "I've tried using HA a couple years ago and gave up. It was too complicated to run it in a Pi4 - I'm an experienced software engineer, familiar with containers and Linux. I was trying to get some of the IoT I have at home like pool equipment, lights, HVAC, blinds, etc. Some of the setup were an uphill battle looking for more information in forums and trying to figure out what was broken. Recently I decided over the weekend to use Claude and write a small app that controls my pool equipment and then deployed it using Cloudflare Zero Trust (kind of a reverse VPN). What a joy! Not only I had lots of fun reverse engineering my pool equipment API (I didn't want to depend on existing libraries - which I know exist) but I managed to create a fun and custom UI with React that my kids and wife love using. For example, whenever the pool heater is on, it adds an animated flame to the UI and change the background to a red-ish color. Plus it has a bar chart that shows the pool temp progression (takes hours to heat it up) with an animated volcano colors. The theme of the app is beach/pool vibe. I don't think anyone here would be that excited if we were using the lower-denominator that HA turns out to be. I know it's a very cool automation tool, but just not very exciting and pretty obscure to configure every equipment I have at home. I've been thinking about writing a blog post with the details of my fun project, let me know if anyone is interested in this. So far I've done the blinds and pool equipment. Next will be HVAC and lights. Took me 1-2 weeks total for each using Claude in my spare time."
+    },
+    {
+      "title": "SVG Tutorial",
+      "url": "https://svg-tutorial.com/",
+      "hn": "https://news.ycombinator.com/item?id=38558029",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-12-07T16:11:33Z",
+      "text": "As a frontend dev who also works in UX and graphics from time to time, I find it helpful to be able to do both, looking at SVGs as both a vector graphics format and a human-readable XML. IME the workflow depends more on whether any SVG is meant to be illustrative (like art) or quantitative (like charts) or interactive and animated/mutable (like a game). For something like this bell example ( https://svg-tutorial.com/svg/bell ), you can certainly hand-code it if you're really math-inclined and can estimate the formulas of curves just by looking at them, but for us mere mortals, it's easier to just draw out the curves in a graphics app (like https://youtu.be/5x2uHUB_pzw?si=fSLjRKlZNgVKVcOx&t=123 for Figma) then export as an SVG. And for things like the ringer (is that what you call it? the orange ball thing at the bottom of the bell that strikes the bell to make the sound), being able to visually draw it on a canvas, change its size, drag it around and play with its colors and dimensions, etc. is really helpful. Figma is fine for simpler graphics, but it's really more of a UX tool than a graphic design tool, and Illustrator is a lot more powerful. Inkscape is a FOSS option. In other circumstances, though, manipulating the SVG XML directly is also very helpful. Let's say you want to programatically generate a bar chart. If you have a big dataset, it's going to take a designer forever to manually plot them and change them every time the data changes. But it's easy for a dev to use Javascript (or any language) to draw each rectangle, programmatically adjust their heights and colors based on the data, add tooltips, etc. And that way you can dynamically update them in real-time whenever the data changes (like if the user selects a different date range, or new events come in). A lot of this is made easier by libs like https://frappe.io/charts or https://apexcharts.com . But before you take that approach, you should know that for complex charts, sometimes Canvas rendering (or just generating graphics in the backend) can be more performant than SVG. SVGs can also be animated and interactive, not just with CSS transitions but by directly manipulating the XML geometries, like http://snapsvg.io/demos/ or https://www.svgator.com/ or https://codepen.io/collection/XpwMLO/ . This is fine for product pages and such, but for really graphics-intensive apps (full games) it's probably slower than other rendering pipelines. (Not my specialty, won't speculate too much.) TLDR Drawing them in a graphics app is usually easier for the designers, but the XML can be programmatically manipulated afterward to great effect. The ideal workflow depends on what you're trying to accomplish, and also who you have on your team."
+    },
+    {
+      "title": "Stop Using Pie-Charts",
+      "url": "https://earthly.dev/blog/stop-using-pie-charts/",
+      "hn": "https://news.ycombinator.com/item?id=30268920",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-02-09T04:42:21Z",
+      "text": "If it's interactive with a slider, maybe (most people don't scrub the video). Human memory is bad, like really bad. You wouldn't make a bar chart and put some bars on one page and some bars on another page. Animated charts are like that. They're entertainment, not a tool for seriously comparing data."
+    },
+    {
+      "title": "Bar Chart Race, Explained",
+      "url": "https://observablehq.com/@d3/bar-chart-race-explained",
+      "hn": "https://news.ycombinator.com/item?id=21535972",
+      "points": null,
+      "comments": null,
+      "createdAt": "2019-11-14T15:15:11Z",
+      "text": "The alternatives I’d consider are a line chart and a bump chart. https://observablehq.com/@d3/multi-line-chart https://observablehq.com/@jonsadka/scatterplot A bar chart race is in many ways “worse” than a static chart. The bar chart race forces you to wait for the animation to finish, whereas a static chart shows you everything simultaneously, and lets you look forward or backward in time by just moving your eyes. This can be generalized to say that a well-designed static chart is often better than an interactive or animated chart, since in the static chart, everything is visible up-front. But in the same way that a good visual hierarchy directs the reader’s attention and simplifies a complex interface, bar chart races (and animations more generally) are effective at getting the viewer to watch the race as it originally played out, from start to finish. Time in the data is represented as real time, so you’re only able to see a single moment in time. So bar chart races are probably worse for most perceptual tasks, but as a storytelling device, they are (seemingly) quite effective."
+    }
+  ]
+}

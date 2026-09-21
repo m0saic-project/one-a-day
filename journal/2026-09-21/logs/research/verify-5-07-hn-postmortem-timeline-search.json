@@ -1,0 +1,119 @@
+{
+  "query": "postmortem timeline",
+  "days": 540,
+  "count": 14,
+  "results": [
+    {
+      "title": "Show HN: PrismoDev – local CLI for finding token waste in Claude Code/Codex",
+      "url": "https://github.com/shanirsh/prismodev",
+      "hn": "https://news.ycombinator.com/item?id=48200057",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-05-19T21:39:54Z"
+    },
+    {
+      "title": "Show HN: Autopsy CLI – Open-source AI incident diagnosis in 30s",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47336048",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-11T14:30:47Z"
+    },
+    {
+      "title": "Show HN: SEL Deploy – Tamper-evident deployment timeline (Ed25519, hash-chained)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47234435",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-03T16:03:55Z"
+    },
+    {
+      "title": "Show HN: AutoBrief – Generate post-incident briefs from a structured form",
+      "url": "https://autobrief.dev",
+      "hn": "https://news.ycombinator.com/item?id=47151143",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-02-25T13:24:19Z"
+    },
+    {
+      "title": "Show HN: ProdRescue AI – Turn Slack war-rooms and raw logs into incident reports",
+      "url": "https://www.prodrescueai.com/",
+      "hn": "https://news.ycombinator.com/item?id=47142521",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2026-02-24T20:31:24Z"
+    },
+    {
+      "title": "Show HN: IncidentPost – AI-generated incident postmortems with minimal tooling",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46654431",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-01-17T01:31:03Z"
+    },
+    {
+      "title": "Show HN: IncidentPost – Write public incident postmortems without heavy tooling",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46653600",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-16T23:29:51Z"
+    },
+    {
+      "title": "Show HN: IncidentPost – Turn Slack chaos into an SRE postmortem in 60s",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46647049",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-16T15:03:36Z"
+    },
+    {
+      "title": "Show HN: A faster way for SaaS teams to publish credible outage postmortems",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46616458",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-14T14:32:46Z"
+    },
+    {
+      "title": "Show HN: A tool for writing professional incident postmortems from raw timelines",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46576670",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-11T15:42:15Z"
+    },
+    {
+      "title": "Show HN: I built a tool that turns raw outage timelines into public postmortems",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46575349",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-11T12:57:45Z"
+    },
+    {
+      "title": "Show HN: Incident management for Slack with AI-generated postmortems",
+      "url": "https://www.incidentops.io/",
+      "hn": "https://news.ycombinator.com/item?id=46427243",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-29T23:16:54Z"
+    },
+    {
+      "title": "Show HN: BlamelessPostmortem – Exec-safe incident postmortems from raw notes",
+      "url": "https://BlamelessPostmortem.com",
+      "hn": "https://news.ycombinator.com/item?id=46337834",
+      "points": 1,
+      "comments": 2,
+      "createdAt": "2025-12-20T17:29:55Z"
+    },
+    {
+      "title": "Ask HN: Do you use the chat \"Share\" link as a save/load snapshot?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=44969763",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-08-21T06:41:12Z"
+    }
+  ]
+}

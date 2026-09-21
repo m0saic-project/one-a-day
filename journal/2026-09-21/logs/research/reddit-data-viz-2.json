@@ -1,0 +1,183 @@
+{
+  "source": "https://api.pullpush.io/reddit/search/submission/?subreddit=datavisualization&q=animated+chart&size=60&sort=desc&sort_type=created_utc",
+  "fetchedAt": "2026-09-21T04:09:39.469Z",
+  "count": 16,
+  "results": [
+    {
+      "id": "1wexyeu",
+      "title": "Building a tool that turns data into glowing, animated particle charts for social posts and client decks",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1wexyeu/building_a_tool_that_turns_data_into_glowing/",
+      "sub": "datavisualization",
+      "author": "UsefulPersonality123",
+      "score": 1,
+      "numComments": 0,
+      "date": "2026-09-13",
+      "text": " Most chart tools output the same flat bar/line graph. Charticles renders data as animated particle charts (bar/line/pie/donut/radar/bubble) - export as MP4/GIF for social content or client reporting. Credit-pack pricing, no subscription. Happy to answer questions if anyone's curious."
+    },
+    {
+      "id": "1uybdz2",
+      "title": "Have a CSV you want turned into a polished animated chart video?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1uybdz2/have_a_csv_you_want_turned_into_a_polished/",
+      "sub": "datavisualization",
+      "author": "Leather_Pin4123",
+      "score": 1,
+      "numComments": 0,
+      "date": "2026-07-16",
+      "text": "Do you have data that would be more engaging as an animated video? Send me your CSV and tell me: * what you want the viewer to understand; * where you plan to publish it; * your preferred format, colours or branding; * any examples of the style you like. I’ll turn a few selected datasets into polished animated bar-chart videos for free."
+    },
+    {
+      "id": "1twoxxh",
+      "title": "CourtCanvas turns NBA shot chart data into posters and animated visualizations.",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1twoxxh/courtcanvas_turns_nba_shot_chart_data_into/",
+      "sub": "datavisualization",
+      "author": "weirdrandomfunny",
+      "score": 1,
+      "numComments": 0,
+      "date": "2026-06-04",
+      "text": null
+    },
+    {
+      "id": "1qvrwp3",
+      "title": "A personal roundup of analytics, BI, and data viz tools in 2026",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1qvrwp3/a_personal_roundup_of_analytics_bi_and_data_viz/",
+      "sub": "datavisualization",
+      "author": "Dilligentslave",
+      "score": 8,
+      "numComments": 5,
+      "date": "2026-02-04",
+      "text": "I’ve been collecting notes on analytics / BI / data visualization tools lately. Figured I’d share a quick roundup in case it helps anyone deciding what to try. **Tableau** A leading data visualization tool that turns raw data into clear, understandable visuals. It’s powerful and flexible, and you don’t need deep technical skills to start building meaningful dashboards. **Power BI** Microsoft’s business analytics platform, offering tools for data analysis, visualization, and sharing insights across teams. It integrates well with the Microsoft ecosystem and scales nicely for larger orgs. **Kuse** You can drop in spreadsheets or files and generate pivot-style breakdowns, data visualizations, and interactive outputs in one place, which works well for exploratory analysis and sharing insights . **Hurree** It's lightweight and easy to set up, with solid visualization options (bar charts, pie charts, tables, line graphs, etc.). Good for getting something usable fast. **Sigma** If most of your data lives in spreadsheets, Sigma does a nice job combining AI, interactive sheets, and more traditional BI workflows. **Lumenn AI / ThoughtSpot** Both focus on natural-language querying , you can ask questions in plain English and get charts or dashboards back. Helpful for non-technical users and for keeping reporting consistent. **Flourish** Very intuitive for storytelling and animated charts, with built-in interactivity and filtering. Nice when presentation matters. **StyleBI** A bit underrated. The visualization builder is intuitive, and connecting to third-party data sources is surprisingly easy. **Metabase / Looker Studio** Good options if you want something lighter and quicker to roll out. They’re easier to maintain and fast to get value from. **ObservableHQ / Marimo** Interactive notebooks are another option for exploration, though the learning curve is steeper since some coding is required. **CypherX** Lets you ask questions in natural language and automatically builds interactive dashboards. Beginner-friendly, but flexible enough to grow with as your skills improve. **Knowi** You can pull data directly from many sources without installing drivers, ask questions in plain English, and get charts or tables back. **Domo** It’s beginner-friendly, supports natural-language queries, real-time updates, and makes collaboration and sharing insights pretty straightforward. Curious what others are using these days, especially outside the usual big BI tools."
+    },
+    {
+      "id": "1pd1v2r",
+      "title": "Best tool to generates an animated chart for presentations/videos?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/best_tool_to_generates_an_animated_chart_for/",
+      "sub": "datavisualization",
+      "author": "Cheap-Silver9900",
+      "score": 4,
+      "numComments": 4,
+      "date": "2025-12-03",
+      "text": "I'm a data analyst and I want to improve how I present my findings with animated charts or mini data videos. I don't wanna use templates already found online but using something more customisable. Is there an AI tool where I can prompt like 'show me a timeseries of this data' or 'make a bar chart race' and get back a ready to use animation for slides or videos?"
+    },
+    {
+      "id": "1pan9sk",
+      "title": "Sanky Animated chart like New York Times",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pan9sk/sanky_animated_chart_like_new_york_times/",
+      "sub": "datavisualization",
+      "author": "shnbd",
+      "score": 3,
+      "numComments": 2,
+      "date": "2025-11-30",
+      "text": "How can I make a Sanky Animated chart like the New York Times? See the chart or video here: [https://www.nytimes.com/interactive/2018/03/19/upshot/race-class-white-and-black-men.html](https://www.nytimes.com/interactive/2018/03/19/upshot/race-class-white-and-black-men.html)"
+    },
+    {
+      "id": "1odyps0",
+      "title": "First data visualization project: Horror Film Franchise Dashboard",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1odyps0/first_data_visualization_project_horror_film/",
+      "sub": "datavisualization",
+      "author": "Jumpy_Insect7731",
+      "score": 3,
+      "numComments": 1,
+      "date": "2025-10-23",
+      "text": "# Hi everyone, # I recently completed my first full dashboard design project , and I’d love to get your feedback on it. # The concept explores the highest-grossing horror film franchises and series (2024 data). The goal was to visualize the business of horror through a cinematic, data-driven lens. I designed the layout and then exported it directly into Power BI for live data visualization. # Dashboard Sections 1. Franchise Overview — Comparative revenue by series, with subtle franchise artwork integrated into chart backgrounds. 2. Year-over-Year Growth Trends — Animated line graphs showing franchise resurgence patterns. 3. Genre Distribution — Bubble visualization categorizing supernatural, slasher, and creature subgenres. 4. Franchise Momentum Index — A custom metric identifying which series are experiencing renewed box office or cultural traction in 2025. I wanted the interface to feel immersive but data-first — something that could live in a studio analytics tool or a streaming platform’s internal dashboard. This project helped me refine my data storytelling, visualization design, and analytical thinking, turning raw data into actionable insights inspired by the world of Horror. I’d really appreciate your thoughts on the design flow, color balance, and overall user experience. https://preview.redd.it/msfjgv38ytwf1.png?width=1810&format=png&auto=webp&s=c6621602c7beb026efd7b74b796a1b850e3dd248 "
+    },
+    {
+      "id": "1odylih",
+      "title": "Dashboard Design — Horror Film Franchise Box Office Performance",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1odylih/dashboard_design_horror_film_franchise_box_office/",
+      "sub": "datavisualization",
+      "author": "Jumpy_Insect7731",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-10-23",
+      "text": "# Hi everyone, # I recently completed my first full dashboard design project, and I’d love to get your feedback on it. # The concept explores the highest-grossing horror film franchises and series (2024 data). The goal was to visualize the business of horror through a cinematic, data-driven lens. # Dashboard Sections 1. Franchise Overview — Comparative revenue by series, with subtle franchise artwork integrated into chart backgrounds. 2. Year-over-Year Growth Trends — Animated line graphs showing franchise resurgence patterns. 3. Genre Distribution — Bubble visualization categorizing supernatural, slasher, and creature subgenres. 4. Franchise Momentum Index — A custom metric identifying which series are experiencing renewed box office or cultural traction in 2025. I wanted the interface to feel immersive but data-first — something that could live in a studio analytics tool or a streaming platform’s internal dashboard. This project helped me refine my data storytelling, visualization design, and analytical thinking, turning raw data into actionable insights inspired by the world of Horror. I’d really appreciate your thoughts on the design flow, color balance, and overall user experience. https://preview.redd.it/rxjooqr0xtwf1.png?width=870&format=png&auto=webp&s=cf5265d124158a47e03255bfa38f0fe4f126c640 "
+    },
+    {
+      "id": "1nnqwuo",
+      "title": "Looking for critique on my animated bar chart technique",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1nnqwuo/looking_for_critique_on_my_animated_bar_chart/",
+      "sub": "datavisualization",
+      "author": "Hot-Conference-909",
+      "score": 2,
+      "numComments": 1,
+      "date": "2025-09-22",
+      "text": null
+    },
+    {
+      "id": "1nnqvrq",
+      "title": "Looking for critique on my animated bar chart technique",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1nnqvrq/looking_for_critique_on_my_animated_bar_chart/",
+      "sub": "datavisualization",
+      "author": "Hot-Conference-909",
+      "score": 2,
+      "numComments": 1,
+      "date": "2025-09-22",
+      "text": "Created this data visualization and would value your honest feedback on: \\- Animation pacing and transitions \\- Color palette choices \\- Data presentation clarity \\- Overall design decisions [https://youtu.be/ckB5wyRiRyk](https://youtu.be/ckB5wyRiRyk) What would you do differently? Still learning and want to improve."
+    },
+    {
+      "id": "1imggyk",
+      "title": "Does anyone know what tools or software were used to create this animated chart?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1imggyk/does_anyone_know_what_tools_or_software_were_used/",
+      "sub": "datavisualization",
+      "author": "Conscious-Media-6930",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-02-10",
+      "text": null
+    },
+    {
+      "id": "1b2o8df",
+      "title": "What Software Makes Infographics with Animated Arrows and Icons?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1b2o8df/what_software_makes_infographics_with_animated/",
+      "sub": "datavisualization",
+      "author": "Equal_Astronaut_5696",
+      "score": 1,
+      "numComments": 0,
+      "date": "2024-02-29",
+      "text": "I see a lot of these animated diagrams and flow charts where small elements such as the arrows and icons are animated. I would love to know which software is used to create these. "
+    },
+    {
+      "id": "1amrul0",
+      "title": "I've built a tool for creating animated charts!",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1amrul0/ive_built_a_tool_for_creating_animated_charts/",
+      "sub": "datavisualization",
+      "author": "tiboud",
+      "score": 1,
+      "numComments": 0,
+      "date": "2024-02-09",
+      "text": "Hey r/datavisualization! I'm currently building a tool that lets you create your data visualizations, customize them, and export them as png/gif/mp4! https://reddit.com/link/1amrul0/video/xbbu45ot4lhc1/player You can find the tool at [MaisonData.com](https://MaisonData.com), and I would really appreciate your feedback! Thank you!"
+    },
+    {
+      "id": "s0iowv",
+      "title": "Nexus: intuitive data visualization",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/s0iowv/nexus_intuitive_data_visualization/",
+      "sub": "datavisualization",
+      "author": "KOOS_Marten",
+      "score": 4,
+      "numComments": 0,
+      "date": "2022-01-10",
+      "text": "\\*\\*\\*We're approaching Beta, and would be interested to talk with any potential users willing to help shape the product into exactly what you need. As an incentive we can provide you with a lifelong free personal account when we launch.\\*\\*\\* Hello everyone! Over the last 1.5 years of social distancing us at Fenster Analytics started building a cloud-based reporting platform. Let me introduce you to [Nexus](http://fensteranalytics.com/). [Example dashboard](https://preview.redd.it/h5f9f19dqua81.png?width=1919&amp;format=png&amp;auto=webp&amp;s=3ab0b4f8f34dd4f3e4b696dc09aa865127d4b4da) **The mission for Nexus** is to optimize content management for technical users and simplify content consumption for everyone. # Core features: * You don’t need to learn a new product with all it’s terminology and quirks. **Knowing SQL and visualization techniques are enough.** * **Inheritable dashboard and charts**. Easily extend, manage and create visualizations based on already existing ones. If a field changes you don’t have to update every visualization separately, just update the base chart and all it’s children will follow. * **Optimized for ad-hoc analysis.** Explore your data and visualize the results quicker than on other platforms. * **Flexible visualization with animated time lapses and more.** * **Parameterized queries, visuals and naming.** Improve the ad-hoc abilities even more by adding parameters to charts for quick analysis. * **Dashboard first.** Create a hierarchy of dashboards based on your organizational needs and have important visuals at arms reach at all times. Connect with me on Reddit or write us an email at [https://www.fensteranalytics.com/contact](https://www.fensteranalytics.com/contact)."
+    },
+    {
+      "id": "eqgj2d",
+      "title": "Create Animated Bar Charts",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/eqgj2d/create_animated_bar_charts/",
+      "sub": "datavisualization",
+      "author": "NotVeryThrowaway",
+      "score": 3,
+      "numComments": 0,
+      "date": "2020-01-18",
+      "text": null
+    },
+    {
+      "id": "dzqqba",
+      "title": "D3 vs Plotly examples",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/dzqqba/d3_vs_plotly_examples/",
+      "sub": "datavisualization",
+      "author": "mcsheerin",
+      "score": 1,
+      "numComments": 1,
+      "date": "2019-11-21",
+      "text": "Hey guys, quick question about the difference of power between D3 and Plotly. I know that D3 can do everything Plotly can, since Plotly is literally built on D3 metrics. However, I'm failing to find practical uses of D3's power that you cannot get from Plotly. D3 is of course highly customizable, but would one prefer it over Plotly for solely cosmetic reasons? Or maybe a higher level of interactivity (which Plotly also includes)? If anyone can point me to a graphic/chart that only D3 could achieve and is out of Plotlys wheelhouse, it would make more sense to me, but it seems as though you would only want D3 in order to make very complex animated visualizations, not necessarily practical ones that data scientists would use to get information across to a client. Thanks!"
+    }
+  ]
+}

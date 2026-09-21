@@ -1,0 +1,175 @@
+{
+  "query": "weekly changelog",
+  "days": 900,
+  "count": 21,
+  "results": [
+    {
+      "title": "Ask HN: How does your team handle release notes / changelogs?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48332533",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-05-30T04:21:24Z"
+    },
+    {
+      "title": "Founders can now chat with their Git history",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46719553",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-22T14:19:14Z"
+    },
+    {
+      "title": "Show HN: Founders can now chat with their Git history",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46697077",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-20T20:06:00Z"
+    },
+    {
+      "title": "Show HN: Built Gitmore so non-technical founders can understand dev progress",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46690297",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-01-20T10:30:54Z"
+    },
+    {
+      "title": "Show HN: Building dev visibility for non-technical founders and stakeholders",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46632693",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-15T14:04:53Z"
+    },
+    {
+      "title": "Show HN: Building this platform for CTO's/devs/founders",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46599021",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-13T09:52:36Z"
+    },
+    {
+      "title": "Show HN: Dev visibility for founders who don't code",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46588951",
+      "points": 2,
+      "comments": 4,
+      "createdAt": "2026-01-12T14:26:50Z"
+    },
+    {
+      "title": "Show HN: Building this platform for CTO's/devs/founders",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46545681",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-08T19:59:39Z"
+    },
+    {
+      "title": "Show HN: Founders can now chat with their Git history",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46539662",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-01-08T11:07:17Z"
+    },
+    {
+      "title": "Dev visibility for non-technical founders",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46524859",
+      "points": 2,
+      "comments": 2,
+      "createdAt": "2026-01-07T10:52:16Z"
+    },
+    {
+      "title": "Dev visibility for non-technical founders",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46510984",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-01-06T11:13:18Z"
+    },
+    {
+      "title": "Dev team visibility for non-technical founders",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46502385",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-01-05T18:09:58Z"
+    },
+    {
+      "title": "One dashboard for all your Git repos – no GitHub knowledge required",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46498661",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-01-05T13:46:07Z"
+    },
+    {
+      "title": "Git analytics that works across GitHub, GitLab, and Bitbucket",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46466285",
+      "points": 2,
+      "comments": 2,
+      "createdAt": "2026-01-02T16:17:18Z"
+    },
+    {
+      "title": "Show HN: Doculearn – How much of your Gen-AI code do you understand?",
+      "url": "https://doculearnapp.com",
+      "hn": "https://news.ycombinator.com/item?id=46400512",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-27T09:38:52Z"
+    },
+    {
+      "title": "AI that reads your Git history so you don't have to write status reports",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46244830",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2025-12-12T15:10:00Z"
+    },
+    {
+      "title": "I built a tool that turns raw Git activity into AI summaries",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46229462",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2025-12-11T09:51:03Z"
+    },
+    {
+      "title": "I built a unified Git activity engine to clean the mess between GitHub,Bitbucket",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46218509",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2025-12-10T15:08:06Z"
+    },
+    {
+      "title": "I built an AI that reads your Git history and writes status reports",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46216313",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2025-12-10T10:51:14Z"
+    },
+    {
+      "title": "Show HN: Changeloghub – Automatically create beautiful changelogpages (beta)",
+      "url": "https://changeloghub.com",
+      "hn": "https://news.ycombinator.com/item?id=44817870",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2025-08-06T21:08:26Z"
+    },
+    {
+      "title": "AI use cases in software development other than coding",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=41553935",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2024-09-16T08:23:06Z"
+    }
+  ]
+}

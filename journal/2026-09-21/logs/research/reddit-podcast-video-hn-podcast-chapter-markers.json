@@ -1,0 +1,31 @@
+{
+  "query": "podcast chapter markers",
+  "days": 900,
+  "count": 3,
+  "results": [
+    {
+      "title": "Show HN: I built a local-first podcast app",
+      "url": "https://wherever.audio",
+      "hn": "https://news.ycombinator.com/item?id=45518127",
+      "points": 73,
+      "comments": 34,
+      "createdAt": "2025-10-08T16:46:36Z"
+    },
+    {
+      "title": "Show HN: Loopdesk – AI video editor with chat-based workflows and GPU rendering",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=45517310",
+      "points": 1,
+      "comments": 2,
+      "createdAt": "2025-10-08T15:33:58Z"
+    },
+    {
+      "title": "Show HN: Founder Vision (Book) – Positioning and Narrative for B2B Founders",
+      "url": "https://lukestevens.co/foundervision/",
+      "hn": "https://news.ycombinator.com/item?id=42199778",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2024-11-21T00:37:03Z"
+    }
+  ]
+}

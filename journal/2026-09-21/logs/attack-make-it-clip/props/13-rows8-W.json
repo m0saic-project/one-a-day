@@ -1,0 +1,60 @@
+{
+  "rows": [
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "base": 100,
+      "value": 50
+    },
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "base": 101,
+      "value": 70,
+      "baseRange": 3,
+      "range": 3
+    },
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "base": 102,
+      "value": 90
+    },
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "base": 103,
+      "value": 110,
+      "baseRange": 3,
+      "range": 3
+    },
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "base": 104,
+      "value": 130
+    },
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "base": 105,
+      "value": 150,
+      "baseRange": 3,
+      "range": 3
+    },
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "base": 106,
+      "value": 170
+    },
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "base": 107,
+      "value": 190,
+      "baseRange": 3,
+      "range": 3
+    }
+  ]
+}

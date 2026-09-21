@@ -1,0 +1,232 @@
+{
+  "query": "after effects",
+  "days": 540,
+  "count": 25,
+  "results": [
+    {
+      "title": "Custom home server built from spare parts",
+      "url": "https://asmat.ca/blog/i-went-bananas/",
+      "hn": "https://news.ycombinator.com/item?id=49782801",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T03:40:23Z",
+      "text": "&gt; The rest of the upgrade came out of my junk drawers. Two DDR4 sticks from an old laptop take the memory to the platform maximum of 32 GB Realtalk: make sure you are religious about testing your RAM if you&#x27;re going to run ZFS with non-ECC RAM. I&#x27;m not going to say “don&#x27;t do it”, but know what you&#x27;re getting into and how to protect yourself from this failure mode. It&#x27;s unintuitive, but ZFS will actually modify your files on disk as a side effect of a read-only operation if blocks get read into bad RAM and checksum mismatch compared to the blocks on disk. This happen"
+    },
+    {
+      "title": "More Than a Gigabuck: Estimating GNU/Linux's Size (2001)",
+      "url": "https://dwheeler.com/sloc/redhat71-v1/redhat71sloc.1.00.html",
+      "hn": "https://news.ycombinator.com/item?id=49782570",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T03:00:27Z",
+      "text": "&gt; COCOMO says that the cost scales superlinearly with the number of SLoC; my point is that drivers scale linearly because they&#x27;re effectively separate projects. (In fact, to the extent that they&#x27;re not separate projects, the cost in fact scales sublinearly since there&#x27;s a bunch of code being copied and pasted when new drivers are written.) Your tool has this &quot;--multiproject&quot; concept; a better estimate would have identified which parts of the tree (primarily drivers) were functionally separate from the rest of the kernel. If all drivers were essentially completely in"
+    },
+    {
+      "title": "I stopped drinking the AI Kool-Aid",
+      "url": "https://joshtronic.com/2026/09/20/i-stopped-drinking-the-ai-kool-aid/",
+      "hn": "https://news.ycombinator.com/item?id=49782412",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T02:31:46Z",
+      "text": "I think the phrase is much more widely associated with Jonestown than with the Electric Kool Aid Acid tests. It certainly took off in popular usage after Jonestown. The wikipedia page you linked for some reason points out that Flavour Aid, rather than Kool Aid, was used at Jonestown, but I don&#x27;t see how that matters; flavour aid is effectively the same thing, under a less-known brand name."
+    },
+    {
+      "title": "A custom virtual machine for the Stars 4X game",
+      "url": "https://nullprogram.com/blog/2026/09/17/",
+      "hn": "https://news.ycombinator.com/item?id=49781298",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:39:54Z",
+      "text": "The final shareware version (2.6) was fairly comparable to the retail version (2.7). This says the shareware version just lacked some sound effects...? https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20091129230733&#x2F;http:&#x2F;&#x2F;wiki.gible... However, I believe the first shareware version I had was 1.x (distributed via CD that was packed full of shareware) which was significantly different. I remember mining fuel, which tracks with the above link. Stars! was one of my very first video game purchases. I remember mailing a money order, and recieving a copy in the mail - I didn&#x27;t hav"
+    },
+    {
+      "title": "Nobody pays for FOSS, we can force them to",
+      "url": "https://seldo.com/posts/nobody-pays-for-open-source-we-can-force-them-to/",
+      "hn": "https://news.ycombinator.com/item?id=49780927",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T22:49:17Z",
+      "text": "The only llmism I sensed is the use of &quot;load bearing&quot;. Im usually queasy after reading llm slop, and stop before the end. This didn&#x27;t have that effect. Maybe the llms are getting better, but either way, this article reads like a real hunan write the whole thing."
+    },
+    {
+      "title": "I am often wrong",
+      "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
+      "hn": "https://news.ycombinator.com/item?id=49780037",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T21:00:52Z",
+      "text": "Heh, I have the opposite... uh &quot;problem&quot;. I am often right. This has two negative effects; 1) I start to believe my own hype because I am so consistently correct- which blinds me to other ideas if I don&#x27;t actively take steps to humble myself. (after all, I won&#x27;t be right very often if I stop listening, as that&#x27;s part of why I am right, because I listen to people and have a huge amount of context) and 2) I am able to quickly come to a conclusion which makes people uneasy, as they think I haven&#x27;t considered all the points even though I have- and it&#x27;s also true "
+    },
+    {
+      "title": "US Revokes Limits on Power Plants' Climate Pollution",
+      "url": "https://text.hrw.org/news/2026/09/17/us-revokes-limits-on-power-plants-climate-pollution",
+      "hn": "https://news.ycombinator.com/item?id=49779705",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T20:23:37Z",
+      "text": "My point is that after a large change, reversion to the mean should not be treated breathlessly, but viewed in a measured manner. &gt; Before the 2024 Carbon Pollution Standards, the federal limits were much weaker—and for existing power plants, there was effectively no operative federal CO₂ limit at all. This is an exaggeration that stretches credulity, since there have been strict limits for decades around secondary outputs that are required by power plant energy production effectively limiting production and emissions (which is the entire point)."
+    },
+    {
+      "title": "Pentagon weighs pulling nearly a third of U.S. forces from Europe",
+      "url": "https://www.nbcnews.com/politics/national-security/pentagon-weighs-pulling-nearly-third-us-forces-europe-rcna597722",
+      "hn": "https://news.ycombinator.com/item?id=49778942",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T19:09:08Z",
+      "text": "And yet the Europeans have built one defense system after another in that time. I get why countries want to have their own defense industries. If I were running a country I would too. But the extent to which more of those systems haven&#x27;t been deployed has more to do with mis-aligned budget priorities between countries and old fashioned jobs politics. Only the largest European countries can go it alone in major weapon systems development, and the joint projects tend to founder on discussions over what gets built where. FCAS&#x2F;SCAF is a perfect illustration of this. From the US perspecti"
+    },
+    {
+      "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
+      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
+      "hn": "https://news.ycombinator.com/item?id=49778824",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T18:57:01Z",
+      "text": "This logic falls apart completely when gamblers allocate one trillion to bidding up the price, denying access to the resource to people who are responsibly spending their own money. The ideal world of the imaginary perfect free market never takes into consideration the messiness of the real world, like the fact that people will spend extreme sums of money irrationally. It can take years for this effect to correct, damaging the market severely in the meantime. Alternatively, the money invested can be rational because it prices out competitors and establishes a monopoly, after which point the mo"
+    },
+    {
+      "title": "Show HN: System One Harness (SOH), the harness for System One models",
+      "url": "https://github.com/HarnessRouter/SystemOneHarness",
+      "hn": "https://news.ycombinator.com/item?id=49778566",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T18:32:38Z",
+      "text": "We built SOH because system one models need a different runtime than system two models. After building and running SOH, I&#x27;m thinking that we might only need different types of system one models and System One Harness to process many types of work, with system two harnesses handling planning, in-the-loop key decisions, and final review. That could be more efficient and effective than training one model to do everything. Think of it as a reflex-and-brain split: the system two harness and model work like the brain, while System One Harness (SOH) and system one models work like reflexes, hand"
+    },
+    {
+      "title": "Chat-based Large Language Models replicate the mechanisms of a psychic's con",
+      "url": "https://softwarecrisis.dev/letters/llmentalist/",
+      "hn": "https://news.ycombinator.com/item?id=49776527",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T15:00:01Z",
+      "text": "Unfortunately when it comes to language and intelligence the human population is exceptionally ignorant about it. I like Michael Levins work on intelligence at scale. We are kind of ok at seeing intelligence at human scale but it tends to fall apart after that. When you get to things like non-conscious intelligence humans are pretty bad at that too. We could be (and are) encoding all kinds of behaviors in LLMs that are not at the word or token level. They are higher dimensional constructs. You won&#x27;t see these things in the output of the prompt. A kind of subconscious (unstated in tokens) "
+    },
+    {
+      "title": "Warez: The Infrastructure and Aesthetics of Piracy (2021)",
+      "url": "https://archive.org/details/b904a8eb-9c98-4bb1-bf25-3cb9d075b157",
+      "hn": "https://news.ycombinator.com/item?id=49775239",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T12:35:59Z",
+      "text": "Oh, I don&#x27;t mind the disagreement, I&#x27;m curious to understand why your position is so different from mine, after getting closer to understanding what your position actually is. (I had to do that because there are some implicit premises in my thinking vs what you&#x27;re saying which seem fundamentally different, and I had to work those out for myself.) I think I do get it now, and it seems to be pretty much to what I described before. While I think that there is responsibility for the outcomes of one&#x27;s actions no matter through which ways and means they are accomplished, for you,"
+    },
+    {
+      "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+      "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
+      "hn": "https://news.ycombinator.com/item?id=49775131",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T12:22:24Z",
+      "text": "&gt; Well, behind these Cloudflare&#x27;s IPs is not just IPTV, but a lot of legitimate webpages. Which was horrible and had lots of collateral damage when these blocks were initially implemented, but when you were affected, you wrote a complaint that the website been collaterally blocked, and the next time they did the &quot;match blocks&quot;, the website was no longer blocked. Now years after, nothing of value is blocked during the games, at least for me on Vodafone, I don&#x27;t even notice the blocks anymore (besides hearing the neighbors screaming during the matches themselves). It&#x27;"
+    },
+    {
+      "title": "AI and the Destruction of the Creative Commons",
+      "url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/",
+      "hn": "https://news.ycombinator.com/item?id=49775020",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T12:11:21Z",
+      "text": "Somewhere at the very beginning of my career, the second year I think, I was part of the team that visited a location of the company we were selling our SaaS solution to, in a branch that was back then still dependent on Excel sheets. The owner of the company lead us to a large open office with about 30 people working in there, mostly women, and whispered to us that he expects he&#x27;ll only need three of them after subscribing to our product. That&#x27;s when I realised the brutality of what we are doing, and the sales guy I was with realised we should be charging significantly more."
+    },
+    {
+      "title": "Unix Year 2038 problem and the art of underestimating",
+      "url": "https://www.buzzsprout.com/2469780/episodes/19824439",
+      "hn": "https://news.ycombinator.com/item?id=49774018",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T09:12:03Z",
+      "text": "In Linux, I recall the whole Large File Support saga dragging on into the 2.4 era. It certainly wasn&#x27;t universal until well after 2 GB devices had become commonplace even in consumer-level hardware, meaning that things like creating a whole disk image were impossible for several years. There were a bunch of similar problems with hardware device support at around the same time - various BIOS, MBR, and partition size limits affecting 512 GB, 2 GB, and 4 GB disks (I think - my memory is pretty hazy). Even further back, there was the infamous 32 MB partition limit in DOS 3.3 and earlier, whic"
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49773958",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T09:02:50Z",
+      "text": "I answered in other thread how exactly integrity check looks like and why the name might be misleading. I&#x27;m also in the middle of updating descriptions to be more adequate. Thanks for pointing that out. Speaking about standard industry metrics. fio is an established tool, and throughput, IOPS, fsync latency, and percentiles are standard concepts. However, the exact job recipes and the composite “Overall Core” score are project-specific. The trivial-operation test is also custom: one 4 KiB write plus fsync every 200 ms. The idle window contains at most about 50 operations, so its p99 is ef"
+    },
+    {
+      "title": "Brood War Bench",
+      "url": "https://bw.swerdlow.dev/report",
+      "hn": "https://news.ycombinator.com/item?id=49773828",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T08:40:42Z",
+      "text": "All the hobbyists were using proxybot because it allowed you to use more fun languages than C&#x2F;C++ but proxybot lacked the features to effectively play Zerg. I really wanted to play Zerg so I built a really sweet API+DSL in Ruby around proxybot and then used that to give the other newbies a hard time with a zergling rush. Unfortunately the proxybot limitations precluded me from expanding its capabilities so I tried to switch to having ruby embedded in C++ and I basically got mired there and was eventually distracted by real world concerns like actually finishing my degree. I think I played"
+    },
+    {
+      "title": "Is kombucha really good for your health?",
+      "url": "https://www.bbc.com/news/articles/czxzn14y2j9o",
+      "hn": "https://news.ycombinator.com/item?id=49773523",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T07:53:08Z",
+      "text": "Just three paragraphs reporting on the results: “Samples of urine and blood were analysed before and after the trial began to see if there was any effect on the body from the ingredients known to be found in kombucha, such as certain polyphenols. In this aspect, the trial produced positive results. The researchers found identifiable markers showing an improvement in levels of compounds which are associated with better health. However, the question the trial had set out to address – does drinking kombucha also help manage stress – showed no effect in a stress response test on participants.”"
+    },
+    {
+      "title": "If math is more than proof, we need to better celebrate the rest of it",
+      "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
+      "hn": "https://news.ycombinator.com/item?id=49772732",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T05:29:33Z",
+      "text": "There could be meta-faith, if you insert engineering into Mathematics, physics, chemistry, astronomy, march in one front [lockstep]. Whichever lags behind is drawn after. Whichever hastens ahead helps on the others... --Karl Schwarzschild The problem or nonproblem before (elite) software engineers were pointed at rather bespoke conjectures, depending on one&#x27;s specific denomination, was that the frontier mathematicians got too far ahead of the others to effectively drag them along (hence Tao&#x27;s recent fundraising attempt using his one-off compressed-sensing work) There is also the Expe"
+    },
+    {
+      "title": "How to Write with an LLM",
+      "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
+      "hn": "https://news.ycombinator.com/item?id=49772251",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T03:19:16Z",
+      "text": "For me, the use-case of commit messages is to help a human discover when some kind of thing might have changed, as distinct from the commits before and after it. Importantly, the human is doing a subjective scan for something that sounds relevant. If they already knew what function or detail is involved, they would be already be doing a &quot;all commits that touched this line&quot; filter, and my comment about affecting $thing would probably be superfluous. I also don&#x27;t need to tell them such details in the commit, because that is better expressed by the actual diff. So in a sense, I&#x2"
+    },
+    {
+      "title": "Deodands put a price on objects that caused death",
+      "url": "https://daily.jstor.org/how-the-railways-killed-a-medieval-law/",
+      "hn": "https://news.ycombinator.com/item?id=49769965",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T20:44:02Z",
+      "text": "The article belabors the point a little bit. A deodand was any inanimate object directly linked to a human fatality -- from a runaway cart to a falling branch -- and it was usually condemned and destroyed. (Or surrendered to the King and then sold, depending.) There was often some hair-splitting involved, but the law of deodands was on the books for hundreds of years in England, and it reflects still older Greek and Hebrew laws where inanimate objects that killed people were cast out or destroyed. The railways did contribute to the end of the custom. But this is not simply because rail equipme"
+    },
+    {
+      "title": "If math is more than proof, we need to better celebrate the rest of it",
+      "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
+      "hn": "https://news.ycombinator.com/item?id=49769874",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T20:31:33Z",
+      "text": "if language models (current GPT-style or any future model with different architecture) can be viewed as a compression of their output corpus (the corpus it emits by providing random starting native contexts weighted by the model&#x27;s likelihood of that native context) then one is saying the corpus contains the same information bits as the model, the model just takes less data bits, while the corpus represents inflated data bits. If learning requires communication of data, one could ponder if it is more effective to transmit learning data as suitable model coefficients instead of corpus monol"
+    },
+    {
+      "title": "AI safety is mostly a sex cult",
+      "url": "https://skywriter.blue/@segyges.bsky.social/3mvom4b4dn22q",
+      "hn": "https://news.ycombinator.com/item?id=49768745",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T18:00:42Z",
+      "text": "&quot;95% of the population will starve to death&quot; is very unlikely although I can&#x27;t completely rule it out as a possibility. The research on nuclear winter is of a poor quality, and we should be funding better research. &quot;The world will regress to a pre-industrial-revolution lifestyle&quot; seems to be a retreat from &quot;civilization will end&quot; (not that I agree with it). &gt;travel will be even more risky than in the Dark Ages thanks to fallout The radioactive contamination caused by Chernobyl has persisted for decades. In contrast, the radionuclides created by nuclear exp"
+    },
+    {
+      "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
+      "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
+      "hn": "https://news.ycombinator.com/item?id=49768226",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T17:02:01Z",
+      "text": "PIN and patterns are secure because the security module enforces rate limits, you can&#x27;t brute force effectively if every attempt after the first 10 takes a minute. Biometrics can be even better against brute force (more possible combinations) but they are vulnerable to cloning. With a 6 digit code cracking it will take close to a year on average. With your screen pattern example it&#x27;s around 100 days. That&#x27;s more than enough time for the owner to notice and turn on anti theft features. Maybe even for the police to find and return the phone."
+    },
+    {
+      "title": "If math is more than proof, we need to better celebrate the rest of it",
+      "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
+      "hn": "https://news.ycombinator.com/item?id=49766507",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T13:37:14Z",
+      "text": "That&#x27;s not the conclusion. I started using AI after the Jacobian conjecture counterexample and have used a particular problem to learn how to use AI and to explore it&#x27;s capabilities. I&#x27;m not a great mathematician but I&#x27;m full faculty with 25+ years of research experience and lots of articles and I just proved in a few weeks something that had resisted my efforts for some years. The exploration process is much easier now. Ideas are quickly testable and multiple tests can help identify a technical obstruction. The tool requires good guidance and input but as it trains on peop"
+    }
+  ]
+}

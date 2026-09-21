@@ -1,0 +1,4 @@
+{ "rows": [
+  { "name": "catastrophic regression", "unit": "ms", "base": 100, "baseRange": 2, "value": 1000, "range": 100 },
+  { "name": "normal", "unit": "ms", "base": 100, "baseRange": 2, "value": 90, "range": 2 }
+] }

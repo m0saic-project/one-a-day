@@ -1,0 +1,207 @@
+{
+  "query": "leaderboard llm",
+  "days": 700,
+  "count": 25,
+  "results": [
+    {
+      "title": "Show HN: Vantage – One prioritized health action per day from Apple Health",
+      "url": "https://www.vantagehealthapp.com/",
+      "hn": "https://news.ycombinator.com/item?id=49548903",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-03T12:05:19Z"
+    },
+    {
+      "title": "Show HN: Redactle LLM Leaderboard",
+      "url": "https://redactle.net/llm-leaderboard",
+      "hn": "https://news.ycombinator.com/item?id=49544338",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2026-09-03T00:11:55Z"
+    },
+    {
+      "title": "Show HN: Which LLMs have the best sense of humor?",
+      "url": "https://laugh.so/research/judge-leaderboard/",
+      "hn": "https://news.ycombinator.com/item?id=49456215",
+      "points": 3,
+      "comments": 4,
+      "createdAt": "2026-08-26T21:30:09Z"
+    },
+    {
+      "title": "Ask HN: Anyone interested in building a harness-only benchmark?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49181014",
+      "points": 5,
+      "comments": 5,
+      "createdAt": "2026-08-05T10:52:35Z"
+    },
+    {
+      "title": "Aquila Voice Assistant Test Suite for Home Assistant",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49150636",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-03T02:41:54Z"
+    },
+    {
+      "title": "Show HN: A fixed harness for comparing LLM agent memory systems",
+      "url": "https://github.com/AML-memory/agent-memory-leaderboard",
+      "hn": "https://news.ycombinator.com/item?id=49145408",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-08-02T15:18:00Z"
+    },
+    {
+      "title": "Show HN: Antics: Drop-in multiplayer for your AI-built games",
+      "url": "https://antics.gg/",
+      "hn": "https://news.ycombinator.com/item?id=49094298",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-07-29T07:09:51Z"
+    },
+    {
+      "title": "Show HN: I ran 12 AI bots predicting stocks for two months, every call public",
+      "url": "https://ldbd.app",
+      "hn": "https://news.ycombinator.com/item?id=49014412",
+      "points": 3,
+      "comments": 3,
+      "createdAt": "2026-07-22T22:35:21Z"
+    },
+    {
+      "title": "Can a MUD evaluate LLMs? A $99 proof of concept",
+      "url": "https://cruciblebench.ai/",
+      "hn": "https://news.ycombinator.com/item?id=49008538",
+      "points": 109,
+      "comments": 79,
+      "createdAt": "2026-07-22T15:39:01Z"
+    },
+    {
+      "title": "0/6 major aerospace documentation portals are AI Agent-ready",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48751798",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-07-01T19:15:22Z"
+    },
+    {
+      "title": "Show HN: Agnes AI – Free multimodal API (text, image, video), OpenAI-compatible",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48657403",
+      "points": 10,
+      "comments": 3,
+      "createdAt": "2026-06-24T09:40:31Z"
+    },
+    {
+      "title": "Show HN: A leaderboard of most popular open-weight LLMs",
+      "url": "https://osolmaz-leaderboard.hf.space/",
+      "hn": "https://news.ycombinator.com/item?id=48654883",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-06-24T03:54:04Z"
+    },
+    {
+      "title": "Show HN: Language1 – Benchmarking LLM comprehension of vague prompts via Taboo",
+      "url": "https://language1.app/",
+      "hn": "https://news.ycombinator.com/item?id=48586263",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-06-18T14:47:25Z"
+    },
+    {
+      "title": "Show HN: Gptbased – LLM leaderboard that emails you when to switch",
+      "url": "https://gptbased.com",
+      "hn": "https://news.ycombinator.com/item?id=48579719",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-06-18T02:09:22Z"
+    },
+    {
+      "title": "LLM Chess – Leaderboard",
+      "url": "https://maxim-saplin.github.io/llm_chess/",
+      "hn": "https://news.ycombinator.com/item?id=48573937",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-06-17T17:45:40Z"
+    },
+    {
+      "title": "Show HN: AptSelect – A local LLM client for parallel testing and evaluation",
+      "url": "https://aptselect.com",
+      "hn": "https://news.ycombinator.com/item?id=48570680",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-06-17T14:00:13Z"
+    },
+    {
+      "title": "Multi-LLM trading harness with live leaderboard on Alpaca paper trades",
+      "url": "https://github.com/achaljhawar/1rok",
+      "hn": "https://news.ycombinator.com/item?id=48144911",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-05-15T05:32:49Z"
+    },
+    {
+      "title": "Show HN: Personal Trainer – Lift, share plans, and rank with friends",
+      "url": "https://mobile-squad.com/#personal-trainer",
+      "hn": "https://news.ycombinator.com/item?id=48103112",
+      "points": 6,
+      "comments": 0,
+      "createdAt": "2026-05-12T01:32:17Z"
+    },
+    {
+      "title": "Show HN: I blind-tested 14 LLMs on a WP plugin task. Surprising Findings",
+      "url": "https://github.com/guilamu/llms-wordpress-plugin-benchmark/blob/main/README.md",
+      "hn": "https://news.ycombinator.com/item?id=47880678",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2026-04-23T19:42:02Z"
+    },
+    {
+      "title": "Show HN: We benchmarked 18 LLMs on OCR (7K+ calls) – cheaper models win",
+      "url": "https://www.arbitrhq.ai/leaderboards/",
+      "hn": "https://news.ycombinator.com/item?id=47860393",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2026-04-22T07:48:26Z"
+    },
+    {
+      "title": "N-Day-Bench – Can LLMs find real vulnerabilities in real codebases?",
+      "url": "https://ndaybench.winfunc.com",
+      "hn": "https://news.ycombinator.com/item?id=47758347",
+      "points": 91,
+      "comments": 29,
+      "createdAt": "2026-04-13T21:54:03Z"
+    },
+    {
+      "title": "Agentic Search Leaderboard",
+      "url": "https://www.algolia.com/llm-leaderboard/",
+      "hn": "https://news.ycombinator.com/item?id=47754721",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-04-13T16:46:51Z"
+    },
+    {
+      "title": "Show HN: OpenCastor Agent Harness Evaluator Leaderboard",
+      "url": "https://craigm26.github.io/OpenCastor/",
+      "hn": "https://news.ycombinator.com/item?id=47495871",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-03-23T22:13:21Z"
+    },
+    {
+      "title": "Benchmarking LLMs/VLMs on document parsing, extraction, VQA",
+      "url": "https://nanonets.com/blog/idp-leaderboard-1-5/",
+      "hn": "https://news.ycombinator.com/item?id=47448890",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-20T01:00:41Z"
+    },
+    {
+      "title": "Show HN: FC-Eval – CLI to Benchmark Local or Cloud LLMs on Function Calling",
+      "url": "https://github.com/gauravvij/function-calling-cli",
+      "hn": "https://news.ycombinator.com/item?id=47412836",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-03-17T14:02:44Z"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "verifier": "scout-verify",
+  "angle": "#9 web-terminal-and-code",
+  "candidate": "benchmark bar clip (the N-times-faster picture, regenerated every release)",
+  "date": "2026-09-21",
+  "verdict": "REAL (need) / motion unevidenced",
+  "citedSources": [
+    { "file": "verify-9-01-ktsu-semantics-pr242.json", "url": "https://github.com/ktsu-dev/Semantics/pull/242", "opened": true, "quoteVerbatim": true, "note": "2 stars, 2 forks, solo maintainer; chart is a per-release trend, not an N-times-faster bar comparison" },
+    { "file": "verify-9-02-scopelet-pr9.json", "url": "https://github.com/maxgfr/scopelet/pull/9", "opened": true, "quoteVerbatim": true, "note": "0 stars, 0 forks, solo; artifact is a markdown README table, not a picture" },
+    { "file": "verify-9-03-hyperfine-scripts-readme.json + verify-9-05-hyperfine-blob.json", "url": "https://github.com/sharkdp/hyperfine/blob/master/scripts/README.md", "opened": true, "quoteVerbatim": true, "note": "repo file, not a person's voice" },
+    { "file": "verify-9-04-github-action-benchmark.json", "url": "https://github.com/benchmark-action/github-action-benchmark", "opened": true, "quoteVerbatim": true, "note": "1.3k stars confirmed; a healthy incumbent for the gh-pages chart path" }
+  ],
+  "newSourcesFound": [
+    { "file": "verify-9-12-sesh-issue-468.json", "url": "https://github.com/joshmedeski/sesh/issues/468", "community": "Go / tmux tooling", "stars": 2800, "date": "2026-09-04", "strength": "strongest" },
+    { "file": "verify-9-19-rustforum-bench-practices.json", "url": "https://users.rust-lang.org/t/what-benchmarking-practices-exist-in-the-rust-community-and-where-can-i-learn-about-them/134672", "community": "users.rust-lang.org", "date": "2025-10-15" },
+    { "file": "verify-9-18-devto-readme-numbers.json", "url": "https://dev.to/sattyamjjain/make-your-readme-numbers-fail-the-build-a-reproducible-figures-gate-in-rust-1i65", "community": "dev.to" },
+    { "file": "verify-9-08-hn-syq-rsync.json", "url": "https://news.ycombinator.com/item?id=49649211", "community": "Hacker News", "date": "2026-09-10", "role": "hostile reception to a benchmark bar graph" },
+    { "file": "verify-9-10-hn-latticedb-table.json", "url": "https://news.ycombinator.com/item?id=49443992", "community": "Hacker News", "date": "2026-08-26", "role": "the prop shape, posted by a stranger, disputed by the author" },
+    { "file": "verify-9-13-catch2-vega.json", "url": "https://joht.github.io/johtizen/data/2022/09/05/visualize-catch2-benchmarks-with-vega-lite.html", "community": "C++ / Catch2", "date": "2022-09-05", "note": "older than the 18-month window" },
+    { "file": "verify-9-14-reld-issue-54.json", "url": "https://github.com/zackees/reld/issues/54", "date": "2026-08-07" },
+    { "file": "verify-9-15-simple-api-bench-pr43.json", "url": "https://github.com/tappe9/simple-api-benchmark/pull/43", "date": "2026-09-12", "note": "0 stars, solo" }
+  ],
+  "deadLinks": [],
+  "negativeEvidence": [
+    { "file": "verify-9-16-hn-bar-chart-race.json", "query": "bar chart race animated chart video", "days": 900, "hits": 0, "meaning": "no HN appetite for animated charts in 900 days" },
+    { "file": "verify-9-09-hn-visualize-bench.json", "query": "visualize benchmark results", "days": 720, "hits": 2, "meaning": "both are people building benchmarks, neither asks for a chart image" },
+    { "websearch": "animated bar chart benchmark results gif speedup", "meaning": "the animated-bar genre is R/gganimate, LottieFiles, Jitter, livingcharts - marketing and journalism, zero developer-benchmark overlap" }
+  ],
+  "engineFindings": {
+    "MosaicDocument": "node_modules/@m0saic/types/dist/document/document.d.ts:52 - 'pure spatial description of a single render pass ... Temporal sequencing (cuts, fades, animations) is handled by MosaicDocumentPipeline' and 'a MosaicDocument has one m0, therefore one geometry'",
+    "implication": "a bar whose LENGTH changes cannot animate inside one document; growing bars = a MosaicDocumentPipeline of N documents, each re-splitting the m0",
+    "pipelineConfirmed": "document-pipeline.d.ts:250 kind:'mosaic_pipeline', :268 steps: MosaicPipelineStep[], each step has an exact durationMs; template-utils InjectRenderable accepts MosaicDocument | MosaicDocumentPipeline",
+    "latticeRisk": "AGENTS.md: splits above 12 must be 5-smooth (weightedSplit precision 120) - every intermediate bar length snaps to the lattice, so growth ratchets rather than glides"
+  }
+}

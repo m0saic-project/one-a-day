@@ -1,0 +1,35 @@
+{
+  "note": "Scout #5 (reddit-ops-status) audit record for pages opened via WebFetch rather than pipeline/research/fetch-text.mjs (news.ycombinator.com item pages returned HTTP 429 to fetch-text.mjs this session; WebFetch succeeded).",
+  "opened": [
+    {
+      "url": "https://news.ycombinator.com/item?id=47142521",
+      "date": "2026-02-24",
+      "tool": "WebFetch",
+      "title_verbatim": "Show HN: ProdRescue AI - Turn Slack war-rooms and raw logs into incident reports",
+      "quote_verbatim": "It's 3 AM, there's an outage, and the #incident channel is exploding with 200+ messages. Once the fix is deployed, the real pain begins-spending 4 hours reconstructing the timeline for the post-mortem."
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=40751748",
+      "date": "2024-06-21",
+      "tool": "WebFetch",
+      "quote_verbatim": "That is amazing. I worked with a (different?) finance company that did the same thing - every team was judged on their burndown charts."
+    },
+    {
+      "url": "https://support.atlassian.com/statuspage/docs/display-historical-uptime-of-components/",
+      "tool": "WebFetch + fetch-text.mjs (raw saved as reddit-ops-status-31.json)",
+      "quote_verbatim": "Enabling this feature will add a 90-day uptime display to your status page, and a full historical account on the '/uptime' page."
+    }
+  ],
+  "hn_algolia_searches_saved": [
+    "reddit-ops-status-2.json (postmortem incident timeline, 540d, 13 hits)",
+    "reddit-ops-status-19.json (Show HN incident timeline Slack, 720d, 13 hits)",
+    "reddit-ops-status-24.json (burndown chart sprint, 900d, 21 comment hits)"
+  ],
+  "blocked_this_session": [
+    "reddit.com / old.reddit.com - 403 on every sub and query via pipeline/research/reddit.mjs; .json and .rss endpoints 403; HTML returns a 'Welcome to Reddit' gate page; WebFetch refuses www.reddit.com outright",
+    "lobste.rs - Anubis proof-of-work bot wall",
+    "medium.com - 403",
+    "statusgator.com - 403",
+    "news.ycombinator.com item pages - 429 to fetch-text.mjs"
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "query": "terminal recording",
+  "days": 720,
+  "count": 25,
+  "results": [
+    {
+      "title": "Show HN: Bailout – The coding agent meant to be deleted",
+      "url": "https://github.com/storozhenko98/bailout",
+      "hn": "https://news.ycombinator.com/item?id=49778390",
+      "points": 2,
+      "comments": 3,
+      "createdAt": "2026-09-20T18:14:58Z"
+    },
+    {
+      "title": "Show HN: Rmp, a Subsonic music player for generating playlists on the fly",
+      "url": "https://github.com/codesoap/rmp",
+      "hn": "https://news.ycombinator.com/item?id=49408520",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2026-08-23T13:00:48Z"
+    },
+    {
+      "title": "Show HN: TypeWhisper 1.5 – open-source dictation and workflows for macOS",
+      "url": "https://github.com/TypeWhisper/typewhisper-mac",
+      "hn": "https://news.ycombinator.com/item?id=48759577",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-07-02T11:12:05Z"
+    },
+    {
+      "title": "Show HN: Dap-mux – Connect your editor and REPL to the same debug session",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48429058",
+      "points": 7,
+      "comments": 1,
+      "createdAt": "2026-06-06T21:13:11Z"
+    },
+    {
+      "title": "Show HN: Xtrace – Unix-Style macOS Profiling for Instruments (CPU/GPU/Memory)",
+      "url": "https://github.com/Kr1sso/xtrace-skill",
+      "hn": "https://news.ycombinator.com/item?id=47900023",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-04-25T09:28:45Z"
+    },
+    {
+      "title": "Show HN: We built a way for Claude Code to join meetings like a real teammate",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47873585",
+      "points": 10,
+      "comments": 2,
+      "createdAt": "2026-04-23T09:00:04Z"
+    },
+    {
+      "title": "Show HN: Honeymux, a TUI wrapper for tmux that simplifies agent-driven workflows",
+      "url": "https://hmx.dev",
+      "hn": "https://news.ycombinator.com/item?id=47799791",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2026-04-16T21:34:51Z"
+    },
+    {
+      "title": "Show HN: Helm Terminal – Free portfolio intelligence that tells you what to do",
+      "url": "https://helmterminal.dev",
+      "hn": "https://news.ycombinator.com/item?id=47702991",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-04-09T12:44:59Z"
+    },
+    {
+      "title": "Show HN: C64 Ultimate Toolbox for macOS",
+      "url": "https://github.com/amiantos/c64-ultimate-toolbox",
+      "hn": "https://news.ycombinator.com/item?id=47677972",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-04-07T16:39:19Z"
+    },
+    {
+      "title": "Show HN: An open-source AI Scrum Team that lives natively in GitHub Issues",
+      "url": "https://github.com/plusai-solutions/ai-scrum-master-template",
+      "hn": "https://news.ycombinator.com/item?id=47463717",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-21T03:30:56Z"
+    },
+    {
+      "title": "Show HN: M33mu – Cortex-M33 emulation with TrustZone, reverse stepping, and GDB",
+      "url": "https://github.com/danielinux/m33mu",
+      "hn": "https://news.ycombinator.com/item?id=47439977",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-03-19T14:20:16Z"
+    },
+    {
+      "title": "Show HN: AI agent deploys an edge AI model on a microcontroller via MCP",
+      "url": "https://es617.github.io/2026/03/16/edge-ai-mcp.html",
+      "hn": "https://news.ycombinator.com/item?id=47428147",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-03-18T16:53:40Z"
+    },
+    {
+      "title": "Show HN: DashClaw – Intercept AI agent actions before they execute",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47413969",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-03-17T15:22:36Z"
+    },
+    {
+      "title": "Show HN: DAAO – Deploy AI agents to your servers via Zero-Trust tunnels",
+      "url": "https://github.com/daao-platform/daao",
+      "hn": "https://news.ycombinator.com/item?id=47372506",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-14T01:55:18Z"
+    },
+    {
+      "title": "Show HN: Worktale, a local-first CLI to turn your Git history into a dev journal",
+      "url": "https://worktale.org",
+      "hn": "https://news.ycombinator.com/item?id=47324829",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-03-10T15:44:45Z"
+    },
+    {
+      "title": "Show HN: Attune – A Local-First CLI with 448 Rules to Take You from Slop to Ship",
+      "url": "https://github.com/PeterPCW/attune",
+      "hn": "https://news.ycombinator.com/item?id=47305437",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-09T06:21:43Z"
+    },
+    {
+      "title": "Show HN: Claude-replay – A video-like player for Claude Code sessions",
+      "url": "https://github.com/es617/claude-replay",
+      "hn": "https://news.ycombinator.com/item?id=47276604",
+      "points": 105,
+      "comments": 36,
+      "createdAt": "2026-03-06T15:57:27Z"
+    },
+    {
+      "title": "Show HN: VibeWhisper – macOS voice-to-text with push-to-talk,cloud or 100% local",
+      "url": "https://vibewhisper.dev/",
+      "hn": "https://news.ycombinator.com/item?id=47230833",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-03-03T11:14:34Z"
+    },
+    {
+      "title": "Show HN: Termstage – Animated terminal SVGs from YAML, no screen recording",
+      "url": "https://github.com/saikatkumardey/termstage",
+      "hn": "https://news.ycombinator.com/item?id=47167274",
+      "points": 2,
+      "comments": 4,
+      "createdAt": "2026-02-26T15:21:28Z"
+    },
+    {
+      "title": "Show HN: Duck – A Django-compatible framework with native HTTP/2 and Live HTML",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47142493",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2026-02-24T20:29:35Z"
+    },
+    {
+      "title": "I built a governance layer for multi-agent AI coding – lessons after 6 months",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47139978",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-02-24T17:35:57Z"
+    },
+    {
+      "title": "Ask HN: Dynamic ROI vs. Tiling for high-speed object tracking (<20ms latency)?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47100660",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-21T13:29:48Z"
+    },
+    {
+      "title": "Launch HN: Livedocs (YC W22) – An AI-native notebook for data analysis",
+      "url": "https://livedocs.com",
+      "hn": "https://news.ycombinator.com/item?id=46964162",
+      "points": 48,
+      "comments": 19,
+      "createdAt": "2026-02-10T18:09:14Z"
+    },
+    {
+      "title": "Ask HN: Dynamic ROI vs. Tiling for high-speed object tracking (<20ms latency)?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46883288",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-04T08:53:46Z"
+    },
+    {
+      "title": "Show HN: Hc: an agentless, multi-tenant shell history sink",
+      "url": "https://github.com/alessandrocarminati/hc",
+      "hn": "https://news.ycombinator.com/item?id=46644250",
+      "points": 43,
+      "comments": 3,
+      "createdAt": "2026-01-16T08:13:18Z"
+    }
+  ]
+}

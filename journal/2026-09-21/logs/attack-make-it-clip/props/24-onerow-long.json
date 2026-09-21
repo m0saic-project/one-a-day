@@ -1,0 +1,12 @@
+{
+  "rows": [
+    {
+      "name": "resolve deeply nested module graph resolve deeply nested module graph resolve deeply nested module graph resolve deeply nested module graph resolve deeply nested module graph resolve deeply nested mod",
+      "unit": "ms",
+      "base": 100,
+      "value": 50,
+      "baseRange": 2,
+      "range": 2
+    }
+  ]
+}

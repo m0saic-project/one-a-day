@@ -1,0 +1,55 @@
+{
+  "query": "waveform video generator",
+  "days": 900,
+  "count": 6,
+  "results": [
+    {
+      "title": "Show HN: Booley – open-source IDE for agentic chip design",
+      "url": "https://github.com/boldaxolotl/booley",
+      "hn": "https://news.ycombinator.com/item?id=49622684",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-09T07:34:11Z"
+    },
+    {
+      "title": "Show HN: Poddie – A local-first, text-based video and podcast editor",
+      "url": "https://github.com/SinanTang/poddie",
+      "hn": "https://news.ycombinator.com/item?id=49037983",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-07-24T16:28:31Z"
+    },
+    {
+      "title": "Show HN: Lisa a live dynamic wavetables synth you play and program in real-time",
+      "url": "https://github.com/dr-schlange/LISA",
+      "hn": "https://news.ycombinator.com/item?id=47992267",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-05-03T01:13:20Z"
+    },
+    {
+      "title": "Show HN: Create Beautiful Music Visualizers",
+      "url": "https://chimp.video",
+      "hn": "https://news.ycombinator.com/item?id=42990065",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2025-02-09T11:46:11Z"
+    },
+    {
+      "title": "Show HN: Audio waveform SVG builder for designers",
+      "url": "https://wavtool.com/waveforms",
+      "hn": "https://news.ycombinator.com/item?id=40113298",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2024-04-22T11:32:27Z"
+    },
+    {
+      "title": "Show HN: Self-hosted showcase for images, videos, sounds and writings",
+      "url": "https://github.com/lipupini/lipupini",
+      "hn": "https://news.ycombinator.com/item?id=39967057",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2024-04-08T07:16:11Z"
+    }
+  ]
+}

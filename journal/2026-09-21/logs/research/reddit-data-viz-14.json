@@ -1,0 +1,183 @@
+{
+  "source": "https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=dataisbeautiful&selftext=bar+chart+race&limit=60&sort=desc",
+  "fetchedAt": "2026-09-21T04:16:44.436Z",
+  "count": 16,
+  "results": [
+    {
+      "id": "1ui2v1s",
+      "title": "[OC] Most red cards in a professional football (soccer) career, 1996–2026",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1ui2v1s/oc_most_red_cards_in_a_professional_football/",
+      "sub": "dataisbeautiful",
+      "author": "Feeling-Mixture-1024",
+      "score": 0,
+      "numComments": 9,
+      "date": "2026-06-28",
+      "text": "Made a bar chart race of career red cards across football history. The surprise: Sergio Ramos (30) and Pepe (21) are nowhere near the top — the record belongs to Colombia's Gerardo Bedoya with 46, a Guinness-certified record that's 16 clear of Ramos. Data: Wikipedia, Transfermarkt, Guinness World Records. Career totals across all competitions; all featured players are now retired. Full animation: [https://www.youtube.com/watch?v=g4lzfIi0F7c](https://www.youtube.com/watch?v=g4lzfIi0F7c)"
+    },
+    {
+      "id": "1u8uwj8",
+      "title": "[OC] U.S. vacation activity participation rates across 15 categories, 1950–2026",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1u8uwj8/oc_us_vacation_activity_participation_rates/",
+      "sub": "dataisbeautiful",
+      "author": "Embarrassed-Task7634",
+      "score": 0,
+      "numComments": 1,
+      "date": "2026-06-18",
+      "text": "Each bar shows the estimated % of Americans who participated in that vacation type in a given year, based on US Travel Association surveys, BLS Consumer Expenditure data, and Pew Research leisure studies. I animated 76 years of vacation participation data (1950–2026) as a bar chart race showing how Americans' travel habits have shifted across generations. Some things that surprised me while building this: \\- The Interstate Highway Act (1956) caused road trips to nearly double within a decade — you can literally see the bar accelerate \\- International flights barely existed as a vacation category until the 1978 Airline Deregulation Act made them affordable for middle-class families \\- Cruise vacations went from 0.5% participation in 1950 to 12% by 2026 — one of the slowest but most consistent climbers \\- 2020 is genuinely shocking to watch — flights and cruises crash to near-zero in a single frame \\- \"Staying Home\" spikes hard during both the 2008 recession AND the 2020 pandemic Data sources: US Travel Association, Bureau of Labor Statistics Consumer Expenditure Surveys, historical travel industry reports. Tools: Custom HTML/JS animation with requestAnimationFrame for smooth linear interpolation. Happy to answer any questions about the methodology or data sources. \\[link in comments\\]"
+    },
+    {
+      "id": "1u8h7b5",
+      "title": "[OC] 76 years of American vacation trends animated — the COVID crash and the road trip boom are the most dramatic moments",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1u8h7b5/oc_76_years_of_american_vacation_trends_animated/",
+      "sub": "dataisbeautiful",
+      "author": "Embarrassed-Task7634",
+      "score": 0,
+      "numComments": 14,
+      "date": "2026-06-17",
+      "text": "I animated 76 years of vacation participation data (1950–2026) as a bar chart race showing how Americans' travel habits have shifted across generations. Some things that surprised me while building this: • The Interstate Highway Act (1956) caused road trips to nearly double within a decade — you can literally see the bar accelerate • International flights barely existed as a vacation category until the 1978 Airline Deregulation Act made them affordable for middle-class families • Cruise vacations went from 0.5% participation in 1950 to 12% by 2026 — one of the slowest but most consistent climbers • 2020 is genuinely shocking to watch — flights and cruises crash to near-zero in a single frame • \"Staying Home\" spikes hard during both the 2008 recession AND the 2020 pandemic Data sources: US Travel Association, Bureau of Labor Statistics Consumer Expenditure Surveys, historical travel industry reports. Tools: Custom HTML/JS animation with requestAnimationFrame for smooth linear interpolation. Happy to answer any questions about the methodology or data sources. \\[link in comments\\]"
+    },
+    {
+      "id": "1tv55gm",
+      "title": "[OC] Animated tyre stint timeline from the 2026 Canadian Grand Prix",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1tv55gm/oc_animated_tyre_stint_timeline_from_the_2026/",
+      "sub": "dataisbeautiful",
+      "author": "storman121",
+      "score": 0,
+      "numComments": 4,
+      "date": "2026-06-02",
+      "text": "Each row represents a driver, and each colored bar shows the tyre compound used during that stint. The animation progresses through the race and shows how the strategy picture changes lap by lap, including pit windows, compound counts, race time, lap progress, and running-order changes. Color key: \\- Soft = red \\- Medium = yellow \\- Hard = white \\- Intermediate = green \\- Wet = blue Data source: OpenF1 API Tools used: Python, Pandas, Streamlit, Pillow, imageio/ffmpeg Project: OpenF1 Strategy Engineer This is an unofficial fan/educational project and is not affiliated with Formula 1, FIA, FOM, OpenF1, or any team. All trademarks belong to their respective owners. Feedback welcome — especially on whether the animation speed, row movement, and pit callouts make the strategy easier to follow or make the chart too busy."
+    },
+    {
+      "id": "1tfoa9d",
+      "title": "[OC] Changes in church membership vs growth in adjacent social sectors since 2000",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1tfoa9d/oc_changes_in_church_membership_vs_growth_in/",
+      "sub": "dataisbeautiful",
+      "author": "Ok_Persimmon_5871",
+      "score": 0,
+      "numComments": 11,
+      "date": "2026-05-17",
+      "text": "Church membership among Americans fell from 69% to 43% over this period (Gallup), while several unrelated sectors experienced large growth. [Full Article Here](https://www.instagram.com/p/DYb_OYYPXkp/) • Pickleball participation: +19,800% • Podcast adoption: +2,350% • Pet industry spending: +882% • Therapy utilization: +185% • Church membership: -38% These variables were selected because they each involve places people increasingly direct time, money, identity, or community participation. This is not intended as a causal argument. The growth of these sectors is not presented as a consequence of church decline. The comparison is more about observing broad cultural shifts and asking whether people increasingly build rituals, communities, and identities through different institutions than in previous decades. Curious what people think. Data sources: Church membership: Gallup Pickleball participation: SFIA participation reports Podcast adoption: Edison Research Infinite Dial Pet industry spending: American Pet Products Association (APPA) Therapy utilization: SAMHSA / National Survey on Drug Use and Health Built using Python, matplotlib, NumPy, and ffmpeg. Animation: custom bar-chart race with yearly interpolation and indexed comparison methodology."
+    },
+    {
+      "id": "1t025dx",
+      "title": "[OC] Global Sex Ratio Across 15 of the World's Most Populous Countries (1950–2026) — Females per 1,000 Males",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1t025dx/oc_global_sex_ratio_across_15_of_the_worlds_most/",
+      "sub": "dataisbeautiful",
+      "author": "str8flus",
+      "score": 0,
+      "numComments": 17,
+      "date": "2026-04-30",
+      "text": "Sex ratio = females per 1,000 males. Above 1,000 = women outnumber men. 15 of the world's most populous countries, 1950–2026. The 2026 value is a UN Medium Variant projection. Three things that stood out: 🇷🇺 Russia leads — because of WWII. 1,300 women per 1,000 men in 1950. The Soviet Union lost \\~27 million people, mostly men. Still #1 at 1,157 in 2026. 🇧🇩 Bangladesh — biggest turnaround. Started at 915 in 1950, below India. Crossed 1,000 by 2009. Now at 1,034. A 119-point swing in 76 years. 🇮🇳 India — last place since 2000. 940 in 2026. 94 points below Bangladesh, which started lower in 1950. Source: UN World Population Prospects 2024 (Medium Variant) Tool: Python (matplotlib) Full animated bar chart race: youtube.com/@statsscroll 2026 is a UN projection. For informational purposes only."
+    },
+    {
+      "id": "1s2vap8",
+      "title": "[OC] Economic Power Shifts Over 525 Years (1500-2025) Shown in Animated Bar Chart Race",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1s2vap8/oc_economic_power_shifts_over_525_years_15002025/",
+      "sub": "dataisbeautiful",
+      "author": "Difficult-Essay3387",
+      "score": 0,
+      "numComments": 6,
+      "date": "2026-03-25",
+      "text": "I created a 7-minute bar chart race visualization showing how economic dominance has shifted over 525 years. I visualized 525 years of GDP data to show how economic superpowers rose and fell. The cyclical pattern is striking - China led for 300 years, USA for 150 years, now entering multipolar era. Watch: [https://youtu.be/5eIFa\\_Di5ms](https://youtu.be/5eIFa_Di5ms) Key findings: \\- China dominated 1500-1870 (300+ years) \\- USA dominated 1871-2014 (150 years) \\- Current multipolar shift (2014+) The cyclical nature of economic power is fascinating - no empire stays #1 forever. Thoughts on what 2050 will look like? \\*\\*Data:\\*\\* Maddison Project Database, World Bank, IMF Technical details: 7-minute animation, 52 time periods, cubic interpolation for smooth transitions, multi-layered music score."
+    },
+    {
+      "id": "1rx8cno",
+      "title": "I visualized every major economy's GDP from 1960 to 2026, the swings are insane [OC]",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1rx8cno/i_visualized_every_major_economys_gdp_from_1960/",
+      "sub": "dataisbeautiful",
+      "author": "her0ftime",
+      "score": 0,
+      "numComments": 2,
+      "date": "2026-03-18",
+      "text": "Static snapshot from a full bar chart race I made. Russia's GDP collapsed 80% in a single year after the Soviet Union dissolved. Japan was #2 for 42 straight years. China went from $60B to $20T. Full 60-second animation: https://youtube.com/shorts/qPtUH7PejAA?si=nWb_NjoD5TH7H5Xs Source: IMF World Economic Outlook (October 2025) + World Bank."
+    },
+    {
+      "id": "1rvb7wl",
+      "title": "[OC] Big Tech Hiring Collapse: Google down -81%, Meta -67%, overall FAANG hiring down 54% comparing same 75-day periods in 2025 vs 2026",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1rvb7wl/oc_big_tech_hiring_collapse_google_down_81_meta/",
+      "sub": "dataisbeautiful",
+      "author": "aaghashm",
+      "score": 957,
+      "numComments": 49,
+      "date": "2026-03-16",
+      "text": "**Data Source:** Job postings from Google, Apple, Meta, Microsoft, and Netflix extracted from BigQuery jobs database. Compares equivalent \\~75-day periods year-over-year (same calendar window in 2025 vs 2026). Only includes positions with salaries ≥$80,000 to focus on professional/technical roles. **Full data / live dashboard at** [**https://mobius-analytics-v2-83371012433.us-west1.run.app/**](https://mobius-analytics-v2-83371012433.us-west1.run.app/) **Tools Used:** * Recharts (React) for grouped bar chart visualization * BigQuery for data aggregation and YoY comparison queries * Material UI for styling with percentage change chips **Methodology:** * Each bar represents total job postings during the comparison window * Gray bars = 2025 baseline period, Blue bars = 2026 same period * Percentage change calculated as ((2026 - 2025) / 2025) × 100 * Salary floor of $80K filters out hourly/retail positions to isolate tech hiring **Key Insights:** * Google's dramatic pullback: -80.9% decline (6,000 → 1,100 postings) — the steepest cut among FAANG * Meta's continued contraction: -66.8% drop reflects ongoing \"Year of Efficiency\" restructuring * Apple's relative stability: Only -5.8% decline — notably resilient compared to peers * Microsoft holding steadier: -22.9% decrease despite AI investment announcements * Netflix trimming: -38.5% reduction in a smaller but significant hiring footprint * Overall FAANG hiring down 54% — suggests structural shift, not seasonal fluctuation **What This Might Mean:** The data suggests Big Tech has moved from \"growth at all costs\" to sustainable headcount. Google's 81% drop is particularly striking given their AI race positioning. Apple's resilience may reflect hardware product cycles vs. software-heavy peers."
+    },
+    {
+      "id": "1oz9mdt",
+      "title": "[OC] UK Immigration Statistics 2010–2024 | Grants of Settlement by Nationality [OC]",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1oz9mdt/oc_uk_immigration_statistics_20102024_grants_of/",
+      "sub": "dataisbeautiful",
+      "author": "True_Ad793",
+      "score": 0,
+      "numComments": 2,
+      "date": "2025-11-17",
+      "text": "Source: [https://www.gov.uk/government/statistical-data-sets](https://www.gov.uk/government/statistical-data-sets) Hi all, I put together a bar chart race visualising UK immigration data from 2010 to 2024, looking specifically at grants of settlement by nationality. The data is taken directly from the Home Office release tables and covers year by year changes across the period. It is not political commentary, just a visual breakdown of how different nationalities moved up and down over time. I enjoy turning government datasets into clean animations, so I wanted to share it here for anyone interested in long term trends. Source used: Home Office Immigration Statistics (Settlement datasets). Happy to answer questions about how it was made or where the data comes from. Video here if anyone interested - [https://www.youtube.com/watch?v=JPNeAtdaG4c](https://www.youtube.com/watch?v=JPNeAtdaG4c)"
+    },
+    {
+      "id": "1n78vpg",
+      "title": "[OC] Uk - Leeds Crime Trends by Type (2022–2025) | Official Police UK Data | OC",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1n78vpg/oc_uk_leeds_crime_trends_by_type_20222025/",
+      "sub": "dataisbeautiful",
+      "author": "Fluffy-Ad4346",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-09-03",
+      "text": "Data Source: [https://www.police.uk/pu/your-area/west-yorkshire-police/leeds-city/?yourlocalpolicingteam=about-us&tab=crimemap](https://www.police.uk/pu/your-area/west-yorkshire-police/leeds-city/?yourlocalpolicingteam=about-us&tab=crimemap) Hey all, I made this animated bar chart race showing how different types of crime in Leeds have changed month-by-month from May 2022 to April 2025. The data comes directly from official police data, I tried to keep it simple and easy to follow. It shows the top crime categories like: * Violence & sexual offenses * Criminal damage * Drug-related crimes * Burglary * Public order * Robbery, etc. Keen to hear if anything stands out to you or surprises you. Here's the video if you wanna check it out [https://www.youtube.com/watch?v=wj7WH9rqD7Y](https://www.youtube.com/watch?v=wj7WH9rqD7Y) "
+    },
+    {
+      "id": "1n6cnjc",
+      "title": "[OC] UK Immigration & Asylum Approvals by Country (2001–2025) — Based on Home Office Data",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1n6cnjc/oc_uk_immigration_asylum_approvals_by_country/",
+      "sub": "dataisbeautiful",
+      "author": "Fluffy-Ad4346",
+      "score": 25,
+      "numComments": 14,
+      "date": "2025-09-02",
+      "text": "Data source: - [https://www.gov.uk/government/collections/immigration-statistics-quarterly-release](https://www.gov.uk/government/collections/immigration-statistics-quarterly-release) This is a bar chart race showing UK immigration and asylum approvals by country from 2001 to 2025, broken down by quarter. The data is from the UK Home Office, using their official visa and asylum outcome statistics. I used Flourish to make the animation and Camtasia for editing. You can watch the full animation here: [https://www.youtube.com/watch?v=AihSdx3ZWfs](https://www.youtube.com/watch?v=AihSdx3ZWfs) I thought it'd be interesting to see how approvals have shifted over time, especially around major world events. This isn’t political or opinion-based, it's just a look at long-term trends using public data. Thought it’d be worth sharing here. "
+    },
+    {
+      "id": "1n5ly0e",
+      "title": "[OC] Visas Issued by the UK (2005–2025), Broken Down by Country",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1n5ly0e/oc_visas_issued_by_the_uk_20052025_broken_down_by/",
+      "sub": "dataisbeautiful",
+      "author": "ChartMan1994",
+      "score": 0,
+      "numComments": 17,
+      "date": "2025-09-01",
+      "text": "Source: [https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables#entry-clearance-visas-granted-outside-the-uk](https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables#entry-clearance-visas-granted-outside-the-uk) This dataset shows how many visas were issued by the UK to different countries from 2001 through 2025. The visualisation (bar chart race) highlights how certain countries rise or fall over time, reflecting the impact of global events, policy changes, and migration patterns. 🔹 Source: UK Government statistics 🔹 Units: Visa approvals by country, per year I put together the full bar chart race version here if you want to watch it play out: 👉 [https://www.youtube.com/watch?v=TJwwxQNnb-Y](https://www.youtube.com/watch?v=TJwwxQNnb-Y&utm_source=chatgpt.com)"
+    },
+    {
+      "id": "1n5ct89",
+      "title": "[OC] UK Immigration and Asylum Approvals by Country (2001 to 2025) – Animated Data Timeline",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1n5ct89/oc_uk_immigration_and_asylum_approvals_by_country/",
+      "sub": "dataisbeautiful",
+      "author": "Total_Collection602",
+      "score": 1,
+      "numComments": 0,
+      "date": "2025-09-01",
+      "text": "Source of data - [https://www.gov.uk/government/collections/immigration-statistics-quarterly-release](https://www.gov.uk/government/collections/immigration-statistics-quarterly-release) Hi all, I made a video that visualizes how **immigration and asylum approvals** in the UK have shifted by **country of origin** from **2001 to 2025**. The animation is based on **official UK government data**, and covers a wide range of historical events like: * EU expansion * Syrian civil war * Brexit * COVID-19 * Recent changes to asylum policy Rather than a static chart, this shows trends over time in a dynamic format that’s easy to follow. No political angle, just raw approvals data shown as a **bar chart race**. 🎥 **Watch here:** [https://www.youtube.com/watch?v=AihSdx3ZWfs](https://www.youtube.com/watch?v=AihSdx3ZWfs) Let me know your thoughts. Which countries surprised you the most?"
+    },
+    {
+      "id": "1m4iceh",
+      "title": "UK Crime Stats Visualized – Doncaster (2022–2025) | Monthly Police Data [OC]",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1m4iceh/uk_crime_stats_visualized_doncaster_20222025/",
+      "sub": "dataisbeautiful",
+      "author": "drunkstoned94",
+      "score": 1,
+      "numComments": 1,
+      "date": "2025-07-20",
+      "text": "I used official monthly data from [Police.uk](http://Police.uk) to visualize how different types of crime have changed over time in Doncaster, a city in South Yorkshire, England. This bar chart race shows monthly shifts in crime types from mid-2022 to mid-2025. Made it in Flourish to help turn raw public data into something easier to digest. I’m planning to do other UK cities next. Let me know what you think. Full version here if interested: [https://www.youtube.com/watch?v=R1Mtjo0KW\\_o](https://www.youtube.com/watch?v=R1Mtjo0KW_o) Data source: [https://data.police.uk/](https://data.police.uk/) "
+    },
+    {
+      "id": "1leqpd4",
+      "title": "Bar Chart Race – Top 10 Countries by GDP per Capita (PPP) from 1789 to 2022 [OC]",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1leqpd4/bar_chart_race_top_10_countries_by_gdp_per_capita/",
+      "sub": "dataisbeautiful",
+      "author": "Fertitad",
+      "score": 0,
+      "numComments": 0,
+      "date": "2025-06-18",
+      "text": "Hey everyone! I'm launching my new YouTube channel \"Visualized\", focused on animated data visualizations about history, economics, and global trends. My first video premieres tomorrow (Thursday) at 11:00 AM ET / 08:00 AM PT (for American viewers) and 16:00 BST (UK), 17:00 CEST (Madrid/Paris time), and it's a bar chart race showing the top 10 countries by PPP-adjusted GDP per capita from 1789 to 2022. Based on data from the Maddison Project Database, the video visualizes how global wealth and standards of living evolved across revolutions, wars, and industrial shifts. Premiere Link:[https://www.youtube.com/watch?v=MmJCrorZCOA](https://www.youtube.com/watch?v=MmJCrorZCOA) I’d love to hear your thoughts or feedback. And if you enjoy this kind of content, subscribing would really help. More videos are on the way covering earlier periods too. Thanks a lot for checking it out! "
+    }
+  ]
+}

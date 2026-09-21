@@ -1,0 +1,196 @@
+{
+  "query": "burndown chart sprint",
+  "days": 900,
+  "count": 21,
+  "results": [
+    {
+      "title": "Is Meta destroying its engineering organization?",
+      "url": "https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering",
+      "hn": "https://news.ycombinator.com/item?id=48566295",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-17T05:53:45Z",
+      "text": "I once worked at a place where a VP in charge of software teams would look at sprint reports in JIRA, and complained if the burndown charts didn&#x27;t look similar to the sample, ideal trendline. Managers would be chewed up when their team didn&#x27;t have a pretty enough chart. So you might not be surprised to hear that ultimately the tickets were doctored to meet the demands of the chart, whether any actual work actually ever closed when the ticket said."
+    },
+    {
+      "title": "A History of IDEs at Google",
+      "url": "https://laurent.le-brun.eu/blog/a-history-of-ides-at-google",
+      "hn": "https://news.ycombinator.com/item?id=48125405",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-13T18:11:44Z",
+      "text": "Visibility doesn&#x27;t always get you value though. See the many companies that unify their ticketing to something like Jira, and end up running reports on in. The actual accuracy of the aggregates is rarely great, and instead leads to people doing &quot;jira optimization&quot; to make reports look good. I once worked at a place where VPs were looking at sprint burndown charts, and asked what happened if the line didn&#x27;t look a lot like the line expected by JIRA. The telemetry is therefore often a curse, as any metric becomes a target. How many companies today have KPIs about having autom"
+    },
+    {
+      "title": "In 2025, venture capital can't pretend everything is fine any more",
+      "url": "https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/",
+      "hn": "https://news.ycombinator.com/item?id=43954406",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-05-11T15:19:57Z",
+      "text": "I must say I do feel the newest GPT Versions are vastly better than the old ones. I found GPT-3 Stuff to be an interesting toy but too often it was too wrong and too stubborn to be useful. I use the 4.0+ Version regularly know. Just recently I took a screenshot from a jira Burndown chart to write a description of the sprint progress for our stakeholders. Did it in one shot from a screenshot and got it right."
+    },
+    {
+      "title": "400 reasons to not use Microsoft Azure",
+      "url": "https://azsh.it",
+      "hn": "https://news.ycombinator.com/item?id=43218670",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-03-01T12:38:05Z",
+      "text": "I find it terrible, but it&#x27;s what we have. Boards works for basic Kanban projects, but if you want to dwell into scrum stuff like sprints, burndown charts, etc, it&#x27;s very bad and cumbersome. You&#x27;ll have to do a lot of stuff manually that Jira does automatically. Wiki... It&#x27;s not good. It&#x27;s extremely slow, and lacks a ton of features that Confluence has. Pipelines is godawful, and has been suffering severely from a migration from their &quot;Classic&quot; pipelines to YAML. The funny part is that if you go in depth into YAML pipelines, you&#x27;ll notice there&#x27;s a "
+    },
+    {
+      "title": "Predictions Scorecard, 2025 January 01",
+      "url": "https://rodneybrooks.com/predictions-scorecard-2025-january-01/",
+      "hn": "https://news.ycombinator.com/item?id=42653509",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-01-10T07:36:12Z",
+      "text": "&gt; Are you saying devs aren&#x27;t part of the workers being laid off? No, they are saying that the reason for the layoffs is not AI, it is financial changes making devs too expensive. &gt; If that is true then you need way less devs. This does not follow. First of all, companies take a long time to measure dev output, it&#x27;s not like you can look at a burn down chart over two sprints and decide to fire half the team because it seems they&#x27;re working twice as fast. So any productivity gains will show up as layoffs only after a long time. Secondly, dev productivity is very rarely signi"
+    },
+    {
+      "title": "Why Scrum is stressing you out",
+      "url": "https://rethinkingsoftware.substack.com/p/why-scrum-is-stressing-you-out",
+      "hn": "https://news.ycombinator.com/item?id=41559478",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-09-16T19:15:11Z",
+      "text": "Yeah, I totally agree in theory, it doesn&#x27;t really matter what methodology you use, at the end of the day dev management is just a means to an end. The real issue comes from middle management folks who conjure up buzzwords whenever they need to justify whatever they think the team should do. Don&#x27;t know how to structure tasks but want to look like you&#x27;re in control to the boss&#x27;s boss? Just throw up a Kanban board with tiny tickets and a burndown chart trending down. Sprinkle in some Agile keywords in the management reports and call it a day. And let&#x27;s not forget that by"
+    },
+    {
+      "title": "Why Scrum is stressing you out",
+      "url": "https://rethinkingsoftware.substack.com/p/why-scrum-is-stressing-you-out",
+      "hn": "https://news.ycombinator.com/item?id=41555601",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-09-16T12:56:35Z",
+      "text": "&gt; burn-down &#x2F; velocity charts You need some coarse odometer to know where the finish line is. Burn-up charts are a reasonable input to that and can be very low effort. Just knowing where you hit the inflection point between new-issues added to a milestone vs. issues resolved is useful. If you can replace a burn up chart with tangible test results matrix or similar - even better. &gt; retrospectives I have never found per-sprint retros useful, either. I guide teams to do a retro when the issues raised in the previous retro are resolved. WIP control FTW. &gt; poker sessions In my experie"
+    },
+    {
+      "title": "Why Scrum is stressing you out",
+      "url": "https://rethinkingsoftware.substack.com/p/why-scrum-is-stressing-you-out",
+      "hn": "https://news.ycombinator.com/item?id=41555524",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-09-16T12:45:58Z",
+      "text": "Burn down charts, team velocity, and story points. They all exist to give software development the illusion of predictability, but saying that a project should take “x sprints” is just setting a deadline with extra steps."
+    },
+    {
+      "title": "How to Lead Your Team When the House Is on Fire",
+      "url": "https://peterszasz.com/how-to-lead-your-team-when-the-house-is-on-fire/",
+      "hn": "https://news.ycombinator.com/item?id=41554838",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-09-16T11:08:47Z",
+      "text": "My main point of dislike is that I have never experienced the actual practices called &quot;Agile&quot; on the ground by the consultants&#x2F;managers introducing them bearing any relation to the oft-quoted Agile manifesto. &quot;Value individuals and interactions over processes and tools&quot;, says the Agile consultant as they open the meeting; they then proceed to shut down any interaction between individuals that is not on the agenda, or that is on the agenda but takes longer than a sentence or two. &quot;Value working software over comprehensive documentation&quot;, says the Agile consult"
+    },
+    {
+      "title": "Why Scrum is stressing you out",
+      "url": "https://rethinkingsoftware.substack.com/p/why-scrum-is-stressing-you-out",
+      "hn": "https://news.ycombinator.com/item?id=41545157",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-09-15T04:13:52Z",
+      "text": "Good points, and eye-rolling stuff for teams thaqt don&#x27;t understand the intricacies. For instance: - burn-down &#x2F; velocity charts: Teams use this at standups to make sure their sprint isn&#x27;t drifting. That&#x27;s why a burn-down should be tracked in hours and not points. With points, the data isn&#x27;t actionable in a reasonable amount of time. The the team sees a problem, they might make use of a pre-determined emergency procedure to address it. - retrospectives: Yeah most retrospectives are horrible. Retros should be like post rocket test - examine your telemetry deltas to see "
+    },
+    {
+      "title": "If Scrum is so great",
+      "url": "https://substack.com/@rethinkingsoftware/note/c-66001129",
+      "hn": "https://news.ycombinator.com/item?id=41294103",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-08-19T19:54:32Z",
+      "text": "My take on this is that devs, in general, are managed by people who are still completely clueless about technology in 2024. There are surely exceptions (FAANG, etc.), but I&#x27;ve worked with my fair share of managers who couldn&#x27;t fathom the work required to add a feature. It&#x27;s always &quot;just a button&quot;. Sales are easier to understand. You can describe it with words. Us devs use gibberish that nobody understands. Scrum gives them tools to understand if there is progress or not: Is the burndown chart nicely on a downward trend? Are tickets closed? Is the sprint &quot;green&quo"
+    },
+    {
+      "title": "Story points are pointless, measure queues",
+      "url": "https://www.brightball.com/articles/story-points-are-pointless-measure-queues",
+      "hn": "https://news.ycombinator.com/item?id=40981647",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-07-17T00:48:26Z",
+      "text": "Ugh, yes, thank you. I wish management types would get it through their heads that you just cannot reliably estimate most software development projects. (I said &quot;most&quot; -- there are of course exceptions.) You can&#x27;t evaluate employee performance by looking at a burn-down chart. You can&#x27;t show pretty graphs at the end of every sprint and expect that to predict the future of the project. What you can do is set a reasonable deadline with your team, have them work toward it, and allow them to adjust your expectations on what exactly you will be getting by that deadline. Yes, esta"
+    },
+    {
+      "title": "Story points are pointless, measure queues",
+      "url": "https://www.brightball.com/articles/story-points-are-pointless-measure-queues",
+      "hn": "https://news.ycombinator.com/item?id=40980225",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-07-16T20:51:52Z",
+      "text": "Story points aren&#x27;t time (as OP states). They&#x27;re relative complexity, and uncertainty (hence the fibbonacci sequence building uncertainty in to larger numbers). And stories should be able to sized as big numbers. I&#x27;ve never been on a team comfortable with more than a 7, at least not since my first agile experience where we all took an agile&#x2F;scrum training together for a few days. We&#x27;d frequently give things like 21 or 30 or 50 points, as appropriate. That&#x27;s the only place I&#x27;ve ever seen a burndown chart that looked like it should. Everywhere else, it&#x27;s f"
+    },
+    {
+      "title": "Kanban vs. Scrum: What's the difference?",
+      "url": "https://www.leiga.com/post/kanban-vs-scrum",
+      "hn": "https://news.ycombinator.com/item?id=40875844",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-07-04T15:54:03Z",
+      "text": "In my experience as a dev... Kanban is a useful tool that helps teams organise work, break it down, be flexible. It helps the whole team to see what needs doing, identify dependencies and where to help each other out. Scrum OTOH looks similar on the surface, but is a form of micromanagement and becomes a system to be gamed. Project Managers become more concerned with velocity and burndown charts and whether specific stories were done in specific sprints or within the specific story points, than whether actual useful productive work is happening that moves the organisation forward. In the versi"
+    },
+    {
+      "title": "Ask HN: What bothers you most about Scrum and how could it be fixed?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=40818757",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-06-28T08:29:28Z",
+      "text": "Scrum becomes the process that warps everything else about developing software at the organization. It is easily the strongest influence on how devs do their work day to day in most jobs I have had. And that influence is building quotas into every day, week, and sprint. I have seen (and often done myself) all of the following X items to avoid Y consequences in Scrum. - Not written unit tests to get a ticket merged under the sprint timeline. We eventually turned them off at one org as a hindrance to merging tickets. Seriously, our unit test runner failed and to keep the sprint on track we disab"
+    },
+    {
+      "title": "Innovation heroes are a sign of a dysfunctional organization",
+      "url": "https://steveblank.substack.com/p/why-innovation-heroes-are-a-sign",
+      "hn": "https://news.ycombinator.com/item?id=40752475",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-06-21T18:51:02Z",
+      "text": "&gt; we had a sprint review where some &quot;Senior Project Manager&quot; That wasn&#x27;t really affiliated with our project but was some manager higher up was mad that us opening up new tickets mid sprint and closing them was ruining the org level burn down charts and expected delivery. This is giving me flashbacks of a company I worked for (for a very short period of time). For some reason, they decided that planning accuracy was the most important metric for the software organization. This was the headline metric they talked about in executive meetings and it was primarily how the program "
+    },
+    {
+      "title": "Innovation heroes are a sign of a dysfunctional organization",
+      "url": "https://steveblank.substack.com/p/why-innovation-heroes-are-a-sign",
+      "hn": "https://news.ycombinator.com/item?id=40751958",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-06-21T17:48:20Z",
+      "text": "&gt; Everyone should have been thrilled by this development! Well we had a sprint review where some &quot;Senior Project Manager&quot; That wasn&#x27;t really affiliated with our project but was some manager higher up was mad that us opening up new tickets mid sprint and closing them was ruining the org level burn down charts and expected delivery. Why should they be thrilled that you were running on Kanban but claiming to do otherwise and therefore ruining the burn down charts?"
+    },
+    {
+      "title": "Innovation heroes are a sign of a dysfunctional organization",
+      "url": "https://steveblank.substack.com/p/why-innovation-heroes-are-a-sign",
+      "hn": "https://news.ycombinator.com/item?id=40751748",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-06-21T17:26:42Z",
+      "text": "That is amazing. I worked with a (different?) finance company that did the same thing - every team was judged on their burndown charts. From what I saw, it did no good. Teams simply did not use tickets to track work. If a story surfed sprints, its “ticket” was closed at the end of one sprint and a new one was opened for next. If a priority bug came in mid-sprint, we simply worked on it without a ticket."
+    },
+    {
+      "title": "Innovation heroes are a sign of a dysfunctional organization",
+      "url": "https://steveblank.substack.com/p/why-innovation-heroes-are-a-sign",
+      "hn": "https://news.ycombinator.com/item?id=40751493",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-06-21T17:01:37Z",
+      "text": "My goto example of a dysfunctional and bureaucratic organization is an example I saw in a finance company I worked for. I was a on team that we were doing a major project. We basically ran Kanban but had to run &quot;sprints&quot; so we chose 4 week sprints to get it out of the way and we put everything on the board we had to get done that month to stay on track. Our pipeline was setup in such a way that you were required to have a jira ticket to push a commit. We were really crushing our timeline, doing 2x the work we were expected, a really great team honestly. But we opened up bugs and addi"
+    },
+    {
+      "title": "My Address Doesn't Fit, and Other Complaints",
+      "url": "https://thecodist.com/my-address-doesnt-fit-and-other-complaints/",
+      "hn": "https://news.ycombinator.com/item?id=40723404",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-06-19T00:11:49Z",
+      "text": "I completely agree with you that this is maddening and increasingly common in all walks of life. The situation is not getting better either. Having worked for companies that do this kind of contract work I can imagine how this could occur: The state puts out an RFP (Request for Proposal) written by someone completely removed from the technical aspects and actual work to be done. After a bunch of BS, some company gets awarded the contract and begin work. They quickly find that what was requested in the RFP doesn&#x27;t make sense and they have to either drift from the exact requirements of the "
+    },
+    {
+      "title": "Some Thoughts as I Sit Here in Another Standup",
+      "url": "https://www.lloydatkinson.net/posts/2024/some-thoughts-as-i-sit-here-in-another-standup/",
+      "hn": "https://news.ycombinator.com/item?id=40558254",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-06-03T00:28:57Z",
+      "text": "This sounded so familiar, I actually paused and looked at the blogger&#x27;s name to see whether he was not an ex-colleague, perhaps. If had exactly the same experience with Monday (last day of sprint) that worked on my nerves so much that I could not pick up another ticket from the backlog because it will upset someone&#x27;s burndown charts"
+    }
+  ]
+}

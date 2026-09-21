@@ -1,0 +1,207 @@
+{
+  "query": "code screenshot",
+  "days": 720,
+  "count": 25,
+  "results": [
+    {
+      "title": "Show HN: Forexfin – Trading calculators, alerts and a journal in one place",
+      "url": "https://forexfin.tech/",
+      "hn": "https://news.ycombinator.com/item?id=49770525",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-19T22:12:18Z"
+    },
+    {
+      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
+      "url": "https://github.com/trycua/cua",
+      "hn": "https://news.ycombinator.com/item?id=49767564",
+      "points": 89,
+      "comments": 10,
+      "createdAt": "2026-09-19T15:52:51Z"
+    },
+    {
+      "title": "I got tired of taking screenshots and explaining everything to AI agents",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49759108",
+      "points": 5,
+      "comments": 2,
+      "createdAt": "2026-09-18T19:35:22Z"
+    },
+    {
+      "title": "Show HN: SIM Screener adds device frames to screenshots and recordings",
+      "url": "https://simscreener.com",
+      "hn": "https://news.ycombinator.com/item?id=49758063",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-18T18:11:29Z"
+    },
+    {
+      "title": "Switch to Codex seamlessly when Claude Code is used up",
+      "url": "https://raw.githubusercontent.com/zqiren/Orbital/main/docs/screenshots/handoff-codex-continue.gif",
+      "hn": "https://news.ycombinator.com/item?id=49740917",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-17T14:03:23Z"
+    },
+    {
+      "title": "Show HN: An agent-skill to generate preview, AppStore screenshots and campaigns",
+      "url": "https://github.com/imshaikot/app-preview-craft-skill",
+      "hn": "https://news.ycombinator.com/item?id=49739407",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-17T11:47:51Z"
+    },
+    {
+      "title": "Show HN: Deiko – point at your screen, talk, and hand the brief to your agent",
+      "url": "https://deiko.app/",
+      "hn": "https://news.ycombinator.com/item?id=49731089",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-16T18:34:33Z"
+    },
+    {
+      "title": "Show HN: Skill to generate change preview pages",
+      "url": "https://github.com/steveharrison/change-preview",
+      "hn": "https://news.ycombinator.com/item?id=49726919",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-16T13:41:44Z"
+    },
+    {
+      "title": "Show HN: Biloba: fast and stable Chrome-based browser tests in Go and Vitest",
+      "url": "https://github.com/onsi/biloba",
+      "hn": "https://news.ycombinator.com/item?id=49699819",
+      "points": 10,
+      "comments": 1,
+      "createdAt": "2026-09-14T16:41:52Z"
+    },
+    {
+      "title": "Show HN: Built myself a super YouTube post-prod studio",
+      "url": "https://twitter.com/xucian_/status/2096626717531992342",
+      "hn": "https://news.ycombinator.com/item?id=49611999",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-08T15:44:13Z"
+    },
+    {
+      "title": "Show HN: Whatthemovie.com, a movie-still guessing game",
+      "url": "https://whatthemovie.com/",
+      "hn": "https://news.ycombinator.com/item?id=49587692",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-06T15:50:58Z"
+    },
+    {
+      "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+      "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+      "hn": "https://news.ycombinator.com/item?id=49550375",
+      "points": 381,
+      "comments": 133,
+      "createdAt": "2026-09-03T14:28:18Z"
+    },
+    {
+      "title": "Show HN: Tenux – Access your computer from your phone (terminal, files, browser)",
+      "url": "https://tenux.dev",
+      "hn": "https://news.ycombinator.com/item?id=49524367",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-01T16:38:10Z"
+    },
+    {
+      "title": "Show HN: Slopyard – a textboard inspired gallery for vibecoded tools",
+      "url": "https://slopyard.net/",
+      "hn": "https://news.ycombinator.com/item?id=49522834",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-01T14:56:44Z"
+    },
+    {
+      "title": "Show HN: ScriptSpool – Create code animations in the browser",
+      "url": "https://scriptspool.pixzens.com/en",
+      "hn": "https://news.ycombinator.com/item?id=49505146",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-31T03:04:57Z"
+    },
+    {
+      "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+      "url": "https://github.com/dragthelake/ambient-context",
+      "hn": "https://news.ycombinator.com/item?id=49429095",
+      "points": 62,
+      "comments": 27,
+      "createdAt": "2026-08-25T04:33:24Z"
+    },
+    {
+      "title": "Show HN: Hands-Rust MCP/CLI that sees the Windows desktop and clicks real Chrome",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49405405",
+      "points": 5,
+      "comments": 2,
+      "createdAt": "2026-08-23T01:16:43Z"
+    },
+    {
+      "title": "Show HN: CopyLasso, a free local screen OCR app for macOS",
+      "url": "https://copylasso.com/",
+      "hn": "https://news.ycombinator.com/item?id=49365721",
+      "points": 9,
+      "comments": 0,
+      "createdAt": "2026-08-19T18:56:31Z"
+    },
+    {
+      "title": "Show HN: MCP app for Android, drive apps via AI (no root, PII redacted locally)",
+      "url": "https://github.com/danielealbano/android-remote-control-mcp/",
+      "hn": "https://news.ycombinator.com/item?id=49362047",
+      "points": 6,
+      "comments": 2,
+      "createdAt": "2026-08-19T14:23:13Z"
+    },
+    {
+      "title": "Show HN: Minus HDMI hardware ad-blocker with local vision model",
+      "url": "https://github.com/garagehq/Minus-streaming-stick",
+      "hn": "https://news.ycombinator.com/item?id=49348016",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-08-18T16:19:00Z"
+    },
+    {
+      "title": "Launch HN: Bullet (YC S26) – A Faster Coding Agent",
+      "url": "https://www.codewithbullet.com",
+      "hn": "https://news.ycombinator.com/item?id=49283063",
+      "points": 121,
+      "comments": 89,
+      "createdAt": "2026-08-13T08:14:30Z"
+    },
+    {
+      "title": "Show HN: Kery – comments on your PR with a video of the feature working",
+      "url": "https://github.com/Kery-HQ/Kery",
+      "hn": "https://news.ycombinator.com/item?id=49273216",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-08-12T14:45:46Z"
+    },
+    {
+      "title": "Show HN: Remaking Unreal engine in Rust for coding agents",
+      "url": "https://machinesatplay.com",
+      "hn": "https://news.ycombinator.com/item?id=49234818",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-08-09T19:28:52Z"
+    },
+    {
+      "title": "Show HN: My journey into game development with AI",
+      "url": "https://playdowntime.com/",
+      "hn": "https://news.ycombinator.com/item?id=49168567",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-04T13:19:54Z"
+    },
+    {
+      "title": "Show HN: Isolade, a local-first coding agent workbench with secretless microVMs",
+      "url": "https://github.com/isolade/isolade",
+      "hn": "https://news.ycombinator.com/item?id=49168002",
+      "points": 3,
+      "comments": 4,
+      "createdAt": "2026-08-04T12:42:07Z"
+    }
+  ]
+}

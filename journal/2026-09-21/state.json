@@ -1,0 +1,43 @@
+{
+  "day": 2,
+  "date": "2026-09-21",
+  "useCase": "Before/after benchmark pictures that library, compiler and dev-tool maintainers re-publish every release, from the rows their bench harness already prints",
+  "who": "Maintainers of libraries, compilers, runtimes and dev tools who publish a performance claim every release; found on GitHub READMEs, CI bot PRs and Hacker News.",
+  "sources": [
+    "https://github.com/benchmark-action/github-action-benchmark",
+    "https://github.com/sharkdp/hyperfine/tree/master/scripts",
+    "https://github.com/evanw/esbuild",
+    "https://github.com/oxc-project/bench-resolver/pull/184",
+    "https://github.com/zackees/llvm-ld/issues/32",
+    "https://news.ycombinator.com/item?id=49370832",
+    "https://news.ycombinator.com/item?id=49770064",
+    "https://news.ycombinator.com/item?id=30268920",
+    "https://news.ycombinator.com/item?id=21535972",
+    "https://news.ycombinator.com/item?id=49727511"
+  ],
+  "tags": [
+    "benchmark",
+    "regression",
+    "before-after",
+    "variance",
+    "readme",
+    "still"
+  ],
+  "scout": "done",
+  "pack": "dev",
+  "slug": "bench-delta",
+  "title": "Bench Delta",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "c",
+  "build": "done",
+  "decision": "ship",
+  "pick": "c",
+  "critique": "done",
+  "ship": "done"
+}

@@ -1,0 +1,232 @@
+{
+  "query": "benchmark graph",
+  "days": 540,
+  "count": 25,
+  "results": [
+    {
+      "title": "Brood War Bench",
+      "url": "https://bw.swerdlow.dev/report",
+      "hn": "https://news.ycombinator.com/item?id=49774166",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T09:38:26Z",
+      "text": "This is a very interesting benchmark, and I think it has a lot of potential to make the speed of a model quantifiable. I&#x27;m often asking myself is it better to use higher or lower effort levels, or to maybe drop down to a &quot;dumber&quot; but faster model. And so using a real-time based competition as a benchmark could shed some light on this, I think. In this vein, here are what I would love to see added in this benchmark: - Include Google&#x27;s Gemini models. I keep hearing Gemini being praised for its speed, and I would like to see whether that gives it a big enough edge over the big"
+    },
+    {
+      "title": "The scourge of x86 emulation",
+      "url": "https://fex-emu.com/Scourge-of-emulation/",
+      "hn": "https://news.ycombinator.com/item?id=49757606",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-18T17:34:27Z",
+      "text": "Multiple separate questions here. First, is a measured improvement actually real or just an artifact of noise? Second, if it is real, is 3% anywhere close to the true value? Third, if 3% is real, is it an important difference? I&#x27;m just commenting on the third one. If 3% is real, it&#x27;s important. I&#x27;m inclined to believe there&#x27;s a real improvement. They made a lot of different measurements. If the measured improvement was a result of noise, you&#x27;d expect a lot of variation an a lot of measurements where TSA was actually faster, and then 3% was the average of that variation"
+    },
+    {
+      "title": "Show HN: Share your AI Setup, Learn from others",
+      "url": "https://mysetup.ai/",
+      "hn": "https://news.ycombinator.com/item?id=49749222",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-18T01:38:34Z",
+      "text": "It’s called Autobot, it’s designed to get as close as I could reasonably get to a real world Iron Man Jarvis. WHAT IT DOES OSS&#x2F;MIT Harness that helps agentic tasks run for up to 4 days using without performance degradation. Designed to work really well in native, conversational voice mode. Does a good job with knowledge work, managing computer use “leases” in a way that avoids conflicts across sub agents.. or deploying an entire AWS infrastructure pattern from zero and launching 100 different VM images. HOW IT DOES IT Uses a canonical event ledger, heartbeat (for persistence by low cost o"
+    },
+    {
+      "title": "Intelligence per Watt: Measuring Intelligence Efficiency of Local AI",
+      "url": "https://arxiv.org/abs/2511.07885",
+      "hn": "https://news.ycombinator.com/item?id=49724518",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-16T10:41:01Z",
+      "text": "this is the metric i&#x27;ve been waiting for. we run everything local (ollama + neo4j) for compliance reasons, so &#x27;quality per watt&#x27; is literally our budget line. one data point from our setup: qwen2.5:3b on an m2 macbook handles nl-to-cypher for simple graph schemas at ~3-5s per answer, and the energy cost is a rounding error compared to shipping the same queries to a frontier api. the hard part was never the model though, it was parsing pdfs locally without a vision model. would love to see parsing&#x2F;ocr covered in future benchmarks."
+    },
+    {
+      "title": "Introducing System One Models and Jev",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "hn": "https://news.ycombinator.com/item?id=49719329",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-15T21:48:27Z",
+      "text": "The eval is baffling me &gt; we assume there is a correct compute graph (a “workflow” represented in code) and use the predictions of the largest, smartest, and most expensive external models as reference probabilities. ... Rephrased: every model gets the same workflow. We test how they compare to the average of the smartest models (in this case, Astra and Fable). They assume there is a correct graph, but they don&#x27;t compare to that, they compare to the average of the smarts models? So the smartest models are getting it wrong but you compare that anyway as a benchmark? So the outcome is &q"
+    },
+    {
+      "title": "Rune is now open source",
+      "url": "https://rune.build/blog/rune-is-now-open-source",
+      "hn": "https://news.ycombinator.com/item?id=49665723",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T21:36:44Z",
+      "text": "If you&#x27;re going to run a benchmark, at least post the results. I was planning on writing up a different blog post about the terminal optimization journey, but I actually used `kitten __benchmark__ --render` quite a lot to optimize it: rune --version Rune v1.2.1 (HEAD is 40bf9cc1) Results: Only ASCII chars : 1.13s @ 177.2 MB&#x2F;s Unicode chars : 1.44s @ 123.2 MB&#x2F;s CSI codes with few chars : 2.95s @ 33.9 MB&#x2F;s Long escape codes : 6.25s @ 125.5 MB&#x2F;s Images : 2.76s @ 193.1 MB&#x2F;s &#x2F;Applications&#x2F;Alacritty.app&#x2F;Contents&#x2F;MacOS&#x2F;alacritty --version alacrit"
+    },
+    {
+      "title": "RTK reports token savings, but our cost benchmarks disagree",
+      "url": "https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/",
+      "hn": "https://news.ycombinator.com/item?id=49665630",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T21:29:11Z",
+      "text": "I fully agree. Some of these tautologies, RAGs or RAG adjacent ideas feel like there is real potential. I know in my own testing adding a knowledge graph provided cost saving benefits. Ultimately, the problem is people aren&#x27;t actually benchmarking any of these ideas or if they are its via an extremely misleading methodology. For example, headroom violates cache frequently, nullifying any potential savings it could have; but does their benchmarks show that? Nope. [1] As an aside, I wonder how many days are we away from Codex or Claude taking all the &quot;read&quot; tool calls and re-assem"
+    },
+    {
+      "title": "So you want to use OpenRouter?",
+      "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
+      "hn": "https://news.ycombinator.com/item?id=49657212",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T12:22:16Z",
+      "text": " if you want to control the routing, you&#x27;d lock down providers I don&#x27;t want to control routing. I want the model to work how the giant, prominent &quot;BENCHMARKS&quot; section says it works, not randomly have a 100x error rate. If OpenRouter is a marketplace to pick a provider while avoiding huge problems, it is terrible at that job. It surfaces literally none of that info in the top-level list, the graphs below are mislabeled and useless at best, and doesn&#x27;t notify you of this horrifying situation anywhere, even in passing. There&#x27;s not even a way to compare providers, AFA"
+    },
+    {
+      "title": "Show HN: Syq – copy files between machines fast (better than rsync)",
+      "url": "https://greaber.github.io/syq/",
+      "hn": "https://news.ycombinator.com/item?id=49649211",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-10T19:43:10Z",
+      "text": "&quot;Tiny&quot; speed improvement? According to the benchmarks, it&#x27;s almost 10x the speed of rsync! Really serious benchmarks never contain any information about network characteristics, options used or buffer sizes, and these are indeed very serious. The &quot;details&quot; button produces huge bar graphs. No disappointment there. Absolutely looking forward to 10x my speed, perhaps even transferring gigabytes per second on my gigabit link."
+    },
+    {
+      "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+      "url": "https://cognition.com/blog/swe-2",
+      "hn": "https://news.ycombinator.com/item?id=49649017",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-10T19:24:03Z",
+      "text": "Their benchmark used to show other metrics, like output tokens and time, but now only shows cost: https:&#x2F;&#x2F;cognition.com&#x2F;frontiercode Which is too bad, since all of the gains here appear to be from massively reduced output tokens? The model SWE-2 is based on, Kimi K3, is cheaper per token than Sol, but costs more per task (ArtificialAnalysis) due to using way more tokens. Whereas, based on the graphs, SWE-2 appears even more token-efficient than Sol! That might have been worth showing off, if true."
+    },
+    {
+      "title": "How well do agents use test/verification techniques?",
+      "url": "https://danluu.com/agentic-testing/",
+      "hn": "https://news.ycombinator.com/item?id=49610972",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-08T14:39:28Z",
+      "text": "Wonderful data point! It&#x27;s been interesting investing into different classic verification &amp; testing methods for gfql (CPU&#x2F;GPU graph queries on dataframes) and Louie (agentic investigation harness) over the last couple of years with different model &amp; harness generations. The ones below are fewer but more longitudinal efforts compared to the shallower ones Dan worked through, and seem largely consistent: Overall, my takeaway on standard software has been LLMs favor smart, guided fuzzing, natural language specifications deployed as iterative parallel adverserial AI review (e.g.,"
+    },
+    {
+      "title": "GPT-6 Astra on OpenRouter",
+      "url": "https://openrouter.ai/openai/gpt-6-astra",
+      "hn": "https://news.ycombinator.com/item?id=49592281",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-07T00:08:05Z",
+      "text": "How did you decide to go from people whose jobs it is to optimize an LLM for a very specific benchmark that is mostly a fun curiosity at best... to employing the services of data annotation services for a rich set of icons and graphics? You really have to go out of your way to completely misrepresent what&#x27;s being claimed here in order to make such a wildly off-topic reply."
+    },
+    {
+      "title": "Recreating Minecraft Is Not a Benchmark",
+      "url": "https://kuber.studio/blog/Reflections/Recreating-Minecraft-is-Not-a-Benchmark",
+      "hn": "https://news.ycombinator.com/item?id=49589096",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-06T18:00:30Z",
+      "text": "&gt; Some models are genuinely trained to be better at some domain, such as 2D layouts or vector graphics in this case. It all depends on particular recipes and datasets. I&#x27;d argue this is inherently true for every single model today, none of them have completely generalized to be able to solve any task, so whenever people come up with new evaluations and benchmarks, all the models score relatively poorly initially, until researchers start to tune the models to do well in the domains that the evaluations and benchmarks tests, and then we see strong improvements in that domain, which then "
+    },
+    {
+      "title": "Recreating Minecraft Is Not a Benchmark",
+      "url": "https://kuber.studio/blog/Reflections/Recreating-Minecraft-is-Not-a-Benchmark",
+      "hn": "https://news.ycombinator.com/item?id=49588997",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-06T17:50:38Z",
+      "text": "This sounds unconvincing, because a) pelican test is subjective, there&#x27;s simply nothing to leak as it has no available direct answers and maybe an extremely faint preference signal, and b) the same small models actually do perform well when you change the subject. Some models are genuinely trained to be better at some domain, such as 2D layouts or vector graphics in this case. It all depends on particular recipes and datasets. Which is the actual reason these tests are poor as vibe checks: they don&#x27;t do anything to disentangle generalization, memorization, and training preference. On"
+    },
+    {
+      "title": "GPT-6 Astra on OpenRouter",
+      "url": "https://openrouter.ai/openai/gpt-6-astra",
+      "hn": "https://news.ycombinator.com/item?id=49575465",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-05T11:18:53Z",
+      "text": "This is one of those benchmarks I don’t mind if they benchmax because it would mean models are actually good at creating svg graphics."
+    },
+    {
+      "title": "Artificial Analysis Intelligence Index v4.2",
+      "url": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2",
+      "hn": "https://news.ycombinator.com/item?id=49574713",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-05T09:07:22Z",
+      "text": "The Epoch Capabilities Index uses an Elo-based aggregation method that dynamically adjusts for benchmark difficulty and they put error bars on their scores, both of which put them miles ahead of Artificial Analysis: https:&#x2F;&#x2F;epoch.ai&#x2F;eci?view=graph&amp;tab=leaderboard "
+    },
+    {
+      "title": "Can AI design circuit boards yet?",
+      "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
+      "hn": "https://news.ycombinator.com/item?id=49574560",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-05T08:44:57Z",
+      "text": "&gt; This has worked much better for us than asking a model to draw lines in a GUI. It also means the benchmark can spend less time testing computer use and more time testing electronics. this is key I think - I use it for graphics tasks - it sucks at graphical environments - always use some text based representation, not really surprising I suppose. chatgpt even suggested I&#x27;ll use the text representation, claude said how about I give you svg and you convert it, they seem to know."
+    },
+    {
+      "title": "GPT-6 Astra makes major gains in the Artificial Analysis Coding Agent Index",
+      "url": "https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra",
+      "hn": "https://news.ycombinator.com/item?id=49557836",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-03T22:11:21Z",
+      "text": "It&#x27;s sub-Fable 5 on mirror code: https:&#x2F;&#x2F;epoch.ai&#x2F;benchmarks&#x2F;mirrorcode?view=graph&amp;tab=leader... "
+    },
+    {
+      "title": "Matrox: Graphics for Professionals",
+      "url": "https://www.abortretry.fail/p/matrox",
+      "hn": "https://news.ycombinator.com/item?id=49510344",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-31T14:39:51Z",
+      "text": "&gt;Millennium no textures, alpha blending, transparency, bilinear filtering &gt;Mystique ... transparency lookup table no alpha blending, transparency, bilinear filtering. &quot;Transparency Lookup Table&quot; was a corpo speak code for color keying and a checkerboard mask that would stipple half the texture on top of whatever was there before &gt; G200. These cards supported ... OpenGL ... use of an OpenGL to Direct3D wrapper which hurt performance Hurt compatibility first, performance second. Proper OpenGL driver shipped long after 2000 when G200 was already obsolete &gt;G200 ... performanc"
+    },
+    {
+      "title": "Show HN: Hillock: Local neuro-symbolic memory engine in <1.2GB VRAM",
+      "url": "https://github.com/roandejager/Hillock",
+      "hn": "https://news.ycombinator.com/item?id=49501223",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-30T18:12:02Z",
+      "text": "Hey HN! I am Roan, and I built Hillock: a 100% local, offline neuro-symbolic memory engine built for consumer hardware (runs in &lt;1.2 GB VRAM on a GTX 1070 or on pure CPU laptops). Why not standard vector RAG? Dense vector databases and 8B+ extraction models are heavy on local hardware, suffer from semantic drift, and still hallucinate when out of context. Hillock explores a deterministic alternative: SQLite Knowledge Graph: Stores ground-truth facts as relational Subject-Predicate-Object triples (zero vector drift). Hebbian Plasticity Engine: Gradient-free associative learning across turns "
+    },
+    {
+      "title": "GUIs should be fully keyboard-driven",
+      "url": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
+      "hn": "https://news.ycombinator.com/item?id=49489408",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-29T12:33:34Z",
+      "text": "This is an interesting ACID test, because at its root hotkeys as they are usually called, are a graph structure. And LLMs struggle a lot with kind of complexity - as we all do at a certain level, if we don&#x27;t visualize it i.e. using paper and pencil to paint a picture. Then it is the smoothest thing ever. But again, then you test it - nice loop for a LLM. I had no success so far using LLM to sketch my database schema for graphs. I do it by hand and recommend it. Later changes can be nasty and ugly. Changes will occur, but even dry runs make Claude, ChatGPT etc. go rookie level in what they"
+    },
+    {
+      "title": "The End of Programming",
+      "url": "https://pauldix.com/the-end-of-programming",
+      "hn": "https://news.ycombinator.com/item?id=49445998",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-26T09:12:34Z",
+      "text": "He is right. The GitHub graphs show that most code is already no longer written by humans, and the shape of the graphs (as well as the recent pace of LLM progress as measured by various benchmarks) tells us that human programming is going to become a niche activity in the near future."
+    },
+    {
+      "title": "Ask HN: What is one simple thing LLMs are insanely bad at?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49444180",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-26T05:01:49Z",
+      "text": "Serious answer: no model ever gets close to writing an architectural floor plan that makes sense. They understand all the rules and best practices, they can (sometimes) spot a bad idea in a floor plan, they can describe a good floor plan. But ask them to make one, even if you give it every detail (even a &quot;node graph&quot; of rooms), they will still output nonsense. Same for text and image models. Floor plans should be the new Pelican Benchmark."
+    },
+    {
+      "title": "Show HN: LatticeDB – Like SQLite but for graph databases",
+      "url": "https://github.com/jeffhajewski/latticedb",
+      "hn": "https://news.ycombinator.com/item?id=49443992",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-26T03:45:43Z",
+      "text": "I measured this on a M4 mac mini (base model): zig build sqlite-benchmark Medium (100K nodes) +----------------------+-----------+---------+---------+ | Workload | LatticeDB | SQLite | Speedup | +----------------------+-----------+---------+---------+ | 1-hop traversal | 5.7μs | 16.1μs | 2.8x | | 2-hop traversal | 30.1μs | 59.4μs | 2.0x | | 3-hop traversal | 171.1μs | 228.8μs | 1.3x | | Variable path (1..5) | 82.2μs | 5.8ms | 70.4x | +----------------------+-----------+---------+---------+ Very different from the comparison on github and the website. Given that on-disk data structures are simi"
+    },
+    {
+      "title": "Show HN: LatticeDB – Like SQLite but for graph databases",
+      "url": "https://github.com/jeffhajewski/latticedb",
+      "hn": "https://news.ycombinator.com/item?id=49442411",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-25T23:58:06Z",
+      "text": "Congrats! For those into the `pip install ...` flow and kuzu, is gfql: we started around the same time in a non-VC-funded oss manner with overlap in key architectural ideas: - cpu columnar vectorized engine + optionally the only open source gpu engine mode for bigger graphs &#x2F; faster queries - removes the need for a database &#x2F; file: pure compute-tier engine you can write to parquet&#x2F;json if you want, plays with parallel reader&#x2F;writers in simple ways b&#x2F;c that, and TBD iceberg - adds full graph analytic pipeline support, eg, for feature engineering in real-time fraud &amp;"
+    }
+  ]
+}

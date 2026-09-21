@@ -1,0 +1,7 @@
+{
+  "url": "https://news.ycombinator.com/item?id=49443992",
+  "contentType": "text/html; charset=utf-8",
+  "title": "I measured this on a M4 mac mini (base model): zig build sqlite-benchmark Medium... | Hacker News",
+  "truncated": false,
+  "text": "I measured this on a M4 mac mini (base model): zig build sqlite-benchmark Medium... | Hacker News Hacker News new | past | comments | ask | show | jobs | submit login \n\n adsharma 25 days ago | parent | context | favorite | on: Show HN: LatticeDB – Like SQLite but for graph dat... \n\n I measured this on a M4 mac mini (base model): zig build sqlite-benchmark\n\n Medium (100K nodes)\n\n +----------------------+-----------+---------+---------+\n | Workload | LatticeDB | SQLite | Speedup |\n +----------------------+-----------+---------+---------+\n | 1-hop traversal | 5.7μs | 16.1μs | 2.8x |\n | 2-hop traversal | 30.1μs | 59.4μs | 2.0x |\n | 3-hop traversal | 171.1μs | 228.8μs | 1.3x |\n | Variable path (1..5) | 82.2μs | 5.8ms | 70.4x |\n +----------------------+-----------+---------+---------+\n\nVery different from the comparison on github and the website. Given that on-disk data structures are similar to SQLite, I expect the competition from other \"graph on sqlite\" projects when they co-opt the techniques in LatticeDB.\n\n smiths1999 25 days ago [–] \n\n Thanks for sharing this. The lattice numbers are pretty close but my sqlite numbers are way off. I got a new computer since then so will remeasure.\n\n Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact"
+}

@@ -1,0 +1,25 @@
+{
+  "query": "visualize benchmark results",
+  "days": 720,
+  "count": 2,
+  "results": [
+    {
+      "title": "Building a WebRTC benchmark for voice AI agents (Pipecat vs. LiveKit)",
+      "url": "https://github.com/kstonekuan/voice-rtc-bench",
+      "hn": "https://news.ycombinator.com/item?id=46042845",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-11-25T06:17:30Z",
+      "text": "I was curious how people were choosing between voice AI agent providers and was interested in comparing them by baseline network performance, but could not find any existing solution that benchmarks performance before STT&#x2F;LLM&#x2F;TTS processing. So I started building a benchmarking tool to compare Pipecat (Daily) vs LiveKit. Unlike your average LLM benchmark, this benchmark focuses on location and time as variables since these are the biggest factors for networking systems (I was a developer for networking tools in a past life). The idea is to run benchmarks from multiple geographic loca"
+    },
+    {
+      "title": "Show HN: A benchmark + latency sim for LLM db queries: ClickHouse / Postgres",
+      "url": "https://github.com/514-labs/LLM-query-test",
+      "hn": "https://news.ycombinator.com/item?id=44805887",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-08-05T23:40:48Z",
+      "text": "I’ve seen many benchmarks on OLAP performance, but I wanted to better understand the practical impact for myself, especially for LLM applications. This is my first attempt at building a benchmarking tool to explore that. It runs some simple analytical queries against ClickHouse, Postgres, and Postgres with indexes. To make the results more tangible than just a chart of timings, I added a &quot;latency simulator&quot; that visualizes how the query delay would actually feel in a chat UI. With a 10M row dataset: ClickHouse queries are sub-second, while Postgres takes multiple seconds. This is def"
+    }
+  ]
+}

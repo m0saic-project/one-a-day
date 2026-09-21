@@ -1,0 +1,7 @@
+
+> one-a-day@0.1.0 test:contract
+> node tools/contract-check.mjs
+
+contract-check: 1 problem(s)
+
+  x "@one-a-day/dev/bench-delta/v1" has no preview asset. Run `npm run build && npm run previews`, then `npm run build` again so the manifest picks up the path.

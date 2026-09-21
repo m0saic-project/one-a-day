@@ -1,0 +1,7 @@
+{
+  "query": "benchmark \"bar chart\" generate",
+  "tags": "--n",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=benchmark%20%22bar%20chart%22%20generate&tags=--n&advancedSyntax=true&typoTolerance=false&hitsPerPage=40",
+  "count": 0,
+  "results": []
+}

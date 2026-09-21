@@ -1,0 +1,32 @@
+{
+  "verifier": "scout-verify-10",
+  "date": "2026-09-21",
+  "candidate": "Standings shuffle clip (league round / matchday table)",
+  "verdict": "REAL",
+  "citedUrlsOpened": 8,
+  "citedUrlsDead": 0,
+  "corrections": [
+    "racey.gg quotes are verbatim but live on the HOMEPAGE (feature list + FAQ), not on blog posts dated 2026-09-03/2026-08-31 as claimed",
+    "Adobe 'Leaderboard spreadsheet to graphic' thread is dated March 4, 2019 (not c.2018)",
+    "grassrootsfc.co.uk guide quotes are verbatim but the page never mentions league tables or standings graphics - it supports the WHO, not the WHAT"
+  ],
+  "newSourcesFound": [
+    "https://www.overtake.gg/downloads/racing-league-tools.44891/reviews",
+    "https://www.overtake.gg/downloads/racing-league-tools.44891/updates",
+    "https://github.com/Amelas22/DraftBot/pull/524",
+    "https://tsuru1125.itch.io/ranking-board",
+    "https://news.ycombinator.com/item?id=21506901",
+    "https://www.scoreboards.dev/leaderboard-types/league/",
+    "https://www.flmsystem.com/us/blog/best-league-table-creator-2026",
+    "https://github.com/topics/league-standings"
+  ],
+  "couldNotOpen": [
+    "https://www.etsy.com/listing/1886817121/sim-league-race-results-table-template (403 both fetch-text and WebFetch)",
+    "https://www.etsy.com/listing/1731317770/f1-race-standings-template-graphic (403)",
+    "https://github.com/raymer/fantasy-football-recapper (404)",
+    "https://discord.me/simracingstandingsbot (403)",
+    "https://www.overtake.gg/threads/racing-league-tools.301763/ (404 - guessed discussion-tab url)",
+    "https://www.simracingpanel.com/ (fetched 200 but JS-only, 44 chars of text)",
+    "reddit.mjs: 403 on every attempt across 6 tries (r/simracing, r/SundayLeague, r/fantasyfootball) - anonymous rate limit"
+  ]
+}

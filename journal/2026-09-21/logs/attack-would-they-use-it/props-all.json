@@ -1,0 +1,134 @@
+{
+  "title": "all suites, one card",
+  "subtitle": "github-action-benchmark gh-pages, last two commits",
+  "baselineLabel": "7bc4f64",
+  "candidateLabel": "84ec6ea",
+  "rows": [
+    {
+      "name": "bench_fib_10",
+      "unit": "ns/iter",
+      "base": 163.9,
+      "value": 101.47,
+      "baseRange": 65.66,
+      "range": 28.26
+    },
+    {
+      "name": "bench_fib_20",
+      "unit": "ns/iter",
+      "base": 20104.9,
+      "value": 12924.51,
+      "baseRange": 3037.85,
+      "range": 1732.69
+    },
+    {
+      "name": "BenchFib10",
+      "unit": "ns/iter",
+      "base": 199,
+      "value": 199,
+      "baseRange": 0,
+      "range": 1
+    },
+    {
+      "name": "BenchFib20",
+      "unit": "ns/iter",
+      "base": 24729,
+      "value": 24725,
+      "baseRange": 139,
+      "range": 36
+    },
+    {
+      "name": "Fibonacci/Recursive/20",
+      "unit": "ns/iter",
+      "base": 24739,
+      "value": 24739,
+      "baseRange": 35,
+      "range": 57
+    },
+    {
+      "name": "Fibonacci/Iterative/20",
+      "unit": "ns/iter",
+      "base": 3,
+      "value": 3,
+      "baseRange": 0,
+      "range": 0
+    },
+    {
+      "name": "Fibonacci/Recursive/21",
+      "unit": "ns/iter",
+      "base": 40042,
+      "value": 40019,
+      "baseRange": 832,
+      "range": 89
+    },
+    {
+      "name": "Fibonacci/Iterative/21",
+      "unit": "ns/iter",
+      "base": 3,
+      "value": 3,
+      "baseRange": 0,
+      "range": 0
+    },
+    {
+      "name": "Fibonacci 10",
+      "unit": "ns",
+      "base": 84.6776,
+      "value": 86.4267,
+      "baseRange": 4.8131,
+      "range": 6.2828
+    },
+    {
+      "name": "Fibonacci 20",
+      "unit": "us",
+      "base": 7.59636,
+      "value": 7.71072,
+      "baseRange": 430.836,
+      "range": 408.898
+    },
+    {
+      "name": "Sample.Benchmarks.Fib10",
+      "unit": "ns",
+      "base": 14.3901207951399,
+      "value": 24.330789321660994,
+      "baseRange": 0.2543989277426894,
+      "range": 0.025370413758573546
+    },
+    {
+      "name": "Sample.Benchmarks.Fib20",
+      "unit": "ns",
+      "base": 28.65534907579422,
+      "value": 48.962081321080525,
+      "baseRange": 0.87082705942926,
+      "range": 0.049810515593018856
+    },
+    {
+      "name": "BenchmarkFib10",
+      "unit": "ns/op",
+      "base": 275.2,
+      "value": 314.5
+    },
+    {
+      "name": "BenchmarkFib20",
+      "unit": "ns/op",
+      "base": 34323,
+      "value": 39810
+    },
+    {
+      "name": "BenchmarkFib20WithAuxMetric",
+      "unit": "ns/op 4.000 auxMetricUnits",
+      "base": 34650,
+      "value": 39611
+    },
+    {
+      "name": "BenchmarkFib20WithAuxMetric - ns/op",
+      "unit": "ns/op",
+      "base": 34650,
+      "value": 39611
+    },
+    {
+      "name": "BenchmarkFib20WithAuxMetric - auxMetricUnits",
+      "unit": "auxMetricUnits",
+      "base": 4,
+      "value": 4
+    }
+  ]
+}

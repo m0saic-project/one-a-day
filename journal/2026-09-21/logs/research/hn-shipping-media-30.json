@@ -1,0 +1,17 @@
+{
+  "query": "\"pass@k\" \"runs\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22pass%40k%22%20%22runs%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=20",
+  "count": 1,
+  "results": [
+    {
+      "title": "Competitive Programming with AlphaCode",
+      "url": "https://deepmind.com/blog/article/Competitive-programming-with-AlphaCode",
+      "hn": "https://news.ycombinator.com/item?id=30185862",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-02-02T23:34:18Z",
+      "text": "To clarify, the low percentage of 25% of correct solutions is on the APPS dataset, not against human coders. See table 10 (page 21 of the pdf) on the arxiv paper if you are unsure about the difference: https://storage.googleapis.com/deepmind-media/AlphaCode/comp... Evaluation against the average competitor on Codeforces is not the \"estimated average human performance\", it's only the average of the coders on Codeforce who are an unknown proportion of all human coders with an unknowable level of coding ability. So evaluating against that is actually a pretty meaningless metric. The benchmarking against APPS is much more meaningful but the results are pretty poor and so they are omitted from the article above. So, no. I'm not missing the point. Rather, the article above is eliding the point: which is that on the one meaningful evluation they attempted, their system sucks. Edit: Here's table 10, for quick reference: Filtered From (k) Attempts (k) Introductory Interview Competition n@k n@k n@k GPT-Neo 2.7B N/A 1 3.90% 0.57% 0.00% GPT-Neo 2.7B N/A 5 5.50% 0.80% 0.00% Codex 12B N/A 1 4.14% 0.14% 0.02% Codex 12B N/A 5 9.65% 0.51% 0.09% Codex 12B N/A 1000 25.02% 3.70% 3.23% Codex 12B 1000 1 22.78% 2.64% 3.04% Codex 12B 1000 5 24.52% 3.23% 3.08% AlphaCode 1B N/A 1000 17.67% 5.24% 7.06% AlphaCode 1B 1000 5 14.36% 5.63% 4.58% AlphaCode 1B 10000 5 18.18% 8.21% 6.65% AlphaCode 1B 50000 5 20.36% 9.66% 7.75% And its caption: Table 10 | n@k results on APPS. If there is no filtering, then n = k and the metric is pass@k. Finetuned GPT-Neo numbers reported from Hendrycks et al. (2021), Codex numbers from Chen et al. (2021). We used a time limit of 3 seconds per test to match Codex 12B, and report average numbers over 3 different fine-tuning runs for AlphaCode. Edit 2: And now that I posted this, I note that the 25% solutions are from Codex. AlphaCode's best result was 20%."
+    }
+  ]
+}

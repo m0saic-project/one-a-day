@@ -1,0 +1,127 @@
+{
+  "verifier": "verify-1 - skeptical verification of candidate 'release benchmark panel (paired baseline-vs-candidate bars)'",
+  "date": "2026-09-21",
+  "verdict": "REAL, with three corrections: (1) the andrewlock post is dated March 07, 2023, not ~2022; (2) 'almost none of them carry a chart' is overstated - Lemire's 2026-09-18 post carries five charts; (3) the llvm-ld issue is one person on a zero-star repo and is already closed, so it is an excellent SPEC but weak MARKET evidence. Recurrence and breadth hold up on sources the candidate did not cite.",
+  "citedUrls": [
+    {
+      "url": "https://github.com/zackees/llvm-ld/issues/32",
+      "log": "verify-1-llvmld-issue32.json",
+      "opened": true,
+      "status": "OPEN OK",
+      "quotesVerbatim": true,
+      "notes": "Opened by zackees on Sep 18, 2026. Repo page shows Star 0 / Fork 0. Issue header shows 'Closed #33' - already resolved in-repo. Both cited quotes present verbatim: 'Bar length proportional to time is the honest encoding, and it is the only way to show \"how long does a link take\".' (decision D4) and 'The README and https://zackees.github.io/llvm-ld/ show two line charts that answer the wrong question.' / 'Nobody needs the history; we care about current performance.' Reads as a machine-drafted design-review spec (a D1-D9 decision table with rationales), not a demand posted to an audience. D5 asks for an interquartile-range whisker on every bar; D6 asks for light and dark variants; D7 asks for direct-labelled bars because a hotlinked SVG has no hover layer."
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=49153589",
+      "log": "verify-1-hn-49153589.json",
+      "opened": true,
+      "status": "OPEN OK",
+      "quotesVerbatim": true,
+      "notes": "trueadm, shown as '48 days ago' on 2026-09-21 => ~2026-08-04 (candidate said 2026-08-03). Parent story: 'Octane - React's programming model, compiled'. Quote exact modulo curly apostrophes."
+    },
+    {
+      "url": "https://andrewlock.net/drawing-graphs-in-github-comments-with-mermaid-diagrams/",
+      "log": "verify-1-andrewlock-mermaid.json",
+      "opened": true,
+      "status": "OPEN OK",
+      "quotesVerbatim": true,
+      "notes": "DATE CORRECTED: page shows 'March 07, 2023' (candidate guessed ~2022). Context is the Datadog .NET tracer team: BenchmarkDotNet micro-benchmarks + Crank throughput + timeit execution-time tests, results posted into GitHub PR comments. Both quoted fragments present verbatim."
+    },
+    {
+      "url": "https://github.com/benchmark-action/github-action-benchmark",
+      "log": "verify-1-gh-action-benchmark.json",
+      "opened": true,
+      "status": "OPEN OK",
+      "quotesVerbatim": "yes, with a formatting note",
+      "notes": "Quote present but the README renders name/unit/value as inline code, so extracted text reads 'Every entry in the JSON file you provide only needs to provide name , unit , and value . You can also provide optional range (results' variance) and extra ... properties.' Substance identical. Also confirms the candidate's risk #1: the README's own example row is literally 'My Custom Smaller Is Better Benchmark - CPU Load' with unit 'Percent'. customBiggerIsBetter / customSmallerIsBetter are documented, which is where the candidate's biggerIsBetter prop comes from."
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=49727511",
+      "log": "verify-1-hn-49727511.json",
+      "opened": true,
+      "status": "OPEN OK",
+      "quotesVerbatim": true,
+      "notes": "Show HN: Swift-Qwen3.8-27B, -58.3% thinking, x1.95 speed, accuracy of xhigh. Nine paired benchmark rows in flat prose, no chart anywhere. Verbatim: 'GPQA-Diamond: 88.4% -> 88.3%, 58% fewer median tokens', 'LiveCodeBench v6: 76.8% -> 81.6% (+4.8pp, due to default truncation in LCB it is not performance gain), 46% fewer median thinking tokens', 'MMLU-Pro: 85.5% -> 85.0%, 28% fewer median tokens'. Top comment aged '4 days' as of 2026-09-21, consistent with ~2026-09-16/17. Post also links an r/LocalLLaMA independent-eval thread."
+    }
+  ],
+  "newSources": [
+    {
+      "url": "https://github.com/sharkdp/hyperfine/tree/master/scripts",
+      "log": "verify-1-gh-hyperfine-scripts.json",
+      "opened": true,
+      "date": "current (master, read 2026-09-21)",
+      "why": "hyperfine, Star 28.9k / Fork 510, ships SIX matplotlib plotting scripts - plot_benchmark_comparison.py, plot_whisker.py, plot_histogram.py, plot_parametrized.py, plot_progression.py, advanced_statistics.py, welch_ttest.py. README verbatim: 'This folder contains scripts that can be used in combination with hyperfines --export-json option.' and 'To make these scripts work, you will need numpy , matplotlib and scipy .' The strongest single piece of evidence: the tool's own maintainers shipped the chore as scripts, and the price of entry is a three-package scientific Python stack."
+    },
+    {
+      "url": "https://github.com/sharkdp/hyperfine/issues/214",
+      "log": "verify-1-gh-hyperfine-214.json",
+      "opened": true,
+      "date": "2019-09-22",
+      "why": "miasma: 'Would be nice to get a more comprehensive log of the benchmark runs for boxplots etc.. Maybe this is already possible, but couldn't figure out how to output this instead of the summary.' Real but OLD - low weight, included for completeness."
+    },
+    {
+      "url": "https://werat.dev/blog/running-benchmarks-for-pull-requests-via-github-actions/",
+      "log": "verify-1-werat-pr-benchmarks.json",
+      "opened": true,
+      "date": "June 28, 2021 (date via WebFetch; fetch-text.mjs strips it)",
+      "why": "DIFFERENT COMMUNITY - C++/Bazel/google-benchmark, on google/lldb-eval. Verbatim: 'For the \"automated\" part I was thinking about a simple GitHub Action - for every pull request run the benchmark on for BASE and HEAD commits, compare the results and post them as a review comment.' and 'I've decided to submit the results as a comment to the pull request being tested. GitHub supports Markdown in comments, so we can render a nice table with some links'. This is the candidate's option (b) - post a table, lose the comparison - in the author's own words, in a third ecosystem."
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=49183949",
+      "log": "verify-1-hn-49183949-slickfast.json",
+      "opened": true,
+      "date": "2026-08-05",
+      "why": "Show HN: SlickFast Deterministic Chart/Dash Renderer, No Browser (JSON -> SVG/PNG). 2 points, 1 comment. AlexRenders verbatim: 'SlickFast is a JSON input > pure javascript SVG Native render core > with PNG+SVG output. No headless chrome. No library calls. deterministic output.' and 'Our favorite demo is LIVE GitHub dashboards, living right on the repo page. just put a SlickFast URL in your readme.' Independent convergence on the exact idea - AND a traction warning: 2 points, 1 comment."
+    },
+    {
+      "url": "https://hn.algolia.com/api/v1/items/49770064",
+      "log": "verify-1-hn-49770064-algolia.json",
+      "opened": true,
+      "date": "2026-09-19",
+      "why": "Farmadupe, on the 'Btrfs/ZFS/bcachefs under workloads classic benchmarks skip' thread, critiquing a live benchmark results page. Verbatim: 'there's just far too much for a human to absorb, all presented at once', 'Overall text size is quite small, and difficult to read', 'A significant proportion of the free text is caveats. There's nothing wrong with being transparent about limitations, but they may be a sign that there might be alternative ways to present the data'. Direct support for a hard row cap, a large type floor, and a single one-line caveat rather than a caveat paragraph. news.ycombinator.com returned HTTP 429; read via the Algolia item API."
+    },
+    {
+      "url": "https://hn.algolia.com/api/v1/items/49370832",
+      "log": "verify-1-hn-49370832-algolia.json",
+      "opened": true,
+      "date": "2026-08-20",
+      "why": "collinfunk on the 'Rewriting in Rust' thread. Verbatim: 'Note, I am a co-maintainer of GNU coreutils.' / 'I really wished the documented their benchmarking methodology here, or at least cautioned the reader not to jump to conclusions based on the benchmarks shown.' / 'I find it a bit frustrating that benchmarks are thrown out without any methodology or citations, because they are often trusted without question.' Confirms the candidate's risk #6 - a chart without conditions is a footgun."
+    },
+    {
+      "url": "https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/",
+      "log": "403 via fetch-text.mjs; opened via WebFetch",
+      "opened": true,
+      "date": "2026-09-18",
+      "why": "CONTRADICTS the candidate's 'almost none of them carry a chart'. Lemire ships five chart images AND matching numeric tables in one post (Geekbench single/multi-core, base vs max boost frequency, transistor counts, cache/dispatch/ALU/reorder-buffer, SIMD units). Reframes the need: the want is proven, and the per-post workload is five charts, not one."
+    },
+    {
+      "url": "https://github.com/browserbase/stagehand",
+      "log": "opened via WebFetch",
+      "opened": true,
+      "date": "read 2026-09-21; HN post 2026-09-18",
+      "why": "The #1 perf post on HN that week - 'We made Playwright 2x faster and 80% more token efficient', 150 points, 2026-09-18, item 49756671 - points here. The README carries only the plain-text line 'Point the same script at Browserbase and get 2x faster execution than Playwright cloud equivalent browsers.' No chart, no table, no numbers at all. The purest instance of the gap."
+    },
+    {
+      "url": "hn.mjs query: 'faster' --days 60 --n 25",
+      "log": "verify-1-hn-faster-60d.json",
+      "opened": true,
+      "date": "run 2026-09-21",
+      "why": "Volume check on the candidate's 'several a week' claim. The 2026-09-18..21 window alone returns ~10 perf-claim submissions: 'We made Playwright 2x faster and 80% more token efficient' (150), 'How did AMD Ryzen get 50% faster in two years?' (71), 'I built the fastest PHP webserver in the world' (44), 'How did Apple Silicon get 50% faster in three years?' (26), 'Qbix Server - PHP 100x faster than Nginx and PHP-fpm', 'Faster JSON parsing with SVE2 on ARM processors', 'Splash Engine - The Fastest Local Qwen3.8 on Apple Silicon', 'Fastest Coding Agent (5x faster than Codex)'. The cadence claim holds."
+    }
+  ],
+  "blocked": [
+    {
+      "url": "https://old.reddit.com/r/LocalLLaMA/search?q=benchmark+chart&restrict_sr=on&sort=top&t=year",
+      "log": "verify-1-reddit-localllama-search.json",
+      "opened": false,
+      "status": "BLOCKED",
+      "notes": "pipeline/research/reddit.mjs returned 'reddit: 403 (reddit rate-limits anonymous clients)' on three attempts over ~10 minutes; fetch-text.mjs on old.reddit returns only the 'Welcome to Reddit' interstitial; WebSearch refuses reddit.com for this user agent. The candidate's claim that this audience 'gathers on r/LocalLLaMA' is therefore UNVERIFIED in this session. The only reddit pointer I could confirm is the r/LocalLLaMA independent-eval link embedded inside HN item 49727511."
+    }
+  ],
+  "deadCitedLinks": [],
+  "toolNotes": [
+    "news.ycombinator.com began returning HTTP 429 to both fetch-text.mjs and WebFetch partway through; the Algolia item API (https://hn.algolia.com/api/v1/items/<id>) is a working fallback and returns the comment text, author and created_at.",
+    "lemire.me returns 403 to fetch-text.mjs but works through WebFetch.",
+    "fetch-text.mjs inserts spaces around inline-code spans, so a verbatim README quote containing backticks will not string-match; compare on substance."
+  ]
+}

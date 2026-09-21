@@ -1,0 +1,56 @@
+{
+  "searches": [
+    {
+      "tool": "node pipeline/research/reddit.mjs r/PowerBI --q 'client report every month' --t year",
+      "result": "HTTP 403 - reddit blocks anonymous .json for this session; helper unusable today"
+    },
+    {
+      "tool": "node pipeline/research/hn.mjs",
+      "queries": [
+        "recurring client report automation (0)",
+        "client reporting (10, none relevant)",
+        "monthly report generator (10, none relevant)",
+        "generate images from data (10, none relevant)",
+        "report automation agency (4, none relevant)"
+      ],
+      "result": "Hacker News has NOTHING on this pain in the last 540 days"
+    },
+    {
+      "tool": "arctic-shift posts/search",
+      "subs": [
+        "agency",
+        "PPC",
+        "msp",
+        "analytics",
+        "marketing",
+        "DigitalMarketing",
+        "excel",
+        "smallbusiness",
+        "BusinessIntelligence",
+        "dataanalysis",
+        "tableau",
+        "SaaS"
+      ],
+      "result": "only r/DigitalMarketing 1u1v7ya produced usable practitioner voices; r/agency hits were all score-1 vendor probes"
+    },
+    {
+      "tool": "WebSearch",
+      "query": "agency client scorecard monthly image generate per client automate reddit 2026",
+      "result": "only vendor/SEO content (digitalapplied, matzanalytics, gohighlevel, AgencyAnalytics) - no first-person pain, not cited"
+    }
+  ],
+  "deadOrDegraded": [
+    {
+      "url": "https://www.reddit.com/r/BusinessIntelligence/comments/1rawmpa/how_i_solved_b2b_reporting_headaches_for_my/",
+      "status": "resolves, title+comments render, POST BODY IS [removed] - the two quotes taken from the body are not readable at this URL today, only in the arctic-shift archive. No Wayback snapshot exists."
+    }
+  ],
+  "arcticShiftRaw": {
+    "imgurAlbum": {
+      "url": "https://imgur.com/a/oXTIFxX",
+      "status": 200,
+      "title": "How I automate b2b reporting - Album on Imgur",
+      "note": "OP's own screenshot of the layout they shipped; only the page title is recoverable via text fetch"
+    }
+  }
+}

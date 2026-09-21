@@ -1,0 +1,7 @@
+{
+  "url": "https://news.ycombinator.com/item?id=46710957",
+  "contentType": "text/html; charset=utf-8",
+  "title": "Most bundle size regressions don’t come from bad code. They come from small, rea... | Hacker News",
+  "truncated": false,
+  "text": "Most bundle size regressions don’t come from bad code. They come from small, rea... | Hacker News Hacker News new | past | comments | ask | show | jobs | submit login \n\n q1sh101 8 months ago | parent | context | favorite | on: Bundle didn&#x27;t suddenly get bigger. You just never ... \n\n Most bundle size regressions don’t come from bad code. They come from small, reasonable decisions that add up quietly. A helper here. One more dependency there. Everything makes sense in isolation. This kept bothering me, not because I don’t care about size, but because managing it properly always meant extra setup, extra rules, extra friction. What actually helped wasn’t optimizing harder. It was seeing size changes automatically, at the exact moment code is reviewed. When size becomes part of the pull request, behavior shifts naturally. No enforcement. No policing. Just visibility and better decisions. I built this because the problem wouldn’t go away. If it helps you even a little, that’s already a win.\n\n Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact"
+}

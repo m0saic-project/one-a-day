@@ -1,0 +1,25 @@
+{
+  "query": "incident review slides exec",
+  "days": 900,
+  "count": 2,
+  "results": [
+    {
+      "title": "Texas woman arrested for Facebook post about town water quality",
+      "url": "https://reclaimthenet.org/texas-woman-arrested-for-facebook-post-about-town-water-quality",
+      "hn": "https://news.ycombinator.com/item?id=48252020",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-23T22:05:01Z",
+      "text": "Except they don&#x27;t happen all the time, because this incident killed 34 Americans &amp; wounded 171. Is that not remarkable enough for a &#x27;blue-ribbon&#x27; commission of investigation? If one of our European allies had done this, wouldn&#x27;t a commission be held to review all the evidence and make a determination as to cause? One needn&#x27;t dig too deep to see there isn&#x27;t too much wiggle room for mere misunderstanding. The nearly defenseless ship suffered 2 hours of withering attack by both waves of jets and torpedo boats; this with an American flag and its hull number in ope"
+    },
+    {
+      "title": "Ask HN: Who is hiring? (January 2026)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46470027",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-01-02T22:09:12Z",
+      "text": "Pelairo Inc. | Senior Full Stack Developer | REMOTE (US Only) | Full-time | $100-150k At Pelairo we&#x27;re building the most intuitive and flexible Laboratory Information Management System (LIMS) on the market. &quot;Manage the lab, not the LIMS!&quot; After a successful hire from our post in November, we&#x27;re back! We&#x27;re looking for a hands-on Senior Full Stack Developer to help design and deliver core product experiences across our stack (TypeScript + NestJS on the backend and Next.js on the frontend.) You&#x27;ll work on customer-facing workflows, turning ambiguity into shippable s"
+    }
+  ]
+}

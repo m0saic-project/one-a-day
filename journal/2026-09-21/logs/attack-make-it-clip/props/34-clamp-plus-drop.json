@@ -1,0 +1,12 @@
+{ "rows": [
+ {"name":"parse 1MB json","unit":"ms","base":412,"baseRange":14,"value":171,"range":6},
+ {"name":"render 10k rows","unit":"ms","base":88.2,"baseRange":9.6,"value":84.6,"range":8.4},
+ {"name":"cold start","unit":"ms","base":1240,"baseRange":61,"value":1395,"range":64},
+ {"name":"regex backtrack","unit":"ms","base":12,"baseRange":0.4,"value":240,"range":8},
+ {"name":"gzip 4MB","unit":"ms","base":59,"baseRange":2,"value":44.5,"range":2},
+ {"name":"link step","unit":"ms","base":300,"baseRange":5,"value":280,"range":5},
+ {"name":"typecheck","unit":"ms","base":900,"baseRange":10,"value":700,"range":10},
+ {"name":"bundle","unit":"ms","base":150,"baseRange":3,"value":140,"range":3},
+ {"name":"minify","unit":"ms","base":80,"baseRange":2,"value":70,"range":2},
+ {"name":"sourcemaps","unit":"ms","base":40,"baseRange":1,"value":35,"range":1}
+] }

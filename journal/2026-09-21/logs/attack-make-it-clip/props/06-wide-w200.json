@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+      "unit": "ms",
+      "base": 412,
+      "baseRange": 14,
+      "value": 171,
+      "range": 6
+    },
+    {
+      "name": "render 10k rows",
+      "unit": "ms",
+      "base": 88.2,
+      "baseRange": 9.6,
+      "value": 84.6,
+      "range": 8.4
+    },
+    {
+      "name": "cold start",
+      "unit": "ms",
+      "base": 1240,
+      "baseRange": 61,
+      "value": 1395,
+      "range": 64
+    },
+    {
+      "name": "gzip 4MB",
+      "unit": "ms",
+      "base": 59,
+      "value": 44.5
+    }
+  ]
+}

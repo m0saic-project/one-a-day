@@ -1,0 +1,9 @@
+
+> one-a-day@0.1.0 conventions:sweep
+> node tools/check-registry.mjs --sweep
+
+[check-registry] ✓ 4 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ✓ layout fingerprints: 4 unchanged, 0 missing, 0 changed.
+[check-registry] (sweep) each template was also rendered on 3 standard canvases for the canvasEnvelope rule.
+[check-registry] ✓ 4 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).

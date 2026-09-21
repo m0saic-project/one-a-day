@@ -1,0 +1,49 @@
+{
+  "query": "\"bar chart race\"",
+  "tags": "comment",
+  "count": 6,
+  "results": [
+    {
+      "title": "Show HN: Open-source low code trend analysis",
+      "url": "https://ossinsight.io/collections/low-code-development-tool/trends/",
+      "hn": "https://news.ycombinator.com/item?id=31501832",
+      "createdAt": "2022-05-25T08:15:34Z",
+      "text": "hi, which libraries do you use to create bar chart race?"
+    },
+    {
+      "title": "The ICO raising and fall in 4 minutes",
+      "url": "https://www.youtube.com/watch?v=5-N1XG3Nslc",
+      "hn": "https://news.ycombinator.com/item?id=23334779",
+      "createdAt": "2020-05-28T08:11:04Z",
+      "text": "The Initial Coin Offering (ICO) was a tremendous event in Crypto and Finance world. This bar chart race show the raised money from the most successful ICO along the time."
+    },
+    {
+      "title": "Bar Chart Race, Explained",
+      "url": "https://observablehq.com/@d3/bar-chart-race-explained",
+      "hn": "https://news.ycombinator.com/item?id=21535972",
+      "createdAt": "2019-11-14T15:15:11Z",
+      "text": "The alternatives I’d consider are a line chart and a bump chart. https://observablehq.com/@d3/multi-line-chart https://observablehq.com/@jonsadka/scatterplot A bar chart race is in many ways “worse” than a static chart. The bar chart race forces you to wait for the animation to finish, whereas a static chart shows you everything simultaneously, and lets you look forward or backward in time by just moving your eyes. This can be generalized to say that a well-designed static chart is often better than an interactive or animated chart, since in the static chart, everything is visible up-front. But in the same way that a good visual hierarchy directs the reader’s attention and simplifies a complex interface, bar chart races (and animations more generally) are effective at getting the viewer to watch the race as it originally played out, from start to finish. Time in the data is represented as real time, so you’re only able to see a single moment in time. So bar chart races are probably worse for most perceptual tasks, but as a storytelling device, they are (seemingly) quite effective."
+    },
+    {
+      "title": "Bar Chart Race, Explained",
+      "url": "https://observablehq.com/@d3/bar-chart-race-explained",
+      "hn": "https://news.ycombinator.com/item?id=21535838",
+      "createdAt": "2019-11-14T15:00:19Z",
+      "text": "This tutorial was inspired by John Burn-Murdoch’s popular bar chart race from earlier this year. There have been a couple thousand transitive forks of John’s notebook! Our hope with Observable is that reactive notebooks, as a form of literate programming designed for tinkering, make code easier to understand and reuse. Sharing code is already popular today, obviously, but we think helping people better understand that code will foster creativity and innovation."
+    },
+    {
+      "title": "Bar chart race: the most populous cities in the world",
+      "url": "https://observablehq.com/@johnburnmurdoch/bar-chart-race-the-most-populous-cities-in-the-world",
+      "hn": "https://news.ycombinator.com/item?id=19484933",
+      "createdAt": "2019-03-25T18:03:25Z",
+      "text": "This is a Guardian repost of a Financial Times video of a graphic by John Burn-Murdoch. You can watch (and tinker with, or fork) the original here: https://observablehq.com/@johnburnmurdoch/bar-chart-race-the... Since last week, folks have forked and published a whole bunch of fun versions, applying the form to different data sets: https://observablehq.com/search?query=Bar%20chart%20race Some of my favorites are the baseball home run leaders (1), NFL receiving yards leaders (2), and global CO2 emissions leaders (3)... 1. https://observablehq.com/@darenwillman/bar-chart-race 2. https://observablehq.com/@stu/bar-chart-race-nfl-receiving-y... 3. https://observablehq.com/@drsimevans/bar-chart-race-the-coun... "
+    },
+    {
+      "title": "Bar chart race: the most populous cities in the world",
+      "url": "https://observablehq.com/@johnburnmurdoch/bar-chart-race-the-most-populous-cities-in-the-world",
+      "hn": "https://news.ycombinator.com/item?id=19484868",
+      "createdAt": "2019-03-25T17:58:13Z",
+      "text": "No, this is were it came from: https://observablehq.com/@johnburnmurdoch/bar-chart-race-the... "
+    }
+  ]
+}

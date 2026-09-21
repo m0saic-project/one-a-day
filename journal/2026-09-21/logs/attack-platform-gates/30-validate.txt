@@ -1,0 +1,13 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (4 templates) from .
+Rendering template:
+  template id: @one-a-day/dev/bench-delta/v1
+  output:      out.png
+  Building plan... done (0.7s)
+  plan built with size: 1600 x 900
+  duration:      2s (60 frames @ 30fps)
+Validation passed

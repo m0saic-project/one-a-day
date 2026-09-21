@@ -1,0 +1,134 @@
+{
+  "query": "\"incident\" \"timeline\" \"postmortem\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22incident%22%20%22timeline%22%20%22postmortem%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=25",
+  "count": 14,
+  "results": [
+    {
+      "title": "Launch HN: Rootly (YC S21) – Manage Incidents in Slack",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=31654581",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-06-07T14:11:56Z",
+      "text": "Many thanks! So glad you asked. Once the incident is in a resolved, we'll prompt you to edit your postmortem. This can be done inside of Rootly but most commonly we'll auto-generate a Confluence or Google Doc. Here you'll have all your incident metadata, template to fill out, but most importantly your incident timeline (no copy-paste required). From there we can help you do things like automatically scheduling your postmortem meeting with everyone that was involved. We also want to help you improve your process and response. We'll prompt anyone involved in the incident for feedback (they can submit anonymously too) and collect important metrics. There are top line metrics like incident count, MTTX, outstanding action items but also finer grained ones which is what I think you might be hinting at. For example you can visualize automatically what services are being impacted the most. That might be an indicator as an area to focus on more. We try to keep the garden walls on the product quite low, allowing you to export any of the data out of Rootly and into your own analytics engines."
+    },
+    {
+      "title": "Roblox October Outage Postmortem",
+      "url": "https://blog.roblox.com/2022/01/roblox-return-to-service-10-28-10-31-2021/",
+      "hn": "https://news.ycombinator.com/item?id=30019221",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-01-21T04:36:01Z",
+      "text": "Former Google SRE here, I can share my experience although I've never been involved in a large serious outage (thankfully). I've had my fair share of smaller multi-team outages though. Usually the way it works is so that we have multiple clearly-identified and properly-handed-off roles. There's an Incident Commander (IC) role, whose job is to basically oversee the whole situation, there's various responders (including a primary one) whose job is to mitigate/fix the problems usually relating their own teams/platform/infra (networking, security, virtualization clusters, capacity planning, logging, etc. depends on the outage). There's also sometimes a communication person (I forget the role name specifically) whose job is to keep people updated, both internal to the outage (responders, etc) and outsiders (dealing with public-facing comms, either to other internal teams affected by the outage or even external customers). Depending on the size of the outage, the IC may establish a specific \"war room\" channel (used to be an IRC chatroom, not sure what they use these days though) where most communication from various interested parties will take place. The advantage of a chatroom is that it lets you maintain communication logs and timestams (useful for postmortem and timeline purposes), and it helps when handing off to the next oncaller during a shift change (they can read the history of what happened). > There's no way hundreds of engineers, managers, network engineers etc. can get anything actually done as a group, right? Most people will not really be doing much but when you need to diagnose a problem, having a lot of brains with various expertise in different domains helps, especially if those people are the ones that have implemented a certain service that might be obscure to the other oncallers. Generally speaking, it wouldn't be unheard of to have 30-40 people in the same irc channel brainstorming and coordinating a cross-team effort to mitigate a problem, but into the hundreds? Not quite sure about that much. Just my two cents. You can probably get more info by reading the Google SRE book https://sre.google/books/"
+    },
+    {
+      "title": "When Things Go Wrong",
+      "url": "http://eng.localytics.com/when-things-go-wrong/",
+      "hn": "https://news.ycombinator.com/item?id=12494917",
+      "points": null,
+      "comments": null,
+      "createdAt": "2016-09-14T08:09:47Z",
+      "text": "I'm a big fan of using chat as the real-time incident log even when we're all in the same room. It's trivial to generate a timeline of events for the postmortem and there's a lot of info you can extract from the log during the postmortem process."
+    },
+    {
+      "title": "Grafana Labs launches free incident management tool in Grafana Cloud",
+      "url": "https://grafana.com/blog/2022/09/13/grafana-incident-for-incident-management-is-now-generally-available-in-grafana-cloud/",
+      "hn": "https://news.ycombinator.com/item?id=32831684",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-09-14T00:02:38Z",
+      "text": "For postmortems the basis is having document templates that are linked to the incident. From there the ability to automatically add information to the individual postmortem documents with things like timeline and MTTA/MTTR. Add the ability to comment on, share, export, and collaborate on these documents. The second piece of functionality is around action items. Almost all postmortems generate action items. I need a way to tie action items to a specific post mortem and integrate automatically with my project tracking software (Jira, Asana, Linear, whatever). Ideally there's some top level reporting functionality that shows me the status of post mortem action items. A nice to have would be automatically scheduling the post mortem meeting with a calendar integration."
+    },
+    {
+      "title": "Prompts I Reach for Every Week to Stay Unblocked as an Engineer",
+      "url": "https://theaileverageweekly.com/posts/10-prompts-i-reach-for-every-week-to-stay-unblocked-as-an-engineer.html",
+      "hn": "https://news.ycombinator.com/item?id=48443032",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-08T09:20:35Z",
+      "text": "> Blank PR descriptions are a tax on your reviewers. I paste my diff summary and ask: LLM-generated PR descriptions are a bigger tax than blank descriptions. > Instead of a normal rubber-duck session, I want pushback If you get pushback, it’s no longer rubber ducking; rubber ducks don’t talk back. The whole point of rubber ducking is to work it out yourself as you reason through your thought process out loud. If you talk to another person or a chat window and are getting feedback, that’s just a discussion. > When an incident closes, the postmortem doc gets written under pressure. I paste the timeline and ask: The purpose of a postmortem is to reflect . It’s to understand what went wrong, why it went wrong, and what and how you need to change so it doesn’t happen again, in addition to exploring where else problems could occur and fix them early. A timeline alone doesn’t tell you that. An LLM can never say what lessons you learned. > Long Slack threads where decisions got made are black holes. I paste the thread and ask: (…) Three months from now, your future self will thank you. Or curse you, when it happens that the LLM summarised it wrong and you wasted your time on something you weren’t supposed to. > None of these are \"write my code for me\" prompts. Every one is about getting to clarity faster — tighter scope, better context, cleaner handoffs. The value isn't outsourcing thinking; it's compressing the parts of the job that drain time without demanding creativity. And yet, you are outsourcing thinking with several of those. It also seems (though I hope I’m misinterpreting) you are more concerned with making the job easier for yourself first without fully considering how those actions will affect the people on the receiving end."
+    },
+    {
+      "title": "METR and Redwood Offer Holy %^ Postmortem of the HuggingFace Hack",
+      "url": "https://thezvi.wordpress.com/2026/08/29/metr-and-redwood-offer-holy-postmortem-of-the-huggingface-hack/",
+      "hn": "https://news.ycombinator.com/item?id=49541150",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-02T19:25:56Z",
+      "text": "More than other AI moments in the last few years, this feels to me like an event in tech that will be seen retroactively as an important watershed moment. I really appreciated the negative framing and critical tone of this author's overview. Having also read through the METR report, I fee like frontier labs' pattern of getting PR about how impressive their models are \"behind the scenes\" has poisoned their ability to take security and reliability seriously. Sure these are new failure modes and the agents operate at a scale that's difficult to combat, but the lack of controls and concern for mitigating these sorts of hacks in the future is crazy to me. The model for postmortems I was taught which has served me well in my career is thoroughly answering the following: - what happened / what was the timeline of events? - how was it mitigated and ultimately resolved? - what went well? - what went wrong? - where did we get \"lucky\" (meaning it could've gone worse but some arbitrary details about the incident worked out in our favor. usually stuff like \"happened during business hours\" or \"we were already looking at a related thing that brought this to our attention before it was a worse outage\") - (action items) how do we detect, mitigate, and prevent this type of failure in the future? I really hope OpenAI has done an internal postmortem that answers these questions thoroughly. Most SWEs in the industry have to do such postmortems for much smaller outages with way less impact and risk of societal harm. This is probably another area where regulation and governmental oversight would help curb the risks. What's to stop OpenAI and other frontier labs from an intentional \"accidental\" attack that results in gaining access to competitors' systems? I'm also curious what, if anything, Anthropic and Google have done differently to prevent a similar event. I suspect they actually monitored the agents as part of their studies and had better guardrails in their infra for how they set up their harnesses etc. for testing models, particularly when the other guardrails are absent as was the case here."
+    },
+    {
+      "title": "RubyGems Fracture Incident Report",
+      "url": "https://rubycentral.org/news/rubygems-fracture-incident-report/",
+      "hn": "https://news.ycombinator.com/item?id=47591825",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-31T18:54:33Z",
+      "text": "A couple of gentle corrections: > The document didn't mention a lawsuit and I was just responding to the above comment with only the context of the postmortem and pointing out that this particular article didn't claim anything illegal happened. You are correct that they did not make any claims, but the article did insinuate illegal behavior on the part of André and Samuel by selectively juxtaposing facts to imply wrongdoing without ever directly stating or saying that their behavior was illegal. For example: 1. André's first commit on RV is placed on the same bullet point as the Ruby Central-funded maintainer offsite, which implies Ruby Central's travel money subsidized a competing project's creation. 2. The `rubygems-github-backup` access token covering \"all repos, including private repos\" is introduced in the same timeline section as RV development, without any allegation it was used for RV. 3. The \"Incident Lessons\" section recommends adding an \"Outside Business Activities\" declaration policy, which only reads as a \"lesson\" if André's undisclosed side project is being framed as the problem in need of remediation. 4. The report states André \"had intimate knowledge of the foundation roadmap\" and \"did not tell anyone in Ruby Central about this work until it launched\". This frames nondisclosure of a lawful side project as a transgression. However, Ruby Central passed on this work, and even if they didn't, André has no obligation to tell Ruby Central about his work! 5. André's proposal to have his consultancy analyze RubyGems.org download logs is presented alongside an OSS Committee member raising PII and \"reputational risk\" concerns, casting a perfectly sensible rejected business proposal as something suspect. By my count, Ruby Central makes roughly 10 insinuations throughout the report, but not once do they actually claim any of these constitute a transgression. > I think that topic is extremely complicated (e.g. I am not so sure moonlighting for a competitor while an employee is necessarily protected in California...) California is actually quite clear on this! Bus. & Prof. Code § 16600 voids non-compete agreements, and California courts have consistently read it broadly enough that working on a competing project during employment is protected. The line is whether you used your employer's proprietary information or resources to do it, not whether you competed. The report does not allege that Samuel or André used Ruby Central's proprietary information, and given how thoroughly they documented everything else, I'd expect them to have said so if they had evidence of it. Ruby Central is insinuating that working on RV in the first place is a problem, not that they crossed any legal or contractual line."
+    },
+    {
+      "title": "AutoBrief – Write incident postmortems in 10 min, track action items",
+      "url": "https://autobrief.dev",
+      "hn": "https://news.ycombinator.com/item?id=47209953",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-01T19:43:05Z",
+      "text": "I built AutoBrief ( https://autobrief.dev ) because I was tired of spending 90 minutes writing postmortems after every incident, only for the action items to be forgotten by next week. AutoBrief does two things: 1. You fill a structured form (what happened, timeline, impact, root cause, action items). AI generates 4 outputs: engineering brief, executive summary, status page update, and runbook delta. Takes about 10 minutes. 2. Every action item goes into a dashboard. You can see what's open, what's overdue, and your team's completion rate. A weekly Slack digest reminds you what's still outstanding. The whole thing is encrypted (AES-256-GCM), workspace-isolated, and we don't train on your data. I built this because at my previous job we had the same database connection pool exhaustion incident three times in six months. The fix was in the postmortem action items every time. Nobody ever did it. Pricing: Free tier (4 AI generations), Solo at $9.99/mo, Team (5 users) at $39.99/mo. No per-seat pricing. Tech stack: Next.js 15, Supabase (Postgres + RLS + Edge Functions), Vercel, Tailwind CSS. Would love feedback from anyone who writes postmortems regularly. What would make this useful for your team?"
+    },
+    {
+      "title": "CrowdStrike ex-employees: 'Quality control was not part of our process'",
+      "url": "https://www.semafor.com/article/09/12/2024/ex-crowdstrike-employees-detail-rising-technical-errors-before-july-outage",
+      "hn": "https://news.ycombinator.com/item?id=41540544",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-09-14T15:43:55Z",
+      "text": "Absolutely. Some people are born firefighters. Nothing wrong with that. I once worked with a senior engineer who loved running incidents. He felt it was real engineering. He loved debugging thorny problems on a strict timeline, getting every engineer in a room and ordering them about, while also communicating widely to the company. Then, there's the rush of the all-clear and the kudos from stakeholders. Specific to his situation, I think he enjoyed the inflated ownership that the sudden urgency demanded. The system we owned was largely taken for granted by the org; a dead-end for a career. Calling incidents was a good way to get visibility at low-cost, i.e., no one would follow-up on our postmortem action items. It eventually became a problem, though, when the system we owned was essentially put into maintenance mode, aka zero development velocity. Then I estimate (balancing for other variables) the rate the senior engineer called an incident for not-incidents went up by 3x..."
+    },
+    {
+      "title": "Grafana Labs launches free incident management tool in Grafana Cloud",
+      "url": "https://grafana.com/blog/2022/09/13/grafana-incident-for-incident-management-is-now-generally-available-in-grafana-cloud/",
+      "hn": "https://news.ycombinator.com/item?id=32905312",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-09-19T22:58:03Z",
+      "text": "This is exactly how our post-mortem functions work -- we pre-generate a google doc with a template and we have the ability to copy (in rich text / markdown) the critical timeline. On the action item section today actions are tied to Github issues and we are working to extend those - namely Jira/ServiceNow. We do already have a few that gives you a quick look at current status, how long the incident took, and open action items which you can filter by labels or severity (e.g. all severe production issues) The postmortem doc, meeting link and slack channel are all automatically created for every incident"
+    },
+    {
+      "title": "Grafana Labs launches free incident management tool in Grafana Cloud",
+      "url": "https://grafana.com/blog/2022/09/13/grafana-incident-for-incident-management-is-now-generally-available-in-grafana-cloud/",
+      "hn": "https://news.ycombinator.com/item?id=32828425",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-09-13T18:32:34Z",
+      "text": "Seems great if you're already on the Grafana platform. One thing I'd say is that I find the \"react with a robot emoji on slack to add information to the timeline\" as a little kluge, hopefully that's not the only mechanism for doing that. Also does this tool have a postmortem workflow? I didn't see one in the documentation and that seems like an important part of the incident response process."
+    },
+    {
+      "title": "An update on Sunday’s service disruption",
+      "url": "https://cloud.google.com/blog/topics/inside-google-cloud/an-update-on-sundays-service-disruption",
+      "hn": "https://news.ycombinator.com/item?id=20095633",
+      "points": null,
+      "comments": null,
+      "createdAt": "2019-06-04T14:58:50Z",
+      "text": "Replying to my own comment: As many have pointed out, this was not actually the postmortem, just an \"update\". I still find it pretty weak. There has been plenty of time to assemble basic details, such as a rough timeline. Yes they are busy with the actual response and cleanup, but this is a big professional team. The update feels less like \"we're on it, here's what we have so far, more to come\", and more like a bland PR minimization exercise. I'll note that they've found time to determine that \"For most Google users there was little or no visible change to their services\", \"YouTube measured a 10% drop in global views during the incident\", and \"approximately 1% of active Gmail users had problems\", and yet they don't mention the time at which the incident was fully resolved or even when it started! Did the impact last for a few minutes, an hour, or multiple hours? Reading this, I have no idea. But I do learn that \"the Google teams were keenly aware that every minute which passed represented another minute of user impact\", they \"brought on additional help to parallelize restoration efforts\", \"networking systems correctly triaged the traffic overload\", and \"low-bandwidth services like Google Search recorded only a short-lived increase in latency\". In other words, this update on what seems to have been a very major incident consists mostly of vague, positive statements. It does say \"we take it very seriously\", but it doesn't make me believe it. (I would add that I worked at Google from 2006 to 2010, and based on that experience I'm sure they are taking this very seriously and that there will be an excellent internal postmortem. But man, reading this sure makes it hard to remember that.)"
+    },
+    {
+      "title": "The Cult of the Root Cause",
+      "url": "http://reinertsenassociates.com/the-cult-of-the-root-cause/",
+      "hn": "https://news.ycombinator.com/item?id=17110523",
+      "points": null,
+      "comments": null,
+      "createdAt": "2018-05-20T00:34:32Z",
+      "text": "This reminds me of what we've been doing for a while, the \"blameless postmortem.\" The technique is championed by Etsy, and you can read more about it in an article that introduces their debriefing guide: https://codeascraft.com/2016/11/17/debriefing-facilitation-g... From the linked PDF from the article: > “Adaptability and learning. We learn through honest, blameless reflection on lessons and surprises. We believe that traditional root cause analysis makes learning from mistakes difficult. Our blameless post-mortem process is a widely-cited technique that we believe is becoming best practice among organizations that value innovation. Blameless postmortems drive a significant percentage of our development as we analyze what about our production environment was less than optimal and rapidly make corresponding adjustments.” (Etsy, Inc., 2015) The idea, boiled down, is to inspect timelines, procedures, and actions and develop a narrative of how an incident came to be. The goal is for everyone to walk away with a (better) understanding of everything. With this, people are better armed to put into place solutions. One example from the text is where an engineer pushes out a change because they thought the build system had zero failures. The push breaks the system and causes a regression that should have been caught in the tests. During the postmortem, the engineer says, \"I thought the tests had zero failures. I guess I need to be more diligent in the future.\" Upon further timeline investigation, it is noted that the tests actually had eight failures, but the font had eights and zeros looking very similar. The fix was not \"be more diligent;\" the fix is maybe to have a better font or use colors for pass/fail. Overall, I like the ideas proposed in this blameless postmorem style. It runs counter to the natural tendency to \"find a problem and fix it\" because it feels like we are talking less about the problem and the fix and talking more about the narrative of the failure. But what I've seen is folks gaining better understanding of how everyone else works, learning about tools and tricks, and about assumptions. And knowing more about the narrative leads to better solutions."
+    },
+    {
+      "title": "Guidance on Performing Retrospectives",
+      "url": "http://www.craigkerstiens.com/2017/12/26/guidance-on-performing-retrospectives/",
+      "hn": "https://news.ycombinator.com/item?id=16010614",
+      "points": null,
+      "comments": null,
+      "createdAt": "2017-12-26T20:01:51Z",
+      "text": "It's likely just a wording thing, but what is talked as a retrospective here, we call a blameless postmortem at my current company. And we have an ever evolving template we use to share the timeline, root cause, learnings & action items. The one thing I would add to the article is spend time to calculate the business impact of the incident and start the retrospective with this. This is something that might not be that straightforward for engineers to know and might need help from other people within the company to understand. How many customers were impacted and in what way? E.g. if you had an outage on your web site where people could not check out, how many orders did you lose and what was the total value? The answer will depend if people completed their order after the outage was over, if they could use e.g. the mobile app that time and so on. Pinpointing the business impact can help understand just how severe that specific outage was (and how that part of the system is connected with everything else)."
+    }
+  ]
+}

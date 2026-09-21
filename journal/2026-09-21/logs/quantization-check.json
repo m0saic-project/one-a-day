@@ -1,0 +1,191 @@
+[
+  {
+    "canvas": "1600x900",
+    "trackW": 779,
+    "ref": 624,
+    "ruleEnd": 1117,
+    "worstEdgeErrorPx": 5,
+    "rows": [
+      {
+        "name": "parse 1MB json",
+        "baseExpected": 1138,
+        "basePainted": 1138,
+        "candExpected": 761,
+        "candPainted": 760
+      },
+      {
+        "name": "render 10k rows",
+        "baseExpected": 1185,
+        "basePainted": 1184,
+        "candExpected": 1151,
+        "candPainted": 1152
+      },
+      {
+        "name": "cold start",
+        "baseExpected": 1148,
+        "basePainted": 1148,
+        "candExpected": 1227,
+        "candPainted": 1226
+      },
+      {
+        "name": "gzip 4MB",
+        "baseExpected": 1117,
+        "basePainted": 1112,
+        "candExpected": 964,
+        "candPainted": 963
+      }
+    ],
+    "ratioErr": [
+      {
+        "name": "parse 1MB json",
+        "drawn": 0.41506,
+        "truth": 0.41505,
+        "errPct": 0.0037
+      },
+      {
+        "name": "render 10k rows",
+        "drawn": 0.95994,
+        "truth": 0.95918,
+        "errPct": 0.0784
+      },
+      {
+        "name": "cold start",
+        "drawn": 1.125,
+        "truth": 1.125,
+        "errPct": 0
+      },
+      {
+        "name": "gzip 4MB",
+        "drawn": 0.75481,
+        "truth": 0.75424,
+        "errPct": 0.0756
+      }
+    ]
+  },
+  {
+    "canvas": "1920x1080",
+    "trackW": 937,
+    "ref": 751,
+    "ruleEnd": 1342,
+    "worstEdgeErrorPx": 6,
+    "rows": [
+      {
+        "name": "parse 1MB json",
+        "baseExpected": 1368,
+        "basePainted": 1368,
+        "candExpected": 914,
+        "candPainted": 914
+      },
+      {
+        "name": "render 10k rows",
+        "baseExpected": 1424,
+        "basePainted": 1424,
+        "candExpected": 1383,
+        "candPainted": 1384
+      },
+      {
+        "name": "cold start",
+        "baseExpected": 1379,
+        "basePainted": 1378,
+        "candExpected": 1475,
+        "candPainted": 1474
+      },
+      {
+        "name": "gzip 4MB",
+        "baseExpected": 1342,
+        "basePainted": 1336,
+        "candExpected": 1157,
+        "candPainted": 1156
+      }
+    ],
+    "ratioErr": [
+      {
+        "name": "parse 1MB json",
+        "drawn": 0.41545,
+        "truth": 0.41505,
+        "errPct": 0.0958
+      },
+      {
+        "name": "render 10k rows",
+        "drawn": 0.95872,
+        "truth": 0.95918,
+        "errPct": -0.0482
+      },
+      {
+        "name": "cold start",
+        "drawn": 1.12517,
+        "truth": 1.125,
+        "errPct": 0.0148
+      },
+      {
+        "name": "gzip 4MB",
+        "drawn": 0.75366,
+        "truth": 0.75424,
+        "errPct": -0.0763
+      }
+    ]
+  },
+  {
+    "canvas": "640x360",
+    "trackW": 312,
+    "ref": 250,
+    "ruleEnd": 447,
+    "worstEdgeErrorPx": 3,
+    "rows": [
+      {
+        "name": "parse 1MB json",
+        "baseExpected": 455,
+        "basePainted": 454,
+        "candExpected": 304,
+        "candPainted": 304
+      },
+      {
+        "name": "render 10k rows",
+        "baseExpected": 474,
+        "basePainted": 474,
+        "candExpected": 461,
+        "candPainted": 460
+      },
+      {
+        "name": "cold start",
+        "baseExpected": 459,
+        "basePainted": 458,
+        "candExpected": 491,
+        "candPainted": 490
+      },
+      {
+        "name": "gzip 4MB",
+        "baseExpected": 447,
+        "basePainted": 444,
+        "candExpected": 386,
+        "candPainted": 385
+      }
+    ],
+    "ratioErr": [
+      {
+        "name": "parse 1MB json",
+        "drawn": 0.416,
+        "truth": 0.41505,
+        "errPct": 0.2292
+      },
+      {
+        "name": "render 10k rows",
+        "drawn": 0.96,
+        "truth": 0.95918,
+        "errPct": 0.0851
+      },
+      {
+        "name": "cold start",
+        "drawn": 1.124,
+        "truth": 1.125,
+        "errPct": -0.0889
+      },
+      {
+        "name": "gzip 4MB",
+        "drawn": 0.756,
+        "truth": 0.75424,
+        "errPct": 0.2337
+      }
+    ]
+  }
+]

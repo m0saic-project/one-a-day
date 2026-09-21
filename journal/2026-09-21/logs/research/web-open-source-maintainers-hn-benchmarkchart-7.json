@@ -1,0 +1,43 @@
+{
+  "query": "benchmark chart misleading",
+  "days": 720,
+  "count": 4,
+  "results": [
+    {
+      "title": "Separating signal from noise in coding evaluations",
+      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations/",
+      "hn": "https://news.ycombinator.com/item?id=48846123",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-09T14:07:28Z",
+      "text": "I can understand why this might make for a bad benchmark, but Overly strict tests enforce specific implementation details not specified in the prompt, invalidating many functionally correct submissions. Underspecified prompts omit requirements that hidden tests enforce and that are not reasonably inferable. Low-coverage tests under check the requested feature, so incomplete fixes can pass. A misleading prompt points models toward the wrong behavior or contradicts what tests require. If the goal is, &quot;how does my model compare to real SWEs&quot;, these are pretty reasonable situations that "
+    },
+    {
+      "title": "Google releases Gemma 4 open models",
+      "url": "https://deepmind.google/models/gemma/gemma-4/",
+      "hn": "https://news.ycombinator.com/item?id=47616709",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-02T16:35:12Z",
+      "text": "Featuring the ELO score as the main benchmark in chart is very misleading. The big dense Gemma 4 model does not seem to reach Qwen 3.5 27B dense model in most benchmarks. This is obviously what matters. The small 2B &#x2F; 4B models are interesting and may potentially be better ASR models than specialized ones (not just for performances but since they are going to be easily served via llama.cpp &#x2F; MLX and front-ends). Also interesting for &quot;fast&quot; OCR, given they are vision models as well. But other than that, the release is a bit disappointing."
+    },
+    {
+      "title": "Tesla 'Robotaxi' adds 5 more crashes in Austin in a month – 4x worse than humans",
+      "url": "https://electrek.co/2026/02/17/tesla-robotaxi-adds-5-more-crashes-austin-month-4x-worse-than-humans/",
+      "hn": "https://news.ycombinator.com/item?id=47053324",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-02-17T21:05:01Z",
+      "text": "This data seems very incomplete and potentially misleading. &gt;The new crashes include [...] a crash with a bus while the Tesla was stationary Doesn&#x27;t this imply that the bus driver hit the stationary Tesla, which would make the human bus driver at fault and the party responsible for causing the accident? Why should a human driver hitting a Tesla be counted against Tesla&#x27;s safety record? It&#x27;s possible that the Tesla could&#x27;ve been stopped in a place where it shouldn&#x27;t have, like in the middle of an intersection (like all the Waymos did during the SF power outage), but "
+    },
+    {
+      "title": "OpenAI O3 breakthrough high score on ARC-AGI-PUB",
+      "url": "https://arcprize.org/blog/oai-o3-pub-breakthrough",
+      "hn": "https://news.ycombinator.com/item?id=42476797",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-12-21T01:30:37Z",
+      "text": "The chart is super misleading, since the test was obscure until recently. A few months ago he announced he&#x27;d made the only good AGI test and offered a cash prize for solving it, only to find out in as much time that it&#x27;s no different from other benchmarks."
+    }
+  ]
+}

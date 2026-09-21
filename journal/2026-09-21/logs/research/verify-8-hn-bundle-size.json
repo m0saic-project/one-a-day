@@ -1,0 +1,247 @@
+{
+  "query": "bundle size",
+  "days": 730,
+  "count": 30,
+  "results": [
+    {
+      "title": "Show HN: Forexfin – Trading calculators, alerts and a journal in one place",
+      "url": "https://forexfin.tech/",
+      "hn": "https://news.ycombinator.com/item?id=49770525",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-19T22:12:18Z"
+    },
+    {
+      "title": "Show HN: Seal – Letters and passwords that open for your family after you die",
+      "url": "https://github.com/jasonepage/Seal",
+      "hn": "https://news.ycombinator.com/item?id=49763311",
+      "points": 13,
+      "comments": 7,
+      "createdAt": "2026-09-19T04:28:22Z"
+    },
+    {
+      "title": "Show HN: Pizza Bot – An inbox for AI agents that work in the background",
+      "url": "https://github.com/pizza-bot-app/pizza-bot",
+      "hn": "https://news.ycombinator.com/item?id=49713894",
+      "points": 61,
+      "comments": 37,
+      "createdAt": "2026-09-15T15:20:26Z"
+    },
+    {
+      "title": "Show HN: eInk Optimized Manga with Kindle Comic Converter (+Kobo/KOreader)",
+      "url": "https://github.com/ciromattia/kcc",
+      "hn": "https://news.ycombinator.com/item?id=49451982",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-26T16:37:07Z"
+    },
+    {
+      "title": "Show HN: Dashi – a 214KB Chrome new tab dashboard with no servers or analytics",
+      "url": "https://trydashi.app/",
+      "hn": "https://news.ycombinator.com/item?id=49419837",
+      "points": 9,
+      "comments": 2,
+      "createdAt": "2026-08-24T13:55:21Z"
+    },
+    {
+      "title": "Show HN: eInk Optimized Manga with Kindle Comic Converter (+Kobo/KOreader)",
+      "url": "https://github.com/ciromattia/kcc",
+      "hn": "https://news.ycombinator.com/item?id=49390363",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-21T16:20:36Z"
+    },
+    {
+      "title": "Show HN: LilScript makes JavaScript libraries smaller",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49374554",
+      "points": 14,
+      "comments": 2,
+      "createdAt": "2026-08-20T13:50:02Z"
+    },
+    {
+      "title": "Show HN: Markdown Buddy – Native macOS Markdown Editor with Quick Look and Xcode",
+      "url": "https://markdownbuddy.inawa.app/",
+      "hn": "https://news.ycombinator.com/item?id=49374127",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-08-20T13:08:10Z"
+    },
+    {
+      "title": "Show HN: CSS-in-JS Arena Bamboo, StyleX and Panda on Pixel-Identical Apps",
+      "url": "https://github.com/gajus/css-in-js-arena",
+      "hn": "https://news.ycombinator.com/item?id=49346044",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-08-18T14:21:25Z"
+    },
+    {
+      "title": "Show HN: Krypter – simple offline message and file encryption mobile app",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49032780",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-07-24T08:31:49Z"
+    },
+    {
+      "title": "Show HN: KiCad in the Browser",
+      "url": "https://demo.pcbjam.com/",
+      "hn": "https://news.ycombinator.com/item?id=48793542",
+      "points": 111,
+      "comments": 32,
+      "createdAt": "2026-07-05T12:06:57Z"
+    },
+    {
+      "title": "Show HN: I built a middleware agent that turns PLC data into REST/gRPC APIs",
+      "url": "https://limenedge.com/docs/getting-started",
+      "hn": "https://news.ycombinator.com/item?id=48611741",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-06-20T18:39:59Z"
+    },
+    {
+      "title": "Show HN: Jumpjet – a WASM runtime for game developers",
+      "url": "https://jumpjet.dev",
+      "hn": "https://news.ycombinator.com/item?id=48602531",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-06-19T19:52:52Z"
+    },
+    {
+      "title": "Show HN: I made a Gemma 4 Mac app that names screenshots with local AI",
+      "url": "https://snapname.app",
+      "hn": "https://news.ycombinator.com/item?id=48342306",
+      "points": 7,
+      "comments": 6,
+      "createdAt": "2026-05-31T01:40:56Z"
+    },
+    {
+      "title": "Show HN: AG2B – Run the agent loop in the browser, expose your tools via WebMCP",
+      "url": "https://ag2b.ai/docs",
+      "hn": "https://news.ycombinator.com/item?id=48308148",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-05-28T12:44:45Z"
+    },
+    {
+      "title": "Show HN: An open source tool for generating macOS app icons with AI",
+      "url": "https://github.com/TeamDev-IP/MoBrowser-App-Icon-Maker",
+      "hn": "https://news.ycombinator.com/item?id=48121368",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-05-13T13:03:01Z"
+    },
+    {
+      "title": "Show HN: Two easing curves and no animation library",
+      "url": "https://frigade.com/blog/two-curves-no-library",
+      "hn": "https://news.ycombinator.com/item?id=48029206",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-05-05T21:58:13Z"
+    },
+    {
+      "title": "Show HN: Hitoku Draft – context aware local macOS assistant",
+      "url": "https://github.com/Saladino93/hitokudraft",
+      "hn": "https://news.ycombinator.com/item?id=47755000",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-04-13T17:05:09Z"
+    },
+    {
+      "title": "Show HN: QVAC SDK, a universal JavaScript SDK for building local AI applications",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47708697",
+      "points": 30,
+      "comments": 16,
+      "createdAt": "2026-04-09T19:38:08Z"
+    },
+    {
+      "title": "Eliminating UI Bloat in the EraMix Financial Union Dashboard",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47394092",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-16T01:36:15Z"
+    },
+    {
+      "title": "Show HN: Badge that shows how well your codebase fits in an LLM's context window",
+      "url": "https://github.com/qwibitai/nanoclaw/tree/main/repo-tokens",
+      "hn": "https://news.ycombinator.com/item?id=47181471",
+      "points": 88,
+      "comments": 41,
+      "createdAt": "2026-02-27T15:14:42Z"
+    },
+    {
+      "title": "Show HN: Smplogs – Local-first AWS Cloudwatch log analyzer via WASM",
+      "url": "https://www.smplogs.com",
+      "hn": "https://news.ycombinator.com/item?id=47170296",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-02-26T18:47:22Z"
+    },
+    {
+      "title": "Show HN: Galopen – Auto-opens Zoom/Meet links from your calendar",
+      "url": "https://galopen.kkweb.io",
+      "hn": "https://news.ycombinator.com/item?id=47058928",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-18T09:13:22Z"
+    },
+    {
+      "title": "Show HN: MacMule – EMule for MacOsx",
+      "url": "https://github.com/mderouet/macMule",
+      "hn": "https://news.ycombinator.com/item?id=47038235",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-16T18:15:11Z"
+    },
+    {
+      "title": "Show HN: Crashcat – Lightweight 3D physics for JavaScript",
+      "url": "https://crashcat.dev/",
+      "hn": "https://news.ycombinator.com/item?id=46989377",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-12T14:37:59Z"
+    },
+    {
+      "title": "Show HN: Qrono – A \"final\" date/time library for JavaScript",
+      "url": "https://qronojs.dev/",
+      "hn": "https://news.ycombinator.com/item?id=46972137",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-11T07:56:22Z"
+    },
+    {
+      "title": "Show HN: Axiom – C++ tensor library with NumPys API, optimized for Apple Silicon",
+      "url": "https://github.com/Frikallo/axiom",
+      "hn": "https://news.ycombinator.com/item?id=46910852",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2026-02-06T09:41:12Z"
+    },
+    {
+      "title": "Show HN: Free depreciation calculator (no login, no back end, 3KB gzipped)",
+      "url": "https://www.mydepreciation.org",
+      "hn": "https://news.ycombinator.com/item?id=46845620",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-01T12:06:56Z"
+    },
+    {
+      "title": "Bundle didn't suddenly get bigger. You just never saw it change",
+      "url": "https://github.com/q1sh101/build-size-diff",
+      "hn": "https://news.ycombinator.com/item?id=46710956",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-01-21T20:15:38Z"
+    },
+    {
+      "title": "Show HN: Coi – A language that compiles to WASM, beats React/Vue",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46696283",
+      "points": 225,
+      "comments": 69,
+      "createdAt": "2026-01-20T19:01:53Z"
+    }
+  ]
+}

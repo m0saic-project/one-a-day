@@ -1,0 +1,15 @@
+{
+  "note": "Confirmed on reddit.com itself (svc/shreddit/comments endpoint, 200) that these comments render live, not only in the arctic-shift archive.",
+  "fetched": "2026-09-21",
+  "endpoints": [
+    "https://www.reddit.com/svc/shreddit/comments/r/DigitalMarketing/t3_1u1v7ya",
+    "https://www.reddit.com/svc/shreddit/comments/r/PowerBI/t3_1q8rzfo"
+  ],
+  "davidhk_live_excerpt": " process was draining the most time? Was it formatting the actual dashboard layout or trying to figure out what the data was saying?\nReply\nShare\n:first-child]:h-full [&>:first-child]:w-full [&>:first-child]:mb-0 [&>:first-child]:rounded-[inherit] h-full w-full\n[&>:first-child]:overflow-hidden [&>:first-child]:max-h-full\">\nDavidHK\n•\n3mo ago\nMost the time was spent manually compiling screenshots in Adobe acrobat after exporting agency analytics. Usually to add in creatives, reports from our dsp that AA didn't support, and throwing in little text boxes with insights\nThe agency freakin sucks,they literally have no fuckin idea what they are doing. It honestly makes me mad thinking how long I worked there before I questioned things..\nThey didn't even know how to use tag manager ...\nThat being said, these days, I still find AA to be the best in terms of great ux. The dashboards are much faster to build than looker studio or anything else I've used. I just hate how expensive it is.\nNowadays I ",
+  "sysadmin_top_comment_live_excerpt": "r workflow is building in Power BI, exporting to PowerPoint, uploading the PPT to SharePoint, then saving a final PDF and uploading that to another folder for review. The problem is Power BI exports to PPT as images, so every small change means re-exporting the entire deck. One minor request can turn into multiple re-exports.\nNobody wanted to tackle this part of the post? That in itself made me…..sad inside.\nReply\nShare\n:first-child]:h-full [&>:first-child]:w-full [&>:first-child]:mb-0 [&>:first-child]:rounded-[inherit] h-full w-full\n[&>:first-child]:overflow-hidden [&>:first-child]:max-h-full\">\nFidlefadle\n•\n8mo ago\nYes OP what's the reason for this workflow?\nReply\nShare\n:first-child]:h-full [&>:first-child]:w-full [&>:first-child]:mb-0 [&>:first-child]:rounded-[inherit] h-full w-full\n[&>:first-child]:overflow-hidden [&>:first-child]:max-h-full\">\nIabe01\n•\n8mo ago\nIn one of my experiences, the ppt collated reports from multiple organisations that could not be merged in to 1 dashboard fo",
+  "notInFirstPage": [
+    "alreyes91 orut29k",
+    "Intrepid_Boss9449 or1aav0",
+    "Stevie-bezos nyqdv0s — present in arctic-shift archive, collapsed/paginated on the live page"
+  ]
+}

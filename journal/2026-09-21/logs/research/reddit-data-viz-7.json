@@ -1,0 +1,84 @@
+{
+  "source": "https://api.pullpush.io/reddit/search/submission/?subreddit=datavisualization&q=every+week+chart&size=60&sort=desc&sort_type=created_utc",
+  "fetchedAt": "2026-09-21T04:13:46.056Z",
+  "count": 7,
+  "results": [
+    {
+      "id": "1wkbrr0",
+      "title": "Can you help me to research about infographic design software for non-designers with data?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1wkbrr0/can_you_help_me_to_research_about_infographic/",
+      "sub": "datavisualization",
+      "author": "OtherwisedAttorney",
+      "score": 1,
+      "numComments": 0,
+      "date": "2026-09-19",
+      "text": "I'm not a designer but I make a lot of visuals for work. Most of my source material is spreadsheet data plus short text blurbs. Simple templates help me get started fast. But then I have problems when I need to tweak labels, legends, spacing, or swap a chart type. Last week, I made a bar chart and the legend covered half my data. It took me an hour to fix in a tool that felt locked down. What I want is something that imports my data, picks a decent chart, and still lets me edit. Also don't want the final result looking like every other AI infographic out there. Any picks who've been in the same spot?"
+    },
+    {
+      "id": "1w81lab",
+      "title": "Data cleaning and create interactive dashboard @ishan_dahibhate",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1w81lab/data_cleaning_and_create_interactive_dashboard/",
+      "sub": "datavisualization",
+      "author": "GiraffeInteresting80",
+      "score": 1,
+      "numComments": 0,
+      "date": "2026-09-05",
+      "text": "I help business owners, managers, and founders turn raw, messy spreadsheets into clean, automated, executive-ready dashboards—saving them hours of manual work every week. If your team spends precious time deleting duplicate rows, fixing broken #N/A or #VALUE! formula errors, or trying to make sense of cluttered CSV exports, I create custom data solutions that streamline your workflow. What I bring to your team: 1. Data Cleaning & Formatting: Removing duplicates, trimming spaces, splitting columns, and fixing date/number formats. 2. Interactive Dashboards: Dynamic Pivot Tables, KPI metric cards, line/bar charts, and interactive Slicers in Excel and Google Sheets. 3. Error Repair & Automation: Resolving formula bugs and setting up clean reporting structures. 🎁 Special Launch Offer: I am currently offering discounted rates for my first 10 clients on Fiverr, plus a free sample clean on up to 50 rows of your raw data! https://reddit.com/link/1w81lab/video/yfkpszb8kpnh1/player "
+    },
+    {
+      "id": "1vnzyiw",
+      "title": "Interactive dashboard",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1vnzyiw/interactive_dashboard/",
+      "sub": "datavisualization",
+      "author": "shamimfazlani",
+      "score": 1,
+      "numComments": 6,
+      "date": "2026-08-14",
+      "text": "Interactive Dashboard Builder – Looking for Brutally Honest Feedback Hi everyone, I've been building a tool that creates interactive dashboards from Excel files in just a few clicks. This is still an early project, and I'm looking for honest feedback and ideas from people who work with data every day. Current workflow 1. Upload a clean Excel (.xlsx/.csv) file. 2. Describe what you want in plain English (or let AI generate the prompt). 3. Choose: \\- The KPIs you want to track. \\- The filters you need. \\- The chart types you prefer. 4. The tool automatically builds a shareable interactive dashboard that can be viewed through a link. My goal I'm not trying to build \"just another dashboard tool.\" I want to solve real, everyday reporting problems and save people hours of manual work. I'd really appreciate your thoughts: \\- What reporting task do you repeat every day or every week? \\- What dashboard do you wish existed but doesn't? \\- Which industry needs this the most? \\- What feature would make you switch from Excel, Power BI, Tableau, or Looker? \\- If AI could automate one reporting task for you, what would it be? I'm still learning, so every suggestion good or bad is valuable. If your idea is practical, I'd love to build it and share the result with the community. Thank you for your time!"
+    },
+    {
+      "id": "1vf8qsq",
+      "title": "I stopped building dashboards that nobody opens. Here’s what changed.",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1vf8qsq/i_stopped_building_dashboards_that_nobody_opens/",
+      "sub": "datavisualization",
+      "author": "metric_skeptic",
+      "score": 0,
+      "numComments": 0,
+      "date": "2026-08-04",
+      "text": "At one point I realized something uncomfortable. I spent days building beautiful dashboards, but many of them were barely used after launch. Now before creating anything, I ask three questions: \\- What decision will this dashboard help someone make? \\- What action should happen if this metric changes? \\- Who is going to open it every week? If I can’t answer those questions, I usually don’t build the dashboard. It sounds obvious, but this simple change made my work much more valuable than adding another fancy chart. Has anyone else had the same realization?"
+    },
+    {
+      "id": "1usp9js",
+      "title": "Designing dashboards became much easier when I started here",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1usp9js/designing_dashboards_became_much_easier_when_i/",
+      "sub": "datavisualization",
+      "author": "Leather-Concept8657",
+      "score": 9,
+      "numComments": 0,
+      "date": "2026-07-10",
+      "text": "Before this week's reporting cycle, I caught myself adding another chart because the data was available, not because anyone needed it. It made me rethink how I approach dashboards. Now I start with a single question: *What decision should this dashboard help someone make?* If I can't answer that, I don't open Power BI. A sales dashboard doesn't need every KPI. It might just need to answer why revenue dropped this week. An operations dashboard might only need to show where delays are coming from. Everything else is context, not the main story. I've found stakeholders spend less time asking for explanations when every visual points back to one business question. The dashboard becomes a decision tool instead of a reporting screen. Do you design dashboards around business questions first, or do you start with the data and refine from there?"
+    },
+    {
+      "id": "1blvckr",
+      "title": "Rate my running total mountain chart ",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1blvckr/rate_my_running_total_mountain_chart/",
+      "sub": "datavisualization",
+      "author": "Grouchy-Increase-432",
+      "score": 1,
+      "numComments": 0,
+      "date": "2024-03-23",
+      "text": "Hello, I'm a business analyst (not actual title for confidentiality) for a software company and trying to visualise our quarterly sales performance. I've designed this as a mountain chart, and the underlying data is a running total (or cumulative) of our weekly sales. The goal to quickly visualize how we're performing quarter to date, how we're doing against prior year and where we're expected to finish. Can get some feedback on this? Does it make sense? Is it visually appealing, yet allow the viewer to quickly establish performance? Would love to roll this out to the team and move away from boring mundane tables every week! Here's the meaning of each component: - PY = Previous year sales (grey), which is last year's total sales or our renewable sales based - Actuals = our actual sales this quarter (blue) - OL + Act = Outlook + Actuals (dotted blue line), which is our actual quarter to date sales plus our predicted sales (aka our Outlook or Forecast for the remaining quarter) - QRF = quarter rolling forecast (orange), which is our quarterly sales target"
+    },
+    {
+      "id": "ril4cq",
+      "title": "How would you visualize large amount of data ?",
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/ril4cq/how_would_you_visualize_large_amount_of_data/",
+      "sub": "datavisualization",
+      "author": "Sotovision",
+      "score": 2,
+      "numComments": 3,
+      "date": "2021-12-17",
+      "text": "I have a data set that I wantto show in a website. Currently this dataset has 101 categories that are group by weeks of the month, or they can be group by month of the year. I tried using a bar chart, but the graph is large enough so that the graph have to be scrolled down to fully visualize the data and fit a large amount of the page. And I made it big enough to really understand what every bar is about. Do you guys have any best practice or technique to visualize large amount of data?"
+    }
+  ]
+}

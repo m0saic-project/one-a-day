@@ -1,0 +1,199 @@
+{
+  "query": "bar chart race",
+  "days": 4000,
+  "count": 24,
+  "results": [
+    {
+      "title": "Stripe Withholding Balance of $100000",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49764468",
+      "points": 11,
+      "comments": 17,
+      "createdAt": "2026-09-19T08:15:17Z"
+    },
+    {
+      "title": "Show HN: Rediflow – SSR project management, one source of truth, no spreadsheet",
+      "url": "https://gitlab.com/rediflow_eu/rediflow",
+      "hn": "https://news.ycombinator.com/item?id=47155922",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-02-25T18:47:43Z"
+    },
+    {
+      "title": "Open source AI diagram generator (Draw.io, Mermaid)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46487082",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-04T11:47:36Z"
+    },
+    {
+      "title": "Show HN: Search for any open source project and explore neighboring results",
+      "url": "https://relatedrepos.com/search",
+      "hn": "https://news.ycombinator.com/item?id=44160263",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-06-02T16:05:20Z"
+    },
+    {
+      "title": "Show HN: ChartPrompt – An AI-powered chart generation platform",
+      "url": "https://chartprompt.com/",
+      "hn": "https://news.ycombinator.com/item?id=44140426",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2025-05-30T22:33:31Z"
+    },
+    {
+      "title": "Web Framework Bar Chart Race",
+      "url": "https://ossinsight.io/collections/web-framework/trends/",
+      "hn": "https://news.ycombinator.com/item?id=31601367",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2022-06-02T22:31:57Z"
+    },
+    {
+      "title": "Show HN: AlienArtCharts – Bar Chart Race Video Generator",
+      "url": "https://alienart.io/",
+      "hn": "https://news.ycombinator.com/item?id=30088488",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2022-01-26T17:24:57Z"
+    },
+    {
+      "title": "Show HN: Open-source bar chart race generator",
+      "url": "https://fabdevgit.github.io/barchartrace/",
+      "hn": "https://news.ycombinator.com/item?id=23949289",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2020-07-25T14:09:47Z"
+    },
+    {
+      "title": "Bar Chart Race Generator",
+      "url": "https://fabdevgit.github.io/barchartrace/",
+      "hn": "https://news.ycombinator.com/item?id=23905229",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2020-07-21T08:25:49Z"
+    },
+    {
+      "title": "Official Release of Bar_chart_race, Animated Bar Chart Races in Python",
+      "url": "https://www.dunderdata.com/blog/official-release-of-bar_chart_race-a-python-package-for-creating-animated-bar-chart-races",
+      "hn": "https://news.ycombinator.com/item?id=23382091",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2020-06-01T18:41:27Z"
+    },
+    {
+      "title": "Create a Bar Chart Race Animation in Python Using Matplotlib",
+      "url": "https://www.dunderdata.com/blog/create-a-bar-chart-race-animation-in-python-with-matplotlib",
+      "hn": "https://news.ycombinator.com/item?id=23033609",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2020-04-30T17:40:17Z"
+    },
+    {
+      "title": "Coronavirus Bar Chart Race by Country",
+      "url": "https://www.covid19db.com",
+      "hn": "https://news.ycombinator.com/item?id=22699474",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2020-03-27T00:40:53Z"
+    },
+    {
+      "title": "Show HN: uPlot.js v1.0 – A fast, small chart for time series, OHLC and bars",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=22567922",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2020-03-13T15:17:25Z"
+    },
+    {
+      "title": "Bar Chart Race: Top Countries by GDP, USD (1960-2019)",
+      "url": "https://www.youtube.com/watch?v=mcPhs-X29ac",
+      "hn": "https://news.ycombinator.com/item?id=21958090",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2020-01-04T22:34:51Z"
+    },
+    {
+      "title": "Bar Chart Race, Explained",
+      "url": "https://observablehq.com/@d3/bar-chart-race-explained",
+      "hn": "https://news.ycombinator.com/item?id=21506901",
+      "points": 134,
+      "comments": 21,
+      "createdAt": "2019-11-11T17:47:23Z"
+    },
+    {
+      "title": "Show HN: Integrate Bar Chart Race UI to Your Website (React)",
+      "url": "https://www.npmjs.com/package/chart-race-react",
+      "hn": "https://news.ycombinator.com/item?id=21319459",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2019-10-22T01:23:14Z"
+    },
+    {
+      "title": "Show HN: Bar chart race component for React",
+      "url": "https://github.com/Mckinsey666/chart-race-react",
+      "hn": "https://news.ycombinator.com/item?id=21310046",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2019-10-21T07:33:18Z"
+    },
+    {
+      "title": "Bar Chart Race for CO2",
+      "url": "https://twitter.com/DrSimEvans/status/1108745504400334849/photo/1",
+      "hn": "https://news.ycombinator.com/item?id=19486094",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2019-03-25T19:46:24Z"
+    },
+    {
+      "title": "Bar chart race: the most populous cities in the world",
+      "url": "https://observablehq.com/@johnburnmurdoch/bar-chart-race-the-most-populous-cities-in-the-world",
+      "hn": "https://news.ycombinator.com/item?id=19484260",
+      "points": 69,
+      "comments": 13,
+      "createdAt": "2019-03-25T17:00:25Z"
+    },
+    {
+      "title": "Bar chart race: the most populous cities through time",
+      "url": "https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19",
+      "hn": "https://news.ycombinator.com/item?id=19444689",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2019-03-20T17:41:39Z"
+    },
+    {
+      "title": "“Bar Chart Race” animation: changing ranks of the 10 biggest cities since 1500",
+      "url": "https://twitter.com/jburnmurdoch/status/1107552367795412992",
+      "hn": "https://news.ycombinator.com/item?id=19444006",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2019-03-20T16:46:42Z"
+    },
+    {
+      "title": "“Bar Chart Race” animation of the 10 biggest cities in the world since 1500",
+      "url": "https://twitter.com/jburnmurdoch/status/1107552367795412992",
+      "hn": "https://news.ycombinator.com/item?id=19425075",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2019-03-18T20:43:49Z"
+    },
+    {
+      "title": "The most populous cities in the world from 1500 to 2018",
+      "url": "https://observablehq.com/@johnburnmurdoch/bar-chart-race-the-most-populous-cities-in-the-world",
+      "hn": "https://news.ycombinator.com/item?id=19424054",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2019-03-18T19:04:34Z"
+    },
+    {
+      "title": "Ask HN: MBP user making new job win/pc switch",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=17045381",
+      "points": 6,
+      "comments": 6,
+      "createdAt": "2018-05-11T06:40:47Z"
+    }
+  ]
+}

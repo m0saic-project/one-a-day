@@ -1,0 +1,207 @@
+{
+  "query": "release notes",
+  "days": 540,
+  "count": 25,
+  "results": [
+    {
+      "title": "Palemoon v35.0.0 has been released",
+      "url": "http://www.palemoon.org/releasenotes.shtml",
+      "hn": "https://news.ycombinator.com/item?id=49780287",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-20T21:32:32Z"
+    },
+    {
+      "title": "Show HN: Set, offline Markdown note-taking app with device-to-device sync",
+      "url": "https://app.writewithset.com",
+      "hn": "https://news.ycombinator.com/item?id=49770603",
+      "points": 8,
+      "comments": 1,
+      "createdAt": "2026-09-19T22:26:28Z"
+    },
+    {
+      "title": "Show HN: Flyover Country – guide to the window seat with AR",
+      "url": "https://flyovercountry.app/",
+      "hn": "https://news.ycombinator.com/item?id=49768851",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-19T18:13:22Z"
+    },
+    {
+      "title": "Xcode 27.1 Beta Release Notes",
+      "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_1-release-notes",
+      "hn": "https://news.ycombinator.com/item?id=49758419",
+      "points": 153,
+      "comments": 116,
+      "createdAt": "2026-09-18T18:39:31Z"
+    },
+    {
+      "title": "Show HN: Iceoryx2 0.10: flatbuffer integration, zerocopy IPC with unbounded data",
+      "url": "https://ekxide.io/blog/iceoryx2-0.10-release/",
+      "hn": "https://news.ycombinator.com/item?id=49758211",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-18T18:23:19Z"
+    },
+    {
+      "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
+      "url": "https://cactuscompute.com/needle",
+      "hn": "https://news.ycombinator.com/item?id=49748553",
+      "points": 231,
+      "comments": 91,
+      "createdAt": "2026-09-18T00:11:44Z"
+    },
+    {
+      "title": "Show HN: An open source PDF Reader with annotation, notes, SRS, Linking support",
+      "url": "https://github.com/roshanmishra86/Mereth-Reader/releases/tag/v0.1.4",
+      "hn": "https://news.ycombinator.com/item?id=49737555",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-17T07:30:30Z"
+    },
+    {
+      "title": "Show HN: Pizza Bot – An inbox for AI agents that work in the background",
+      "url": "https://github.com/pizza-bot-app/pizza-bot",
+      "hn": "https://news.ycombinator.com/item?id=49713894",
+      "points": 61,
+      "comments": 37,
+      "createdAt": "2026-09-15T15:20:26Z"
+    },
+    {
+      "title": "Show HN: ChaosTree – A zero-dependency Java tree library (AVL,RBT,B-Tree,B+Tree)",
+      "url": "https://github.com/Chaos-vy/ChaosTree",
+      "hn": "https://news.ycombinator.com/item?id=49694404",
+      "points": 10,
+      "comments": 9,
+      "createdAt": "2026-09-14T10:03:46Z"
+    },
+    {
+      "title": "DietPi released a new version v10.7",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49683146",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-13T12:15:45Z"
+    },
+    {
+      "title": "Show HN: Rust-split – save your tokens on large Rust source files",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49671509",
+      "points": 5,
+      "comments": 2,
+      "createdAt": "2026-09-12T12:10:15Z"
+    },
+    {
+      "title": "Show HN: SOS – Project state between coding agent sessions",
+      "url": "https://github.com/sigmastratum/sigma-operator-stack",
+      "hn": "https://news.ycombinator.com/item?id=49657908",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-11T13:16:15Z"
+    },
+    {
+      "title": "Ask HN: Can we please limit the AI news flood?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49657850",
+      "points": 867,
+      "comments": 404,
+      "createdAt": "2026-09-11T13:11:04Z"
+    },
+    {
+      "title": "Forgejo <=16.0.3 Critical RCE",
+      "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+      "hn": "https://news.ycombinator.com/item?id=49645907",
+      "points": 207,
+      "comments": 90,
+      "createdAt": "2026-09-10T15:57:40Z"
+    },
+    {
+      "title": "Go 1.27 Release Notes",
+      "url": "https://go.dev/doc/go1.27",
+      "hn": "https://news.ycombinator.com/item?id=49643545",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-10T13:39:12Z"
+    },
+    {
+      "title": "Show HN: Gote – a CLI note-taking management tool for plain Markdown",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49600397",
+      "points": 6,
+      "comments": 3,
+      "createdAt": "2026-09-07T16:55:46Z"
+    },
+    {
+      "title": "Ask HN: Fable hacked my piano, can I release the results?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49577129",
+      "points": 299,
+      "comments": 166,
+      "createdAt": "2026-09-05T14:54:44Z"
+    },
+    {
+      "title": "Fork a fast and friendly Git client for Mac and Windows",
+      "url": "https://git-fork.com/releasenoteswin",
+      "hn": "https://news.ycombinator.com/item?id=49563617",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-04T12:26:32Z"
+    },
+    {
+      "title": "Tell HN: 1Password 7 final retirement notice",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49525527",
+      "points": 6,
+      "comments": 3,
+      "createdAt": "2026-09-01T18:03:52Z"
+    },
+    {
+      "title": "Firefox 155.0",
+      "url": "https://www.firefox.com/en-US/firefox/155.0/releasenotes/",
+      "hn": "https://news.ycombinator.com/item?id=49521100",
+      "points": 19,
+      "comments": 12,
+      "createdAt": "2026-09-01T12:33:34Z"
+    },
+    {
+      "title": "Firefox 156.0beta",
+      "url": "https://www.firefox.com/en-US/firefox/156.0beta/releasenotes/",
+      "hn": "https://news.ycombinator.com/item?id=49518658",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-01T06:31:12Z"
+    },
+    {
+      "title": "GPUI Digest: Rust UI in the browser, crates distribution, release notes",
+      "url": "https://gpui-archipelago.github.io/news/august-digest/",
+      "hn": "https://news.ycombinator.com/item?id=49511774",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2026-08-31T16:40:49Z"
+    },
+    {
+      "title": "Show HN: Piqt (iOS) – on device photo and video curator",
+      "url": "https://piqt.app/",
+      "hn": "https://news.ycombinator.com/item?id=49499789",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-08-30T15:52:13Z"
+    },
+    {
+      "title": "Show HN: VelocityNote – A tiny Markdown notebook with local AI",
+      "url": "https://velocitynote.app/",
+      "hn": "https://news.ycombinator.com/item?id=49496137",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-08-30T06:17:01Z"
+    },
+    {
+      "title": "Telnyx Email API is now generally available",
+      "url": "https://telnyx.com/release-notes/email-api-now-generally-available",
+      "hn": "https://news.ycombinator.com/item?id=49480363",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-08-28T15:51:01Z"
+    }
+  ]
+}

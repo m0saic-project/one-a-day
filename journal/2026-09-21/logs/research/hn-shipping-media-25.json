@@ -1,0 +1,7 @@
+{
+  "url": "https://news.ycombinator.com/item?id=47162791",
+  "contentType": "text/html; charset=utf-8",
+  "title": "Show HN: Programmatic (and self-updating) SaaS demo videos | Hacker News",
+  "truncated": false,
+  "text": "Show HN: Programmatic (and self-updating) SaaS demo videos | Hacker News Hacker News new | past | comments | ask | show | jobs | submit login \n\n Show HN: Programmatic (and self-updating) SaaS demo videos ( rundown.video ) \n 1 point by guico 6 months ago | hide | past | favorite \n Hey guys! While building another SaaS we got fed up with recording and, re-recording demos for help-center so decided to try and automate it using Playwright. Turns out it&#x27;s not that easy, but we got it to a point that&#x27;s usable, and quite useful for us already. Feel free to try and send feedback. Every new account gets some free credits so you can see what it can do. Thanks! PS: Because this is heavy on infra we have a waitlist thing but I&#x27;m monitoring and will let you in within minutes&#x2F;hours, just need to space people out a bit. Thanks PPS: Here&#x27;s an example video made with Rundown https:&#x2F;&#x2F;www.rundown.video&#x2F;011fb9da-72f7-41d1-bdce-f187f398e0... \n\n Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact"
+}

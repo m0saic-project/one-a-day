@@ -1,0 +1,207 @@
+{
+  "query": "Remotion",
+  "days": 900,
+  "count": 25,
+  "results": [
+    {
+      "title": "China's 6th-Gen J-36 Fighter-Bomber to Feature Combat Laser",
+      "url": "https://en.defence-ua.com/news/chinas_6th_gen_j_36_fighter_bomber_to_feature_combat_laser-19834.html",
+      "hn": "https://news.ycombinator.com/item?id=49780128",
+      "points": 9,
+      "comments": 4,
+      "createdAt": "2026-09-20T21:12:50Z"
+    },
+    {
+      "title": "Brownian Motion",
+      "url": "https://gregorygundersen.com/blog/2026/04/22/brownian-motion/",
+      "hn": "https://news.ycombinator.com/item?id=49779922",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-20T20:47:34Z"
+    },
+    {
+      "title": "Karen Nikoghosyan Is Building AI Operating Layers for Multichannel Commerce",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49776683",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-09-20T15:15:00Z"
+    },
+    {
+      "title": "The People–OK, the Men–Who Still Love Bitcoin",
+      "url": "https://slate.com/business/2026/09/bitcoin-cryptocurrency-masculinity-economy-emotional-tether.html",
+      "hn": "https://news.ycombinator.com/item?id=49775336",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2026-09-20T12:49:49Z"
+    },
+    {
+      "title": "Relation Algebra ≠ Relational Algebra",
+      "url": "https://remy.wang/blog/ra-ra.html",
+      "hn": "https://news.ycombinator.com/item?id=49770846",
+      "points": 7,
+      "comments": 0,
+      "createdAt": "2026-09-19T23:02:33Z"
+    },
+    {
+      "title": "The lucrative business of reactionary AI-generated posts on Facebook",
+      "url": "https://www.lemonde.fr/en/pixels/article/2026/09/19/the-lucrative-business-of-reactionary-ai-generated-posts-on-facebook_6757721_13.html",
+      "hn": "https://news.ycombinator.com/item?id=49769207",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-19T18:53:58Z"
+    },
+    {
+      "title": "Retro emojis: We had 'em in the 80s and 90s",
+      "url": "https://dfarq.homeip.net/emoticons-in-the-80s-and-90s-we-had-em/",
+      "hn": "https://news.ycombinator.com/item?id=49767371",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-19T15:30:35Z"
+    },
+    {
+      "title": "Cube",
+      "url": "https://www.cube-motion.dev/",
+      "hn": "https://news.ycombinator.com/item?id=49764981",
+      "points": 24,
+      "comments": 3,
+      "createdAt": "2026-09-19T09:50:23Z"
+    },
+    {
+      "title": "What I Can Remember",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49762163",
+      "points": 8,
+      "comments": 3,
+      "createdAt": "2026-09-19T00:40:09Z"
+    },
+    {
+      "title": "I got tired of taking screenshots and explaining everything to AI agents",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49759108",
+      "points": 5,
+      "comments": 2,
+      "createdAt": "2026-09-18T19:35:22Z"
+    },
+    {
+      "title": "Show HN: Lodestar – Read, respond and manage coding agents more naturally",
+      "url": "https://www.try-lodestar.com/",
+      "hn": "https://news.ycombinator.com/item?id=49758880",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-18T19:14:49Z"
+    },
+    {
+      "title": "Show HN: Scry, programmable internet search w/ congestion pricing",
+      "url": "https://scry.io/",
+      "hn": "https://news.ycombinator.com/item?id=49748041",
+      "points": 60,
+      "comments": 25,
+      "createdAt": "2026-09-17T23:15:57Z"
+    },
+    {
+      "title": "Show HN: EACL is a situated ReBAC authorization library for Datomic and Datahike",
+      "url": "https://github.com/theronic/eacl",
+      "hn": "https://news.ycombinator.com/item?id=49712785",
+      "points": 6,
+      "comments": 0,
+      "createdAt": "2026-09-15T14:09:39Z"
+    },
+    {
+      "title": "The Relation Between Mathematics and Physics by Paul Dirac (1939)",
+      "url": "https://www.damtp.cam.ac.uk/events/strings02/dirac/speach.html",
+      "hn": "https://news.ycombinator.com/item?id=49685835",
+      "points": 170,
+      "comments": 84,
+      "createdAt": "2026-09-13T16:38:22Z"
+    },
+    {
+      "title": "U4RIA: An emotional wellness app using dynamic audio and AI personalization",
+      "url": "https://u4riahub.com",
+      "hn": "https://news.ycombinator.com/item?id=49654815",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-11T07:37:22Z"
+    },
+    {
+      "title": "Show HN: CUDA/graphics in QEMU-KVM VMs without passing the Nvidia card to them",
+      "url": "https://github.com/reindertpelsma/nvkvm-pv",
+      "hn": "https://news.ycombinator.com/item?id=49609389",
+      "points": 5,
+      "comments": 2,
+      "createdAt": "2026-09-08T12:25:31Z"
+    },
+    {
+      "title": "Show HN: Qumra – Screen recorder that uploads while you record",
+      "url": "https://qumra.io",
+      "hn": "https://news.ycombinator.com/item?id=49599379",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-07T15:17:23Z"
+    },
+    {
+      "title": "Freelance writer (memoirs, fantasy, and speculative fiction)",
+      "url": "https://www.reddit.com/r/forhire/comments/1w8xeeg/for_hire_creative_ghostwriter_emotionally_complex/",
+      "hn": "https://news.ycombinator.com/item?id=49586772",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-06T14:18:58Z"
+    },
+    {
+      "title": "A robot framework that assumes its own emotion classifier is wrong",
+      "url": "https://github.com/oleg-vdv/affectguard-hri",
+      "hn": "https://news.ycombinator.com/item?id=49522530",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-01T14:30:18Z"
+    },
+    {
+      "title": "MRIs Show Dogs Are Good at Distinguishing Between Human Emotions",
+      "url": "https://www.smithsonianmag.com/smart-news/scientists-gave-dogs-mris-and-learned-that-theyre-surprisingly-good-at-distinguishing-between-human-emotions-even-some-negative-ones-180989329/",
+      "hn": "https://news.ycombinator.com/item?id=49408210",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-08-23T12:17:34Z"
+    },
+    {
+      "title": "Kagi added a setting for removing paywalled links from search results",
+      "url": "https://kagi.com/changelog#11296",
+      "hn": "https://news.ycombinator.com/item?id=49388154",
+      "points": 1275,
+      "comments": 394,
+      "createdAt": "2026-08-21T13:56:37Z"
+    },
+    {
+      "title": "Emotion Explorer",
+      "url": "https://feel.ifsart.com/",
+      "hn": "https://news.ycombinator.com/item?id=49297963",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-14T12:41:39Z"
+    },
+    {
+      "title": "AI is removing the middle class of software engineering?",
+      "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+      "hn": "https://news.ycombinator.com/item?id=49271994",
+      "points": 1014,
+      "comments": 937,
+      "createdAt": "2026-08-12T13:20:05Z"
+    },
+    {
+      "title": "Brain scans show that dogs can distinguish various emotions in human faces",
+      "url": "https://www.univie.ac.at/en/news/detail/brain-scans-show-that-dogs-can-distinguish-various-emotions-in-human-faces",
+      "hn": "https://news.ycombinator.com/item?id=49268526",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-12T06:25:49Z"
+    },
+    {
+      "title": "Launch HN: Keet (YC S24) – An app to create video courses on anything",
+      "url": "https://www.trykeet.com/",
+      "hn": "https://news.ycombinator.com/item?id=49259309",
+      "points": 48,
+      "comments": 48,
+      "createdAt": "2026-08-11T14:48:37Z"
+    }
+  ]
+}

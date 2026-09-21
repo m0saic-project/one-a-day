@@ -1,0 +1,34 @@
+{
+  "query": "benchmark log scale chart",
+  "days": 1100,
+  "count": 3,
+  "results": [
+    {
+      "title": "An Alien Mind",
+      "url": "https://openai.com/index/an-alien-mind/",
+      "hn": "https://news.ycombinator.com/item?id=49591371",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-06T21:58:26Z",
+      "text": "&quot;Teaching machines to love&quot; Your talking about androids... Replicant Nexus 6: a basic pleasure model intended for military personnel. I see where this is going, Silicon Valley nerds. Lol AI advising how human meat proxies can survive in an AGI-slop world: 1) Lock down your own stack (1–3 days) Task: Harden your personal and business infrastructure against agentic attacks. Why now: Agents are becoming superhuman at breaking in&#x2F;out of systems; the first victims are poorly secured devs&#x2F;founders. Do this: Enforce passkeys + hardware 2FA everywhere; rotate secrets; use short‑liv"
+    },
+    {
+      "title": "ASI Asolaria 16 GB RAM OS that operate UNDER the bios",
+      "url": "https://github.com/JesseBrown1980/asolaria-behcs-256",
+      "hn": "https://news.ycombinator.com/item?id=47877352",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-23T15:58:49Z",
+      "text": "Asolaria BEHCS-256 Federated multi-agent civilization toolkit. Built to let heterogeneous Claude nodes (desktop, phone, remote) ship and onboard each other with the current-version toolkit instantly — no stale installs, no divergent forks. SMP v5+ v3 SEALED 2026-04-20T22:30Z · 205&#x2F;205 items · 7 batches · 13 commits (5cfa3e0 → b8b7984) · bilateral multi-agent gate (acer + liris) satisfied every batch. FP-ASI runner still armed + candidate-pool EMPTY — v3 is infrastructure scaffold, not an ASI-arrival claim. SMP v5+ v3 topic map (A-P) Section Scope Items Anchor A Repo structure + migration "
+    },
+    {
+      "title": "Claude 3 model family",
+      "url": "https://www.anthropic.com/news/claude-3-family",
+      "hn": "https://news.ycombinator.com/item?id=39591149",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-03-04T14:49:32Z",
+      "text": "Just a comment about the first chart: having the X axis in log scale to represent the cost and a Y axis without any units at all for the benchmark score seem intentionally misleading. I don&#x27;t understand the need to do that when your numbers look promising."
+    }
+  ]
+}

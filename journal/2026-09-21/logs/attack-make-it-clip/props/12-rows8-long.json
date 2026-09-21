@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "name": "benchmark case 0 resolve deeply nested module ",
+      "unit": "ms",
+      "base": 100,
+      "baseRange": 4,
+      "value": 60,
+      "range": 3
+    },
+    {
+      "name": "benchmark case 1 resolve deeply nested module graph ",
+      "unit": "ms",
+      "base": 137,
+      "baseRange": 5,
+      "value": 101,
+      "range": 4
+    },
+    {
+      "name": "benchmark case 2 resolve deeply nested module graph with s",
+      "unit": "ms",
+      "base": 174,
+      "baseRange": 6,
+      "value": 142,
+      "range": 5
+    },
+    {
+      "name": "benchmark case 3 resolve deeply nested module graph with symlink",
+      "unit": "ms",
+      "base": 211,
+      "baseRange": 7,
+      "value": 183,
+      "range": 6
+    },
+    {
+      "name": "benchmark case 4 resolve deeply nested module graph with symlink dedup",
+      "unit": "ms",
+      "base": 248,
+      "baseRange": 8,
+      "value": 224,
+      "range": 7
+    },
+    {
+      "name": "benchmark case 5 resolve deeply nested module graph with symlink dedupe benc",
+      "unit": "ms",
+      "base": 285,
+      "baseRange": 9,
+      "value": 265,
+      "range": 8
+    },
+    {
+      "name": "benchmark case 6 resolve deeply nested module graph with symlink dedupe benchmark ",
+      "unit": "ms",
+      "base": 322,
+      "baseRange": 10,
+      "value": 306,
+      "range": 9
+    },
+    {
+      "name": "benchmark case 7 resolve deeply nested module graph with symlink dedupe benchmark case 7",
+      "unit": "ms",
+      "base": 359,
+      "baseRange": 11,
+      "value": 347,
+      "range": 10
+    }
+  ]
+}

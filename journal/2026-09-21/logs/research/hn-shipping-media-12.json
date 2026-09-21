@@ -1,0 +1,207 @@
+{
+  "query": "data visualization video",
+  "days": 1200,
+  "count": 25,
+  "results": [
+    {
+      "title": "Show HN: OnPanda – Steer LLMs and agents at the token level",
+      "url": "https://onpanda.diyer22.com/",
+      "hn": "https://news.ycombinator.com/item?id=49759013",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-09-18T19:26:50Z"
+    },
+    {
+      "title": "Trustworthy Data Visualization [video]",
+      "url": "https://www.youtube.com/watch?v=mpj-zqkiiXQ",
+      "hn": "https://news.ycombinator.com/item?id=49442054",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-08-25T23:21:07Z"
+    },
+    {
+      "title": "Launch HN: Relvy (YC F24) – On-call runbooks, automated",
+      "url": "https://www.relvy.ai",
+      "hn": "https://news.ycombinator.com/item?id=47702647",
+      "points": 48,
+      "comments": 25,
+      "createdAt": "2026-04-09T12:11:56Z"
+    },
+    {
+      "title": "Show HN: Sunwet – Organize Anything",
+      "url": "https://github.com/andrewbaxter/sunwet",
+      "hn": "https://news.ycombinator.com/item?id=47454958",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-03-20T14:22:20Z"
+    },
+    {
+      "title": "Show HN: I built an interactive globe for verified combat events",
+      "url": "https://defogwar.com",
+      "hn": "https://news.ycombinator.com/item?id=47337327",
+      "points": 2,
+      "comments": 7,
+      "createdAt": "2026-03-11T16:00:01Z"
+    },
+    {
+      "title": "Show HN: EditorWatch – Detect AI cheating by analyzing how students write code",
+      "url": "https://github.com/Vic-Nas/EditorWatch",
+      "hn": "https://news.ycombinator.com/item?id=46834552",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-31T08:14:05Z"
+    },
+    {
+      "title": "Show HN: Galaxy visualization using Redshift data (Raylib, C)",
+      "url": "https://github.com/Avicted/galaxy_visualization_raylib",
+      "hn": "https://news.ycombinator.com/item?id=46650393",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2026-01-16T18:51:54Z"
+    },
+    {
+      "title": "Show HN: Data Formulator – interactive AI agents for data analysis (Microsoft)",
+      "url": "https://data-formulator.ai/",
+      "hn": "https://news.ycombinator.com/item?id=45890394",
+      "points": 38,
+      "comments": 13,
+      "createdAt": "2025-11-11T17:44:21Z"
+    },
+    {
+      "title": "Patterns in Chaos [video]",
+      "url": "https://media.ccc.de/v/gpn23-98-patterns-in-chaos-how-data-visualisation-helps-to-see-the-invisible",
+      "hn": "https://news.ycombinator.com/item?id=45234408",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-09-13T18:52:32Z"
+    },
+    {
+      "title": "Show HN: DataBot – Self-Hosted AI to Query and Visualize Data Using Language",
+      "url": "https://intellimenta.com/products/databot/",
+      "hn": "https://news.ycombinator.com/item?id=45041667",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-08-27T16:17:16Z"
+    },
+    {
+      "title": "Show HN: Configurable Open Source Audio Spectrum Analyzer",
+      "url": "https://github.com/sylwekkominek/SpectrumAnalyzer",
+      "hn": "https://news.ycombinator.com/item?id=45007203",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2025-08-24T19:55:37Z"
+    },
+    {
+      "title": "Show HN: Reeyee.ai – Create Dashboards as Websites",
+      "url": "https://reeyee.ai",
+      "hn": "https://news.ycombinator.com/item?id=44408013",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-06-28T20:42:50Z"
+    },
+    {
+      "title": "Show HN: AlienArt.io – Turn Data into Videos",
+      "url": "https://alienart.io/",
+      "hn": "https://news.ycombinator.com/item?id=44236318",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2025-06-10T13:05:47Z"
+    },
+    {
+      "title": "Show HN: Contour – AI-powered, web-based GIS with natural language commands",
+      "url": "https://usecontour.co/",
+      "hn": "https://news.ycombinator.com/item?id=44104249",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2025-05-27T05:53:59Z"
+    },
+    {
+      "title": "Show HN: Grapple, a DIY data platform that uses AI the Right Way",
+      "url": "https://cloudgrapple.com",
+      "hn": "https://news.ycombinator.com/item?id=43964309",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2025-05-12T15:43:11Z"
+    },
+    {
+      "title": "Show HN: Building a self collected multiview mocap studio for robot training",
+      "url": "https://github.com/rerun-io/pi0-lerobot/tree/hand-kinematic-fitting",
+      "hn": "https://news.ycombinator.com/item?id=43937635",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2025-05-09T15:07:48Z"
+    },
+    {
+      "title": "Show HN: AI Revolutionizes E-Commerce Marketing: Meet PhotoG by Aid Lab",
+      "url": "https://photog.art",
+      "hn": "https://news.ycombinator.com/item?id=43469266",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-03-25T09:04:23Z"
+    },
+    {
+      "title": "Show HN: Basic Memory – Build a knowledge graph from Claude conversations",
+      "url": "https://github.com/basicmachines-co/basic-memory",
+      "hn": "https://news.ycombinator.com/item?id=43374258",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2025-03-15T18:19:21Z"
+    },
+    {
+      "title": "Show HN: Bindle – Self-Organizing Folders and Chat with Your Documents",
+      "url": "https://bindle.work",
+      "hn": "https://news.ycombinator.com/item?id=42936576",
+      "points": 10,
+      "comments": 3,
+      "createdAt": "2025-02-04T18:28:47Z"
+    },
+    {
+      "title": "Data and Diversity: Exploring the Data Visualizations of W.E.B. Du Bois [video]",
+      "url": "https://www.youtube.com/watch?v=ZZST1AZj-dQ",
+      "hn": "https://news.ycombinator.com/item?id=42898167",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-02-01T13:34:11Z"
+    },
+    {
+      "title": "Show HN: Race Timing with Integrated Replay",
+      "url": "https://storytiming.racing",
+      "hn": "https://news.ycombinator.com/item?id=42765560",
+      "points": 25,
+      "comments": 2,
+      "createdAt": "2025-01-20T06:24:11Z"
+    },
+    {
+      "title": "Show HN: CamelAI – Perplexity for Your Data",
+      "url": "https://camelai.com/",
+      "hn": "https://news.ycombinator.com/item?id=42388425",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2024-12-11T15:03:46Z"
+    },
+    {
+      "title": "Offering pro bono software help (Kiwi developer living in Latam)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=42318258",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2024-12-04T15:16:05Z"
+    },
+    {
+      "title": "Show HN: Visualizing website carbon footprints using steam and robotics [video]",
+      "url": "https://vimeo.com/1028745293",
+      "hn": "https://news.ycombinator.com/item?id=42294624",
+      "points": 37,
+      "comments": 8,
+      "createdAt": "2024-12-02T09:46:35Z"
+    },
+    {
+      "title": "PyCon: High Performance Data Visualization for the Web [video]",
+      "url": "https://www.youtube.com/watch?v=s6n9vEyM1gY",
+      "hn": "https://news.ycombinator.com/item?id=41915726",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2024-10-22T16:07:02Z"
+    }
+  ]
+}

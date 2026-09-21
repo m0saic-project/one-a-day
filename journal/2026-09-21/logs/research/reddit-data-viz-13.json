@@ -1,0 +1,161 @@
+{
+  "source": "https://arctic-shift.photon-reddit.com/api/comments/search?subreddit=datavisualization&body=bar+chart+race&limit=60&sort=desc",
+  "fetchedAt": "2026-09-21T04:16:32.201Z",
+  "count": 14,
+  "results": [
+    {
+      "id": "p2fkqb8",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1viqcyg/whats_the_best_data_visualization_tool/p2fkqb8/",
+      "sub": "datavisualization",
+      "author": "conradslater",
+      "score": 2,
+      "numComments": null,
+      "date": "2026-08-08",
+      "text": "It's not the answer but I use flourish.app for work presentations. It I also includes some animations. Bar chart racing is particularly cool."
+    },
+    {
+      "id": "ojh1nok",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1p0lvpg/flourish_studio_alternatives_or_other_data_viz/ojh1nok/",
+      "sub": "datavisualization",
+      "author": "LivingCharts",
+      "score": 1,
+      "numComments": null,
+      "date": "2026-05-02",
+      "text": "You can try [**LivingCharts.com**](https://livingcharts.com) — it’s more focused on **creating animated charts (like bar chart race, pie, etc.) and exporting them directly to video or images**. * Very easy to use (no coding) * Strong customization for visuals * Export is built-in (no paywall for basic use) * Great if you’re making content for YouTube / presentations"
+    },
+    {
+      "id": "ocjeua3",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1pd1v2r/best_tool_to_generates_an_animated_chart_for/ocjeua3/",
+      "sub": "datavisualization",
+      "author": "Both_Fig_7291",
+      "score": 1,
+      "numComments": null,
+      "date": "2026-03-26",
+      "text": "[aecharts.com](http://aecharts.com) is an animated chart maker built for this. you can create any chart and export it with animations as mp4 video. every part of the chart is customisable i.e colors, fonts, size, spacing etc. It supports line chart, bar chart (horizontal, vertical, stacked, grouped), pie chart, donut chart, bar race chart, line race chart and more."
+    },
+    {
+      "id": "o19c3xh",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1p0lvpg/flourish_studio_alternatives_or_other_data_viz/o19c3xh/",
+      "sub": "datavisualization",
+      "author": "Both_Fig_7291",
+      "score": 1,
+      "numComments": null,
+      "date": "2026-01-23",
+      "text": "Hi, I made [aecharts.com](http://aecharts.com) to create good-looking animated charts. You can currently export as png or mp4. You can simply choose the template, paste the data and download the chart. It supports line, area, horizontal and vertical bar, pie, donut, gauge and bar race charts currently."
+    },
+    {
+      "id": "mr3sfdh",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1kgwt9d/which_llm_makes_the_best_data_visualization/mr3sfdh/",
+      "sub": "datavisualization",
+      "author": "mduvekot",
+      "score": 3,
+      "numComments": null,
+      "date": "2025-05-07",
+      "text": "It's too small to read, really but one of the first things I noticed Cis that Claude hyphenated \"globally\" as gl obally It cannot even manage to look up a hyphenation table, which have been around since, like, forever. Absolutely pathetic. The charts are all shit. All those bars charts where each category has it's own color? Major faux pas that you learn to avoid in datavis 101 course for complete beginners. A radars chart to show 5 near identical values? What a dumb idea. Legend next to a directly labeled chart? To do what?! Superimposing a line-chart and a scatterploter onto a bar chart with the same values? Why not??! Black text over a dark purple background? Great for legibility (NOT!) A bar chart race for two values? Yeah baby! A randomly exploding donut chart? Sure, why the fuck not! Gratuitously rotating text whenever? That's to make it harder to read! Axis labels that go 2021 2,20.5 2022 2,022.5 2023 That's how we label years, dude. Sorting categorical axes by, euhh... something random. Sure, LLMs really Understand that shit. they just struggle to explain it, so we can't know. TLDR; complete and utter garbage. Junk. Chart Slop. The fucking worst."
+    },
+    {
+      "id": "lixlqk0",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/1ew6m4t/any_data_visualization_subscription_services_like/lixlqk0/",
+      "sub": "datavisualization",
+      "author": "excentio",
+      "score": 2,
+      "numComments": null,
+      "date": "2024-08-19",
+      "text": "Not yet, none of the existing users showed any interest for them so far but if you want to give editor a try - I could add a quick sankey diagrams project type in like 9-10 days and we could check it out and go from there. Right now editor supports: line charts, pie charts, bar charts, word clouds, radar charts and calendars (tho very WIP), and also racing line/bar charts coming a bit later this year. It's in the growing phase right now and I'm trying to onboard more users in the coming days so an extra chart type wouldn't hurt :) Would you mind if I drop you a DM?"
+    },
+    {
+      "id": "joz1811",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/14c0l0t/i_created_a_tutorial_on_how_to_create_beautiful/joz1811/",
+      "sub": "datavisualization",
+      "author": "Benjamin_Lisimachio",
+      "score": 1,
+      "numComments": null,
+      "date": "2023-06-21",
+      "text": "Yes you can, but the easiest for bar chart race in python is using the library called ... \"bar-chart-race\" :)"
+    },
+    {
+      "id": "j011c9m",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/z30n8q/best_data_viz_tool_for_social_media/j011c9m/",
+      "sub": "datavisualization",
+      "author": "natalia_pm",
+      "score": 1,
+      "numComments": null,
+      "date": "2022-12-13",
+      "text": "You can try [https://livingcharts.com/](https://livingcharts.com/) for bar chart race"
+    },
+    {
+      "id": "ihrxoet",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/w8hnxy/which_software_is_used_for_creating_this_animation/ihrxoet/",
+      "sub": "datavisualization",
+      "author": "mduvekot",
+      "score": 2,
+      "numComments": null,
+      "date": "2022-07-26",
+      "text": "This type of chart is called a bar chart race, and there are many applications that can generate them."
+    },
+    {
+      "id": "hux9vc8",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/sg9uav/looking_for_direction_on_how_to_build_a_similar/hux9vc8/",
+      "sub": "datavisualization",
+      "author": "matinmuffel",
+      "score": 1,
+      "numComments": null,
+      "date": "2022-01-31",
+      "text": "Flourish also provides a bar chart race"
+    },
+    {
+      "id": "huuppvz",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/sg9uav/looking_for_direction_on_how_to_build_a_similar/huuppvz/",
+      "sub": "datavisualization",
+      "author": "LivingCharts",
+      "score": 2,
+      "numComments": null,
+      "date": "2022-01-30",
+      "text": "This is Bar Chart Race, and I made a tool for it: https://livingcharts.com"
+    },
+    {
+      "id": "foyb77b",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/g5i6es/which_is_the_best_user_friendly_software_for_data/foyb77b/",
+      "sub": "datavisualization",
+      "author": "jdmac74",
+      "score": 2,
+      "numComments": null,
+      "date": "2020-04-29",
+      "text": "I am using flourish for my data visualizations. I have done mostly bar chart race videos and the software is free and relatively easy to use. There are also many tutorials on YouTube if you have issues. [https://flourish.studio/](https://flourish.studio/)"
+    },
+    {
+      "id": "fm3yayi",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/fj2u7e/top_10_most_subscribed_youtube_channels_20112020/fm3yayi/",
+      "sub": "datavisualization",
+      "author": "ImrankKhan",
+      "score": 1,
+      "numComments": null,
+      "date": "2020-04-01",
+      "text": "Hey I am new in data visualisation, Can you please explain how to make bar racing chart like this??"
+    },
+    {
+      "id": "ernt8b1",
+      "title": null,
+      "permalink": "https://www.reddit.com/r/datavisualization/comments/c2rrvh/how_to_visualize_data_like_in_the_video/ernt8b1/",
+      "sub": "datavisualization",
+      "author": "sc2summerloud",
+      "score": 2,
+      "numComments": null,
+      "date": "2019-06-20",
+      "text": "there is a free web app that does racing bar charts like this - very easy to use: [https://flourish.studio/](https://flourish.studio/)"
+    }
+  ]
+}

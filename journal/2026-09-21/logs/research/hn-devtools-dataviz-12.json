@@ -1,0 +1,7 @@
+{
+  "url": "https://news.ycombinator.com/item?id=48035280",
+  "contentType": "text/html; charset=utf-8",
+  "title": "The missing status page [1] treats it as downtime any time any component of the ... | Hacker News",
+  "truncated": false,
+  "text": "The missing status page [1] treats it as downtime any time any component of the ... | Hacker News Hacker News new | past | comments | ask | show | jobs | submit login \n\n hxtk 4 months ago | parent | context | favorite | on: Red Squares – GitHub outages as contributions \n\n The missing status page [1] treats it as downtime any time any component of the system is down, and calculates the overall uptime based on the time that doesn&#x27;t overlap with any individual category outages, and the overall downtime as any time overlapping with at least one individual category outage to avoid double-counting They show 24h of minor outage on that date. I&#x27;m guessing that this site is taking the downtime in a given day across all services and adding it up, which would mean the worst possible day has 10 days of downtime (a day of downtime for each major category). 1: https:&#x2F;&#x2F;mrshu.github.io&#x2F;github-statuses&#x2F; \n\n Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact"
+}

@@ -1,0 +1,207 @@
+{
+  "query": "gource repo visualization",
+  "days": 720,
+  "count": 25,
+  "results": [
+    {
+      "title": "Show HN: Caelix, a balanced-ternary lattice field laboratory",
+      "url": "https://caelix.co.uk/",
+      "hn": "https://news.ycombinator.com/item?id=47349164",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-12T11:25:10Z"
+    },
+    {
+      "title": "Show HN: See AI Come Alive AIMA Visualizations Repo (GitHub)",
+      "url": "https://jsurrea.github.io/aima-visualizations/",
+      "hn": "https://news.ycombinator.com/item?id=47265696",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-03-05T18:56:44Z"
+    },
+    {
+      "title": "Show HN: Morsel – an open-source, web-based visual Modelica editor",
+      "url": "https://morsel.modelscript.org",
+      "hn": "https://news.ycombinator.com/item?id=47171505",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-02-26T20:21:14Z"
+    },
+    {
+      "title": "Show HN: Code Lantern– A self-hosted, local code-analysis and visualization tool",
+      "url": "https://github.com/Tjindl/code-lantern",
+      "hn": "https://news.ycombinator.com/item?id=47119159",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-23T07:25:07Z"
+    },
+    {
+      "title": "Show HN: Wiredigg – Real-Time Network Analysis with ML and Ollama Support",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47103291",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-21T18:26:54Z"
+    },
+    {
+      "title": "Show HN: CodeLayers – See your codebase's dependency layers in 3D",
+      "url": "https://codelayers.ai",
+      "hn": "https://news.ycombinator.com/item?id=47100335",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-02-21T12:50:07Z"
+    },
+    {
+      "title": "Show HN: A Satellite View for Python Code",
+      "url": "https://ast-visualizer.com/",
+      "hn": "https://news.ycombinator.com/item?id=46945343",
+      "points": 7,
+      "comments": 10,
+      "createdAt": "2026-02-09T14:07:16Z"
+    },
+    {
+      "title": "Show HN: TITO – Automated threat modeling from code (open source)",
+      "url": "https://github.com/Leathal1/TITO",
+      "hn": "https://news.ycombinator.com/item?id=46891988",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-02-04T21:22:52Z"
+    },
+    {
+      "title": "Show HN: Gulp, our take at incident response",
+      "url": "https://github.com/mentat-is/gulp",
+      "hn": "https://news.ycombinator.com/item?id=46888317",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2026-02-04T17:00:34Z"
+    },
+    {
+      "title": "Show HN: BetterDB – OSS Valkey/Redis monitoring with historical data",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46731531",
+      "points": 6,
+      "comments": 1,
+      "createdAt": "2026-01-23T12:07:18Z"
+    },
+    {
+      "title": "Show HN: Paradigm – Interactive Visualizer for Codebases",
+      "url": "https://useparadigm.app/",
+      "hn": "https://news.ycombinator.com/item?id=46695736",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2026-01-20T18:23:58Z"
+    },
+    {
+      "title": "Show HN: Self-hosted multi repo visualization tool",
+      "url": "https://reposquirrel.com/",
+      "hn": "https://news.ycombinator.com/item?id=46563585",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-10T07:24:16Z"
+    },
+    {
+      "title": "Show HN: Open-Source 8-Ch BCI Board (ESP32 and ADS1299 and OpenBCI GUI)",
+      "url": "https://github.com/Cerelog-ESP-EEG/ESP-EEG",
+      "hn": "https://news.ycombinator.com/item?id=46502051",
+      "points": 54,
+      "comments": 21,
+      "createdAt": "2026-01-05T17:46:51Z"
+    },
+    {
+      "title": "Show HN: Crossview – visualize Crossplane resources and compositions",
+      "url": "https://corpobit.com/products/clark",
+      "hn": "https://news.ycombinator.com/item?id=46404933",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-27T20:25:58Z"
+    },
+    {
+      "title": "Show HN: Mergen – A native, local-first SQL client built with Go and Wails",
+      "url": "https://github.com/parevo/mergen",
+      "hn": "https://news.ycombinator.com/item?id=46392597",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-12-26T14:56:27Z"
+    },
+    {
+      "title": "Show HN: Crossview – visualize Crossplane resources and compositions",
+      "url": "https://corpobit.com/products/crossview",
+      "hn": "https://news.ycombinator.com/item?id=46384525",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-25T14:13:57Z"
+    },
+    {
+      "title": "Show HN: CodeContext – Cut developer onboarding time from months to weeks",
+      "url": "https://github.com/sonii-shivansh/CodeContext",
+      "hn": "https://news.ycombinator.com/item?id=46264211",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2025-12-14T16:28:00Z"
+    },
+    {
+      "title": "Show HN: RAG-TUI – Visual chunking debugger for RAG pipelines in the terminal",
+      "url": "https://pypi.org/project/rag-tui/",
+      "hn": "https://news.ycombinator.com/item?id=46214454",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-12-10T05:38:22Z"
+    },
+    {
+      "title": "Show HN: MetricsWave – own your metrics, ditch Google Analytics",
+      "url": "https://github.com/metricswave/backend",
+      "hn": "https://news.ycombinator.com/item?id=45480393",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-10-05T10:10:01Z"
+    },
+    {
+      "title": "Show HN: Ggplot2 chart playground – in the browser with WebAssembly",
+      "url": "https://github.com/QuesmaOrg/webr-ggplot-playground",
+      "hn": "https://news.ycombinator.com/item?id=45262441",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2025-09-16T14:05:49Z"
+    },
+    {
+      "title": "Show HN: Atlas – Open-source network discovery and visualization tool",
+      "url": "https://github.com/karam-ajaj/atlas",
+      "hn": "https://news.ycombinator.com/item?id=45260827",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-09-16T11:33:27Z"
+    },
+    {
+      "title": "Show HN: Physics from \"I am\": a recursive model that works?",
+      "url": "https://github.com/ktynski/FIRM-Fractal-Identity-Recursive-Mechanics",
+      "hn": "https://news.ycombinator.com/item?id=44872263",
+      "points": 4,
+      "comments": 3,
+      "createdAt": "2025-08-12T03:58:25Z"
+    },
+    {
+      "title": "Show HN: AI-Powered SLA Breach Predictor for Jira (Open Source, Python)",
+      "url": "https://github.com/aroojjaved93/AI-Powered-Ticket-Routing-SLA-Breach-Prediction-in-JIRA",
+      "hn": "https://news.ycombinator.com/item?id=44483511",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2025-07-06T19:53:18Z"
+    },
+    {
+      "title": "Show HN: Magnitude – Open-source AI browser automation framework",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "hn": "https://news.ycombinator.com/item?id=44390005",
+      "points": 145,
+      "comments": 40,
+      "createdAt": "2025-06-26T18:30:56Z"
+    },
+    {
+      "title": "Show HN: ClickStack – Open-source Datadog alternative by ClickHouse and HyperDX",
+      "url": "https://github.com/hyperdxio/hyperdx",
+      "hn": "https://news.ycombinator.com/item?id=44194082",
+      "points": 241,
+      "comments": 83,
+      "createdAt": "2025-06-05T18:01:21Z"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+ "id": 21506901,
+ "title": "Bar Chart Race, Explained",
+ "points": 134,
+ "url": "https://observablehq.com/@d3/bar-chart-race-explained",
+ "created": "2019-11-11T17:47:23.000Z",
+ "comments": [
+  {
+   "by": "663e1b",
+   "at": "2019-11-14",
+   "text": "What's the advantage of an animated bar chart compared to an area chart?\nI personally think they're incredibly painful to look at but since I keep seeing them pop up on reddit I'm sure there must be advantages I haven't thought of, right?"
+  },
+  {
+   "by": "zwkrt",
+   "at": "2019-11-14",
+   "text": "They’re engaging, which can’t be excluded from their benefits. There was something visceral about watching Apple pull ahead in 2011-2015. IMO bar charts are better at showing relative sizes of scalar numbers as opposed to 2d shapes. A circle with twice as much area as another just doesn’t look 2x as big to me."
+  },
+  {
+   "by": "mbostock",
+   "at": "2019-11-14",
+   "text": "The alternatives I’d consider are a line chart and a bump chart.  https:&#x2F;&#x2F;observablehq.com&#x2F;@d3&#x2F;multi-line-chart   \n https:&#x2F;&#x2F;observablehq.com&#x2F;@jonsadka&#x2F;scatterplot  A bar chart race is in many ways “worse” than a static chart. The bar chart race forces you to wait for the animation to finish, whereas a static chart shows you everything simultaneously, and lets you look forward or backward in time by just moving your eyes. This can be generalized to say that a well-designed static chart is often better than an interactive or animated chart, since in the static chart, everything is visible up-front. But in the same way that a good visual hierarchy directs the reader’s attention and simplifies a complex interface, bar chart races (and animations more generally) are effective at getting the viewer to watch the race as it originally played out, from start to finish. Time in the data is represented as real time, so you’re only able to see a single moment in time. So bar chart races are probably worse for most perceptual tasks, but as a storytelling device, they are (seemingly) quite effective."
+  },
+  {
+   "by": "brootstrap",
+   "at": "2019-11-14",
+   "text": "Good thoughts here and also good post, always enjoy reading through a nice notebook. Also have seen the race charts popping up recently and it's cool to get a bit of a deep dive on it. Honestly though my opinion is that they are flashy and because of the animation and novelty factor people are drawn to the chart."
+  },
+  {
+   "by": "datasciencetext",
+   "at": "2019-11-14",
+   "text": "How do you feel about line \"races\"? (ex.  https:&#x2F;&#x2F;datasciencetexts.com&#x2F;diversions&#x2F;college_ranks_race.h... )"
+  },
+  {
+   "by": "liminal",
+   "at": "2019-11-14",
+   "text": "They are terrible to see an overview of change over time, but the animation keeps people interested and watching the \"race\""
+  },
+  {
+   "by": "datashow",
+   "at": "2019-11-14",
+   "text": "Line charts and area charts are not good when there are more than 5 series. The race chart can display 20 bars (more series can get in and out at any time), and you have a choice to focus on the top 5 bars, or one specific bar, or comparing two bars."
+  },
+  {
+   "by": "travisglines",
+   "at": "2019-11-14",
+   "text": "These are amazingly useful for visualizing growth over periods of time. Data Is Beautiful, one of my favorite short clip youtube channels does this for all of their content:  https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ojARdKHKlI0 "
+  },
+  {
+   "by": "mbostock",
+   "at": "2019-11-14",
+   "text": "This tutorial was inspired by John Burn-Murdoch’s popular bar chart race from earlier this year. There have been a couple thousand transitive forks of John’s notebook! Our hope with Observable is that reactive notebooks, as a form of literate programming designed for tinkering, make code easier to understand and reuse. Sharing code is already popular today, obviously, but we think helping people better understand that code will foster creativity and innovation."
+  },
+  {
+   "by": "drewmate",
+   "at": "2019-11-14",
+   "text": "Thanks, Mike.  This is fantastic.  I'm still just learning D3, but this type of content (and Observable in general) has been immensely useful. Where do you get ideas for your novel visualizations?  Is there academic literature on the psychology of presenting data like this, or are you just dreaming up new things and adding features to D3 so you can do it?  How do you recommend making the jump from forking and adapting others' visualizations to writing entirely new things from scratch?"
+  },
+  {
+   "by": "mbostock",
+   "at": "2019-11-14",
+   "text": "There are decades of academic literature on visualization and perception: IEEE VIS (and InfoVis specifically), IEEE TVCG (Transactions on Visualization and Computer Graphics), ACM SIGCHI, and lots more. If you’re interested in learning about visualization I recommend starting with Tamara Munzner’s book, Visualization Analysis & Design:  https:&#x2F;&#x2F;www.cs.ubc.ca&#x2F;~tmm&#x2F;vadbook&#x2F; "
+  },
+  {
+   "by": "ericb",
+   "at": "2019-11-14",
+   "text": "Very cool. If the license info was more prominent it might help encourage sharing? As is, I wouldn't fork something I can't use legally as it would be a dead-end. I can't find the word \"license\" on any of the bar chart pages, so I imagine it defaults to whoever wrote it owning the rights and anyone using it for anything is in legal jeopardy."
+  },
+  {
+   "by": "canada_dry",
+   "at": "2019-11-14",
+   "text": "Observable is an incredibly useful resource and deserves way more attention IMHO. I'm currently using Observable&#x2F;d3 to develop&#x2F;test a time based graph of multiple analog channels being read in real-time from an IoT device (i.e. Arduino Mega)."
+  },
+  {
+   "by": "aao",
+   "at": "2019-11-14",
+   "text": "Misses big interactive timeline for scrubbing and pausing, like a video."
+  },
+  {
+   "by": "52-6F-62",
+   "at": "2019-11-14",
+   "text": "You can fork it and modify the source! Try adding your own scrubber using:  https:&#x2F;&#x2F;observablehq.com&#x2F;@jashkenas&#x2F;inputs#sliderDemo  or any of the other offerings:  https:&#x2F;&#x2F;observablehq.com&#x2F;@jashkenas&#x2F;inputs "
+  },
+  {
+   "by": "mbostock",
+   "at": "2019-11-14",
+   "text": "Yeah, that would be a nice addition. Chained transitions in D3 don’t currently allow scrubbing, but this chart could be implemented using an explicit timeline to support it (or maybe that’s something that could be added to d3-transition)."
+  },
+  {
+   "by": "rhplus",
+   "at": "2019-11-14",
+   "text": "One property of these charts is that the data is normalized so that the 'winner' takes up 100% of the width for any given time-sample. This is useful if you're trying to imply that the data is zero-sum, but not useful if you're interested in understanding the changes for any one participant relative to itself, or two participants relative to each other. I think in the example, Apple's growth would be far more dramatic on a simple line chart."
+  },
+  {
+   "by": "mbostock",
+   "at": "2019-11-14",
+   "text": "If you edit the line that sets the x.domain in the chart cell, you can see it run with a fixed scale:       x.domain([0, d3.max(keyframes, ([, data]) => d3.max(data, d => d.value))])  "
+  },
+  {
+   "by": "kyberias",
+   "at": "2019-11-14",
+   "text": "Much better! Thank you."
+  },
+  {
+   "by": "uoaei",
+   "at": "2019-11-14",
+   "text": "For a really simple improvement to the visuals, smooth the data with smoothing splines before performing the race, then subsample&#x2F;interpolate between your data points for a smoother feel. Every time I see the \"ka-chunk\" as yearly data is iterated through in lockstep fashion, especially on a certain corner of the internet where \"data is (or should be) beautiful\", I cringe."
+  },
+  {
+   "by": "mbostock",
+   "at": "2019-11-14",
+   "text": "This could be likely done by editing the keyframes cell and using d3.interpolateBasis instead of linear interpolation."
+  }
+ ]
+}

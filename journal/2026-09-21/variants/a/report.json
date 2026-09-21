@@ -1,0 +1,122 @@
+{
+  "templateId": "@one-a-day/dev/bench-delta/v1",
+  "at": "2026-09-21T04:49:10.036Z",
+  "props": null,
+  "build": {
+    "code": 0
+  },
+  "kind": "image",
+  "renders": [
+    {
+      "canvas": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "file": "renders\\landscape.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 106782,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "png"
+      }
+    },
+    {
+      "canvas": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "file": "renders\\portrait.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 81950,
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "png"
+      }
+    },
+    {
+      "canvas": "square",
+      "width": 1080,
+      "height": 1080,
+      "file": "renders\\square.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 74849,
+      "probe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "png"
+      }
+    }
+  ],
+  "stills": [
+    {
+      "canvas": "landscape",
+      "at": null,
+      "file": "stills\\landscape.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": null,
+      "file": "stills\\portrait.png"
+    },
+    {
+      "canvas": "square",
+      "at": null,
+      "file": "stills\\square.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 3.5,
+      "file": "stills\\tutorial-1.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 14,
+      "file": "stills\\tutorial-2.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 27,
+      "file": "stills\\tutorial-3.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 38,
+      "file": "stills\\tutorial-4.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 46,
+      "file": "stills\\tutorial-5.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 54,
+      "file": "stills\\tutorial-6.png"
+    }
+  ],
+  "srcSnapshot": "src/",
+  "ok": true,
+  "degraded": false,
+  "validate": {
+    "code": 0,
+    "degraded": false
+  },
+  "tutorial": {
+    "canvas": "tutorial",
+    "width": 1280,
+    "height": 720,
+    "file": "renders\\tutorial.mp4",
+    "exitCode": 0,
+    "degraded": false,
+    "bytes": 668812,
+    "probe": {
+      "width": 1280,
+      "height": 720,
+      "codec": "h264",
+      "durationSec": 59
+    }
+  }
+}

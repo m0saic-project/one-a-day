@@ -1,0 +1,6 @@
+{
+  "query": "SLA report customers uptime monthly",
+  "days": 900,
+  "count": 0,
+  "results": []
+}

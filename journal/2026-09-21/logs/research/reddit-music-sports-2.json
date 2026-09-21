@@ -1,0 +1,12 @@
+{
+  "note": "Queries INTENDED for reddit under angle #6, all blocked (see -1.json). Kept as the record of what was asked.",
+  "queries": [
+    "r/WeAreTheMusicMakers q=lyric video t=year",
+    "r/Twitch q=stream schedule graphic t=year",
+    "r/fantasyfootball q=weekly recap graphic t=year",
+    "r/edmproduction q=release day promo graphics",
+    "r/musicians q=tour dates card",
+    "r/sportsbook q=weekly profit graphic",
+    "r/streaming q=schedule image"
+  ]
+}

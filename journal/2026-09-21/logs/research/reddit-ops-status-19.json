@@ -1,0 +1,111 @@
+{
+  "query": "Show HN incident timeline Slack",
+  "days": 720,
+  "count": 13,
+  "results": [
+    {
+      "title": "Show HN: LogClaw – Open-source AI SRE that auto-creates tickets from logs",
+      "url": "https://logclaw.ai",
+      "hn": "https://news.ycombinator.com/item?id=47353981",
+      "points": 19,
+      "comments": 34,
+      "createdAt": "2026-03-12T17:06:42Z"
+    },
+    {
+      "title": "Show HN: I built an interactive globe for verified combat events",
+      "url": "https://defogwar.com",
+      "hn": "https://news.ycombinator.com/item?id=47337327",
+      "points": 2,
+      "comments": 7,
+      "createdAt": "2026-03-11T16:00:01Z"
+    },
+    {
+      "title": "Show HN: Autopsy CLI – Open-source AI incident diagnosis in 30s",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47336048",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-11T14:30:47Z"
+    },
+    {
+      "title": "Show HN: Steadwing – Your Autonomous On-Call Engineer",
+      "url": "https://www.steadwing.com/",
+      "hn": "https://news.ycombinator.com/item?id=47270724",
+      "points": 12,
+      "comments": 5,
+      "createdAt": "2026-03-06T04:02:25Z"
+    },
+    {
+      "title": "Show HN: AutoBrief – Generate post-incident briefs from a structured form",
+      "url": "https://autobrief.dev",
+      "hn": "https://news.ycombinator.com/item?id=47151143",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-02-25T13:24:19Z"
+    },
+    {
+      "title": "Show HN: ProdRescue AI – Turn Slack war-rooms and raw logs into incident reports",
+      "url": "https://www.prodrescueai.com/",
+      "hn": "https://news.ycombinator.com/item?id=47142521",
+      "points": 4,
+      "comments": 1,
+      "createdAt": "2026-02-24T20:31:24Z"
+    },
+    {
+      "title": "Show HN: OpsBrief – Stop wasting 30 minutes per incident gathering context",
+      "url": "https://opsbrief.io",
+      "hn": "https://news.ycombinator.com/item?id=46876134",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-03T19:39:49Z"
+    },
+    {
+      "title": "Show HN: IncidentPost – AI-generated incident postmortems with minimal tooling",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46654431",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-01-17T01:31:03Z"
+    },
+    {
+      "title": "Show HN: IncidentPost – Turn Slack chaos into an SRE postmortem in 60s",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46647049",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-16T15:03:36Z"
+    },
+    {
+      "title": "Show HN: A tool for writing professional incident postmortems from raw timelines",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46576670",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-01-11T15:42:15Z"
+    },
+    {
+      "title": "Show HN: I built a tool that turns raw outage timelines into public postmortems",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46575349",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-11T12:57:45Z"
+    },
+    {
+      "title": "Show HN: It Happened Again – Track recurring events with evidence",
+      "url": "https://ithappenedagain.fyi",
+      "hn": "https://news.ycombinator.com/item?id=46541807",
+      "points": 3,
+      "comments": 1,
+      "createdAt": "2026-01-08T15:00:17Z"
+    },
+    {
+      "title": "Show HN: Incident management for Slack with AI-generated postmortems",
+      "url": "https://www.incidentops.io/",
+      "hn": "https://news.ycombinator.com/item?id=46427243",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-29T23:16:54Z"
+    }
+  ]
+}

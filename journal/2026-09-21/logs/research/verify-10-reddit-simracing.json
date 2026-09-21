@@ -1,0 +1,7 @@
+{
+ "source": "reddit.mjs r/simracing --q \"league standings graphic\" --t year",
+ "ok": false,
+ "fetchedAt": "2026-09-21",
+ "error": "reddit: 403 (reddit rate-limits anonymous clients; wait a minute)",
+ "note": "DEAD FOR THIS SESSION - not cited as evidence"
+}

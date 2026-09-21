@@ -1,0 +1,172 @@
+{
+  "source": "https://arctic-shift.photon-reddit.com/api/posts/search?subreddit=dataisbeautiful&selftext=every+friday&limit=25&sort=desc",
+  "fetchedAt": "2026-09-21T04:19:25.546Z",
+  "count": 15,
+  "results": [
+    {
+      "id": "1wani3d",
+      "title": "[OC] 1,000,000 answers to a \"name anything\" game - 192,634 unique things (59% never repeated)",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1wani3d/oc_1000000_answers_to_a_name_anything_game_192634/",
+      "sub": "dataisbeautiful",
+      "author": "AnythingGrid",
+      "score": 0,
+      "numComments": 10,
+      "date": "2026-09-08",
+      "text": "**I've received 1,000,000 submissions of \"anything\" to my game - here's what that looks like.** **Quick background on the game:** it's a daily 3×3 grid game where anything in the universe can be an answer. Each column has a category, each row has a category, and each square sits where two of them cross. You fill a square with anything that fits both the row and column. Any person, place, animal, thing, concept, activity, emotion - literally anything at all. So for Historical × Change, it could be the French Revolution (a historical change), or halfpence (historical change as in currency), or bathing machine (an old-timey place to get changed). Answers are scored based on how many times it's looked up online, with obscure answers scoring better than mainstream ones. Turns out asking people to name anything in the universe produces some cool and strange data! Just crossed a million answers, so here's what's in it: # The Headline Numbers |**Answers submitted**|**1,000,000**| |:-|:-| |Distinct answers|192,634| |Players|39,326| |Daily grids|214| The median score is **20.4** (something looked up roughly 20,400 times a month). # The 10 most-submitted answers of all time \"Grids\" is how many grids the answer has appeared in. \"Cells\" is how many distinct squares the answer has been used in. |**#**|**Answer**|**Times submitted**|**Grids**|**Cells**| |:-|:-|:-|:-|:-| |1|Christmas|**2,405**|62|157| |2|Independence Day (United States)|2,017|51|129| |3|World War II|1,500|**110**|**204**| |4|Sun|1,445|65|138| |5|Eiffel Tower|1,167|55|93| |6|Olympic Games|1,163|80|171| |7|Ocean|1,121|61|103| |8|Birthday|1,109|57|121| |9|French Revolution|1,069|61|117| |10|Valentine's Day|1,063|36|56| Christmas is submitted most, but World War II is the skeleton key: it has filled 204 different squares across 110 different puzzles, more than anything else in the game. While they've been submitted thousands of times, all ten together are **only 2.4% of every answer ever given**. # Uniqueness **Nearly 114,000 answers were given by exactly one person ever.** Six out of ten distinct answers in the game have been said once and never again. |**Answer submitted exactly…**|**Distinct answers**|**Share of all unique answers**| |:-|:-|:-| |once|**113,869**|**59.1%**| |twice|28,977|15.0%| |three times|13,027|6.8%| |ten or more times|14,790|7.7%| # Convergence: do people ever give the same answers? For every square, I took the single most popular answer and asked what share of submissions it accounted for. |**Top answer's share**|**Squares**| |:-|:-| |under 10%|**1,262**| |10–20%|545| |20–30%|107| |30–40%|9| |40–50%|2| |over 50%|**1**| **Mean share: 9.3%.** In nearly 2,000 squares, **players have reached a majority answer only once**: *Celebration × Irish*, where 50.35% said Saint Patrick's Day. The next closest is *Figure × Argentina* at 40.6% for Lionel Messi (possibly influenced by the World Cup this year!). # The most obscure answers Some of those unique answers with the lowest score poss"
+    },
+    {
+      "id": "1vx6ydg",
+      "title": "[OC] I tracked every alcoholic drink for almost 5 years and compared it with my Apple Health data. Hangovers are worse than I thought.",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1vx6ydg/oc_i_tracked_every_alcoholic_drink_for_almost_5/",
+      "sub": "dataisbeautiful",
+      "author": "Impossible-General-4",
+      "score": 487,
+      "numComments": 103,
+      "date": "2026-08-24",
+      "text": "Just for the background, I like to stay in control of my alcohol consumption and, side-eyeing the biohacking world, that’s why I track every drink. And I am also a bit of a data nerd (working in software), just so you know. So it’s my data tracked with an iOS alcohol tracker & analyzer app. Two things I found interesting with my data. Resting heart rate and HRV look like a ladder, apparently every other drink makes a bigger difference. In contrast, respiratory rate and REM sleep seem to have a huge shift above 8 drinks. Maybe some doctors or scientist here, have an explanation? **For me that’s something I think about when friends ask me for one last drink before going home because it could cost me 30 minutes of sleep.** And for obvious reasons the drink segments have less data the higher the numbers are, I dont have 10 drinks every Friday night 😂 ^(Source: KATER ZERRO alcohol tracking data + Apple Health) ^(Tools: KATER ZERRO alcohol tracking app + Canva)"
+    },
+    {
+      "id": "1vi9m93",
+      "title": "[OC] sector classifications felt too broad so i built my own ai tagged stock baskets. i rank them weekly",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1vi9m93/oc_sector_classifications_felt_too_broad_so_i/",
+      "sub": "dataisbeautiful",
+      "author": "polaristerlik",
+      "score": 0,
+      "numComments": 2,
+      "date": "2026-08-07",
+      "text": "first week of doing this. the plan is to post these every friday, mostly because reading \"the s&p was up 1.2%\" every week tells me nothing about what to actually look and the finviz sector thing isnt really reflective of anything since the sectors in my opinion arent reflective of what each company does properly. if this is useless tell me and ill adjust every company gets exactly one gics bucket, so amazon is \"consumer discretionary\" while running one of the biggest cloud businesses on earth, and google and meta arent even in the tech sector, theyre in communication services with at&t. i wanted groups that mean something, so i fed company info to an ai, tagged each company by what it actually does, and pooled the tags into \\~50 market cap weighted baskets, basically diy etfs. this week: augmented reality +16.7%, business software +11.9%, aerospace & defense +11.3%. biggest loser was art & collectibles -15.8%. median of all baskets was +3.4%, and spy did +3.4% for comparison, idk if this is a fluke or what though, though not really that suprising, the portfolios of each theme is created from etf portfolios. and yes my tags overlap, thats on purpose, amazon really is both retail and cloud. gics picking one bucket in my opinion is the problem im tying to fix here. i kinda feel like i should say that this is not investment advice."
+    },
+    {
+      "id": "1uh5mmg",
+      "title": "I compared Defqon NL 2026's cancelled heat day against 20+ years of Australian summer festival data. Here's where it actually ranks.",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1uh5mmg/i_compared_defqon_nl_2026s_cancelled_heat_day/",
+      "sub": "dataisbeautiful",
+      "author": "ravestewart",
+      "score": 0,
+      "numComments": 22,
+      "date": "2026-06-27",
+      "text": "When Defqon.1 Netherlands shut down Thursday night, my first reaction was that Europe needed to harden up. Then I pulled the numbers. \\*\\*Background\\*\\* I'm Australian. I attended all 10 Defqon Australia editions at Penrith (2009–2018) and a run of Big Day Outs through the late 00s and early 10s. When the cancellation news hit, I wanted to check if my reaction was actually justified. \\*\\*Methodology\\*\\* I used Open-Meteo's ERA5 reanalysis archive to pull historical weather data for two reference datasets: \\- Every Big Day Out Sydney from 1992 to 2014 (25 dates) — peak Australian summer, January, outdoor festival, the closest thing to a benchmark for what genuinely hot looks like at a large outdoor event in this country \\- Every Defqon.1 Australia at Penrith from 2009 to 2018 (10 dates) — mid-September, spring, same genre/format for comparison For Defqon NL 2026, I used the ECMWF forecast that was live at the time of cancellation — the forecast is the correct data point here because that's what the decision was based on, not what ERA5 later verified. I compared \\*\\*feels-like temperature\\*\\* (apparent temperature) throughout — not air temperature. Feels-like accounts for humidity, wind speed, and solar radiation. The Dutch humidity argument came up immediately when I posted this elsewhere — which is exactly why feels-like was the right metric. It already has humidity baked in. All data pulled from the Open-Meteo Archive API (\\`apparent\\_temperature\\_max\\`). Confidence: ±1–2°C (gridded ERA5 reanalysis, not on-site thermometer). \\*\\*What the data shows\\*\\* Friday's forecast feels-like peak of 41.2°C sits second on the combined ranked list across all 35 Australian reference dates. The only day that was hotter was Big Day Out Sydney 2013, at 42.8°C feels-like. For context on the Penrith numbers: mid-September spring, average feels-like across all 10 Defqon AUS editions was 21.5°C. The hottest single Defqon AUS day in a decade was 28.6°C. For context on the Dutch baseline: a normal Dutch July averages 20–22°C. The same as Sydney in September. This was a heatwave, not a Dutch summer. \\*\\*The charts are in the images\\*\\* — ranked combined list, full BDO history, full Defqon AUS history. \\*\\*My take (for what it's worth)\\*\\* I went in thinking harden up. I came out thinking it was bloody hot by any standard. Tens of thousands of people in tents, overnight lows that didn't drop below 18–20°C apparent, no real recovery before Friday's peak. In a country with no infrastructure or acclimatisation for it. The BDO comparison is the one that surprised me most. There was only one Australian summer festival day in over 20 years that was hotter than what was forecast in the Netherlands. Harden up, or fair call? Data's there. You decide. \\*Data: Open-Meteo ERA5 reanalysis / ECMWF forecast. ±1–2°C confidence throughout.\\*"
+    },
+    {
+      "id": "1s07ql4",
+      "title": "[OC] 3,800+ private jet flights tracked in and out of Augusta, GA during Masters week 2025",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1s07ql4/oc_3800_private_jet_flights_tracked_in_and_out_of/",
+      "sub": "dataisbeautiful",
+      "author": "Recondo86",
+      "score": 82,
+      "numComments": 5,
+      "date": "2026-03-22",
+      "text": "I used FlightAware data to track every private jet movement in and out of Augusta Regional Airport (KAGS) and Daniel Field (KDNL) during the 2025 Masters Tournament (April 4–15). Key stats: * 3,856 flights from 1,211 unique aircraft * Peak day was Friday April 11 with 772 flights — nearly one landing or takeoff every 2 minutes * Practice round days (Apr 4–9): 945 flights. Tournament days (Apr 10–13): 2,243 flights * The Thursday–Friday surge is corporate hospitality arriving; Sunday afternoon is the mass exodus The visualization is an interactive 3D flight tracker built with deck.gl and MapLibre. You can play back the entire tournament week in fast-forward, scrub the timeline, and see each aircraft's path. It includes a Masters event timeline (practice rounds through final putt) so you can see how flight activity maps to the tournament schedule. Interactive version: [https://acejet.com/events/masters/flight-tracker/](https://acejet.com/events/masters/flight-tracker/) Tools: Python, deck.gl, MapLibre GL, FlightAware data "
+    },
+    {
+      "id": "1ruhy5t",
+      "title": "[OC] I built a live dashboard to track our home-brewed March Madness Survivor Pool",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1ruhy5t/oc_i_built_a_live_dashboard_to_track_our/",
+      "sub": "dataisbeautiful",
+      "author": "ap21mvp",
+      "score": 0,
+      "numComments": 5,
+      "date": "2026-03-15",
+      "text": "**Quick background**: * Over at r/MarchMadnessSurvivor we run free separate survivor pools for Thursday, Friday, and the weekend games of the NCAA Tournament * Instead of picking game winners, you pick a stat category and a team per game. Assists, steals, 3P%, etc., whichever team you think wins that category * Each stat can only be used once across your entry, and you get three lives before you're eliminated * I've been building the site (playmmsp.com) since 2020. The live tracking and visualizations are what make following along so engaging **Graphic 1: Bubble Watch** * Bubble Watch shows every pick from active games that's close to flipping to either a win or a loss * The y-axis is \"Net Acts\"; essentially, how many basketball plays would need to go for or against you before your pick's outcome changes * Sitting at +2 means you're winning the stat, but only by a thin enough margin that two more acts against you would flip it; negative means you're currently losing but within striking distance * Logo size represents how many participants are on that pick, so you can see at a glance which stats are impacting the pool the most * Gold star with black background = your own picks, so you always know exactly what to root for **Graphic 2: Timeline** * The Timeline tracks your entry's Expected Wins across an entire day of games * The very first point on the line is all of your pregame odds combined * As games progress, odds flip from pregame to live in-game odds, and eventually settle as wins or losses * Green stretches are Power Hours which is the best one-hour period in which odds broke your way; red are the opposite, known as Sour Hours * Each labeled event marks the end of a game and stat category so you can pinpoint exactly what caused each swing * Even after the action is over, you can relive your highest highs and lowest lows "
+    },
+    {
+      "id": "1rez84f",
+      "title": "I tracked 5 years of my own body data to answer one question: \n\"Does tennis make you lose weight?\" The answer was r = 0.00. \nThen it got weirder. [OC]",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1rez84f/i_tracked_5_years_of_my_own_body_data_to_answer/",
+      "sub": "dataisbeautiful",
+      "author": "ExtensionStress1977",
+      "score": 0,
+      "numComments": 3,
+      "date": "2026-02-26",
+      "text": "[https://x.com/kakapark/status/2026835540809801899?s=20](https://x.com/kakapark/status/2026835540809801899?s=20) Full analysis as a Twitter thread with charts: TL;DR of what I found: \\- Tennis hours vs weight change: r = 0.00 (literally zero) \\- But tennis hours vs body fat % next month: r = −0.21 → The lag is one full calendar month \\- HRV by day of week: Friday is my weekly low, every single week \\- Optimal rest days after workout: exactly 2 (48 hrs) \\- 10k+ steps → lower HRV than <5k steps day Every insight only appeared after combining two variables that seemed unrelated. Dataset: 1,200 workouts, 483 weight logs, 1,800+ days of HR/HRV/RHR. All in Google Sheets. Happy to share methodology or answer questions."
+    },
+    {
+      "id": "1pnewwk",
+      "title": "[OC] I am a PhD student at MIT, and I've tracked every \"productive\" activity I've done since 2019--here are some of my stats",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1pnewwk/oc_i_am_a_phd_student_at_mit_and_ive_tracked/",
+      "sub": "dataisbeautiful",
+      "author": "CuseCoseII",
+      "score": 350,
+      "numComments": 40,
+      "date": "2025-12-15",
+      "text": "I started using Toggl to track my activity in 2019, but didn't start using it for everything until 2020, the year I graduated high school. The second image is an example of what the data itself looks like--I only track things if I am actively working on them, i.e. actively sitting at my computer reading something, writing code, taking notes, etc. The third image is a spreadsheet I made of the time spent in each of my undergraduate classes at UMich, and how I performed in them. 2025 has been my most productive year so far, averaging 6.22 hours of active work per day. At the start of the year, I started to really enjoy my research project, which obviously helped motivate me to work more. At the same time, I also became a lot more determined to aim for a good tenure-track job, which would require me to have a substantial body of work in my PhD, thus another motivation to work more. I have a really terrible sleep schedule (as should be obvious by images 4-5), but I work every day to make up for it (I've only taken 2 days off in the past 8 months, including weekends). You'll also notice I only wake up at 9 AM less then 20% of weekdays, which is just because I have a 9AM research subgroup meeting every Tuesday. Also, in image 4, you can see that my sleep schedule completely devolved in 2020 due to COVID, where I am only about 2x more likely to be working at 4 PM as I am likely to be working anytime from 2 AM to 6 AM. Image 2 shows an example of what this looked like in pracitice. Essentially, if I don't have any regular meetings at normal times, I default to a \\~28 hour sleep schedule that slowly rotates through the day over the course of a few weeks. I originally posted this last week on Friday, unaware of rule 9 (personal data posts are only permissible on Mondays), and it was taken down within an hour. I fixed the plots up a bit before reposting, but I thought I should also add some of the common questions from the original post: \"How much time did this take you?\" The plots themselves + writing the initial post took \\~3.3 hours, but obviously the data collection was the primary time sink. I only actually spend about 2 minutes every day starting and stopping the timers, so the total time would probably be a bit less than 70 hours. Why? In high school, I struggled a lot with procrastination, time-tracking was just a way to hold myself accountable and make sure I'm consistently making progress on my work. I was initially inspired by CGP Grey's old podcast Cortex in 2018, and I've been doing it ever since. There were a lot of concerns about my mental health in the first post, so I wanted to add here that I'm doing relatively ok. I have a lot of freedom in my current research, so I only really work on things I am personally motivated to work on, which I think helps a lot. "
+    },
+    {
+      "id": "1pchg28",
+      "title": "[OC] I tracked all 677,544 websites that launched in November 2025. Here's the breakdown by country, platform, category, TLD, and launch day.",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1pchg28/oc_i_tracked_all_677544_websites_that_launched_in/",
+      "sub": "dataisbeautiful",
+      "author": "antiochIst",
+      "score": 63,
+      "numComments": 12,
+      "date": "2025-12-02",
+      "text": "Two months ago I shared my September dataset here (368k sites) and got a ton of useful feedback. Since then I’ve overhauled my methodology - the November dataset is much larger and more accurate. # What Changed Since September 1. **All TLDs (not just .com)** \\- Previously tracked only .com. Now tracking all extensions: .store, .online, .io, country codes, etc. 2. **All languages** \\- Removed the English-only filter. 3. **Improved geo-detection** \\- Country accuracy is significantly better. USA went from 70% → 53% because of better global coverage (not fewer U.S. launches). # November 2025 Summary * **Total launches:** 677,544 * **Daily average:** 22,585 * **Hourly:** 941 * **Per minute:** 15.7 * **Countries:** 392 # Key Findings # Geography Among the 477k sites with location data: * **USA:** 53% (253,589) * **India:** 7.1% (34,127) * **Canada:** 4.2% * **UK:** 3.9% * **Pakistan:** 2.1% The long tail of smaller countries becomes visible with the expanded tracking. # TLDs * **.com — 64.3% (435,622)** * .store — 5.6% * .org — 3.9% * .online — 3.5% * .site — 3.4% Country TLDs (.in, .ca, .ai, etc.) continue to grow. # Platforms Detected on 295k sites: * **WordPress:** 39% * **Shopify:** 29% * **WooCommerce:** 14% * Squarespace: 8.6% * Wix: 8% * **Webflow:** 1% (lower than hype suggests) WordPress + WooCommerce = **54% of all detected platforms**. # Categories * **E-Commerce:** 24% (164,010 sites) * **Adult & Gambling:** 13.5% (91,652) * News & Blogs, SaaS, Home & Garden also strong. # Launch Timing * **Busiest:** Friday (15.3%) * **Quietest:** Sunday (12.7%) People launch every day — differences are small. # Comparison to September |Metric|September|November|Change| |:-|:-|:-|:-| |Total sites|368,454|677,544|\\+84%| |USA %|70%|53%|−17pp (methodology)| |WordPress %|32%|39%|\\+7pp| |E-Commerce %|36%|24%|−12pp| *The USA share dropped because global detection improved. Absolute USA counts increased.* # Tools Used * **Data:** custom Python crawlers + MySQL * **Visualization:** Python (matplotlib) * **Full report:** [https://websitelaunches.com/data/reports/2025-11-monthly-report](https://websitelaunches.com/data/reports/2025-11-monthly-report) Happy to answer any questions or dig deeper into specific categories or countries."
+    },
+    {
+      "id": "1oi7s3q",
+      "title": "[OC] By shifting my work hours one hour later, I save 48 minutes a week - here’s the data.",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1oi7s3q/oc_by_shifting_my_work_hours_one_hour_later_i/",
+      "sub": "dataisbeautiful",
+      "author": "circuitKing_98",
+      "score": 56,
+      "numComments": 22,
+      "date": "2025-10-28",
+      "text": "When my wife got pregnant earlier this year, we wanted to move to a single-family home - but the SF Bay Area Peninsula was too expensive. So now I’m crossing the Dumbarton Bridge every day. Out of curiosity (and frustration), I built [**CommuteGraph.com**](https://commutegraph.com) to see how commute times change depending on when you leave. This chart shows (close to) my real evening commute from **Palo Alto → Newark**, for the week of **Nov 3–7**. A few things stood out: • **Work-from-home is still real.** Mondays and Fridays are noticeably lighter - you can leave almost anytime without getting punished. • **Tuesdays and Thursdays peak \\~15 minutes later** than Wednesday - maybe people stay later midweek or there’s more delivery traffic. • From **3–5 PM**, travel time rises *linearly*, about +2 minutes every 15 minutes. • After **5 PM**, traffic drops off *fast.* Shifting to **10 AM–6 PM** would save me \\~48 minutes per week (round trip). • **Fridays** show a small bump near 7 PM - probably people going out to do fun things on a Friday night. It’s wild how clearly hybrid-work patterns still show up in real traffic data. If you try the tool, I’d love to see what your commute looks like and what you find. *OC – Data Source: Google Routes API (traffic-aware routing), Nov 3–7. Tools: Recharts, MapLibre GL JS.* *Note: The site has sample data to explore. Real queries require a login and small paywall to cover Google Maps API costs — I’m just an indie dev keeping it sustainable.*"
+    },
+    {
+      "id": "1odd46u",
+      "title": "[OC] From 1900-2099, the 13th lands on Friday slightly more than any other weekday",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1odd46u/oc_from_19002099_the_13th_lands_on_friday/",
+      "sub": "dataisbeautiful",
+      "author": "Interesting-Sock3940",
+      "score": 663,
+      "numComments": 44,
+      "date": "2025-10-22",
+      "text": "OC. I computed the weekday for every 13th of every month from 1900-2099 using the Gregorian calendar and plotted the distribution. **Results (n = 2,400 months):** * Monday - 342 (14.25%) * Tuesday - 343 (14.29%) * Wednesday - 342 (14.25%) * Thursday - 343 (14.29%) * **Friday** \\- **344 (14.33%)** * Saturday - 343 (14.29%) * Sunday - 343 (14.29%) **Why this happens (short version):** calendar arithmetic + leap-year rules skew the weekday distribution of the 13th ever so slightly toward Friday. **Data & code:** [GitHub Gist](https://gist.github.com/imfuz/62dc092a506e19cd8432db7c1018c05b)"
+    },
+    {
+      "id": "1ma5wgz",
+      "title": "10,000+ oz of formula. 3300+ diapers. 14 months of baby data, visualized",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1ma5wgz/10000_oz_of_formula_3300_diapers_14_months_of/",
+      "sub": "dataisbeautiful",
+      "author": "SiphonicHippo43",
+      "score": 164,
+      "numComments": 24,
+      "date": "2025-07-26",
+      "text": "Hello, data fans! This was more targeted for future parents and personal finance enthusiast, I thought it might be appreciated here as well, so here we go! When our baby was on the way, I tried to find out what the formula and diapers will cost. After all, this is one expensive journey, and it's good to be prepared! There are multiple estimates out there that vary widely, so I always wanted to see what it will actually cost. That is when an idea to track it all came up. When my daughter was born, I became a man possessed. Not by sleep deprivation. Not by baby wipes. By data. 🍼 Every bottle fed. 💩 Every diaper changed. 📈 Every ounce tracked — for 14 straight months. There are multiple apps on appstores that you can use to replicate it. Me and my wife used an app called 'Baby Tracker' by Nighp Software for iOS. Free version is absolutely enough, unless ads bother you or you need watch integration. Ads are not intrusive though and apple watch screen is too small to bother with in when you're in the middle of changing diapers anyway, so stick with free version. Now, for the data. # Here’s what it actually costs. # 1. Formula Over the first 14 months, our baby drank 10,876 ounces of milk. That is roughly 322 liters or 85 gallons. [](https://preview.redd.it/i-tracked-14-months-of-baby-data-every-diaper-every-ounce-v0-hdgfln66b9ff1.png?width=1124&format=png&auto=webp&s=4664e7a1f5c08fb49fa82341b6b43cc7f736c959)Milk consumption chart Some notes: * Around 4 months, we started purees and food other than milk. * Around 8-9 months, we peaked with milk consumption with baby eating around 35 ounces a day * Around 8-9 months, we started feeding her more and more of what we ate, with that trend accelerating once the baby went off formula after 1st birthday. Milk cost Now for the cost calculation. This can vary a lot based on what formula you're using. We were using Hipp formula that tends to cost around $45 for 800g. It takes around 4.3 g of that formula to prepare 1 oz of milk. * 1 gram of formula = $0.05625 or 5.625 cents * 4.3 grams of formula = $0.241875 or 24.1875 cents * So it costs 24.1875 cents to prepare 1 oz of milk * Organic whole milk is $5 for 64 oz, so $0.078125 or 7.8125 cents So with these assumptions: [](https://preview.redd.it/i-tracked-14-months-of-baby-data-every-diaper-every-ounce-v0-4jwrkhxye9ff1.png?width=243&format=png&auto=webp&s=dbc49dca6846e443b03d5a3ae642f5ea1d6da845) Cost of milk per ounce This is the monthly cost: [](https://preview.redd.it/i-tracked-14-months-of-baby-data-every-diaper-every-ounce-v0-cath18f1f9ff1.png?width=682&format=png&auto=webp&s=2d0ca527d946e65c5ef738f8b6277857cc6911e6) Cost of milk calculation For a total cost of $2829 for formula and $79 for whole milk for a grand total of $2908. Notes: * Baby actually drank 85.6% of served milk, or $2489 worth of it * It means $419 basically put down the drain. * You can potentially get some savings if you prepare less milk at a time to avoid spoilage, but you risk baby cr"
+    },
+    {
+      "id": "1kpd790",
+      "title": "[OC] Signatures on final days of initiative to ban conversion therapy in Europe.",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1kpd790/oc_signatures_on_final_days_of_initiative_to_ban/",
+      "sub": "dataisbeautiful",
+      "author": "spaanse_aak",
+      "score": 0,
+      "numComments": 28,
+      "date": "2025-05-18",
+      "text": "Data source: API of [https://eci.ec.europa.eu/043/public/#/screen/home/allcountries](https://eci.ec.europa.eu/043/public/#/screen/home/allcountries), saved every 10 minutes. The big dip on Friday is when the required 1M signatures was reached. The peak after is because of all attention on the fact that the initiative reached the threshold and the announced stretch goal of 1.2M Thresholds are based on seats in the European Parliament, which only roughly corresponds to population size."
+    },
+    {
+      "id": "1aj92fv",
+      "title": "What I have done every day for 6 years",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/1aj92fv/what_i_have_done_every_day_for_6_years/",
+      "sub": "dataisbeautiful",
+      "author": "LiveFastDieJohn",
+      "score": 968,
+      "numComments": 108,
+      "date": "2024-02-05",
+      "text": "What I have done every hour for six years In 2018 I started tracking what I had done for every hour and how happy I felt. This is done by filling in a Google sheet every day for every hour as well as 6 times per day rating how happy I had felt. I also have a Column where i write some comments like how my run felt, how work was etc. I also how some columns on how much alcohol I have drank, how many days that I have been sick.. I started this project because I like data and looking at data, not any deeper meaning. I currently work as a Data Scientist and have worked for 5 years prior to that as a data analyst. Year six has come to an end, and here's the highlights: I've slept more, exercised more, socialized more, worked less, and guess what? I'm the happiest I've ever been. Note: Repost since I posted this on Friday but forgot you can only post personal data on Mondays."
+    },
+    {
+      "id": "7kl3k1",
+      "title": "ANNOUNCING: DataIsBeautiful Battles. Create, compete, and see if you can win Reddit gold in our monthly DataViz competition!",
+      "permalink": "https://www.reddit.com/r/dataisbeautiful/comments/7kl3k1/announcing_dataisbeautiful_battles_create_compete/",
+      "sub": "dataisbeautiful",
+      "author": "AutoModerator",
+      "score": 102,
+      "numComments": 13,
+      "date": "2017-12-18",
+      "text": "Ho Ho Ho! Merry Goldsmas and an **Au**some New Year! 2018 is going to be a great time for you to participate on /r/DataIsBeautiful, and here's why: # The Competition On the **First Monday** of every month of 2018,^\\* we will schedule AutoModerator to post a unique dataset along with instructions for how to enter. Each dataset will range in difficulty, filesize, and analysis required to make a visual. Difficulty will be mixed month-to-month; so if one challenge is too daunting, you can always participate in the next round! Competitions will span **four weeks**, and will get locked on that Friday. **The best visual for each month will be awarded gold,** and will be announced in the following thread. (In addition, generous individuals may opt to gild submissions they believe to be excellent.) # The Criteria To enter: You simply have to (a) have a reddit account and (b) be able to post your own unique visual based off of the dataset we provide you. **It's completely your choice how you visualize the data.** As for judging, we will be closely sticking to [these criteria](https://www.reddit.com/r/dataisbeautiful/wiki/competition/goodviz) for rating content. At the end of the month, the finalists will be rated and gold prize(s) will be awarded. The new thread will announce the previous month's winner. *(And just to be clear: to prevent conflict of interest, mods or judges themselves will not be eligible for gold.)* # Any hints on what's coming? The hint for January 2018 is: **Incubator**. Competition starts on 2018-01-02^\\* Feel free to ask us (almost) anything! --- ^* ^^= ^^If ^^the ^^first ^^Monday ^^lands ^^on ^^a ^^US ^^federal ^^holiday, ^^we'll ^^shift ^^the ^^start ^^by ^^one ^^day. "
+    }
+  ]
+}

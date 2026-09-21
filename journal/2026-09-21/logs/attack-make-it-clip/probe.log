@@ -1,0 +1,177 @@
+ok 01-name200.json 1920x1080 contract=true check=true shown=4/4 namePx=17 lines=2,1,1,1 ell=[name-0]
+ok 01-name200.json 1600x900 contract=true check=true shown=4/4 namePx=14 lines=2,1,1,1 ell=[name-0]
+ok 01-name200.json 1280x720 contract=true check=true shown=4/4 namePx=12 lines=2,1,1,1 ell=[name-0]
+ok 01-name200.json 1080x1920 contract=true check=true shown=4/4 namePx=13 lines=2,1,1,1 ell=[name-0]
+ok 01-name200.json 1080x1080 contract=true check=true shown=4/4 namePx=13 lines=2,1,1,1 ell=[name-0]
+ok 01-name200.json 3840x2160 contract=true check=true shown=4/4 namePx=35 lines=2,1,1,1 ell=[name-0]
+ok 01-name200.json 640x360 contract=true check=true shown=4/4 namePx=7 lines=2,1,1,1 ell=[name-0]
+ok 01-name200.json 480x270 contract=true check=true shown=4/4 namePx=7 lines=1,1,1,1 ell=[name-0]
+ok 02-name200-all.json 1920x1080 contract=true check=true shown=4/4 namePx=17 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 02-name200-all.json 1600x900 contract=true check=true shown=4/4 namePx=14 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 02-name200-all.json 1280x720 contract=true check=true shown=4/4 namePx=12 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 02-name200-all.json 1080x1920 contract=true check=true shown=4/4 namePx=13 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 02-name200-all.json 1080x1080 contract=true check=true shown=4/4 namePx=13 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 02-name200-all.json 3840x2160 contract=true check=true shown=4/4 namePx=35 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 02-name200-all.json 640x360 contract=true check=true shown=4/4 namePx=7 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 02-name200-all.json 480x270 contract=true check=true shown=4/4 namePx=7 lines=1,1,1,1 ell=[name-0 name-1 name-2 name-3]
+ok 03-unbroken120.json 1920x1080 contract=true check=true shown=4/4 namePx=17 lines=2,1,1,1 ell=[]
+ok 03-unbroken120.json 1600x900 contract=true check=true shown=4/4 namePx=14 lines=2,1,1,1 ell=[]
+ok 03-unbroken120.json 1280x720 contract=true check=true shown=4/4 namePx=12 lines=2,1,1,1 ell=[]
+ok 03-unbroken120.json 1080x1920 contract=true check=true shown=4/4 namePx=13 lines=2,1,1,1 ell=[name-0]
+ok 03-unbroken120.json 1080x1080 contract=true check=true shown=4/4 namePx=13 lines=2,1,1,1 ell=[name-0]
+ok 03-unbroken120.json 3840x2160 contract=true check=true shown=4/4 namePx=35 lines=2,1,1,1 ell=[]
+ok 03-unbroken120.json 640x360 contract=true check=true shown=4/4 namePx=7 lines=2,1,1,1 ell=[name-0]
+ok 03-unbroken120.json 480x270 contract=true check=true shown=4/4 namePx=7 lines=1,1,1,1 ell=[name-0]
+ok 04-unbroken120-all.json 1920x1080 contract=true check=true shown=4/4 namePx=17 lines=2,2,2,2 ell=[]
+ok 04-unbroken120-all.json 1600x900 contract=true check=true shown=4/4 namePx=14 lines=2,2,2,2 ell=[]
+ok 04-unbroken120-all.json 1280x720 contract=true check=true shown=4/4 namePx=12 lines=2,2,2,2 ell=[]
+ok 04-unbroken120-all.json 1080x1920 contract=true check=true shown=4/4 namePx=13 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 04-unbroken120-all.json 1080x1080 contract=true check=true shown=4/4 namePx=13 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 04-unbroken120-all.json 3840x2160 contract=true check=true shown=4/4 namePx=35 lines=2,2,2,2 ell=[]
+ok 04-unbroken120-all.json 640x360 contract=true check=true shown=4/4 namePx=7 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 04-unbroken120-all.json 480x270 contract=true check=true shown=4/4 namePx=7 lines=1,1,1,1 ell=[name-0 name-1 name-2 name-3]
+ok 05-wide-w60.json 1920x1080 contract=true check=true shown=4/4 namePx=21 lines=2,2,2,2 ell=[]
+ok 05-wide-w60.json 1600x900 contract=true check=true shown=4/4 namePx=17 lines=2,2,2,2 ell=[]
+ok 05-wide-w60.json 1280x720 contract=true check=true shown=4/4 namePx=15 lines=2,2,2,2 ell=[]
+ok 05-wide-w60.json 1080x1920 contract=true check=true shown=4/4 namePx=13 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 05-wide-w60.json 1080x1080 contract=true check=true shown=4/4 namePx=13 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 05-wide-w60.json 3840x2160 contract=true check=true shown=4/4 namePx=40 lines=2,2,2,2 ell=[]
+ok 05-wide-w60.json 640x360 contract=true check=true shown=4/4 namePx=7 lines=2,2,2,2 ell=[name-0 name-1 name-2 name-3]
+ok 05-wide-w60.json 480x270 contract=true check=true shown=4/4 namePx=7 lines=1,1,1,1 ell=[name-0 name-1 name-2 name-3]
+ok 06-wide-w200.json 1920x1080 contract=true check=true shown=4/4 namePx=17 lines=2,1,1,1 ell=[name-0]
+ok 06-wide-w200.json 1600x900 contract=true check=true shown=4/4 namePx=14 lines=2,1,1,1 ell=[name-0]
+ok 06-wide-w200.json 1280x720 contract=true check=true shown=4/4 namePx=12 lines=2,1,1,1 ell=[name-0]
+ok 06-wide-w200.json 1080x1920 contract=true check=true shown=4/4 namePx=13 lines=2,1,1,1 ell=[name-0]
+ok 06-wide-w200.json 1080x1080 contract=true check=true shown=4/4 namePx=13 lines=2,1,1,1 ell=[name-0]
+ok 06-wide-w200.json 3840x2160 contract=true check=true shown=4/4 namePx=35 lines=2,1,1,1 ell=[name-0]
+ok 06-wide-w200.json 640x360 contract=true check=true shown=4/4 namePx=7 lines=2,1,1,1 ell=[name-0]
+ok 06-wide-w200.json 480x270 contract=true check=true shown=4/4 namePx=7 lines=1,1,1,1 ell=[name-0]
+ok 07-unit30.json 1920x1080 contract=true check=true shown=4/4 namePx=32 lines=1,1,1,1 ell=[]
+ok 07-unit30.json 1600x900 contract=true check=true shown=4/4 namePx=27 lines=1,1,1,1 ell=[]
+ok 07-unit30.json 1280x720 contract=true check=true shown=4/4 namePx=22 lines=1,1,1,1 ell=[]
+ok 07-unit30.json 1080x1920 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[values-1 values-2]
+ok 07-unit30.json 1080x1080 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[values-1 values-2]
+ok 07-unit30.json 3840x2160 contract=true check=true shown=4/4 namePx=65 lines=1,1,1,1 ell=[]
+ok 07-unit30.json 640x360 contract=true check=true shown=4/4 namePx=11 lines=1,1,1,1 ell=[]
+ok 07-unit30.json 480x270 contract=true check=true shown=4/4 namePx=8 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 08-unit30-long.json 1920x1080 contract=true check=true shown=4/4 namePx=32 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 08-unit30-long.json 1600x900 contract=true check=true shown=4/4 namePx=27 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 08-unit30-long.json 1280x720 contract=true check=true shown=4/4 namePx=22 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 08-unit30-long.json 1080x1920 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 08-unit30-long.json 1080x1080 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 08-unit30-long.json 3840x2160 contract=true check=true shown=4/4 namePx=65 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 08-unit30-long.json 640x360 contract=true check=true shown=4/4 namePx=11 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 08-unit30-long.json 480x270 contract=true check=true shown=4/4 namePx=8 lines=1,1,1,1 ell=[values-0 values-1 values-2 values-3]
+ok 09-title-sub-long.json 1920x1080 contract=true check=true shown=4/4 namePx=32 lines=1,1,1,1 ell=[title subtitle]
+ok 09-title-sub-long.json 1600x900 contract=true check=true shown=4/4 namePx=27 lines=1,1,1,1 ell=[title subtitle]
+ok 09-title-sub-long.json 1280x720 contract=true check=true shown=4/4 namePx=22 lines=1,1,1,1 ell=[title subtitle]
+ok 09-title-sub-long.json 1080x1920 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[title subtitle]
+ok 09-title-sub-long.json 1080x1080 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[title subtitle]
+ok 09-title-sub-long.json 3840x2160 contract=true check=true shown=4/4 namePx=65 lines=1,1,1,1 ell=[title subtitle]
+ok 09-title-sub-long.json 640x360 contract=true check=true shown=4/4 namePx=11 lines=1,1,1,1 ell=[title subtitle]
+ok 09-title-sub-long.json 480x270 contract=true check=true shown=4/4 namePx=8 lines=1,1,1,1 ell=[title subtitle]
+ok 10-labels60.json 1920x1080 contract=true check=true shown=4/4 namePx=32 lines=1,1,1,1 ell=[]
+ok 10-labels60.json 1600x900 contract=true check=true shown=4/4 namePx=27 lines=1,1,1,1 ell=[]
+ok 10-labels60.json 1280x720 contract=true check=true shown=4/4 namePx=22 lines=1,1,1,1 ell=[legend-cand]
+XX 10-labels60.json 1080x1920 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+    LEGEND: legend ends at x=1041, content right edge=1035
+XX 10-labels60.json 1080x1080 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+    LEGEND: legend ends at x=1041, content right edge=1035
+ok 10-labels60.json 3840x2160 contract=true check=true shown=4/4 namePx=65 lines=1,1,1,1 ell=[]
+ok 10-labels60.json 640x360 contract=true check=true shown=4/4 namePx=11 lines=1,1,1,1 ell=[legend-base legend-cand]
+ok 10-labels60.json 480x270 contract=true check=true shown=4/4 namePx=8 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 11-labels60-W.json 1920x1080 contract=true check=true shown=4/4 namePx=32 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 11-labels60-W.json 1600x900 contract=true check=true shown=4/4 namePx=27 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 11-labels60-W.json 1280x720 contract=true check=true shown=4/4 namePx=22 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 11-labels60-W.json 1080x1920 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 11-labels60-W.json 1080x1080 contract=true check=true shown=4/4 namePx=24 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 11-labels60-W.json 3840x2160 contract=true check=true shown=4/4 namePx=65 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 11-labels60-W.json 640x360 contract=true check=true shown=4/4 namePx=11 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 11-labels60-W.json 480x270 contract=true check=true shown=4/4 namePx=8 lines=1,1,1,1 ell=[rule-label legend-base legend-cand]
+ok 12-rows8-long.json 1920x1080 contract=true check=true shown=8/8 namePx=17 lines=1,1,1,1,1,1,1,1 ell=[name-3 name-4 name-5 name-6 name-7]
+ok 12-rows8-long.json 1600x900 contract=true check=true shown=8/8 namePx=14 lines=1,1,1,1,1,1,1,1 ell=[name-3 name-4 name-5 name-6 name-7]
+ok 12-rows8-long.json 1280x720 contract=true check=true shown=8/8 namePx=12 lines=1,1,1,1,1,1,1,1 ell=[name-2 name-3 name-4 name-5 name-6 name-7]
+ok 12-rows8-long.json 1080x1920 contract=true check=true shown=8/8 namePx=15 lines=1,2,2,2,2,2,2,2 ell=[]
+ok 12-rows8-long.json 1080x1080 contract=true check=true shown=8/8 namePx=15 lines=1,2,2,2,2,2,2,2 ell=[]
+ok 12-rows8-long.json 3840x2160 contract=true check=true shown=8/8 namePx=35 lines=1,1,1,1,1,1,1,1 ell=[name-2 name-3 name-4 name-5 name-6 name-7]
+XX 12-rows8-long.json 640x360 contract=true check=true shown=8/8 namePx=7 lines=1,1,1,1,1,1,1,1 ell=[name-1 name-2 name-3 name-4 name-5 name-6 name-7]
+    VCLIP: labelblock-0: bottom 124 > row bottom 122
+    VCLIP: labelblock-1: bottom 148 > row bottom 146
+    VCLIP: labelblock-2: bottom 172 > row bottom 170
+    VCLIP: labelblock-3: bottom 196 > row bottom 194
+    VCLIP: labelblock-4: bottom 220 > row bottom 218
+    VCLIP: labelblock-5: bottom 244 > row bottom 242
+    VCLIP: labelblock-6: bottom 268 > row bottom 266
+    VCLIP: labelblock-7: bottom 292 > row bottom 290
+XX 12-rows8-long.json 480x270 contract=true check=true shown=7/8 namePx=7 lines=1,1,1,1,1,1,1 ell=[name-0 name-1 name-2 name-3 name-4 name-5 name-6]
+    VCLIP: name-0: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-0: bottom 99 > row bottom 95
+    VCLIP: name-1: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-1: bottom 119 > row bottom 115
+    VCLIP: name-2: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-2: bottom 139 > row bottom 135
+    VCLIP: name-3: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-3: bottom 159 > row bottom 155
+    VCLIP: name-4: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-4: bottom 179 > row bottom 175
+    VCLIP: name-5: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-5: bottom 199 > row bottom 195
+    VCLIP: name-6: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-6: bottom 219 > row bottom 215
+ok 13-rows8-W.json 1920x1080 contract=true check=true shown=8/8 namePx=17 lines=1,1,1,1,1,1,1,1 ell=[name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 13-rows8-W.json 1600x900 contract=true check=true shown=8/8 namePx=14 lines=1,1,1,1,1,1,1,1 ell=[name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 13-rows8-W.json 1280x720 contract=true check=true shown=8/8 namePx=12 lines=1,1,1,1,1,1,1,1 ell=[name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 13-rows8-W.json 1080x1920 contract=true check=true shown=8/8 namePx=13 lines=2,2,2,2,2,2,2,2 ell=[name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 13-rows8-W.json 1080x1080 contract=true check=true shown=8/8 namePx=13 lines=2,2,2,2,2,2,2,2 ell=[name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 13-rows8-W.json 3840x2160 contract=true check=true shown=8/8 namePx=35 lines=1,1,1,1,1,1,1,1 ell=[name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+XX 13-rows8-W.json 640x360 contract=true check=true shown=8/8 namePx=7 lines=1,1,1,1,1,1,1,1 ell=[name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+    VCLIP: labelblock-0: bottom 124 > row bottom 122
+    VCLIP: labelblock-1: bottom 148 > row bottom 146
+    VCLIP: labelblock-2: bottom 172 > row bottom 170
+    VCLIP: labelblock-3: bottom 196 > row bottom 194
+    VCLIP: labelblock-4: bottom 220 > row bottom 218
+    VCLIP: labelblock-5: bottom 244 > row bottom 242
+    VCLIP: labelblock-6: bottom 268 > row bottom 266
+    VCLIP: labelblock-7: bottom 292 > row bottom 290
+XX 13-rows8-W.json 480x270 contract=true check=true shown=7/8 namePx=7 lines=1,1,1,1,1,1,1 ell=[name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6]
+    VCLIP: name-0: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-0: bottom 99 > row bottom 95
+    VCLIP: name-1: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-1: bottom 119 > row bottom 115
+    VCLIP: name-2: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-2: bottom 139 > row bottom 135
+    VCLIP: name-3: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-3: bottom 159 > row bottom 155
+    VCLIP: name-4: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-4: bottom 179 > row bottom 175
+    VCLIP: name-5: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-5: bottom 199 > row bottom 195
+    VCLIP: name-6: needs 10px tall (px=7 x 1 lines) box=9px
+    VCLIP: labelblock-6: bottom 219 > row bottom 215
+ok 14-everything.json 1920x1080 contract=true check=true shown=8/8 namePx=17 lines=1,1,1,1,1,1,1,1 ell=[title subtitle rule-label legend-base legend-cand name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 14-everything.json 1600x900 contract=true check=true shown=8/8 namePx=14 lines=1,1,1,1,1,1,1,1 ell=[title subtitle rule-label legend-base legend-cand name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 14-everything.json 1280x720 contract=true check=true shown=8/8 namePx=12 lines=1,1,1,1,1,1,1,1 ell=[title subtitle rule-label legend-base legend-cand name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 14-everything.json 1080x1920 contract=true check=true shown=8/8 namePx=13 lines=2,2,2,2,2,2,2,2 ell=[title subtitle rule-label legend-base legend-cand name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 14-everything.json 1080x1080 contract=true check=true shown=8/8 namePx=13 lines=2,2,2,2,2,2,2,2 ell=[title subtitle rule-label legend-base legend-cand name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 14-everything.json 3840x2160 contract=true check=true shown=8/8 namePx=35 lines=1,1,1,1,1,1,1,1 ell=[title subtitle rule-label legend-base legend-cand name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+ok 14-everything.json 640x360 contract=true check=true shown=8/8 namePx=7 lines=1,1,1,1,1,1,1,1 ell=[title subtitle rule-label legend-base legend-cand name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6 name-7 values-7]
+XX 14-everything.json 480x270 contract=true check=true shown=7/8 namePx=7 lines=1,1,1,1,1,1,1 ell=[title subtitle rule-label legend-base legend-cand name-0 values-0 name-1 values-1 name-2 values-2 name-3 values-3 name-4 values-4 name-5 values-5 name-6 values-6]
+    VCLIP: labelblock-0: bottom 87 > row bottom 84
+    VCLIP: labelblock-1: bottom 109 > row bottom 106
+    VCLIP: labelblock-2: bottom 131 > row bottom 128
+    VCLIP: labelblock-3: bottom 153 > row bottom 150
+    VCLIP: labelblock-4: bottom 175 > row bottom 172
+    VCLIP: labelblock-5: bottom 197 > row bottom 194
+    VCLIP: labelblock-6: bottom 219 > row bottom 216
+ok 15-name46.json 1920x1080 contract=true check=true shown=4/4 namePx=25 lines=2,2,2,2 ell=[]
+ok 15-name46.json 1600x900 contract=true check=true shown=4/4 namePx=19 lines=2,2,2,2 ell=[]
+XX 15-name46.json 1280x720 contract=true check=true shown=4/4 namePx=17 lines=2,2,2,2 ell=[]
+    VCLIP: name-0: needs 45px tall (px=17 x 2 lines) box=44px
+    VCLIP: name-1: needs 45px tall (px=17 x 2 lines) box=44px
+    VCLIP: name-2: needs 45px tall (px=17 x 2 lines) box=44px
+    VCLIP: name-3: needs 45px tall (px=17 x 2 lines) box=44px
+ok 15-name46.json 1080x1920 contract=true check=true shown=4/4 namePx=22 lines=2,2,2,2 ell=[]
+ok 15-name46.json 1080x1080 contract=true check=true shown=4/4 namePx=22 lines=2,2,2,2 ell=[]
+ok 15-name46.json 3840x2160 contract=true check=true shown=4/4 namePx=43 lines=1,1,1,1 ell=[]
+ok 15-name46.json 640x360 contract=true check=true shown=4/4 namePx=8 lines=2,2,2,2 ell=[]
+ok 15-name46.json 480x270 contract=true check=true shown=4/4 namePx=7 lines=1,1,1,1 ell=[name-0 name-1 name-2 name-3]

@@ -1,0 +1,47 @@
+{
+  "query": "bar chart race",
+  "days": 1400,
+  "count": 5,
+  "results": [
+    {
+      "title": "Stripe Withholding Balance of $100000",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49764468",
+      "points": 11,
+      "comments": 17,
+      "createdAt": "2026-09-19T08:15:17Z"
+    },
+    {
+      "title": "Show HN: Rediflow – SSR project management, one source of truth, no spreadsheet",
+      "url": "https://gitlab.com/rediflow_eu/rediflow",
+      "hn": "https://news.ycombinator.com/item?id=47155922",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-02-25T18:47:43Z"
+    },
+    {
+      "title": "Open source AI diagram generator (Draw.io, Mermaid)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46487082",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-04T11:47:36Z"
+    },
+    {
+      "title": "Show HN: Search for any open source project and explore neighboring results",
+      "url": "https://relatedrepos.com/search",
+      "hn": "https://news.ycombinator.com/item?id=44160263",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-06-02T16:05:20Z"
+    },
+    {
+      "title": "Show HN: ChartPrompt – An AI-powered chart generation platform",
+      "url": "https://chartprompt.com/",
+      "hn": "https://news.ycombinator.com/item?id=44140426",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2025-05-30T22:33:31Z"
+    }
+  ]
+}

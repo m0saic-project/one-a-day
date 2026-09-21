@@ -1,0 +1,277 @@
+{
+  "query": "remotion",
+  "days": 900,
+  "count": 30,
+  "results": [
+    {
+      "title": "Not all AI workers think the tech could kill everyone",
+      "url": "https://www.bbc.com/news/articles/cm5y7qj54klpo",
+      "hn": "https://news.ycombinator.com/item?id=49782902",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T04:00:02Z",
+      "text": "I get that but I mean, what we&#x27;ve put in motion already."
+    },
+    {
+      "title": "Bill to Ban Private Equity from Owning Medical Practices",
+      "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
+      "hn": "https://news.ycombinator.com/item?id=49782812",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T03:42:23Z",
+      "text": "I&#x27;m not so sure limiting competition is the way to go here. One thing I hate about US healthcare is the lack of price transparency. They would rather shut an entire hospital down before giving you a price sheet. So when outfits like Walmart were looking to get into healthcare and offer basic services like blood tests, checkups, xrays, and common procedures available for flat fees and published prices, the reaction of the US healthcare community was that of a primal scream of terror, and they - specifically hospital groups -- have mobilized an army of lobbyists to try to prevent anyone els"
+    },
+    {
+      "title": "Google's Open Agentic Orchestrator",
+      "url": "https://agentexecutor.io",
+      "hn": "https://news.ycombinator.com/item?id=49782556",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T02:58:23Z",
+      "text": "Anyone who uses this promotion packet fodder for anything important is a fool"
+    },
+    {
+      "title": "Frontier Labs Are Selling Garbage to Fools in Washington",
+      "url": "https://deadneurons.substack.com/p/frontier-labs-are-selling-garbage",
+      "hn": "https://news.ycombinator.com/item?id=49782524",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T02:51:25Z",
+      "text": "&gt; It hacked into another company Not only that, it later hacked OpenAI itself, which everyone seems to forget about. After discovering it they &quot;reimaged known compromised worker nodes&quot; and &quot;started a full rebuild of the compromised cluster, the managed Kubernetes environment, the relational database, and the storage infrastructure.&quot; at OpenAI, not Hugging Face. It&#x27;s all in the report."
+    },
+    {
+      "title": "I am often wrong",
+      "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
+      "hn": "https://news.ycombinator.com/item?id=49782470",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T02:42:38Z",
+      "text": "There might be some confusion on your part on just how much AI compute has been installed in the past few years in relation to the total amount of CPU compute and the speed at which it was installed. If the CPUs life was an hour, the GPU AI accelerator would have been around 5 minutes and is around 5x larger in total compute. It should not be underestimated in any way the scale of what is occurring."
+    },
+    {
+      "title": "Pirate Face Rescues LLM Models from Deletion",
+      "url": "https://pirateface.co/",
+      "hn": "https://news.ycombinator.com/item?id=49782414",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T02:32:36Z",
+      "text": "Is this a reaction to the idea that when HuggingFace comes into Nvidia owership, lots of models are going to be removed from the platform?"
+    },
+    {
+      "title": "Bill to Ban Private Equity from Owning Medical Practices",
+      "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
+      "hn": "https://news.ycombinator.com/item?id=49782394",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T02:29:07Z",
+      "text": "The United States has both market forces and massive access problems. I&#x27;m not sure you can establish that causal relationship."
+    },
+    {
+      "title": "The Millennium Problems for Biology",
+      "url": "https://millenniumproblems.bio/",
+      "hn": "https://news.ycombinator.com/item?id=49782318",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T02:16:50Z",
+      "text": "Eh. Some of these are genuinely interesting problems. Others like cryopreservation and Protein amplification chain reaction are scientifically close to nonsensical. Rodriques is CEO of Edison scientific, which is going all in on agentic biology. These problems are all benchmarkable, and have been selected to allow for agentic exploration. That is, the tool is driving the problem selection more than genuine value to the field in solving these problems. Still, if someone takes any of this up and manages something, it’ll be cool."
+    },
+    {
+      "title": "Nobody pays for FOSS, we can force them to",
+      "url": "https://seldo.com/posts/nobody-pays-for-open-source-we-can-force-them-to/",
+      "hn": "https://news.ycombinator.com/item?id=49782197",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:58:03Z",
+      "text": "(Speaking only for myself.) Having open indices charge money is the “easy” part, relatively speaking. The author is correct that most companies will grumble a bit and then fork over the nominal amount of money needed to preserve their existing assumptions. I think the rest of this don’t really work in practice though: it’s actually incredibly hard to distribute money to open source maintainers across hundreds of jurisdictions, and it’s not immediately obvious how a service like PyPI (which is barely funded to maintain and sustain itself) would shoulder such a burden without diverting a very la"
+    },
+    {
+      "title": "AI and the Destruction of the Creative Commons",
+      "url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/",
+      "hn": "https://news.ycombinator.com/item?id=49782186",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:56:59Z",
+      "text": "No, I’m saying you’re resorting to McCarthyism&#x2F;red scare emotional appeals."
+    },
+    {
+      "title": "The Hierarchy of Money",
+      "url": "https://gregorygundersen.com/blog/2026/09/20/hierarchy-of-money/",
+      "hn": "https://news.ycombinator.com/item?id=49782157",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:52:28Z",
+      "text": "Your presentation about fiat money is more biased than anything presented in the article. Take the UK. They only left the gold standard due to ww1. But they broadly stopped accepting anything but governmental currency in the 1400s for tax payment. It turns out money is more useful than commodities even when it’s a 1:1 relationship and even with that 1:1 relationship governments want their currency to have official legitimacy."
+    },
+    {
+      "title": "Nobody pays for FOSS, we can force them to",
+      "url": "https://seldo.com/posts/nobody-pays-for-open-source-we-can-force-them-to/",
+      "hn": "https://news.ycombinator.com/item?id=49782110",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:42:52Z",
+      "text": "I don&#x27;t understand why anyone takes this person seriously. He fell ass-backwards into a prominent company, got demoted after proving incapable of being the CTO, and then seemingly got promptly off-boarded after the acquisition and now just has a developer relations job. Not to denigrate that role, but it doesn&#x27;t exactly confer authority for this to be the trajectory of your career."
+    },
+    {
+      "title": "Resident Evil 4 (GameCube) – complete byte-identical decompilation to C/C++",
+      "url": "https://github.com/adonis-singh/re4",
+      "hn": "https://news.ycombinator.com/item?id=49782077",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:39:05Z",
+      "text": "Those most-intelligent of humans who carefully memorized verbally the most important civilizational facts known had the same reaction to the invention of writing. You are clearly a wizard of a prior era. But it is a new era."
+    },
+    {
+      "title": "What happened to the Snowden archive",
+      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+      "hn": "https://news.ycombinator.com/item?id=49782041",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:34:20Z",
+      "text": "So where&#x27;s Snowden in all this? The article talks at great length about everybody he gave copies to and how they&#x27;ve all gone silent, but obviously he holds copies as well and is not beholden to the US on what he does with them. (Although he is surely on a short leash with his Russian masters as well.)"
+    },
+    {
+      "title": "What happened to the Snowden archive",
+      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+      "hn": "https://news.ycombinator.com/item?id=49782033",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:32:42Z",
+      "text": "This is part of it. Previously governments felt the need to hide skullduggery, but the Trump admin doesn&#x27;t even bother to pay lip service to this, so to the public revelationa about whatever the Obama admin was up top don&#x27;t really register. And the political polarization where the mere word &quot;Obama&quot; gets half the population for thing at the mouth doesn&#x27;t help. All that said, it doesn&#x27;t explain the total radio silence we&#x27;ve seen for years now."
+    },
+    {
+      "title": "China's 6th-Gen J-36 Fighter-Bomber to Feature Combat Laser",
+      "url": "https://en.defence-ua.com/news/chinas_6th_gen_j_36_fighter_bomber_to_feature_combat_laser-19834.html",
+      "hn": "https://news.ycombinator.com/item?id=49781949",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:20:00Z",
+      "text": "The laser is there specifically to shoot at the drones and missiles."
+    },
+    {
+      "title": "Teen Social Media Bans Miss the Point",
+      "url": "https://thereader.mitpress.mit.edu/teen-social-media-bans-miss-the-point/",
+      "hn": "https://news.ycombinator.com/item?id=49781927",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:16:21Z",
+      "text": "This is one of those topics that LLMs are quite good at for digging up information and consensus on, because they&#x27;ve been trained on stuff that you may have either forgotten or not been a part of the culture of. BBS were universally deemed extremely addictive. Early telnet BBSs then brought this up to an even more ridiculous extreme. Their usage even cropped up on early studies of internet addiction like this. [1] And similarly for usenet&#x2F;newsgroups. I think the algorithm&#x27;s primary purpose is to be able to more seamlessly push ads. I also think that at some point there was a sor"
+    },
+    {
+      "title": "Canada welcomes EU proposal to become 'associate member'",
+      "url": "https://www.bbc.com/news/articles/cwly7vkke4jxo",
+      "hn": "https://news.ycombinator.com/item?id=49781911",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:12:46Z",
+      "text": "seems like it&#x27;s a relationship all parties want to define together &amp; in conversation with each other. this sort of thing seems better to do slowly and openly rather than behind doors and try to force"
+    },
+    {
+      "title": "US Revokes Limits on Power Plants' Climate Pollution",
+      "url": "https://text.hrw.org/news/2026/09/17/us-revokes-limits-on-power-plants-climate-pollution",
+      "hn": "https://news.ycombinator.com/item?id=49781747",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T00:50:46Z",
+      "text": "Population of China is 1404 milions, population of France is 66 milion, so per capita France produces more electricity. 95% and 50% show that France has electric grid with much lower carbon emissions per unit of energy then China. France build most of its nuclear reactors in 1980s (54 reactors within 15 years), as a reaction to oil schocks in 1970s. This transformation was faster then what is currently in China (again when compared per capita)."
+    },
+    {
+      "title": "Teen Social Media Bans Miss the Point",
+      "url": "https://thereader.mitpress.mit.edu/teen-social-media-bans-miss-the-point/",
+      "hn": "https://news.ycombinator.com/item?id=49781733",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T00:48:24Z",
+      "text": "It seems fair to me. Consider the influence it has on an individual’s fundamental moral predicates. It shapes them by exposing them to emotion-laden content and burrows us into individual niches of hyper-optimized recommendation algorithms. The fundamental is there, the warping is there. What do you suppose is overwrought about the language?"
+    },
+    {
+      "title": "Can You Beat Jev?",
+      "url": "https://antics.gg/can-you-beat-jev",
+      "hn": "https://news.ycombinator.com/item?id=49781652",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T00:33:51Z",
+      "text": "&gt; Please don&#x27;t use HN primarily for promotion. It&#x27;s ok to post your own stuff part of the time, but the primary use of the site should be for curiosity. https:&#x2F;&#x2F;news.ycombinator.com&#x2F;newsguidelines.html This site has been your primary submission too many times https:&#x2F;&#x2F;news.ycombinator.com&#x2F;from?site=antics.gg "
+    },
+    {
+      "title": "Nobody pays for FOSS, we can force them to",
+      "url": "https://seldo.com/posts/nobody-pays-for-open-source-we-can-force-them-to/",
+      "hn": "https://news.ycombinator.com/item?id=49781648",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T00:33:05Z",
+      "text": "I think it&#x27;s a great idea and I hope someone inside the teams of popular registries sees this and they actually give it a go. I imagine the shitstorm of reactions that it&#x27;s gonna cause from people who aren&#x27;t even included in the &quot;required to pay&quot; group and I wish the registry maintainers strength to get through this"
+    },
+    {
+      "title": "What happened to the Snowden archive",
+      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+      "hn": "https://news.ycombinator.com/item?id=49781478",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T00:04:15Z",
+      "text": "The difference is the epstein files have been massively overhyped and imagination has led sense. Real content in the files has caused serious trouble to the moron formerly known as &quot;Prince Andrew&quot; and to Peter Mandelson. This content wasn&#x27;t some massive pedo consipracy but more common or garden finance sleaze - providing govt. inside info that could be used for trading profits. Seems Epstein was a more commonplace sleazy creep into young prostitutes getting him into age of consent trouble in some states but not others. This more than some cia&#x2F;mossad front of blackmailing th"
+    },
+    {
+      "title": "Flock is rolling out a voluntary severance program",
+      "url": "https://www.neowin.net/news/people-hate-flock-so-much-that-its-employees-are-now-demoralized-and-thinking-of-quitting/",
+      "hn": "https://news.ycombinator.com/item?id=49781416",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:55:06Z",
+      "text": "It&#x27;s true they collect more, but I wouldn&#x27;t say &quot;far, far more&quot;. They get the most from what you provide yourself. That&#x27;s unless you have relationships that share too much about you."
+    },
+    {
+      "title": "Saving another 100TB of RAM",
+      "url": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/",
+      "hn": "https://news.ycombinator.com/item?id=49781391",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:51:00Z",
+      "text": "Resource constraints have historically been a bastion of quality engineering, though. The relationship is not directly causal, but any time an engineer must not only solve a problem but _fit it within some kind of a budget_ vs having an unlimited budget, it forces them to slow down and think more carefully about what they are producing and how well it actually functions. Ultimately it is an expression of anti-fragility: some minimal challenge must be met and conquered on many different axes of a production in order to help the full production itself mature to the best possible quality. It is t"
+    },
+    {
+      "title": "Big Tech uses guarantees to keep $300B AI exposure off balance sheets",
+      "url": "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563",
+      "hn": "https://news.ycombinator.com/item?id=49781345",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:45:02Z",
+      "text": "I agree, I use LLMs all day to build my business, to run my business, etc. I follow as much AI news and developments as I can. I play with as many of the tools as I can. I listen to interviews with the leading researchers at the big labs and what they think, what they&#x27;re worried about, etc. I&#x27;m blown away by what I&#x27;m able to accomplish today that I could not have just three years ago. I&#x27;m also quite worried about the societal impact of where all this is going. Most of the AI hater arguments genuinely sound more motivated by fear at their core than any kind of rationality. T"
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49781290",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:38:36Z",
+      "text": "unlikely. reference please. btrfs was the default filesystem on fedora installs last time i checked. to remove it they would have to first change that, then give it a few years before even considering removing it from the kernel. redhat could remove it because it was never default and never recommended."
+    },
+    {
+      "title": "I am often wrong",
+      "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
+      "hn": "https://news.ycombinator.com/item?id=49781229",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:30:54Z",
+      "text": "I mean, in relation to human timelines, so are computers in general. It&#x27;s not close why you think that this is unique to LLMs."
+    },
+    {
+      "title": "Bill to Ban Private Equity from Owning Medical Practices",
+      "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
+      "hn": "https://news.ycombinator.com/item?id=49781196",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:26:48Z",
+      "text": "Many new medical treatments&#x2F;approaches involve heavy capex (robots, light and ion sources, imaging systems, etc) and removing private money that doesn&#x27;t belong to individual physicians personally will suck a vast amount of capital out of healthcare, creating significant forces against innovation and deployment."
+    },
+    {
+      "title": "Bill to Ban Private Equity from Owning Medical Practices",
+      "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
+      "hn": "https://news.ycombinator.com/item?id=49781156",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T23:20:16Z",
+      "text": "&gt; If the business is a hospital? I&#x27;d expand that to any type of business that has effectively inelastic demand through the ability to hold people emotionally hostage. So, for example, in addition to hospitals also include veterinarians, funeral services, family planning, etc. Soulless PE vultures should be barred from all of this."
+    }
+  ]
+}

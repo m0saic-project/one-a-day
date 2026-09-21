@@ -1,0 +1,35 @@
+{
+  "query": "\"variance\" \"benchmark\" \"run it\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22variance%22%20%22benchmark%22%20%22run%20it%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=20",
+  "count": 3,
+  "results": [
+    {
+      "title": "The M1 Max is the fastest GPU we have ever measured in Affinity Photo benchmark",
+      "url": "https://twitter.com/andysomerfield/status/1451859111843356676",
+      "hn": "https://news.ycombinator.com/item?id=29037531",
+      "points": null,
+      "comments": null,
+      "createdAt": "2021-10-29T12:10:42Z",
+      "text": "Because I was confused with these benchmark results I tried to run it myself. And learned that current benchmark version and benchmark in affinity forum topic are not comparable. But still there results for that older benchmark version are quite strange. And for the reference: my 1080Ti outputs 13k, but there is huge variance run to run."
+    },
+    {
+      "title": "Linux gaming is faster because Windows APIs are becoming Linux kernel features",
+      "url": "https://www.xda-developers.com/linux-gaming-is-getting-faster-because-windows-apis-are-becoming-linux-kernel-features/",
+      "hn": "https://news.ycombinator.com/item?id=48130549",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-14T02:51:30Z",
+      "text": ">It isn't complicated Getting reliable, consistent, meaningful performance numbers is in fact, extremely complicated: * You need a consistent way to reproduce the exact same outputs - accounting for things like the game's RNG. You can't just walk around and snap the FPS counter in the corner of the screen and call that good. * For Windows (and occasionally Linux) you need to ensure nothing is running that will taint the results (updates, AV scans, etc) * Sometimes individual driver versions work very poorly with a specific game. Just because it ran badly doesn't mean you got good data, it may just be a bug in that specific driver version * You can't just run the benchmark once. You need to run it many times, establishing run-to-run variance * There are often a good dozen-to-hundred individual OS settings which can impact performance, and in some cases run-to-run variance. You need to know which to tweak, and which to leave alone. * Sometimes the result of individual in-game settings differs between driver versions. Just because setting X had a big impact once, doesn't mean it always did * FPS is not a great metric - it's an average. You need to check and see if there are huge frametime spikes. If there are, the game will have a 'good' FPS but feel horrible to play due to stuttering. * You need to decide if you're benchmarking more GPU-heavy or CPU-heavy - those types of benchmarks require drastically different settings. If you run a CPU-like benchmark you may see a wildly different gap in framerate compared to a GPU-heavy one for the same game. Benchmarking properly means accounting for thousands of tiny variables. Only a handful actually do it right."
+    },
+    {
+      "title": "The Mercury programming language",
+      "url": "https://www.mercurylang.org",
+      "hn": "https://news.ycombinator.com/item?id=18416818",
+      "points": null,
+      "comments": null,
+      "createdAt": "2018-11-09T18:50:45Z",
+      "text": "Could it be designed to limit variance and the impact of clever hardware and its unpredictable nature? I can imagine benchmarking on a new high-end desktop machine would require a lot of work to make sure your benchmark isn't impacted because you ran it Friday at 11:44 and the cron job that runs at 11:45 messed up a few key caches, made your CPU heat up that extra 1 degree celcius causing some throttling to kick in, causing your prng to be seeded with a value that triggers a few worst-case performance scenarios etc. There are a lot of factors that can influence a modern system and most of them seem hard to control. For a 8086 you could probably account for all these factors if you put in the hours and run it in a highly controlled environment but I doubt its even possible for a modern CPU, let alone the whole system. Of course this isn't a problem for most benchmarks as most of them are only useful for demonstrating real world use-cases where the variance is expected and the goal is not to benchmark the performance of a single element of the system but the perceived performance you can expect in a real-world scenario. Or its simply designed by someone who loves this kind of system and found a good excuse to put one to use."
+    }
+  ]
+}

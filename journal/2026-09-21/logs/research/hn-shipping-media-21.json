@@ -1,0 +1,233 @@
+{
+  "query": "\"every week\" \"chart\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22every%20week%22%20%22chart%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=25",
+  "count": 25,
+  "results": [
+    {
+      "title": "Jeff Bezos’ Annual Letter",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312517120198/d373368dex991.htm",
+      "hn": "https://news.ycombinator.com/item?id=14108182",
+      "points": null,
+      "comments": null,
+      "createdAt": "2017-04-13T16:05:31Z",
+      "text": "This is a surprisingly common trap to fall into. I worked at a startup in which the CTO criticized my dev team for not having a perfectly linear burn down chart. Every week in our retro we had the same discussion about how to improve the shape of our burn down chart; we tried putting higher valued stories at the front of the queue, involving QA earlier in the sprint, and cranking out 1 pointers mid week to tweak the graph. We rarely achieved the perfect shape. On top of this we also had one week sprints, which made it difficult to plan for the future or work on spikes, so we ended up doing very little high-level, architectural planning. I remember one week my team cranked through their allotted stories so fast that we ran out of work two or three days into the sprint. We decided to take on a couple extra easy stories that we knew we could finish before the end of the week. Rather than being praised for doing extra work, we were criticized for \"introducing volatility into the sprint\". In other words, we messed up the shape of the burn down chart. I'm currently working at a place that has virtually no process, which has it's own challenges, but I'm happy that I'm not arguing about burn down charts anymore :)"
+    },
+    {
+      "title": "Ask HN: Lessons learned from implementing user-facing analytics / dashboards?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=37695070",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-09-28T20:06:53Z",
+      "text": "That’s a fantastic point. The unstated underlying request isn’t to see the same chart, the same way, every week/month/quarter. It’s actually: “Find any abnormalities in the data that could be threats or opportunities, and show me THAT — in a chart, table, email, or whatever medium make makes sense.”"
+    },
+    {
+      "title": "Show HN: Meet me, I'll buy you coffee",
+      "url": "http://letstalkover.coffee",
+      "hn": "https://news.ycombinator.com/item?id=8595801",
+      "points": null,
+      "comments": null,
+      "createdAt": "2014-11-12T15:22:09Z",
+      "text": "> The bottom line is that I've made the decision to not go to university and I'm perfectly happy with that. Yes, you're happy with it, now. People are always happier and more apt to do something that has immediate gains than something that is far off in the future. > Not being in college doesn't mean I can't still learn, it just means I have to teach myself, You realize the purpose of teachers is to inform you of things so you don't have to figure them out yourself, right? It takes a lot longer to accumulate the knowledge by yourself. People have already figured complicated things out, and they can tell you in a minute, versus you spending hours/days/weeks trying to come to the same conclusion. > which is what I've always done and will continue to do. People may judge me based on my lack of college degree, I am at peace with that. Nobody will judge you on a lack of a college degree. If anything, people will think you are more amazing for never going to college, but that's beside the point. A degree has nothing to do with going to college. Forget the degree. Actually, go to college and then drop out. Yes, i'm actually telling you not to get a degree, but still to go to college. > Surprisingly, my father is a professor and my mother is a university director, and yet they both support me in what I'm doing. My mother wrote about her feelings on the matter here if you're curious: My parents also supported me, but probably because they thought they had no way to force me to go. Honestly, this was a big mistake on their part. -- I never went to college, and started working for myself about the same age as you. I've since hit a wall several times in terms of professional advancement because I never got a CS degree. But it's not the degree that held me back, it's the lack of academic knowledge about computer science, security/crypto and other topics. How was I supposed to know I needed to explain in a job interview the big-O notation advantages of one algorithm over another? How was I supposed to know I needed to know how to draw a flow chart of the architecture of a network application? Could I have been studying CS every week of my life throughout my career to eventually build up the knowledge equivalent of a degree? Sure. But who the fuck wants to study every week of their life? That's why college is only (about) four years: you burn up that studying time all at once so you don't have to stretch it out for the rest of your life. Then there's the personal/social aspect, where my personal growth was stunted for many years from not having a group of my peers to interact with on a daily basis. I also lacked perspective from not learning multiple subjects such as art, history, foreign language, economics, philosophy, psychology, etc. I've accumulated a lot of knowledge over the last 10 years, but still lack so much because I never went to college. What nobody told me when I was younger was that your youth is the best time for you to 'waste' your time with school, with travel, with learning inane skills/trades, with romance, whatever. You should waste your youth as much as you can on doing the things that will be rewarding later on. I can sum up the reason you should go to college in one word: exposure . Nowhere in your life will you ever find a place where is it easier to be exposed to the variety of knowledge and culture and people than in college. Don't work. Do anything you can to avoid work. You'll be working for the rest of your life. -- Some more reflections: I have a couple of good friends, and some of them have many friends. I ask them, where did you make these friends? \"In college, of course.\" I have friends who are married. Where did they meet their wife? \"In college, of course.\" I have friends who play music, or used to be in bands. Where did they learn to play? [..] I know people who draw amazing portraits when they're bored. Where did they learn to draw? [..] I know people who have done every drug under the sun, and have a wider view of cognition, of reality, of authority. Where did they get the drugs, and who did they have fun doing them with? [..] Steve Jobs dropped out of college after six months, but kept auditing creative classes. At a commencement address he gave at Stanford, he said: \"If I had never dropped in on that single calligraphy course in college, the Mac would have never had multiple typefaces or proportionally spaced fonts.\""
+    },
+    {
+      "title": "What It's Like to Build a Startup in Gaza",
+      "url": "http://www.wired.com/2014/10/like-build-startup-gaza-strip-bombs-drop/",
+      "hn": "https://news.ycombinator.com/item?id=8406731",
+      "points": null,
+      "comments": null,
+      "createdAt": "2014-10-03T18:04:21Z",
+      "text": "> Or do you think that it is OK to shoot artillery at Je... Israeli civilians... for a few decades? Absolutely not, it's wrong and ought to be immediately stopped. It's a great question I'm glad you asked, because I fully understand that it's a genuine concern so we have to take it seriously and discuss it. We can't waive it away. But let's be very clear here, these are the statistics for rocket attacks by Hamas. Please check the link, it's a very simple chart. http://i.imgur.com/ntFYSsk.png Israeli civilians died in the last 10 years from rocket attacks: 28 Palestinian children died in 1 month (July 2014): 329 Palestinian civilians who died in 1 month (July 2014): 1525 Just think about that for a second. Then look at Israeli traffic casualties per WEEK, it's five. Yes, five. Every week, more people die in traffic, than civilians died from Hamas rockets in all of 2014 including this summer's bloody conflict. Just consider that for a moment. This is not a question of merely 'defense'. It's a question of, is it okay to kill hundreds of innocent children, to prevent an annual death toll from happening that barely rivals weekly traffic casualties, when I'm not willing to stop building illegal settlements and not willing to lift illegal blockades or occupations of another land that could achieve the same goals. Now let me be clear, every single one of those 28 Israeli deaths the past 10 years was one too many. Every single one is a tragedy I wish hadn't happened. But in my opinion it in no way can excuse such disproportionate and grotesque murdering of innocent children on such a scale. Especially not when Israel has not exhausted all of its options yet. Under international law no country has the right to defend itself against a force that is resisting a decades long illegal occupation (now de facto annexation) of its land. This 'right to defend itself' simply does not exist. Feel free to look up the legal standard that supports it, it's not there. Israel has a right to defend itself, and it can do so by withdrawing from occupied territories, lifting an illegal blockade and engaging in genuine peace talks in support of the right to self determination of the people of Palestine. But it has continuously disrupted such talks, which isn't my opinion, it's the opinion of the entire planet, indeed including the US this last time around, hell including president of Israel Peres stating Netanyahu deliberatedly destroyed the peace deal that had already been negotiated. Again, if someone illegally occupies part of your house, controls your doors and windows (exit/entry by land, air and water), controls your fridge (the infamous 'Palestinian diet', controls your electricity and water and energy, and announces it will build more settlements, and walks away from peace treaties or sabotages them, this country has NO right to defend itself by international law. Once it reasonably exhausts its diplomatic options (namely the lifting of illegal blockades and occupations and negotations) it has the right to use force as a final measure. You may disagree with the law, but these are the basics facts of international law. These are not controversial facts."
+    },
+    {
+      "title": "The Indie Bubble Is Popping",
+      "url": "http://jeff-vogel.blogspot.com/2014/05/the-indie-bubble-is-popping.html",
+      "hn": "https://news.ycombinator.com/item?id=7781667",
+      "points": null,
+      "comments": null,
+      "createdAt": "2014-05-22T01:33:42Z",
+      "text": "If you think that's how the iOS app store works you don't seem to know much about the iOS app store. For reference, XBLIG did work that way, and just like iOS, the top sellers were the ones that rose to the top and remained top sellers. IIRC, the #1 all time selling XBLIG game is some sort of 'minecraft with zombies' deal that hit the top of the chart by being a) cheap and b) checking the boxes. Some of the most successful XBLIG devs literally churn out a game every week or two, all with low production values, and make their money off the $1 impulse buys from people who are browsing the lists. 'Good stuff will rise to the top' is broken reasoning for storefronts like this. Purchasers have terribly flawed information and don't have the ability to actually evaluate quality; the only things that 'rise to the top' are things that have an upward force applied to them, like marketing, word-of-mouth, or pure luck (for the last one, see Flappy Bird, that ended up catching all its traction as a fluke when it rose enough on the charts to get noticed.)"
+    },
+    {
+      "title": "Kawasaki on Why Your Startup is Dead if You Can’t Enchant",
+      "url": "http://firstround.com/article/Kawasaki-on-Why-Your-Startup-is-Dead-if-You-Cant-Enchant",
+      "hn": "https://news.ycombinator.com/item?id=6842638",
+      "points": null,
+      "comments": null,
+      "createdAt": "2013-12-03T19:44:53Z",
+      "text": "I'm not sure that's really any different. Google advertised Glass ahead of time with a very strong message: quicker and easier capturing of fleeting moments. You don't take out your phone, hit the power button, unlock the screen, find the camera app, wait for it to respond, focus, snap, tap the preview image, tap the share icon, scroll through the list of apps, tap the Facebook icon, tap \"share\". You say \"take a picture\". You say \"share on Facebook\". It's 100% \"please, no, not more computing\". Glass' success is tied to delivering on that core premise. If Glass is currently not fulfilling it, then its popularity is strictly in being a status symbol, meaning it's ultimately a fad, a fashion statement (that's probably why you don't really see it on the east coast). Without fulfilling that promise, it's doomed in its own time as well. Your examples absolutely will be failures and it is for this reason. Pedometers and wifi enabled shoes, the way I've seen them implemented, cause the user to have to do more work. The user can't just put them on and run and forget they are there and their running will improve. The user has to configure it with their system. Then they have to remember their login every time they want to look at their charts. Figure out how to make sense out of the chart. Should they be running farther, or would pushing faster be better? A graph of distance over time doesn't tell you that. The product creates distracting work for the user and THAT is why it fails. Make that pedometer upload to a server and have a physical trainer email the user personalized instructions on how to improve their running every week and you have a pedometer that means something to users."
+    },
+    {
+      "title": "Why it’s time to support only Android 4.0 and above",
+      "url": "http://dannyroa.com/2013/10/17/why-its-time-to-support-only-android-4-0-and-above/",
+      "hn": "https://news.ycombinator.com/item?id=6573838",
+      "points": null,
+      "comments": null,
+      "createdAt": "2013-10-18T20:29:29Z",
+      "text": "FWIW, remember that these figures are biased in construction. Less importantly, they only take into account devices that have the Play Store (which you might consider your audience, but there are tons of people in the world happy to buy things from alternative markets available on their devices). However, and this is somewhat insidious: they measure devices used in the last seven days. How often do normal users \"actively visit the Play Store\"? I find it highly unlikely that every normal user does so at least once every week. In fact, I would be much less surprised by a universe where people only \"visit the Play Store\" once a month at best, and only when there's something specific for them to be doing (maybe they hear about a new product, and go to download). I would then further submit that this frequency decreases the older the device is: during the first month of owning your device, you probably have tons of things you suddenly realize you want, because the device comes with no apps installed. With an expectation curve on the usage of the device thereby working against older devices, you will see a chart that only looks at the most recent 7 days biased towards recent versions as the probability of older versions dips. Let's look at what happens then if we posit that the average 2.3 user is using the Play Store once every four weeks, while the average 4.x user is using the Play Store once every two weeks: this mild skew makes 30/70 become almost 50/50. Are these people who are using 2.3 really outside of your target market because they only download an app every month instead of every couple weeks? If you market to them, and make it clear your app supports them, will they not buy it? While that might be true, it isn't something you can support with just these numbers from Google. It's even worse, in fact, when you remember that when Google was tracking \"active devices\" instead of \"devices actively visiting Play\" the 2.3/4.x split was so far in the other direction as to be unbelievable, and when Google decided \"fine, we are limiting it to active users\" the numbers jumped. And now, we see the numbers creeping better and better... but did you notice that they changed the time range from 2 weeks to 7 days in the few months since Apple lambasted their uptake at WWDC? If not, you aren't paying enough attention ;P, as that's a really critical detail: Google keeps moving the goal post, so you can't take any solace in \"we are making progress\"."
+    },
+    {
+      "title": "The Art of Getting a 3 Letter Domain Name",
+      "url": "http://blog.lob.com/post/55544977604/the-art-of-a-3-letter-domain-name",
+      "hn": "https://news.ycombinator.com/item?id=6061794",
+      "points": null,
+      "comments": null,
+      "createdAt": "2013-07-18T04:35:55Z",
+      "text": "> People in the business can be jerks and unreasonable for sure but it would be more likely for someone to \"ask\" for 100k or simply say \"domain is not for sale\" than to say \"7 figures\" (2 letter, possible, 3 letter, specifically \"all of the responses\", no. FWIW, here's an email I received when enquiring about a 3-letter domain name: Thank you for your interest in this domain name This domain name is among our most prized and sought-after domains. It is the online equivalent of prime, downtown real estate, and we get purchase inquiries about this domain every week. Based on what comparable domain names are selling for, this domain name commands a premium price tag in the five-figure and higher price range. This may come as a surprise to you since not everyone is aware that domain names of this quality regularly sell in this price range (and higher). Please visit the Domain Name Journal website below to see a current summary of recently sold domains and their selling prices: (omitted) After you’ve viewed the Domain Name Journal Sales Chart (above) and seen the current selling prices, we’d be delighted to discuss your interest in purchasing this domain name from us. Also, to avoid giving you ‘sticker shock’, we want to make sure your domain acquisition budget will support this domain’s five-figure and higher price range. We’re always respectful of our customers’ time and try very hard not to waste it with negotiations that can never get off the ground. If your budget will support the five-figure and higher price range, please reply with a serious offer to begin the negotiation process with us. Any offer of less than five-figures won’t be taken seriously by us, and due to the volume of email we receive, will not be replied to at all. Thank you."
+    },
+    {
+      "title": "Show HN: Starwell – give AI agents real statistics instead of made up numbers",
+      "url": "https://starwell.dev/",
+      "hn": "https://news.ycombinator.com/item?id=49625659",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-09T12:45:54Z",
+      "text": "I came across this problem as everyone else that LLMs hallucinate numbers and stats and doing web search doesn't fix it either because numbers would be stale. So I started working on this data layer for AI agents where they can pull real stats from agencies like World bank, Stats Canada, US Bureau of Labor Statistics, Eurostat etc.. through Starwell's one single API and/or MCP server. Every number you pull comes with exact source citations, license, timestamp etc... You can also get answers through Starwell's analytics engine like \"can you compare US, Canada, UK, Euro economies\" it brings back number, chart, citation, and the Python it ran in a microVM. I built 29 data sources and building more every week but looking forward to some feedback as I'd like to know if it really solves the problem I am aiming for"
+    },
+    {
+      "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
+      "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+      "hn": "https://news.ycombinator.com/item?id=49438602",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-25T18:38:06Z",
+      "text": "The only thing here that _maybe_ has a durable long term moat is the first point. Even then, I don't see why stronger models can't also have discernment once more companies close the loop with their AI and their relevant company metrics. The other 3 you literally just get for free as models improve. The \"state of the art\" of \"prompting\" changes literally every week. It was loops, then graphs, now its harnesses (and self automating harnesses)? Why are these not just obviated by better models? These are barely skills, and are imo, just the tech equivalent of tabloids advertising 5 minute exercises or pills to get rid of stubborn belly fat. No amount of prompt engineering or graphs or loops could get your previous version of GPT to perform like Fable, and yet somehow Fable can do all of that and more without any random built in \"ai engineering skills.\" The labor chart for SWEs will look like a slope up as productivity with AI increases, and then past a certain point where AI is like 99% good enough, employment will fall off a cliff. We are already seeing this with junior hiring, and who is to say that AI will magically only ever be as capable as a junior engineer?"
+    },
+    {
+      "title": "Show HN: Smart model routing directly in Claude, Codex and Cursor",
+      "url": "https://github.com/workweave/router",
+      "hn": "https://news.ycombinator.com/item?id=48691040",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-26T19:40:08Z",
+      "text": "I'm glad there are more attempts at solving model routing, as costs (at API rates) has really become an issue. Some feedback: 1. Reiterate the cache issue from other comments already here. there is a lot of optimisation in harnesses around caching and a proxy model blows that up 2. Coding agents are model aware - they already route code discovery to mini / flash models, planning to heavy models, workflow design to ultra, implementation to mid / high etc. They know when they're exploring, planning, implementing, reviewing etc. and which model class to select and when it fails. With a proxy you're breaking this control loop and feedback. It doesn't know, for ex. that it just attempted with deepseek v4 and it failed, lets try Opus? 3. How are you going to RL improvements and prevent the router becoming stale? You only have access to your own internal prompts and ~thousands of samples. This is RL'd on one orgs codebase. There are going to be a lot of prompts you haven't seen before and have no insight to on how to route correctly, and you have no insight into users HF to improve your own model. Orgs aren't going to share their traces with you, so you need other sources to train on and improve There are also new model releases every week that you need to keep up with - whats the story going to be here 4. Publish evals by running terminalbench / deepswe bench. Show us the performance / cost / time chart vs the other agent and model sets. If you can show gains there, you have a very simple value prop to sell where you can charge for a % of the saved costs"
+    },
+    {
+      "title": "Porsche sold more electrified cars in Europe in 2025 than pure gas-powered cars",
+      "url": "https://newsroom.porsche.com/en/2026/company/porsche-deliveries-2025-41516.html",
+      "hn": "https://news.ycombinator.com/item?id=46690429",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-01-20T10:51:11Z",
+      "text": "> but of the (very potential) rise of China as the premier automotive super power. It's done. They're already the premier automotive superpower now. It might not seem like it in Europe and USA, but anywhere else in the world they are dominating. I live in Morocco and I am not exaggerating when I say that every week I see a new Chinese brand on the road. Not just cars of the same brand, completely new brands. Dacia and a lot of PSA cars are built in Morocco, so naturally they always had a strong positioning here, but now I'm seeing more BYDs than DACIA's most popular car, the Duster. It's anecdotal but it's quite telling considering the foothold French brands have always had here. Here's a chart showing the sheer dominance of Chinese brands on the EV market in Morocco. 6 out of 10 models are Chinese. https://www.wandaloo.com/files/2026/01/aivam-bilan-marche-au..."
+    },
+    {
+      "title": "Compass – 10-min founder diagnostic with an AI weekly coach",
+      "url": "https://compass.prepare4vc.com/",
+      "hn": "https://news.ycombinator.com/item?id=45087030",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-08-31T20:59:14Z",
+      "text": "Hey HN — Jason here (Prepare 4 VC). We built Compass to help early-stage founders answer: 1) Where am I actually right now? 2) What should I do next week, specifically? 3) How do I keep that momentum every week? How it works: • 10–12 min diagnostic (“Chart My Course”) → five scores (Progress, Signal, Self-Efficacy, Execution, Market Awareness) + a momentum state • Weekly reflections with an AI summary that turns notes into next steps + resources • Optional layers: Navigator (monthly review), advisory (“Co-Pilot”), and fixed-scope execution (“Mission Control”) Why we built it: We run founder programs and advisory—too many tools, not enough operating rhythm. This is our attempt to make “assess → act → reflect” dead simple. Stack/tech: • Frontend: React (Lovable) • Backend: Supabase (Postgres, Auth, Storage) • Email: Resend • AI: OpenAI via Edge Functions; hybrid scoring (deterministic rubric with small ±5 model adjustments) • Auth: magic link with RLS; public resource storage via signed URLs Privacy & data: • We don’t sell data or train models on founder inputs. • You can delete your account and data anytime from the dashboard. What I’d love feedback on: • Do the five scores + momentum state actually feel useful? • Where would you want more transparency in the scoring? • Would you prefer all-deterministic scoring, or is the hybrid approach acceptable? Live demo: you can start here (free) → https://compass.prepare4vc.com If you’d rather read than click, here’s a 90s demo video: https://youtu.be/9gdqBh-1BWg Happy to answer anything (tech, product choices, pricing, what’s broken). Thanks!"
+    },
+    {
+      "title": "The Hollow Men of Hims",
+      "url": "https://www.alexkesin.com/p/the-hollow-men-of-hims",
+      "hn": "https://news.ycombinator.com/item?id=44383919",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-06-26T03:21:53Z",
+      "text": "I don't think it's all a bed of roses. I suffered for 25 years from chronic pain that was referred TMJ. I've seen a cardiologist who is fine and all but much of his advice is the exact opposite of what I read on PubMed (and not just one paper on PubMed but 20 or 30 papers.) I've had several psych evals that I learned later were of very high quality for the their time but it took about 45 years for a book to practically jump into my hands at my university library which explained how I'm different from other people. I was annoyed as hell when a sports medicine doctor wrote NAD [1] on my chart when I was complaining about my activities being limited by knee trouble. I work for a large employer in a state where it is illegal to offer junk insurance. My story was not too different when I was on Obamacare except I was paying what seemed an astronomical amount in premiums. I know a lot of people have it worse. Looking at the how high the stakes are, I mean, you are all you've got, it's no wonder that people can't look at the limitations of the system with equanimity. The doctors I work accept me being a partner in understanding my conditions and my care but the moment they hear the voice of a professional fibromyalgia sufferer I bet they wish they could quit their job if they didn't have debt for student loans or to start their practice. A lot of people seem to think \"it would be allright if we just got more resources\", I wish I could wave a magic wand and let them change places with Michael Jackson. Nobody is doing Elon Musk a favor shooting him up with Ketamine every week as well as other controlled substances. A lot of people just won't take help. I know people with schizophrenia who have no insight into their condition. Others with serious mental health diagnosis who refuse to take any med that isn't a controlled substance. For that matter, families where you get the kids a lot of nice and appropriate stuff for Christmas and you come back in a week and they've trashed all of it. Having a positive attitude and just some gratitude for being here and the miracle that people have figured out as much they have and that a $10 prescription can cure conditions that were a death sentence just 100 years ago goes a long way. [2] I've personally tried to help a lot of poor people who seemed to have a bottomless pit inside them but if you look at the likes of Elon Musk, rich people can be like that too. [1] https://www.quora.com/What-does-no-apparent-distress-mean-in... [2] https://en.wikipedia.org/wiki/Serenity_Prayer"
+    },
+    {
+      "title": "Windshield pitting incidents in Washington reach fever pitch on April 15, 1954 (2003)",
+      "url": "https://www.historylink.org/File/5136",
+      "hn": "https://news.ycombinator.com/item?id=42459092",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-12-19T06:54:37Z",
+      "text": "Wow, today I learned. I'm gratified to see that the lizardman coefficient is consistent. In the chart, 2% of \"None/Atheist/Agnostic\" apparently attends religious services every week."
+    },
+    {
+      "title": "The Waterfall Model was a straw man argument from the beginning (2015)",
+      "url": "https://www.jjinux.com/2015/07/the-waterfall-model-was-straw-man.html",
+      "hn": "https://news.ycombinator.com/item?id=41558474",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-09-16T17:38:19Z",
+      "text": "My most successful project management experience ever worked like this: we had a massive Gantt chart showing all of the work we had planned. I added and removed rows daily, updated expected completion dates, and generally rearranged the whole thing. The one thing that never changed was anticipated delivery date. Every week I sent the CTO a report with a snapshot and an explanation of what changed and why. I expected to get yelled at more than once, but he was happy with the sense of control, and the developers enjoyed the flexibility. It was exhausting and I’m glad I’m not doing project management in my current role."
+    },
+    {
+      "title": "Ask HN: What's day-to-day experience of startups going through YC?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=41250889",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-08-14T21:52:00Z",
+      "text": "Hey, my company went through YC in Winter 2023. I'll answer the questions based on my experience, your mileage may vary 1. No daily stand ups but we do have multiple events every week during the batch. Some of these include telling your batch mates and the YC partners about your progress and your next steps to keep everyone accountable. 2. At least once a week during the batch, and you can request more 1-on-1 time if necessary 3. If someone has to force you to find PMF, then as a business owner you are doing something terribly wrong. The decision to pivot is ultimately on you, I've only heard stories of YC partners trying to get you to pivot when you are working on something that's very obviously a waste of time (think tarpit idea). When I went into YC, our product was a sales tool ( https://usedouble.com/ ), we worked on it through the batch even though progress was slow. The partners never really told us to pivot but had great feedback on what different directions to try. After demo day, we decided to pivot to an AI coding tool ( https://double.bot/ ) and explaining our rationale to them, and they agreed (can expand more on this, and I've also written about it here: https://docs.double.bot/blog/pivot ) 4. In Winter 2023, some of the smaller events were remote. The big in-person events could not be attended remotely. 5. You don't have to do anything but then again, I don't know why you'd choose not to be in SF during the entire batch. This is one of those things were the more you put into it, the more you get out of it. Attend every event, make as many connections as possible, that is how you get the most value out of this experience. 6. I recommend checking out Zoom / Google Hangouts. If your particular industry requires face-to-face meetings, I had a friend who was flying a lot during the batch meeting people (manufacturing space). 7. You may differ your demo day and pitch on the next batch, but I find that most companies choose to focus on their strengths and pitch that on demo day. Most companies have really impressive teams, which can be more appealing that even a nice MRR chart, specially early stage. Hope this helps! Also sounds like you're working on something interesting and have already found traction. If you'd like an extra set of eyes on your YC application, email me: gonzalo[at]double.bot"
+    },
+    {
+      "title": "Pop culture has become an oligopoly (2022)",
+      "url": "https://www.experimental-history.com/p/pop-culture-has-become-an-oligopoly",
+      "hn": "https://news.ycombinator.com/item?id=40711114",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-06-17T21:11:53Z",
+      "text": "The conclusion from the music analysis is off because of changes in media consumption and chart calculations. When a top (or even a mid) act drops an album (so, every week), the entire album is listened on the apps by many people and it is not unusual to have all songs in the top 100 that week."
+    },
+    {
+      "title": "Why the 2% inflation target? (2023)",
+      "url": "https://sites.lsa.umich.edu/mje/2023/09/04/why-the-2-inflation-target/",
+      "hn": "https://news.ycombinator.com/item?id=39815507",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-03-25T12:32:41Z",
+      "text": "> Your rent went up by 30%, groceries went up by 20%, but fuel went down by 10% and a new TV went down by 30%. Also people stopped buying steak because it went up 50% so we'll drop that from the basket. Do you understand how StatCan calculates the CPI? What their methodology is? The CPI you see in the headlines is made of of various components (Shelter, Food, Transportation, etc), the proportions of which are determined by spending surveys: * https://www.statcan.gc.ca/en/survey/household/3508 As people change their buying habits the items that are tracked also change to reflect what consumers are spending. Here are the items in each category: * https://www.statcan.gc.ca/en/statistical-programs/document/2... * https://www.statcan.gc.ca/en/statistical-programs/document/2... You can see the list of changes going back to 1913 at: * https://www.statcan.gc.ca/en/statistical-programs/document/2... Do you think the CPI should reflect reality—i.e., track what people actually buy—or be some arbitrary list of stuff that has no relevances to people's actually basket of goods (e.g., coal and lard were removed/replaced in 1956; 35mm film removed in 2013; video rental removed in 2015). It should also be noted that the number reported in the headlines is the national average, while the prices can vary widely depending on your location. So in the report for February 2024, the national number was 2.8%, but Alberta had 4.2% while Manitoba had 0.9%: * https://www150.statcan.gc.ca/n1/daily-quotidien/240319/dq240... (Chart 5) * https://www150.statcan.gc.ca/n1/pub/71-607-x/2018016/cpi-ipc... * https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=181000... (searchable by province) StatCan has a \"Personal Inflation Calculator\" where you can enter your own numbers/budget and find a number that may be closer to what's happening around you: * https://www150.statcan.gc.ca/n1/pub/71-607-x/71-607-x2020015... Remember: the CPI is a model of reality, and not reality itself. It is used as a guide, and to use the words of [Alfred Korzybski]( https://en.wikipedia.org/wiki/Alfred_Korzybski ): * [The map is not the territory.]( https://en.wikipedia.org/wiki/Map–territory_relation ) * https://fs.blog/map-and-territory/ Or those of statistician George Box: * [All models are wrong but some are useful.]( https://en.wikipedia.org/wiki/All_models_are_wrong ) > Great news for the person who buys a new TV with their groceries every week! If you don't like televisions being a part of the 2.25% of the CPI that is \"Household equipment\": * https://www150.statcan.gc.ca/n1/pub/71-607-x/2018016/cpi-ipc... Then tell the average Canadian to stop buying televisions so that it does not show in spending surveys. If people stop consuming televisions it will stop being part of the Consumer Price Index, QED. Meanwhile Food is 11% of the CPI because that is on average what the average Canadian spends on their average basket of goods per the spending surveys that StatCan gets."
+    },
+    {
+      "title": "Up: Portable Microservices Ready for the Cloud",
+      "url": "https://www.uber.com/en-GB/blog/up-portable-microservices-ready-for-the-cloud/",
+      "hn": "https://news.ycombinator.com/item?id=37424884",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-09-07T20:09:23Z",
+      "text": "> Each and every week, Uber’s 4,500 stateless microservices are deployed more than 100,000 times by 4,000 engineers and many autonomous systems. 4,500 stateless microservices... that's nearly one service per engineer... Talking \"shipping the org chart\" to the extreme."
+    },
+    {
+      "title": "Australian music in ARIA charts has plummeted since counting streams",
+      "url": "https://www.abc.net.au/news/2023-07-09/australian-music-in-aria-charts-has-plummeted-heres-why/102575198",
+      "hn": "https://news.ycombinator.com/item?id=36650910",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-07-09T02:25:10Z",
+      "text": "The core argument is that globally local content gets displaced by global trends that aren't even necessarily current .. thanks to streaming, trending viral moments, etc. Every week this year, there have been more albums by Taylor Swift in the Australian top 50 than albums by all Australian artists combined. It's part of a trend that has also seen decades-old songs from artists like Kate Bush and Fleetwood Mac propelled into the charts off the back of viral cultural moments, while perennial favourites like The Killers' Mr Brightside seem impossible to dislodge. They're hits for a reason, but the chart success of old music has come at the expense of local artists. After streaming upended the music industry, the number of Australian artists in the charts has this year plunged to its lowest level since the ARIA charts began, an analysis by ABC News has found. Industry bodies, managers and music broadcasters now fear that in a world where most music consumption happens on global streaming platforms, emerging local artists will struggle while megastars like Harry Styles never leave the top 50. The article is specifically focused upon the Australian music industry, I personally feel it's an example of a wider homogenization affecting more than just music."
+    },
+    {
+      "title": "How the Fed “Went Broke”",
+      "url": "https://www.lynalden.com/broke-federal-reserve/",
+      "hn": "https://news.ycombinator.com/item?id=34823760",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-02-16T18:53:41Z",
+      "text": "> However, the chart is flawed because it changes its calculation method mid-chart once it turns negative. The smaller positive numbers show how much the Fed was sending every week (around $2 billion on average) but when it turns negative, it switches to a cumulative calculation and thus falls off like a cliff. Why on earth would anyone make a chart like that?"
+    },
+    {
+      "title": "Vikunja – Open-source, self-hostable to-do app",
+      "url": "https://vikunja.io/",
+      "hn": "https://news.ycombinator.com/item?id=34476523",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-01-22T12:00:03Z",
+      "text": "Regular user of Vikunja, it brings a lot of value to my life! > It's just not as straight forward as you might think (and that's a problem): you'll need to create a task with a due date of next Tuesday and a repeating schedule of every week / every 7 days. This is my complaint as well, if I have a task scheduled every Sunday and I'm ticking off this week's, I want that to disappear for a while until next week arrives. Currently it just doesn't go away. Other suggestion points: - Due time - There should by default be a reminder at the due time. I find myself setting a due date and then separately setting a reminder for it. Possibly a small checkbox with default-opt-in like `- [x] Remind?` - Other reminder options - Email reminders are awesome, webhook reminders would also have been great. I had a WIP PR for that, but the design makes it slightly hard to have webhooks for absolutely everything (like created, updated etc events) - Reminder UX - Reminders are there, but how can I know in advance which reminders are soon to go off? What if there was a small indication beside the task item like `Reminds in 3 hours`? - Archive option - Oof, we definitely need this. Not all task items are executed successfully. If we mark Done / Delete a dropped/discarded task item, that's definitely lossy. - Gantt chart - I find this not at all usable. I wish this had the Google Calendar like UX. - Labels - In the Labels section, clicking a label should list down all the task items associated with it (O(1)). Otherwise, I find myself going to individual lists and applying filters (O(n)). - Full text search - Since my life is on Vikunja, I'm waiting for this day when full-text search just works . I know there's an open discussion on the implementation of it. - Templates - Templates would be nice to have. I use Vikunja to notify me (say) when a bond would mature - productivity would go ++ in these cases. - Analytics - It'd be pretty cool to have a day-wise summary. It should tell me the task items I created today, items I moved to done etc. These stats/recap can give better insights into what's not being prioritized. It's an OSS project, and I'd love to contribute to have these improvements in the product."
+    },
+    {
+      "title": "Useful engineering metrics and why velocity is not one of them",
+      "url": "https://lucasfcosta.com/2022/08/31/engineering-metrics.html",
+      "hn": "https://news.ycombinator.com/item?id=32728936",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-09-05T20:17:01Z",
+      "text": "OK, this is actually a really good and insightful article hidden behind a provocative title. I will say that “velocity” is an extremely helpful concept at the level of the individual and small teams. With my trams I challenge each engineer to try and batch work into 2-4 hour chunks, with each chunk being labeled “1 point.” Thus if we have an ideal week there are theoretically 10 points of “velocity.” We also try to batch up meetings etc. and discount the coordination overhead from the plausible output, so maybe the theoretical ideal is lowered to 8-9 points. We all discuss and agree on that based on whatever overhead we can’t eliminate. Then each engineer does their best to “call their shot” every week and say how much work they’ll finish. At the end of the week we compare their prediction against reality, using a burn-up chart as a visual aid to the flow of work. There’s no penalty for getting it wrong, just applause for nailing it, and always a discussion of what worked and what could have gone better. Following this habit, I have consistently seen teams get much better at forecasting work into the future accurately. This ability to have a steady velocity and make reasonably accurate forecasts about how long things may take is extremely valuable and helps us align and coordinate efforts across many teams."
+    },
+    {
+      "title": "House Democrats to propose ban on lawmaker stock trading – report",
+      "url": "https://seekingalpha.com/news/3862127-house-democrats-to-propose-stock-trading-ban-in-august-report",
+      "hn": "https://news.ycombinator.com/item?id=32269286",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-07-28T19:48:59Z",
+      "text": "I'm originally from Kenya. We used to have a joke \"If it happens in Africa it is called corruption. If it happens in the US it is called lobbying\". I remember seeing a chart of how much money a Senator had to raise every week for their next race and it was stark bonkers (and this was in the 90s, before Citizens United). I just checked and the figure is even worse now. https://www.opensecrets.org/news/2019/02/state-of-money-in-p... From that article, victorious senate candidates have to spend an average of about 16 million. So if you are already a Senator looking forward to your next race you have to raise about 80k a week!. And you are not getting that kind of money from the average citizen. Money in politics is the root of most of what ails the U.S political system (not all, but a very big part)."
+    }
+  ]
+}

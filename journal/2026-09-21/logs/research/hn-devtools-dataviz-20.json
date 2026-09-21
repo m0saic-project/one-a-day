@@ -1,0 +1,106 @@
+{
+  "query": "uptime status page bars",
+  "days": 720,
+  "count": 11,
+  "results": [
+    {
+      "title": "Ask HN: What are you working on? (September 2026)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49693257",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-14T07:38:32Z",
+      "text": "It&#x27;s a managed uptime monitoring service (with support for basic HTTP checks, cron checks, and playwright-based browser checks running across AWS regions) that wires into highly available status pages. You might want to spend time figuring out how to keep your status page online when your hosting provider goes down, thankfully for the business, others don&#x27;t. There may be many others like it, but this one is built differently: https:&#x2F;&#x2F;maxrozen.com&#x2F;lessons-from-my-third-year-running-a-sa... "
+    },
+    {
+      "title": "Red Squares – GitHub outages as contributions",
+      "url": "https://red-squares.cian.lol/",
+      "hn": "https://news.ycombinator.com/item?id=48035280",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-06T12:07:14Z",
+      "text": "The missing status page [1] treats it as downtime any time any component of the system is down, and calculates the overall uptime based on the time that doesn&#x27;t overlap with any individual category outages, and the overall downtime as any time overlapping with at least one individual category outage to avoid double-counting They show 24h of minor outage on that date. I&#x27;m guessing that this site is taking the downtime in a given day across all services and adding it up, which would mean the worst possible day has 10 days of downtime (a day of downtime for each major category). 1: http"
+    },
+    {
+      "title": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
+      "url": "https://twitter.com/theo/status/2049645973350363168",
+      "hn": "https://news.ycombinator.com/item?id=47970740",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-01T02:32:48Z",
+      "text": "The real uptime being worse than reported is basically an iron law of status pages. You happened to hit one outage and I&#x27;m sure many others hit separate outages at different times that also weren&#x27;t counted."
+    },
+    {
+      "title": "Incident with multple GitHub services",
+      "url": "https://www.githubstatus.com/incidents/myrbk7jvvs6p",
+      "hn": "https://news.ycombinator.com/item?id=47880044",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-23T18:59:15Z",
+      "text": "Depends how integrated those features are. A service&#x27;s availability is capped by its critical dependencies; this is textbook SRE stuff (see Treynor et al., The Calculus of Service Availability ). Copilot may well be on the side of it (and has the worst uptime, dragging everything down), but if Actions depends on Packages then Actions can be &quot;up&quot; while in reality the service is not functional. If your release pipeline depends on Webhooks, then you&#x27;re unable to release. The obvious one is git operations: if you don&#x27;t have git ops then basically everything is down. So; yo"
+    },
+    {
+      "title": "GitHub appears to be struggling with measly three nines availability",
+      "url": "https://www.theregister.com/2026/02/10/github_outages/",
+      "hn": "https://news.ycombinator.com/item?id=47488584",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-23T12:33:37Z",
+      "text": "I’m surprised it’s even as high as three nines, at one point in 2025 it was below 90%; not even a single nine.[0] (which, to be fair includes co-pilot, which is the worst of availabilities). People on lobsters a month ago were congratulating Github on achieving a single nine of uptime.[1] I make jokes about putting all our eggs in one basket under the guise of “nobody got fired for buying x; but there are sure a lot of unemployed people”- but I think there’s an insidious conversation that always used to erupt: “Hey, take it easy on them, it’s super hard to do ops at this scale”. Which lands ha"
+    },
+    {
+      "title": "Ask HN: Why are most status pages delayed?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=45810991",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-11-04T13:48:37Z",
+      "text": "There are increasingly more status pages that automatically update based on uptime data (I built a service providing that - OnlineOrNot) But early-stage startups typically have engineering own the status page, but as they grow, ownership usually transfers to customer support. These teams optimize for controlling the message rather than technical detail, which explains the shift toward vaguer&#x2F;slower incident descriptions."
+    },
+    {
+      "title": "Ask HN: Is AWS down again?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=45723016",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-27T16:34:46Z",
+      "text": "Which uptime checker tool would be based on status pages (owned by the marketing department)? That defeats the whole purpose."
+    },
+    {
+      "title": "AWS multiple services outage in us-east-1",
+      "url": "https://health.aws.amazon.com/health/status?ts=20251020",
+      "hn": "https://news.ycombinator.com/item?id=45670361",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-22T15:11:06Z",
+      "text": "&gt; what you are basing the opinion &quot;Delivery of those nines is not a priority&quot; off of. Because I don&#x27;t see the business pressure to do? If problems happen they can 1) lie on the status page and hope nothing happens and 2) if they can&#x27;t get away with lying, their downside is limited to a few hours of profit margin. (which is not really a dig at AWS because no hosting provider will put their business on the line for you... it&#x27;s more of a dig at people who claim AWS is some uptime unicorn while in reality they&#x27;re nowhere near better than your usual hosting provider"
+    },
+    {
+      "title": "Ask HN: What are you working on? (October 2025)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=45565117",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-13T05:58:11Z",
+      "text": "Still a one-person project (since 2021): https:&#x2F;&#x2F;onlineornot.com I&#x27;m still rebuilding OnlineOrNot&#x27;s frontend to be powered by the public REST API. Uptime checks are now fully powered by a public API (still have heartbeat checks, maintenance windows, and status pages to go). Doing this both as a means of dogfooding, and adding features to the REST API that I easily dumped into the private GraphQL API without thinking too hard. That, and after I finish the first milestone (uptime checks + heartbeat&#x2F;cron job monitors), I&#x27;ll be able to start building a proper terrafor"
+    },
+    {
+      "title": "Tell HN: The Hetzner Experience - Invisible Outages",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=44039408",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-05-20T09:03:17Z",
+      "text": "&gt; What&#x27;s especially troubling is their persistent silence on these outages. Based on many years of experience, all providers are guilty of that. Only large scale outages or ones that just couldnt be ignored are reflected on status page. This doesn&#x27;t necessarily mean malevolence on provider side - their sensors just may not be good enough to spot the issue. On larger scale - why would you choose hetzner and then complain about uptime? Its a well know provider with low prices and low reliability. There are tons of businesses who find this model suitable for them. If yours is not one"
+    },
+    {
+      "title": "Google is making AI in Gmail and Docs free, but raising the price of Workspace",
+      "url": "https://www.theverge.com/2025/1/15/24343794/google-workspace-ai-features-free",
+      "hn": "https://news.ycombinator.com/item?id=42711849",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-01-15T15:21:23Z",
+      "text": "In my experience, FastMail has better uptime than any of the stuff work relies on. (It feels like one more nine, but I haven’t checked.) Maybe you could have them randomly suspend your accounts for a few hours here and there to match the public cloud experience. :-) Edit: Here’s their outage page, which reports &gt; 2-3 nines for most subsystems most months: https:&#x2F;&#x2F;fastmailstatus.com&#x2F; Note that they treat any service degradation as downtime when computing 9’s. For instance, they had one imap server down today, which meant some requests were failing, and that counts against thei"
+    }
+  ]
+}

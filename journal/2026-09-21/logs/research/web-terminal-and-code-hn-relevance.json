@@ -1,0 +1,338 @@
+{
+  "benchmark chart for the readme": [
+    {
+      "hn": "https://news.ycombinator.com/item?id=40018031",
+      "date": "2024-04-12T21:47:13Z",
+      "story": "Show HN: A JavaScript library for data visualization in both SVG and Canvas",
+      "text": "Hey there, If a focus is on performance, would you consider doing a side-by-side with other similar libs? This benchmark was posted on HN a few years back, for example: https:&#x2F;&#x2F;benchmarks.slaylines.io&#x2F; (from https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=23083730 ) Or something like the bunnymarks for Pixi ( https:&#x2F;&#x2F;www.goodboydigital.com&#x2F;pixijs&#x2F;bunnymark&#x2F; ) and Konva ( https:&#x2F;&#x2F;konvajs.org&#x2F;docs&#x2F;sandbox&#x2F;Jumping_Bunnies.html ) Y"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=31562696",
+      "date": "2022-05-30T19:28:26Z",
+      "story": "Dragonflydb – A modern replacement for Redis and Memcached",
+      "text": "Benchmarks done on only one metric are often misleading (and in commercial circumstances usually intentionally!). Would love to see visually what trade offs Dragonfly is making to achieve the numbers from the chart at the top of the README. If excellent technical work means there really is no trade off, that would also be a great reason to chart it visually. Also as a Redis replacement, it's not clear what durability is offered, and for most Redis use cases this is close to the first question"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=43193901",
+      "date": "2025-02-27T12:47:22Z",
+      "story": "Tencent launches a new generation of fast thinking model Hunyuan Turbo S",
+      "text": "Translated README.md: On February 27, Tencent Hunyuan’s self-developed fast-thinking model Turbo S was officially released. Different from slow thinking models such as Deepseek R1 and Hunyuan T1 that need to \"think before replying\", Hunyuan Turbo S can achieve \"instant reply\", double the word pronunciation speed, and reduce the first word delay by 44%. At the same time, it also has outstanding performance in knowledge, mathematics, creation and other aspects. Through model architecture innovatio"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=49041773",
+      "date": "2026-07-24T21:26:11Z",
+      "story": "Claude Opus 5",
+      "text": "I have no idea. Seems like normal stuff. I used Kimi Code with K3 to add support for Kimi Code to flar ( https:&#x2F;&#x2F;swelljoe.com&#x2F;post&#x2F;i-let-every-agent-implement-its-ow... ), a task I've done with almost every major model&#x2F;agent combo. Most show up as a blip on the usage chart...it's basically usually one file, a README update, and adding the agent name to the CLI. Then, I added it to my benchmark of security vulnerability auditing capability, and it burned a bazillion token"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=24433368",
+      "date": "2020-09-10T15:42:52Z",
+      "story": "Annoying website features I face as a blind person",
+      "text": "I think we’re in agreement, just that you understood what I wrote a bit differently from how I intended. By “described in the visible text” I didn’t mean “expounded at length”. I’m talking most commonly about the sort of captions newspapers printed with images, typically 5–30 words; but also about things in the text that refer to the figure, like “here are the benchmark results:” and “we see that X is 57% faster than Y”. There’s no good way of exposing lengthy information about a chart to screen"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=26441483",
+      "date": "2021-03-12T21:58:09Z",
+      "story": "Show HN: SocialQ – Analytics Dashboard for Growing Your Twitter Audience",
+      "text": "Thank you for your reply and your good wishes! 1. It's good to hear that the landing site resonates with you. 2. That is terrific advice, I know that is a weakness of the product and until now, I had no clear way of how to convey the information in each chart. 3. I also agree that data is not enough, but before coding an explanation I want to make sure the information is well versed. Maybe a multi-Twitter thread is not the best idea. I like that it gives the option for readers but it may be conf"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=24436018",
+      "date": "2020-09-10T20:05:54Z",
+      "story": "Annoying website features I face as a blind person",
+      "text": "I'd argue that the figcaption can't contain an adequate description in pretty much every case. \"Figure 3: results of Benchmark Q, showing X to be 40% faster than Y.\" is appropriate only for the minimalistic bar chart with only two bars, and already there it's pushing the limits - it would often be appropriate to just say \"Figure 3: speed of X and Y in benchmark Q\" as the interpretation and conclusions from the two bars is a separate, different thing which could be in the text. Perhaps to the rea"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=4541291",
+      "date": "2012-09-19T00:07:26Z",
+      "story": "Comparing Go and Java, Part 2 – Performance",
+      "text": "Some notes from looking at the Go code. I don't know how important are those for performance, more like style nits. Java version doesn't do type conversion: https://github.com/collinvandyck/go-and-java/blob/master/jav... rs.getString(\"id\") rs.getBoolean(\"admin\") Go version does conversion at runtime, as row.Scan() accepts interface values. Also, the usage of sql interface is not optimal (at least with regards to code length) -- since the query is for one row, why not use QueryRow instead of Quer"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=49770064",
+      "date": "2026-09-19T20:56:52Z",
+      "story": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "text": "I'd actually recommend some excellent books on the \"philosophy\" of data presentation: The first that comes to mind is \"the visual display of quantitative information\" by Edward Tufte seems to be freely available online, and the other one on my mind is \"how charts lie\" by Alberto Cairo (which doesn't seem to be freely accessible) But if it helps, just some \"initial gut feel observations\" from me: * It's definitely not possible to find issue with the the _sheer amount_ of results, but there's just"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=4750740",
+      "date": "2012-11-06T21:03:40Z",
+      "story": "How I made $500k with machine learning and high frequency trading",
+      "text": "FWIW, I couldn't see your pnl chart. I develop algorithmic strategies for a living, and my first reaction to reading your post was skepticism. I'm skeptical for two reasons. (1) because your methods are so unconventional in an industry where convention rules, and (2) because of the time frame of your success, which happened to be one of the more impressive market recoveries in history. I can't tell you how many people I've worked with who fail to isolate the source of their pnl (myself included "
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=46045461",
+      "date": "2025-11-25T13:12:28Z",
+      "story": "My Life Is a Lie: How a Broken Benchmark Broke America",
+      "text": "Nitpicks and writing style aside (who posts charts without context?), the napkin math checks out to me as legit. Here’s the thing all the detractors keep missing by nitpicking one data point or another: this author is talking systems , not products . Sure, the technologically inclined could get their phone cost down to that of an MVNO and a refurbished Android handset for $30&#x2F;month, but most people aren’t that capable . Most people pay AT&amp;T, Verizon, or T-Mobile - it’s why they’re the “"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=27783422",
+      "date": "2021-07-09T13:24:23Z",
+      "story": "GraalVM at Facebook",
+      "text": "The \"Spark CPU usage with GraalVM\" chart is ... not zero-based. Using that kind of chart to show 10% reduction isn't an honest way to show the improvement. Use a zero-based chart, and show a longer time period. Then the gap is clear, even though not as dramatic. Also, the article probably shouldn't talk about the general benchmark, and probably better to omit the performance of the Enterprise edition, because Facebook is probably not using it. (It's not clear from the article which version of Gr"
+    }
+  ],
+  "make a gif of the benchmark": [
+    {
+      "hn": "https://news.ycombinator.com/item?id=48005857",
+      "date": "2026-05-04T07:53:06Z",
+      "story": "Text-to-CAD",
+      "text": "In the benchmarks, there is a strange lack of measurements that I'd expect in a CAD process (EG in benchmark 1, the positions of the 4 holes are not specified at all). I'm assuming that's why the gussets in benchmark 3 overlap the holes and make a part that cannot be used. Does it actually handle positions correctly? Also the through-hole in benchmark 7 doesn't actually go through by the looks of the gif"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=30699218",
+      "date": "2022-03-16T14:25:23Z",
+      "story": "Launch HN: Sarus (YC W22) – Work on sensitive data with differential privacy",
+      "text": "So, I work in an org that has truly sensitive data and this has been a barrier for us more times than I can count, so this is obviously very interesting to us and something we've thought about a lot. A couple questions I have are: 1. How well does Sarus work with data that is not in a database, like unstructured data such as documents&#x2F;text? 2. How does Sarus handle 'legacy' DB's, where the schema for a table might not be quite right, but due to operational constraints these schemas can't be"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=30445367",
+      "date": "2022-02-23T19:42:17Z",
+      "story": "Show HN: Simula One – Portable Linux VR Computer",
+      "text": "How about 3D modeling with something like Blender? BTW, the key to making stuff like that work well isn't just the UI affordances, but latency. Head tracking, room tracking, video passthrough for AR, all highly sensitive to latency. You can see the effect even in the GIFs on your landing page: in the AR mode the floating windows slightly lag the external view when the user moves their head. Latency is what makes many people nauseous (ie. Cybersickness), but as far as I know no one actually bench"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=22724320",
+      "date": "2020-03-30T01:09:43Z",
+      "story": "Show HN: Fdir – Faster Node.js glob alternative",
+      "text": "You seem to have read that statement wrong. I never said the fastest directory crawler on Planet earth. I said \"the fastest directory crawler for NodeJS\" restricting that claim because I am aware of the implications and how far-fetched it would sound. As for the \"1m files in &lt; 1s\", yes I benchmarked that privately. That is not a false statement and to back that up, I will be uploading a gif showing the time (once the cli for fdir is done). > The same code can perform better or worse depending"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=16543887",
+      "date": "2018-03-08T12:20:41Z",
+      "story": "Visual Studio Code February 2018 Update",
+      "text": "Same here. Of course, there is real and perceived performance. I noticed that VSC shows a screen first, then starts filling it in with content, then syntax highlighting and other features. I captured it in a GIF and reduced the speed to make it really visible: https:&#x2F;&#x2F;imgur.com&#x2F;V9MZRM1 I don't recall if it always did that. If not, then it probably appears to be faster because spends less time being \"frozen\". If the absolute start-up time really improved by more than 5%, then perha"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=10128443",
+      "date": "2015-08-27T09:47:28Z",
+      "story": "Ad Blocking Extensions Tested for Performance",
+      "text": "The methodology is questionable on several fronts: - you can't use the load event to compare advert-heavy vs. advert-free load times. The load event does not fire when the page is usable by the viewer, it fires when every last request is done, in particular even requests fired from various advert iframes. However, those requests may not impact page usability. The load event may even never fire - any offscreen 1px spacer gif that times out will cause that! I don't think there is a built-in event "
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=37831482",
+      "date": "2023-10-10T12:58:41Z",
+      "story": "AI hype is built on flawed test scores",
+      "text": "A lot of the progress in the last 3-4 years was predictable from GPT-2 and especially GPT-3 onwards - combining instruction following and reinforcement learning with scaling GPT. With research being more closed, this isn't so true anymore. The mp3 case was predictable in 2020 - some early twitter GIFs showed vaguely similar stuff. Can you predict what will happen in 2026&#x2F;7 though, with multimodal tech? I simply don't see it a being the same today. The obvious element of scaling or technique"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=2412841",
+      "date": "2011-04-05T21:35:04Z",
+      "story": "How much traffic have you handled and what was the architecture like?",
+      "text": "What is your definition of an app server? A aws ec2 instance? I think understanding the throughput of a rails application is very simple. Rails is not thread safe so to concurrently serve 10 requests you must be running 10 processes. Thats not to say you will serve 10 reqs/sec, it depends on how quickly the application responds. The key is knowing where the bottlenecks lie and what gives you the greatest gains for the least amount of optimizations. Run unicorn for your rails apps. It runs in a m"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=40722079",
+      "date": "2024-06-18T20:48:33Z",
+      "story": "Changing a mean reversion strategy to deliver 30% annual returns since 1999",
+      "text": "> I am just stunned by your worldview which I find is wrong in so many ways. 100% my reaction towards your comments as well. > It's no wonder that you couldn't muster the intelligence to come up with any profitable strategy at all. Studies have shown that over the long term, the majority of actively managed funds fail to consistently outperform their benchmark indexes after accounting for fees. With facts like these my intelligence says stick to index investing. > Moreover, you go about confiden"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=5566912",
+      "date": "2013-04-17T20:21:19Z",
+      "story": "Go 1.1beta1 now on the benchmarks game",
+      "text": "&#62; Some people download the scripts and make measurements straight-away, as always YMMV. Without setting up the language environments? I doubt it. Some highlights: 3) LINUX QUICK START [ WIN32 QUICK START ] 3.1) unzip in ~ directory [ unzip in c:\\ ] Requiring a path? Very poor. *** TO BE CONTINUED *** Oh so its not fully documented, but its easy to use straight away... I'll take the bite. Lets try and add luajit and compare it to lua. &#62; 12.1) In the [tools] section of the ini file, define"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=41467571",
+      "date": "2024-09-06T16:29:52Z",
+      "story": "Ilya Sutskever's SSI Inc raises $1B",
+      "text": ">An LLM will learn what it CAN (and needs to to reduce the loss), but not what it CAN'T. How difficult is that to understand?! Right and the point is that you don't know what it CAN'T learn. You clearly don't quite understand this because you say stuff like this: >Chess is a good example, since it's easy to understand. The generative process for world class chess (whether human, or for an engine) involves way more DEPTH (cf layers) of computation than the transformer has available to model it an"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=21421759",
+      "date": "2019-11-01T17:52:09Z",
+      "story": "Can You Overdose on Happiness?",
+      "text": "RANT: This is rationally the most interesting topic I've ever read. It's not subjective, this is clearly the currently known most effective way to maximize hapiness and maximizing happiness is the only rational policy: utilitarism. But there are so many obvious questions unanswered: I incrementing from one volt to another had significant mood alteration, why didn't the doctor improve granulairy,why didn't they tried e.g If changing from one volt to another has such a big impact on mood alteratio"
+    }
+  ],
+  "terminal demo gif readme": [
+    {
+      "hn": "https://news.ycombinator.com/item?id=44412730",
+      "date": "2025-06-29T12:53:03Z",
+      "story": "Show HN: Vet – A tool for safely running remote shell scripts",
+      "text": "You're right, the README explains what vet does, but it doesn't do a great job of showing how it feels to use it. I'll definitely create a demo GIF for the page. To answer your questions directly in the meantime: - Pager or Editor? It opens a pager (less by default, but it will automatically use the much nicer bat if you have it installed for syntax highlighting). It doesn't open an editor to prevent any accidental modifications. - ShellCheck Issues: If shellcheck finds issues, it prints its sta"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=45252985",
+      "date": "2025-09-15T18:06:30Z",
+      "story": "Asciinema CLI 3.0 rewritten in Rust, adds live streaming, upgrades file format",
+      "text": "Asciinema is awesome. I use it to capture all of the demos for TerminalTextEffects. Their Asciinema GIF Generator tool (AGG) produces high quality terminal recording GIFs by processing the asciicast file. This is the best solution I've found for producing short terminal recordings that can be shared in a README&#x2F;docs as seen in the TerminalTextEffects repo&#x2F;docs. Using the raw file output and&#x2F;or termsvg type solutions do not work for TTE due to the huge amount of data being written "
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=21751451",
+      "date": "2019-12-10T11:12:52Z",
+      "story": "Asciinema – Record and share terminal sessions",
+      "text": ">Let me be the devil advocate: why not use ttyrec + seq2gif instead? GIFs look poor - they don't capture colours well. They're not accessible. They don't zoom. Copy and paste doesn't work. >And if you want something fancy that asciinema output, you can use seq2gif which support all the bell n whites asciinema does, while allowing you to also upload the ttyrec file. Unless I'm missing something obvious (possible!), seq2gif makes a GIF file. How does this \"support all the bell n whites asciinema d"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=21751395",
+      "date": "2019-12-10T10:59:20Z",
+      "story": "Asciinema – Record and share terminal sessions",
+      "text": "Let me be the devil advocate: why not use ttyrec + seq2gif instead? Or check https:&#x2F;&#x2F;intoli.com&#x2F;blog&#x2F;terminal-recorders&#x2F; if you don't like my recommendation ttyrec is a standard format that most people and tools understand. And if you want something fancy that asciinema output, you can use seq2gif which support all the bells n whistles asciinema does, while allowing you to also upload the ttyrec file. However, I would suggest not using unicode or Ansi color in your recor"
+    }
+  ],
+  "chart of my benchmark results": [
+    {
+      "hn": "https://news.ycombinator.com/item?id=6804613",
+      "date": "2013-11-26T22:09:46Z",
+      "story": "Gadget: A smallish web framework for Go",
+      "text": " > \"Handlers are invoked via reflection\" That's where I say NO. go's reflect package is slow and a nightmare to use. Go's JSON parser, which uses reflect, is 2.5x slower than Node.js (in my own benchmarks [1]). And Go 1.1 was 3.5x worse that Node.js at parsing JSON. Again, those are my benchmarks, but they seem consistent with what other people are finding (from my Googling around). I would not make this trade off, I would not use reflect on EVERY request, just so that my request handlers are co"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=47668913",
+      "date": "2026-04-06T23:47:31Z",
+      "story": "Sam Altman may control our future – can he be trusted?",
+      "text": "My rule of thumb is that its good for anything \"broad\", and weaker for anything \"deep\". Broad tasks are tasks which require working knowledge of lots of random stuff. Its bad at deep work - like implementing a complex, novel algorithm. LLMs aren't able to achieve 100% correctness of every line of code. But luckily, 100% correctness is not required for debugging. So its better at that sort of thing. Its also (comparatively) good at reading lots and lots of code. Better than I am - I get bogged do"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=29991248",
+      "date": "2022-01-19T08:35:39Z",
+      "story": "BCHS: OpenBSD, C, httpd and SQLite web stack",
+      "text": "What a coincidence! Lovely topic, even registered account for this :-) I _just_finished_ my own comparative benchmarks to (re)check my projects from ~7 years ago, all in similar stack. Back then I wrote the logic as Apache modules, in C. It was using Cairo to draw charts (surprisingly, the traces of trigonometry knowledge was enough for me to code that :-), and I had absolutely crazy \"hybrids\" of bubble charts with bars, alpha channel overlays etc. It was extremely useful for my projects back th"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=48458418",
+      "date": "2026-06-09T08:47:37Z",
+      "story": "FrontierCode",
+      "text": "> Total token consumption would also be another thing to consider as well, to rule out TPS. There is a chart that compares this in the article. > You should compare apples to apples. Weight them in a way that factors in total task completion time as the measure of \"effort\", not the arbitrary effort settings provided by the AI company. I don't care what the underlying effort level is, I care which model out of multiple, if running for the same amount of time, completes my task to a more accurate "
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=6127984",
+      "date": "2013-07-30T16:17:52Z",
+      "story": "Ask HN: How does one write clean database access code without an ORM?",
+      "text": "I prefer what I tend to call \"micro ORMs,\" for lack of a more formal classification. From my point of view, a micro ORM does not attempt to fully replicate the entire breadth of a data model in code--that is, it does not automatically traverse relationships; does not enforce the constraints of the data model; does not require that your object model align with your data model. Often, a micro ORM will allow you to quickly construct a list of objects from the resultset of an arbitrary SQL query and"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=47791784",
+      "date": "2026-04-16T12:01:52Z",
+      "story": "[dead]",
+      "text": "I got tired of watching Codex re-read the same files over and over. A 2,000-token file read 5 times = 10,000 tokens gone. So I built sqz. The key insight: most token waste isn't from verbose content - it's from repetition. sqz keeps a SHA-256 content cache. First read compresses normally. Every subsequent read of the same file returns a 13-token inline reference instead of the full content. The LLM still understands it. Real numbers from my sessions: File read 5x: 10,000 tokens → 1,400 tokens (8"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=44805887",
+      "date": "2025-08-05T23:40:48Z",
+      "story": "Show HN: A benchmark + latency sim for LLM db queries: ClickHouse / Postgres",
+      "text": "I’ve seen many benchmarks on OLAP performance, but I wanted to better understand the practical impact for myself, especially for LLM applications. This is my first attempt at building a benchmarking tool to explore that. It runs some simple analytical queries against ClickHouse, Postgres, and Postgres with indexes. To make the results more tangible than just a chart of timings, I added a \"latency simulator\" that visualizes how the query delay would actually feel in a chat UI. With a 10M row data"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=41879777",
+      "date": "2024-10-18T14:27:48Z",
+      "story": "Hell Freezes Over as AMD and Intel Come Together for x86",
+      "text": "> That's nice and all but my original comment was specifically about \"processing power of the highest-end x86 chips\" far exceeding that of any ARM CPU. That wasn't the direction I was thinking of going in, but if you want to go in multi-threaded benchmarks, you need to include the Ampere and Graviton CPUs. Those are designed for hyperscalers and then you can make a fair comparison. They are not listed on your cpubenchmark website. For example this multithreaded score from Graviton 4, https:&#x2F"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=41196445",
+      "date": "2024-08-08T21:22:15Z",
+      "story": "Intel's Immiseration",
+      "text": "I'm buying PCs for myself for three decades and never chose Intel for my build (apart from the Pentium 133 in my first pc computer). Every time I considered it but alternative was just significantly cheaper option at power levels that interested me. The only Intel's I got were in laptops where I was interested only about the price of a whole PC that interested me for other reasons than CPU. Since Internet became a thing I choose CPU by downloading price and benchmark results, drawing price&#x2F;"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=3316801",
+      "date": "2011-12-05T22:23:32Z",
+      "story": "Tech Support - Onfire vs On Fire",
+      "text": "The charts on your blog are gold. They may be people who'd be prepared to pay for that? Core value prop: Managers are always very curious where they stand on performance. Provide benchmark service so that organisations could see how they are performing relative to their peers. For an organisation with 4 employees (budget $400k), $1k per year for a benchmark report would probably pass muster. (keyword research \"service desk metrics\" - I think you can win this space) How to go about this: Integrat"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=28728200",
+      "date": "2021-10-02T12:53:39Z",
+      "story": "Common Lisp",
+      "text": "That's my personal opinion, but I think that programming language pages should have more information density. I also think that using your average \"startup template\" for Common Lisp is a bit weird. A good example of what I like might be the OCaml homepage https:&#x2F;&#x2F;lisp-lang.org&#x2F; , the Go homepage https:&#x2F;&#x2F;golang.org&#x2F; . The Haskell homepage has a REPL with a tutorial, which encourages you to play around with the language, I think that's a good idea https:&#x2F;&#x2F;ww"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=28019611",
+      "date": "2021-07-31T16:36:56Z",
+      "story": "Faster CRDTs: An Adventure in Optimization",
+      "text": "Cool! It'd be interesting to see those CRDT implementations added to Kevin Jahns' CRDT Benchmarks page[1]. The LogootSplit paper looks interesting. It looks like xray is abandoned, and I'm not sure about teletype. Though teletype's CRDT looks to be entirely implemented in javascript[2]? If the authors are around I'd love to see some benchmarks so we can compare approaches and learn what actually works well. And I'm not surprised these techniques have been invented before. Realising a tree is an "
+    }
+  ],
+  "visualize git history video": [
+    {
+      "hn": "https://news.ycombinator.com/item?id=37866246",
+      "date": "2023-10-13T03:28:22Z",
+      "story": "Ask HN: Show me your half baked project",
+      "text": "gitPlay: I am working on a desktop application to learn about the structure and evolution of a software project from its git history. Helpful for developers and PMs in onboarding new members, seeing how a project evolved and decision making. As a mentor&#x2F;engineering leader, I have always resorted to recording videos about how a project is structured, what decisions led to the current status and thought process behind this. I felt that much of this information is already there in the git comm"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=18666532",
+      "date": "2018-12-12T18:43:41Z",
+      "story": "Write good git commit messages",
+      "text": "I'm obsessed with writing good commit messages, for a few reasons. (1) Documentation is important, and comes in a few major forms: docs, code comments, commits, and tests. Docs and code comments are good for initial, high level understanding. Most \"bad\" documentation appears in the form of code comments and external docs, because they are most likely to drift out of date with the code. Tests do not have this problem (assuming they all pass) because they are in sync with the code, and provide a n"
+    }
+  ],
+  "test results image": [
+    {
+      "hn": "https://news.ycombinator.com/item?id=46579487",
+      "date": "2026-01-11T20:11:27Z",
+      "story": "Don't fall into the anti-AI hype",
+      "text": "What \"domain expert\" means is also changing however. As I've mentioned often, I'm solving problems in a domain I had minimal background in before. However, that domain is computer vision. So I can literally \"see\" if the code works or not! To expand, I've set up tests, benchmarks and tools that generate results as images. I chat with the LLM about a specific problem at hand, it presents various solutions, I pick a promising approach, it writes the code, I run the tests which almost always pass, b"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=40957914",
+      "date": "2024-07-14T00:22:09Z",
+      "story": "Change Healthcare starts sending data breach notifications after cyberattack",
+      "text": "Here is Change’s HIPAA substitute notice: https:&#x2F;&#x2F;www.changehealthcare.com&#x2F;hipaa-substitute-notice This is just an insanely vague and worthless notice. And it is infuriating that healthcare customers are made vulnerable by the vendors used by insurers like Cigna or whoever. Change is so disingenuous that they admit the following was stolen: > Health information (such as medical record numbers, providers, diagnoses, medicines, test results, images, care and treatment) But claim wit"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=36890841",
+      "date": "2023-07-27T09:02:16Z",
+      "story": "Google Med-Palm M: Towards Generalist Biomedical AI",
+      "text": "That doesn’t mean it can’t be assisted by technology. A large part of medicine is ordering tests, interpreting results, analyzing imagery, proposing medicine courses, records, pathology, etc. Anesthesiologists are crucial care but basically do their jobs by monitoring signals and adjusting dosing accordingly. That’s like ideal machine skills and no one has a relationship with their anesthesiologist- they’re asleep. I agree the direct interface to a lot of medicine needs to be a human as we need "
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=41053978",
+      "date": "2024-07-24T05:53:01Z",
+      "story": "Scrapscript: A functional, content-addressable programming language",
+      "text": "So, (and this is five minutes playing here no deep dive), content-addressable is taken Seriously here. Each expression is a hash of (its ancestors - not too sure) but the implication is sort of the git dag is built into the language. Looks like that has deepmimplications for releases, deployments, inspecting code chnages There is an implication that my-labcorp is using scrapscript. Which is interesting as it seems to be a health based platform - tracking and dealing with test results, X-ray imag"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=36755446",
+      "date": "2023-07-17T08:15:31Z",
+      "story": "Johnson and Johnson sues researchers who linked talc to cancer",
+      "text": "Documents linked in the article have a lot of the original evidence and analysis. Microscope images, test results, letters, etc. https:&#x2F;&#x2F;www.documentcloud.org&#x2F;documents&#x2F;5017565-1972-through... "
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=36746780",
+      "date": "2023-07-16T13:29:49Z",
+      "story": "AI Nursing Ethics: Viability of Robots and Artificial Intelligence in Nursing",
+      "text": "I agree. Pathologists and radiologists are especially vulnerable to being replaced by AI, since they essentially use algorithms for diagnosis already and don't usually directly interact with patients. If the test result or the image shows this, the diagnosis is this. Nurses, PAs, and doctors that interface directly with patients will likely remain human for the foreseeable future I think. I know I'd rather receive a potentially devastating diagnosis from a human being that is able to show empath"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=46878062",
+      "date": "2026-02-03T22:11:33Z",
+      "story": "Show HN: Axiomeer – An open marketplace for AI agents",
+      "text": "Axiomeer v2 is live. Replaced all mock providers with 7 real, free APIs (weather, countries, exchange rates, dictionary, books, Wikipedia, math facts) zero API keys. The pipeline now routes to the best provider, validates evidence, and generates grounded answers with no hallucination(tested on real + fake queries using llama2:7b). 83 tests passing (74 unit, 9 integration). Test results are in Test Images&#x2F;v2-results."
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=38958908",
+      "date": "2024-01-11T20:54:55Z",
+      "story": "Ask HN: How do you document your hardware projects?",
+      "text": "Markdown and git. Separate conceptual notes and requirements at a project level, generally allocate one repo per project or if complex, one repo per project module. Iterate on whole version numbers beneath that, ie. &lt;project-repo>&#x2F;README.md defines problem, requirements, interfaces and any notes on structure and approach investigated or selected. &lt;project-repo>&#x2F;&lt;module>&#x2F;v7&#x2F; alternatively &lt;project-module-repo>&#x2F;v7&#x2F;x This macro approach allows straightforwa"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=49151983",
+      "date": "2026-08-03T06:35:56Z",
+      "story": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "text": "The visual web development &#x2F; perceptionbench scores are very promising for image->html flows. Here are some test results. Original designs: https:&#x2F;&#x2F;image.non.io&#x2F;257dc9cb-9e6b-4e00-8f12-23ea5e073649.we... These are fairly rich, pattern-heavy, nuanced designs. I've asked each to create it as a SPA where the map flows behind it. Opus 5 results: https:&#x2F;&#x2F;html.non.io&#x2F;opusAcmeBooks Qwen 3.8 max results: https:&#x2F;&#x2F;html.non.io&#x2F;qwenAcmeBooks Same prompt for "
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=49543687",
+      "date": "2026-09-02T22:51:12Z",
+      "story": "Muse Spark 1.3",
+      "text": "The amount of discussion around it means that the test and all the reviews of results, images, approaches etc are implicitly included in training data. It’s not deliberate “benchmaxxing” but things that are discussed a lot online are naturally things that LLMs learn better."
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=48659519",
+      "date": "2026-06-24T13:31:15Z",
+      "story": "Minimus container images are now free",
+      "text": "Totally get it… practically if you don’t want to have to deal with constantly updating images you have to have some degree of trust in whomever you get them from… that said, we try to be as transparent as possible with a cryptographically verifiable SBOM for every build of every image, signing every image, providing detailed compliance test results for FIPS, STIG, CIS (see the compliance tab on each image listing) Your feedback about Dockerfiles is good though and probably something we can easil"
+    },
+    {
+      "hn": "https://news.ycombinator.com/item?id=47923168",
+      "date": "2026-04-27T15:49:25Z",
+      "story": "Quirks of Human Anatomy",
+      "text": "You can try https:&#x2F;&#x2F;michaelbach.de&#x2F;ot&#x2F;cog-blindSpot&#x2F; . I remember using other instruction&#x2F;test image, but the result was quite clear - a dot in middle of image suddenly disappears, deepening on precise eye&#x2F;head&#x2F;screen orientation."
+    }
+  ]
+}

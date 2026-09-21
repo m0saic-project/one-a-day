@@ -1,0 +1,79 @@
+{
+  "query": "lyric video generator",
+  "days": 540,
+  "count": 9,
+  "results": [
+    {
+      "title": "Show HN: A 24/7 live stream where AI writes a new song about the current time",
+      "url": "https://www.youtube.com/watch?v=ZJKx8KEdQkM",
+      "hn": "https://news.ycombinator.com/item?id=47759535",
+      "points": 5,
+      "comments": 3,
+      "createdAt": "2026-04-14T00:00:32Z"
+    },
+    {
+      "title": "Show HN: Lyria.run – Music generation powered by Google's Lyria 3",
+      "url": "https://lyria.run/",
+      "hn": "https://news.ycombinator.com/item?id=47216132",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-02T10:33:37Z"
+    },
+    {
+      "title": "Show HN: Built AI Music Generator Using Claude 4.5 and 4.6",
+      "url": "https://trymusic.ai",
+      "hn": "https://news.ycombinator.com/item?id=46909105",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-06T04:25:31Z"
+    },
+    {
+      "title": "Tell HN: Viral Hit Made by AI, 10M listens on Spotify last few days",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46600681",
+      "points": 4,
+      "comments": 5,
+      "createdAt": "2026-01-13T13:27:45Z"
+    },
+    {
+      "title": "Show HN: Rhyme CTRL – Phoneme-Based Rhyme Detection with Whisper AI",
+      "url": "https://github.com/MunamWasi/RHYME-CTRL",
+      "hn": "https://news.ycombinator.com/item?id=46083238",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2025-11-28T22:12:23Z"
+    },
+    {
+      "title": "Show HN: MuseGen – Tired of juggling AI tools, I built a unified creative studio",
+      "url": "https://musegen.org/",
+      "hn": "https://news.ycombinator.com/item?id=45936617",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-11-15T11:02:57Z"
+    },
+    {
+      "title": "Show HN: Spit Notes – An iOS app that keeps your lyrics and voice memos together",
+      "url": "https://getspitnotes.com/",
+      "hn": "https://news.ycombinator.com/item?id=45462627",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-10-03T13:13:49Z"
+    },
+    {
+      "title": "Show HN: A generative audio VST plugin using Gemini API, JUCE, and React",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=44515999",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2025-07-10T00:14:08Z"
+    },
+    {
+      "title": "Ask HN: Anyone else give up on trying to get rich?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=43889264",
+      "points": 17,
+      "comments": 39,
+      "createdAt": "2025-05-04T20:19:26Z"
+    }
+  ]
+}

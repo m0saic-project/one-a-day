@@ -1,0 +1,25 @@
+{
+  "title": "7bc4f64 -> 84ec6ea",
+  "baselineLabel": "7bc4f64",
+  "candidateLabel": "84ec6ea",
+  "smallerIsBetter": true,
+  "rows": [
+    {
+      "name": "bench_fib_10",
+      "unit": "ns/iter",
+      "base": 163.9,
+      "value": 101.47,
+      "baseRange": 65.66,
+      "range": 28.26
+    },
+    {
+      "name": "bench_fib_20",
+      "unit": "ns/iter",
+      "base": 20104.9,
+      "value": 12924.51,
+      "baseRange": 3037.85,
+      "range": 1732.69
+    }
+  ],
+  "preset": "light"
+}

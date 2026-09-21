@@ -1,0 +1,187 @@
+{
+  "query": "sports graphics automate",
+  "days": 2000,
+  "count": 20,
+  "results": [
+    {
+      "title": "Xorg-server 26.1.0 rc1",
+      "url": "https://lists.x.org/archives/xorg-announce/2026-August/003741.html",
+      "hn": "https://news.ycombinator.com/item?id=49427115",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-24T23:15:19Z",
+      "text": "&gt; just the tip of the iceberg So I keep hearing. But hardly anyone ever talks about what&#x27;s underneath the tip... and when they do, it turns out to be a big mess under there, not a mountain of advantages. &gt; just like there is no spoon, there are also no windows, only surfaces Yes, I understand. That&#x27;s why programs can&#x27;t position their own windows, or get or set the mouse position. It doesn&#x27;t even assume the coordinates are 2-dimensional. It&#x27;s all very futuristic and makes a lot of interesting things possible, like using Minecraft as a compositor, or a Facebook sty"
+    },
+    {
+      "title": "Map of All Known Knowledge",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48883161",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-12T18:14:06Z",
+      "text": "Yes, I understand, like you I have the same question and desire for a map of all knowledge. It relates to library science, how to organize all books on all subjects; and in general, the aim of academia, an organized system to learn, research, and teach all subjects. On the dark side, it relates to Seeing Like a State, the quest for dominion over the entire world and everything in it. There is the concept of legibility , the limits of what you can know (see&#x2F;measure&#x2F;quantify&#x2F;understand) and the vast unknown beyond it. So we must accept that the map can never be complete. But we ca"
+    },
+    {
+      "title": "Microsoft hasn't had a coherent GUI strategy since Petzold",
+      "url": "https://www.jsnover.com/blog/2026/03/13/microsoft-hasnt-had-a-coherent-gui-strategy-since-petzold/",
+      "hn": "https://news.ycombinator.com/item?id=47657189",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-06T05:04:15Z",
+      "text": "I was recently exploring &quot;an OS from scratch&quot; architecture with ChatGPT. Apart from the central idea that I wanted it to be a capability OS, I also started thinking about how I&#x27;d make GUI apps and what layers would naturally make sense. The cleanest design I came up with works like this: 1. At Layer_1 OS provides panes or windows to which apps can render whatever graphics using OS gpu lib (think Raylib, but maybe a bit simpler). This is good for apps that want performance, games, text editors, things like that - so this is maximum control. 2. Next Layer_2 would be based on the b"
+    },
+    {
+      "title": "Building a new Flash",
+      "url": "https://bill.newgrounds.com/news/post/1607118",
+      "hn": "https://news.ycombinator.com/item?id=47267445",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-05T21:20:11Z",
+      "text": "Every time I see SVG mentioned with Flash I just think it&#x27;s immensely ignorant. No offense, but programmers love to think of &quot;vectors&quot; as SVG because it&#x27;s all they know. For several years I kept hearing people say &quot;we have HTML5 and SVG now, so we don&#x27;t need Flash anymore.&quot; And with that Flash animations and games were lost forever and I&#x27;m still bitter about it. For artists, SVG is probably the worst vector format imaginable. In fact, I&#x27;d say any project that uses SVG as backend is doomed to fail with artists. It&#x27;s pretty much a red flag at thi"
+    },
+    {
+      "title": "Design of the SCHEME-78 Lisp-based microprocessor (1980)",
+      "url": "https://dl.acm.org/doi/10.1145/359024.359031",
+      "hn": "https://news.ycombinator.com/item?id=45427516",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-09-30T16:22:58Z",
+      "text": " https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31758139 40 points by DonHopkins on June 15, 2022 | parent | context | favorite | on: Purdue Starts Comprehensive Semiconductor Degree P... Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own integrated circuits: &gt;&quot;Importantly, these weren’t just any designs, for many pushed the envelope of system architecture. Jim Clark, for in"
+    },
+    {
+      "title": "Ask HN: Who is hiring? (September 2025)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=45102665",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-09-02T13:10:53Z",
+      "text": "SwingVision is the AI tennis &amp; pickleball app that provides automated stats, highlights, and line calling using just your phone. Our mission is to democratize the pro sports experience for all athletes. Graphic designer role (San Mateo): https:&#x2F;&#x2F;swing.vision&#x2F;careers&#x2F;5d9b8dfb-bcec-4302-a017-6f83a64... "
+    },
+    {
+      "title": "Acronis True Image costs performance when not used",
+      "url": "https://randomascii.wordpress.com/2025/05/26/acronis-true-image-costs-performance-when-not-used/",
+      "hn": "https://news.ycombinator.com/item?id=44998579",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-08-23T19:45:44Z",
+      "text": "Windows ends up being a thousand cuts situation when you have enough software like this installed. If you want a responsive and stable system you end up spending a good amount of time troubleshooting freezes or mystery CPU&#x2F;disk usage. As of yesterday (this started suddenly) any time Backblaze is performing a backup my whole system gets bogged down for no reason. Was fine days ago, so who knows what automatic update for what app caused it. It&#x27;s probably an interaction with some other filesystem filter on my system, like Defender or Acronis True Image (which I am stuck using since ever"
+    },
+    {
+      "title": "Ask HN: Who is hiring? (July 2025)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=44437876",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-07-01T20:48:01Z",
+      "text": "SwingVision is the AI tennis &amp; pickleball app that provides automated stats, highlights, and line calling using just your phone. Our mission is to democratize the pro sports experience for all athletes. Graphic designer role (San Mateo): https:&#x2F;&#x2F;swing.vision&#x2F;careers&#x2F;5d9b8dfb-bcec-4302-a017-6f83a64... "
+    },
+    {
+      "title": "Ask HN: Who is hiring? (June 2025)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=44161934",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-06-02T19:03:12Z",
+      "text": "SwingVision is the AI tennis &amp; pickleball app that provides automated stats, highlights, and line calling using just your phone. Our mission is to democratize the pro sports experience for all athletes. • Graphic designer (San Mateo): https:&#x2F;&#x2F;swing.vision&#x2F;careers&#x2F;5d9b8dfb-bcec-4302-a017-6f83a64... "
+    },
+    {
+      "title": "NetBSD on a JavaStation",
+      "url": "https://fatsquirrel.org/oldfartsalmanac/netbsd-on-a-javastation/",
+      "hn": "https://news.ycombinator.com/item?id=43266939",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-03-05T14:34:00Z",
+      "text": " https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=37130128 Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own integrated circuits: &gt;&quot;Importantly, these weren’t just any designs, for many pushed the envelope of system architecture. Jim Clark, for instance, prototyped the Geometry Engine and went on to launch Silicon Graphics Incorporated based on that work (see Fig. 16). Guy St"
+    },
+    {
+      "title": "Advent of Code 2024 and BQN",
+      "url": "https://nrk.neocities.org/articles/aoc24-bqn",
+      "hn": "https://news.ycombinator.com/item?id=42822475",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-01-25T16:14:58Z",
+      "text": "Regarding graphics, CBQN is not very suited to doing these natively as it runs on the CPU rather than GPU and has only double-precision and not single-precision floats. So, can you do some simple animation at 60FPS? Probably. Can you make a competitive game engine with it? Definitely not. A few programmers are doing games using Brian&#x27;s FFI raylib bindings ( https:&#x2F;&#x2F;github.com&#x2F;Brian-ED&#x2F;rayed-bqn ), see in particular David Zwitser&#x27;s videos on Astroids and Snake at https:&#x2F;&#x2F;www.youtube.com&#x2F;@davidzwitser&#x2F;videos . And we have nice FFI docs now: https"
+    },
+    {
+      "title": "Ask HN: What Are You Learning?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=39908134",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-04-02T17:05:30Z",
+      "text": "&gt; that sunroof thing is cool, I bet that was a fun area to work on Yeah, it was (and is) really cool! To be clear, I didn&#x27;t work on that, just something similar but much more primitive and with much simpler datasets. Google did a really good job there. &gt; locally deployed Airflow instance I&#x27;m pretty comfortable with basic ETL stuff, but never used Airflow. Will have to look into that, thanks! &gt; May I ask the same of web application development? I can give you my opinion, but that&#x27;s all it is. I&#x27;m not a FAANGer and primarily work with small businesses and nonprofits,"
+    },
+    {
+      "title": "Generative AI and the widening software developer knowledge gap",
+      "url": "https://leaddev.com/team/generative-ai-and-widening-software-developer-knowledge-gap",
+      "hn": "https://news.ycombinator.com/item?id=39604784",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-03-05T15:39:23Z",
+      "text": "I like this graphic of draft (working) horses vs. other (companion&#x2F;sport) horses over time (1800-2010 in France): https:&#x2F;&#x2F;www.researchgate.net&#x2F;publication&#x2F;338480301&#x2F;figure&#x2F;fi... It shows clearly that farm (and transport) automation wiped out the draft horse population, but that the other horse population, having traversed the same bottleneck (ca. 1970), has rebounded. (and in fact there were absolutely more &quot;others&quot; in 2010 than there were in 1840) Moral: try to be the sort of programmer a little girl (little AI?) would love? &gt; It had come to [Sq"
+    },
+    {
+      "title": "Lynn Conway's Story (2000)",
+      "url": "https://ai.eecs.umich.edu/people/conway/LynnsStory.html",
+      "hn": "https://news.ycombinator.com/item?id=37130128",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-08-15T04:20:12Z",
+      "text": " https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31758139 Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own integrated circuits: &gt;&quot;Importantly, these weren’t just any designs, for many pushed the envelope of system architecture. Jim Clark, for instance, prototyped the Geometry Engine and went on to launch Silicon Graphics Incorporated based on that work (see Fig. 16). Guy St"
+    },
+    {
+      "title": "Ask HN: Explain your daily job to your family",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=34119266",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-12-24T18:00:08Z",
+      "text": "I work for a solar company, making a website for our installers that helps them keep track of their customers&#x27; home solar systems. A big installer can have dozens or hundreds of customers, and being able to monitor their status online means they can help homeowners troubleshoot problems remotely, only sending a technician out if they can&#x27;t resolve it online. For me, part of the joy in working downstream of tech proper (i.e., as a techie in a different vertical where software just supports the main business) is that my work is easily understood, and I can see its output immediately. I"
+    },
+    {
+      "title": "Why modern software is slow",
+      "url": "https://randomascii.wordpress.com/2022/09/29/why-modern-software-is-slow-windows-voice-recorder/",
+      "hn": "https://news.ycombinator.com/item?id=33031894",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-09-30T07:08:35Z",
+      "text": "&gt; I&#x27;m a game developer and game performance is better than ever. It could be, if users would have more control over the graphics settings of the games that they want to play and they were allowed to scale back further to accommodate older hardware. For example, the Unity engine by default has a setting to allow downscaling the texture resolution that the game will use 2X, 4X and 8X, yet many games out there actually disable that. Same for some options menus not having framerate limits, dynamic render resolutions (though most engines support that functionality in one way or the other), "
+    },
+    {
+      "title": "Purdue Starts Comprehensive Semiconductor Degree Programs in U.S.",
+      "url": "https://www.eetimes.com/purdue-starts-comprehensive-semiconductor-degree-programs-in-u-s/",
+      "hn": "https://news.ycombinator.com/item?id=31758139",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-06-15T19:28:34Z",
+      "text": "Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own integrated circuits: &gt;&quot;Importantly, these weren’t just any designs, for many pushed the envelope of system architecture. Jim Clark, for instance, prototyped the Geometry Engine and went on to launch Silicon Graphics Incorporated based on that work (see Fig. 16). Guy Steele, Gerry Sussman, Jack Holloway and Alan Bell created the f"
+    },
+    {
+      "title": "Zim – The Zsh configuration framework",
+      "url": "https://zimfw.sh/",
+      "hn": "https://news.ycombinator.com/item?id=30976541",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-04-10T12:51:33Z",
+      "text": "&gt; Is anyone else Yes. Minor thing but I find this sort of passive aggressive framing more irritating as I&#x27;ve gotten older and crustier. You&#x27;re on a global network of billions. No matter what it is about something with as much uptake and variation as shells or millions of other things, of course there are definitely other people doing the same as you. Rather than a kind of silly&#x2F;weird seeking of validation just assert what you do and why. It&#x27;s particularly galling when yes you&#x27;re probably in the flat out majority overall, defaults are powerful and there are almost ce"
+    },
+    {
+      "title": "Lisp Badge (2021)",
+      "url": "http://www.technoblogy.com/show?2AEE",
+      "hn": "https://news.ycombinator.com/item?id=29953548",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-01-16T05:05:34Z",
+      "text": "The original Lisp badge (or rather, SCHEME badge): Design of LISP-Based Processors or, SCHEME: A Dielectric LISP or, Finite Memories Considered Harmful or, LAMBDA: The Ultimate Opcode, by Guy Lewis Steele Jr. and Gerald Jay Sussman, (about their hardware project for Lynn Conway&#x27;s groundbreaking 1978 MIT VLSI System Design Course) (1979) [pdf] (dspace.mit.edu) http:&#x2F;&#x2F;dspace.mit.edu&#x2F;bitstream&#x2F;handle&#x2F;1721.1&#x2F;5731&#x2F;AIM-514.p... HN discussion (excerpted with updated archive.org links): https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=8859918 gavinpc quoted A"
+    },
+    {
+      "title": "Pop_OS 21.04",
+      "url": "https://blog.system76.com/post/655369428109869056/popos-2104-a-release-of-cosmic-proportions",
+      "hn": "https://news.ycombinator.com/item?id=27684083",
+      "points": null,
+      "comments": null,
+      "createdAt": "2021-06-30T02:00:58Z",
+      "text": "PopOS feels like an extremely pragmatic operating system as far as linux distributions go. Yes, I do want my broadcom wifi card to just work. I do want my dedicated Nvidia graphics card to actually be useful. Anyone that disagrees with those sorts of principles can of course simply install a different distribution that aligns more closely with their own personal philosophy and gives them the absolute control that they need, but for me, I just want it to work. I also think that the enhancements they&#x27;ve made with their Cosmic Desktop are indeed that - enhancements over base Gnome desktop, a"
+    }
+  ]
+}

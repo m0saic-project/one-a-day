@@ -1,0 +1,77 @@
+{
+  "story": null,
+  "url": "https://news.ycombinator.com/item?id=45252985",
+  "date": "2025-09-15T18:06:30.000Z",
+  "comments": [
+    {
+      "id": 45252985,
+      "date": "2025-09-15T18:06:30.000Z",
+      "text": "Asciinema is awesome. I use it to capture all of the demos for TerminalTextEffects. Their Asciinema GIF Generator tool (AGG) produces high quality terminal recording GIFs by processing the asciicast file. This is the best solution I've found for producing short terminal recordings that can be shared in a README&#x2F;docs as seen in the TerminalTextEffects repo&#x2F;docs. Using the raw file output and&#x2F;or termsvg type solutions do not work for TTE due to the huge amount of data being written to stdout. https:&#x2F;&#x2F;docs.asciinema.org&#x2F;manual&#x2F;agg&#x2F; https:&#x2F;&#x2F;github.com&#x2F;ChrisBuilds&#x2F;terminaltexteffects "
+    },
+    {
+      "id": 45253100,
+      "date": "2025-09-15T18:15:32.000Z",
+      "text": "I just wanted to say this is absolutely gorgeous. I don't know if I have a use for this, but I love it and please keep doing this. It's mesmerizing and beautiful. TTE reminds me of Compiz window manager from eons ago, the thing that got me to ditch Windows for Linux, except for the terminal. Is there a way you can add something like TTE to tmux or vim as a screen saver or something that would trigger occasionally but not all the time? Do you pipe it? Make aliases? How do you typically use it? What was your intent when you first wrote it, and what do you use it for now? Keep it up!"
+    },
+    {
+      "id": 45254553,
+      "date": "2025-09-15T20:29:59.000Z",
+      "text": "Compiz. Beryl. Compiz Fusion. Unlocks some fun memories. Also this video has some 6 million views now: https:&#x2F;&#x2F;youtu.be&#x2F;xC5uEe5OzNQ?si=GOvwOTHV-RVQnxWv . I remember watching it and being awed by the cube effect."
+    },
+    {
+      "id": 45257497,
+      "date": "2025-09-16T02:49:14.000Z",
+      "text": "That's certainly a trip down memory lane... Coming from Windows XP, Compiz Fusion was nothing short of revolutionary. If Linux had a game ecosystem back then, it would have beaten the pants off of Windows. It was so much cooler than Windows."
+    },
+    {
+      "id": 45257571,
+      "date": "2025-09-16T02:59:22.000Z",
+      "text": "It was also buggy as hell, but it was fun watching windows jiggle like jello."
+    },
+    {
+      "id": 45259782,
+      "date": "2025-09-16T08:56:53.000Z",
+      "text": "* ... Compiz [...] the thing that got me to ditch Windows for Linux [...] * I thought that was the role of Enlightenment [1] but I guess I'm just old. :) [1]: https:&#x2F;&#x2F;www.enlightenment.org&#x2F; "
+    },
+    {
+      "id": 45260067,
+      "date": "2025-09-16T09:39:01.000Z",
+      "text": "> Is there a way you can add something like TTE to tmux or vim as a screen saver I'm not a big vim user, but anywhere you can run a shell command, you should be able to run TTE. As long as ANSI control sequences are respected, the animation should play. TTE will accept piped text or a file input. > How do you typically use it? The most common invocation method is either piped text from some other command or passing a text file via command line arg. It also works as a library and can be imported into existing Python applications to produce animations and animated prompts. > What was your intent when you first wrote it A post here on HN featured an animation of the Sneakers terminal decryption effect and I thought, I can do that in Python. I wrote a handful of simple effects and really enjoyed the process of writing effects and upgrading the engine to support new features. The effect requirement -> engine feature loop is very satisfying. So, I keep working on it when I have free time. > what do you use it for now? It's really more of a toy, and the delay it causes requires some thought when using it, but I've had people reach out with some interesting use cases. Shell startup &#x2F; SSH motd is pretty common. It can be imported and used as a library, so you may find it as a splash screen or animated prompts in scripts. A few people have shared examples of using it as an animation tool to create advertisements or background animation for electronic music displays. Framework computers recently tweeted a video of TTE running on boot for one of their laptops. Eventually, I'd like to fully document the API from an effect writing perspective and produce some tutorials. I won't consider the project 'finished' until that happens. I don't want to abandon it before people are able to write their own effects."
+    },
+    {
+      "id": 45253778,
+      "date": "2025-09-15T19:14:37.000Z",
+      "text": "t-rec is another great tool, which can record any window and produce a video or a gif. Not quite the same thing, but sometimes I find it easier if I just want to share a gif of a terminal."
+    },
+    {
+      "id": 45254715,
+      "date": "2025-09-15T20:47:24.000Z",
+      "text": "I pass my server motd &#x2F; startup through a random tte[1] and it makes me happy every time. Thank you! 1: https:&#x2F;&#x2F;keeb.dev&#x2F;static&#x2F;login.mp4 "
+    },
+    {
+      "id": 45274414,
+      "date": "2025-09-17T11:25:31.000Z",
+      "text": "Awesome, glad you like it. The next release 0.13.0 will have a 'random_effect' option so you're not forced to handle it via shell function. It also significantly reduces the data being transferred and the CPU usage by adjusting the framerate to a more appropriate 60fps. It should perform much better on low end devices which are typically accessed via SSH such as raspberry pi's."
+    },
+    {
+      "id": 45256257,
+      "date": "2025-09-15T23:36:42.000Z",
+      "text": "15MB GIF file. I can't man, I just can't. I literally can not . Can't seek. Can't select text. And I get to use 15x the bandwidth I should have to load it. Please. Stop. Please . It's gross to take beautifully compressable, seekable, accessible text, shove it into the absolute worst format possible for video, and then call that good. If you must insist, please at least link to the raw asciinema, or their web viewer. So that I can load it in a fraction of the time, pause it, seek forward and backward, and copy-paste text. I know, I know, who would want any of that. Much better a GIF that loops so fast it's basically meaningless to anyone but the creator."
+    },
+    {
+      "id": 45258600,
+      "date": "2025-09-16T06:10:31.000Z",
+      "text": "You can also just upload an MP4 on GitHub. Using GIFs on GitHub is pretty embarrassing."
+    },
+    {
+      "id": 45302092,
+      "date": "2025-09-19T14:30:44.000Z",
+      "text": "I ask Manus to write a script to demo my CLI tool and use asciinema to record it. It's perfect Whole process: https:&#x2F;&#x2F;www.pgschema.com&#x2F;blog&#x2F;demo-with-manus-and-asciinema Replay: https:&#x2F;&#x2F;manus.im&#x2F;share&#x2F;8fEln1OzxpnsRSU1PnHweG?replay=1 "
+    },
+    {
+      "id": 45321956,
+      "date": "2025-09-21T11:58:37.000Z",
+      "text": "Very minor and tangential request for future recordings - show the shell prompt and&#x2F;or put the commentary in shell comments (prefix with \"# \"). A step closer to IRL. Speaking of which, an interesting thing to contemplate is if it is worth automating what you did, or if making the videos happens rarely enough that you'd start from scratch with a new manus or other ai session."
+    }
+  ]
+}

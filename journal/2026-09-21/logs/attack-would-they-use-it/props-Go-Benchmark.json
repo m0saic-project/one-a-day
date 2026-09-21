@@ -1,0 +1,38 @@
+{
+  "title": "7bc4f64 -> 84ec6ea",
+  "baselineLabel": "7bc4f64",
+  "candidateLabel": "84ec6ea",
+  "smallerIsBetter": true,
+  "rows": [
+    {
+      "name": "BenchmarkFib10",
+      "unit": "ns/op",
+      "base": 275.2,
+      "value": 314.5
+    },
+    {
+      "name": "BenchmarkFib20",
+      "unit": "ns/op",
+      "base": 34323,
+      "value": 39810
+    },
+    {
+      "name": "BenchmarkFib20WithAuxMetric",
+      "unit": "ns/op 4.000 auxMetricUnits",
+      "base": 34650,
+      "value": 39611
+    },
+    {
+      "name": "BenchmarkFib20WithAuxMetric - ns/op",
+      "unit": "ns/op",
+      "base": 34650,
+      "value": 39611
+    },
+    {
+      "name": "BenchmarkFib20WithAuxMetric - auxMetricUnits",
+      "unit": "auxMetricUnits",
+      "base": 4,
+      "value": 4
+    }
+  ]
+}

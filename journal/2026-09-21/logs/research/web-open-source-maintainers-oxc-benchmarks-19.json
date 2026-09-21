@@ -1,0 +1,7 @@
+{
+  "url": "https://oxc.rs/docs/guide/benchmarks",
+  "contentType": "text/html; charset=utf-8",
+  "title": "All Benchmarks | The JavaScript Oxidation Compiler",
+  "truncated": false,
+  "text": "All Benchmarks | The JavaScript Oxidation Compiler \n\n Announcing React Compiler Support \n\n Skip to content \n\n Menu Return to top \n\n All Benchmarks ​ \n Parser ​ \n Oxc's parser is at least 3x faster than swc and 5x faster than Biome.\n Please note that it is not an apple-to-apple comparison with Biome. Biome's parser produces a CST instead of an AST, which requires a lot more work.\n See repository bench-javascript-parser-written-in-rust .\n Transformer ​ \n Compared to swc, oxc transformer is 4x faster, uses 20% less memory, and is 35 MB smaller in package size (from swc's 37MB).\n Compared to babel, oxc transformer is 40x faster, uses 70% less memory, and is 19 MB smaller with 168 npm packages less to install.\n See repository bench-transformer .\n Linter ​ \n Oxlint is 50x - 100x faster than ESLint depending on the number of CPU cores.\n See repository bench-javascript-linter .\n Formatter ​ \n Oxfmt is 3x faster than Biome, 35x faster than prettier.\n See repository bench-formatter .\n Resolver ​ \n oxc-resolver is 30x faster than webpack's enhanced-resolve .\n See repository bench-resolver ."
+}

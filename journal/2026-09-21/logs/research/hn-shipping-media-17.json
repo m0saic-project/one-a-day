@@ -1,0 +1,17 @@
+{
+  "query": "\"headless\" \"screenshot\" \"chart\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22headless%22%20%22screenshot%22%20%22chart%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=25",
+  "count": 1,
+  "results": [
+    {
+      "title": "New Chart.js beta version launched",
+      "url": "http://www.chartjs.org/",
+      "hn": "https://news.ycombinator.com/item?id=7963251",
+      "points": null,
+      "comments": null,
+      "createdAt": "2014-06-30T01:39:48Z",
+      "text": "The general idea is to render the chart in a headless browser and grab a screenshot. http://phantomjs.org/screen-capture.html"
+    }
+  ]
+}

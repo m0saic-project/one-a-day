@@ -1,0 +1,32 @@
+{
+  "title": "PR #184 vs main",
+  "subtitle": "github-action-benchmark - 20 iters - ubuntu-latest",
+  "baselineLabel": "main",
+  "candidateLabel": "PR #184",
+  "rows": [
+    {
+      "name": "Benchmark.parse_json",
+      "unit": "ns/iter",
+      "base": 412000,
+      "baseRange": 14000,
+      "value": 171000,
+      "range": 6000
+    },
+    {
+      "name": "Benchmark.render_rows",
+      "unit": "ns/iter",
+      "base": 88200,
+      "baseRange": 9600,
+      "value": 84600,
+      "range": 8400
+    },
+    {
+      "name": "Benchmark.cold_start",
+      "unit": "ns/iter",
+      "base": 1240000,
+      "baseRange": 61000,
+      "value": 1395000,
+      "range": 64000
+    }
+  ]
+}

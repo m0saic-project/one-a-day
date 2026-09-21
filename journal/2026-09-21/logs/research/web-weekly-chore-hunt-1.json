@@ -1,0 +1,232 @@
+{
+  "query": "every week I have to make",
+  "days": 720,
+  "count": 25,
+  "results": [
+    {
+      "title": "I am often wrong",
+      "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
+      "hn": "https://news.ycombinator.com/item?id=49781881",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T01:09:22Z",
+      "text": "No one knows how many bugs claude has because Anthropic auto-closes Issues (or at least used to) if there isn&#x27;t someone constantly pinging the issue every two weeks. I&#x27;ve contributed to several issues that were confirmed by several other people, which were they were auto-closed after people gave up confirming the problem without any response from Anthropic. They seemingly don&#x27;t care if it isn&#x27;t on fire or at least smoldering heavily, which seems really bad in my book if you&#x27;re trying to make even reasonably good software."
+    },
+    {
+      "title": "AX – Google’s Open Agentic Orchestrator",
+      "url": "https://agentexecutor.io",
+      "hn": "https://news.ycombinator.com/item?id=49781555",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T00:15:57Z",
+      "text": "So the agent-substrate checks a _ton_ of boxes. Almost all of the things it offers should be table stakes for everywhere we run not only agents but most software. https:&#x2F;&#x2F;github.com&#x2F;agent-substrate&#x2F;substrate (For context I built something very similar to this the past 2 weeks for my homelab, trying to solve many of these problems. This comment is an edited version of an unreleased blog post I wrote last week.) - Run code in secure microVMs or gVisor. Docker is not good enough. Qemu is not good enough. A secure environment for running untrusted code is the bare minimum. I do"
+    },
+    {
+      "title": "Ask HN: What is up with all the AI doomerism I'm seeing?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49779358",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T19:47:12Z",
+      "text": " Is everyone online just that bad at programming? Yes: https:&#x2F;&#x2F;xkcd.com&#x2F;2030&#x2F; I work in electronics hardware development, where everything has to work on the first release, and the equivalent to compiling takes days to weeks. The field thrives on thorough and accurate documentation. If I want to incorporate a single transistor into a design, I can download a multi-page document detailing its behavior, and chances are that throughout an entire design, I won&#x27;t come across any errors in any documentation I read. Because the documentation is so good, a hardware design of a"
+    },
+    {
+      "title": "Sherline Tools Is Going Out of Business",
+      "url": "https://toolguyd.com/sherline-tools-shutting-down-usa-production/",
+      "hn": "https://news.ycombinator.com/item?id=49776888",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T15:34:45Z",
+      "text": "Wow, what a disappointment. I’ve found it funny over the years when people are shocked to hear me talking about machining, when they themselves have woodworking tools. Cutting metal, cutting wood, even cutting paper - all useful for making and fixing. I earned an MSME without ever learning to actually make things, so once I could afford it I bought a Sherline CNC mill and taught myself to use it. I made many mistakes but got there. I used it just last week to make a wind gauge mounting bracket for a 70 year old sailboat. I liked that it was made in the USA and (at the time, pre mainstream inte"
+    },
+    {
+      "title": "Asking authors about their own papers",
+      "url": "https://medium.com/@TmlrOrg/asking-authors-about-their-own-papers-3d2e04e5dee0",
+      "hn": "https://news.ycombinator.com/item?id=49775191",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T12:30:07Z",
+      "text": "An observation from within the system: A year or so ago I completed a PhD in theoretical high energy physics. I did that after working for about 5 years outside of academia [the reasons for that were financial issues in my family]. Because of this hiatus (I suppose) and the fact that I had troubles getting reference letters (my master thesis advisor passed away at quite a young age right at the time when I tried to start applying for positions; we actually agreed to meet in person to discuss next steps but the meeting never happened) I had issues getting accepted into PhD programs and I ended "
+    },
+    {
+      "title": "Dropbox's Jan 1st 2027 terms of service",
+      "url": "https://www.dropbox.com/terms2026",
+      "hn": "https://news.ycombinator.com/item?id=49773590",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T08:01:54Z",
+      "text": "Funny that this is the only Dropbox post I&#x27;ve seen on HN besides infamous references to their launch post. You&#x27;d think there would be plenty of interesting improvements to make. Having been a paid user for the last decade my current experience is just getting error messages on my phone every week that something failed to sync, and that I have to re-enter the app every ~month to disable&#x2F;enable syncing for my offline files, otherwise it doesn&#x27;t work. I can&#x27;t remember any time I&#x27;ve been pleasantly surprised by any change to the service."
+    },
+    {
+      "title": "I think you should almost never use AI to write",
+      "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
+      "hn": "https://news.ycombinator.com/item?id=49772209",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T03:08:11Z",
+      "text": "&gt; First, once the text is on the page, it’s easy to passively let the approximate word suffice, rather than thinking about word choice in the same effortful, active way we do when generating prose de novo. Meanwhile, me, as an English non-native speaker, ended up discussing two sentences I want send to HR for ten minutes while applying to a job. I do believe there&#x27;s generally a bias to accept something that&#x27;s already written. The much bigger reason though is why you let somebody else write it to begin with. It might just be that not thinking carefully about every sentence&#x2F;wor"
+    },
+    {
+      "title": "Learning another language may be one of the best ways to keep your brain healthy",
+      "url": "https://theconversation.com/learning-another-language-may-be-one-of-the-best-ways-to-keep-your-brain-healthy-as-you-age-291951",
+      "hn": "https://news.ycombinator.com/item?id=49768710",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T17:55:40Z",
+      "text": "Yes, it&#x27;s possible. For me it went like this. 1. I learned enough vocabulary in a very short time to be able to more or less be able to read with the assistance of a dictionary on an e-book where you can click on a word. I spent ~2 weekends of Duolingo 8 hours a day, but I&#x27;d use flashcards in the future instead of that. It sounds a bit crazy in hindsight, but I feel like it was easier to stay strongly motivated for a short period of time than drizzling the words over a period of time. All other attempts where I did not do this, failed. The limit of learning words for me is ~50-200 wo"
+    },
+    {
+      "title": "The Secret Life of Circuits",
+      "url": "https://blog.coredump.cx/p/the-secret-life-of-circuits-is-here",
+      "hn": "https://news.ycombinator.com/item?id=49765636",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T11:30:26Z",
+      "text": "PEFI&#x2F;PE4I as a technical reference when you need details about a specific topic, SLOC as an overall introduction to give a good intuition, and M:E for more practical project tutorials, if that’s what we (hobbyists without any formal training) end up with that would be awesome :) AlphaPhoenix YouTube channel is also a great source of information to clarify theoretical topics. I find it very helpful to just see how he think about electricity in his various projects: https:&#x2F;&#x2F;youtu.be&#x2F;X_crwFuPht4 . And his enthusiasm is contagious! One personal note: as someone coming from soft"
+    },
+    {
+      "title": "I vibed a proof of Conway's conjecture",
+      "url": "https://overreacted.io/how-i-vibed-a-proof-of-conways-conjecture/",
+      "hn": "https://news.ycombinator.com/item?id=49765027",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T09:59:50Z",
+      "text": "I appreciate the sentiment, especially after the escalation of the last few weeks. But I am hoping this story can become an example of why mathematicians are still very much needed and LLMs are still severely lacking when it comes to displacing scientists. Conway&#x27;s conjecture has no application whatsoever, even within pure maths, and the only point in pursuing it is what you can learn in the process, and whether you can make something beautiful. LLMs are consistently unable to do the latter (and yes, some mathematicians are also not very good at it... this is an old topic of discussion, j"
+    },
+    {
+      "title": "I don't like passkeys",
+      "url": "https://hawksley.dev/blog/i-dont-like-passkeys",
+      "hn": "https://news.ycombinator.com/item?id=49755478",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-18T15:08:08Z",
+      "text": " &gt; The biggest problem, though, is how users are pushed into it without any warning or knowledge of what they&#x27;re signing up for. My irritation is that I know what it is, and I&#x27;ve said no thanks many times, but I&#x27;m still asked regularly by the likes of Amazon, and they usually pick a time when I&#x27;m trying to order something quick¹. It is one of the growing number of things in life that simply have no “no” option, it is always “yes or later” - I wouldn&#x27;t mind so much if “later” meant “I know the option exists, I&#x27;ll ask for it if I change my mind, don&#x27;t bother"
+    },
+    {
+      "title": "Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA",
+      "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02",
+      "hn": "https://news.ycombinator.com/item?id=49750808",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-18T06:32:58Z",
+      "text": "＞Japanese culture and work culture is very hierarchical&#x2F;top down. This, and the &#x27;rise or climb to the top&#x27; is more about seniority and social standing than anything else, especially at large Japanese conglomerates. The result us that there are almost none of the software competencies in senior management, and even if there were those would be software competencies from the 1970&#x27; and 1980&#x27;s who are still leading while being 80 years old. There is also a &#x27;filter&#x27; put in place at most organizations which are sufficiently large or diverse, such that middle-manage"
+    },
+    {
+      "title": "The American Religion of Self-Storage Facilities",
+      "url": "https://www.newyorker.com/magazine/2026/09/21/the-american-religion-of-self-storage-facilities",
+      "hn": "https://news.ycombinator.com/item?id=49750772",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-18T06:25:20Z",
+      "text": "I definitely make a point of keeping a small stock TP (and cheap&#x2F;easy food, like bologna, hot dogs, and bread) around in these post-covid days. Not to the extreme of the story about the soap, above, but: Something in my mind was changed a little bit more every time I&#x27;d go to the store and there were empty shelves. So now I do things like always have a few weeks of TP, and I freeze things like bread and bologna. I never did that at any point in my adult life leading up to COVID: If I ran out of something, I just picked up more later at the store the next time I was nearby (or any othe"
+    },
+    {
+      "title": "Everybody's Lost Their Minds",
+      "url": "https://www.netmeister.org/blog/everybodys-lost-their-minds.html",
+      "hn": "https://news.ycombinator.com/item?id=49747409",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T22:15:04Z",
+      "text": "I live in a relatively wealthy town and most people here had a pretty safe series of lockdowns (bit hair-raising for me as a freelancer but ehh). We are collectively massively pro-vaccine ; I know only two people who loudly resisted (and one of them nearly died in hospital from COVID). But I can tell you that our collective sense of (unusually strong) community has taken six years since the first lockdown (four and a half years since the end of mask restrictions) to truly return to what it was before. So even in this quite cushioned place I think we didn&#x27;t really return to a sense of prop"
+    },
+    {
+      "title": "Everybody's Lost Their Minds",
+      "url": "https://www.netmeister.org/blog/everybodys-lost-their-minds.html",
+      "hn": "https://news.ycombinator.com/item?id=49746912",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T21:36:24Z",
+      "text": "I&#x27;ve been coding for 22 years, 14 years professionally, so I appreciate AI coding. It was annoying before when I had a very clear idea of what I wanted and yet it still took a whole week to implement. Now, with AI coding, I can implement any decent sized feature, exactly how I want, in a few hours and it&#x27;s all polished and ready, all edge cases handled. Everything it&#x27;s generating looks almost exactly like what I would have written, just written faster. Personally, I feel avenged by AI because I had been saying for years that you don&#x27;t really need static typing once you reac"
+    },
+    {
+      "title": "Everybody's Lost Their Minds",
+      "url": "https://www.netmeister.org/blog/everybodys-lost-their-minds.html",
+      "hn": "https://news.ycombinator.com/item?id=49746893",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T21:35:23Z",
+      "text": "&gt; Maybe it&#x27;s faster but explosive diarrhea is also a faster way to produce shit. i&#x27;m in the midst of a very large global roll out of a new system including about 24 separate erp integrations. My team&#x27;s system is dependent on another system coming online first then we go then the integrations come online then a massive data migration happens and ends with all the associated testing. So like a huge number of dependencies and I&#x27;m second in line. Today we get word that the first system is having issues with a vendor and will not come online as scheduled (our dry run deployme"
+    },
+    {
+      "title": "Why I didn’t sign the Fields medallists’ letter",
+      "url": "https://gowers.wordpress.com/2026/09/17/why-i-didnt-sign-the-fields-medallists-letter/",
+      "hn": "https://news.ycombinator.com/item?id=49738856",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T10:41:51Z",
+      "text": "[I have not read Gower&#x27;s article. It&#x27;s only that your response is prompting me to share what i&#x27;ve been thinking recently] &gt; the stepping stones required for human growth are disappearing. Actually only in an institutional sense, imho. Maybe I&#x27;m exaggerating, but reddit.com&#x2F;r&#x2F;math* or even mathstackexchange will be so back with users analyzing and distilling proofs with AI. Maybe in 5 years (when lean attains 10% popularity of rust, and&#x2F;or gpt7 level models cost ~USD5 on average, per month, inflation adjusted or not) this types of submissions will make thos"
+    },
+    {
+      "title": "The American Age Is Over",
+      "url": "https://www.theatlantic.com/ideas/2026/09/trump-iran-superpower-decline/688639/",
+      "hn": "https://news.ycombinator.com/item?id=49737965",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T08:34:00Z",
+      "text": "&gt; The Chinese Communists are incompetent as ever, that hasn&#x27;t changed for the longest time, but now they look like a bastion of stability compared to the chaos other parties seek out or tolerate. Chinese communists are only looking competent for the same reason every other communist looked competent (but you need to be like 50+ years old to remember what that reason is): 1) they lie 2) they&#x27;re actually pretty good at preventing people from talking (even the China CCP is now threatening the families of Chinese abroad) Chinese economic figures (which they openly &quot;partly&quot; f"
+    },
+    {
+      "title": "Chopping up books when they're physically too big",
+      "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
+      "hn": "https://news.ycombinator.com/item?id=49735890",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T02:55:46Z",
+      "text": "&gt; * You own it forever Why does everyone advocating for physical always treat effective DRM as a given? I have bought a lot of digital music in my life, and I own every bit of it as long as my copies exist, just like all the physical music I bought before (and converted to digital as soon as it was practical). &gt; * Nothing to charge My e-readers last weeks of active use without charging, and I literally found a Kindle that had been lost for over a year a few weeks ago which still had over 30% charge because they take basically no power if they&#x27;re not being used. Charging really is no"
+    },
+    {
+      "title": "Learning Programming in an Age of LLMs",
+      "url": "https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/",
+      "hn": "https://news.ycombinator.com/item?id=49734808",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T00:12:14Z",
+      "text": "Finally a thread to traumadump my anxieties! I have been trying to learn programming unsuccessfully for many years (I still ocasionally get a burst of energy, try something, then eventually abandon it halfway). In the end, I just accept that I don&#x27;t have the kind of thinking that makes this effort enjoyable and I cannot achieve anything good. But, to be fair, LLMs also don&#x27;t solve any problems for me in any meaningful way. I have to do a little bit of very simple coding at work and I would say that I struggle with LLMs as much as I do when I try to solve them by myself. The code work"
+    },
+    {
+      "title": "A rough guide for going back to the Moon",
+      "url": "https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model",
+      "hn": "https://news.ycombinator.com/item?id=49733297",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-16T21:30:47Z",
+      "text": "According to [0], there&#x27;s about 2% water by volume in Martian soil, and you need to heat it up to 800 degrees Celsius to extract it -- which means you need a power source capable of generating those temperatures on an ongoing basis, which is unlikely without massive solar arrays that would be constant covered with (and damaged by) Martian regolith. Oh, and Mars receives less than half the sunlight Earth does due to its greater distance from the sun, and dust storms could obscure them for weeks on end. Or you could use hypothetical a nuclear power power plant that would be incredibly expen"
+    },
+    {
+      "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+      "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
+      "hn": "https://news.ycombinator.com/item?id=49726078",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-16T12:40:47Z",
+      "text": "recalling the exact phrasing, several senior people at anthropic made public statements agreeing a 10% chance of causing extinction in less than 10 years. 10% is uninsurable, priced in with ordinary treatment of risk it suggests that anthropic should be worth zero today. creating that risk would put every executive in jail. on top of that it would demand under existing laws of conflict, a military campaign to destroy anthropic. that is not optional, it is demanded now to save lives. hard to make comparisons but we mourned and rembered 9&#x2F;11 recently. a 10% risk of hundreds of millions dead"
+    },
+    {
+      "title": "EU Floats Canada Becoming the Bloc's First 'Associate Member'",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-16/eu-proposes-canada-become-the-bloc-s-first-associate-member",
+      "hn": "https://news.ycombinator.com/item?id=49723849",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-16T09:09:48Z",
+      "text": "&gt; Your talking points are misinformed and pretty ridiculous which makes me think you&#x27;re a troll rather than having a faithful argument. But on the off chance you are trying to have a real discussion: The Council and Parliament both get elected and the commission cannot do anything without them, so it&#x27;s not like the system is not democratic. No, I really believe everybody with a shred of power in an office needs to be elected, especially at the EU level where their decisions can affect hundreds of millions. Again, second- or third-hand democracy is not really democracy. &gt; I don&"
+    },
+    {
+      "title": "When Google Cuts Off Access: Poland and the World",
+      "url": "https://dossier.reasoner.pl/artykul/",
+      "hn": "https://news.ycombinator.com/item?id=49722705",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-16T06:16:38Z",
+      "text": "lmao the author&#x27;s response makes it even funnier. The entire comment reeks of AI with every sentence. &gt; Let me read the rest for you. You keep repeating what was already discussed. &gt; You did in one afternoon what Google refused to do in two weeks: you named the messages. You just guessed. Fella, you mentioned the mails first. If you thought that wasn&#x27;t relevant, you wouldn&#x27;t have mentioned it. And any reader would assume that you pointed at it being the culprit. &gt; &quot;Why is Anthropic in there, why the Forbes lady, why Ireland.&quot; You know, the issue is the lack of"
+    },
+    {
+      "title": "Reddit Is Still Useful. It's Also Becoming Impossible",
+      "url": "https://widdershins.verja.net/reddit-is-still-useful-its-also-becoming-impossible/",
+      "hn": "https://news.ycombinator.com/item?id=49716728",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-15T18:29:05Z",
+      "text": "I think Reddit has jumped the shark, but I&#x27;m biased. I used to use it, pretty much every day, but I stopped when they turned on &quot;you must be logged in to use oldreddit&quot;. I typically was logged in, and I always used old.reddit.com, and you know, that&#x27;s not the most terrible thing reddit has done, but for me it was the proverbial straw. So I started thinking. What don&#x27;t I like about reddit... - I don&#x27;t like the flat subreddit structure - I think it makes duplication (which is wasteful) more common, and (unintuitively) makes things harder to find. - I don&#x27;t like"
+    }
+  ]
+}

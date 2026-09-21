@@ -1,0 +1,7 @@
+{
+  "query": "\"chart\" \"for the blog post\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22chart%22%20%22for%20the%20blog%20post%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=20",
+  "count": 0,
+  "results": []
+}

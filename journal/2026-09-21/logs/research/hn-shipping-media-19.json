@@ -1,0 +1,207 @@
+{
+  "query": "status page uptime",
+  "days": 900,
+  "count": 25,
+  "results": [
+    {
+      "title": "Show HN: SolidPing — open-source uptime monitoring, agents inside your network",
+      "url": "https://solidping.io/d/login?demo=true",
+      "hn": "https://news.ycombinator.com/item?id=49656831",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-11T11:48:17Z"
+    },
+    {
+      "title": "UpWatch – uptime monitoring with a live public status page (free tier, no card)",
+      "url": "https://upwatch.online/",
+      "hn": "https://news.ycombinator.com/item?id=49062533",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-07-26T21:21:13Z"
+    },
+    {
+      "title": "Why is Slack allowed to get away with lying?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48301850",
+      "points": 8,
+      "comments": 2,
+      "createdAt": "2026-05-27T22:52:05Z"
+    },
+    {
+      "title": "Ask HN: How are you handling status pages for your SaaS?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48212777",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-05-20T19:26:10Z"
+    },
+    {
+      "title": "Show HN: Bloomberg Terminal for LLM ops – free and open source",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47754636",
+      "points": 7,
+      "comments": 1,
+      "createdAt": "2026-04-13T16:39:58Z"
+    },
+    {
+      "title": "Show HN: I built a heartbeat and uptime monitoring for developers",
+      "url": "https://pulsemon.dev/",
+      "hn": "https://news.ycombinator.com/item?id=47379068",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-03-14T17:40:26Z"
+    },
+    {
+      "title": "Show HN: Pre-Launch – $15/Mo Status Page (Vs Atlassian $299) – Join Waitlist",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47285913",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-03-07T09:08:25Z"
+    },
+    {
+      "title": "Show HN: StatusLane – Minimal status pages and uptime for small SaaS",
+      "url": "https://statuslane.dev",
+      "hn": "https://news.ycombinator.com/item?id=47199174",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-28T19:24:48Z"
+    },
+    {
+      "title": "Show HN: Pongo – a self hosted uptime monitor using configuration as code",
+      "url": "https://www.pongo.sh/",
+      "hn": "https://news.ycombinator.com/item?id=47149982",
+      "points": 1,
+      "comments": 2,
+      "createdAt": "2026-02-25T11:02:31Z"
+    },
+    {
+      "title": "Show HN: HexaScan:Open-Source Monitoring(PageSpeed,Critical Flows,SEO,Security)",
+      "url": "https://github.com/BlazeHexaScan/HexaScan",
+      "hn": "https://news.ycombinator.com/item?id=47100739",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-21T13:39:51Z"
+    },
+    {
+      "title": "Show HN: StatusMonk – Uptime monitoring and status pages for small SaaS teams",
+      "url": "https://statusmonk.com/",
+      "hn": "https://news.ycombinator.com/item?id=47072913",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-19T12:03:15Z"
+    },
+    {
+      "title": "Show HN: StatusDude – Uptime monitoring internal services with K8s autodiscovery",
+      "url": "https://statusdude.com/",
+      "hn": "https://news.ycombinator.com/item?id=47047753",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-02-17T14:20:34Z"
+    },
+    {
+      "title": "Show HN: OneUptime – Open-source observability that auto-fixes incidents with AI",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46975667",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-02-11T14:52:16Z"
+    },
+    {
+      "title": "Show HN: Yet Another Status Page FYI – Without Selling Your Kidneys",
+      "url": "https://statuspage.fyi",
+      "hn": "https://news.ycombinator.com/item?id=46802155",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-28T22:00:17Z"
+    },
+    {
+      "title": "Show HN: Supercheck.io – Open-Source AI-Powered Test Automation and Monitoring",
+      "url": "https://supercheck.io/",
+      "hn": "https://news.ycombinator.com/item?id=46801564",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-01-28T21:10:46Z"
+    },
+    {
+      "title": "Show HN: Upty – Status pages with automated health checks",
+      "url": "https://upty.dev/",
+      "hn": "https://news.ycombinator.com/item?id=45579083",
+      "points": 3,
+      "comments": 5,
+      "createdAt": "2025-10-14T12:10:00Z"
+    },
+    {
+      "title": "Show HN: Kuvasz Uptime 3.1.0 – now with Status Pages",
+      "url": "https://github.com/kuvasz-uptime/kuvasz/releases/tag/3.1.0",
+      "hn": "https://news.ycombinator.com/item?id=45350281",
+      "points": 6,
+      "comments": 0,
+      "createdAt": "2025-09-23T17:34:17Z"
+    },
+    {
+      "title": "Is there a simple uptime bot with customizable status pages?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=45302605",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-09-19T15:17:55Z"
+    },
+    {
+      "title": "Show HN: I built an alternative status page for public clouds",
+      "url": "https://cloudlooking.glass/#show=median",
+      "hn": "https://news.ycombinator.com/item?id=44905640",
+      "points": 9,
+      "comments": 4,
+      "createdAt": "2025-08-14T21:00:31Z"
+    },
+    {
+      "title": "Ask HN: Would you use a self-hosted uptime monitor with a public status page?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=44391771",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-06-26T21:43:14Z"
+    },
+    {
+      "title": "Show HN: OneUptime: Open-Source Incident.io Alternative",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=43896612",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-05-05T16:13:33Z"
+    },
+    {
+      "title": "OneUptime: Open-Source Incident.io Alternative",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=43835184",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2025-04-29T16:59:06Z"
+    },
+    {
+      "title": "Upptime: GitHub-powered open-source uptime monitor and status page",
+      "url": "https://upptime.js.org",
+      "hn": "https://news.ycombinator.com/item?id=43358461",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-03-14T00:05:52Z"
+    },
+    {
+      "title": "Show HN: OneUptime – Open-Source Datadog Alternative",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=43354188",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2025-03-13T15:14:31Z"
+    },
+    {
+      "title": "Show HN: Checkmate, a server and infrastructure monitoring application",
+      "url": "https://github.com/bluewave-labs/checkmate",
+      "hn": "https://news.ycombinator.com/item?id=42332760",
+      "points": 21,
+      "comments": 7,
+      "createdAt": "2024-12-05T21:08:32Z"
+    }
+  ]
+}

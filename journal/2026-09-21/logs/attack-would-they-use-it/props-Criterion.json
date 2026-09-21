@@ -1,0 +1,56 @@
+{
+  "title": "7bc4f64 -> 84ec6ea",
+  "baselineLabel": "7bc4f64",
+  "candidateLabel": "84ec6ea",
+  "smallerIsBetter": true,
+  "rows": [
+    {
+      "name": "BenchFib10",
+      "unit": "ns/iter",
+      "base": 199,
+      "value": 199,
+      "baseRange": 0,
+      "range": 1
+    },
+    {
+      "name": "BenchFib20",
+      "unit": "ns/iter",
+      "base": 24729,
+      "value": 24725,
+      "baseRange": 139,
+      "range": 36
+    },
+    {
+      "name": "Fibonacci/Recursive/20",
+      "unit": "ns/iter",
+      "base": 24739,
+      "value": 24739,
+      "baseRange": 35,
+      "range": 57
+    },
+    {
+      "name": "Fibonacci/Iterative/20",
+      "unit": "ns/iter",
+      "base": 3,
+      "value": 3,
+      "baseRange": 0,
+      "range": 0
+    },
+    {
+      "name": "Fibonacci/Recursive/21",
+      "unit": "ns/iter",
+      "base": 40042,
+      "value": 40019,
+      "baseRange": 832,
+      "range": 89
+    },
+    {
+      "name": "Fibonacci/Iterative/21",
+      "unit": "ns/iter",
+      "base": 3,
+      "value": 3,
+      "baseRange": 0,
+      "range": 0
+    }
+  ]
+}

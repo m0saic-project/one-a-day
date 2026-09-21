@@ -1,7 +1,7 @@
 {
-  "release": "2026-09-20",
-  "commit": "21dc42d5bb87a46d70dd88da3a2d82af0078e201",
-  "mintedAt": "2026-09-20T23:05:10.897Z",
+  "release": "2026-09-21",
+  "commit": "0a419c1eba207663addc87dcbd0addd10b7c2788",
+  "mintedAt": "2026-09-21T06:25:35.350Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
@@ -10,6 +10,7 @@
     "src/_shared/text.ts": "c69793e924ad346823183877f0d49a7de21026a5d817859625e0d53cdbccb495",
     "src/_shared/why.ts": "f611e1cfef42310c50bc02bcfa4b77f9693fcdb8fd1cac1a58938e1c11ca94fa",
     "src/basics/hello-world/v1/hello-world.ts": "31b1287b4024f1ce67fb70801f5d6cd2fc5c13a632404c18bbe2a9fd76f0bdaf",
+    "src/dev/bench-delta/v1/bench-delta.ts": "377e04113814e99205bba3f37790dca85b724526139b48d729d23a08ae563b81",
     "src/dev/og-card/v1/og-card.ts": "5d4c2006caf2d18e55d57507dbc5003485ce911caf2f04c7a9605e2c3edb27b4",
     "src/harness/agent-timeline/v1/agent-timeline.ts": "44ff9d3e5a4e76c4a24bdc4d39589812b44dd71cc106e4b51afa67d38448a5d8"
   }

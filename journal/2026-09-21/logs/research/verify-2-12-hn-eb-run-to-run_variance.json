@@ -1,0 +1,97 @@
+{
+  "query": "run-to-run variance",
+  "days": 420,
+  "count": 10,
+  "results": [
+    {
+      "title": "The scourge of x86 emulation",
+      "url": "https://fex-emu.com/Scourge-of-emulation/",
+      "hn": "https://news.ycombinator.com/item?id=49756605",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-18T16:20:14Z",
+      "text": "well it depends on your error bars. On many modern system you can have +&#x2F;- 5% variation or more run to run just due to the non-determinism present in modern CPU architectures and operating systems (even things like room temperature, time of day, the number of environment variables, etc, can affect this). While you could maybe run a set of careful experiments to characterize and remove this, in my experience most researchers don&#x27;t bother. So something as small as 3% would need a lot of convincing to me to make the argument that it is significant."
+    },
+    {
+      "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+      "url": "https://withspecific.com/benchmarks/real-swe",
+      "hn": "https://news.ycombinator.com/item?id=49683984",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-13T13:47:32Z",
+      "text": "Yes at temperature 1 it would need to be averaged. The mechanical scoring is hidden specs through and if they don’t pass that it’s not often a result of temp, but instruction following or verification (different flavor of instruction following given what they are told to do). What’s surprising is just how well they do on this dimension even with the variance. On my tasks anyway, maybe Rails work isn’t that complicated. It’s probably not that I am an amazing ticket writer. I have run multiple with the same model through issues to see the output. What differs run to run on the same model is styl"
+    },
+    {
+      "title": "Qwen3.8 27B scores 52 on Artificial Analysis",
+      "url": "https://artificialanalysis.ai/models/qwen3-8-27b",
+      "hn": "https://news.ycombinator.com/item?id=49341577",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-18T05:20:23Z",
+      "text": "The number I&#x27;d actually want next to every score: run-to-run variance."
+    },
+    {
+      "title": "Accelerating GPT-5.6 Sol Ultrafast",
+      "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+      "hn": "https://news.ycombinator.com/item?id=49290904",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-13T19:38:42Z",
+      "text": "No quality compromise&#x2F;degradation is something I have had this industry, including especially OpenAI, claim multiple times in the past and I have more than once been able to verify that it was in fact not the case. Examples being gpt-3.5-turbo vs text-davinci-003, GPT-4-Turbo and all the other post training checkpoints they had under one name (which was a major bug bear for me back then witnessing degradations with no naming change, industry got better in transparent checkpoint naming since), Opus 4.6 Fast Mode (which just was faster by skipping much of the required work), etc. Same for m"
+    },
+    {
+      "title": "Choosing an AI model: one prompt, 11 models, different results",
+      "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
+      "hn": "https://news.ycombinator.com/item?id=49285776",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-13T13:39:59Z",
+      "text": "I&#x27;ve been doing a lot of benchmarking for a long time now with a number of local models for the purposes of spam filtering. The major observation is that there is a lot of variance in model performance. This should not be surprising, as these are probabilistic machines based on random numbers, so your performance will vary from run to run. But this also means that any sort of evaluation of benchmark with a sample size of 1 is essentially worthless for the purposes of model comparison. In my benchmarks, I started insisting on having at least 5 runs. This also makes me very suspicious of so"
+    },
+    {
+      "title": "What's the best programming language for coding agents?",
+      "url": "http://danluu.com/pl-tokens/",
+      "hn": "https://news.ycombinator.com/item?id=49255360",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-11T09:24:10Z",
+      "text": "If you actually read the data, especially the distribution graph in the last image, the conclusion that it draws is &quot;the run-to-run distribution variance is so big that there doesn&#x27;t seem to be a correlation that can be drawn from this experiment&quot;, pretty much every language has similar-ish distribution ranging from ~20 to 34, and Clojure is only the worst because GPT has a tendency to write code that contains a particular byte manipulation mistake that it repeatedly makes, not that GPT is bad at Clojure or anything. My experiences are of course anecdotal, but if you have some o"
+    },
+    {
+      "title": "FrontierCode",
+      "url": "https://cognition.ai/blog/frontier-code",
+      "hn": "https://news.ycombinator.com/item?id=48453976",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-08T23:37:56Z",
+      "text": "Makes sense, thanks. I suppose error bars are tricky if trying to handle problem-to-problem variance, rubric-to-rubric variance, and run-to-run variance all at once."
+    },
+    {
+      "title": "Linux gaming is faster because Windows APIs are becoming Linux kernel features",
+      "url": "https://www.xda-developers.com/linux-gaming-is-getting-faster-because-windows-apis-are-becoming-linux-kernel-features/",
+      "hn": "https://news.ycombinator.com/item?id=48130549",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-14T02:51:30Z",
+      "text": "&gt;It isn&#x27;t complicated Getting reliable, consistent, meaningful performance numbers is in fact, extremely complicated: * You need a consistent way to reproduce the exact same outputs - accounting for things like the game&#x27;s RNG. You can&#x27;t just walk around and snap the FPS counter in the corner of the screen and call that good. * For Windows (and occasionally Linux) you need to ensure nothing is running that will taint the results (updates, AV scans, etc) * Sometimes individual driver versions work very poorly with a specific game. Just because it ran badly doesn&#x27;t mean you"
+    },
+    {
+      "title": "I benchmarked Claude Code's caveman plugin against \"be brief.\"",
+      "url": "https://www.maxtaylor.me/articles/i-benchmarked-caveman-against-two-words",
+      "hn": "https://news.ycombinator.com/item?id=47956265",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-04-29T23:58:27Z",
+      "text": "&gt; there was 1 run per prompt per arm My understanding is that there was only 1 run per configuration? If that is correct, because of the run-to-run variability, it really doesn&#x27;t say much. It will take several trails per prompt per arm before it will look like it is stabilizing on a plot. It is prohibitively expensive so I&#x27;ve been running same prompt, same model 5 times in order to get a visual understanding of performance. Someone did the same with lambda calculus yesterday. I wanted to make the point about how much run-to-run variability and difference in cost with the same prom"
+    },
+    {
+      "title": "Improved Gemini 2.5 Flash and Flash-Lite",
+      "url": "https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/",
+      "hn": "https://news.ycombinator.com/item?id=45376511",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-09-25T18:04:44Z",
+      "text": "There several reasons responses from the same model might vary: - &quot;temperature&quot; - intentional random sampling from the most likely next tokens to improve &quot;creativity&quot; and help avoid repetition - quantization - running models with lower numeric precision (saves on both memory and compute, without impacting accuracy too much) - differences in&#x2F;existence of a system prompt, especially when using something end-user-oriented like Qwen Chat - not-quite-deterministic GPU acceleration Benchmarks are usually run at temperature zero (always take the most likely next token), with "
+    }
+  ]
+}

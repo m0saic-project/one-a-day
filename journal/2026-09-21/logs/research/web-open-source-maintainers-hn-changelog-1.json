@@ -1,0 +1,31 @@
+{
+  "query": "changelog video release notes",
+  "days": 540,
+  "count": 3,
+  "results": [
+    {
+      "title": "Show HN: Beautiful changelog hosting for SaaS products – Changelogy",
+      "url": "https://www.changelogy.com/",
+      "hn": "https://news.ycombinator.com/item?id=46180961",
+      "points": 1,
+      "comments": 3,
+      "createdAt": "2025-12-07T11:26:46Z"
+    },
+    {
+      "title": "Show HN: Changeloghub – Automatically create beautiful changelogpages (beta)",
+      "url": "https://changeloghub.com",
+      "hn": "https://news.ycombinator.com/item?id=44817870",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2025-08-06T21:08:26Z"
+    },
+    {
+      "title": "Show HN: Release The Notes – AI-generated release notes from your Git commits",
+      "url": "https://releasethenotes.com/",
+      "hn": "https://news.ycombinator.com/item?id=44003724",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-05-16T10:33:21Z"
+    }
+  ]
+}

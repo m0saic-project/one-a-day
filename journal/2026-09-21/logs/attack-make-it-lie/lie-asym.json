@@ -1,0 +1,10 @@
+{
+  "title": "make it lie - half-measured rows",
+  "subtitle": "rows 1 and 2 have variance on ONE side only",
+  "rows": [
+    { "name": "baseline measured, candidate run once", "unit": "ms", "base": 100, "baseRange": 1, "value": 50 },
+    { "name": "candidate measured, baseline run once", "unit": "ms", "base": 100, "value": 50, "range": 1 },
+    { "name": "both measured", "unit": "ms", "base": 100, "baseRange": 1, "value": 50, "range": 1 },
+    { "name": "neither measured", "unit": "ms", "base": 100, "value": 50 }
+  ]
+}

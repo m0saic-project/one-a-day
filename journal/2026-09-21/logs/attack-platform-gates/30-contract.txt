@@ -1,0 +1,5 @@
+
+> one-a-day@0.1.0 test:contract
+> node tools/contract-check.mjs
+
+contract-check: clean — 4 template(s), CJS entry, manifest agrees

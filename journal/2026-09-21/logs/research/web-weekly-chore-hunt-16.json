@@ -1,0 +1,56 @@
+{
+  "note": "Pages opened with WebFetch (summariser output, not raw HTML). Quotes below were returned as verbatim by the fetch tool. Raw text for the fetch-text.mjs pages is in files -8 through -15.",
+  "angle": "web-weekly-chore-hunt",
+  "date": "2026-09-21",
+  "opened": [
+    {
+      "url": "https://community.adobe.com/t5/photoshop/leaderboard-spreadsheet-to-graphic/td-p/10321897",
+      "posted": "Photoshop community thread (OP undated in fetch; thread id 10321897, c.2018)",
+      "quote": "Im trying to figure out a way to automate information from a google spreadsheet into my graphic. Up to this point I have been copying and pasting data in from the spreadsheet and has become very time consuming as I make a couple of these leader boards."
+    },
+    {
+      "url": "https://community.adobe.com/t5/photoshop-ecosystem-discussions/variable-data-set-football-table-standings/m-p/12214862",
+      "posted": "2021-07-29",
+      "quote": "What I want is to add a logo from each club, not manually, but via variable data.",
+      "context": "OP wants a Premier-League-style table rebuilt from a CSV whenever standings change."
+    },
+    {
+      "url": "https://community.adobe.com/t5/after-effects-discussions/spreadsheet-data-to-animated-graphs/m-p/10143513/highlight/true",
+      "posted": "2018-11-09",
+      "quote": "Does someone have a recommendation for an AE plugin that generates multi-line Line Chart animations and Bar Chart animations - and is able to utilize spreadsheet-type of data?"
+    },
+    {
+      "url": "https://github.com/grafana/grafana/issues/11558",
+      "posted": "2018-04-11",
+      "quote": "In addition to alerting, it would be useful to have daily summary reports sent to communication channels such as Slack or email. For example, a single chart or dashboard render would be sent to a Slack channel every morning at 8am (UTC)."
+    },
+    {
+      "url": "https://flourish.studio/blog/animated-charts/",
+      "posted": "last updated 2025-06-05",
+      "quote": "Use this animated chart type to visualize any data that can be measured over time."
+    },
+    {
+      "url": "https://www.gipper.com/templates/rankings",
+      "posted": "undated vendor page",
+      "quote": "Showcase league standings or team rankings with engaging sports graphics tailored to highlight any sport from football, to volleyball, to golf and more.",
+      "audience": "K12 districts / schools / athletic departments / teams, college athletic departments, club sports organizations"
+    },
+    {
+      "url": "https://racey.gg/",
+      "posted": "site blog posts dated 2026-09-03 and 2026-08-31",
+      "quotes": [
+        "Drop in race results - standings update across drivers, teams, and championships instantly.",
+        "iRacing and EA F1 23/24/25 write one you can upload directly - iRacing from the member site, EA F1 from the in-game Export Session Results button on PC. Every other sim works from a results spreadsheet: one row per driver, finishing position and driver name."
+      ]
+    },
+    {
+      "url": "https://www.bannerbear.com/templates/n9l82ardkrm1jm46bp-github-leaderboard/",
+      "posted": "undated vendor template page",
+      "note": "A commercial image/video generation API ships a stock 'GitHub Leaderboard' template; page confirms output is images AND videos from API data, but gives no audience or cadence."
+    }
+  ],
+  "blocked": [
+    "pipeline/research/reddit.mjs -> HTTP 403 for every subreddit tried (r/fantasyfootball, r/nonprofit)",
+    "WebFetch old.reddit.com and www.reddit.com -> blocked in this environment"
+  ]
+}

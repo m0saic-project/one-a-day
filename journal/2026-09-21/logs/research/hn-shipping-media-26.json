@@ -1,0 +1,152 @@
+{
+  "query": "\"artificialanalysis\" \"chart\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22artificialanalysis%22%20%22chart%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=20",
+  "count": 16,
+  "results": [
+    {
+      "title": "The Kimi K3 Moment",
+      "url": "https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment/",
+      "hn": "https://news.ycombinator.com/item?id=48963589",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-18T23:46:35Z",
+      "text": "The artificialanalysis cost per task chart has DeepSeek as the clear winner and Fable as the clear loser. But I would still pick Fable for some tasks, so that also can't be all there is to it. But I agree that price per token figure is not great. It seems even the tokens per character can vary between models, so it's basically useless."
+    },
+    {
+      "title": "DeepSeek 4 Flash local inference engine for Metal",
+      "url": "https://github.com/antirez/ds4",
+      "hn": "https://news.ycombinator.com/item?id=48052926",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-07T18:24:54Z",
+      "text": "On max it uses more than twice as many tokens as on high when running the ArtificialAnalysis benchmark suite, and then it's indeed the model with the highest token usage (among the current top tier models). See the \"Intelligence vs. Token Use\" chart here: https://artificialanalysis.ai/models?models=gpt-5-5%2Cgpt-5-..."
+    },
+    {
+      "title": "GLM-5.2 is a step change for open agents",
+      "url": "https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open",
+      "hn": "https://news.ycombinator.com/item?id=48670501",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-25T08:18:25Z",
+      "text": "> Kimi and GLM models have coined a new term: Thinkslop. > [...] > So for now I'm happy with just two models: GPT and DeepSeek. 1. DeepSeek V3.2, V4 Flash, V4 Pro, at high or max thinking, ... when recommending a model it should always be a precise model, not just an AI lab 2. DeepSeek V4 Flash at max thinking is the most verbose model (among top models) in the AA benchmarks. See the \"Intelligence Index Token Use\" chart: [1] [1]: https://artificialanalysis.ai/models?models=gpt-5-5-high%2Cg..."
+    },
+    {
+      "title": "Ed Zitron loses his mind annotating an AI doomer macro memo",
+      "url": "https://www.dropbox.com/scl/fi/1p1n0y1ip48ianok9dvbp/Annotation-The-Global-Intelligence-Crisis.pdf?dl=0&e=1&noscript=1&rlkey=qaar8ea6l5hh6jqls4x6g8q4b",
+      "hn": "https://news.ycombinator.com/item?id=47150958",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-02-25T13:03:51Z",
+      "text": ">> \"The dataset for this insight combines data on large language model (LLM) API prices and benchmark scores from Artificial Analysis and Epoch AI.\" I don't know about Epoch AI, but Artificial Analysis shares its methodology: https://artificialanalysis.ai/methodology Their chart of inference prices split by benchmark intelligence: https://artificialanalysis.ai/trends#efficiency"
+    },
+    {
+      "title": "LLMs: Intelligence vs. Cost",
+      "url": "https://openteams.com/intelligence-vs-cost/",
+      "hn": "https://news.ycombinator.com/item?id=49550372",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-03T14:28:10Z",
+      "text": "Artificial analysis, the place where they get this data from, has a cost vs time chart. Go to https://artificialanalysis.ai/ and scroll down to the second graph under “Speed & Latency”. I think this is the most import graph on their page. I wish they would let us filter by intelligence, or pass rate, and then see this graph. This is the tradeoff that actually matters, cost/token or tok/s can be very misleading (take glm-5.3-flash as an example)."
+    },
+    {
+      "title": "Nativ: Run frontier open models locally on your Mac",
+      "url": "https://blaizzy.github.io/nativ/",
+      "hn": "https://news.ycombinator.com/item?id=48986768",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-21T00:40:09Z",
+      "text": "I was confused too, but I believe that it refers to the Pareto Frontier: the best set of solutions to a multi-objective problem. Look it up, it’s a bit difficult to explain concisely in words but it is intuitive visually. If we are thinking of intelligence and price, a model will be in the Pareto Frontier if there’s no cheaper model of the same or higher intelligence. Or if there’s no more intelligent model for that price or lower. EDIT: See this chart from Artificial Analysis: https://artificialanalysis.ai/#intelligence-comparison-tabs So for example DeepSeek V4 Pro can be considered a frontier model because there's no cheaper model that is as intelligent. For any solution in the Pareto Frontier, there no \"no-brainer\" alternative, in the sense that there's no other option that is better in some way without giving up something else. It's the best of its \"weight-class\"."
+    },
+    {
+      "title": "HarnessTax: How Much Does the Harness Matter for Coding Agents?",
+      "url": "https://harnesstax.github.io/",
+      "hn": "https://news.ycombinator.com/item?id=49741407",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-17T14:34:19Z",
+      "text": "Coming Soon: https://artificialanalysis.ai/agents/coding-agents?coding-ag... They used to have one chart with {model X harness} for a subset of combos, looks like that is getting an upgrade"
+    },
+    {
+      "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "hn": "https://news.ycombinator.com/item?id=49539265",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-02T17:07:41Z",
+      "text": "3.8 uses nearly twice as many tokens as 3.7. One might be inclined to think that they just increased the thinking budgets... 3.7 used 64M on high: https://artificialanalysis.ai/models/gemini-3-7-flash 3.8 used 120M on high: https://artificialanalysis.ai/models/gemini-3-8-flash Even their own chart showed more than 2x higher cost compared to 3.7: https://storage.googleapis.com/gweb-uniblog-publish-prod/ima..."
+    },
+    {
+      "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "hn": "https://news.ycombinator.com/item?id=49539258",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-02T17:06:54Z",
+      "text": "3.8 uses nearly twice as many tokens as 3.7. One might be inclined to think that they just uppsed the thinking budgets... 3.7 used 64M on high: https://artificialanalysis.ai/models/gemini-3-7-flash 3.8 used 120M on high: https://artificialanalysis.ai/models/gemini-3-8-flash Even their own chart showed more than 2x higher cost compared to 3.7: https://storage.googleapis.com/gweb-uniblog-publish-prod/ima..."
+    },
+    {
+      "title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+      "hn": "https://news.ycombinator.com/item?id=49125763",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-31T16:59:55Z",
+      "text": "If anyone from ArtificialAnalysis is here: The Intelligence card on the page seems to incorrect. It shows different data (#2 for Deepseek) than the actual Intelligence chart lower in the same page."
+    },
+    {
+      "title": "I love LLMs, I hate hype",
+      "url": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html",
+      "hn": "https://news.ycombinator.com/item?id=48889651",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-07-13T08:42:07Z",
+      "text": "\"Are they really the best models?\" Yes. I mean, most people agree they are. I've used all of the serious contenders (well not Grok 4.5, because Musk, and not Meta Spark because Zuck, but everything else I've used on at least a couple of projects to get a feel for them). My experience roughly matches the vibes. But, Fable is remarkable when it doesn't refuse to do the work (which it does, quite a lot, since my areas of interest are security and training specialist models). Anyway, the vibes strongly indicate Fable is the best model, but not by an amount that is noticeable to most people. You could pick any of the top 10 models on this chart and do most of the tasks most people are doing with models: https://artificialanalysis.ai/#intelligence"
+    },
+    {
+      "title": "Qwen3.7-Max: The Agent Frontier",
+      "url": "https://qwen.ai/blog?id=qwen3.7",
+      "hn": "https://news.ycombinator.com/item?id=48208316",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-20T14:21:09Z",
+      "text": "referencing this: https://artificialanalysis.ai/evaluations/omniscience?models... (had to add it to the chart, wasn't displayed by default. is it the lowest rate in the datasetor no?)"
+    },
+    {
+      "title": "Show HN: Find the best local LLM for your hardware, ranked by benchmarks",
+      "url": "https://github.com/Andyyyy64/whichllm",
+      "hn": "https://news.ycombinator.com/item?id=48147962",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-15T12:51:36Z",
+      "text": "Not perfect, but I find the artificialanalysis.ai \"Intelligence vs. Output Tokens Used in Artificial Analysis Intelligence Index\" chart[0] (scroll down to the titled chart) to be of great use. A proper evaluation needs to compare 3 things together: score, speed, and verbosity. This chart plots score vs verbosity. [0] https://artificialanalysis.ai/?models=gpt-oss-120b%2Cgemma-4..."
+    },
+    {
+      "title": "GPT-5.4",
+      "url": "https://openai.com/index/introducing-gpt-5-4/",
+      "hn": "https://news.ycombinator.com/item?id=47279598",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-06T19:08:51Z",
+      "text": "Benchies update: https://artificialanalysis.ai/ Looks like it costs ~25% more than 5.2, with both on xhigh reasoning. They only seem to have tested xhigh, which is a shame, since I think that reasoning level is in the point of diminishing returns for most tasks. Also I was completely wrong earlier. Opus is significantly more expensive. I was looking at the wrong entry in the chart, the non-reasoning version of Opus. The fair comparison is Opus on max reasoning, which costs about twice the price of GPT-5.4 xhigh, to run the AA evals."
+    },
+    {
+      "title": "GPT-5.2-Codex",
+      "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+      "hn": "https://news.ycombinator.com/item?id=46318419",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-12-18T20:44:41Z",
+      "text": "If you look at benchmarks, the Claude models score significantly higher intelligence per token. I'm not sure how that works exactly, but they are offset from the entire rest of the chart on that metric. It seems they need less tokens to get the same result. (I can't speak for how that affects performance on very difficult tasks though, since most of mine are pretty straightforward.) So if you look at the total cost of running the benchmark, it's surprisingly similar to other models -- the higher price per token is offset by the significantly fewer tokens required to complete a task. See \"Cost to Run Artificial Analysis Index\" and \"Intelligence vs Output Tokens\" here https://artificialanalysis.ai/ ...With the obligatory caveat that benchmarks are largely irrelevant for actual real world tasks and you need to test the thing on your actual task to see how well it does!"
+    },
+    {
+      "title": "The \"confident idiot\" problem: Why AI needs hard rules, not vibe checks",
+      "url": "https://steerlabs.substack.com/p/confident-idiot-problem",
+      "hn": "https://news.ycombinator.com/item?id=46195744",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-12-08T18:21:21Z",
+      "text": "> I should be running my own LLM I approve of this, but in your place I'd wait for hardware to become cheaper when the bubble blows over. I have a i9-10900, and bought an M.2 SSD and 64GB of RAM in july for it, and get useful results with Qwen3-30B-A3B (some 4-bit quant from unsloth running on llama.cpp). It's much slower than an online service (~5-10 t/s), and lower quality, but it still offers me value for my use cases (many small prototypes and tests). In the mean time, check out LLM service prices on https://artificialanalysis.ai/ Open source ones are cheap! Lower on the homepage there's a Cost Efficiency section with a Cost vs Intelligence chart."
+    }
+  ]
+}

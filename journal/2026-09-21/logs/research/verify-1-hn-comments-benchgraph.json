@@ -1,0 +1,16 @@
+{
+  "query": "benchmarks chart graph table of numbers",
+  "days": 540,
+  "count": 1,
+  "results": [
+    {
+      "title": "OpenAI o3-pro",
+      "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+      "hn": "https://news.ycombinator.com/item?id=44246127",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-06-11T10:37:36Z",
+      "text": "I&#x27;ve been using o3 extensively since release (and a lot of Deep Research). I also use a lot of Claude and Gemini 2.5 Pro (most of the times, for code I&#x27;ll let all of them go at it and iterate on my fav results). So far I&#x27;ve only used o3-pro a bit today, and it&#x27;s a bit too heavy to use interactively (fire it off, revisit in 10-15 minutes), but it seems to generate much cleaner&#x2F;more well organized code and answers. I feel like the benchmarks aren&#x27;t really doing a good job at capturing&#x2F;reflecting capabilities atm. eg, while Claude 4 Sonnet appears to score about"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "query": "\"we benchmarked\"",
+  "tags": "story",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22we%20benchmarked%22&tags=story&advancedSyntax=true&typoTolerance=false&hitsPerPage=30",
+  "count": 30,
+  "results": [
+    {
+      "title": "We benchmarked Cyberpunk 2077 on Mac M1 to M4 – the numbers don't lie",
+      "url": "https://www.tomsguide.com/gaming/we-benchmarked-cyberpunk-2077-on-mac-heres-how-well-it-runs-on-m1-m4-macs-vs-windows",
+      "hn": "https://news.ycombinator.com/item?id=44633472",
+      "points": 25,
+      "comments": 32,
+      "createdAt": "2025-07-21T10:05:48Z"
+    },
+    {
+      "title": "We benchmarked Google Cloud's $512 VM – the speed wasn't the interesting part",
+      "url": "https://webbynode.com/articles/google-cloud-512-vm-not-10x-faster-than-50-vm",
+      "hn": "https://news.ycombinator.com/item?id=48372148",
+      "points": 10,
+      "comments": 6,
+      "createdAt": "2026-06-02T16:08:59Z"
+    },
+    {
+      "title": "We Benchmarked Claude Code, Codex, Semgrep, CodeQL, Trent on 28 CWE-Bench CVEs",
+      "url": "https://trent.ai/blog/claude-code-codex-semgrep-codeql-trent-vs-cwe-bench-cve/",
+      "hn": "https://news.ycombinator.com/item?id=48308084",
+      "points": 6,
+      "comments": 2,
+      "createdAt": "2026-05-28T12:39:46Z"
+    },
+    {
+      "title": "We Benchmarked Frontier LLMs on Defensive Security. The Results Surprised Us",
+      "url": "https://cotool.ai/blog/evaluating-ai-agents-in-security-operations",
+      "hn": "https://news.ycombinator.com/item?id=45967005",
+      "points": 6,
+      "comments": 2,
+      "createdAt": "2025-11-18T14:56:24Z"
+    },
+    {
+      "title": "Show HN: We benchmarked 18 LLMs on OCR (7K+ calls) – cheaper models win",
+      "url": "https://www.arbitrhq.ai/leaderboards/",
+      "hn": "https://news.ycombinator.com/item?id=47860393",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2026-04-22T07:48:26Z"
+    },
+    {
+      "title": "We Benchmarked 83 Frontier AI Repos–None Passed with an A",
+      "url": "https://opsera.ai/blog/frontier-ai-software-readiness-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49647376",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-09-10T17:28:15Z"
+    },
+    {
+      "title": "We Benchmarked Frontier Reasoning Models on the Atlantic's Bracket City",
+      "url": "https://www.redspring.xyz/blog/bracket-city-bench/",
+      "hn": "https://news.ycombinator.com/item?id=44572475",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2025-07-15T15:55:19Z"
+    },
+    {
+      "title": "We benchmarked Prometheus, Mimir, and OpenObserve on 1.09M metrics series",
+      "url": "https://openobserve.ai/blog/openobserve-vs-prometheus-mimir-metrics-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49336220",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-08-17T19:19:33Z"
+    },
+    {
+      "title": "We benchmarked GPT-4.1: it's better at code reviews than Claude Sonnet 3.7",
+      "url": "https://www.qodo.ai/blog/benchmarked-gpt-4-1/",
+      "hn": "https://news.ycombinator.com/item?id=43683831",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2025-04-14T17:30:14Z"
+    },
+    {
+      "title": "We benchmarked 5 ways to generate PDFs in Laravel",
+      "url": "https://bladepdf.com/blog/laravel-pdf-generation-benchmark",
+      "hn": "https://news.ycombinator.com/item?id=49314815",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-08-15T22:19:41Z"
+    },
+    {
+      "title": "Show HN: We benchmarked 3 AI video detection APIs on 190 videos",
+      "url": "https://game.defakes.com/feed",
+      "hn": "https://news.ycombinator.com/item?id=47439118",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-03-19T13:31:49Z"
+    },
+    {
+      "title": "A Markdown wiki outscored every AI agent memory product we benchmarked",
+      "url": "https://verginglabs.com/",
+      "hn": "https://news.ycombinator.com/item?id=49156055",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-03T14:12:03Z"
+    },
+    {
+      "title": "We Benchmarked Our Open Source Memory Tool Against a Microsoft Research Paper",
+      "url": "https://medium.com/@vektormemory/we-benchmarked-our-open-source-memory-tool-against-a-microsoft-research-paper-798eab6ea6c6",
+      "hn": "https://news.ycombinator.com/item?id=48341046",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-05-30T22:03:56Z"
+    },
+    {
+      "title": "Which Web Framework Is the Fastest? We Benchmarked 9 of Them",
+      "url": "https://ntnt-lang.org/blog/which-web-framework-is-fastest",
+      "hn": "https://news.ycombinator.com/item?id=47363671",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-03-13T12:38:19Z"
+    },
+    {
+      "title": "We benchmarked our VS Code fork against VS Code, Cursor, Antigravity and Zed",
+      "url": "https://hyperlaneide.com/blog/hyperlane-vs-code-cursor-antigravity-zed-benchmark",
+      "hn": "https://news.ycombinator.com/item?id=49437933",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-08-25T17:54:34Z"
+    },
+    {
+      "title": "We benchmarked Exoscale vs. Tencent VM's: 3.25× the CPU throughput for 18% less",
+      "url": "https://webbynode.com/articles/exoscale-vs-tencent-cpu-throughput",
+      "hn": "https://news.ycombinator.com/item?id=49260705",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-08-11T16:28:01Z"
+    },
+    {
+      "title": "HN: We benchmarked 8 AI models on 36 real Kubernetes scenarios for $40",
+      "url": "https://bench.evidra.cc/",
+      "hn": "https://news.ycombinator.com/item?id=47440032",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-03-19T14:22:49Z"
+    },
+    {
+      "title": "We Benchmarked the Best Video AI Models",
+      "url": "https://www.gmicloud.ai/blog/modelmatch-technical-overview",
+      "hn": "https://news.ycombinator.com/item?id=46213754",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-10T03:37:56Z"
+    },
+    {
+      "title": "We Benchmarked Mistral and Landing AI vs. Docsumo",
+      "url": "https://www.docsumo.com/blogs/ocr/docsumo-ocr-benchmark-report",
+      "hn": "https://news.ycombinator.com/item?id=43581476",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-04-04T12:47:19Z",
+      "text": "We recently ran a benchmark comparing Docsumo’s in-house OCR engine (which powers our Intelligent Document Processing platform) against Mistral OCR and Landing AI’s agentic document extraction. Why? There's a lot of hype around generative OCR tools lately, and we were curious how they actually perform on real-world documents—things like messy invoices, noisy scans, bank statements, multilingual forms, and low-res PDFs. What we tested: >Text extraction quality (layout preservation, character-level accuracy) >Performance on tables, charts, vertically aligned text >Impact on downstream tasks like structured data extraction (using GPT-4o) >Latency comparisons What we found: Docsumo's native OCR consistently outperformed both Mistral and Landing AI across layout fidelity, hallucination rate, and downstream extraction accuracy. While Mistral is fast and cheap, it missed large content chunks and hallucinated on noisy inputs. Landing AI did better but often paraphrased or mislabeled data, especially in multilingual or structured formats. We’ve made the benchmark results public (including side-by-side OCR outputs): https://huggingface.co/spaces/docsumo/ocr-results And here’s the full breakdown with methodology, dataset, and observations: https://www.docsumo.com/blogs/ocr/docsumo-ocr-benchmark-repo... This is just the first benchmark in a larger series—we’re working on evaluating more IDP/OCR tools next. If you're building workflows around document automation or curious about OCR performance today, would love your thoughts/feedback."
+    },
+    {
+      "title": "Exponential Smoothing: faster and more accurate than NeuralProphet",
+      "url": "https://github.com/Nixtla/statsforecast/blob/main/experiments/neuralprophet/README.md",
+      "hn": "https://news.ycombinator.com/item?id=32500725",
+      "points": 161,
+      "comments": 42,
+      "createdAt": "2022-08-17T19:33:55Z",
+      "text": "We benchmarked on more than 55K series and show that ETS improves MAPE and sMAPE forecast accuracy by 32% and 19%, respectively, with 104x less computational time over NeuralProphet. We hope this exercise helps the forecast community avoid adopting yet another overpromising and unproven forecasting method."
+    },
+    {
+      "title": "Launch HN: Expanse (YC P26) – Unlock Wasted GPU Capacity",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48356312",
+      "points": 103,
+      "comments": 27,
+      "createdAt": "2026-06-01T13:05:02Z",
+      "text": "Hey HN, we’re Ismaeel, Eren, Yafet and Nikodem. We built Expanse ( https://expanse.sh/ ) to increase the effective capacity of your HPC/GPU clusters running schedulers/orchestrators like Kubernetes and SLURM. We read the source code, job submission script, and the hardware a workload is about to run on to predict what the job actually needs before the cluster sees it. We also flag failures we think are about to happen and surface line-level optimisations the researcher can apply themselves. The problem: Datacenters run at roughly 30% to 40% effective utilisation. Users request more resources than what they actually need, because of asymmetric risk: while over-requesting is bad because it’s expensive and wastes capacity that someone else could have used, under-requesting kills your job mid-run and you lose days of work. So everyone over-requests by two to three times. We measured one national-scale HPC cluster for a month and from 122k jobs, 59% of the compute was wasted. At on-demand cloud rates for the same hardware, that’s roughly $8.5M of compute wasted in one month on one cluster. The pattern is similar in large scale compute industries as well, such as quant funds, AI labs, and manufacturing. The four of us ran HPC and GPU training workloads at the largest quant funds and HPC facilities. Ismaeel did research at EPCC (Edinburgh’s Parallel Computing Centre, the UK’s national HPC site) under Adrian Jackson, where he built the first multimodal HPC resource predictor: a model that ingests job source code, submission scripts, hardware telemetry and cluster metadata in order to figure out how much compute will actually be needed. On a dataset of real workloads on EPCC’s own clusters it scored 34% better than any other baseline, and outperformed frontier general-purpose LLMs prompted on the same prediction task by roughly 8x. These results convinced us the problem was solvable with software. Expanse installs on every node and hooks into SLURM (or the K8s scheduler). It ingests live hardware telemetry (DCGM, CUPTI, Cgroups, Network/IO monitoring) of your cluster creating a custom embedding of how your hardware performs. We scan any workloads about to be submitted through SLURM/K8s (plugging into the life cycles of the job so you don't have to change how you submit things) and we feed this into our deep learning models to give researchers accurate resource recommendations, failure detections, and optimisation suggestions at submission time. We fine tune cluster-specific models that get sharper over time as you run more workloads. Our models are trained to over-provision rather than under-provision due to the asymmetric outcomes of a job crashing. We also provide uncertainty estimates and p90 values to allow users to choose their risk tolerance. We surface three capabilities to users of the cluster: (1) Resource prediction at submit time. We predict the GPU VRAM, Utilisation, memory, CPUs and walltime the job actually needs, with a confidence interval. From these predictions we also surface failure predictions for OOMs and other memory related issues, and code line level optimisations to increase the utilisation of the job on the hardware. (2) Live Observability. While the job runs we showcase the telemetry we are collecting through a dashboard that gives an intuitive view of what's going on in the hardware and where your workload is at in terms of code stack profiling. We dynamically profile workloads to achieve a low single digit overhead while being informative. (3) Failure diagnosis. If a workload fails, we take all the data we collected and perform correlations on the stack profiling and the hardware telemetry we collect to surface solution oriented logs. These are one, two line logs telling you not only what happened when the job failed, but why and how to fix it with code line level suggestions. What’s different about our approach: The state of the art for most clusters is to either have per-user historical averages from sacct (SLURM accounting DB); hand-written rules/heuristics; or frontier LLM coding agents. For per-user historical averages from sacct, once a new type of workload is submitted onto the cluster or code level changes are made the model becomes wildly inaccurate. For the LLM baseline we provided them with the submission script and source code of the workload being ran, and gave it the full capabilities of its coding harness in the cluster and it performed quite poorly. We benchmarked Expanse against the state of the art at the time (Gemini 3.5 pro, Claude Opus 4.8, GPT 5.5, Codex 5.3) and outperformed them by 8x. You might be thinking, as these models scale and get better, they could beat us on this task; however we saw no correlation in model size or iteration on accuracy improvement. Claude Haiku actually performed better than Opus on a lot of workloads and previous iterations of models had the same, if not slightly better, accuracy. Even coding specific models, such as Codex 5.3 performed poorly (matching accuracy with GPT5.5). These models reason in a vacuum, without native support for modal inputs such as source code (to understand the underlying data flow and computational patterns), and hardware telemetry and topology (to understand performance patterns of the cluster) they cannot accurately predict the resources a workload needs. Additionally, Expanse continuously updates its internal models to make sure our predictions get more accurate as more workloads run on your cluster, making it well suited for changes in new hardware or workload patterns. LLMs are very good at writing code and hyper parameter sweeps, but they need Expanse to complete the full agentic loop for auto research. It's super easy to plug our tools into these agents, we have made our CLI tools LLM friendly. For more details on our LLM eval, check out: https://x.com/ismaeel_bashir_/status/2059683849404383283 We’re currently onboarding customers as paid pilots. Pricing is determined per-cluster. We offer a two-week measurement window where we install, ingest, and report recoverable capacity to datacenter operators, followed by a paid pilot deployment in one department at a fixed monthly fee, renewing at the same rate unless the scope expands. If you run a HPC/GPU cluster (SLURM or K8s, 100+ GPUs), we'd love to have a talk. We’ll install on a section of your cluster for a week, send a written report of what’s recoverable, and you decide whether to keep going. If you’ve tried something like this and it didn’t work, we’d really like to hear why. And if there’s a failure mode you’d want predicted that the post doesn’t mention, drop it in this thread and we’ll write back with whether the model already catches it or what it would take to add. I never thought I’d be on the other side of launch HN :). Even if you don’t run a cluster, we’d still love to hear from you. Any thoughts on our approach, your experiences running workloads on clusters, or even anywhere you think we’re wrong - we'd love to hear it. Tally Ho!"
+    },
+    {
+      "title": "Show HN: Model2vec-Rs – Fast Static Text Embeddings in Rust",
+      "url": "https://github.com/MinishLab/model2vec-rs",
+      "hn": "https://news.ycombinator.com/item?id=44021883",
+      "points": 60,
+      "comments": 15,
+      "createdAt": "2025-05-18T15:01:35Z",
+      "text": "Hey HN! We’ve just open-sourced model2vec-rs, a Rust crate for loading and running Model2Vec static embedding models with zero Python dependency. This allows you to embed text at (very) high throughput; for example, in a Rust-based microservice or CLI tool. This can be used for semantic search, retrieval, RAG, or any other text embedding usecase. Main Features: - Rust-native inference: Load any Model2Vec model from Hugging Face or your local path with StaticModel::from_pretrained(...). - Tiny footprint: The crate itself is only ~1.7 mb, with embedding models between 7 and 30 mb. Performance: We benchmarked single-threaded on a CPU: - Python: ~4650 embeddings/sec - Rust: ~8000 embeddings/sec (~1.7× speedup) First open-source project in Rust for us, so would be great to get some feedback!"
+    },
+    {
+      "title": "Show HN: Filament – Fast data movement engine in Go",
+      "url": "https://github.com/galaxy-io/filament",
+      "hn": "https://news.ycombinator.com/item?id=49611112",
+      "points": 31,
+      "comments": 6,
+      "createdAt": "2026-09-08T14:48:17Z",
+      "text": "Hi, I'm Leon one of the cofounders of Galaxy. We just open sourced Filament, our data movement engine. Its written in Go and Apache 2.0 licensed. We currently support a handful of API connectors, Postgres, MySQL, ClickHouse, Iceberg, and S3. We benchmarked Filament against a bunch of other open source data movement tools and results + the harness is available at https://github.com/galaxy-io/benchmarks . This is just our first minor release of Filament and there is a ton to build. We are excited to shape our roadmap around your feedback. If you are willing to give it a try any feedback would be greatly appreciated! Docs at https://filament.getgalaxy.io and a longer blog post on why we built it at https://www.getgalaxy.io/blog/introducing-filament"
+    },
+    {
+      "title": "Show HN: Humor Arena – Which frontier model is funniest?",
+      "url": "https://laugh.so/benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49190622",
+      "points": 10,
+      "comments": 7,
+      "createdAt": "2026-08-05T23:48:32Z",
+      "text": "What if you could measure humor? Well we've trained a model on our own dataset of ~50k human ratings to detect what jokes people find funniest. We know it's part objective, part subjective component. Subjective is out of our depth for now haha The main results: Fable 5 is funniest - beating the average model 67% of the time, with GPT 4o last at 17%. Other findings: - The models never refused to try, even with dark prompts - Thinking longer has a slight benefit - Absurdness correlates negatively with joke quality Some methodology notes: - We benchmarked our model against the human majority and it agreed 72% of the time in a blind sample test. - We had 51 US adults rate the jokes, each blind to the models, with joke order randomized, and quality checked for attention and speed. - To rate some yourself visit https://pair.laugh.so The full benchmark here: https://laugh.so/benchmark Am taking requests if there's more research you want to see! Cheers"
+    },
+    {
+      "title": "We outperformed Mistral OCR with a tiny team",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=43292499",
+      "points": 7,
+      "comments": 6,
+      "createdAt": "2025-03-07T18:08:56Z",
+      "text": "Mistral recently launched their OCR model, claiming to be the best in the world. We put that claim to the test against JigsawStack vOCR — our own OCR solution, built by a team of just three people. We benchmarked both models across real-world multilingual documents, handwriting recognition, structured data extraction, and bounding box accuracy. Here’s a quick breakdown: - Languages: Mistral supports 12 benchmarked languages, while JigsawStack vOCR handles 70+ including Telugu, Hindi, and lesser-used scripts. - Handwriting Recognition: Mistral struggles with handwritten and distorted text, while JigsawStack vOCR accurately extracts text from printed materials, handwriting, and even text on walls. - Structured Output: Mistral requires additional post-processing with an LLM for structured data, while JigsawStack natively returns structured JSON output. - Bounding Boxes: Mistral OCR does not provide bounding box data, while JigsawStack supports both sentence and word-level positions. Check out the full breakdown with examples, screenshots, and API comparisons in our blog post Mistral OCR vs. JigsawStack vOCR here: https://jigsawstack.com/blog/mistral-ocr-vs-jigsawstack-vocr We'd love to hear feedback and answer any questions! If you’re building with OCR, try out JigsawStack vOCR and let us know your thoughts."
+    },
+    {
+      "title": "Show HN: AI agents are bad at API integrations – we fixed it",
+      "url": "https://www.apimatic.io/product/context-plugins/showcase",
+      "hn": "https://news.ycombinator.com/item?id=47704728",
+      "points": 6,
+      "comments": 3,
+      "createdAt": "2026-04-09T15:06:54Z",
+      "text": "Hi, we're Sohaib and Hannan from APIMatic. We've been building tools to help Developers integrate with APIs for 5+ years at APIMatic. We're now trying to help AI agents do the same. This started from a conversation at PayPal DevDay 2025. The PayPal developer experience team were monitoring developers using AI agents to integrate PayPal APIs, and the agents kept reaching for outdated docs and deprecated SDK versions, often falling back to training data instead of reading the current API documentation. We tested this ourselves with Cursor. Across multiple iterations, 87% of runs fetched outdated reference docs using web search, and 13% of implementations used a deprecated SDK version. What we built: We built Context Plugins - given an OpenAPI spec, we generate SDKs and a remote MCP server that exposes language-specific API context (auth flows, method signatures, error handling, pagination, integration patterns from the API team) packaged and optimised for LLM consumption. Instead of guessing from training data or relying on web search, coding agents get the correct SDK methods and integration patterns they need to build API integrations. We've just launched in Beta with PayPal: https://developer.paypal.com/serversdk/java/getting-started/... We benchmarked Context Plugins on two codebases, nopCommerce (a mature ASP.NET e-commerce platform) and Microsoft's eShop reference app, and saw 2x faster integration time, 65% lower token usage, and near-zero hallucinations. Getting started: - We've published ready-to-use Context Plugins for Spotify, Twilio, Slack, and other APIs; the Show HN link takes you to our product showcase with one-click install for popular AI agents. - Want to generate Context Plugins from your own spec? Sign up for a free 2-week trial on the APIMatic website, no credit card required. - Want to dive deeper into the data? Read more here https://www.apimatic.io/product/context-plugins/case-study We're really looking forward to hearing the community's feedback on this. We're particularly interested in hearing from API platform teams seeing this problem with their users, developers who've fought this problem manually or anyone who's tried building something similar. What are we missing? What would make this more useful?"
+    },
+    {
+      "title": "Show HN: Instant streaming APIs with built-in auth for new or existing Postgres",
+      "url": "https://hasura.io/blog/instant-streaming-api-built-in-authorization-new-existing-postgres/",
+      "hn": "https://news.ycombinator.com/item?id=32735086",
+      "points": 6,
+      "comments": 0,
+      "createdAt": "2022-09-06T10:13:30Z",
+      "text": "Hey HN! We recently launched a new capability to Hasura GraphQL Engine: Streaming Subscriptions for Postgres. Today we have a variety of solutions to ingest and store a large amount of data or a stream of data. However, once this data has been captured, securely exposing this data as a continuous stream to a large number of HTTP clients concurrently is a challenge. These are the challenges that Hasura aims to address: 1. Allow for Authorization rules so that clients can only consume the subset of the stream they have access to 2. Prevent missing events and allow each client to move through its stream independently 3. Scale and manage WebSocket connections to support hundreds of thousands to millions of HTTP clients concurrently Hasura's new streaming API on Postgres addresses these challenges so that teams focus on how their streams are modelled and secured instead of building and scaling the API. We benchmarked this solution to up to 1M active requests and documented the performance in the post. Happy to answer questions and let us know what streaming workloads you are running and the challenges you are facing."
+    },
+    {
+      "title": "Show HN: TabPFN Scaling Mode – Tabular Foundation Model on millions of rows",
+      "url": "https://priorlabs.ai/technical-reports/large-data-model",
+      "hn": "https://news.ycombinator.com/item?id=46138439",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2025-12-03T18:56:00Z",
+      "text": "I’m excited to announce Scaling Mode for TabPFN-2.5, our tabular foundation model (Large Tabular Model). This removes any fixed upper limits on dataset sizes and extends TabPFN to datasets with millions of rows. What is Scaling Mode? A new pipeline around TabPFN-2.5 designed for large-N workloads, which removes the fixed row limit of TabPFN. The system works with large training sets, constrained only by your compute and memory. We benchmarked Scaling Mode on datasets ranging from 1M to 10M rows, comparing against CatBoost, XGBoost, and LightGBM. Key findings: - Scaling Mode enables TabPFN-2.5 to continue improving performance with more data - Scales dramatically better than TabPFN-2.5 with 50K subsampling - No evidence of the performance gap to gradient boosting shrinking as we scale up - Performance continues to improve strongly with more data on the largest tested datasets To quickly summarise our progress, here's the history of our scaling trajectory: - TabPFN v2 (Jan 2025): 10K rows - TabPFN-2.5 (Nov 2025): 50K rows - Scaling Mode (today): 10M+ rows tested Current limitations: Scaling Mode is designed for companies for now. If you’re working with data at a large scale and want to test it, access is currently only by request to ensure we can support early users properly. Full blog post: https://priorlabs.ai/technical-reports/large-data-model Request access: https://priorlabs.ai/tabpfn/large-data Would love to hear feedback from anyone working with large tabular datasets!"
+    },
+    {
+      "title": "Show HN: We are 2.4x faster than Open AI latest SST model",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=43437377",
+      "points": 4,
+      "comments": 4,
+      "createdAt": "2025-03-21T16:11:10Z",
+      "text": "Speech-to-Text technology is crucial for audio processing applications, but most solutions are limited by speed, accuracy, or feature constraints. What if you could transcribe audio with higher accuracy, better features, and significantly faster performance? We benchmarked OpenAI's newest gpt-4o-transcribe model against JigsawStack STT across real-world scenarios, including performance, accuracy, feature set, and multilingual capabilities. Here's what we found: Performance: - JigsawStack processes audio ~2.4x faster than OpenAI's model across all audio lengths - This speed advantage remains consistent with both short clips and longer audio files File Support: - OpenAI limits files to 25MB and 25 minutes of audio per request - JigsawStack handles files up to 100MB and 4 hours of audio per request Advanced Features: - Speaker Recognition: JigsawStack accurately identifies up to 50 different speakers with timestamps - Detailed Timestamps: Provides sentence-level timing data by default - Translation: Built-in support for translating audio into 100+ languages Real-world Accuracy: - Achieved 100% accuracy on noisy audio samples where OpenAI scored 94% - Properly identified repeated phrases and sentence boundaries that OpenAI missed Our team has focused on building a specialized solution that outperforms in nearly every metric that matters for real-world applications. Check out the full breakdown here: http://jigsawstack.com/blog/openai-audio-stt-vs-jigsawstack-... Let us know what you think! We'd love feedback from the HN community - particularly from those working with audio transcription at scale."
+    },
+    {
+      "title": "Show HN: We built a narrative analysis engine for fiction writers",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48147310",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-05-15T11:33:58Z",
+      "text": "Our app (LaoTzu Writer Studio) has a feature called The Guardian which catches continuity errors and contradictions in manuscripts. So if you say your character has blue eyes in one chapter, but someone stares longingly into their green eyes in a later chapter, it'll flag that as a discontinuity. On a single thread, that's easy to track, but as a body of related attributes it gets very complicated, especially without discreet input from the user. We originally tried a named entity recognition-based approach with the goal of tracking entities, attributes, and relationships across the manuscript. We benchmarked on 96 novels from Project Gutenberg with various inconsistencies injected into each one, then ran the \"The Guardian\" layer across them to ferret them out. Unfortunately this presented 2,500 false positives across 96 novels, so ~26 false positives a novel. It's not technically bad but it's enough to become an unreliable nuisance of a feature For our next approach, we instead opted to build our own model, which we call \"Confucius\". This is a purpose-built narrative world model that sits underneath the entire analysis layer. It consists of five structures which I'm just lazily copying and pasting from our docs here: PropertyGraph — entities as nodes, relationships as weighted edges, co-occurrence counts CausalDAG — setup/payoff chains, unresolved narrative threads IntervalTree — precise word-position intervals for every entity (where is each character in the manuscript at every point) FenwickTree — entity density over word position, O(log n) range queries Trie — fuzzy entity lookup, name variants, partial matches Confucius is passive in that it only knows what you tell it via an event emission system. We then slot in an LLM for the extraction layer. We tested three approaches for said LLM 1. NER Only 2. Local GGUF Model only 3. Anthropic Haiku Only NER, in any combination, made things worse, it was low detection and generated the same high number of false positives. GGUF resulted in 100% detection, with zero false positives, and likewise for Anthropic So based on this, we opted to ship with 3 tiers - heuristic only (no AI required, but basic surface metrics), local GGUC (Qwen3, ~500mb one-time download which enables full Guardian features), or a managed API subscription (Haiku on our key) We're certainly proud of the result, but unto itself its been a fascinating journey as we surface additional features with each model refinement (e.g. \"voice fingerprint\" is our newest - essentially the consistency of the characters voice over the span of the book) We've got a kickstarter going to help fund refinements and model expenses[1], and a roadmap for additional apps down the line which we'll have on the main site[2]. We'd love for folks to try out the app so we can get some real user feedback for UI/UX refinements so please do check out the demo, or just ping us on the side 1. https://www.kickstarter.com/projects/laotzustudio/laotzu-wri... 2. https://www.redwoodrhetorica.com/"
+    }
+  ]
+}

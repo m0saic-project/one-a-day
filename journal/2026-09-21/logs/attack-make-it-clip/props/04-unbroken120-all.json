@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "name": "supercalifragilisticexpialidocious_benchmark_case_identifier_with_no_spaces_whatsoever_at_all_0123456789abcdefghijsuperc",
+      "unit": "ms",
+      "base": 412,
+      "baseRange": 14,
+      "value": 171,
+      "range": 6
+    },
+    {
+      "name": "supercalifragilisticexpialidocious_benchmark_case_identifier_with_no_spaces_whatsoever_at_all_0123456789abcdefghijsuper",
+      "unit": "ms",
+      "base": 88.2,
+      "baseRange": 9.6,
+      "value": 84.6,
+      "range": 8.4
+    },
+    {
+      "name": "supercalifragilisticexpialidocious_benchmark_case_identifier_with_no_spaces_whatsoever_at_all_0123456789abcdefghijsupe",
+      "unit": "ms",
+      "base": 1240,
+      "baseRange": 61,
+      "value": 1395,
+      "range": 64
+    },
+    {
+      "name": "supercalifragilisticexpialidocious_benchmark_case_identifier_with_no_spaces_whatsoever_at_all_0123456789abcdefghijsup",
+      "unit": "ms",
+      "base": 59,
+      "value": 44.5
+    }
+  ]
+}

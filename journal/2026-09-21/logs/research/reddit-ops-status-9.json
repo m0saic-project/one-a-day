@@ -1,0 +1,34 @@
+{
+  "query": "weekly status report engineering",
+  "days": 900,
+  "count": 3,
+  "results": [
+    {
+      "title": "Why is everything so scalable?",
+      "url": "https://www.stavros.io/posts/why-is-everything-so-scalable/",
+      "hn": "https://news.ycombinator.com/item?id=45580637",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-14T14:39:36Z",
+      "text": "Also, instead of having a small team of people to fight scalable infrastructure configuration, you could put 1-2 full time engineers on performance engineering. They&#x27;d find big-O and constant factor problems way before they mattered in production. Of course, those people&#x27;s weekly status reports would always be &quot;we spent all week tracking down a dumb mistake, wrote one line of code and solved a scaling problem we&#x27;d hit at 100x our current scale&quot;. That&#x27;s equivalent to waving a &quot;fire me&quot; flag at the bean counters and any borderline engineering managers."
+    },
+    {
+      "title": "How I influence tech company politics as a staff software engineer",
+      "url": "https://www.seangoedecke.com/how-to-influence-politics/",
+      "hn": "https://news.ycombinator.com/item?id=45478005",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-10-05T00:45:03Z",
+      "text": "Obviously the context is after you and other people have asked; multiple times. You should interpret my comment with that reasonable preamble. And obviously as you say when people are being ambiguous or not communicating well, you memo what was communicated in writing. But that doesn&#x27;t cure all organizational ills, not by a country mile. It&#x27;s nice if in your sample size you&#x27;ve personally only ever come across management chains that were trustworthy, competent and aligned. It&#x27;s nice if you&#x27;ve only ever seen one unambiguous flow of truthful information from the bottom to"
+    },
+    {
+      "title": "Among top researchers 10% publish at unrealistic levels, analysis finds",
+      "url": "https://www.chemistryworld.com/news/among-worlds-top-researchers-10-publish-at-unrealistic-levels-analysis-finds/4020962.article",
+      "hn": "https://news.ycombinator.com/item?id=43096786",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-02-19T00:02:21Z",
+      "text": "An intern host: I worked in bigtech. i got permission to secure a summer intern (paid by my cost center). I wrote a job description, interviewed candidates, and hired the best one. the intern came to the company, I found a desk for them, I met with them weekly for status reports, and daily to chat about various stuff. In this case, due to my role and its demands, I could not spend time working on interesting research, so instead, I arranged for the intern to work daily with another team that was doing relevant research. I was invited to, and attended, periodic status meetings, occasionally con"
+    }
+  ]
+}

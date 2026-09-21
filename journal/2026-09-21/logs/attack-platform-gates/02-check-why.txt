@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "templates": 4,
+  "checked": 2,
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "@one-a-day/basics/hello-world/v1: the front door is exempt (human-placed, not a day's work)",
+    "@one-a-day/harness/agent-timeline/v1: harness fixtures are exempt (internal, human-maintained)"
+  ]
+}

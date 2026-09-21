@@ -1,0 +1,9 @@
+{
+  "title": "make it lie - the undisclosed floor",
+  "subtitle": "row 2 is drawn 56x longer than its ratio; the footer only warns about row 1",
+  "rows": [
+    { "name": "regex backtrack (pathological)", "unit": "ms", "base": 12, "baseRange": 0.3, "value": 480, "range": 9 },
+    { "name": "memoised lookup", "unit": "ns", "base": 9400, "baseRange": 40, "value": 7, "range": 0.4 },
+    { "name": "http round trip", "unit": "ms", "base": 100, "baseRange": 2, "value": 92, "range": 2 }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "source": "https://arctic-shift.photon-reddit.com/api/comments/search?link_id=t3_1ml4oa7&limit=60",
+  "thread": "https://www.reddit.com/comments/1ml4oa7/",
+  "fetchedAt": "2026-09-21T04:18:21.359Z",
+  "count": 11,
+  "results": [
+    {
+      "id": "n7rb8k5",
+      "author": "PowerBI-ModTeam",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7rb8k5/",
+      "date": "2025-08-09",
+      "body": "Article content does not meet the standards of the subreddit."
+    },
+    {
+      "id": "n7rb6qe",
+      "author": "itsnotaboutthecell",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7rb6qe/",
+      "date": "2025-08-09",
+      "body": "Thanks for the tag! And please…. “If you see it, report it.” Click the dot, dot, dot menu on posts or comments and hit report so it routes to the mod queue for anyone reading these and you want us to be people first content and avoid AI slop takeover of our communities on this platform."
+    },
+    {
+      "id": "n7qikqx",
+      "author": "IndividualDress2440",
+      "score": -1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7qikqx/",
+      "date": "2025-08-09",
+      "body": "sorry for misunderstanding,i am just trying to understand the painpoint."
+    },
+    {
+      "id": "n7o0ml2",
+      "author": "Dave1mo1",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7o0ml2/",
+      "date": "2025-08-08",
+      "body": "Love it. Now just to get my users to click on an info icon..."
+    },
+    {
+      "id": "n7o0h1m",
+      "author": "Count_McCracker",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7o0h1m/",
+      "date": "2025-08-08",
+      "body": "Include an information icon on the page that cycles through a user guide for each visual. Multiple bookmarks are needed"
+    },
+    {
+      "id": "n7nz9g5",
+      "author": "Dave1mo1",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7nz9g5/",
+      "date": "2025-08-08",
+      "body": "How do you build the info overlays? A bookmark when the page is opened?"
+    },
+    {
+      "id": "n7nx1sc",
+      "author": "PowerBIPark",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7nx1sc/",
+      "date": "2025-08-08",
+      "body": "u/itsnotaboutthecell"
+    },
+    {
+      "id": "n7nutto",
+      "author": "tophmcmasterson",
+      "score": 5,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7nutto/",
+      "date": "2025-08-08",
+      "body": "Can we ban this person? Look at the post history, no comments just spamming posts on related subreddits, either a bot or someone spamming AI slop."
+    },
+    {
+      "id": "n7nsrgd",
+      "author": "tequilamigo",
+      "score": 2,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7nsrgd/",
+      "date": "2025-08-08",
+      "body": "Mate could you at least spread out your marketing spam?"
+    },
+    {
+      "id": "n7npmlp",
+      "author": "PalpitationIll4616",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7npmlp/",
+      "date": "2025-08-08",
+      "body": "Think of it like language. You speak it fluently. You can read it, you can write it, you can literally write a novel in it. They can’t read it. Let alone write it. Your dashboard is probably spewing data. You need to convey information. Data is numbers, information is the story and action items your data say. They can’t understand data, but they can understand information, that’s the core issue here. Start conveying information, not data."
+    },
+    {
+      "id": "n7nnpg0",
+      "author": "Fit-Recognition-3727",
+      "score": 3,
+      "permalink": "https://www.reddit.com/r/PowerBI/comments/1ml4oa7/_/n7nnpg0/",
+      "date": "2025-08-08",
+      "body": "This happens where I work too, although we tend to scope out a dashboard and write up wireframes with the key stakeholders. Once everything is agreed and signed off then we build/test etc. It still tends to run into some of the issues you mention, we normally do a demo of the dashboard with the key stakeholders once built. Each dashboard includes information overlays which describes each metric in detail(baselines used for calculations etc) Company also has forked the idea of certain teams having a ‘data champion’ in hopes that if there are silly questions they have a point of contact and don’t need to bother us anymore unless there’s a genuine issue or something new."
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "query": "flamegraph",
+  "days": 540,
+  "count": 25,
+  "results": [
+    {
+      "title": "The flame graph was wrong by 57×. So I'm building a profiler",
+      "url": "https://minogin.com/the-flame-graph-was-wrong-by-57x-so-im-building-a-profiler/",
+      "hn": "https://news.ycombinator.com/item?id=49534333",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-02T10:28:41Z"
+    },
+    {
+      "title": "Finding the Last Bottlenecks in json2xml with Flamegraphs",
+      "url": "https://vinitkumar.me/json2xml-flamegraph-optimization/",
+      "hn": "https://news.ycombinator.com/item?id=48934735",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-07-16T14:01:45Z"
+    },
+    {
+      "title": "ETTrace: Local Mobile Performance Flamegraph",
+      "url": "https://www.emergetools.com/flamegraph",
+      "hn": "https://news.ycombinator.com/item?id=48900512",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-07-13T23:48:43Z"
+    },
+    {
+      "title": "Ask HN: Switching from backend development to graphics programming",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=48634330",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-06-22T18:48:48Z"
+    },
+    {
+      "title": "Show HN: Xtrace – Unix-Style macOS Profiling for Instruments (CPU/GPU/Memory)",
+      "url": "https://github.com/Kr1sso/xtrace-skill",
+      "hn": "https://news.ycombinator.com/item?id=47900023",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-04-25T09:28:45Z"
+    },
+    {
+      "title": "Show HN: Mixlab, an ML arch lab in Go. JSON config, Metal and CUDA, 1.6s builds",
+      "url": "https://github.com/mrothroc/mixlab",
+      "hn": "https://news.ycombinator.com/item?id=47865322",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2026-04-22T15:47:53Z"
+    },
+    {
+      "title": "One Method Was Using 71% of CPU. Here's the Flame Graph",
+      "url": "https://jvogel.me/posts/2026/one-method-using-71-percent-of-cpu/",
+      "hn": "https://news.ycombinator.com/item?id=47712238",
+      "points": 11,
+      "comments": 2,
+      "createdAt": "2026-04-10T00:53:20Z"
+    },
+    {
+      "title": "Show HN: GalataJ – Runtime-aware Java profiling inside IntelliJ and VS Code",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47165316",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-02-26T12:45:37Z"
+    },
+    {
+      "title": "Show HN: Codex builds a working NES Emulator in one hour",
+      "url": "https://github.com/kaonashi-tyc/codex-nes-emulator",
+      "hn": "https://news.ycombinator.com/item?id=47163897",
+      "points": 6,
+      "comments": 4,
+      "createdAt": "2026-02-26T09:38:02Z"
+    },
+    {
+      "title": "MyFlames: View MySQL execution plans as interactive FlameGraphs and BarCharts",
+      "url": "https://github.com/vgrippa/myflames",
+      "hn": "https://news.ycombinator.com/item?id=46926000",
+      "points": 7,
+      "comments": 7,
+      "createdAt": "2026-02-07T18:04:56Z"
+    },
+    {
+      "title": "Visualize MySQL query execution plans as interactive FlameGraphs",
+      "url": "https://github.com/vgrippa/myflames",
+      "hn": "https://news.ycombinator.com/item?id=46918741",
+      "points": 63,
+      "comments": 14,
+      "createdAt": "2026-02-06T22:02:13Z"
+    },
+    {
+      "title": "Flame Graphs vs Tree Maps vs Sunburst (2017)",
+      "url": "https://www.brendangregg.com/blog/2017-02-06/flamegraphs-vs-treemaps-vs-sunburst.html",
+      "hn": "https://news.ycombinator.com/item?id=46401052",
+      "points": 143,
+      "comments": 35,
+      "createdAt": "2025-12-27T11:30:40Z"
+    },
+    {
+      "title": "How to Create and Read Flamegraphs",
+      "url": "https://keninkujovic.com/blog/flamegraphs",
+      "hn": "https://news.ycombinator.com/item?id=46168425",
+      "points": 2,
+      "comments": 1,
+      "createdAt": "2025-12-05T22:49:11Z"
+    },
+    {
+      "title": "Flame Graphs",
+      "url": "https://www.brendangregg.com/flamegraphs.html",
+      "hn": "https://news.ycombinator.com/item?id=46120523",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-02T12:22:46Z"
+    },
+    {
+      "title": "PerfLens: Tiny GUI for Python CPU+ memory profiling (flamegraph, timeline, diff)",
+      "url": "https://github.com/farukalpay/PerfLens",
+      "hn": "https://news.ycombinator.com/item?id=46090920",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-11-29T21:24:31Z"
+    },
+    {
+      "title": "Next-Generation Flamegraph Visualization for Node.js",
+      "url": "https://blog.platformatic.dev/introducing-next-gen-flamegraphs-for-nodejs",
+      "hn": "https://news.ycombinator.com/item?id=45105822",
+      "points": 17,
+      "comments": 0,
+      "createdAt": "2025-09-02T17:01:41Z"
+    },
+    {
+      "title": "Show HN: Timep – A next-gen profiler and flamegraph-generator for bash code",
+      "url": "https://github.com/jkool702/timep",
+      "hn": "https://news.ycombinator.com/item?id=45010461",
+      "points": 53,
+      "comments": 12,
+      "createdAt": "2025-08-25T05:17:44Z"
+    },
+    {
+      "title": "Show HN: Timep – a next-gen profiler and flamegraph-generator for bash code",
+      "url": "https://github.com/jkool702/timep",
+      "hn": "https://news.ycombinator.com/item?id=44568529",
+      "points": 26,
+      "comments": 1,
+      "createdAt": "2025-07-15T06:44:57Z"
+    },
+    {
+      "title": "Show HN: Timep – a next-gen time-profiler and flamegraph-generator for bash code",
+      "url": "https://github.com/jkool702/timep",
+      "hn": "https://news.ycombinator.com/item?id=44564929",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2025-07-14T20:33:39Z"
+    },
+    {
+      "title": "SQL Plan Execution FlameGraphs with Loop and Row Counts",
+      "url": "https://tanelpoder.com/posts/sql-plan-flamegraph-loop-row-counts/",
+      "hn": "https://news.ycombinator.com/item?id=44336330",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-06-21T10:28:20Z"
+    },
+    {
+      "title": "Show HN: P99.chat – Chat for Performance Measurement",
+      "url": "https://p99.chat/chat",
+      "hn": "https://news.ycombinator.com/item?id=44237806",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2025-06-10T15:11:49Z"
+    },
+    {
+      "title": "Show HN: p99.chat – the assistant for software performance optimization",
+      "url": "https://p99.chat/chat",
+      "hn": "https://news.ycombinator.com/item?id=44191875",
+      "points": 6,
+      "comments": 0,
+      "createdAt": "2025-06-05T14:08:35Z"
+    },
+    {
+      "title": "Zymtrace AI Flamegraph in Rust and WASM",
+      "url": "https://www.zymtrace.com/article/zymtrace-ai-flamegraph",
+      "hn": "https://news.ycombinator.com/item?id=44030426",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-05-19T14:42:19Z"
+    },
+    {
+      "title": "SQL Plan Execution FlameGraphs with Loop and Row Counts",
+      "url": "https://tanelpoder.com/posts/sql-plan-flamegraph-loop-row-counts/",
+      "hn": "https://news.ycombinator.com/item?id=43877298",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2025-05-03T06:44:34Z"
+    },
+    {
+      "title": "Flamelens: Flamegraph Viewer in the Terminal",
+      "url": "https://github.com/YS-L/flamelens",
+      "hn": "https://news.ycombinator.com/item?id=43672795",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-04-13T13:50:43Z"
+    }
+  ]
+}

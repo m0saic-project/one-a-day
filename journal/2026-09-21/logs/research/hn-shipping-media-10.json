@@ -1,0 +1,207 @@
+{
+  "query": "video from data",
+  "days": 900,
+  "count": 25,
+  "results": [
+    {
+      "title": "The Physics of Database Speed: from 300 to 1M transactions per second [video]",
+      "url": "https://www.youtube.com/watch?v=vOEL_pHFYK0",
+      "hn": "https://news.ycombinator.com/item?id=49756057",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-18T15:42:59Z"
+    },
+    {
+      "title": "The paradox of AI automation at the workplace",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49738100",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-17T08:52:52Z"
+    },
+    {
+      "title": "Show HN: TabMail. Open-source AI email for Thunderbird and iPhone",
+      "url": "https://tabmail.ai/",
+      "hn": "https://news.ycombinator.com/item?id=49730649",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2026-09-16T17:59:03Z"
+    },
+    {
+      "title": "Show HN: OpenDocBot – bring your own model to Word, Excel and PowerPoint",
+      "url": "https://opendocbot.com/",
+      "hn": "https://news.ycombinator.com/item?id=49729683",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2026-09-16T16:46:01Z"
+    },
+    {
+      "title": "The Physics of Database Speed: from 300 to 1M transactions per second [video]",
+      "url": "https://www.youtube.com/watch?v=vOEL_pHFYK0",
+      "hn": "https://news.ycombinator.com/item?id=49695731",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-09-14T12:28:38Z"
+    },
+    {
+      "title": "Show HN: MultiMatte, a Promptable Image Background Removal Model",
+      "url": "https://usefeyn.com/blog/multimatte/",
+      "hn": "https://news.ycombinator.com/item?id=49645803",
+      "points": 57,
+      "comments": 8,
+      "createdAt": "2026-09-10T15:50:25Z"
+    },
+    {
+      "title": "A documentary about a scientist who thinks time loops are real",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49572431",
+      "points": 8,
+      "comments": 0,
+      "createdAt": "2026-09-05T02:13:26Z"
+    },
+    {
+      "title": "Launch HN: Mireye (YC S26) – Infrastructure for Physical World AI Agents",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49552616",
+      "points": 28,
+      "comments": 8,
+      "createdAt": "2026-09-03T16:24:13Z"
+    },
+    {
+      "title": "Show HN: Vantage – One prioritized health action per day from Apple Health",
+      "url": "https://www.vantagehealthapp.com/",
+      "hn": "https://news.ycombinator.com/item?id=49548903",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-03T12:05:19Z"
+    },
+    {
+      "title": "Show HN: Aura – a Rust agent that investigates and fixes production incidents",
+      "url": "https://github.com/mezmo/aura",
+      "hn": "https://news.ycombinator.com/item?id=49538195",
+      "points": 28,
+      "comments": 6,
+      "createdAt": "2026-09-02T15:55:14Z"
+    },
+    {
+      "title": "Show HN: CleanMyMedia – organize decades of photos, with local face recognition",
+      "url": "https://cleanmymedia.com",
+      "hn": "https://news.ycombinator.com/item?id=49536130",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-09-02T13:44:19Z"
+    },
+    {
+      "title": "Show HN: OwnTime – a chess clock for your day's priorities",
+      "url": "https://owntime.app/",
+      "hn": "https://news.ycombinator.com/item?id=49528506",
+      "points": 118,
+      "comments": 67,
+      "createdAt": "2026-09-01T21:29:24Z"
+    },
+    {
+      "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
+      "url": "https://www.norirobotics.com/",
+      "hn": "https://news.ycombinator.com/item?id=49525153",
+      "points": 201,
+      "comments": 66,
+      "createdAt": "2026-09-01T17:35:10Z"
+    },
+    {
+      "title": "Launch HN: Hebbian Robotics (YC S26) – Build scalable robotics data pipelines",
+      "url": "https://github.com/Hebbian-Robotics/hflow",
+      "hn": "https://news.ycombinator.com/item?id=49510632",
+      "points": 46,
+      "comments": 12,
+      "createdAt": "2026-08-31T15:02:41Z"
+    },
+    {
+      "title": "Show HN: Snaketron – Competitive multiplayer Snake. Back after 14 years",
+      "url": "https://snaketron.io",
+      "hn": "https://news.ycombinator.com/item?id=49499499",
+      "points": 5,
+      "comments": 1,
+      "createdAt": "2026-08-30T15:23:52Z"
+    },
+    {
+      "title": "Show HN: Texttile, a multiplayer blog engine for people who write together",
+      "url": "https://www.texttile.blog/",
+      "hn": "https://news.ycombinator.com/item?id=49477217",
+      "points": 13,
+      "comments": 2,
+      "createdAt": "2026-08-28T11:52:11Z"
+    },
+    {
+      "title": "Show HN: Alphie – see who's on your website and chat with them from Slack",
+      "url": "https://meetalphie.com",
+      "hn": "https://news.ycombinator.com/item?id=49473503",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-08-28T02:00:24Z"
+    },
+    {
+      "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
+      "url": "https://www.risklytics.ai/",
+      "hn": "https://news.ycombinator.com/item?id=49451495",
+      "points": 54,
+      "comments": 25,
+      "createdAt": "2026-08-26T16:06:01Z"
+    },
+    {
+      "title": "Show HN: VidScio – Identify movie/series from a URL, image or description",
+      "url": "https://www.vidscio.com",
+      "hn": "https://news.ycombinator.com/item?id=49432642",
+      "points": 4,
+      "comments": 0,
+      "createdAt": "2026-08-25T12:15:30Z"
+    },
+    {
+      "title": "Show HN: Anonymous age verification with passkey-powered encryption",
+      "url": "https://loginwithone.com/",
+      "hn": "https://news.ycombinator.com/item?id=49361478",
+      "points": 45,
+      "comments": 27,
+      "createdAt": "2026-08-19T13:41:10Z"
+    },
+    {
+      "title": "Show HN: HarnessRouter: Unified interface for agent harnesses",
+      "url": "https://github.com/harnessrouter/harnessrouter",
+      "hn": "https://news.ycombinator.com/item?id=49335595",
+      "points": 10,
+      "comments": 14,
+      "createdAt": "2026-08-17T18:33:38Z"
+    },
+    {
+      "title": "Show HN: RNet – AI token service provider",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49318304",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-08-16T09:11:32Z"
+    },
+    {
+      "title": "Ask HN: What is next after your launch doesn't go as planned?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49298326",
+      "points": 2,
+      "comments": 2,
+      "createdAt": "2026-08-14T13:21:23Z"
+    },
+    {
+      "title": "Ask HN: What tasks cost money through a UI but are free in code?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49294288",
+      "points": 1,
+      "comments": 3,
+      "createdAt": "2026-08-14T02:55:35Z"
+    },
+    {
+      "title": "Launch HN: Bullet (YC S26) – A Faster Coding Agent",
+      "url": "https://www.codewithbullet.com",
+      "hn": "https://news.ycombinator.com/item?id=49283063",
+      "points": 121,
+      "comments": 89,
+      "createdAt": "2026-08-13T08:14:30Z"
+    }
+  ]
+}

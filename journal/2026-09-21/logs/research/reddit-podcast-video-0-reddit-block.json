@@ -1,0 +1,37 @@
+{
+  "angle": "reddit-podcast-video",
+  "date": "2026-09-21",
+  "note": "pipeline/research/reddit.mjs returned HTTP 403 for every r/podcasting, r/VideoEditing, r/NewTubers, r/youtubers query. reddit.com now bot-walls anonymous JSON and HTML clients; old.reddit.com redirects to login; every redlib mirror probed was shut down or bot-walled; WebFetch refuses www.reddit.com; api.pullpush.io is behind Cloudflare. The angle was re-run against open sources (Hacker News via hn.mjs, WebSearch, fetch-text.mjs).",
+  "probed": [
+    {
+      "url": "https://www.reddit.com/r/podcasting/search.json?q=audiogram&restrict_sr=1&t=year",
+      "status": 403
+    },
+    {
+      "url": "https://old.reddit.com/r/podcasting/search.json?q=audiogram",
+      "status": "302 -> /login"
+    },
+    {
+      "url": "https://redlib.perennialte.ch/r/podcasting/search?q=audiogram",
+      "status": "410 shutdown notice 31 August 2026"
+    },
+    {
+      "url": "https://safereddit.com/r/podcasting/search?q=audiogram",
+      "status": "200 bot check"
+    },
+    {
+      "url": "https://api.pullpush.io/reddit/search/submission/?subreddit=podcasting&q=audiogram",
+      "status": 403
+    }
+  ],
+  "onlyRedditPageOpened": {
+    "url": "https://www.reddit.com/r/podcasting/search/?q=audiogram&restrict_sr=1&t=year",
+    "postTitlesRendered": [
+      "Anyone have any success with audio to video generators?",
+      "What are the best AI tools in Youtube Podcasts?",
+      "Looking for good alternatives to audio processing software",
+      "Looking for advice on audio restoration",
+      "Using AI trained on better audio to reconstruct a bad recording - feasible?"
+    ]
+  }
+}

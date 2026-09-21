@@ -1,0 +1,233 @@
+{
+  "query": "\"matplotlib\" \"video\"",
+  "tags": "comment",
+  "endpoint": "https://hn.algolia.com/api/v1/search?query=%22matplotlib%22%20%22video%22&tags=comment&advancedSyntax=true&typoTolerance=false&hitsPerPage=25",
+  "count": 25,
+  "results": [
+    {
+      "title": "Lessons by 3blue1brown",
+      "url": "https://www.3blue1brown.com/",
+      "hn": "https://news.ycombinator.com/item?id=35715261",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-04-26T15:27:45Z",
+      "text": "I feel like the Manim[1] library Grant created to make these videos is becoming some sort of \"video matplotlib\". I've seen it used in so many maths videos up to this point. There seems like a good amount of value in creating a simple, structured and clear way to represent these concepts in videos. [1] https://www.manim.community/"
+    },
+    {
+      "title": "Piet-GPU Progress: Clipping",
+      "url": "https://raphlinus.github.io/rust/graphics/gpu/2022/02/24/piet-gpu-clipping.html",
+      "hn": "https://news.ycombinator.com/item?id=30469599",
+      "points": null,
+      "comments": null,
+      "createdAt": "2022-02-25T17:19:23Z",
+      "text": "A GPU toolkit without an OS API could be useful for WASM rendering, and a rendering library without a GUI is useful for headless rendering (matplotlib graphing, video generation/compositing, meme generators, etc.)."
+    },
+    {
+      "title": "Turbo, an Improved Rainbow Colormap for Visualization",
+      "url": "https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html",
+      "hn": "https://news.ycombinator.com/item?id=20754936",
+      "points": null,
+      "comments": null,
+      "createdAt": "2019-08-21T06:20:49Z",
+      "text": "The lightness plots midway through Google's blog post are made with CIECAM02-UCS, which is the same color space Matplotlib's video talked about using. It looks like Turbo is just Jet, but plotted in CIECAM02-UCS (instead of Jet's HSV). It removes many disadvantages of Jet, while keeping Jet's advantage over Viridis/Inferno of making it easier to compare/contrast small differences. The video and the blog post actually go over a lot of the same topics, like perceptual lightness and how Jet was found to lead to mistakes reading medical imaging. I'm not sure what analysis you're looking for; the video's a good explanation of color theory, but its analysis of Viridis is mainly just \"we plotted a line through CIECAM02-UCS color space and made it linear lightness\". Turbo is the same, except the line is curvier and not linear lightness – and the blog post goes through the tradeoffs of that approach."
+    },
+    {
+      "title": "Issues with color spaces and perceptual brightness",
+      "url": "https://johnaustin.io/articles/2025/issues-with-cielab-and-perceptual-brightness",
+      "hn": "https://news.ycombinator.com/item?id=42735377",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-01-17T08:47:19Z",
+      "text": "If this submission has put you into a mindset of wanting to know more about colormaps, here's a good video about how Matplotlib ended up having `vividris` as its default colormap: A Better Default Colormap for Matplotlib | SciPy 2015 | Nathaniel Smith and Stéfan van der Walt https://www.youtube.com/watch?v=xAoljeRJ3lU"
+    },
+    {
+      "title": "Why scientists need to be better at data visualization",
+      "url": "https://www.knowablemagazine.org/article/mind/2019/science-data-visualization",
+      "hn": "https://news.ycombinator.com/item?id=21539881",
+      "points": null,
+      "comments": null,
+      "createdAt": "2019-11-14T21:52:51Z",
+      "text": "https://yt-project.org/ -- yt for python was used by a few of my old colleagues for visualizing astrophysical simulations. There is yet another program that I've since forgotten but will try to come back here and comment if I remember. If you can generate a single static figure, you can manually generate animations by generating each frame separately using your favorite plotting software. You can then stitch them together using many different tools (I use matplotlib) to generate an animation (video, gif, etc.). What language do you like to use? What's your background -- are you a Matlab person?"
+    },
+    {
+      "title": "Wolfram Language",
+      "url": "http://blog.stephenwolfram.com/2015/03/frontiers-of-computational-thinking-a-sxsw-report/",
+      "hn": "https://news.ycombinator.com/item?id=9556143",
+      "points": null,
+      "comments": null,
+      "createdAt": "2015-05-16T14:15:16Z",
+      "text": ">Things like Jupyter (formerly iPython) come close, but still can't do things like render video. This isn't actually true, you can render video in the notebook with matplotlib, although it can be pretty cumbersome. We've been developing a library called HoloViews ( http://ioam.github.io/holoviews/ ), which makes generating complex visualizations and animations in the notebook a breeze. We support video output, widgets, gifs etc."
+    },
+    {
+      "title": "Pyodide: a Python distribution based on WebAssembly",
+      "url": "https://github.com/pyodide/pyodide",
+      "hn": "https://news.ycombinator.com/item?id=47409970",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-17T08:30:27Z",
+      "text": "could you please point to an example? For my project i'm currently animating matplotlib plots and walk through the video later, but rendering times are quite painful."
+    },
+    {
+      "title": "Digital colours and digital photography",
+      "url": "http://pomax.github.io/1436836360570/we-are-really-terrible-at-digital-colours-and-digital-photography",
+      "hn": "https://news.ycombinator.com/item?id=9890555",
+      "points": null,
+      "comments": null,
+      "createdAt": "2015-07-15T10:18:47Z",
+      "text": "Funny, I just watched a Scipy conference talk/video about this - it's about finding a new default color map for matplotlib [1] CIE LAB is basically a ~30 year old model based on human perception - basically it takes into account white point adjustment and the non-linear human brightness response, and thats about it. There are newer (and faaar more complicated) models like CIECAM02. [1] https://www.youtube.com/watch?v=xAoljeRJ3lU"
+    },
+    {
+      "title": "Ask HN: How does a beginner best spend one week of learning machine learning?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=9434765",
+      "points": null,
+      "comments": null,
+      "createdAt": "2015-04-24T17:29:49Z",
+      "text": "Day 1: Spend some time setting your machine up for doing machine learning. For Python look at Numpy, IPython Notebook, Scipy, Pandas, Scikit-Learn, Matplotlib, Seaborn, NLTK, XGBoost wrapper, Vowpal Wabbit wrapper, Theano + Nolearn. 2: Learn how to manipulate Numpy arrays ( http://www.engr.ucsb.edu/~shell/che210d/numpy.pdf ) and how to read and manipulate data with Pandas ( https://www.youtube.com/watch?v=p8hle-ni-DM ). 3: Do the Kaggle Titanic survival prediction challenge with Random Forests. ( https://www.kaggle.com/c/titanic/details/getting-started-wit... ) 4: Study Scikit-learn documentation ( http://scikit-learn.org/stable/documentation.html ). Run a few examples. Change RandomForestClassifier into SGDClassifier and play with the results. Scale the data to make it perform better. Combine a RF model and a SGD model through averaging and try to improve the benchmark score. 5: Study the ensemble module of Scikit-learn. Try the examples on the wiki of XGBoost ( https://github.com/dmlc/xgboost/tree/master/demo/binary_clas... ) and Vowpal Wabbit ( http://zinkov.com/posts/2013-08-13-vowpal-tutorial/ ). Practically you want to get to a stage of: Getting the data transformed to be accepted by the algo, a form of evaluation, and then getting the predictions back out in a sensible form. Then next week start competing on Kaggle and form a team to join up with people at your level. You will learn a lot that way and start to open up the black box. I found these series very accessible: http://blog.kaggle.com/2015/04/22/scikit-learn-video-3-machi... Kaggle also recently released a feature to run machine learning scripts in your browser. You could check those out and check out Python, R, common pipelines and even the more advanced neural nets: https://www.kaggle.com/users/9028/danb/digit-recognizer/big-... ."
+    },
+    {
+      "title": "Pharo 3.0 (the immersive live environment) Released",
+      "url": "http://pharo.org/news/pharo-3.0-released",
+      "hn": "https://news.ycombinator.com/item?id=7674259",
+      "points": null,
+      "comments": null,
+      "createdAt": "2014-04-30T16:10:25Z",
+      "text": "As a python coder that has changed to Pharo I can tell you that the answer to your questions is \"no\". Its actually much better because cpython is not a live coding environment but Pharo is. iPython tries to compensate , Pharo of course lacks some of the features of iPython but overall Pharo's ability to do true live coding really shines here. Live coding means the ability to code your application while it runs without every need to stop it and restart it to correct an error. Pharo lacks the existence of a pure mathematical library like numpy however it offers not only Nativeboost that gives full access to C libraries similar to ctypes for Python , Nativeboost also is an inline assembler. In theory that means access to raw speed. Matplotlib I am not very familiar with but Pharo has a set of library called Moose which contain several libraries for visualisations one of them is Roassal which is easy enought to use for several kinds of Graphs and illustrations, there is even Roassal3d if 3d graphics is your thing. Roassal: http://objectprofile.com/Roassal.html examples of Roassal: http://forum.world.st/attachment/4692028/0/image.png http://www.highoctane.be/images/RoassalWorldMap.png http://lists.pharo.org/pipermail/pharo-dev_lists.pharo.org/a... examples of Roassal3d: http://lists.pharo.org/pipermail/pharo-dev_lists.pharo.org/a... http://objectprofile.com/photos/3.png I give a general idea of what Pharo is in my \"Why Pharo\" video tutorial http://www.youtube.com/watch?v=Ol5ivaEATLQ"
+    },
+    {
+      "title": "Toward a better programming",
+      "url": "http://www.chris-granger.com/2014/03/27/toward-a-better-programming/",
+      "hn": "https://news.ycombinator.com/item?id=7489684",
+      "points": null,
+      "comments": null,
+      "createdAt": "2014-03-28T20:13:26Z",
+      "text": "Sure, there are plenty of cases where visualization is helpful. But I see so many blog posts about it, and not much in the way of actual progress. Take the card again. It's your example, after all. I cannot think of any way to use that to, say, write a small AI to play poker. I suppose I could see a use in a debugging situation for my 'hand' variable to display a little 5@ symbol (where @ is the suit symbol). But okay, let's think about that. What does it take to get that into the system? No system 'knows' about cards. So I need a graphics designer to make a symbol for a card. I surely don't want an entire image of a card, because I have 20 other variables I am potentially interested in, which is why in this context a 5@ makes sense (like you would see in a bridge column in a newspaper). So somebody has to craft the art, we have to plug it into my dev sysstem, we need to coordinate it with the entire team, and so on. Then, it is still a very custom, one off solution. I use enums, you use ints, the python team is just using strings like \"5H\" - it goes on and on. I don't see a scalable solution here. Well, I do see one scalable solution. It is called text. My debugger shows a textual depiction of my variable, and my wetware translates that. I'm a good reader, and I can quickly learn to read 54, \"5H\", FiveHearts as being the representation of that card. Will I visually \"see\" the value of a particular hand as quickly? Probably not, unless I'm working this code a lot. But I'll take that over firing up a graphics team and so on. I do plenty of visualizations. It is a big reason for me using Python. If I want to write a Kalman filter, first thing I'm doing is firing up matplotlib to look at the results. But again, this is a custom process. I want to look at the noise, I want to look at the size of the kalman gain, I want to plot the filter output vs the covariance matrices, I want to.... program. Which I do textually, just fine, to generate the graphics I need. I've dealt with data flow type things before. They are a royal pain. Oh, to start, it's great. Plop a few rectangles on the screen, connect with a few lines, and wow, you've designed a nand gate, or maybe a filter in matlab, or is it a video processing toolchain? Easy peasy. But when I need to start manipulating things programmatically it is suddenly a huge pain. I am taking time out of writing an AI to categorize people based on what they are doing in a video (computer vision problem) to post this message. At a rudimentary level graphical display is great. It is certainly much easier for me to see my results displayed overlaid on the video, as opposed to trying to eyeball a JSON file or something. But to actually program this highly visual thing? I have never, ever heard anything but hand waving as to how I would do that in anything other than a textual way. I really don't think I would want to. Anyway, scale things up in a way that I don't have to write so many matplotlib calls and you will have my attention. But I just haven't seen it. I've been programming since the early 80s, and graphical programming of some form or another has been touted as 'almost here'. Still haven't seen it, except in highly specialized disciplines, and I don't want to see it. \"Pictures are worth a thousand words\" because of compression. It's a PCA - distill a bunch of data down to a few dimensions. Sometimes I really want that, but not when programming, where all the data matters. I don't want a low order representation of my program."
+    },
+    {
+      "title": "TurboQuant: Redefining AI efficiency with extreme compression",
+      "url": "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/",
+      "hn": "https://news.ycombinator.com/item?id=47522769",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-25T20:30:56Z",
+      "text": "This blog post sucks. It does not make me want to read the papers. Look at this figure: https://storage.googleapis.com/gweb-research2023-media/image... The speedup labels on the vertical axis are 0, 2, 2, 4, 6, 8... Why is 2 repeated? Did they just have nano-banana make them some charts? Can they not be bothered to use matplotlib or bokeh and directly render a graph? I don't know, maybe there is some legitimate reason that I don't know about for making a single value occur multiple times on a graph axes, but if that is the case, then they probably need to explain it in the figure caption. So it's either a \"GenAI special\" or it's poor communication about how to read the graph... Look at this video visualization: https://storage.googleapis.com/gweb-research2023-media/media... Do you have literally any clue what Polar Quantization is? Would this make me think, \"I kind of have a high level understanding of that, let me go get the details from the paper.\" Look at this figure: https://storage.googleapis.com/gweb-research2023-media/image... The left hand side of the graph, which is normally assumed to start at 0, starts at 48. Those MASSIVE differences you see in the figure? Only a few percent. And that's a deception but only if the figure is even accurate, because we saw earlier they can't even get figure axes correct."
+    },
+    {
+      "title": "Claude Code is all you need",
+      "url": "https://dwyer.co.za/static/claude-code-is-all-you-need.html",
+      "hn": "https://news.ycombinator.com/item?id=44868425",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-08-11T19:28:50Z",
+      "text": "Just from personal experience, visual design is the task with the worst outcomes for Claude Code (w/ latest Opus 4.1, etc). It truly cannot reason well yet about geometry, visual aesthetics, placement, etc. The performance varies: it's quite good at matplotlib but terrible at any non-trivial LaTeX / TikZ layout or graphic. Why? Not a clear idea yet -- would love to think more about it. I've tried many things now to try and give it eyes (via text), and this is unavoidably a place where things are ... rough ... right now. I've had bad results with image screenshotting. More often than not, it has no idea what it is looking at -- won't even summarize the image correctly -- or will give me an incorrect take \"Yes indeed we fixed the problem as you can tell by <this part of the UI> and <that part of the UI>\" which is wrong. I typically have to come in and make a bunch of fine-grained changes to get something visually appealing. I'm sure at some point we'll have a system which can go all the way, and I'd be excited to find approaches to this problem. Note -- tasks which involve visual design which I've run into diminishing returns: * proper academic figures (had a good laugh at the GPT 5 announcement issues) * video game UI / assets * UI design for IDEs * Responsive web design for chat-based interfaces All of these feel like \"pelican\" tasks -- they enter into a valley which can't be effectively communicated via textual feedback yet ..."
+    },
+    {
+      "title": "Fastplotlib: GPU-accelerated, fast, and interactive plotting library",
+      "url": "https://medium.com/@caitlin9165/fastplotlib-driving-scientific-discovery-through-data-visualization-418f8bff094c",
+      "hn": "https://news.ycombinator.com/item?id=43337476",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-03-11T21:55:10Z",
+      "text": "I’m not making neuroscience visualizations. I’m working with rather line graphs and would like to animate based on ~10000 points. I’m looking to convert these visuals to video for youtube, in hd and at 60fps using the HEVC/h.265 codec. I took a quick look at the documentation to see if this is possible and I didn’t see anything. Are or will this sort of rendering be supported? I previously tried this on matplotlib and it took 20-30 minutes to make a single rendering because matplotlib only uses a single core on a cpu and doesn’t support gpu acceleration. I also tried Man im, but I couldn’t get an actual video file, and opengl seems to be a bit complicated to work with (I went and worked on other things though I should ask around about the video file output). Anyway, I’m excited about the prospect of a gpu accelerated dataviz tool that utilizes Vulkan, and I hope this library can cover my usecase."
+    },
+    {
+      "title": "Captchas Are Becoming Ridiculous",
+      "url": "http://blog.andrewmunsell.com/post/28232343440/captchas-are-becoming-ridiculous",
+      "hn": "https://news.ycombinator.com/item?id=4309909",
+      "points": null,
+      "comments": null,
+      "createdAt": "2012-07-29T22:08:30Z",
+      "text": "Oh. I remember reading some vision paper and in the supplement materials there've been a couple of videos with letters moving. Doubt, I'll be able to find it that easily. Should be relatively easy to code with any library that can draw a text on a bitmap. Like PIL, matplotlib, etc. Use ffmpeg to make a video out of frames. 1. draw letters (just black/white) masks; 2. fill letters with noise; 4. fill background with noise; 5. copy letters using a mask onto background, using X,Y as loc; 6. add a little bit of new noise to letters; 8. modify X,Y coordinates (move letters SLIGHTLY); 9. go to step 4."
+    },
+    {
+      "title": "A Mathematica interpreter in Typescript",
+      "url": "https://www.spakhm.com/ts-wolfram",
+      "hn": "https://news.ycombinator.com/item?id=41916139",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-10-22T16:46:07Z",
+      "text": "In the company I work for, I was using Mathematica as a general scripting language, for designing algorithms, plotting data in 2D/3D, photo/video editing , and some occasional algebraic manipulations. Sadly the company did not renew the license because they needed to cut costs. They asked me to port all my tooling to other languages and tools: now I have a mixture of python, matplotlib/gnuplot, ruby, maxima, ffmpeg, imagemagik and octave. So far good but I preferred to have everything under one GUI/interface and Mathematica was giving me that."
+    },
+    {
+      "title": "Malleable Software in the Age of LLMs (2023)",
+      "url": "https://www.geoffreylitt.com/2023/03/25/llm-end-user-programming",
+      "hn": "https://news.ycombinator.com/item?id=40211293",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-04-30T14:28:58Z",
+      "text": "Projects of mine that LLMs assisted on: A web framework for C using clang blocks with request-bases memory arenas for easy memory management. A CNN trained on video stills of playing various chords on guitar hosted using PyTorch in a SwiftUI iOS app A DSL using Python Lex Yacc for piping CSV data into a runtime that spits out matplotlib graphs in PNG bytes ready for imgcat. Right now I’m working on language server in written F# using Fparsec with an intermediary AST for capturing multiple parser errors. I’d say these are relatively advanced endeavors and that there’s a lot more than boilerplate going on. And yes, I can explain how these things work as LLMs require quite a bit of guidance."
+    },
+    {
+      "title": "Control and Autofocus Software for Chip-Level Microscopy",
+      "url": "https://www.bunniestudios.com/blog/2024/control-and-autofocus-software-for-chip-level-microscopy/",
+      "hn": "https://news.ycombinator.com/item?id=40033398",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-04-14T18:53:10Z",
+      "text": "I truly appreciate these blog posts. I am building my own microscopes for different purposes and got into many of the same situations as bunnie did. It's nice to see other smart people tripping over the same issues. opencv and pyqt5 work fine together if you delete a single file that gets installed by one or the other pip (I can't recall which). Ah- I see you found a slightly different solution but in the same area: envpath = '/home/bunnie/.local/lib/python3.10/site-packages/cv2/qt/plugins/platforms' os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = envpath I ended up writing a standalone program just for OpenCV testing: in the control thread, I use opencv to read from the camera or a video file, and then pass those frames with qt signals to the GUI thread. But before I do that, in the control thread, I do various image processing algorithms that use parameters set by Qt GUI elements. For example, for exposure time, make a QDoubleSpinBox (I use Qt Designer to quickly design nice GUI) and then the user can just adjust it up/down. I use this a lot for tuning parameters for hough circle detection. It's absolutely worth it to get deep proficiency in PyQt, especially the QGraphicsView framework. if you're not uing that, you should be. One more suggestion- I like PyChart and Qt Charts rather than doing data vis with OpenCV or matplotlib."
+    },
+    {
+      "title": "Ask HN: How are you finding Gemini Ultra?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=39445450",
+      "points": null,
+      "comments": null,
+      "createdAt": "2024-02-20T19:06:47Z",
+      "text": "For writing text (emails, etc.) and asking basic questions gemini is superior to gpt-4 in my opinion. But when it comes to logic, programming and resoning, gpt4 is better in my opinion. It rarely makes syntax or logical errors, and the jupyter notebook that chatgpt has access to is a big plus for me. It can use it to solve math questions with sympy, use matplotlib and I can ask it to crop a video file for me. Gemini makes a lot of basic mistakes and the code examples are very minimalistic."
+    },
+    {
+      "title": "Maths and science animations (2018)",
+      "url": "https://blog.matthen.com",
+      "hn": "https://news.ycombinator.com/item?id=38533536",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-12-05T17:01:12Z",
+      "text": "He has a YouTube video where he explains in quite detail how he makes his animations. His most important software tools are Adobe After Effects and Python with matplotlib."
+    },
+    {
+      "title": "Why Japan has blue traffic lights instead of green",
+      "url": "https://www.rd.com/article/heres-japan-blue-traffic-lights/",
+      "hn": "https://news.ycombinator.com/item?id=37986283",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-10-23T14:39:43Z",
+      "text": "I think it just won the poll [1] because it subjectively looks nicer. NJS, in that video, said something like: I don't care which wins, they're all so much better than the current situation. But magma is a good choice too and it's also available in matplotlib. [1] http://bids.github.io/colormap/"
+    },
+    {
+      "title": "Ask HN: Show me your half baked project",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=37880935",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-10-14T14:55:57Z",
+      "text": "https://github.com/geometor The GEOMETOR initiative is on a mission to explore the architecture of all that is. I am building a suite of Python libraries for modeling, rendering, and analyzing classical geometric constructions of points, lines and circles to discern patterns in logic and nature. With SymPy under the hood, geometor.model allows for scripting sequential constructions that automatically discovers intersection points and prevents duplication of elements. https://github.com/geometor/model With the power of MatPlotLib, geometor.render bring tools for plotting and animating the constructions. https://github.com/geometor/render A key interest of mine, and primary motivation for the GEOMETOR initiative, is the study of the Golden Ratio. The geometor.divine project is developing tools for discovering and analyzing golden sections within constructions. https://github.com/geometor/divine The rigorous environment of geometor.model provides a geometric assembly language. In geometor.elements, I am planning to build a model that has all of Euclid's propositions as a functional hierarchy. It's a work in progress. I have done a major refactoring over the last few months and am pretty happy with the current architecture. Hoping to publish model and render soon on PyPI. Last year, I put together a status video on the project and reviewed some of the investigations into the Golden Ratio: https://youtu.be/IOKgXb6Kce0 Github is the place to connect - start a message on any of the discussion boards. ~ phi"
+    },
+    {
+      "title": "Google “We have no moat, and neither does OpenAI”",
+      "url": "https://www.semianalysis.com/p/google-we-have-no-moat-and-neither",
+      "hn": "https://news.ycombinator.com/item?id=35829663",
+      "points": null,
+      "comments": null,
+      "createdAt": "2023-05-05T14:27:32Z",
+      "text": "i'm using a web browser broadly similar to mosaic (01994) on a site that works similarly to early reddit (02005). in another window i'm running irssi (01999) to chat on irc (01988, but i've only been using it since 01994) inside screen (01987, but i've only been using it since 01994), to which i'm connected with ssh (01996) and mosh (02011, but i didn't start using it until last month). in my unix shell window (mate-terminal, but a thin wrapper around libvte (02002), mostly emulating a vt100 from 01978) i'm running a bourne shell (01979, but really it's brian fox's better reimplementation which he started in 01989) in which i just ran yt-dlp (which has to be updated every couple of months to keep working, but mostly has the same command-line flags as youtube-dl, first released in 02006) to download a video encoded in h.264 (02003) in an mpeg-4 container (01998), and then play it with mpv (02013, but forked from and sharing command-line flags with mplayer (02000)). mpv displays the video with a gpu renderer (new) on a display server running x11 (01987). in another browser tab i'm running jupyter (the renamed ipython notebook from 02011) to graph some dsp calculations with matplotlib (02003, but mostly providing the plotting functions from matlab (01984)) which i made with python (01991, but i've only been using it since 02000) and numpy (02006, but a mostly compatible reimplementation of numeric from 01995, which i've been using since 02003). in jupyter i can format my equations in latex (01984, but for equations basically the same as plain tex82 from 01982, but i've only been using them since 01999) and my text in markdown (02004, though jupyter's implementation supports many extensions). i keep the jupyter notebook in git (02005, but i've only been using it since 02009, when i switched from cvs (01986, but i've only been using it since about 01998)). the dsp stuff is largely applications of the convolution theorem (01822 or 01912) and hogenauer filters (01981). i do most of my programming that isn't in jupyter in gnu emacs (01984, but i didn't start using it until 01994) except that i prefer to do java stuff in intellij idea, which i first used in 02006 earlier this year, my wife and i wrote our wedding invitation rsvp site in html (01990, but using a lot of stuff added up to 02000) and css2 (01998) plus a few things like corner-radius (dunno, 02006?) and a little bit of js (01995, but in practical terms 02004), with the backend done in django (02005) backed by sqlite (02000, but this was sqlite3 (02004), but sqlite mostly just implements sql (01974, first publicly available in 01979, but mostly the 01992 ansi standard) which in turn mostly just implements codd's relational data model (01970) and acid transactions (01983), all of which i've been using since 01996). and of course python, emacs, and git. most of the css debugging was done with chromium's web inspector (present from the first chrome release in 02008, a clone of firebug (02006)). for looking up these dates just now, i used google's newish structured search results, which mostly pull information from wikipedia (02001); i also used stack overflow (02008) and its related sites. the median of the years above is 01998, with 25% and 75% quartiles of 01987 and 02004, which i calculated using r (01997, but a reimplementation of s (01976)). if we assume that each new introduction listed above displaced some existing skill, then we can vaguely handwave at a half-life of about 25 years for these churning technology skills, which to me seems like enough time for a lot of them to amortize; but it seems like it's slowing down a lot, because the 25% quartile is in 01987 and not 01973 it's true that all the time i spent configuring twm, olvwm, fvwm, and afterstep, and working around bugs in netscape 4's javascript implementation, and maintaining csh scripts and informix ace database applications, and logging into anonymous ftp sites running tops-20, and debugging irq conflicts, isn't really serving me today. but you could kind of tell that those things weren't the future. the surprising thing is really how slowly things change: that we're still running variants of the bourne shell in emulators of the vt100 other still-relevant technological skills for me today include building a fire, qwerty typing, ansi c (my wife is taking a class), bittorrent, operating a gas stove, and making instant coffee. still beyond me, though, is how to turn this tv on"
+    },
+    {
+      "title": "So you want to self-publish books and courses on programming",
+      "url": "https://css-tricks.com/so-you-want-to-self-publish-books-and-courses-on-programming/",
+      "hn": "https://news.ycombinator.com/item?id=28002908",
+      "points": null,
+      "comments": null,
+      "createdAt": "2021-07-29T23:45:14Z",
+      "text": "Honestly? Please don't. I don't mean to be rude, but the quality of some coding books is not good at all. The majority are rehashes of online documentation on what the function does with barely any examples on \"real world application\" and could easily be found online for free. I've seen enough chapters on how NumPy arrays work to completely disregard them. As an example, I recently picked up a book on Python for Civil Engineering because I was looking for said \"real world\" examples for a course I was teaching. In total, there are 6 civil engineering examples across the 160 pages and each needs ALL the basic concepts before you see them (although one is just \"here's how matplotlib works\"). If you choose to self-publish, please have more than the bare minimum in examples. Take a page out of Miguel Grinberg's Flask Tutorial [1] and have the entire book build up to something. If you're doing something like how to do Data Science with language X, use some larger scale datasets, walk through them, and explain what you are seeing beyond \"here's the print statement's output\". Most of the videos on my YouTube channel that are about \"How to use X in Y\" get minimal views, because they're so simple that you only need to see it once via a video or webpage to \"get it\". However, some of my more popular videos are where I implement algorithms like the Luhn Check algorithm. Have that kind of material in your book. [1] https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial..."
+    },
+    {
+      "title": "Ask HN: Who wants to be hired? (April 2021)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=26663822",
+      "points": null,
+      "comments": null,
+      "createdAt": "2021-04-01T17:49:43Z",
+      "text": "Location: São Paulo, Brazil Remote: Yes Willing to relocate: Yes Technologies: - Python: matplotlib | sklearn | pandas | numpy | scipy | hiveQL | keras | pytorch | tensorflow - Git / Linux Résumé/CV: https://gitlab.com/inasring/video_portifolio/-/blob/master/leonardo_mazza_20210401_hn_version.pdf Email: leonardomazza \"at\" poli.ufrj.br Stackoverflow: https://stackexchange.com/users/6389152/maz Master of science in Computational Intelligence and Control engineer Helped translate legal department necessities into machine learning projects. Have been playing around with CNNs since 2016. Check out some ML visualizations at https://gitlab.com/inasring/video_portifolio"
+    }
+  ]
+}

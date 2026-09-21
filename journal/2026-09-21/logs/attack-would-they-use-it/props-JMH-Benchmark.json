@@ -1,0 +1,14 @@
+{
+  "title": "7bc4f64 -> 84ec6ea",
+  "baselineLabel": "7bc4f64",
+  "candidateLabel": "84ec6ea",
+  "smallerIsBetter": false,
+  "rows": [
+    {
+      "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
+      "unit": "ops/s",
+      "base": 3530659037.369922,
+      "value": 4487858753.707877
+    }
+  ]
+}

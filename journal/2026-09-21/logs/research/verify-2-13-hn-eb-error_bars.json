@@ -1,0 +1,187 @@
+{
+  "query": "error bars",
+  "days": 420,
+  "count": 20,
+  "results": [
+    {
+      "title": "The Millennium Problems for Biology",
+      "url": "https://millenniumproblems.bio/",
+      "hn": "https://news.ycombinator.com/item?id=49782911",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T04:00:47Z",
+      "text": " &gt; Just showing how RNA or amino acids arise, says nothing about any genetic system. They can not even answer whether RNA or DNA viruses existed first; and whether these existed before organisms&#x2F;cells did. Actually, we have quite a bit of evidence to evidence pointing at the order of development based on how strongly conserved some critical features of biochemistry. The core component of ribosomes (which make proteins) is made from RNA called ribozymes. Other things like RNase P, self-splicing introns, the RNA cores of the spliceosome, and the fact that most central metabolic cofactors"
+    },
+    {
+      "title": "Bill to Ban Private Equity from Owning Medical Practices",
+      "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
+      "hn": "https://news.ycombinator.com/item?id=49782812",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-21T03:42:23Z",
+      "text": "I&#x27;m not so sure limiting competition is the way to go here. One thing I hate about US healthcare is the lack of price transparency. They would rather shut an entire hospital down before giving you a price sheet. So when outfits like Walmart were looking to get into healthcare and offer basic services like blood tests, checkups, xrays, and common procedures available for flat fees and published prices, the reaction of the US healthcare community was that of a primal scream of terror, and they - specifically hospital groups -- have mobilized an army of lobbyists to try to prevent anyone els"
+    },
+    {
+      "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
+      "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
+      "hn": "https://news.ycombinator.com/item?id=49780890",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T22:44:44Z",
+      "text": "It isn&#x27;t really, as long as you don&#x27;t care about power consumption, physical constraints and money. Basically desktops &lt;2025 (and hopefully &gt;2027). DDR is optimized for latency and stability at the cost of bandwidth whilst GDDR is optimized for bandwidth at the cost of latency and stability. GDDR is pushed so hard these days that a small percentage of errors is expected and corrected because this is still faster than running it slower but more accurate. GDDR7 often has 10-20x the total bandwidth but 3x the latency of DDR5. Graphical workloads want as much bandwidth as possible "
+    },
+    {
+      "title": "Show HN: Roffume – Add fragrance to your resume with roff",
+      "url": "https://github.com/sebastiancarlos/roffume",
+      "hn": "https://news.ycombinator.com/item?id=49780005",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T20:57:00Z",
+      "text": "I had an unreleased version of this project running `groff`-only for quite some time. After using it for 25 or so applications, I got the feeling that having markdown as the &quot;source of truth&quot; was slightly easier for reading, editing, and diffing different versions. I’ve been using it with Markdown as a base and I’m happy with the results. To me, Markdown wins on ergonomics: easier to visually scan, no escaping of typographical marks (the `\\-` hyphen), and syntax highlighting in every editor for bold&#x2F;italics&#x2F;etc, I do concede that raw `roff`&#x27;s tend to produce better &qu"
+    },
+    {
+      "title": "Pirate Face Rescues LLM Models from Deletion",
+      "url": "https://pirateface.co/",
+      "hn": "https://news.ycombinator.com/item?id=49778860",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T19:00:56Z",
+      "text": "This is really important. I am already tired of hoarding rclone copies of huggingface torrents and periodically checking them for bitrot. Pirateface is not a very helpful name for it though and it doesn&#x27;t seem to have scripted torrent creation either. Is hosting the same thing at &#x27;academictorrents&#x27; actually a viable thing? In terms of peers from either send data to one another? edit: looks like it can treat huggingface as a backstop for torrents that are otherwise not shared which is interesting, whole load of checksum nonsense I hand rolled disappear if bittorrent handles that."
+    },
+    {
+      "title": "Telling a Computer to Do Things",
+      "url": "https://will-keleher.com/posts/telling-your-computer-to-do-things/",
+      "hn": "https://news.ycombinator.com/item?id=49776351",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T14:40:29Z",
+      "text": " test 1 == 2 &amp;&amp; echo &quot;ok&quot; || (error_code=&quot;$?&quot;; echo &quot;failed with &#x27;$error_code&#x27;&quot;; exit &quot;$error_code&quot;) When command (test 1 == 2) fails, it goes to the &quot;or&quot; section, sets the error_code variable, does something (echo command, but it could be anything), and then re-exits with the same exit code. It&#x27;s not so obscure, there is just no native &quot;re-raise&quot; function so you have to record the exit code yourself (actually, bash&#x27;s built-in exit will return the last command&#x27;s exit code, but in the example above, tha"
+    },
+    {
+      "title": "Telling a Computer to Do Things",
+      "url": "https://will-keleher.com/posts/telling-your-computer-to-do-things/",
+      "hn": "https://news.ycombinator.com/item?id=49775333",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T12:49:35Z",
+      "text": "IMO, a scripting language is the lesser contributor to the power of shell scripting. My ranked-order is: 1. Universal Inter-Process Interface: Arbitrary program composition via the Standard Input &#x2F; Output &#x2F; Error interface, and &quot;everything is a file&quot; abstraction... None of the rest is possible without some such core design decision (&quot;everything is an object&quot; is the fraternal twin). 2. Widespread standard utilities: The broad availability of core util tools designed to cooperate via the same abstraction is a close second. Along with some default scripting language,"
+    },
+    {
+      "title": "Telling a Computer to Do Things",
+      "url": "https://will-keleher.com/posts/telling-your-computer-to-do-things/",
+      "hn": "https://news.ycombinator.com/item?id=49774854",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T11:48:04Z",
+      "text": "if table --warble farble; then :; else table_ec=$?; echo &quot;Garble warble farble! :(&quot; &gt;&amp;2; exit $table_ec; fi Works in dash&#x2F;bash&#x2F;zsh at least; not 100% sure whether the behavior of $? on the command in an if test is mandated by POSIX and&#x2F;or portable. Note that you can&#x27;t replace the empty then-branch with a negated condition because the negation also eats the return code. Also, absolutely correct propagation is essentially impossible (but usually not useful anyway), because some errors might be unexpected signal exits or inability to find the command in the fi"
+    },
+    {
+      "title": "English: A vs. An",
+      "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an/",
+      "hn": "https://news.ycombinator.com/item?id=49774786",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T11:35:55Z",
+      "text": "As a native speaker of a language with genders, it&#x27;s not complex if you&#x27;re a native speaker (basically nobody ever makes grammar errors related to gender when speaking&#x2F;writing). As for their role, I think they may work as a simple error correction code (if genders in the sentence don&#x27;t match, you misheard something) FWIW I struggle with using English articles and past&#x2F;present&#x2F;future perfect time, because those concepts are absent from my language. Despite decades of experience with English at this point."
+    },
+    {
+      "title": "Weeping whales: Stillborn humpback whale grieving documented",
+      "url": "https://phys.org/news/2026-09-whales-stillborn-humpback-whale-grieving.html",
+      "hn": "https://news.ycombinator.com/item?id=49774643",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T11:14:16Z",
+      "text": "Category error started at &quot;we should not treat humans with impaired cognitive abilities as equals&quot;. Yes, there&#x27;s a good chance that whatever combination of metrics gets accepted to draw the consciousness&#x2F;moral weight boundary in the future, it&#x27;ll have some overlaps like in that infamous quip about &quot;smartest bears&quot; and &quot;dumbest tourists&quot;. Applied to a spot measurement, it&#x27;ll likely put some subset of people - drunk, cognitively impaired, sleeping, children under N months, etc. - below the &quot;conscious&#x2F;sentient&quot; threshold, and below "
+    },
+    {
+      "title": "What Zig felt like, coming from Rust",
+      "url": "https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/",
+      "hn": "https://news.ycombinator.com/item?id=49774513",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T10:48:06Z",
+      "text": "The nice thing about video game frames is that they&#x27;re monotonous. We render exactly one at a time for ever. So all the memory we don&#x27;t reserve for long-lived data forms a single Arena for our per-frame temporary storage and we can put all kinds of stuff in there &quot;for free&quot; so long as we don&#x27;t fill the Arena in any one frame we&#x27;re all good. Our HTTP server may have dozens, or hundreds, or thousands of simultaneous requests. But we&#x27;ve decided to give each a specific arena with a size chosen in advance so that we can use arenas. This means that the request to c"
+    },
+    {
+      "title": "You can defeat the Dream Devourer from Chrono Trigger using an int overflow",
+      "url": "https://chrono.fandom.com/wiki/Dream_Devourer",
+      "hn": "https://news.ycombinator.com/item?id=49774049",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T09:17:35Z",
+      "text": "&gt; I wonder if it was percentage based. That&#x27;d be one of the easiest mistakes to make. How would that be one of the easiest mistakes to make? There are no operations for working with percentages, nor is it a thing you&#x27;d want to do. To make that helm work as you describe, you&#x27;d need to multiply the stat by 1.1 when equipping the helm and then by 0.9 when deequipping it. But at that point you&#x27;ve lost any justification for making the mistake; those are just two random numbers that don&#x27;t cancel each other out. It&#x27;s not like you&#x27;re adding a number in one place a"
+    },
+    {
+      "title": "We need to stop using Stored Procedures",
+      "url": "https://heffree.dev/blog/no-more-sprocs.html",
+      "hn": "https://news.ycombinator.com/item?id=49772046",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T02:34:22Z",
+      "text": "I used to be pro-sproc, but I agree that making queries part of the database schema can be burdensome and creates some development friction that I’d rather avoid. I’ve mostly moved on to storing queries as *.sql files in the application’s repository. You still get the good query caching and predictable plans. But you also get some other nice perks, like queries and the code that uses it being versioned together, and making it easy for developers to test queries in a SQL console. Most editors even have plugins that give you autocompletion and basic error checking in exchange for a connection st"
+    },
+    {
+      "title": "Bend 2 and the Vibe-Coding Trap",
+      "url": "https://blog.liampwll.com/posts/bend_vibe_coding/",
+      "hn": "https://news.ycombinator.com/item?id=49771443",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-20T00:38:57Z",
+      "text": "It was my &quot;vibe coding playground&quot; experiment. I haven&#x27;t gotten anything solid fleshed out, but conceptually I wanted the &quot;safety layer&quot; to only permit fully expanded, concrete references. Then break plain language requests into tool-calling-ish shared functions [atHome(), isHoliday(), comfyTemp(), ...] and basically throw &quot;linker errors&quot; if a concept didn&#x27;t have a definition, eg: &quot;ERROR: concept &#x27;comfortable temperature&#x27; not defined...&quot; ...and yes: be able to highlight overlaps or conflicting instructions at the semantic layer... tho"
+    },
+    {
+      "title": "Ask HN: How do you interview devs in a post-AI world?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=49771205",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T23:58:42Z",
+      "text": "We were hiring for senior devs java&#x2F;spring boot so I coded a tiny &quot;Todo app&quot; rest API, basically a single crud controller, and filled the code with many mistakes. Some obvious, some less obvious. Missing authentication, no tests, logging with System.out etc.. then we ask the candidate to review the code (we provide a laptop with a few IDEs but no AI tools). When they point out errors, I get them to explain why they are errors by playing the junior engineer to see how they explain technical issues to someone that might not have the same understanding I am not looking for them to "
+    },
+    {
+      "title": "US Military had close call after using AI for hallucinated intelligence report",
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "hn": "https://news.ycombinator.com/item?id=49770882",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T23:07:46Z",
+      "text": "&gt; its use in machine learning (or elsewhere, I suppose) is itself a form of empiricism in that what it is is essentially a repeated observe&#x2F;measure error&#x2F;adjust cycle. &quot;Empiricism&quot; implies that the technique is based on observable, but not mathematically proven foundations. If a problem space is convex, gradient descent is guaranteed to converge to a global optimal solution, regardless of whether you know the exact formulation of the space. Applying it when you don&#x27;t understand if a space is convex is another question, but that&#x27;s not a fault of gradient descent"
+    },
+    {
+      "title": "Inside ZCode: Silently uploading your Git history to the cloud",
+      "url": "https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload/",
+      "hn": "https://news.ycombinator.com/item?id=49770821",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T22:58:23Z",
+      "text": "I was wondering if I should try to create my own pseudo filesystem with FUSE for easy copy-on-write&#x2F;snapshots, a native feel, and automated secrets filtering&#x2F;swapping. I might as well combine that with good&#x2F;easy isolation. The whole “what sandbox&#x2F;VM&#x2F;microVM&#x2F;thing is best?” question has been bugging me a lot lately, and I no longer trust any of these AI companies to keep data safe. I’ve been testing a bunch of sandbox-related projects. Sometimes I just use a full Fedora Workstation VM inside Windows 11 with a shared folder, copy a project into it, and run long agen"
+    },
+    {
+      "title": "US Military had close call after using AI for hallucinated intelligence report",
+      "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "hn": "https://news.ycombinator.com/item?id=49769366",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T19:17:40Z",
+      "text": "&gt; I think you misunderstand the language others are using. &quot;Hallucination&quot; doesn&#x27;t refer to an &quot;error&quot; in the sense that crashing is an error, it refers to a situation in the problem class above, which is compatible with it working correctly every time. I do not misunderstand, I think maybe you do. You think there is a proper next word selection based on logic or meaning and there for the model selected the wrong one - it hallucinated. I am saying the model has no concept if anything other than the probability of select a token which is not based in any logic so it "
+    },
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49769202",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T18:53:11Z",
+      "text": "&gt; 2G of random garbage is written directly onto one member device (behind the filesystem&#x27;s back, offset 1G — python injector; uutils dd mis-seeks on dm devices), caches dropped, then a full scrub: btrfs scrub -B, zpool scrub + wait, bcachefs scrub, md&#x2F;lvm sync-action &#x27;check&#x27; (which can only COUNT mismatches — no checksums to know which copy is right). I&#x27;m not sure that nuking 2G of the underlying block device is a recoverable error on any filesystem that I&#x27;m aware of? Can you confirm if any ofthe filesystems really came out of the other side in a usable state a"
+    },
+    {
+      "title": "I think you should almost never use AI to write",
+      "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
+      "hn": "https://news.ycombinator.com/item?id=49768753",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T18:01:31Z",
+      "text": "Just a couple of days ago, a customer rep at a company we partner with dropped a long doc that had basic reasoning errors once you got into the individual sections. I would have much preferred if the rep had written a shorter document and reached out about things they were uncertain about. Instead thet wasted my and my team&#x27;s time as we first tried to make sense of the document on good faith before realizing the problem. I don&#x27;t care if people use LLMs per se, but if this is functionally the result, then in this aspect of my work things would go much better if people did not use them"
+    }
+  ]
+}

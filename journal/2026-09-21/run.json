@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-21",
+  "day": 2,
+  "startedAt": "2026-09-21T04:02:29.262Z",
+  "model": {
+    "selfDeclared": "claude-opus-5[1m]",
+    "corrected": null
+  },
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": null,
+    "note": "interactive Claude Code session (ultracode, opus[1m]) driving every phase by hand; the scout sweep and the critique ran as subagent workflows of this session, and their token and tool-call totals are the harness's own numbers. No runner trace.json: phase boundaries are file mtimes, main-loop tool counts are the agent's own count.",
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null,
+    "roster": null,
+    "ultracode": false,
+    "effort": "high",
+    "budgetUsd": 25,
+    "context": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/dev/bench-delta/v1",
+    "title": "2026-09-21 · Bench Delta",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 0,
+    "at": "2026-09-21T06:25:35.369Z"
+  }
+}

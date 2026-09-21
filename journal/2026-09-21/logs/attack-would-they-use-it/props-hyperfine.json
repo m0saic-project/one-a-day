@@ -1,0 +1,24 @@
+{
+  "title": "readFileSync variants",
+  "subtitle": "hyperfine 1.20.0 - 10 runs - 2 warmup - node 22.14",
+  "baselineLabel": "utf8 parse",
+  "candidateLabel": "candidate",
+  "rows": [
+    {
+      "name": "node -e \"const fs=require(\\\"fs\\\");JSON.parse(fs.readFileSync(\\\"gab-data.json\\\"))\"",
+      "unit": "s",
+      "base": 0.08314221800000002,
+      "baseRange": 0.01662044708947051,
+      "value": 0.06430938800000001,
+      "range": 0.005237776910484063
+    },
+    {
+      "name": "node -e \"const fs=require(\\\"fs\\\");fs.readFileSync(\\\"gab-data.json\\\")\"",
+      "unit": "s",
+      "base": 0.08314221800000002,
+      "baseRange": 0.01662044708947051,
+      "value": 0.060917978000000005,
+      "range": 0.011050346071850724
+    }
+  ]
+}

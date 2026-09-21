@@ -1,0 +1,142 @@
+{
+  "query": "benchmark bar chart",
+  "days": 540,
+  "count": 15,
+  "results": [
+    {
+      "title": "Btrfs/ZFS/bcachefs under workloads classic benchmarks skip",
+      "url": "https://bartosz.fenski.pl/modern-fs-benchmark/",
+      "hn": "https://news.ycombinator.com/item?id=49770064",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-19T20:56:52Z",
+      "text": "I&#x27;d actually recommend some excellent books on the &quot;philosophy&quot; of data presentation: The first that comes to mind is &quot;the visual display of quantitative information&quot; by Edward Tufte seems to be freely available online, and the other one on my mind is &quot;how charts lie&quot; by Alberto Cairo (which doesn&#x27;t seem to be freely accessible) But if it helps, just some &quot;initial gut feel observations&quot; from me: * It&#x27;s definitely not possible to find issue with the the _sheer amount_ of results, but there&#x27;s just far too much for a human to absorb, all"
+    },
+    {
+      "title": "So you want to use OpenRouter?",
+      "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
+      "hn": "https://news.ycombinator.com/item?id=49658386",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-11T13:48:32Z",
+      "text": "Co-founder and COO of OpenRouter here. Thanks everyone for the feedback here. Some of this we are aware of, some of it we aren&#x27;t. Some we can fix, some of it is inherent to inference (and we in fact improve the situation dramatically). Philosophically, at OpenRouter we are trying to do two different things, that are sometimes at odds with one another: 1. Let you use a lot of capacity across a lot of providers, in a way that &quot;just works&quot; and you don&#x27;t need to worry about it. 2. Have a huge variety of inference available so you can pick radically different price&#x2F;performa"
+    },
+    {
+      "title": "Show HN: Syq – copy files between machines fast (better than rsync)",
+      "url": "https://greaber.github.io/syq/",
+      "hn": "https://news.ycombinator.com/item?id=49649211",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-10T19:43:10Z",
+      "text": "&quot;Tiny&quot; speed improvement? According to the benchmarks, it&#x27;s almost 10x the speed of rsync! Really serious benchmarks never contain any information about network characteristics, options used or buffer sizes, and these are indeed very serious. The &quot;details&quot; button produces huge bar graphs. No disappointment there. Absolutely looking forward to 10x my speed, perhaps even transferring gigabytes per second on my gigabit link."
+    },
+    {
+      "title": "Playing whack-a-mole is losing",
+      "url": "https://dadrian.io/blog/posts/whack-a-mole-is-losing/",
+      "hn": "https://news.ycombinator.com/item?id=49629221",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-09-09T16:34:33Z",
+      "text": "The VRP is a wholly manufactured and in the long-term, unsustainable model to begin with. It&#x27;s the most duct&#x2F;duck-taped solution that, with a virtually entirely tech-illiterate police force, can work under the interpretation of the CFAA prior to the van Buren decision in 2020. In practice it&#x27;s easily ludicrously inefficient and requires trust that simply can&#x27;t exist. In fact the tech-illiteracy is so profound that even post van Buren, which fixes some of the most glaring problems Orin Kerr has spent his career screaming into the void on with the CFAA, a law drafted 6 years "
+    },
+    {
+      "title": "Hy4 preview",
+      "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
+      "hn": "https://news.ycombinator.com/item?id=49493388",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-29T21:13:39Z",
+      "text": "I wish model providers would stop committing chart crimes in their releases. - if you&#x27;re gonna order the rest of the bar chart by rank, order your model accordingly. - if you&#x27;re gonna highlight a winner in a table of benchmarks, don&#x27;t highlight your entire model row in the table. Etc etc"
+    },
+    {
+      "title": "Chartreuse, a case study in how scarcity and authenticity can drive desirability",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-05/how-chartreuse-conquered-paris-wine-bars-to-become-a-luxury-spirit",
+      "hn": "https://news.ycombinator.com/item?id=49277792",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-08-12T20:00:00Z",
+      "text": "Once upon a time, many years ago, I was working in a bar in rural Ireland. I was 16 or 17, I was alone in the place, it was a slow afternoon, I was crouched down, putting bottles on shelves, idly wondering what the strongest drink - highest ABV - in this place was. Most spirits were about 40%, many less, some slightly more. At that moment I happened to look up and I swear a beam of sunshine at that moment lit on a bottle of green chartreuse above my head, highlighting the “55% ABV” on the label. In my memory, music also chimed. I just had to taste this stuff, so I poured a tiny drop into a gla"
+    },
+    {
+      "title": "Mistral OCR 4",
+      "url": "https://mistral.ai/news/ocr-4/",
+      "hn": "https://news.ycombinator.com/item?id=48648829",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-06-23T18:04:02Z",
+      "text": "All AI labs really need to stop using truncated y-axes for benchmark bar charts... https:&#x2F;&#x2F;mistral.ai&#x2F;_astro&#x2F;cm-engish_ZhlvoT.webp?dpl=6a3a94bd... "
+    },
+    {
+      "title": "I switched from Mac to a Lenovo Chromebook",
+      "url": "https://blog.johnozbay.com/i-left-apples-ecosystem-for-a-lenovo-chromebook-and-you-can-too.html",
+      "hn": "https://news.ycombinator.com/item?id=48051744",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-05-07T16:55:59Z",
+      "text": "Going from complaining about Apple not having enough polish in the fine details of their UI to suggesting we all switch to Chromebooks is so completely inconsistent that there must be other motivations. In one post they&#x27;re complaining about things like Apple having the search bar in different locations in different apps, and in the next post they&#x27;re seriously trying to tell us that a laptop that requires modifying the software and running shell commands copied from the internet so you can run a text editor to change settings and drivers is the solution? They dropped a note about how "
+    },
+    {
+      "title": "BitNet: 100B Param 1-Bit model for local CPUs",
+      "url": "https://github.com/microsoft/BitNet",
+      "hn": "https://news.ycombinator.com/item?id=47338837",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-11T17:52:10Z",
+      "text": "I asked this question a while back (the &quot;only train w&#x2F; wikipedia LLM&quot;) and got pointed to the general-purpose &quot;compression benchmarks&quot; page: ` https:&#x2F;&#x2F;www.mattmahoney.net&#x2F;dc&#x2F;text.html ` While I understand some of the fundamental thoughts behind that comparison, it&#x27;s slightly wonky... I&#x27;m not asking &quot;compress wikipedia really well&quot;, but instead &quot;can a &#x27;model&#x27; reason its way through wikipedia&quot; (and what does that reasoning look like?). Theoretically with wikipedia-multi-lang you should be able to reasonably nail"
+    },
+    {
+      "title": "The Sandboxed Open-Source Agent that is 70% cheaper than E2B",
+      "url": "https://coasty.ai:443/",
+      "hn": "https://news.ycombinator.com/item?id=47268583",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-03-05T23:16:26Z",
+      "text": "Hey HN, I&#x27;m Nitish, co-founder of Coasty (coasty.ai). My co-founder Prateek and I built this after running into the same wall most agent developers hit: you need a real, isolated computer for your agent to actually do things, browse, run code, fill forms, submit jobs — and the existing options are either expensive, capped at 24-hour sessions, or both. What we built Coasty gives AI agents secure, isolated cloud VMs that spin up in 2–5 minutes. Each sandbox is fully isolated, agents get a real desktop environment with a browser, terminal, and filesystem. No shared state between runs, no ses"
+    },
+    {
+      "title": "Ggml.ai joins Hugging Face to ensure the long-term progress of Local AI",
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/19759",
+      "hn": "https://news.ycombinator.com/item?id=47097295",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-02-21T03:47:18Z",
+      "text": "Amazing work and people should really appreciate that the opportunity costs of your work are immense (given the hype). On another note: I&#x27;m a bit paranoid about quantization. I know people are not good at discerning model quality at these levels of &quot;intelligence&quot; anymore, I don&#x27;t think a vibe check really catches the nuances. How hard would it be to systematically evaluate the different quantizations? E.g. on the Aider benchmark that you used in the past? I was recently trying Qwen 3 Coder Next and there are benchmark numbers in your article but they seem to be for the offi"
+    },
+    {
+      "title": "Qwen3-Coder-Next",
+      "url": "https://qwen.ai/blog?id=qwen3-coder-next",
+      "hn": "https://news.ycombinator.com/item?id=46873689",
+      "points": null,
+      "comments": null,
+      "createdAt": "2026-02-03T17:03:55Z",
+      "text": "That&#x27;s a box plot, so those are not error bars but a visualization of the distribution of a metric (min, max, median, 25th percentile, 75th percentile). The benchmark consists of a bunch of tasks. The chart shows the distribution of the number of turns taken over all those tasks."
+    },
+    {
+      "title": "Why my rust rewrite of Mozilla's readability is better than original readability",
+      "url": "https://github.com/theiskaa/readabilityrs",
+      "hn": "https://news.ycombinator.com/item?id=46039470",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-11-24T21:19:48Z",
+      "text": "The README.md is 9k of dense text, but does explain it: faster, more efficient, more accurate &amp; more sensible. Rust port feature: The implementation &quot;passes 93.8% of Mozilla&#x27;s test suite (122&#x2F;130 tests)&quot; with full document preprocessing support. Test interpretation&#x2F;sensibility: The 8 failing tests &quot;represent editorial judgment differences rather than implementation errors.&quot; It notes four cases involving &quot;more sensible choices in our implementation such as avoiding bylines extracted from related article sidebars and preferring author names over timest"
+    },
+    {
+      "title": "GPT-5",
+      "url": "https://openai.com/gpt-5/",
+      "hn": "https://news.ycombinator.com/item?id=44828661",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-08-07T18:41:00Z",
+      "text": "That SWE-bench chart with the mismatched bars (52.8% somehow appearing larger than 69.1%) was emblematic of the entire presentation - rushed and underwhelming. It&#x27;s the kind of error that would get flagged in any internal review, yet here it is in a billion-dollar product launch. Combined with the Bernoulli effect demo confidently explaining how airplane wings work incorrectly (the equal transit time fallacy that NASA explicitly debunks), it doesn&#x27;t inspire confidence in either the model&#x27;s capabilities or OpenAI&#x27;s quality control. The actual benchmark improvements are margi"
+    },
+    {
+      "title": "Apache ECharts 6",
+      "url": "https://echarts.apache.org/handbook/en/basics/release-note/v6-feature/",
+      "hn": "https://news.ycombinator.com/item?id=44799264",
+      "points": null,
+      "comments": null,
+      "createdAt": "2025-08-05T15:28:01Z",
+      "text": "Recently tried a bunch of frontend charging libraries. Disclaimer: I only tried line charts for time series X axis and bar charts for categorical X axis. No other charts. I had filters, group by and sort by options in control panel. Data was fetched everytime from database when control panel was modified, so no client side number crunching. My requirements were: Control panel at top (which I&#x27;ll manage). Then a grid of charts below with synced cursors and zooms (toggleable). Basically, grafana, but they&#x27;re not necessarily time series graphs. I found uPlot(which is iirc what grafana us"
+    }
+  ]
+}

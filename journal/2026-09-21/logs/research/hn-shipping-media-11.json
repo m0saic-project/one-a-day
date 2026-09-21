@@ -1,0 +1,71 @@
+{
+  "query": "generate images programmatically",
+  "days": 900,
+  "count": 8,
+  "results": [
+    {
+      "title": "Show HN: Midjourney API with webhooks, polling",
+      "url": "https://www.midjourney-api.com",
+      "hn": "https://news.ycombinator.com/item?id=49581947",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-05T23:52:56Z"
+    },
+    {
+      "title": "Show HN: A pipeline to render and serve web components dynamically via LLM",
+      "url": "https://github.com/pilifs/Terminal-Value",
+      "hn": "https://news.ycombinator.com/item?id=46948487",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-02-09T17:58:43Z"
+    },
+    {
+      "title": "Show HN: X-Pilot – Code-Driven AI Video Generator for Online Courses",
+      "url": "https://www.x-pilot.ai/",
+      "hn": "https://news.ycombinator.com/item?id=46705382",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-01-21T13:24:33Z"
+    },
+    {
+      "title": "Show HN: Spectra – Visuals should be infrastructure, not manual work",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46496437",
+      "points": 3,
+      "comments": 0,
+      "createdAt": "2026-01-05T08:18:15Z"
+    },
+    {
+      "title": "Show HN: Comfy Nodekit – build/serialize ComfyUI workflows in Python",
+      "url": "https://github.com/katalist-ai/comfy-nodekit",
+      "hn": "https://news.ycombinator.com/item?id=45681199",
+      "points": 11,
+      "comments": 4,
+      "createdAt": "2025-10-23T12:47:40Z"
+    },
+    {
+      "title": "Show HN: Python package to easily generate and edit images with Nano Banana",
+      "url": "https://github.com/minimaxir/gemimg",
+      "hn": "https://news.ycombinator.com/item?id=45170559",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-09-08T16:47:41Z"
+    },
+    {
+      "title": "Show HN: I built a tool to turn handwriting into a font with PyTorch/OpenCV",
+      "url": "https://handfonted.xyz/",
+      "hn": "https://news.ycombinator.com/item?id=44268487",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-06-13T13:46:57Z"
+    },
+    {
+      "title": "Show HN: Printercow – Turn any thermal printer into an API endpoint",
+      "url": "https://www.printercow.com/",
+      "hn": "https://news.ycombinator.com/item?id=42778771",
+      "points": 150,
+      "comments": 103,
+      "createdAt": "2025-01-21T11:06:12Z"
+    }
+  ]
+}

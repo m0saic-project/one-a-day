@@ -1,0 +1,25 @@
+{
+  "title": "7bc4f64 -> 84ec6ea",
+  "baselineLabel": "7bc4f64",
+  "candidateLabel": "84ec6ea",
+  "rows": [
+    {
+      "name": "Fibonacci 10",
+      "value": 86.4267,
+      "range": "± 6.2828",
+      "unit": "ns",
+      "extra": "100 samples\n364 iterations",
+      "base": 84.6776,
+      "baseRange": "± 4.8131"
+    },
+    {
+      "name": "Fibonacci 20",
+      "value": 7.71072,
+      "range": "± 408.898",
+      "unit": "us",
+      "extra": "100 samples\n4 iterations",
+      "base": 7.59636,
+      "baseRange": "± 430.836"
+    }
+  ]
+}

@@ -5,15 +5,15 @@
   "exitCode": 0,
   "renderStatus": "ok",
   "run": {
-    "id": "f160eb00-4c71-4b4d-a5ac-b805f61af7fd",
-    "startedAtIso": "2026-09-22T13:30:29.712Z",
-    "finishedAtIso": "2026-09-22T13:30:30.939Z",
-    "elapsedMs": 1227,
-    "estimatedMs": 224,
+    "id": "538f563b-b407-4e8d-b173-48ab4852a83c",
+    "startedAtIso": "2026-09-22T15:55:17.238Z",
+    "finishedAtIso": "2026-09-22T15:55:17.610Z",
+    "elapsedMs": 372,
+    "estimatedMs": 212,
     "costModelVersion": 3,
-    "machineFactor": 1,
-    "setupFactor": 1,
-    "slopeFactor": 1
+    "machineFactor": 0.9464285714285714,
+    "setupFactor": 0.9098625830724444,
+    "slopeFactor": 1.0481883536740983
   },
   "versions": {
     "cli": {
@@ -41,15 +41,15 @@
       },
       "runtime": {
         "found": true,
-        "version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers",
-        "libavfilterMajor": 10,
+        "version": "ffmpeg version N-124278-gcc3ca17127-20260430 Copyright (c) 2000-2026 the FFmpeg developers",
+        "libavfilterMajor": 11,
         "libx264": true
       }
     },
     "ffprobe": {
       "runtime": {
         "found": true,
-        "version": "ffprobe version 7.1-essentials_build-www.gyan.dev Copyright (c) 2007-2024 the FFmpeg developers"
+        "version": "ffprobe version N-124278-gcc3ca17127-20260430 Copyright (c) 2007-2026 the FFmpeg developers"
       }
     }
   },
@@ -104,20 +104,11 @@
     "feasible": true
   },
   "toolchain": {
-    "name": "PATH",
-    "ffmpegPath": "ffmpeg",
-    "ffprobePath": "ffprobe",
-    "source": "path"
+    "name": "gpl",
+    "ffmpegPath": "C:\\Users\\MainDesktop\\m0saic\\toolchains\\ffmpeg\\1.0.0-gpl\\bin\\ffmpeg.exe",
+    "ffprobePath": "C:\\Users\\MainDesktop\\m0saic\\toolchains\\ffmpeg\\1.0.0-gpl\\bin\\ffprobe.exe",
+    "source": "golden"
   },
   "errors": [],
-  "warnings": [
-    {
-      "code": "ffmpeg-version-mismatch",
-      "message": "Runtime FFmpeg differs from the m0saic baseline snapshot.",
-      "details": {
-        "baselineSnapshot": "N-124278-gcc3ca17127-20260430",
-        "runtimeVersion": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers"
-      }
-    }
-  ]
+  "warnings": []
 }

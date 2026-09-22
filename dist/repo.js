@@ -46,4 +46,9 @@ exports.TEMPLATE_PACKS = [
         title: "Dev",
         description: "Templates a developer runs from a build step or a terminal, fed by the repo's own metadata: preview cards, badges, banners. Deterministic, so a stale image is a diff.",
     },
+    {
+        id: "social",
+        title: "Social",
+        description: "Stills and clips a small business or a creator posts as themselves: testimonials, announcements, proof. Every card keeps its evidence attached - who said it, where it came from - so the post cannot pose as more than it is.",
+    },
 ];

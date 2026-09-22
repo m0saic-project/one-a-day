@@ -6,4 +6,5 @@ export declare const templates: MosaicTemplate<MosaicTemplateProps>[];
 export * from "./basics";
 export * from "./harness";
 export * from "./dev";
+export * from "./social";
 export { TEMPLATE_PACKS, TEMPLATE_REPO };

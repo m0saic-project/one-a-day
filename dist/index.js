@@ -21,12 +21,14 @@ Object.defineProperty(exports, "TEMPLATE_REPO", { enumerable: true, get: functio
 const basics_1 = require("./basics");
 const harness_1 = require("./harness");
 const dev_1 = require("./dev");
+const social_1 = require("./social");
 /** The two exports every Mosaic host requires from a template repo. */
 exports.repo = repo_1.TEMPLATE_REPO;
 exports.templates = [
     ...basics_1.basicsTemplates,
     ...harness_1.harnessTemplates,
     ...dev_1.devTemplates,
+    ...social_1.socialTemplates,
 ];
 // Library re-exports for anyone importing this repo as code. `export *`
 // ONLY for template modules — never pair `export * from "./x"` with a
@@ -34,3 +36,4 @@ exports.templates = [
 __exportStar(require("./basics"), exports);
 __exportStar(require("./harness"), exports);
 __exportStar(require("./dev"), exports);
+__exportStar(require("./social"), exports);

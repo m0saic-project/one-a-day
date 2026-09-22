@@ -25,8 +25,15 @@
   ],
   "inPlace": "a",
   "build": "done",
-  "decision": "no-ship",
-  "pick": null,
-  "noShipReason": "Required why-tutorial render failed with exit 1, so its six pages cannot be inspected or shipped.",
-  "critique": "done"
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "restore": {
+    "by": "maintainer",
+    "at": "2026-09-22T15:54:36.453Z",
+    "originalDecision": "no-ship",
+    "originalNoShipReason": "Required why-tutorial render failed with exit 1, so its six pages cannot be inspected or shipped.",
+    "why": "the tutorial stall was the redirected M0SAIC_ROOT, not the template (see 50-ship.md and maintain 2026-09-22)"
+  },
+  "ship": "done"
 }

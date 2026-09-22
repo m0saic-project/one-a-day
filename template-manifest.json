@@ -92,6 +92,27 @@
       "preview": {
         "image": "assets/templates/@one-a-day__dev__bench-delta__v1/preview.png"
       }
+    },
+    {
+      "slug": "testimonial-proof-card",
+      "templateKey": "@one-a-day/social/testimonial-proof-card/v1",
+      "title": "2026-09-22 · Testimonial Proof Card",
+      "description": "A selected customer quote with attribution, rating, and a source-verification disclosure, as a square-first social still for a local service business.",
+      "tags": [
+        "social",
+        "2026-09-22",
+        "day-003",
+        "testimonial",
+        "social-proof",
+        "small-business",
+        "social-media",
+        "review",
+        "still"
+      ],
+      "pack": "social",
+      "preview": {
+        "image": "assets/templates/@one-a-day__social__testimonial-proof-card__v1/preview.png"
+      }
     }
   ],
   "packs": [
@@ -109,6 +130,11 @@
       "id": "dev",
       "title": "Dev",
       "description": "Templates a developer runs from a build step or a terminal, fed by the repo's own metadata: preview cards, badges, banners. Deterministic, so a stale image is a diff."
+    },
+    {
+      "id": "social",
+      "title": "Social",
+      "description": "Stills and clips a small business or a creator posts as themselves: testimonials, announcements, proof. Every card keeps its evidence attached - who said it, where it came from - so the post cannot pose as more than it is."
     }
   ]
 }

@@ -4,6 +4,7 @@ import { TEMPLATE_PACKS, TEMPLATE_REPO } from "./repo";
 import { basicsTemplates } from "./basics";
 import { harnessTemplates } from "./harness";
 import { devTemplates } from "./dev";
+import { socialTemplates } from "./social";
 
 /** The two exports every Mosaic host requires from a template repo. */
 export const repo = TEMPLATE_REPO;
@@ -12,6 +13,7 @@ export const templates: MosaicTemplate<MosaicTemplateProps>[] = [
   ...basicsTemplates,
   ...harnessTemplates,
   ...devTemplates,
+  ...socialTemplates,
 ];
 
 // Library re-exports for anyone importing this repo as code. `export *`
@@ -20,4 +22,5 @@ export const templates: MosaicTemplate<MosaicTemplateProps>[] = [
 export * from "./basics";
 export * from "./harness";
 export * from "./dev";
+export * from "./social";
 export { TEMPLATE_PACKS, TEMPLATE_REPO };

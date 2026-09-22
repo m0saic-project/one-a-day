@@ -1,0 +1,32 @@
+{
+  "useCase": "Branded review cards for local service businesses to turn one customer testimonial into a repeatable social post.",
+  "who": "Local service-business owners and social-media coordinators in r/smallbusiness.",
+  "sources": [
+    "https://www.reddit.com/r/smallbusiness/comments/1nitluu/small_business_owners_whats_your_process_for/",
+    "https://www.reddit.com/r/smallbusiness/comments/1ph2vfy/social_media_coordinator/",
+    "https://www.reddit.com/r/smallbusiness/comments/1wgqpiz/starting_producing_social_media_content_for_the/"
+  ],
+  "tags": [
+    "testimonial",
+    "social-proof",
+    "small-business",
+    "social-media",
+    "review",
+    "still"
+  ],
+  "scout": "done",
+  "pack": "social",
+  "slug": "testimonial-proof-card",
+  "title": "Testimonial Proof Card",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "no-ship",
+  "pick": null,
+  "noShipReason": "Required why-tutorial render failed with exit 1, so its six pages cannot be inspected or shipped.",
+  "critique": "done"
+}

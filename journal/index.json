@@ -66,5 +66,29 @@
       "https://news.ycombinator.com/item?id=21535972",
       "https://news.ycombinator.com/item?id=49727511"
     ]
+  },
+  {
+    "date": "2026-09-22",
+    "day": 3,
+    "agent": "codex",
+    "model": "gpt-5-codex",
+    "rosterId": "codex-terra",
+    "status": "failed",
+    "templateId": null,
+    "title": null,
+    "useCase": "Branded review cards for local service businesses to turn one customer testimonial into a repeatable social post.",
+    "tags": [
+      "testimonial",
+      "social-proof",
+      "small-business",
+      "social-media",
+      "review",
+      "still"
+    ],
+    "sources": [
+      "https://www.reddit.com/r/smallbusiness/comments/1nitluu/small_business_owners_whats_your_process_for/",
+      "https://www.reddit.com/r/smallbusiness/comments/1ph2vfy/social_media_coordinator/",
+      "https://www.reddit.com/r/smallbusiness/comments/1wgqpiz/starting_producing_social_media_content_for_the/"
+    ]
   }
 ]

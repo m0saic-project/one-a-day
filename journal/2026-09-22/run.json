@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-22",
+  "day": 3,
+  "startedAt": "2026-09-22T13:00:01.362Z",
+  "runner": {
+    "adapter": "codex",
+    "modelFlag": "gpt-5.6-terra",
+    "roster": {
+      "id": "codex-terra",
+      "agent": "codex",
+      "model": "gpt-5.6-terra",
+      "weight": 3,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": null,
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "gpt-5-codex",
+    "corrected": null
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 162871,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 85971,
+      "done": true
+    },
+    "build": {
+      "calls": 3,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 290523,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 112989,
+      "done": true
+    }
+  },
+  "result": {
+    "status": "failed",
+    "templateId": null,
+    "reason": "scope violation"
+  },
+  "gate": {
+    "reasons": [
+      "out of scope: out.validate.json (outside the daily scope) — reverted"
+    ],
+    "at": "2026-09-22T13:42:41.649Z"
+  }
+}

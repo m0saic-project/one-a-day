@@ -1,0 +1,86 @@
+{
+  "templateId": "@one-a-day/social/testimonial-proof-card/v1",
+  "at": "2026-09-22T13:30:04.405Z",
+  "props": null,
+  "build": null,
+  "kind": "image",
+  "renders": [
+    {
+      "canvas": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "file": "renders\\landscape.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 188625,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "png"
+      }
+    },
+    {
+      "canvas": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "file": "renders\\portrait.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 166173,
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "png"
+      }
+    },
+    {
+      "canvas": "square",
+      "width": 1080,
+      "height": 1080,
+      "file": "renders\\square.png",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 159650,
+      "probe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "png"
+      }
+    }
+  ],
+  "stills": [
+    {
+      "canvas": "landscape",
+      "at": null,
+      "file": "stills\\landscape.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": null,
+      "file": "stills\\portrait.png"
+    },
+    {
+      "canvas": "square",
+      "at": null,
+      "file": "stills\\square.png"
+    }
+  ],
+  "srcSnapshot": "src/",
+  "ok": false,
+  "degraded": false,
+  "validate": {
+    "code": 0,
+    "degraded": false
+  },
+  "tutorial": {
+    "canvas": "tutorial",
+    "width": 1280,
+    "height": 720,
+    "file": "renders\\tutorial.mp4",
+    "exitCode": 1,
+    "degraded": false,
+    "bytes": 0,
+    "probe": null,
+    "stderr": "\u001b[33m⚠  Loading third-party template code from:\n     C:\\src\\m0saic-production\\one-a-day\n   This code is not written or reviewed by m0saic and runs with your\n   access to files, network, and programs. m0saic LLC is not responsible\n   for third-party template code. Only load repos you trust.\u001b[0m\n  Building plan... done (0.9s)\n❌ ffmpeg exited with code 1\n⚠ stalled: ffmpeg produced no progress and no output for the stall window, so the runner stopped it (FFMPEG_STALLED). Usually a source that never ends or never decodes — a corrupt image or clip, a stream that hangs.\n   • Check the inputs of the failing node: a corrupt or truncated image/clip, or a network source that never answers, will hang the decoder.\n   • Try the render with that node's media replaced by a known-good file.\nRender completed with errors (exit 1). See C:\\src\\m0saic-production\\one-a-day\\journal\\2026-09-22\\variants\\a\\renders\\tutorial.output.json"
+  }
+}

@@ -1,0 +1,1 @@
+Scout complete. Wrote [10-scout.md](C:\src\m0saic-production\one-a-day\journal\2026-09-22\10-scout.md) and recorded the selected use case, sources, tags, model, and `scout: "done"` in today’s journal.

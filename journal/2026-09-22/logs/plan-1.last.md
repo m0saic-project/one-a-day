@@ -1,0 +1,1 @@
+Planning complete. Wrote [20-brief.md](C:\src\m0saic-production\one-a-day\journal\2026-09-22\20-brief.md), declared `gpt-5-codex`, and recorded the social pack, slug, title, and `plan: "done"` in state.

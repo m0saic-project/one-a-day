@@ -33,6 +33,17 @@ const PROPS = opt("--props");
 const NO_BUILD = argv.includes("--no-build");
 const CANVASES = [["landscape", 1920, 1080], ["portrait", 1080, 1920], ["square", 1080, 1080]];
 
+// The renders MUST run on the machine's real m0saic root (`~/m0saic`): that is
+// where the paid license, the pinned toolchain and the trust file live. A
+// fresh `M0SAIC_ROOT` looks like it works — stills render, with a free-tier
+// mark — and then every video render (the why-tutorial) hangs in ffmpeg
+// with FFMPEG_STALLED. Day 003 (2026-09-22) was lost exactly this way, so the
+// variable is dropped here whatever the caller's shell set.
+if (process.env.M0SAIC_ROOT) {
+  console.error(`render-variant: ignoring M0SAIC_ROOT=${process.env.M0SAIC_ROOT} — renders use the machine's real m0saic root (a fresh root has no license or toolchain and stalls video renders)`);
+  delete process.env.M0SAIC_ROOT;
+}
+
 const q = (a) => (IS_WIN && /[\s"@()^&|<>]/.test(a) ? `"${a.replace(/"/g, '\\"')}"` : a);
 function sh(cmd, args, opts = {}) {
   const r = IS_WIN

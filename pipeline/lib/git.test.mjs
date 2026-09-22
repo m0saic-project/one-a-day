@@ -47,3 +47,34 @@ test("another day's journal is forbidden, today's is allowed", () => {
   assert.equal(r.forbidden.length, 1);
   assert.equal(r.allowed.length, 1);
 });
+
+test("stray render outputs at the repo root are scratch, not a scope violation (day 003)", () => {
+  const r = classifyChanges([
+    e("??", "out.validate.json"), e("??", "out.png"), e("??", "out.mp4"), e("??", "why.mp4"),
+    e("??", "review.output.json"), e("??", "out-2.tutorial.png"),
+    e("??", "secret.txt"), e("??", "notes.json"),
+  ], { date: D });
+  assert.deepEqual(r.scratch.map((s) => s.path).sort(), ["out-2.tutorial.png", "out.mp4", "out.png", "out.validate.json", "review.output.json", "why.mp4"]);
+  for (const s of r.scratch) assert.match(s.reason, /stray render output/);
+  assert.deepEqual(r.forbidden.map((f) => f.path).sort(), ["notes.json", "secret.txt"]);
+  assert.equal(r.allowed.length, 0);
+});
+
+test("a tracked file with a scratch-looking name is not scratch", () => {
+  const r = classifyChanges([e("M", "out.png")], { date: D });
+  assert.equal(r.scratch.length, 0);
+  assert.equal(r.forbidden.length, 1);
+});
+
+test("runtime caches inside the day's journal are scratch; the rest of the journal is allowed", () => {
+  const r = classifyChanges([
+    e("??", `journal/${D}/cache/masks/mask-0184071edfdaf7a9.png`),
+    e("??", `journal/${D}/m0saic-runtime/cache/masks/mask-036adc24351db32e.png`),
+    e("??", `journal/${D}/variants/a/report.json`),
+    e("??", "journal/2026-09-01/cache/masks/x.png"),
+  ], { date: D });
+  assert.equal(r.scratch.length, 2);
+  for (const s of r.scratch) assert.match(s.reason, /runtime cache/);
+  assert.deepEqual(r.allowed.map((a) => a.path), [`journal/${D}/variants/a/report.json`]);
+  assert.equal(r.forbidden.length, 1, "another day's cache is still another day's journal");
+});

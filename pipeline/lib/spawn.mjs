@@ -28,9 +28,15 @@ export function runProcess({ cmd, args = [], cwd, env, input, timeoutMs, logFile
   return new Promise((resolve) => {
     const started = Date.now();
     const useShell = IS_WIN;
+    // Children (agents, the gate's own m0saic calls) always see the machine's
+    // real m0saic root: a redirected M0SAIC_ROOT has no license or toolchain
+    // and stalls video renders (day 003). The agent can still set it inside
+    // its own shell; pipeline/render/render-variant.mjs drops it again there.
+    const childEnv = { ...process.env, ...env };
+    delete childEnv.M0SAIC_ROOT;
     const child = useShell
-      ? spawn([cmd, ...args.map(quoteWin)].join(" "), { cwd, env: { ...process.env, ...env }, shell: true, stdio: ["pipe", "pipe", "pipe"], windowsHide: true })
-      : spawn(cmd, args, { cwd, env: { ...process.env, ...env }, stdio: ["pipe", "pipe", "pipe"] });
+      ? spawn([cmd, ...args.map(quoteWin)].join(" "), { cwd, env: childEnv, shell: true, stdio: ["pipe", "pipe", "pipe"], windowsHide: true })
+      : spawn(cmd, args, { cwd, env: childEnv, stdio: ["pipe", "pipe", "pipe"] });
 
     let stdout = "";
     let stderr = "";

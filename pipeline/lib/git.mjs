@@ -50,18 +50,45 @@ const VERSION_DIR_RE = /^src\/([a-z0-9][a-z0-9-]*)\/([a-z0-9][a-z0-9-]*)\/(v[1-9
 const ASSET_DIR_RE = /^assets\/templates\/([^/]+)\//;
 
 /**
+ * SCRATCH: files a day's run leaves behind that are nobody's work and never
+ * ship — the gate deletes them and moves on, instead of failing the day.
+ *
+ *   - untracked render outputs at the repo root: what `m0saic make` writes
+ *     when the agent forgets `-o` (`out.png`, `out.mp4`) or asks for a
+ *     report beside it (`out.validate.json`, `out.output.json`), and the
+ *     `why.mp4` the docs suggest. Day 003 (2026-09-22) failed as a "scope
+ *     violation" over one `out.validate.json`.
+ *   - runtime caches an agent pointed into the day's journal
+ *     (`journal/<date>/cache/`, `journal/<date>/m0saic-runtime/`): 241 mask
+ *     PNGs rode into the day-003 commit that way. `.gitignore` covers the
+ *     manual case; this covers the gate's `git add -A`.
+ */
+const SCRATCH_ROOT_RE = /^(out|why)(?:[.-][\w-]+)*\.(png|jpe?g|gif|webp|mp4|mov|webm|json)$/i;
+const SCRATCH_REPORT_RE = /^[^/]+\.(validate|output)\.json$/i;
+const SCRATCH_JOURNAL_DIRS = ["cache/", "m0saic-runtime/"];
+function scratchReason(p, status, date) {
+  if (!p.includes("/") && status === "??" && (SCRATCH_ROOT_RE.test(p) || SCRATCH_REPORT_RE.test(p))) return "stray render output at the repo root";
+  const inDay = p.startsWith(`journal/${date}/`) ? p.slice(`journal/${date}/`.length) : null;
+  if (inDay && SCRATCH_JOURNAL_DIRS.some((d) => inDay.startsWith(d))) return "runtime cache inside the day's journal";
+  return null;
+}
+
+/**
  * Classify a day's working-tree changes.
- * @returns {{ allowed: {status:string,path:string}[], forbidden: {status:string,path:string,reason:string}[], newTemplateDirs: string[], touchedAssetDirs: string[] }}
+ * @returns {{ allowed: {status:string,path:string}[], forbidden: {status:string,path:string,reason:string}[], scratch: {status:string,path:string,reason:string}[], newTemplateDirs: string[], touchedAssetDirs: string[] }}
  */
 export function classifyChanges(entries, { date }) {
   const allowed = [];
   const forbidden = [];
+  const scratch = [];
   const newDirs = new Set();
   const assetDirs = new Set();
   const isNew = (s) => s === "??" || s === "A" || s === "AM";
   for (const e of entries) {
     const p = e.path;
     const deny = (reason) => forbidden.push({ ...e, reason });
+    const junk = scratchReason(p, e.status, date);
+    if (junk) { scratch.push({ ...e, reason: junk }); continue; }
     if (PROTECTED.files.has(p)) { deny("protected file"); continue; }
     if (PROTECTED.prefixes.some((x) => p.startsWith(x))) { deny("protected folder"); continue; }
     if (p.startsWith("journal/")) {
@@ -83,7 +110,7 @@ export function classifyChanges(entries, { date }) {
     }
     deny("outside the daily scope");
   }
-  return { allowed, forbidden, newTemplateDirs: [...newDirs].sort(), touchedAssetDirs: [...assetDirs].sort() };
+  return { allowed, forbidden, scratch, newTemplateDirs: [...newDirs].sort(), touchedAssetDirs: [...assetDirs].sort() };
 }
 
 /** Restore tracked paths from HEAD and delete untracked ones. Runner-only. */

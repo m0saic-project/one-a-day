@@ -30,3 +30,8 @@ yarn-error.log*
 
 # env
 .env
+
+# runtime caches an agent pointed into the day's journal (day 003 committed 241 mask PNGs this way);
+# the gate deletes them too — this covers a hand commit
+journal/**/cache/
+journal/**/m0saic-runtime/

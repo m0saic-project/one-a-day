@@ -52,8 +52,18 @@ export async function runGate({ repo, date, dayDir, noPush = false, remote = "or
   const rosterId = runRec.runner?.roster?.id ?? null;
   const wantShip = state.decision === "ship";
 
-  // ── 1. scope guard ──
+  // ── 0. scratch: stray render outputs and journal-side runtime caches are
+  //      deleted, logged, and never counted against the day ──
   let changes = classifyChanges(porcelain(repo), { date });
+  if (changes.scratch.length) {
+    const byReason = new Map();
+    for (const s of changes.scratch) byReason.set(s.reason, (byReason.get(s.reason) ?? 0) + 1);
+    revertPaths(repo, changes.scratch);
+    for (const [reason, n] of byReason) say(`[gate] · dropped ${n} file(s): ${reason}${n <= 3 ? ` (${changes.scratch.filter((s) => s.reason === reason).map((s) => s.path).join(", ")})` : ""}`);
+    changes = classifyChanges(porcelain(repo), { date });
+  }
+
+  // ── 1. scope guard ──
   if (changes.forbidden.length) {
     for (const f of changes.forbidden) fail(`out of scope: ${f.path} (${f.reason}) — reverted`);
     revertPaths(repo, changes.forbidden);

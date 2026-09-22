@@ -218,6 +218,19 @@ orientation; the detail is the journal.
   new `vN+1` folder with `deprecated: { replacement }` on the old one — and that is a
   future day's work, not today's.
 - **At most one new template folder per day.** Variants share the id and folder.
+- **Never set `M0SAIC_ROOT`.** Renders run on the machine's real m0saic root
+  (`~/m0saic`: the paid license, the pinned toolchain, the trust file). A
+  fresh root renders stills with a free-tier mark and then every video render
+  — the why-tutorial — hangs in ffmpeg (`FFMPEG_STALLED`). A permission error
+  on `~/m0saic/cache/masks` is transient: wait a minute and rerun; do not
+  redirect the root, and do not point a cache into `journal/`. The runner
+  strips the variable and deletes `journal/<date>/cache/` and
+  `journal/<date>/m0saic-runtime/` before it commits.
+- **Render outputs go under `journal/<date>/`, never the repo root.** Always
+  pass `-o`; `m0saic make … --validate-only --report` with no `-o` writes
+  `out.validate.json` beside `package.json`. The gate deletes stray
+  `out.*`/`why.*`/`*.validate.json`/`*.output.json` at the root rather than
+  failing the day, but it is a smell the critic will read.
 - No new dependencies (`dep-allowlist.json` mirrors what a host resolves — a new import
   compiles here and fails at load). No downloaded media into the repo. No secrets.
 

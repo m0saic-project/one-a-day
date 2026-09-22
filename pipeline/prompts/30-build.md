@@ -43,7 +43,12 @@ where you left off.
    copies the source folder, and writes
    `report.json`. Exit 3 means an ERROR MOSAIC rendered — that variant is
    broken however green the build was. Look at the stills if you can view
-   images; read `report.json` regardless. Read your own tutorial pages: a
+   images; read `report.json` regardless.
+   Run it as-is: never set `M0SAIC_ROOT` (a fresh root has no license or
+   toolchain and every video render stalls), and always pass `-o` under
+   `{{DAY_DIR}}/` when you call `m0saic make` yourself - a report with no
+   `-o` lands as `out.validate.json` at the repo root.
+   Read your own tutorial pages: a
    problem page that clips, or says less than the scout found, is a bug.
 6. Variants: change ONE idea in place (the same id and folder), rebuild, render
    into `variants/b`, then `c`. At most {{VARIANTS_MAX}}. Each variant must

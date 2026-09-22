@@ -324,8 +324,12 @@ async function render(props: AgentTimelineProps, ctx: MosaicEngineContext): Prom
     const x = trackX + Math.round((t / totalMs) * trackW);
     const label = fmtTick(t);
     const w = Math.min(Math.round((step / totalMs) * trackW), trackX + trackW - x);
-    if (w < 8) break;
-    putText({ x, y: bodyTop, w, h: axisH }, 1, { text: label, fontSize: fitLine(label, budget(w), axisPx, minPx), color: INK_DIM, hAlign: "left", vAlign: "bottom", label: `tick-${i}` });
+    // The last tick can land a few px before the track ends (a 40.6 min run
+    // puts "40m" 13 px from the edge): a label that cannot fit its box even
+    // at minPx is dropped, not clipped - the contract measures every tick.
+    const tickPx = fitLine(label, budget(w), axisPx, minPx);
+    if (w < 8 || widthOf(label, tickPx) > budget(w)) break;
+    putText({ x, y: bodyTop, w, h: axisH }, 1, { text: label, fontSize: tickPx, color: INK_DIM, hAlign: "left", vAlign: "bottom", label: `tick-${i}` });
   }
 
   phases.forEach((p, i) => {

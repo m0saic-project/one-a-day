@@ -1,0 +1,206 @@
+{
+  "templateId": "@one-a-day/events/talk-timer/v1",
+  "at": "2026-09-23T15:35:58.157Z",
+  "props": null,
+  "build": {
+    "code": 0
+  },
+  "kind": "video",
+  "renders": [
+    {
+      "canvas": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "file": "renders\\landscape.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 2973425,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 305
+      },
+      "ms": 261397
+    },
+    {
+      "canvas": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "file": "renders\\portrait.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 2537610,
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "h264",
+        "durationSec": 305
+      },
+      "ms": 185378
+    },
+    {
+      "canvas": "square",
+      "width": 1080,
+      "height": 1080,
+      "file": "renders\\square.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 2349126,
+      "probe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 305
+      },
+      "ms": 189087
+    }
+  ],
+  "stills": [
+    {
+      "canvas": "landscape",
+      "at": 30.5,
+      "file": "stills\\landscape-10.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 152.5,
+      "file": "stills\\landscape-50.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 274.5,
+      "file": "stills\\landscape-90.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 30.5,
+      "file": "stills\\portrait-10.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 152.5,
+      "file": "stills\\portrait-50.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 274.5,
+      "file": "stills\\portrait-90.png"
+    },
+    {
+      "canvas": "square",
+      "at": 30.5,
+      "file": "stills\\square-10.png"
+    },
+    {
+      "canvas": "square",
+      "at": 152.5,
+      "file": "stills\\square-50.png"
+    },
+    {
+      "canvas": "square",
+      "at": 274.5,
+      "file": "stills\\square-90.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 3.5,
+      "file": "stills\\tutorial-1.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 14,
+      "file": "stills\\tutorial-2.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 27,
+      "file": "stills\\tutorial-3.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 38,
+      "file": "stills\\tutorial-4.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 195.5,
+      "file": "stills\\tutorial-5.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 353,
+      "file": "stills\\tutorial-6.png"
+    }
+  ],
+  "srcSnapshot": "src/",
+  "ok": true,
+  "degraded": false,
+  "split": {
+    "runner": "journal/2026-09-23/logs/render-variant-split.mjs",
+    "steps": [
+      {
+        "step": "build",
+        "at": "2026-09-23T15:36:02.547Z",
+        "code": 1
+      },
+      {
+        "step": "landscape",
+        "at": "2026-09-23T15:40:25.523Z",
+        "exit": 0,
+        "ms": 261984
+      },
+      {
+        "step": "build",
+        "at": "2026-09-23T15:41:12.250Z",
+        "code": 0,
+        "validate": 0,
+        "kind": "video",
+        "ms": 8690
+      },
+      {
+        "step": "portrait",
+        "at": "2026-09-23T15:44:30.764Z",
+        "exit": 0,
+        "ms": 186027
+      },
+      {
+        "step": "square",
+        "at": "2026-09-23T15:47:41.972Z",
+        "exit": 0,
+        "ms": 189543
+      },
+      {
+        "step": "tutorial",
+        "at": "2026-09-23T15:51:23.616Z",
+        "exit": 0,
+        "ms": 199603
+      },
+      {
+        "step": "snapshot",
+        "at": "2026-09-23T15:51:25.621Z"
+      }
+    ]
+  },
+  "validate": {
+    "code": 0,
+    "degraded": false
+  },
+  "tutorial": {
+    "canvas": "tutorial",
+    "width": 1280,
+    "height": 720,
+    "file": "renders\\tutorial.mp4",
+    "exitCode": 0,
+    "degraded": false,
+    "bytes": 2620244,
+    "probe": {
+      "width": 1280,
+      "height": 720,
+      "codec": "h264",
+      "durationSec": 358
+    },
+    "ms": 198481
+  },
+  "note": "ok re-derived after the fact: the first build step (see split.steps[0]) failed on the layout-fingerprint tripwire - variant b changed the m0 by adding the tint tiles - and was re-run after npm run fingerprints:update; the runner script only ever set ok=false and never cleared it. Every render exited 0."
+}

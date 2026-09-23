@@ -1,0 +1,45 @@
+{
+  "day": 4,
+  "date": "2026-09-23",
+  "useCase": "Rendered countdown clips for timed talk slots and starting-soon screens: the talk timer as a video file a stage screen, a confidence monitor or an OBS scene can just play",
+  "who": "Stage crews and organisers running timed talk slots, and streamers with starting-soon scenes; found on timer-tool pages, the OBS forums and in ffmpeg gists.",
+  "sources": [
+    "https://stagetimer.io/use-cases/conference-and-speaker-timer/",
+    "https://www.eventtimer.io/tools/presentation-timer",
+    "https://presenttimer.com/presentation-timer/",
+    "https://slidemodel.com/tools/countdown-timer/5-minute-timer/",
+    "https://gist.github.com/derand/31b8312fd64156120cb8f45825a1f0f7",
+    "https://wiki.tonytascioglu.com/scripts/ffmpeg/add_countdown_to_video",
+    "https://www.linkedin.com/pulse/batch-video-generator-countdown-ffmpeg-jose-velazquez-ma-pfkxe",
+    "https://github.com/pyoko-dev/countdown-generator",
+    "https://obsproject.com/forum/resources/stream-countdown-starting-soon-with-auto-scene-switch.2603/",
+    "https://obsproject.com/forum/threads/looking-for-a-countdown-timer.148696/",
+    "https://createtimer.com/blog/how-to-create-twitch-starting-soon-screen-with-timer/",
+    "https://www.wearedevelopers.com/world-congress-north-america"
+  ],
+  "tags": [
+    "countdown",
+    "timer",
+    "talk",
+    "conference",
+    "stream",
+    "video"
+  ],
+  "scout": "done",
+  "pack": "events",
+  "slug": "talk-timer",
+  "title": "Talk Timer",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "c",
+  "build": "done",
+  "decision": "ship",
+  "pick": "c",
+  "critique": "done",
+  "ship": "done"
+}

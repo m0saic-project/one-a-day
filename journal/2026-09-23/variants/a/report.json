@@ -1,0 +1,200 @@
+{
+  "templateId": "@one-a-day/events/talk-timer/v1",
+  "at": "2026-09-23T15:20:56.221Z",
+  "props": null,
+  "build": {
+    "code": 0
+  },
+  "kind": "video",
+  "renders": [
+    {
+      "canvas": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "file": "renders\\landscape.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 2976284,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 305
+      },
+      "ms": 250311
+    },
+    {
+      "canvas": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "file": "renders\\portrait.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 2400488,
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "h264",
+        "durationSec": 305
+      },
+      "ms": 176985
+    },
+    {
+      "canvas": "square",
+      "width": 1080,
+      "height": 1080,
+      "file": "renders\\square.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 2239110,
+      "probe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 305
+      },
+      "ms": 151134
+    }
+  ],
+  "stills": [
+    {
+      "canvas": "landscape",
+      "at": 30.5,
+      "file": "stills\\landscape-10.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 152.5,
+      "file": "stills\\landscape-50.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 274.5,
+      "file": "stills\\landscape-90.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 30.5,
+      "file": "stills\\portrait-10.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 152.5,
+      "file": "stills\\portrait-50.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 274.5,
+      "file": "stills\\portrait-90.png"
+    },
+    {
+      "canvas": "square",
+      "at": 30.5,
+      "file": "stills\\square-10.png"
+    },
+    {
+      "canvas": "square",
+      "at": 152.5,
+      "file": "stills\\square-50.png"
+    },
+    {
+      "canvas": "square",
+      "at": 274.5,
+      "file": "stills\\square-90.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 3.5,
+      "file": "stills\\tutorial-1.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 14,
+      "file": "stills\\tutorial-2.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 27,
+      "file": "stills\\tutorial-3.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 38,
+      "file": "stills\\tutorial-4.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 195.5,
+      "file": "stills\\tutorial-5.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 353,
+      "file": "stills\\tutorial-6.png"
+    }
+  ],
+  "srcSnapshot": "src/",
+  "ok": true,
+  "degraded": false,
+  "split": {
+    "runner": "journal/2026-09-23/logs/render-variant-split.mjs",
+    "steps": [
+      {
+        "step": "build",
+        "at": "2026-09-23T15:21:05.149Z",
+        "code": 0,
+        "validate": 0,
+        "kind": "video",
+        "ms": 8037
+      },
+      {
+        "step": "landscape",
+        "at": "2026-09-23T15:25:26.911Z",
+        "exit": 0,
+        "ms": 250774
+      },
+      {
+        "step": "portrait",
+        "at": "2026-09-23T15:28:36.466Z",
+        "exit": 0,
+        "ms": 177527
+      },
+      {
+        "step": "square",
+        "at": "2026-09-23T15:31:22.266Z",
+        "exit": 0,
+        "ms": 151537
+      },
+      {
+        "step": "tutorial",
+        "at": "2026-09-23T15:34:14.270Z",
+        "exit": 0,
+        "ms": 160791
+      },
+      {
+        "step": "snapshot",
+        "at": "2026-09-23T15:34:33.356Z"
+      }
+    ]
+  },
+  "validate": {
+    "code": 0,
+    "degraded": false
+  },
+  "tutorial": {
+    "canvas": "tutorial",
+    "width": 1280,
+    "height": 720,
+    "file": "renders\\tutorial.mp4",
+    "exitCode": 0,
+    "degraded": false,
+    "bytes": 2639905,
+    "probe": {
+      "width": 1280,
+      "height": 720,
+      "codec": "h264",
+      "durationSec": 358
+    },
+    "ms": 160017
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-23",
+  "day": 4,
+  "startedAt": "2026-09-23T14:40:29.000Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "claude-fable-5-1",
+    "roster": null,
+    "ultracode": false,
+    "effort": "xhigh",
+    "budgetUsd": null,
+    "context": "context.md (500 chars)",
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null,
+    "session": {
+      "kind": "interactive",
+      "harness": "Claude Code 2.1.280",
+      "why": "the 09:00 scheduled task did not fire (the laptop was powered off); the founder started a Claude Code session, set the model to Fable 5.1 at effort xhigh, and asked it to run the day itself",
+      "trace": "none - no adapter ran, so there is no journal/<date>/trace.json and WHY.timeline is self-reported from the session clock",
+      "gate": "pipeline/lib/gate.mjs runGate, called with the same arguments run.mjs passes, so run.json keeps this block"
+    }
+  },
+  "model": {
+    "selfDeclared": "claude-fable-5-1",
+    "corrected": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/events/talk-timer/v1",
+    "title": "2026-09-23 · Talk Timer",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 0,
+    "at": "2026-09-23T16:25:32.526Z"
+  }
+}

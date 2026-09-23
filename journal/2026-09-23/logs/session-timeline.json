@@ -1,0 +1,35 @@
+{
+  "sessionStartedAt": "2026-09-23T14:40:29.000Z",
+  "note": "Wall-clock boundaries of the phases as this interactive session ran them; no adapter trace exists. Tool-call counts are the session agent's own tally at the ship phase.",
+  "phases": [
+    {
+      "phase": "scout",
+      "startedAt": "2026-09-23T14:40:29.000Z",
+      "endedAt": "2026-09-23T14:57:00.000Z",
+      "note": "reading the repo and pipeline, 10 web searches, 4 HN queries, 2 Reddit attempts (403), 22 fetch-text captures, 10-scout.md"
+    },
+    {
+      "phase": "plan",
+      "startedAt": "2026-09-23T14:57:00.000Z",
+      "endedAt": "2026-09-23T14:59:47.000Z",
+      "note": "20-brief.md (the design was settled while scouting)"
+    },
+    {
+      "phase": "build",
+      "startedAt": "2026-09-23T14:59:47.000Z",
+      "endedAt": "2026-09-23T16:15:01.897Z",
+      "note": "scaffold, template + test, spike (14 s) x3, nested bar + 5-smooth canvas fixes, variant a (4 renders, 12.3 min), variant b (13.9 min), variant c (17.7 min); the one background render was reaped for memory, so renders ran one per foreground call through logs/render-variant-split.mjs"
+    },
+    {
+      "phase": "critique",
+      "startedAt": "2026-09-23T16:15:01.897Z",
+      "endedAt": "2026-09-23T16:16:37.301Z",
+      "note": "read-only: three report.json files, the stills of every variant at every phase, the snapshotted source; 40-critique.md"
+    },
+    {
+      "phase": "ship",
+      "startedAt": "2026-09-23T16:16:37.301Z",
+      "note": "WHY words (tint knob, session timeline), build + previews + build + fingerprints + verify (309 s), doctor ok, validate-only 0/0, preview checked by eye, 50-ship.md, losing variants mp4s pruned, gate via logs/gate-run.mjs"
+    }
+  ]
+}

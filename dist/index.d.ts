@@ -7,4 +7,5 @@ export * from "./basics";
 export * from "./harness";
 export * from "./dev";
 export * from "./social";
+export * from "./events";
 export { TEMPLATE_PACKS, TEMPLATE_REPO };

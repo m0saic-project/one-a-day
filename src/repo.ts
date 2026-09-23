@@ -58,4 +58,10 @@ export const TEMPLATE_PACKS: MosaicTemplatePackDescriptor[] = [
     description:
       "Stills and clips a small business or a creator posts as themselves: testimonials, announcements, proof. Every card keeps its evidence attached - who said it, where it came from - so the post cannot pose as more than it is.",
   },
+  {
+    id: "events",
+    title: "Events",
+    description:
+      "Event production media: timers, holding screens and boards for stages, streams and rooms - clips a screen can just play.",
+  },
 ];

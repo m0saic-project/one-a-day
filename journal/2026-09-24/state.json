@@ -23,6 +23,12 @@
   "title": "App Store Screenshot Frame",
   "plan": "done",
   "scaffolded": true,
-  "decision": "no-ship",
-  "noShipReason": "build phase did not complete"
+  "variants": [
+    "a"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done"
 }

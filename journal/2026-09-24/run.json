@@ -1,30 +1,43 @@
 {
-  "model": {
-    "selfDeclared": "gpt-5-codex"
-  },
   "phases": {
-    "plan": {
+    "critique": {
       "calls": 1,
       "lastExitCode": 0,
       "timedOut": false,
-      "ms": 347825,
+      "ms": 116362,
       "done": true
     },
-    "build": {
-      "calls": 3,
-      "lastExitCode": 1,
+    "ship": {
+      "calls": 2,
+      "lastExitCode": 0,
       "timedOut": false,
-      "ms": 3015,
+      "ms": 410360,
       "done": false
     }
   },
+  "model": {
+    "selfDeclared": "gpt-5.6-sol"
+  },
+  "date": "2026-09-24",
+  "day": 5,
+  "startedAt": "2026-09-24T15:43:01.819Z",
+  "runner": {
+    "adapter": "codex",
+    "modelFlag": "gpt-5.6-sol",
+    "noPush": false,
+    "context": "context.md",
+    "platform": "win32"
+  },
+  "metadataRecovery": "Restored explicit runner identity from the 08:43:01 restart command and runner.log after a UTF-8 BOM journal rewrite caused the pipeline JSON reader to lose fields. Existing readable fields preserved.",
   "result": {
-    "status": "no-ship",
-    "templateId": null,
-    "reason": "build phase did not complete"
+    "status": "shipped",
+    "templateId": "@one-a-day/dev/app-store-screenshot-frame/v1",
+    "title": "2026-09-24 · App Store Screenshot Frame",
+    "reason": null
   },
   "gate": {
     "reasons": [],
-    "at": "2026-09-24T15:37:57.799Z"
+    "doctorWarnings": 0,
+    "at": "2026-09-24T16:09:44.319Z"
   }
 }

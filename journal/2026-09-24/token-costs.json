@@ -26,13 +26,76 @@
       "events": 1,
       "totalTokens": 1931022,
       "standardShortContextApiEquivalentUsd": 1.413672
+    },
+    {
+      "phase": "build-1",
+      "input": 1195482,
+      "cachedInput": 1121280,
+      "output": 6530,
+      "events": 1,
+      "totalTokens": 1202012,
+      "standardShortContextApiEquivalentUsd": 0.87592
+    },
+    {
+      "phase": "build-1-before-reset",
+      "input": 6251312,
+      "cachedInput": 6097536,
+      "output": 31750,
+      "totalTokens": 6283062,
+      "source": "Codex local session event_msg token_count, last non-null info before usage-limit termination",
+      "threadId": "01a0d3ff-88ff-74e2-82dd-12dccf92fd23",
+      "standardShortContextApiEquivalentUsd": 3.6891184
+    },
+    {
+      "phase": "critique-1",
+      "input": 284372,
+      "cachedInput": 237440,
+      "output": 3448,
+      "events": 1,
+      "totalTokens": 287820,
+      "standardShortContextApiEquivalentUsd": 0.351664
+    },
+    {
+      "phase": "ship-1",
+      "input": 1735032,
+      "cachedInput": 1655424,
+      "output": 8991,
+      "events": 1,
+      "totalTokens": 1744023,
+      "standardShortContextApiEquivalentUsd": 1.1604216
+    }
+  ],
+  "incomplete": [
+    {
+      "log": "build-1.jsonl",
+      "failedEvents": 2,
+      "completedUsageEvents": 1,
+      "note": "Usage for interrupted or incomplete turns may be missing; no zero-cost assumption."
+    },
+    {
+      "log": "build-2.jsonl",
+      "failedEvents": 2,
+      "completedUsageEvents": 0,
+      "note": "Usage for interrupted or incomplete turns may be missing; no zero-cost assumption."
+    },
+    {
+      "log": "build-3.jsonl",
+      "failedEvents": 2,
+      "completedUsageEvents": 0,
+      "note": "Usage for interrupted or incomplete turns may be missing; no zero-cost assumption."
+    },
+    {
+      "log": "ship-2.jsonl",
+      "failedEvents": 0,
+      "completedUsageEvents": 0,
+      "note": "Usage for interrupted or incomplete turns may be missing; no zero-cost assumption."
     }
   ],
   "totals": {
-    "input": 2865380,
-    "cachedInput": 2654848,
-    "output": 19532,
-    "totalTokens": 2884912,
-    "standardShortContextApiEquivalentUsd": 2.2947072
+    "input": 12331578,
+    "cachedInput": 11766528,
+    "output": 70251,
+    "totalTokens": 12401829,
+    "standardShortContextApiEquivalentUsd": 8.371831199999999
   }
 }

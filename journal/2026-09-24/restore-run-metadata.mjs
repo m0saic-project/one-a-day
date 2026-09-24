@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const dir = path.dirname(fileURLToPath(import.meta.url));
+const file = path.join(dir, 'run.json');
+const run = JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
+run.date = '2026-09-24';
+run.day = 5;
+run.startedAt ??= '2026-09-24T15:43:01.819Z';
+run.runner = { ...run.runner, adapter: 'codex', modelFlag: 'gpt-5.6-sol', noPush: false, context: 'context.md', platform: 'win32' };
+run.model = { ...run.model, selfDeclared: 'gpt-5.6-sol' };
+run.metadataRecovery = 'Restored explicit runner identity from the 08:43:01 restart command and runner.log after a UTF-8 BOM journal rewrite caused the pipeline JSON reader to lose fields. Existing readable fields preserved.';
+fs.writeFileSync(file, JSON.stringify(run, null, 2) + '\n', 'utf8');
+console.log('Restored Codex / gpt-5.6-sol identity; run.json is UTF-8 without BOM.');

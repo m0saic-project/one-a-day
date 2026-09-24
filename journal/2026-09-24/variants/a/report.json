@@ -1,6 +1,6 @@
 {
   "templateId": "@one-a-day/dev/app-store-screenshot-frame/v1",
-  "at": "2026-09-24T15:36:22.602Z",
+  "at": "2026-09-24T16:05:20.779Z",
   "props": null,
   "build": {
     "code": 0
@@ -111,7 +111,7 @@
     "file": "renders\\tutorial.mp4",
     "exitCode": 0,
     "degraded": false,
-    "bytes": 666046,
+    "bytes": 680477,
     "probe": {
       "width": 1280,
       "height": 720,

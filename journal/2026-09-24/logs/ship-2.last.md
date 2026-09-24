@@ -1,0 +1,3 @@
+Shipping remains incomplete: the required tutorial validation still fails because the sandbox cannot write the real m0saic mask cache (`EPERM`).
+
+All other gates passed, including `npm run verify`, doctor, preview inspection, and tutorial-truth checks. The blocker and corrected token costs are recorded in [50-ship.md](C:\src\m0saic-production\one-a-day\journal\2026-09-24\50-ship.md). Per the hard rule, `state.json.ship` was not marked done.

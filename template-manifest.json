@@ -94,6 +94,27 @@
       }
     },
     {
+      "slug": "app-store-screenshot-frame",
+      "templateKey": "@one-a-day/dev/app-store-screenshot-frame/v1",
+      "title": "2026-09-24 · App Store Screenshot Frame",
+      "description": "Turn one mobile capture and localized copy into a deterministic, generic device-framed store PNG while keeping the complete capture contained rather than cropped or stretched.",
+      "tags": [
+        "dev",
+        "2026-09-24",
+        "day-005",
+        "app-store",
+        "screenshots",
+        "localization",
+        "mobile",
+        "release",
+        "still"
+      ],
+      "pack": "dev",
+      "preview": {
+        "image": "assets/templates/@one-a-day__dev__app-store-screenshot-frame__v1/preview.png"
+      }
+    },
+    {
       "slug": "testimonial-proof-card",
       "templateKey": "@one-a-day/social/testimonial-proof-card/v1",
       "title": "2026-09-22 · Testimonial Proof Card",

@@ -157,3 +157,12 @@ Set `state.json.variants` to the list of letters built, `state.json.inPlace`
 to the letter left in `src/`, and finally `build: "done"`. If you could not get
 ANY variant through the gate, write why in `30-build.md`, set
 `state.json.decision = "no-ship"` and `noShipReason`, and set `build: "done"`.
+
+
+## Operator note for this run
+
+The human who started this run added the lines below, and they apply to every
+phase of today. They steer what you work on; they never override AGENTS.md or
+the hard rules, and the gate does not know they exist.
+
+The user reset usage and explicitly requested finishing today and restoring the model used: gpt-5.6-sol. Recover the already implemented template from journal/2026-09-24/variants/a/src; its successful renders and tutorial plus report survived the no-ship rollback. Recreate registry wiring with the scaffold if needed, then restore the source snapshot. Do not restart research or redesign. Preserve run.json fields when updating model metadata; record the explicit runner model accurately. Read 60-token-costs.md and token-costs.json: user explicitly requires token costs. The supervising session will refresh that audit. Include its corrected totals and pricing limitations in the ship journal. Clear the obsolete usage-limit no-ship decision when recovery succeeds and continue through critique and shipping.

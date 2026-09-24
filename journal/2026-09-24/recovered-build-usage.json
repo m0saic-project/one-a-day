@@ -1,0 +1,15 @@
+﻿{
+    "phase":  "build-1-before-reset",
+    "threadId":  "01a0d3ff-88ff-74e2-82dd-12dccf92fd23",
+    "source":  "Codex local session event_msg token_count, last non-null info before usage-limit termination",
+    "sessionFile":  "rollout-2026-09-24T08-18-54-01a0d3ff-88ff-74e2-82dd-12dccf92fd23.jsonl",
+    "usage":  {
+                  "input_tokens":  6251312,
+                  "cached_input_tokens":  6097536,
+                  "cache_write_input_tokens":  0,
+                  "output_tokens":  31750,
+                  "reasoning_output_tokens":  4221,
+                  "total_tokens":  6283062
+              },
+    "modelContextWindow":  258400
+}

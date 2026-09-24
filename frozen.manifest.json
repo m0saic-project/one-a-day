@@ -1,7 +1,7 @@
 {
-  "release": "2026-09-23",
-  "commit": "da34c91d3c64e0b29a92eb0f2cc8a4ad6750db03",
-  "mintedAt": "2026-09-23T16:25:32.485Z",
+  "release": "2026-09-24",
+  "commit": "4913c52f4378fdfa18ea49949f3fe702528a3557",
+  "mintedAt": "2026-09-24T16:09:44.278Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
@@ -10,6 +10,7 @@
     "src/_shared/text.ts": "c69793e924ad346823183877f0d49a7de21026a5d817859625e0d53cdbccb495",
     "src/_shared/why.ts": "f611e1cfef42310c50bc02bcfa4b77f9693fcdb8fd1cac1a58938e1c11ca94fa",
     "src/basics/hello-world/v1/hello-world.ts": "31b1287b4024f1ce67fb70801f5d6cd2fc5c13a632404c18bbe2a9fd76f0bdaf",
+    "src/dev/app-store-screenshot-frame/v1/app-store-screenshot-frame.ts": "164a2427ca9f6795ae14a446e88a201808a25be02f66ff4c8b0d8c24a21ba510",
     "src/dev/bench-delta/v1/bench-delta.ts": "377e04113814e99205bba3f37790dca85b724526139b48d729d23a08ae563b81",
     "src/dev/og-card/v1/og-card.ts": "5d4c2006caf2d18e55d57507dbc5003485ce911caf2f04c7a9605e2c3edb27b4",
     "src/events/talk-timer/v1/talk-timer.ts": "c507a1824b6b092db5e810e363e77b1a654f8925fa44b8ec1795ecd60f926757",

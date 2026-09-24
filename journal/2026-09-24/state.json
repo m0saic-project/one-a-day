@@ -30,5 +30,7 @@
   "build": "done",
   "decision": "ship",
   "pick": "a",
-  "critique": "done"
+  "critique": "done",
+  "ship": "done",
+  "shipResolvedBy": "Final runner gate validated the template and tutorial and pushed f28fe81; the supervising session resolved cache access. Final token audit refreshed locally after shipping."
 }

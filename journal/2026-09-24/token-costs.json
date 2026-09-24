@@ -63,6 +63,15 @@
       "events": 1,
       "totalTokens": 1744023,
       "standardShortContextApiEquivalentUsd": 1.1604216
+    },
+    {
+      "phase": "ship-2",
+      "input": 1618160,
+      "cachedInput": 1531392,
+      "output": 9195,
+      "events": 1,
+      "totalTokens": 1627355,
+      "standardShortContextApiEquivalentUsd": 1.1435288000000001
     }
   ],
   "incomplete": [
@@ -83,19 +92,13 @@
       "failedEvents": 2,
       "completedUsageEvents": 0,
       "note": "Usage for interrupted or incomplete turns may be missing; no zero-cost assumption."
-    },
-    {
-      "log": "ship-2.jsonl",
-      "failedEvents": 0,
-      "completedUsageEvents": 0,
-      "note": "Usage for interrupted or incomplete turns may be missing; no zero-cost assumption."
     }
   ],
   "totals": {
-    "input": 12331578,
-    "cachedInput": 11766528,
-    "output": 70251,
-    "totalTokens": 12401829,
-    "standardShortContextApiEquivalentUsd": 8.371831199999999
+    "input": 13949738,
+    "cachedInput": 13297920,
+    "output": 79446,
+    "totalTokens": 14029184,
+    "standardShortContextApiEquivalentUsd": 9.51536
   }
 }

@@ -31,10 +31,11 @@ The table below includes completed phase usage events available when this audit 
 | build-1-before-reset | 6251312 | 6097536 | 31750 | 6283062 | $3.6891 |
 | critique-1 | 284372 | 237440 | 3448 | 287820 | $0.3517 |
 | ship-1 | 1735032 | 1655424 | 8991 | 1744023 | $1.1604 |
-| **Total** | **12331578** | **11766528** | **70251** | **12401829** | **$8.3718** |
+| ship-2 | 1618160 | 1531392 | 9195 | 1627355 | $1.1435 |
+| **Total** | **13949738** | **13297920** | **79446** | **14029184** | **$9.5154** |
 
 Reproduce with `node journal/2026-09-24/token-cost-audit.mjs`. Raw CLI transcripts and the runner trace remain unchanged. The runner tutorial may use its older generic estimate; this audit supplies the separately verified pricing basis.
 
 The interrupted first build is recovered separately from its local Codex session token counter, preserved in `recovered-build-usage.json`. That thread emitted no turn.completed usage event, so it is not duplicated in the phase transcript totals.
 
-**Incomplete accounting:** these logs contain failed turns or lack a completed usage event: `build-1.jsonl`, `build-2.jsonl`, `build-3.jsonl`, `ship-2.jsonl`. Their unreported usage is excluded, not treated as zero. Totals above cover reported usage only and are not the complete cost of all attempts.
+**Incomplete accounting:** these logs contain failed turns or lack a completed usage event: `build-1.jsonl`, `build-2.jsonl`, `build-3.jsonl`. Their unreported usage is excluded, not treated as zero. Totals above cover reported usage only and are not the complete cost of all attempts.

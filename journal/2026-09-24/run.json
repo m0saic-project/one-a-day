@@ -1,0 +1,30 @@
+{
+  "model": {
+    "selfDeclared": "gpt-5-codex"
+  },
+  "phases": {
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 347825,
+      "done": true
+    },
+    "build": {
+      "calls": 3,
+      "lastExitCode": 1,
+      "timedOut": false,
+      "ms": 3015,
+      "done": false
+    }
+  },
+  "result": {
+    "status": "no-ship",
+    "templateId": null,
+    "reason": "build phase did not complete"
+  },
+  "gate": {
+    "reasons": [],
+    "at": "2026-09-24T15:37:57.799Z"
+  }
+}

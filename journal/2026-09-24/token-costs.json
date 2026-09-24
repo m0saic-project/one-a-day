@@ -1,0 +1,38 @@
+{
+  "modelFlag": "gpt-5.6-sol",
+  "pricedAt": "2026-09-24",
+  "pricingSource": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+  "basis": "Standard short-context API-equivalent estimate, not an invoice. Per-request context length, service tier, tool charges, and supervising-chat usage are unavailable and excluded. Input includes cached input; totalTokens does not double count the cache.",
+  "ratesUsdPerMillion": {
+    "uncachedInput": 4,
+    "cachedInput": 0.4,
+    "output": 20
+  },
+  "phases": [
+    {
+      "phase": "scout-1",
+      "input": 945605,
+      "cachedInput": 851968,
+      "output": 8285,
+      "events": 1,
+      "totalTokens": 953890,
+      "standardShortContextApiEquivalentUsd": 0.8810351999999999
+    },
+    {
+      "phase": "plan-1",
+      "input": 1919775,
+      "cachedInput": 1802880,
+      "output": 11247,
+      "events": 1,
+      "totalTokens": 1931022,
+      "standardShortContextApiEquivalentUsd": 1.413672
+    }
+  ],
+  "totals": {
+    "input": 2865380,
+    "cachedInput": 2654848,
+    "output": 19532,
+    "totalTokens": 2884912,
+    "standardShortContextApiEquivalentUsd": 2.2947072
+  }
+}

@@ -125,5 +125,30 @@
       "https://createtimer.com/blog/how-to-create-twitch-starting-soon-screen-with-timer/",
       "https://www.wearedevelopers.com/world-congress-north-america"
     ]
+  },
+  {
+    "date": "2026-09-24",
+    "day": 5,
+    "agent": "unknown",
+    "model": "gpt-5-codex",
+    "rosterId": null,
+    "status": "no-ship",
+    "templateId": null,
+    "title": null,
+    "useCase": "Batchable app-store screenshot frames that combine raw mobile captures with localized headlines and a consistent brand layout across store sizes.",
+    "tags": [
+      "app-store",
+      "screenshots",
+      "localization",
+      "mobile",
+      "release",
+      "still"
+    ],
+    "sources": [
+      "https://www.reddit.com/r/iOSProgramming/comments/1tbsleb/how_do_you_manage_app_store_screenshots_at_scale/",
+      "https://www.reddit.com/r/iOSProgramming/comments/1e9incq/making_app_screenshots_is_torture_any_tool/",
+      "https://docs.fastlane.tools/actions/snapshot/",
+      "https://www.reddit.com/r/iOSProgramming/comments/1f973og/whats_the_most_time_consuming_annoying_part_about/"
+    ]
   }
 ]

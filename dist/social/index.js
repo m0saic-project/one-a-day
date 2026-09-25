@@ -16,9 +16,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.socialTemplates = void 0;
 const testimonial_proof_card_1 = require("./testimonial-proof-card/v1/testimonial-proof-card");
+const episode_audiogram_1 = require("./episode-audiogram/v1/episode-audiogram");
 /** Pack `social`, in registry order (mirrors ./registry.ts). */
 exports.socialTemplates = [
     testimonial_proof_card_1.TestimonialProofCardV1,
+    episode_audiogram_1.EpisodeAudiogramV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./testimonial-proof-card/v1/testimonial-proof-card"), exports);
+__exportStar(require("./episode-audiogram/v1/episode-audiogram"), exports);

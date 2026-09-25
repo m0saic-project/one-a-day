@@ -1,0 +1,13 @@
+{
+  "source": "self-reported",
+  "note": "No runner trace.json: the 09:00 scheduled task fired at 06:04 PT as a missed-start catch-up while the laptop lid was closed, stalled asleep until 08:12, and was cancelled by the founder at 08:15 during its first scout call. The day was then run by hand in one interactive Claude Code session (Fable 5). t0 = 2026-09-25T15:15:00Z (08:15 PT, session takeover). Durations are the session's own wall clock; tool-call counts are the agent's own tally; tokens and dollars are omitted rather than guessed (the input/output split needed to price them is not measurable from inside the session).",
+  "t0": "2026-09-25T15:15:00Z",
+  "phases": [
+    { "name": "takeover (cancel the stalled run)", "startMs": 0, "durMs": 120000, "calls": 6, "tools": "Bash 5, Read 1", "what": "killed the stalled task instance and its process tree, disabled the 09:00 trigger, audited what the 06:04 run had already done (preflight passed; scout call cancelled mid-flight)" },
+    { "name": "scout", "startMs": 120000, "durMs": 960000, "calls": 12, "tools": "WebSearch 4, Bash 6, Read 2", "what": "reddit.mjs 403 all attempts; HN search + thread opened, 4 web searches, 3 pages fetched; pick: podcast episode audiogram" },
+    { "name": "plan", "startMs": 1080000, "durMs": 480000, "calls": 8, "tools": "Read 5, Write 2, Grep 1", "what": "brief written against talk-timer's mechanisms and the audio tri-state law; pack social, slug episode-audiogram" },
+    { "name": "build (2 variants)", "startMs": 1560000, "durMs": 720000, "calls": 40, "tools": "Bash 22, Edit 12, Read 6", "what": "scaffold, template + 10 tests, green gate loop (bindings index, overlay posture, footer slack, child bg, clock padding), variant a rendered, variant b (mirror) rendered, audio proven by ffprobe both ways" },
+    { "name": "critique", "startMs": 2280000, "durMs": 120000, "calls": 4, "tools": "Read 3, Write 1", "what": "stills viewed; a 17, b 18; SHIP b" },
+    { "name": "ship (estimate)", "startMs": 2400000, "durMs": 600000, "calls": 12, "tools": "Bash 8, Write 2, Edit 2", "what": "previews minted, verify clean, journal written, gate-run --no-push, commit + push by hand, task re-enabled" }
+  ]
+}

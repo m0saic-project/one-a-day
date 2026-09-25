@@ -154,5 +154,27 @@
       "https://docs.fastlane.tools/actions/snapshot/",
       "https://www.reddit.com/r/iOSProgramming/comments/1f973og/whats_the_most_time_consuming_annoying_part_about/"
     ]
+  },
+  {
+    "date": "2026-09-25",
+    "day": 6,
+    "agent": "claude",
+    "model": "claude-fable-5",
+    "rosterId": "claude-fable",
+    "status": "shipped",
+    "templateId": "@one-a-day/social/episode-audiogram/v1",
+    "title": "2026-09-25 · Episode Audiogram",
+    "pack": "social",
+    "useCase": "Per-episode podcast promo clips (audiograms): waveform, pull-quote, cover art and the real audio snippet as one deterministic, batchable render per episode or chapter",
+    "tags": [
+      "social",
+      "2026-09-25",
+      "day-006"
+    ],
+    "sources": [
+      "https://news.ycombinator.com/item?id=29463007",
+      "https://multimedia.journalism.berkeley.edu/tutorials/16-ways-to-promote-your-podcast/",
+      "https://podcastgrowth.substack.com/p/creating-beautiful-audiograms-for"
+    ]
   }
 ]

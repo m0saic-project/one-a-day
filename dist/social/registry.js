@@ -13,4 +13,12 @@ exports.socialRegistry = [
         description: "A selected customer quote with attribution, rating, and a source-verification disclosure, as a square-first social still for a local service business.",
         tags: ["social", "2026-09-22", "day-003", "testimonial", "social-proof", "small-business", "social-media", "review", "still"],
     },
+    {
+        slug: "episode-audiogram",
+        templateId: "@one-a-day/social/episode-audiogram/v1",
+        exportName: "EpisodeAudiogramV1",
+        title: "2026-09-25 · Episode Audiogram",
+        description: "Episode Audiogram: describe the ONE concept this template teaches, in one line, for the Templates page.",
+        tags: ["social", "2026-09-25", "day-006"],
+    },
 ];

@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-25",
+  "day": 6,
+  "startedAt": "2026-09-25T13:04:53.424Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "fable[1m]",
+    "roster": {
+      "id": "claude-fable",
+      "agent": "claude",
+      "model": "fable[1m]",
+      "weight": 3,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "session": {
+      "interactive": true,
+      "startedAt": "2026-09-25T15:20:00Z",
+      "note": "The 09:00 scheduled task fired early as a missed-start catch-up at 06:04 PT while the laptop lid was closed, stalled asleep for two hours, and was cancelled by the founder at 08:15 PT during its first scout call. The founder asked this interactive Claude Code session to run the day instead. The roster draw (claude-fable) is kept: the session agent is Claude Fable. Effort and budget are session-governed, not adapter defaults. Timeline is hand-kept in logs/session-timeline.json (self-reported). Preflight from the cancelled run (git pull, npm ci, license, verify) passed at 08:14 PT and is kept in logs/preflight.log."
+    },
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": true,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-fable-5",
+    "corrected": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/social/episode-audiogram/v1",
+    "title": "2026-09-25 · Episode Audiogram",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 1,
+    "at": "2026-09-25T16:01:02.951Z"
+  }
+}

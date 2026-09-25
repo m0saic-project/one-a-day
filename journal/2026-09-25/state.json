@@ -1,0 +1,20 @@
+{
+  "useCase": "Per-episode podcast promo clips (audiograms): waveform, pull-quote, cover art and the real audio snippet as one deterministic, batchable render per episode or chapter",
+  "who": "Podcast producers and show owners who post 1-2 clips per episode to socials; they gather on HN and r/podcasting and pay for Headliner/Wavve today",
+  "sources": [
+    "https://news.ycombinator.com/item?id=29463007",
+    "https://multimedia.journalism.berkeley.edu/tutorials/16-ways-to-promote-your-podcast/",
+    "https://podcastgrowth.substack.com/p/creating-beautiful-audiograms-for"
+  ],
+  "tags": ["podcast", "audiogram", "social", "video", "waveform", "batch"],
+  "scout": "done",
+  "pack": "social",
+  "slug": "episode-audiogram",
+  "title": "Episode Audiogram",
+  "plan": "done",
+  "build": "done",
+  "decision": "ship",
+  "pick": "b",
+  "critique": "done",
+  "ship": "done"
+}

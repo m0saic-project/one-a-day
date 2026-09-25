@@ -1,0 +1,167 @@
+{
+  "query": "wrapped year in review",
+  "days": 400,
+  "count": 20,
+  "results": [
+    {
+      "title": "Using my transit card data to create a year in review experience",
+      "url": "https://cailinpitt.com/blog/2026/9/1/chicago-transit-authority-wrapped",
+      "hn": "https://news.ycombinator.com/item?id=49824868",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-09-24T01:02:38Z"
+    },
+    {
+      "title": "Show HN: Yap – OSS on-device voice dictation for macOS with no model to download",
+      "url": "https://github.com/FrigadeHQ/yap",
+      "hn": "https://news.ycombinator.com/item?id=49073834",
+      "points": 104,
+      "comments": 44,
+      "createdAt": "2026-07-27T18:36:02Z"
+    },
+    {
+      "title": "Show HN: OneManCompany The first AI company with real corporate org structure",
+      "url": "https://one-man-company.com/",
+      "hn": "https://news.ycombinator.com/item?id=47676264",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-04-07T14:46:18Z"
+    },
+    {
+      "title": "Show HN: jmux – tmux-based development environment for humans and coding agents",
+      "url": "https://github.com/jarredkenny/jmux",
+      "hn": "https://news.ycombinator.com/item?id=47650233",
+      "points": 10,
+      "comments": 10,
+      "createdAt": "2026-04-05T15:10:14Z"
+    },
+    {
+      "title": "Built a 1.3M-line agent-native OS in Rust while homeless. What now?",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47388478",
+      "points": 11,
+      "comments": 35,
+      "createdAt": "2026-03-15T15:40:06Z"
+    },
+    {
+      "title": "Show HN: Dracula-AI – A lightweight, async SQLite-backed Gemini wrapper",
+      "url": "https://github.com/suleymanibis0/dracula",
+      "hn": "https://news.ycombinator.com/item?id=47241149",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-03-04T00:16:22Z"
+    },
+    {
+      "title": "Show HN: Free tools to understand your Claude Code usage (browser, no install)",
+      "url": "https://yurukusa.github.io/cc-toolkit/",
+      "hn": "https://news.ycombinator.com/item?id=47208594",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-01T17:14:08Z"
+    },
+    {
+      "title": "Show HN: Mango Lollipop – AI-powered lifecycle messaging generator",
+      "url": "https://github.com/sr-kai/mango-lollipop",
+      "hn": "https://news.ycombinator.com/item?id=46997378",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-02-13T00:38:00Z"
+    },
+    {
+      "title": "Anthropic disabled my account after payment cancer patient/medical data trapped",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46675740",
+      "points": 98,
+      "comments": 20,
+      "createdAt": "2026-01-19T06:51:12Z"
+    },
+    {
+      "title": "Agentic Frameworks in 2026: Less Hype, More Autonomy",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=46509130",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2026-01-06T05:45:52Z"
+    },
+    {
+      "title": "Show HN: 2025 Failure Wrapped AI-Generated Year in Review for Tech Failures",
+      "url": "https://unwrappedyear.forwardmanager.com/",
+      "hn": "https://news.ycombinator.com/item?id=46456726",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-01T18:38:15Z"
+    },
+    {
+      "title": "Show HN: FantasyDawg – Your Fantasy Football League Recap",
+      "url": "https://www.fantasydawg.com",
+      "hn": "https://news.ycombinator.com/item?id=46447051",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-31T18:51:44Z"
+    },
+    {
+      "title": "Show HN: Open-source Spotify Wrapped for arbitrary data",
+      "url": "https://yirgachefe.lol",
+      "hn": "https://news.ycombinator.com/item?id=46421275",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-12-29T14:47:52Z"
+    },
+    {
+      "title": "Show HN: Goodreads Analyzer – AI roast and book recs from your reading history",
+      "url": "https://goodreads-analyst.vercel.app/",
+      "hn": "https://news.ycombinator.com/item?id=46402695",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2025-12-27T15:56:58Z"
+    },
+    {
+      "title": "Show HN: I Built Your Fantasy Football Year in Review",
+      "url": "https://www.fantasydawg.com/",
+      "hn": "https://news.ycombinator.com/item?id=46401639",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-27T13:16:39Z"
+    },
+    {
+      "title": "Show HN: Tokscale – See who's burning the most tokens across all platforms",
+      "url": "https://github.com/junhoyeo/tokscale",
+      "hn": "https://news.ycombinator.com/item?id=46365999",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-12-23T15:21:10Z"
+    },
+    {
+      "title": "gh-Wrapped Is Your GitHub Wrapped Year in Review, on Demand",
+      "url": "https://www.joshbeckman.org/blog/practicing/ghwrapped-is-your-github-wrapped-year-in-review-on-demand",
+      "hn": "https://news.ycombinator.com/item?id=46328095",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-12-19T17:00:58Z"
+    },
+    {
+      "title": "Show HN: Local open sourced IMDB Wrapped",
+      "url": "https://imdb-wrapped.eamag.me/",
+      "hn": "https://news.ycombinator.com/item?id=46326198",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-12-19T14:26:35Z"
+    },
+    {
+      "title": "Wrapped – Your 2025 Year in Review",
+      "url": "https://www.311wrapped.com/",
+      "hn": "https://news.ycombinator.com/item?id=46325822",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2025-12-19T13:48:34Z"
+    },
+    {
+      "title": "Show HN: Git rewind – your Git year in review",
+      "url": "https://gitrewind.dev/",
+      "hn": "https://news.ycombinator.com/item?id=46315263",
+      "points": 5,
+      "comments": 0,
+      "createdAt": "2025-12-18T16:56:31Z"
+    }
+  ]
+}

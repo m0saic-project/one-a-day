@@ -136,6 +136,21 @@
       }
     },
     {
+      "slug": "episode-audiogram",
+      "templateKey": "@one-a-day/social/episode-audiogram/v1",
+      "title": "2026-09-25 · Episode Audiogram",
+      "description": "Episode Audiogram: describe the ONE concept this template teaches, in one line, for the Templates page.",
+      "tags": [
+        "social",
+        "2026-09-25",
+        "day-006"
+      ],
+      "pack": "social",
+      "preview": {
+        "image": "assets/templates/@one-a-day__social__episode-audiogram__v1/preview.png"
+      }
+    },
+    {
       "slug": "talk-timer",
       "templateKey": "@one-a-day/events/talk-timer/v1",
       "title": "2026-09-23 · Talk Timer",

@@ -1,0 +1,223 @@
+{
+  "templateId": "@one-a-day/social/episode-audiogram/v1",
+  "at": "2026-09-25T15:48:01.860Z",
+  "props": null,
+  "build": {
+    "code": 0
+  },
+  "kind": "video",
+  "renders": [
+    {
+      "canvas": "square",
+      "width": 1080,
+      "height": 1080,
+      "file": "renders\\square.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 205113,
+      "probe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 30
+      },
+      "ms": 13780
+    },
+    {
+      "canvas": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "file": "renders\\portrait.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 233102,
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "h264",
+        "durationSec": 30
+      },
+      "ms": 17393
+    },
+    {
+      "canvas": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "file": "renders\\landscape.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 253191,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 30
+      },
+      "ms": 20098
+    }
+  ],
+  "stills": [
+    {
+      "canvas": "square",
+      "at": 3,
+      "file": "stills\\square-10.png"
+    },
+    {
+      "canvas": "square",
+      "at": 15,
+      "file": "stills\\square-50.png"
+    },
+    {
+      "canvas": "square",
+      "at": 27,
+      "file": "stills\\square-90.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 3,
+      "file": "stills\\portrait-10.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 15,
+      "file": "stills\\portrait-50.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 27,
+      "file": "stills\\portrait-90.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 3,
+      "file": "stills\\landscape-10.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 15,
+      "file": "stills\\landscape-50.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 27,
+      "file": "stills\\landscape-90.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 3.5,
+      "file": "stills\\tutorial-1.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 14,
+      "file": "stills\\tutorial-2.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 27,
+      "file": "stills\\tutorial-3.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 38,
+      "file": "stills\\tutorial-4.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 58,
+      "file": "stills\\tutorial-5.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 78,
+      "file": "stills\\tutorial-6.png"
+    }
+  ],
+  "srcSnapshot": "src/",
+  "ok": true,
+  "degraded": false,
+  "split": {
+    "runner": "journal/2026-09-25/logs/render-variant-split.mjs",
+    "steps": [
+      {
+        "step": "build",
+        "at": "2026-09-25T15:48:07.426Z",
+        "code": 1
+      },
+      {
+        "step": "square",
+        "at": "2026-09-25T15:48:22.704Z",
+        "exit": 0,
+        "ms": 14195
+      },
+      {
+        "step": "portrait",
+        "at": "2026-09-25T15:48:41.763Z",
+        "exit": 0,
+        "ms": 17909
+      },
+      {
+        "step": "tutorial",
+        "at": "2026-09-25T15:49:23.484Z",
+        "exit": 0,
+        "ms": 40572
+      },
+      {
+        "step": "snapshot",
+        "at": "2026-09-25T15:49:24.678Z"
+      },
+      {
+        "step": "build",
+        "at": "2026-09-25T15:50:21.317Z",
+        "code": 0,
+        "validate": 0,
+        "kind": "video",
+        "ms": 14159
+      },
+      {
+        "step": "landscape",
+        "at": "2026-09-25T15:50:43.091Z",
+        "exit": 0,
+        "ms": 20619
+      },
+      {
+        "step": "snapshot",
+        "at": "2026-09-25T15:50:44.225Z"
+      },
+      {
+        "step": "snapshot",
+        "at": "2026-09-25T15:54:57.939Z"
+      },
+      {
+        "step": "tutorial",
+        "at": "2026-09-25T15:59:32.272Z",
+        "exit": 0,
+        "ms": 30911
+      },
+      {
+        "step": "snapshot",
+        "at": "2026-09-25T15:59:33.434Z"
+      }
+    ]
+  },
+  "tutorial": {
+    "canvas": "tutorial",
+    "width": 1280,
+    "height": 720,
+    "file": "renders\\tutorial.mp4",
+    "exitCode": 0,
+    "degraded": false,
+    "bytes": 838737,
+    "probe": {
+      "width": 1280,
+      "height": 720,
+      "codec": "h264",
+      "durationSec": 83
+    },
+    "ms": 30137
+  },
+  "validate": {
+    "code": 0,
+    "degraded": false
+  }
+}

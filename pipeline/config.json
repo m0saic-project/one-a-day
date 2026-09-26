@@ -36,12 +36,16 @@
     ]
   },
   "pricing": {
-    "$comment": "USD per MILLION tokens, by model-name substring (first match wins), for the cost ESTIMATE on the why-tutorial's timeline page when the agent CLI reports no cost itself (Claude Code reports total_cost_usd; Codex does not). Edit to the list prices of the day and bump pricedAt - the card prints the date. Missing model = no estimate, tokens only.",
+    "$comment": "USD per MILLION tokens, by model-name substring (first match wins, so a specific name goes above its family), for the cost ESTIMATE on the why-tutorial's timeline page when the agent CLI reports no cost itself (Claude Code reports total_cost_usd; Codex does not). Edit to the list prices of the day and bump pricedAt - the card prints the date; a row with its own pricedAt was checked on that date, the rest on the table's. Claude rows: https://platform.claude.com/docs/en/about-claude/pricing on 2026-09-26; cacheWrite is the 1-hour write (2x input), which is the one Claude Code sessions write. The gpt/codex rows were not re-checked (day 5's audit found gpt-5.6-sol at $4 / $0.40 cached / $20). Missing model = no estimate, tokens only.",
     "pricedAt": "2026-09-20",
     "perMillion": {
-      "claude-opus": { "input": 15, "output": 75, "cacheRead": 1.5, "cacheWrite": 18.75 },
-      "claude-sonnet": { "input": 3, "output": 15, "cacheRead": 0.3, "cacheWrite": 3.75 },
-      "claude-haiku": { "input": 1, "output": 5, "cacheRead": 0.1, "cacheWrite": 1.25 },
+      "claude-opus-5-5": { "input": 4, "output": 20, "cacheRead": 0.2, "cacheWrite": 8, "pricedAt": "2026-09-26" },
+      "claude-fable-5-1": { "input": 10, "output": 50, "cacheRead": 0.25, "cacheWrite": 20, "pricedAt": "2026-09-26" },
+      "claude-fable": { "input": 10, "output": 50, "cacheRead": 1, "cacheWrite": 20, "pricedAt": "2026-09-26" },
+      "claude-opus": { "input": 5, "output": 25, "cacheRead": 0.5, "cacheWrite": 10, "pricedAt": "2026-09-26" },
+      "claude-sonnet-5": { "input": 2, "output": 10, "cacheRead": 0.2, "cacheWrite": 4, "pricedAt": "2026-09-26" },
+      "claude-sonnet": { "input": 3, "output": 15, "cacheRead": 0.3, "cacheWrite": 6, "pricedAt": "2026-09-26" },
+      "claude-haiku": { "input": 1, "output": 5, "cacheRead": 0.1, "cacheWrite": 2, "pricedAt": "2026-09-26" },
       "gpt-5": { "input": 1.25, "output": 10, "cacheRead": 0.125, "cacheWrite": 1.25 },
       "codex": { "input": 1.25, "output": 10, "cacheRead": 0.125, "cacheWrite": 1.25 }
     }

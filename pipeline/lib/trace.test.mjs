@@ -75,6 +75,9 @@ test("cost: reported by the CLI wins; else an estimate from the dated price tabl
   const pricing = { pricedAt: "2026-09-20", perMillion: { "claude-opus": { input: 15, output: 75, cacheRead: 1.5, cacheWrite: 18.75 }, codex: { input: 1.25, output: 10 } } };
   assert.deepEqual(estimateCost({ input: 1_000_000, output: 100_000, cacheRead: 2_000_000 }, "claude-opus-5[1m]", pricing), { usd: 25.5, rate: "claude-opus", pricedAt: "2026-09-20" });
   assert.equal(estimateCost({ input: 10 }, "kimi-k2", pricing), null);
+  const dated = { pricedAt: "2026-09-20", perMillion: { "claude-opus-5-5": { input: 4, output: 20, pricedAt: "2026-09-26" }, "claude-opus": { input: 5, output: 25 } } };
+  assert.deepEqual(estimateCost({ input: 1_000_000, output: 100_000 }, "claude-opus-5-5", dated), { usd: 6, rate: "claude-opus-5-5", pricedAt: "2026-09-26" });
+  assert.equal(estimateCost({ input: 1_000_000 }, "claude-opus-5", dated).pricedAt, "2026-09-20");
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "trace-cost-"));
   const base = { call: 1, startedAt: "2026-09-20T10:00:00.000Z", durMs: 1000, exitCode: 0, timedOut: false, status: "ok", calls: 1, toolErrors: 0, turns: 1, tools: { Bash: 1 }, spans: [] };
   appendTrace(dir, { ...base, phase: "scout", name: "scout", tokens: { input: 1_000_000, output: 0, cacheRead: 0, cacheWrite: 0, total: 1_000_000 }, cost: null }, { model: "gpt-5-codex", pricing });

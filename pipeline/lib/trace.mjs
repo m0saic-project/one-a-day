@@ -139,7 +139,7 @@ export function estimateCost(tokens, model, pricing) {
   if (!key || !tokens) return null;
   const r = table[key];
   const usd = (Number(tokens.input ?? 0) * (r.input ?? 0) + Number(tokens.output ?? 0) * (r.output ?? 0) + Number(tokens.cacheRead ?? 0) * (r.cacheRead ?? 0) + Number(tokens.cacheWrite ?? 0) * (r.cacheWrite ?? 0)) / 1e6;
-  return { usd: Math.round(usd * 10000) / 10000, rate: key, pricedAt: pricing?.pricedAt ?? null };
+  return { usd: Math.round(usd * 10000) / 10000, rate: key, pricedAt: r.pricedAt ?? pricing?.pricedAt ?? null };
 }
 
 /** "Bash 41, Read 12, Edit 8" — the top three tools of a phase, ASCII. */

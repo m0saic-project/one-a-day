@@ -1,0 +1,10 @@
+ok  landscape 1920x1080 → renders\landscape.mp4 (exit 0)
+ok  portrait 1080x1920 → renders\portrait.mp4 (exit 0)
+ok  square 1080x1080 → renders\square.mp4 (exit 0)
+ok  tutorial 1280x720 → renders\tutorial.mp4 (exit 0)
+
+render-variant: ok — 3 render(s), 15 still(s) → journal\2026-09-26\variants\b/report.json
+
+real	1m43.342s
+user	0m0.000s
+sys	0m0.000s

@@ -164,6 +164,21 @@
       "preview": {
         "image": "assets/templates/@one-a-day__events__talk-timer__v1/preview.png"
       }
+    },
+    {
+      "slug": "speedrun-pb-recap",
+      "templateKey": "@one-a-day/gaming/speedrun-pb-recap/v1",
+      "title": "2026-09-26 · Speedrun PB Recap",
+      "description": "Speedrun PB Recap: describe the ONE concept this template teaches, in one line, for the Templates page.",
+      "tags": [
+        "gaming",
+        "2026-09-26",
+        "day-007"
+      ],
+      "pack": "gaming",
+      "preview": {
+        "image": "assets/templates/@one-a-day__gaming__speedrun-pb-recap__v1/preview.png"
+      }
     }
   ],
   "packs": [
@@ -191,6 +206,11 @@
       "id": "events",
       "title": "Events",
       "description": "Event production media: timers, holding screens and boards for stages, streams and rooms - clips a screen can just play."
+    },
+    {
+      "id": "gaming",
+      "title": "Gaming",
+      "description": "Gaming: one line on what this pack teaches."
     }
   ]
 }

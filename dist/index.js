@@ -23,6 +23,7 @@ const harness_1 = require("./harness");
 const dev_1 = require("./dev");
 const social_1 = require("./social");
 const events_1 = require("./events");
+const gaming_1 = require("./gaming");
 /** The two exports every Mosaic host requires from a template repo. */
 exports.repo = repo_1.TEMPLATE_REPO;
 exports.templates = [
@@ -31,6 +32,7 @@ exports.templates = [
     ...dev_1.devTemplates,
     ...social_1.socialTemplates,
     ...events_1.eventsTemplates,
+    ...gaming_1.gamingTemplates,
 ];
 // Library re-exports for anyone importing this repo as code. `export *`
 // ONLY for template modules — never pair `export * from "./x"` with a
@@ -40,3 +42,4 @@ __exportStar(require("./harness"), exports);
 __exportStar(require("./dev"), exports);
 __exportStar(require("./social"), exports);
 __exportStar(require("./events"), exports);
+__exportStar(require("./gaming"), exports);

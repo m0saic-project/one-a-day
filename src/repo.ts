@@ -64,4 +64,10 @@ export const TEMPLATE_PACKS: MosaicTemplatePackDescriptor[] = [
     description:
       "Event production media: timers, holding screens and boards for stages, streams and rooms - clips a screen can just play.",
   },
+  {
+    id: "gaming",
+    title: "Gaming",
+    description:
+      "Gaming: one line on what this pack teaches.",
+  },
 ];

@@ -1,0 +1,191 @@
+{
+  "session": "1a51648f-4d60-4cf0-b9eb-9ea6fc7fb097",
+  "model": "claude-opus-5-5",
+  "effort": "max",
+  "pricedAt": "2026-09-26",
+  "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "ratesUsdPerMillion": {
+    "input": 4,
+    "cacheWrite5m": 5,
+    "cacheWrite1h": 8,
+    "cacheRead": 0.2,
+    "output": 20
+  },
+  "webSearchUsdEach": 0.01,
+  "until": "2026-09-26T16:44:23.747Z",
+  "basis": "API-equivalent list-price estimate, not an invoice: the session ran on the founder's Claude plan. One record per API response (message.id), usage as the API returned it. Not included: Claude Code's own side calls that never reach the transcript (the small model that summarises WebFetch pages, session titling) and any request that failed before returning usage.",
+  "transcripts": [
+    "1a51648f-4d60-4cf0-b9eb-9ea6fc7fb097.jsonl"
+  ],
+  "outsideTranscript": {
+    "webSearchCalls": 12,
+    "webSearchFeesUsd": 0.12,
+    "webFetchCalls": 13,
+    "note": "Claude Code runs WebSearch as a separate request and summarises WebFetch pages with a small model; neither request is in the transcript. The search fees are counted in the totals; those requests' tokens are not measured."
+  },
+  "phases": [
+    {
+      "phase": "orient + maintain",
+      "startedAt": "2026-09-26T15:50:28.937Z",
+      "durMs": 692280,
+      "requests": 33,
+      "input": 66,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 177107,
+      "cacheRead": 4493572,
+      "output": 41692,
+      "thinking": 27200,
+      "webSearches": 2,
+      "webFetches": 0,
+      "usd": 3.1697,
+      "tokens": 4712437,
+      "toolCalls": 64,
+      "tools": {
+        "Read": 30,
+        "PowerShell": 13,
+        "Bash": 1,
+        "Skill": 1,
+        "Grep": 7,
+        "ToolSearch": 1,
+        "WebSearch": 2,
+        "WebFetch": 1,
+        "Edit": 8
+      }
+    },
+    {
+      "phase": "scout",
+      "startedAt": "2026-09-26T16:02:01.217Z",
+      "durMs": 394729,
+      "requests": 23,
+      "input": 46,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 57904,
+      "cacheRead": 5314014,
+      "output": 30352,
+      "thinking": 17254,
+      "webSearches": 10,
+      "webFetches": 0,
+      "usd": 2.2333,
+      "tokens": 5402316,
+      "toolCalls": 46,
+      "tools": {
+        "Bash": 2,
+        "WebSearch": 10,
+        "WebFetch": 12,
+        "PowerShell": 13,
+        "Skill": 1,
+        "ToolSearch": 2,
+        "Write": 5,
+        "Edit": 1
+      }
+    },
+    {
+      "phase": "plan",
+      "startedAt": "2026-09-26T16:08:35.946Z",
+      "durMs": 416565,
+      "requests": 15,
+      "input": 30,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 81564,
+      "cacheRead": 4582555,
+      "output": 39848,
+      "thinking": 33095,
+      "webSearches": 0,
+      "webFetches": 0,
+      "usd": 2.3661,
+      "tokens": 4703997,
+      "toolCalls": 20,
+      "tools": {
+        "Read": 6,
+        "Grep": 12,
+        "Write": 1,
+        "Bash": 1
+      }
+    },
+    {
+      "phase": "build",
+      "startedAt": "2026-09-26T16:15:32.511Z",
+      "durMs": 1462885,
+      "requests": 34,
+      "input": 68,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 173429,
+      "cacheRead": 15240145,
+      "output": 122005,
+      "thinking": 64871,
+      "webSearches": 0,
+      "webFetches": 0,
+      "usd": 6.8758,
+      "tokens": 15535647,
+      "toolCalls": 53,
+      "tools": {
+        "Read": 19,
+        "Grep": 5,
+        "Write": 4,
+        "Edit": 11,
+        "Bash": 14
+      }
+    },
+    {
+      "phase": "critique",
+      "startedAt": "2026-09-26T16:39:55.396Z",
+      "durMs": 45766,
+      "requests": 2,
+      "input": 4,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 7795,
+      "cacheRead": 1046191,
+      "output": 4173,
+      "thinking": 2078,
+      "webSearches": 0,
+      "webFetches": 0,
+      "usd": 0.3551,
+      "tokens": 1058163,
+      "toolCalls": 3,
+      "tools": {
+        "Read": 1,
+        "Write": 1,
+        "Bash": 1
+      }
+    },
+    {
+      "phase": "ship",
+      "startedAt": "2026-09-26T16:40:41.162Z",
+      "durMs": 222585,
+      "requests": 8,
+      "input": 16,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 19196,
+      "cacheRead": 4299517,
+      "output": 10589,
+      "thinking": 4531,
+      "webSearches": 0,
+      "webFetches": 0,
+      "usd": 1.2253,
+      "tokens": 4329318,
+      "toolCalls": 12,
+      "tools": {
+        "Edit": 2,
+        "Bash": 6,
+        "Grep": 1,
+        "Read": 2,
+        "Write": 1
+      }
+    }
+  ],
+  "totals": {
+    "requests": 115,
+    "input": 230,
+    "cacheWrite5m": 0,
+    "cacheWrite1h": 516995,
+    "cacheRead": 34975994,
+    "output": 248659,
+    "thinking": 149029,
+    "webSearches": 12,
+    "webFetches": 0,
+    "usd": 16.2253,
+    "tokens": 35741878,
+    "toolCalls": 198,
+    "wallMs": 3234810
+  }
+}

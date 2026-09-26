@@ -1,7 +1,7 @@
 {
-  "release": "2026-09-25",
-  "commit": "f2d2601143bf2baa4e98eb6e29af9ea44392088d",
-  "mintedAt": "2026-09-25T16:01:02.925Z",
+  "release": "2026-09-26",
+  "commit": "dd4779e8edfc33f2d73bcce73adc049ad805a318",
+  "mintedAt": "2026-09-26T16:45:33.258Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
@@ -14,6 +14,7 @@
     "src/dev/bench-delta/v1/bench-delta.ts": "377e04113814e99205bba3f37790dca85b724526139b48d729d23a08ae563b81",
     "src/dev/og-card/v1/og-card.ts": "5d4c2006caf2d18e55d57507dbc5003485ce911caf2f04c7a9605e2c3edb27b4",
     "src/events/talk-timer/v1/talk-timer.ts": "c507a1824b6b092db5e810e363e77b1a654f8925fa44b8ec1795ecd60f926757",
+    "src/gaming/speedrun-pb-recap/v1/speedrun-pb-recap.ts": "9888f51ed0a5cc8e4e20973f9ac49e277cc633fef0772b18d4ab62931e46d6c8",
     "src/harness/agent-timeline/v1/agent-timeline.ts": "954d27a85594e4a1cc8c698197e106f846cac859f35d2da3053c10d00a312be1",
     "src/social/episode-audiogram/v1/episode-audiogram.ts": "c42210ce18cf49019756328bcc76918a3be3b461f0909f9aa34715c9b158df64",
     "src/social/testimonial-proof-card/v1/testimonial-proof-card.ts": "ea57b396c56952f4639e7a5c62b9237c67bdf8afe96df495a5258398f3038503"

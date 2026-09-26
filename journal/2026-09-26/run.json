@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-26",
+  "day": 7,
+  "startedAt": "2026-09-26T15:50:28.937Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "claude-opus-5-5",
+    "roster": null,
+    "ultracode": false,
+    "effort": "max",
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": true,
+    "m0saic": "0.2.2",
+    "session": {
+      "kind": "interactive",
+      "harness": "Claude Code 2.1.282",
+      "why": "the founder triggered the day by hand in a Claude Code session (model Opus 5.5, effort max) and asked for tokens and cost to be tracked; the 09:00 task did not run today (its next run is 2026-09-27), so no roster slot was drawn",
+      "trace": "none - no adapter ran, so there is no journal/<date>/trace.json; WHY.timeline is self-reported, with its tokens and dollars measured from the session's own transcript by journal/2026-09-26/token-cost-audit.mjs",
+      "maintenance": "before the day started the same session committed dd4779e (maintain 2026-09-26): the scout prompt's niche-community direction the founder asked for, and Claude price rows re-checked against the published list prices; its tokens are counted in this day's audit as the phase 'orient + maintain'",
+      "gate": "pipeline/lib/gate.mjs runGate via logs/gate-run.mjs, the same arguments run.mjs passes, so run.json keeps this block"
+    }
+  },
+  "model": {
+    "selfDeclared": "claude-opus-5-5",
+    "corrected": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/gaming/speedrun-pb-recap/v1",
+    "title": "2026-09-26 · Speedrun PB Recap",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 1,
+    "at": "2026-09-26T16:45:33.277Z"
+  }
+}

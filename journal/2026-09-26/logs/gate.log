@@ -1,0 +1,402 @@
+[12:44:44] === one-a-day · 2026-09-26 · day 7 · agent claude (claude-opus-5-5) · interactive session, gate only · no push ===
+[12:44:44] [gate] decision=ship
+[12:44:44] [gate] ✓ one new template: @one-a-day/gaming/speedrun-pb-recap/v1
+[12:45:26] [gate] ✓ npm run verify
+[12:45:27] [gate] ✓ freeze intact
+[12:45:29] [gate] ✓ m0saic doctor (9 rendered, 1 warning(s))
+[12:45:31] [gate] ✓ validate-only exit 0
+[12:45:33] [gate] ✓ why-tutorial validates (--tutorial)
+[12:45:33] [gate] ✓ preview.png 155 KB
+mjs && node dist/gen-template-manifest.js && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+
+[check-freeze] ✓ freeze (2026-09-25): 11 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (9 templates, 6 packs, 9 with preview assets)
+[check-registry] ✓ 9 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✓ layout fingerprints: 9 unchanged, 0 missing, 0 changed.
+[check-registry] ✓ 9 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+[check-layout] ✓ 8 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+[check-why] ✓ 7 template(s) explain why they exist (0 warning(s); front door exempt).
+
+> one-a-day@0.1.0 lint
+> eslint .
+
+
+> one-a-day@0.1.0 test
+> jest && node --test tools/check-freeze.test.mjs tools/robot-faces.test.mjs "pipeline/lib/*.test.mjs"
+
+
+Test Suites: 11 passed, 11 total
+Tests:       103 passed, 103 total
+Snapshots:   0 total
+Time:        23.485 s, estimated 24 s
+Ran all test suites.
+TAP version 13
+# Subtest: template id from a new folder; asset key encoding
+ok 1 - template id from a new folder; asset key encoding
+  ---
+  duration_ms: 1.2455
+  ...
+# Subtest: commit messages carry the day, the id, and the Agent/Model trailers
+ok 2 - commit messages carry the day, the id, and the Agent/Model trailers
+  ---
+  duration_ms: 0.3661
+  ...
+# Subtest: stream-log formats Claude and Codex events and drops noise
+ok 3 - stream-log formats Claude and Codex events and drops noise
+  ---
+  duration_ms: 0.9807
+  ...
+# Subtest: a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+ok 4 - a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+  ---
+  duration_ms: 3.9724
+  ...
+# Subtest: protected files and folders are forbidden whatever the status
+ok 5 - protected files and folders are forbidden whatever the status
+  ---
+  duration_ms: 0.8444
+  ...
+# Subtest: editing or deleting an existing template folder is forbidden; a second new folder is counted
+ok 6 - editing or deleting an existing template folder is forbidden; a second new folder is counted
+  ---
+  duration_ms: 0.453
+  ...
+# Subtest: another day's journal is forbidden, today's is allowed
+ok 7 - another day's journal is forbidden, today's is allowed
+  ---
+  duration_ms: 0.3404
+  ...
+# Subtest: stray render outputs at the repo root are scratch, not a scope violation (day 003)
+ok 8 - stray render outputs at the repo root are scratch, not a scope violation (day 003)
+  ---
+  duration_ms: 0.6788
+  ...
+# Subtest: a tracked file with a scratch-looking name is not scratch
+ok 9 - a tracked file with a scratch-looking name is not scratch
+  ---
+  duration_ms: 0.2216
+  ...
+# Subtest: runtime caches inside the day's journal are scratch; the rest of the journal is allowed
+ok 10 - runtime caches inside the day's journal are scratch; the rest of the journal is allowed
+  ---
+  duration_ms: 0.459
+  ...
+# Subtest: todayIso and isIsoDate
+ok 11 - todayIso and isIsoDate
+  ---
+  duration_ms: 1.0011
+  ...
+# Subtest: ensureDay creates the folder once; state and run patches merge
+ok 12 - ensureDay creates the folder once; state and run patches merge
+  ---
+  duration_ms: 18.6877
+  ...
+# Subtest: index rows upsert by date, stay sorted; day numbers count earlier rows
+ok 13 - index rows upsert by date, stay sorted; day numbers count earlier rows
+  ---
+  duration_ms: 12.3088
+  ...
+# Subtest: renderTemplate substitutes known keys and leaves unknown ones
+ok 14 - renderTemplate substitutes known keys and leaves unknown ones
+  ---
+  duration_ms: 0.3951
+  ...
+# Subtest: entries normalize: ids default, disabled sit out, bad rows drop
+ok 15 - entries normalize: ids default, disabled sit out, bad rows drop
+  ---
+  duration_ms: 4.2582
+  ...
+# Subtest: a weightless entry still draws, at weight 1
+ok 16 - a weightless entry still draws, at weight 1
+  ---
+  duration_ms: 0.3486
+  ...
+# Subtest: findRosterEntry pins a slot by id
+ok 17 - findRosterEntry pins a slot by id
+  ---
+  duration_ms: 0.362
+  ...
+# Subtest: lastPickFrom takes the latest dated row that ran an agent
+ok 18 - lastPickFrom takes the latest dated row that ran an agent
+  ---
+  duration_ms: 0.4162
+  ...
+# Subtest: rank: other agent < same agent other slot < the same slot again
+ok 19 - rank: other agent < same agent other slot < the same slot again
+  ---
+  duration_ms: 0.3202
+  ...
+# Subtest: hard mode: yesterday's agent is ordered last but never dropped
+ok 20 - hard mode: yesterday's agent is ordered last but never dropped
+  ---
+  duration_ms: 1.367
+  ...
+# Subtest: hard mode with one agent installed still yields a full order
+ok 21 - hard mode with one agent installed still yields a full order
+  ---
+  duration_ms: 0.4606
+  ...
+# Subtest: soft mode damps yesterday instead of excluding it — repeats stay possible
+ok 22 - soft mode damps yesterday instead of excluding it — repeats stay possible
+  ---
+  duration_ms: 5.4584
+  ...
+# Subtest: soft mode reports the declared weight, not the damped draw weight
+ok 23 - soft mode reports the declared weight, not the damped draw weight
+  ---
+  duration_ms: 0.6911
+  ...
+# Subtest: avoidRepeat false is a pure weighted draw over every slot
+ok 24 - avoidRepeat false is a pure weighted draw over every slot
+  ---
+  duration_ms: 2.0992
+  ...
+# Subtest: weights bend the draw the way they say
+ok 25 - weights bend the draw the way they say
+  ---
+  duration_ms: 3.091
+  ...
+# Subtest: the same rng seed draws the same order — a resumed day keeps its agent
+ok 26 - the same rng seed draws the same order — a resumed day keeps its agent
+  ---
+  duration_ms: 0.457
+  ...
+# Subtest: pickOrder reads the mode off config and the previous day off the index
+ok 27 - pickOrder reads the mode off config and the previous day off the index
+  ---
+  duration_ms: 0.6534
+  ...
+# Subtest: describeEntry says the slot, the model and whether ultracode is on
+ok 28 - describeEntry says the slot, the model and whether ultracode is on
+  ---
+  duration_ms: 0.2651
+  ...
+# Subtest: records Claude stream-json: spans with tool + target + timing, usage, cost, the phase name for a retry
+ok 29 - records Claude stream-json: spans with tool + target + timing, usage, cost, the phase name for a retry
+  ---
+  duration_ms: 3.5225
+  ...
+# Subtest: records Codex --json items and turn usage
+ok 30 - records Codex --json items and turn usage
+  ---
+  duration_ms: 0.5959
+  ...
+# Subtest: appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape
+ok 31 - appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape
+  ---
+  duration_ms: 23.4068
+  ...
+# Subtest: cost: reported by the CLI wins; else an estimate from the dated price table; the timeline says which
+ok 32 - cost: reported by the CLI wins; else an estimate from the dated price table; the timeline says which
+  ---
+  duration_ms: 11.6192
+  ...
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# Subtest: seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+ok 33 - seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+  ---
+  duration_ms: 0.9803
+  ...
+# Subtest: the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+ok 34 - the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+  ---
+  duration_ms: 37.2264
+  ...
+# Subtest: import scan ignores commented-out imports
+ok 35 - import scan ignores commented-out imports
+  ---
+  duration_ms: 0.2702
+  ...
+# Subtest: hashes are CRLF-agnostic
+ok 36 - hashes are CRLF-agnostic
+  ---
+  duration_ms: 1.1558
+  ...
+# Subtest: checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+ok 37 - checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+  ---
+  duration_ms: 42.7165
+  ...
+# Subtest: judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+ok 38 - judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+  ---
+  duration_ms: 688.594
+  ...
+# Subtest: faces are deterministic per (seed, index) and differ across indexes
+ok 39 - faces are deterministic per (seed, index) and differ across indexes
+  ---
+  duration_ms: 4.0672
+  ...
+# Subtest: 33 faces are 33 distinct, well-formed SVG documents
+ok 40 - 33 faces are 33 distinct, well-formed SVG documents
+  ---
+  duration_ms: 4.4228
+  ...
+# Subtest: data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+ok 41 - data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+  ---
+  duration_ms: 0.3471
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 908.7705
+
+> one-a-day@0.1.0 test:contract
+> node tools/contract-check.mjs
+
+contract-check: clean — 9 template(s), CJS entry, manifest agrees
+
+> one-a-day@0.1.0 check:deps
+> node tools/check-deps.mjs
+
+check-deps: CURRICULUM.md not present yet — skipping curriculum lint
+check-deps: clean (dependencies, imports, packs, curriculum, notices)
+
+===== exit 0 after 42165ms
+
+===== 2026-09-26T16:45:26.973Z $ node tools/check-freeze.mjs
+[check-freeze] ✓ freeze (2026-09-25): 11 frozen files unchanged, 1 not yet frozen (new work).
+
+===== exit 0 after 86ms
+
+===== 2026-09-26T16:45:27.059Z $ m0saic doctor . --json
+{
+  "ok": true,
+  "repo": {
+    "path": "C:\\src\\m0saic-production\\one-a-day",
+    "id": "@one-a-day",
+    "displayName": "One a Day",
+    "templates": 9
+  },
+  "mode": "gate",
+  "loadDiagnostics": [],
+  "rendered": 9,
+  "skipped": [],
+  "errors": [],
+  "warnings": [
+    {
+      "templateId": "@one-a-day/social/episode-audiogram/v1",
+      "convention": "costBudget",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "overlayDepth",
+          "detail": "overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead."
+        }
+      ],
+      "fix": "keep the rendered document inside the engine's comfort zone (see COST_BUDGETS): frame count, source count, overlay depth and inline-mask count each have a ceiling past which renders slow down quadratically, drop layers, or overflow the process argv — operations, not string length (a baked-inset m0 is long and cheap). Collapse detail into fewer, larger cells; nest a child document instead of stacking overlays."
+    }
+  ],
+  "notes": [
+    {
+      "templateId": "@one-a-day/dev/og-card/v1",
+      "note": "latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it"
+    }
+  ],
+  "fingerprints": {
+    "srcRoot": "src",
+    "fallbackDir": "layout-fingerprints",
+    "present": true,
+    "unchanged": 9,
+    "missing": 0,
+    "changed": 0
+  }
+}
+
+===== exit 0 after 2813ms
+
+===== 2026-09-26T16:45:29.873Z $ m0saic make @one-a-day/gaming/speedrun-pb-recap/v1 --template-repo . --validate-only --quiet
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  Building plan...  template id: @one-a-day/gaming/speedrun-pb-recap/v1
+  output:      out.mp4
+ done (0.3s)
+  plan built with size: 1080 x 1920
+  duration:      20s (600 frames @ 30fps)
+
+===== exit 0 after 1463ms
+
+===== 2026-09-26T16:45:31.338Z $ m0saic make @one-a-day/gaming/speedrun-pb-recap/v1 --template-repo . --tutorial --validate-only --quiet
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/gaming/speedrun-pb-recap/v1
+  output:      out.mp4
+  Building plan... done (0.6s)
+  plan built with size: 1080 x 1920
+  duration:      73s (2190 frames @ 30fps)
+
+===== exit 0 after 1820ms
+
+===== 2026-09-26T16:45:33.159Z $ node tools/check-freeze.mjs --update --tag 2026-09-26
+[check-freeze] ✎ minted frozen.manifest.json: 12 frozen files at 2026-09-26 (dd4779e) — commit it.
+
+===== exit 0 after 126ms

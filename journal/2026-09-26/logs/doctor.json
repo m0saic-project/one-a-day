@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "repo": {
+    "path": "C:\\src\\m0saic-production\\one-a-day",
+    "id": "@one-a-day",
+    "displayName": "One a Day",
+    "templates": 9
+  },
+  "mode": "gate",
+  "loadDiagnostics": [],
+  "rendered": 9,
+  "skipped": [],
+  "errors": [],
+  "warnings": [
+    {
+      "templateId": "@one-a-day/social/episode-audiogram/v1",
+      "convention": "costBudget",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "overlayDepth",
+          "detail": "overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead."
+        }
+      ],
+      "fix": "keep the rendered document inside the engine's comfort zone (see COST_BUDGETS): frame count, source count, overlay depth and inline-mask count each have a ceiling past which renders slow down quadratically, drop layers, or overflow the process argv — operations, not string length (a baked-inset m0 is long and cheap). Collapse detail into fewer, larger cells; nest a child document instead of stacking overlays."
+    }
+  ],
+  "notes": [
+    {
+      "templateId": "@one-a-day/dev/og-card/v1",
+      "note": "latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it"
+    }
+  ],
+  "fingerprints": {
+    "srcRoot": "src",
+    "fallbackDir": "layout-fingerprints",
+    "present": true,
+    "unchanged": 9,
+    "missing": 0,
+    "changed": 0
+  }
+}

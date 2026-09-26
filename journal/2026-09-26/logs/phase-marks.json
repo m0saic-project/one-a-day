@@ -1,0 +1,35 @@
+{
+  "note": "Phase boundaries of the interactive session, UTC, written as each phase began. token-cost-audit.mjs bins the transcript's per-message usage by these marks.",
+  "marks": [
+    {
+      "phase": "orient + maintain",
+      "at": "2026-09-26T15:50:28.937Z",
+      "what": "read the playbook and the last two days, checked list prices, committed dd4779e (scout directive, price rows)"
+    },
+    {
+      "phase": "scout",
+      "at": "2026-09-26T16:02:01.217Z",
+      "what": "niche-first search, starting from the founder's speedrunning idea"
+    },
+    {
+      "phase": "plan",
+      "at": "2026-09-26T16:08:35.946Z",
+      "what": "read the talk-timer, audiogram and official lyric-video mechanics; brief written"
+    },
+    {
+      "phase": "build",
+      "at": "2026-09-26T16:15:32.511Z",
+      "what": "scaffold, template, test, variants"
+    },
+    {
+      "phase": "critique",
+      "at": "2026-09-26T16:39:55.396Z",
+      "what": "stills and reports of a and b scored against the brief rubric"
+    },
+    {
+      "phase": "ship",
+      "at": "2026-09-26T16:40:41.162Z",
+      "what": "previews, verify, doctor, the frozen timeline, the journal, the gate, the push"
+    }
+  ]
+}

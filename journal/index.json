@@ -176,5 +176,29 @@
       "https://multimedia.journalism.berkeley.edu/tutorials/16-ways-to-promote-your-podcast/",
       "https://podcastgrowth.substack.com/p/creating-beautiful-audiograms-for"
     ]
+  },
+  {
+    "date": "2026-09-26",
+    "day": 7,
+    "agent": "claude",
+    "model": "claude-opus-5-5",
+    "rosterId": null,
+    "status": "shipped",
+    "templateId": "@one-a-day/gaming/speedrun-pb-recap/v1",
+    "title": "2026-09-26 · Speedrun PB Recap",
+    "pack": "gaming",
+    "useCase": "Speedrun PB recap clips from the LiveSplit splits file: segments, deltas against the old PB, gold splits and the final time, told as a short shareable video",
+    "tags": [
+      "gaming",
+      "2026-09-26",
+      "day-007"
+    ],
+    "sources": [
+      "https://github.com/LiveSplit/LiveSplit",
+      "https://github.com/LiveSplit/LiveSplit/issues/2543",
+      "https://twos.dev/splitsio.html",
+      "https://github.com/JuanCruzCB/LiveSplit-Analytics-Database",
+      "https://github.com/slaurent22/lss-tools"
+    ]
   }
 ]

@@ -1,0 +1,36 @@
+{
+  "day": 7,
+  "date": "2026-09-26",
+  "useCase": "Speedrun PB recap clips from the LiveSplit splits file: segments, deltas against the old PB, gold splits and the final time, told as a short shareable video",
+  "who": "Speedrunners who time runs in LiveSplit and share PBs on X, Bluesky, Discord and speedrun.com; the splits.io site they used to share and compare splits closed on 2025-03-31",
+  "sources": [
+    "https://github.com/LiveSplit/LiveSplit",
+    "https://github.com/LiveSplit/LiveSplit/issues/2543",
+    "https://twos.dev/splitsio.html",
+    "https://github.com/JuanCruzCB/LiveSplit-Analytics-Database",
+    "https://github.com/slaurent22/lss-tools"
+  ],
+  "tags": [
+    "speedrun",
+    "livesplit",
+    "splits",
+    "recap",
+    "video"
+  ],
+  "scout": "done",
+  "pack": "gaming",
+  "slug": "speedrun-pb-recap",
+  "title": "Speedrun PB Recap",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b"
+  ],
+  "inPlace": "b",
+  "build": "done",
+  "decision": "ship",
+  "pick": "b",
+  "critique": "done",
+  "ship": "done"
+}

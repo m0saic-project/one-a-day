@@ -61,4 +61,9 @@ exports.TEMPLATE_PACKS = [
         title: "Gaming",
         description: "Gaming: one line on what this pack teaches.",
     },
+    {
+        id: "sports",
+        title: "Sports",
+        description: "Sports: one line on what this pack teaches.",
+    },
 ];

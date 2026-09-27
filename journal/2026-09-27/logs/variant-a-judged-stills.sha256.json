@@ -1,0 +1,25 @@
+{
+  "note": "sha256 (first 16 hex) of the variant a stills the critic judged, taken before a was re-rendered from the final source in the ship phase",
+  "stills": {
+    "landscape-10.png": "b38aad401dd3aabe",
+    "landscape-50.png": "b2d0eec3aa7f9b57",
+    "landscape-90.png": "98e794448b7f69fd",
+    "portrait-10.png": "095f651b8e4e675e",
+    "portrait-50.png": "a3a1e6d646c37e4e",
+    "portrait-90.png": "726cca6b6be72f56",
+    "square-10.png": "7576607fafd1f6f6",
+    "square-50.png": "4dc948db2ca855b0",
+    "square-90.png": "88c2b25c97b8d36c",
+    "tutorial-1.png": "8cb3441fb8bafc4c",
+    "tutorial-2.png": "1fc129627d88530f",
+    "tutorial-3.png": "4e7fc647b7a4bee4",
+    "tutorial-4.png": "766a6972fa30424e",
+    "tutorial-5.png": "c339ee3fb7b9492c",
+    "tutorial-6.png": "7806e7f7b783ffad"
+  },
+  "rerender": {
+    "at": "2026-09-27T22:23:06.870Z",
+    "identical": 15,
+    "different": []
+  }
+}

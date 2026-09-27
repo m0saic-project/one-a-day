@@ -7,6 +7,7 @@ import { devTemplates } from "./dev";
 import { socialTemplates } from "./social";
 import { eventsTemplates } from "./events";
 import { gamingTemplates } from "./gaming";
+import { sportsTemplates } from "./sports";
 
 /** The two exports every Mosaic host requires from a template repo. */
 export const repo = TEMPLATE_REPO;
@@ -18,6 +19,7 @@ export const templates: MosaicTemplate<MosaicTemplateProps>[] = [
   ...socialTemplates,
   ...eventsTemplates,
   ...gamingTemplates,
+  ...sportsTemplates,
 ];
 
 // Library re-exports for anyone importing this repo as code. `export *`
@@ -29,4 +31,5 @@ export * from "./dev";
 export * from "./social";
 export * from "./events";
 export * from "./gaming";
+export * from "./sports";
 export { TEMPLATE_PACKS, TEMPLATE_REPO };

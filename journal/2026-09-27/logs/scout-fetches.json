@@ -1,0 +1,173 @@
+{
+  "note": "Pages requested with pipeline/research/fetch-text.mjs during the scout. The page texts themselves were read in the session and are not kept (third-party content).",
+  "fetches": [
+    {
+      "name": "cstimer",
+      "url": "https://cstimer.net/",
+      "title": "csTimer - Professional Rubik's Cube Speedsolving/Training Timer",
+      "chars": 17741,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "liftingcast-overlays",
+      "url": "https://github.com/liftingcast/liftingcast-overlays",
+      "title": "GitHub - liftingcast/liftingcast-overlays: Streaming overlays for LiftingCast · GitHub",
+      "chars": 2710,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "liftingcast",
+      "url": "https://liftingcast.com/",
+      "title": "LiftingCast",
+      "chars": 33,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "openlifter-about",
+      "url": "https://www.openlifter.com/en/about/",
+      "title": "About OpenLifter",
+      "chars": 1832,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "openlifter-guide",
+      "url": "https://www.openlifter.com/en/guide/",
+      "title": "OpenLifter Guide",
+      "chars": 5484,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "opl-csv-intro",
+      "url": "https://openpowerlifting.gitlab.io/opl-csv/",
+      "title": "Introduction - OpenPowerlifting Data Service",
+      "chars": 2019,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "opl-docs",
+      "url": "https://openpowerlifting.gitlab.io/opl-csv/bulk-csv-docs.html",
+      "title": "Documentation - OpenPowerlifting Data Service",
+      "chars": 11951,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "opl-lifter-csv",
+      "url": "https://www.openpowerlifting.org/api/liftercsv/jamesmanley",
+      "title": null,
+      "chars": 798,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "opl-lifter-page",
+      "url": "https://www.openpowerlifting.org/u/jamesmanley",
+      "title": "James Manley",
+      "chars": 1032,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "pota-adif",
+      "url": "https://docs.pota.app/docs/activator_reference/ADIF_for_POTA_reference.html",
+      "title": "ADIF for POTA Technical Reference - Parks on the Air Documentation",
+      "chars": 6893,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "qsomap",
+      "url": "https://www.qsomap.org/",
+      "title": null,
+      "chars": 869,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "racing-league-tools",
+      "url": "https://www.overtake.gg/downloads/racing-league-tools.44891/",
+      "title": "Racing League Tools | OverTake.gg",
+      "chars": 13413,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "simplelifter",
+      "url": "https://github.com/meethed/simpleLifter",
+      "title": null,
+      "chars": 0,
+      "truncated": false,
+      "error": "fetch: 404 https://github.com/meethed/simpleLifter"
+    },
+    {
+      "name": "speedsolving-3438",
+      "url": "https://www.speedsolving.com/threads/accomplishment-thread.1688/page-3438",
+      "title": "Accomplishment Thread | Page 3438 | SpeedSolving Puzzles Community",
+      "chars": 8273,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "speedsolving-3503",
+      "url": "https://www.speedsolving.com/threads/accomplishment-thread.1688/page-3503",
+      "title": "Accomplishment Thread | Page 3503 | SpeedSolving Puzzles Community",
+      "chars": 14885,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "ss-recap",
+      "url": "https://startingstrength.com/resources/forum/general-q-and-a/80095-powerlifting-meet-recap.html",
+      "title": null,
+      "chars": 0,
+      "truncated": false,
+      "error": "fetch: 403 https://startingstrength.com/resources/forum/general-q-and-a/80095-powerlifting-meet-recap.html"
+    },
+    {
+      "name": "substack-first-meet",
+      "url": "https://squattersrites.substack.com/p/my-first-powerlifting-meet",
+      "title": "My First Powerlifting Meet - by Hunter Richardson",
+      "chars": 5254,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "substack-second-meet",
+      "url": "https://squattersrites.substack.com/p/my-second-powerlifting-meet",
+      "title": "My Second Powerlifting Meet - by Hunter Richardson",
+      "chars": 3386,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "top8gg",
+      "url": "https://www.top8.gg/",
+      "title": "top8.gg — Tournament Top 8 Graphic Generator",
+      "chars": 353,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "uw-nationals",
+      "url": "https://staff.washington.edu/griffin/pl_comp_nationals.txt",
+      "title": null,
+      "chars": 11017,
+      "truncated": false,
+      "error": null
+    },
+    {
+      "name": "wca-regs",
+      "url": "https://www.worldcubeassociation.org/regulations/",
+      "title": "WCA Regulations | World Cube Association",
+      "chars": 40000,
+      "truncated": true,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-27",
+  "day": 8,
+  "startedAt": "2026-09-27T21:35:26.822Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "claude-fable-5-1",
+    "roster": null,
+    "ultracode": false,
+    "effort": "xhigh",
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": true,
+    "m0saic": "0.2.2",
+    "session": {
+      "kind": "interactive",
+      "harness": "Claude Code 2.1.283",
+      "why": "the machine was off at 09:00, so the scheduled task did not run; the founder triggered the day by hand in a Claude Code session (model Fable 5.1, effort xhigh) at 17:35 local. No roster slot was drawn. The scheduled task was disabled for the length of the run (StartWhenAvailable could have replayed the missed start on top of it) and re-enabled after",
+      "trace": "none - no adapter ran, so there is no journal/<date>/trace.json; WHY.timeline is self-reported, with its tokens and dollars measured from the session's own transcript by journal/2026-09-27/token-cost-audit.mjs",
+      "gate": "pipeline/lib/gate.mjs runGate via logs/gate-run.mjs, the same arguments run.mjs passes, so run.json keeps this block"
+    }
+  },
+  "model": {
+    "selfDeclared": "claude-fable-5-1",
+    "corrected": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/powerlifting-meet-recap/v1",
+    "title": "2026-09-27 · Powerlifting Meet Recap",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 1,
+    "at": "2026-09-27T22:32:05.423Z"
+  }
+}

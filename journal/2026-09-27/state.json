@@ -1,0 +1,36 @@
+{
+  "day": 8,
+  "date": "2026-09-27",
+  "useCase": "Powerlifting meet recap cards and clips from the lifter's OpenPowerlifting CSV row: nine attempts on a 3 x 3 board, good lift or no lift, the bests, the total and the points",
+  "who": "Powerlifters, coaches and meet directors; they gather at meets, on Instagram and around openpowerlifting.org, which archives every sanctioned meet and gives each lifter a CSV of their results",
+  "sources": [
+    "https://openpowerlifting.gitlab.io/opl-csv/bulk-csv-docs.html",
+    "https://squattersrites.substack.com/p/my-first-powerlifting-meet",
+    "https://squattersrites.substack.com/p/my-second-powerlifting-meet",
+    "https://www.openlifter.com/en/guide/",
+    "https://github.com/liftingcast/liftingcast-overlays"
+  ],
+  "tags": [
+    "powerlifting",
+    "meet",
+    "attempts",
+    "recap",
+    "video"
+  ],
+  "scout": "done",
+  "pack": "sports",
+  "slug": "powerlifting-meet-recap",
+  "title": "Powerlifting Meet Recap",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b"
+  ],
+  "inPlace": "b",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

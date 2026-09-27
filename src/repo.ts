@@ -70,4 +70,10 @@ export const TEMPLATE_PACKS: MosaicTemplatePackDescriptor[] = [
     description:
       "Gaming: one line on what this pack teaches.",
   },
+  {
+    id: "sports",
+    title: "Sports",
+    description:
+      "Sports: one line on what this pack teaches.",
+  },
 ];

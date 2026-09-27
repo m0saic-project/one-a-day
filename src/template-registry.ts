@@ -5,6 +5,7 @@ import { devRegistry } from "./dev/registry";
 import { socialRegistry } from "./social/registry";
 import { eventsRegistry } from "./events/registry";
 import { gamingRegistry } from "./gaming/registry";
+import { sportsRegistry } from "./sports/registry";
 
 /**
  * Every template, chapter by chapter. Array order is display order — the
@@ -18,6 +19,7 @@ export const CHAPTERS: StarterChapter[] = [
   { pack: "social", entries: socialRegistry },
   { pack: "events", entries: eventsRegistry },
   { pack: "gaming", entries: gamingRegistry },
+  { pack: "sports", entries: sportsRegistry },
 ];
 
 /** Flat view over every chapter, in order. */

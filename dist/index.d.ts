@@ -9,4 +9,5 @@ export * from "./dev";
 export * from "./social";
 export * from "./events";
 export * from "./gaming";
+export * from "./sports";
 export { TEMPLATE_PACKS, TEMPLATE_REPO };

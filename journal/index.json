@@ -200,5 +200,29 @@
       "https://github.com/JuanCruzCB/LiveSplit-Analytics-Database",
       "https://github.com/slaurent22/lss-tools"
     ]
+  },
+  {
+    "date": "2026-09-27",
+    "day": 8,
+    "agent": "claude",
+    "model": "claude-fable-5-1",
+    "rosterId": null,
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/powerlifting-meet-recap/v1",
+    "title": "2026-09-27 · Powerlifting Meet Recap",
+    "pack": "sports",
+    "useCase": "Powerlifting meet recap cards and clips from the lifter's OpenPowerlifting CSV row: nine attempts on a 3 x 3 board, good lift or no lift, the bests, the total and the points",
+    "tags": [
+      "sports",
+      "2026-09-27",
+      "day-008"
+    ],
+    "sources": [
+      "https://openpowerlifting.gitlab.io/opl-csv/bulk-csv-docs.html",
+      "https://squattersrites.substack.com/p/my-first-powerlifting-meet",
+      "https://squattersrites.substack.com/p/my-second-powerlifting-meet",
+      "https://www.openlifter.com/en/guide/",
+      "https://github.com/liftingcast/liftingcast-overlays"
+    ]
   }
 ]

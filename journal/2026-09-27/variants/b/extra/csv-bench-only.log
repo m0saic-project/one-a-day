@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (10 templates) from .
+Rendering template:
+  template id: @one-a-day/sports/powerlifting-meet-recap/v1
+  output:      journal/2026-09-27/variants/b/extra/csv-bench-only.png
+  Building plan... done (0.4s)
+  plan built with size: 1080 x 1920
+  duration:      12s (360 frames @ 30fps)
+  Estimated render time: ~3 s
+  Rendering in ffmpeg [0/6 |   0% | 0:00 elapsed | ETA 0:04]  Rendering in ffmpeg [1/6 |  16% | 0:00 elapsed | ETA 0:03].    Rendering in ffmpeg [1/6 |  16% | 0:01 elapsed | ETA 0:03 | 6.45x]..   Rendering in ffmpeg [1/6 |  38% | 0:01 elapsed | ETA 0:02 | 7.28x]...  Rendering in ffmpeg [1/6 |  38% | 0:02 elapsed | ETA 0:02 | 7.28x]     Rendering in ffmpeg [3/6 |  64% | 0:02 elapsed | ETA 0:01 | 321.00x].    Rendering in ffmpeg [5/6 |  77% | 0:02 elapsed | ETA 0:01 | 381.00x]..   Rendering in ffmpeg [6/6 |  83% | 0:03 elapsed | ETA 0:00 | 52.40x]...  Rendering in ffmpeg [6/6 | 100% | 0:03 elapsed | ETA 0:00 | 0.17x]... done (2 s)
+✅ Template render complete: journal/2026-09-27/variants/b/extra/csv-bench-only.png

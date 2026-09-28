@@ -1,0 +1,18 @@
+{
+  "templateId": "@one-a-day/events/bird-walk-sightings/v1",
+  "at": "2026-09-28T13:18:59.647Z",
+  "props": null,
+  "build": {
+    "code": 0
+  },
+  "kind": "image",
+  "renders": [],
+  "stills": [],
+  "srcSnapshot": null,
+  "ok": false,
+  "degraded": false,
+  "validate": {
+    "code": 1,
+    "degraded": false
+  }
+}

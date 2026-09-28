@@ -224,5 +224,29 @@
       "https://www.openlifter.com/en/guide/",
       "https://github.com/liftingcast/liftingcast-overlays"
     ]
+  },
+  {
+    "date": "2026-09-28",
+    "day": 9,
+    "agent": "codex",
+    "model": "gpt-6",
+    "rosterId": "codex-astra",
+    "status": "no-ship",
+    "templateId": null,
+    "title": null,
+    "useCase": "Bird-walk sightings sheets for sanctuary visitors, rendered from one outing's eBird checklist export rows.",
+    "tags": [
+      "birding",
+      "ebird",
+      "checklist",
+      "sanctuary",
+      "print"
+    ],
+    "sources": [
+      "https://www.reddit.com/r/birding/comments/1lflgm2/printing_ebird_checklists/",
+      "https://support.ebird.org/en/support/solutions/articles/48000838205-download-ebird-data",
+      "https://github.com/Sajmani/birdsync",
+      "https://support.ebird.org/en/support/solutions/articles/48001201565"
+    ]
   }
 ]

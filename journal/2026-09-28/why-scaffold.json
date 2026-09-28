@@ -1,0 +1,58 @@
+{
+  "day": 9,
+  "date": "2026-09-28",
+  "agent": "codex",
+  "model": "gpt-6",
+  "id": "@one-a-day/events/bird-walk-sightings/v1",
+  "title": "Bird Walk Sightings",
+  "who": "Sanctuary naturalists and bird-walk leaders using eBird and discussing visitor checklist displays in r/birding.",
+  "problem": [
+    "\"Our naturalists lead a bird group and make a checklist twice a week.\" A sanctuary volunteer says printing the eBird webpage wastes paper and looks poor. Visitors need a compact, dated sheet.",
+    "eBird offers a personal spreadsheet export. Group by Submission ID, then map names, counts and outing metadata to JSON. X means observed without a count."
+  ],
+  "sources": [
+    "https://www.reddit.com/r/birding/comments/1lflgm2/printing_ebird_checklists/",
+    "https://support.ebird.org/en/support/solutions/articles/48000838205-download-ebird-data",
+    "https://github.com/Sajmani/birdsync",
+    "https://support.ebird.org/en/support/solutions/articles/48001201565"
+  ],
+  "solution": [
+    "Eight entries per page, with full names beside their unchanged counts. Wide canvases read down the left column, then the right. Every page discloses its entry range and explains X.",
+    "Supply all rows from one outing and render every page before posting the set. Input order, duplicate names and unidentified taxa survive. Defaults are fictional observations."
+  ],
+  "usage": {
+    "command": "m0saic make @one-a-day/events/bird-walk-sightings/v1 --template-repo . -w 1080 -h 1920 -o journal/2026-09-28/sightings.png",
+    "try": [
+      "rows: normalized commonName and numeric count or uppercase X",
+      "page: 2 selects entries 9-16 when present",
+      "location, date, time and numberOfObservers: outing metadata",
+      "sourceLabel: your checklist reference; render every page"
+    ]
+  },
+  "timeline": {
+    "source": "runner",
+    "phases": [
+      {
+        "name": "scout",
+        "startMs": 0,
+        "durMs": 271668,
+        "calls": 20,
+        "tokens": 2278712,
+        "tools": "shell 11, web_search 8, edit 1"
+      },
+      {
+        "name": "plan",
+        "startMs": 271683,
+        "durMs": 252729,
+        "calls": 15,
+        "tokens": 1244217,
+        "tools": "shell 13, edit 1, web_search 1"
+      }
+    ]
+  },
+  "caveats": [
+    "No CSV importer, account access or completeness verification.",
+    "PNG output; paper sizing, DPI and PDF export are outside this template.",
+    "Use printable ASCII; names and attribution are limited to 48 characters."
+  ]
+}

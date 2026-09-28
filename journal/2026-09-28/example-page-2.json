@@ -1,0 +1,46 @@
+{
+  "location": "Willowmere Demo Sanctuary",
+  "date": "2026-09-28",
+  "time": "08:00",
+  "numberOfObservers": 12,
+  "sourceLabel": "Fictional nine-entry example",
+  "rows": [
+    {
+      "commonName": "Mallard",
+      "count": 14
+    },
+    {
+      "commonName": "Great Blue Heron",
+      "count": 1
+    },
+    {
+      "commonName": "Red-tailed Hawk",
+      "count": 2
+    },
+    {
+      "commonName": "Belted Kingfisher",
+      "count": 1
+    },
+    {
+      "commonName": "Black-capped Chickadee",
+      "count": "X"
+    },
+    {
+      "commonName": "White-breasted Nuthatch",
+      "count": 3
+    },
+    {
+      "commonName": "American Goldfinch",
+      "count": 7
+    },
+    {
+      "commonName": "swallow sp.",
+      "count": "X"
+    },
+    {
+      "commonName": "Downy Woodpecker",
+      "count": 1
+    }
+  ],
+  "page": 2
+}

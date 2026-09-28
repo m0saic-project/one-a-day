@@ -1,7 +1,7 @@
 {
-  "release": "2026-09-27",
-  "commit": "bf0bade1f70ebf5f4197f5d2e324e3bc3c737c30",
-  "mintedAt": "2026-09-27T22:32:05.393Z",
+  "release": "2026-09-28",
+  "commit": "699a10d2cd3b199c2936f0e2ec56cff980b5613d",
+  "mintedAt": "2026-09-28T17:04:50.783Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
@@ -13,6 +13,7 @@
     "src/dev/app-store-screenshot-frame/v1/app-store-screenshot-frame.ts": "164a2427ca9f6795ae14a446e88a201808a25be02f66ff4c8b0d8c24a21ba510",
     "src/dev/bench-delta/v1/bench-delta.ts": "377e04113814e99205bba3f37790dca85b724526139b48d729d23a08ae563b81",
     "src/dev/og-card/v1/og-card.ts": "5d4c2006caf2d18e55d57507dbc5003485ce911caf2f04c7a9605e2c3edb27b4",
+    "src/events/bird-walk-sightings/v1/bird-walk-sightings.ts": "ddec5b9c42ace95a0b7e35459963d0eac10af9e117927b1dbcc80a02943a90c6",
     "src/events/talk-timer/v1/talk-timer.ts": "c507a1824b6b092db5e810e363e77b1a654f8925fa44b8ec1795ecd60f926757",
     "src/gaming/speedrun-pb-recap/v1/speedrun-pb-recap.ts": "9888f51ed0a5cc8e4e20973f9ac49e277cc633fef0772b18d4ab62931e46d6c8",
     "src/harness/agent-timeline/v1/agent-timeline.ts": "954d27a85594e4a1cc8c698197e106f846cac859f35d2da3053c10d00a312be1",

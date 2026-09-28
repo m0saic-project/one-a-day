@@ -24,7 +24,21 @@
     "a"
   ],
   "inPlace": "a",
-  "buildBlocked": "Fourth recorded render attempt failed: EPERM writing C:/Users/MainDesktop/m0saic/cache/masks/mask-bc4529258f520562.png. Build passed; validation exit 1; no renders, stills, or source snapshot. See render-a-resume-2.log and 30-build.md. Cache is outside writable scope; resume required visual checks when it is writable. Build remains unset.",
-  "decision": "no-ship",
-  "noShipReason": "build phase did not complete"
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "restore": {
+    "by": "maintainer",
+    "session": "Claude Code, claude-fable-5-1, interactive, started by the founder",
+    "at": "2026-09-28T16:45:04.000Z",
+    "originalDecision": "no-ship",
+    "originalNoShipReason": "build phase did not complete",
+    "originalCommit": "672085d",
+    "originalBuildBlocked": "Fourth recorded render attempt failed: EPERM writing C:/Users/MainDesktop/m0saic/cache/masks/mask-bc4529258f520562.png. Build passed; validation exit 1; no renders, stills, or source snapshot. See render-a-resume-2.log and 30-build.md. Cache is outside writable scope; resume required visual checks when it is writable. Build remains unset.",
+    "why": "the renders failed on the agent's sandbox, not on the template: the Codex sandbox user may read ~/m0saic but not write it, and a new template needs a mask the cache does not hold yet. Outside the sandbox the agent's unchanged source renders clean (see 50-ship.md)",
+    "doneByTheAgent": ["scout", "plan", "build: the template, its test, the WHY words, the registry wiring"],
+    "doneByTheMaintainer": ["source replayed from logs/build-1.jsonl", "every render", "critique", "WHY.timeline copied from trace.json", "previews, verify, doctor", "the journal from 40-critique.md on", "the gate and the push"]
+  },
+  "ship": "done"
 }

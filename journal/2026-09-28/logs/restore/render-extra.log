@@ -1,0 +1,60 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/events/bird-walk-sightings/v1
+  output:      journal/2026-09-28/variants/a/stills/extra-default-480.png
+  Building plan... done (0.3s)
+  plan built with size: 480 x 270
+  duration:      2s (60 frames @ 30fps)
+✅ Template render complete: journal/2026-09-28/variants/a/stills/extra-default-480.png
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/events/bird-walk-sightings/v1
+  output:      journal/2026-09-28/variants/a/stills/extra-stress-480.png
+  Building plan... done (0.3s)
+  plan built with size: 480 x 270
+  duration:      2s (60 frames @ 30fps)
+✅ Template render complete: journal/2026-09-28/variants/a/stills/extra-stress-480.png
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/events/bird-walk-sightings/v1
+  output:      journal/2026-09-28/variants/a/stills/extra-stress-portrait.png
+  Building plan... done (0.6s)
+  plan built with size: 1080 x 1920
+  duration:      2s (60 frames @ 30fps)
+✅ Template render complete: journal/2026-09-28/variants/a/stills/extra-stress-portrait.png
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/events/bird-walk-sightings/v1
+  output:      journal/2026-09-28/variants/a/stills/extra-stress-landscape.png
+  Building plan... done (0.5s)
+  plan built with size: 1920 x 1080
+  duration:      2s (60 frames @ 30fps)
+✅ Template render complete: journal/2026-09-28/variants/a/stills/extra-stress-landscape.png
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/events/bird-walk-sightings/v1
+  output:      journal/2026-09-28/variants/a/stills/extra-page-2.png
+  Building plan... done (0.5s)
+  plan built with size: 1080 x 1920
+  duration:      2s (60 frames @ 30fps)
+✅ Template render complete: journal/2026-09-28/variants/a/stills/extra-page-2.png

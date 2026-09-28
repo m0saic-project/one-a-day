@@ -166,6 +166,24 @@
       }
     },
     {
+      "slug": "bird-walk-sightings",
+      "templateKey": "@one-a-day/events/bird-walk-sightings/v1",
+      "title": "2026-09-28 · Bird Walk Sightings",
+      "description": "A visitor sightings sheet from one outing's normalized checklist rows: eight entries per page, preserving names, counts and X observations.",
+      "tags": [
+        "events",
+        "2026-09-28",
+        "day-009",
+        "birding",
+        "checklist",
+        "print"
+      ],
+      "pack": "events",
+      "preview": {
+        "image": "assets/templates/@one-a-day__events__bird-walk-sightings__v1/preview.png"
+      }
+    },
+    {
       "slug": "speedrun-pb-recap",
       "templateKey": "@one-a-day/gaming/speedrun-pb-recap/v1",
       "title": "2026-09-26 · Speedrun PB Recap",

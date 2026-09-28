@@ -1,0 +1,11 @@
+
+> one-a-day@0.1.0 fingerprints:update
+> node tools/check-registry.mjs --update-fingerprints
+
+[check-registry] ✓ 11 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✎ layout fingerprints: 1 written, 10 unchanged → <template folder>/<slug>.layout.m0 (commit them).
+[check-registry] ✓ 11 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).

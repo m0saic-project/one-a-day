@@ -1,0 +1,194 @@
+{
+  "date": "2026-09-28",
+  "pricedAt": "2026-09-28",
+  "agentRun": {
+    "agent": "codex",
+    "model": "gpt-6-astra",
+    "selfDeclared": "gpt-6",
+    "pricingSource": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "ratesUsdPerMillion": {
+      "input": 10,
+      "cachedInput": 1,
+      "output": 50
+    },
+    "basis": "API-equivalent estimate at standard rates, not an invoice: the run was on the founder's Codex plan. Usage as each call's turn.completed event reported it; input_tokens includes cached_input_tokens. The long-context rate (requests over 272K input tokens) is not applied because usage is reported per call, not per request.",
+    "calls": [
+      {
+        "call": "scout-1",
+        "input": 1188536,
+        "cachedInput": 1083776,
+        "uncachedInput": 104760,
+        "output": 6400,
+        "reasoning": 836,
+        "tokens": 1194936,
+        "usd": 2.4514
+      },
+      {
+        "call": "plan-1",
+        "input": 662079,
+        "cachedInput": 575360,
+        "uncachedInput": 86719,
+        "output": 6778,
+        "reasoning": 1221,
+        "tokens": 668857,
+        "usd": 1.7815
+      },
+      {
+        "call": "build-1",
+        "input": 2601579,
+        "cachedInput": 2503168,
+        "uncachedInput": 98411,
+        "output": 18757,
+        "reasoning": 2700,
+        "tokens": 2620336,
+        "usd": 4.4251
+      },
+      {
+        "call": "build-2",
+        "input": 248257,
+        "cachedInput": 211712,
+        "uncachedInput": 36545,
+        "output": 1547,
+        "reasoning": 63,
+        "tokens": 249804,
+        "usd": 0.6545
+      },
+      {
+        "call": "build-3",
+        "input": 284730,
+        "cachedInput": 233088,
+        "uncachedInput": 51642,
+        "output": 1630,
+        "reasoning": 47,
+        "tokens": 286360,
+        "usd": 0.831
+      }
+    ],
+    "totals": {
+      "input": 4985181,
+      "cachedInput": 4607104,
+      "uncachedInput": 378077,
+      "output": 35112,
+      "reasoning": 4867,
+      "tokens": 5020293,
+      "usd": 10.1435
+    },
+    "runnerTrace": {
+      "tokens": 9627397,
+      "note": "trace.json adds cached input to an input figure that already includes it, so the runner's total (and the tutorial card's 9.6M) counts cached input twice; it carries no dollars because pipeline/config.json has no price row for gpt-6-astra."
+    }
+  },
+  "restoreSession": {
+    "session": "23c3112d-75d6-48be-96b4-14ef7df69b1f",
+    "model": "claude-fable-5-1",
+    "modelsInTranscript": [
+      "claude-fable-5-1"
+    ],
+    "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "ratesUsdPerMillion": {
+      "input": 10,
+      "cacheWrite5m": 12.5,
+      "cacheWrite1h": 20,
+      "cacheRead": 0.25,
+      "output": 50
+    },
+    "webSearchUsdEach": 0.01,
+    "until": "2026-09-28T17:03:27.261Z",
+    "basis": "API-equivalent list-price estimate, not an invoice: the session ran on the founder's Claude plan. One record per API response (message.id). Not included: Claude Code's side requests that never reach the transcript (WebSearch, the small model that summarises WebFetch pages, session titling).",
+    "phases": [
+      {
+        "phase": "diagnose",
+        "startedAt": "2026-09-28T16:10:28.164Z",
+        "durMs": 1766560,
+        "requests": 10,
+        "input": 20,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 63218,
+        "cacheRead": 653357,
+        "output": 12458,
+        "webSearches": 0,
+        "usd": 2.0508,
+        "tokens": 729053,
+        "toolCalls": 35
+      },
+      {
+        "phase": "maintain",
+        "startedAt": "2026-09-28T16:39:54.724Z",
+        "durMs": 309276,
+        "requests": 5,
+        "input": 10,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 40367,
+        "cacheRead": 548400,
+        "output": 10188,
+        "webSearches": 0,
+        "usd": 1.4539,
+        "tokens": 598965,
+        "toolCalls": 22
+      },
+      {
+        "phase": "restore",
+        "startedAt": "2026-09-28T16:45:04.000Z",
+        "durMs": 397000,
+        "requests": 10,
+        "input": 20,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 54683,
+        "cacheRead": 1609270,
+        "output": 18821,
+        "webSearches": 0,
+        "usd": 2.4372,
+        "tokens": 1682794,
+        "toolCalls": 29
+      },
+      {
+        "phase": "critique",
+        "startedAt": "2026-09-28T16:51:41.000Z",
+        "durMs": 236000,
+        "requests": 11,
+        "input": 22,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 55146,
+        "cacheRead": 2386908,
+        "output": 15671,
+        "webSearches": 0,
+        "usd": 2.4834,
+        "tokens": 2457747,
+        "toolCalls": 31
+      },
+      {
+        "phase": "ship",
+        "startedAt": "2026-09-28T16:55:37.000Z",
+        "durMs": 470261,
+        "requests": 13,
+        "input": 26,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 62815,
+        "cacheRead": 3485973,
+        "output": 24890,
+        "webSearches": 1,
+        "usd": 3.3826,
+        "tokens": 3573704,
+        "toolCalls": 30
+      }
+    ],
+    "totals": {
+      "requests": 49,
+      "input": 98,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 276229,
+      "cacheRead": 8683908,
+      "output": 82028,
+      "webSearches": 1,
+      "usd": 11.8079,
+      "tokens": 9042263,
+      "toolCalls": 147,
+      "webFetches": 2,
+      "wallMs": 3179097
+    }
+  },
+  "day": {
+    "usd": 21.9514,
+    "tokens": 14062556
+  }
+}

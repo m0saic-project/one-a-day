@@ -16,9 +16,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.eventsTemplates = void 0;
 const talk_timer_1 = require("./talk-timer/v1/talk-timer");
+const bird_walk_sightings_1 = require("./bird-walk-sightings/v1/bird-walk-sightings");
 /** Pack `events`, in registry order (mirrors ./registry.ts). */
 exports.eventsTemplates = [
     talk_timer_1.TalkTimerV1,
+    bird_walk_sightings_1.BirdWalkSightingsV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./talk-timer/v1/talk-timer"), exports);
+__exportStar(require("./bird-walk-sightings/v1/bird-walk-sightings"), exports);

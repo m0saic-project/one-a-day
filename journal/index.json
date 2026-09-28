@@ -231,15 +231,17 @@
     "agent": "codex",
     "model": "gpt-6",
     "rosterId": "codex-astra",
-    "status": "no-ship",
-    "templateId": null,
-    "title": null,
+    "status": "shipped",
+    "templateId": "@one-a-day/events/bird-walk-sightings/v1",
+    "title": "2026-09-28 · Bird Walk Sightings",
+    "pack": "events",
     "useCase": "Bird-walk sightings sheets for sanctuary visitors, rendered from one outing's eBird checklist export rows.",
     "tags": [
+      "events",
+      "2026-09-28",
+      "day-009",
       "birding",
-      "ebird",
       "checklist",
-      "sanctuary",
       "print"
     ],
     "sources": [

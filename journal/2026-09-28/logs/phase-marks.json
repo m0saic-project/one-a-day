@@ -1,0 +1,30 @@
+{
+  "note": "Phase boundaries of the maintainer's restore session (Claude Code, claude-fable-5-1), UTC. NOT the day's agent run: Codex's scout, plan and three build calls are in trace.json, written by the runner. token-cost-audit.mjs bins this session's transcript by these marks.",
+  "marks": [
+    {
+      "phase": "diagnose",
+      "at": "2026-09-28T16:10:28.164Z",
+      "what": "the founder asked why day 009 did not ship: the scheduled task's history, the day's journal and render logs, the ACL on the mask cache, how the runner starts Codex, the same error on days 3 and 5"
+    },
+    {
+      "phase": "maintain",
+      "at": "2026-09-28T16:39:54.724Z",
+      "what": "the founder said to fix it: the cache grant was refused by this session's permission classifier and left to the founder; AGENTS.md corrected; maintain commit 699a10d through npm run submit"
+    },
+    {
+      "phase": "restore",
+      "at": "2026-09-28T16:45:04.000Z",
+      "what": "the agent's source replayed from logs/build-1.jsonl (logs/restore-source.mjs), built, fingerprint minted, gate reports compared with the agent's, its 52 tests run, variant a rendered for the first time"
+    },
+    {
+      "phase": "critique",
+      "at": "2026-09-28T16:51:41.000Z",
+      "what": "the stills nobody had seen: three canvases, six tutorial pages, five extra renders the brief's rubric asks for; scored against the critique rubric"
+    },
+    {
+      "phase": "ship",
+      "at": "2026-09-28T16:55:37.000Z",
+      "what": "the runner's finished timeline into WHY, previews, verify, doctor, the re-render from the final source, the journal, the gate, the push"
+    }
+  ]
+}

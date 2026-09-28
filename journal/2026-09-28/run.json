@@ -49,13 +49,27 @@
       "done": false
     }
   },
+  "restore": {
+    "by": "maintainer",
+    "kind": "interactive",
+    "harness": "Claude Code 2.1.283",
+    "model": "claude-fable-5-1",
+    "startedAt": "2026-09-28T16:10:28.164Z",
+    "m0saic": "0.2.2",
+    "why": "the scheduled run (above) ended no-ship at 672085d: all four renders failed with EPERM on ~/m0saic/cache/masks, because the Codex sandbox user may not write there. The founder asked why, then asked for the day to be shipped. `runner` and `phases` are left as the runner wrote them - they are the agent's run, and the agent's build phase did not complete",
+    "did": "replayed the agent's source from logs/build-1.jsonl (logs/restore-source.mjs), rendered it, judged it (40-critique.md), copied the runner's timeline into WHY, ran the ship chain, wrote 50-ship.md and 60-token-costs.md",
+    "trace": "this session is not in trace.json and not on the tutorial's timeline card, which is the agent's run; its tokens and dollars are in 60-token-costs.md, measured from the session transcript",
+    "gate": "pipeline/lib/gate.mjs runGate via logs/gate-run.mjs with --no-push, pushed by hand, so this file keeps the runner's record"
+  },
   "result": {
-    "status": "no-ship",
-    "templateId": null,
-    "reason": "build phase did not complete"
+    "status": "shipped",
+    "templateId": "@one-a-day/events/bird-walk-sightings/v1",
+    "reason": null,
+    "title": "2026-09-28 · Bird Walk Sightings"
   },
   "gate": {
     "reasons": [],
-    "at": "2026-09-28T13:25:32.961Z"
+    "at": "2026-09-28T17:04:50.819Z",
+    "doctorWarnings": 1
   }
 }

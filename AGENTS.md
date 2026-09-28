@@ -222,10 +222,16 @@ orientation; the detail is the journal.
   (`~/m0saic`: the paid license, the pinned toolchain, the trust file). A
   fresh root renders stills with a free-tier mark and then every video render
   — the why-tutorial — hangs in ffmpeg (`FFMPEG_STALLED`). A permission error
-  on `~/m0saic/cache/masks` is transient: wait a minute and rerun; do not
-  redirect the root, and do not point a cache into `journal/`. The runner
-  strips the variable and deletes `journal/<date>/cache/` and
-  `journal/<date>/m0saic-runtime/` before it commits.
+  on `~/m0saic/cache/masks` (`EPERM ... mask-<hash>.png`) is not something
+  to wait out: rerun once, and if the same error comes back it is your
+  sandbox, which may write only inside the workspace, while a new template
+  always needs a mask the cache does not hold yet. No further retry and no
+  template change will clear it. Do not redirect the root, and do not point
+  a cache into `journal/`: quote the error in `30-build.md`, leave the phase
+  unset and stop. Write access to that cache is the machine owner's to
+  grant, not yours. The runner strips the variable and deletes
+  `journal/<date>/cache/` and `journal/<date>/m0saic-runtime/` before it
+  commits.
 - **Render outputs go under `journal/<date>/`, never the repo root.** Always
   pass `-o`; `m0saic make … --validate-only --report` with no `-o` writes
   `out.validate.json` beside `package.json`. The gate deletes stray

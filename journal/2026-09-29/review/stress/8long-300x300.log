@@ -1,0 +1,17 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (12 templates) from .
+Rendering template:
+  template id: @one-a-day/gaming/crossword-grid-card/v1
+  output:      C:/src/m0saic-production/one-a-day/journal/2026-09-29/review/stress/8long-300x300.png
+  Building plan...❌ Error running ffmpeg: Error: placeInsetRects: rects[17] (y=293, h=10) overflows rootH=300
+    at placeInsetRects (C:\src\m0saic\packages\dsl-stdlib\dist\cjs\builders\placeInsetRects.js:169:19)
+    at placeInsetPieces (C:\src\m0saic\packages\template-utils\dist\layout\placeInsetPieces.js:70:53)
+    at Object.render (C:\src\m0saic-production\one-a-day\dist\gaming\crossword-grid-card\v1\crossword-grid-card.js:768:58)
+    at Object.<anonymous> (C:\src\m0saic\packages\template-utils\dist\template\defineMosaicTemplate.js:232:46)
+    at Object.render (C:\src\m0saic\packages\template-utils\dist\template\defineMosaicTemplate.js:232:46)
+    at handleTemplateMake (C:\src\m0saic\packages\cli\dist\index.js:2891:87)
+    at async Command.parseAsync (C:\src\m0saic\node_modules\commander\lib\command.js:1092:5)

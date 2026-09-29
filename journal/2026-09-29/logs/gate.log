@@ -1,0 +1,752 @@
+
+===== 2026-09-29T16:00:06.846Z $ npm run verify
+
+> one-a-day@0.1.0 verify
+> npm run build && npm run lint && npm test && npm run test:contract && npm run check:deps
+
+
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+
+[check-freeze] ✓ freeze (2026-09-29 (m0saic 0.3.0)): 14 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (12 templates, 7 packs, 12 with preview assets)
+[check-registry] ✓ 12 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✓ layout fingerprints: 12 unchanged, 0 missing, 0 changed.
+[check-registry] ✓ 12 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+[check-layout] ✓ 11 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+[check-why] ✓ 10 template(s) explain why they exist (0 warning(s); front door exempt).
+
+> one-a-day@0.1.0 lint
+> eslint .
+
+
+> one-a-day@0.1.0 test
+> jest && node --test tools/check-freeze.test.mjs tools/robot-faces.test.mjs "pipeline/lib/*.test.mjs"
+
+
+Test Suites: 14 passed, 14 total
+Tests:       182 passed, 182 total
+Snapshots:   0 total
+Time:        40.399 s, estimated 44 s
+Ran all test suites.
+TAP version 13
+# Subtest: template id from a new folder; asset key encoding
+ok 1 - template id from a new folder; asset key encoding
+  ---
+  duration_ms: 1.5473
+  ...
+# Subtest: commit messages carry the day, the id, and the Agent/Model trailers
+ok 2 - commit messages carry the day, the id, and the Agent/Model trailers
+  ---
+  duration_ms: 0.6697
+  ...
+# Subtest: stream-log formats Claude and Codex events and drops noise
+ok 3 - stream-log formats Claude and Codex events and drops noise
+  ---
+  duration_ms: 1.5534
+  ...
+# Subtest: a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+ok 4 - a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+  ---
+  duration_ms: 3.2867
+  ...
+# Subtest: protected files and folders are forbidden whatever the status
+ok 5 - protected files and folders are forbidden whatever the status
+  ---
+  duration_ms: 0.8948
+  ...
+# Subtest: editing or deleting an existing template folder is forbidden; a second new folder is counted
+ok 6 - editing or deleting an existing template folder is forbidden; a second new folder is counted
+  ---
+  duration_ms: 0.5652
+  ...
+# Subtest: another day's journal is forbidden, today's is allowed
+ok 7 - another day's journal is forbidden, today's is allowed
+  ---
+  duration_ms: 0.2958
+  ...
+# Subtest: stray render outputs at the repo root are scratch, not a scope violation (day 003)
+ok 8 - stray render outputs at the repo root are scratch, not a scope violation (day 003)
+  ---
+  duration_ms: 0.7822
+  ...
+# Subtest: a tracked file with a scratch-looking name is not scratch
+ok 9 - a tracked file with a scratch-looking name is not scratch
+  ---
+  duration_ms: 0.2829
+  ...
+# Subtest: runtime caches inside the day's journal are scratch; the rest of the journal is allowed
+ok 10 - runtime caches inside the day's journal are scratch; the rest of the journal is allowed
+  ---
+  duration_ms: 0.4906
+  ...
+# Subtest: a kept tree round-trips: the day's work outside the journal, tracked and untracked, binary included, and nothing else
+ok 11 - a kept tree round-trips: the day's work outside the journal, tracked and untracked, binary included, and nothing else
+  ---
+  duration_ms: 1238.9765
+  ...
+# Subtest: a tree with nothing to keep writes no patch
+ok 12 - a tree with nothing to keep writes no patch
+  ---
+  duration_ms: 226.2458
+  ...
+# Subtest: todayIso and isIsoDate
+ok 13 - todayIso and isIsoDate
+  ---
+  duration_ms: 1.913
+  ...
+# Subtest: ensureDay creates the folder once; state and run patches merge
+ok 14 - ensureDay creates the folder once; state and run patches merge
+  ---
+  duration_ms: 20.1078
+  ...
+# Subtest: index rows upsert by date, stay sorted; day numbers count earlier rows
+ok 15 - index rows upsert by date, stay sorted; day numbers count earlier rows
+  ---
+  duration_ms: 11.7876
+  ...
+# Subtest: renderTemplate substitutes known keys and leaves unknown ones
+ok 16 - renderTemplate substitutes known keys and leaves unknown ones
+  ---
+  duration_ms: 0.376
+  ...
+# Subtest: a rejected call is a hit on the five-hour window, with its reset time and the CLI's words
+ok 17 - a rejected call is a hit on the five-hour window, with its reset time and the CLI's words
+  ---
+  duration_ms: 4.3306
+  ...
+# Subtest: an allowed call is seen and not hit; a call that said nothing is not seen
+ok 18 - an allowed call is seen and not hit; a call that said nothing is not seen
+  ---
+  duration_ms: 1.3735
+  ...
+# Subtest: a 429 with no rate_limit_event is still a hit, with no reset time
+ok 19 - a 429 with no rate_limit_event is still a hit, with no reset time
+  ---
+  duration_ms: 0.3926
+  ...
+# Subtest: a seven-day rejection names its window
+ok 20 - a seven-day rejection names its window
+  ---
+  duration_ms: 0.2928
+  ...
+# Subtest: after a five-hour rejection: wait until the reset plus the grace, once or twice, never longer than the cap
+ok 21 - after a five-hour rejection: wait until the reset plus the grace, once or twice, never longer than the cap
+  ---
+  duration_ms: 1.1907
+  ...
+# Subtest: a reset that has already passed is a short wait, not a stop
+ok 22 - a reset that has already passed is a short wait, not a stop
+  ---
+  duration_ms: 0.2949
+  ...
+# Subtest: after a seven-day rejection, or one with no reset time: stop, and say why
+ok 23 - after a seven-day rejection, or one with no reset time: stop, and say why
+  ---
+  duration_ms: 0.6639
+  ...
+# Subtest: before a call: a nearly spent five-hour window is waited out; a rolled one, a healthy one, or an unknown one is not
+ok 24 - before a call: a nearly spent five-hour window is waited out; a rolled one, a healthy one, or an unknown one is not
+  ---
+  duration_ms: 0.5576
+  ...
+# Subtest: config fills in what it leaves out
+ok 25 - config fills in what it leaves out
+  ---
+  duration_ms: 0.6583
+  ...
+# Subtest: the words on the log
+ok 26 - the words on the log
+  ---
+  duration_ms: 0.9363
+  ...
+# Subtest: entries normalize: ids default, disabled sit out, bad rows drop
+ok 27 - entries normalize: ids default, disabled sit out, bad rows drop
+  ---
+  duration_ms: 4.2474
+  ...
+# Subtest: a weightless entry still draws, at weight 1
+ok 28 - a weightless entry still draws, at weight 1
+  ---
+  duration_ms: 0.2124
+  ...
+# Subtest: findRosterEntry pins a slot by id
+ok 29 - findRosterEntry pins a slot by id
+  ---
+  duration_ms: 0.183
+  ...
+# Subtest: lastPickFrom takes the latest dated row that ran an agent
+ok 30 - lastPickFrom takes the latest dated row that ran an agent
+  ---
+  duration_ms: 0.3595
+  ...
+# Subtest: rank: other agent < same agent other slot < the same slot again
+ok 31 - rank: other agent < same agent other slot < the same slot again
+  ---
+  duration_ms: 0.2722
+  ...
+# Subtest: hard mode: yesterday's agent is ordered last but never dropped
+ok 32 - hard mode: yesterday's agent is ordered last but never dropped
+  ---
+  duration_ms: 1.5264
+  ...
+# Subtest: hard mode with one agent installed still yields a full order
+ok 33 - hard mode with one agent installed still yields a full order
+  ---
+  duration_ms: 0.5219
+  ...
+# Subtest: soft mode damps yesterday instead of excluding it — repeats stay possible
+ok 34 - soft mode damps yesterday instead of excluding it — repeats stay possible
+  ---
+  duration_ms: 3.4223
+  ...
+# Subtest: soft mode reports the declared weight, not the damped draw weight
+ok 35 - soft mode reports the declared weight, not the damped draw weight
+  ---
+  duration_ms: 0.8443
+  ...
+# Subtest: avoidRepeat false is a pure weighted draw over every slot
+ok 36 - avoidRepeat false is a pure weighted draw over every slot
+  ---
+  duration_ms: 2.2228
+  ...
+# Subtest: weights bend the draw the way they say
+ok 37 - weights bend the draw the way they say
+  ---
+  duration_ms: 3.6762
+  ...
+# Subtest: the same rng seed draws the same order — a resumed day keeps its agent
+ok 38 - the same rng seed draws the same order — a resumed day keeps its agent
+  ---
+  duration_ms: 0.4755
+  ...
+# Subtest: pickOrder reads the mode off config and the previous day off the index
+ok 39 - pickOrder reads the mode off config and the previous day off the index
+  ---
+  duration_ms: 0.3784
+  ...
+# Subtest: describeEntry says the slot, the model and whether ultracode is on
+ok 40 - describeEntry says the slot, the model and whether ultracode is on
+  ---
+  duration_ms: 0.1613
+  ...
+# Subtest: records Claude stream-json: spans with tool + target + timing, usage, cost, the phase name for a retry
+ok 41 - records Claude stream-json: spans with tool + target + timing, usage, cost, the phase name for a retry
+  ---
+  duration_ms: 4.8349
+  ...
+# Subtest: records Codex --json items and turn usage
+ok 42 - records Codex --json items and turn usage
+  ---
+  duration_ms: 0.6274
+  ...
+# Subtest: appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape
+ok 43 - appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape
+  ---
+  duration_ms: 27.6321
+  ...
+# Subtest: cost: reported by the CLI wins; else an estimate from the dated price table; the timeline says which
+ok 44 - cost: reported by the CLI wins; else an estimate from the dated price table; the timeline says which
+  ---
+  duration_ms: 8.8361
+  ...
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# Subtest: seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+ok 45 - seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+  ---
+  duration_ms: 1.4285
+  ...
+# Subtest: the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+ok 46 - the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+  ---
+  duration_ms: 37.2129
+  ...
+# Subtest: import scan ignores commented-out imports
+ok 47 - import scan ignores commented-out imports
+  ---
+  duration_ms: 0.3013
+  ...
+# Subtest: hashes are CRLF-agnostic
+ok 48 - hashes are CRLF-agnostic
+  ---
+  duration_ms: 0.8071
+  ...
+# Subtest: a mint names its m0saic line and the line each template folder shipped at
+ok 49 - a mint names its m0saic line and the line each template folder shipped at
+  ---
+  duration_ms: 55.9214
+  ...
+# Subtest: checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+ok 50 - checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+  ---
+  duration_ms: 45.1778
+  ...
+# Subtest: judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+ok 51 - judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+  ---
+  duration_ms: 1063.7444
+  ...
+# Subtest: faces are deterministic per (seed, index) and differ across indexes
+ok 52 - faces are deterministic per (seed, index) and differ across indexes
+  ---
+  duration_ms: 3.8249
+  ...
+# Subtest: 33 faces are 33 distinct, well-formed SVG documents
+ok 53 - 33 faces are 33 distinct, well-formed SVG documents
+  ---
+  duration_ms: 4.7437
+  ...
+# Subtest: data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+ok 54 - data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+  ---
+  duration_ms: 0.4746
+  ...
+1..54
+# tests 54
+# suites 0
+# pass 54
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1568.7064
+
+> one-a-day@0.1.0 test:contract
+> node tools/contract-check.mjs
+
+contract-check: clean — 12 template(s), CJS entry, manifest agrees
+
+> one-a-day@0.1.0 check:deps
+> node tools/check-deps.mjs
+
+check-deps: CURRICULUM.md not present yet — skipping curriculum lint
+check-deps: clean (dependencies, imports, packs, curriculum, notices)
+
+===== exit 0 after 63219ms
+
+===== 2026-09-29T16:01:10.067Z $ node tools/check-freeze.mjs
+[check-freeze] ✓ freeze (2026-09-29 (m0saic 0.3.0)): 14 frozen files unchanged, 1 not yet frozen (new work).
+
+===== exit 0 after 80ms
+
+===== 2026-09-29T16:01:10.149Z $ m0saic doctor . --json
+{
+  "ok": true,
+  "repo": {
+    "path": "C:\\src\\m0saic-production\\one-a-day",
+    "id": "@one-a-day",
+    "displayName": "One a Day",
+    "templates": 12
+  },
+  "mode": "gate",
+  "loadDiagnostics": [],
+  "rendered": 12,
+  "skipped": [],
+  "errors": [],
+  "warnings": [
+    {
+      "templateId": "@one-a-day/social/episode-audiogram/v1",
+      "convention": "bindingsCover",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" (default 30, drawn as \"30\") is drawn as text but no source binds it — wrap the source that shows it: bindProp(src, \"clipSec\")."
+        }
+      ],
+      "fix": "a prop drawn as text should be bound to the rect that shows it (bindProp(src, \"<key>\")) so Make's double-click edits it in place. Bind the rect that SHOWS the prop, even when its value is empty."
+    },
+    {
+      "templateId": "@one-a-day/events/talk-timer/v1",
+      "convention": "bindingsCover",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "finalSec",
+          "detail": "\"finalSec\" (default 30, drawn as \"30\") is drawn as text but no source binds it — wrap the source that shows it: bindProp(src, \"finalSec\")."
+        }
+      ],
+      "fix": "a prop drawn as text should be bound to the rect that shows it (bindProp(src, \"<key>\")) so Make's double-click edits it in place. Bind the rect that SHOWS the prop, even when its value is empty."
+    },
+    {
+      "templateId": "@one-a-day/gaming/speedrun-pb-recap/v1",
+      "convention": "bindingsCover",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" (default 20, drawn as \"20\") is drawn as text but no source binds it — wrap the source that shows it: bindProp(src, \"clipSec\")."
+        }
+      ],
+      "fix": "a prop drawn as text should be bound to the rect that shows it (bindProp(src, \"<key>\")) so Make's double-click edits it in place. Bind the rect that SHOWS the prop, even when its value is empty."
+    },
+    {
+      "templateId": "@one-a-day/sports/powerlifting-meet-recap/v1",
+      "convention": "bindingsCover",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" (default 12, drawn as \"12\") is drawn as text, but every rect that shows it already binds \"details\" — a composite line. Add this prop to that rect: bindProps(src, [… , { propKey: \"clipSec\" }]), or split the line so each prop has its own rect."
+        }
+      ],
+      "fix": "a prop drawn as text should be bound to the rect that shows it (bindProp(src, \"<key>\")) so Make's double-click edits it in place. Bind the rect that SHOWS the prop, even when its value is empty."
+    }
+  ],
+  "lagging": [
+    {
+      "templateId": "@one-a-day/harness/agent-timeline/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "phases",
+          "detail": "\"phases\" can carry a leaf handle but nothing binds it — bind the rect that shows it (bindProp(src, \"phases\")), or declare why it has none: bindings.unbound = { \"phases\": \"<reason>\" }."
+        },
+        {
+          "key": "accent",
+          "detail": "\"accent\" can carry a color handle but nothing binds it — bind the rect that shows it (bindProp(src, \"accent\")), or declare why it has none: bindings.unbound = { \"accent\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/dev/og-card/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "background",
+          "detail": "\"background\" can carry a color handle but nothing binds it — bind the rect that shows it (bindProp(src, \"background\")), or declare why it has none: bindings.unbound = { \"background\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/social/testimonial-proof-card/v1",
+      "convention": "canvasFill",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "source[0]",
+          "detail": "source 0 is a static #e8eee9 fill covering the whole 1080×1080 canvas — set document.backgroundColor instead and drop the source. A base rect is a click target over everything: in Make it is selected whenever the pointer is not on a smaller tile. (A template whose SUBJECT is that rect declares it: canvas.baseRect = \"<why>\". A template that must ship it because it is composed INTO another uses defaultProps.useNestedBackgroundColor = true instead.)"
+        }
+      ],
+      "fix": "fill the canvas with document.backgroundColor, never a full-canvas colour rect. A base rect is a click target that covers everything — it gets selected in Make any time the pointer is not on a smaller tile — and the document background does the same job with no rect at all. Only a STATIC, fully opaque, unshaped fill counts: a curtain wipe (overlay.enable / window), a scrim (overlay.alpha), a masked shape and a rounded card are all legitimate and never flagged. Two declared exceptions, and they mean different things: canvas.baseRect = \"<why>\" is the general one (the rect IS the subject — a lesson about full-rect nodes, a tutorial surface), and defaultProps.useNestedBackgroundColor = true is the narrow one (this template is COMPOSED INTO another, whose slot its own backgroundColor cannot fill). An empty baseRect reason is refused."
+    },
+    {
+      "templateId": "@one-a-day/social/episode-audiogram/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "wave",
+          "detail": "\"wave\" can carry a number element handle but nothing binds it — bind the rect that shows it (bindProp(src, \"wave\")), or declare why it has none: bindings.unbound = { \"wave\": \"<reason>\" }."
+        },
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"clipSec\")), or declare why it has none: bindings.unbound = { \"clipSec\": \"<reason>\" }."
+        },
+        {
+          "key": "audioSrc",
+          "detail": "\"audioSrc\" can carry a media element handle but nothing binds it — bind the rect that shows it (bindProp(src, \"audioSrc\")), or declare why it has none: bindings.unbound = { \"audioSrc\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/events/talk-timer/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "seconds",
+          "detail": "\"seconds\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"seconds\")), or declare why it has none: bindings.unbound = { \"seconds\": \"<reason>\" }."
+        },
+        {
+          "key": "warnSec",
+          "detail": "\"warnSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"warnSec\")), or declare why it has none: bindings.unbound = { \"warnSec\": \"<reason>\" }."
+        },
+        {
+          "key": "finalSec",
+          "detail": "\"finalSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"finalSec\")), or declare why it has none: bindings.unbound = { \"finalSec\": \"<reason>\" }."
+        },
+        {
+          "key": "holdSec",
+          "detail": "\"holdSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"holdSec\")), or declare why it has none: bindings.unbound = { \"holdSec\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/gaming/speedrun-pb-recap/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "lss",
+          "detail": "\"lss\" can carry a string handle but nothing binds it — bind the rect that shows it (bindProp(src, \"lss\")), or declare why it has none: bindings.unbound = { \"lss\": \"<reason>\" }."
+        },
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"clipSec\")), or declare why it has none: bindings.unbound = { \"clipSec\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/sports/powerlifting-meet-recap/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "csv",
+          "detail": "\"csv\" can carry a string handle but nothing binds it — bind the rect that shows it (bindProp(src, \"csv\")), or declare why it has none: bindings.unbound = { \"csv\": \"<reason>\" }."
+        },
+        {
+          "key": "row",
+          "detail": "\"row\" can carry a string handle but nothing binds it — bind the rect that shows it (bindProp(src, \"row\")), or declare why it has none: bindings.unbound = { \"row\": \"<reason>\" }."
+        },
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"clipSec\")), or declare why it has none: bindings.unbound = { \"clipSec\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    }
+  ],
+  "notes": [
+    {
+      "templateId": "@one-a-day/dev/og-card/v1",
+      "note": "latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it"
+    }
+  ],
+  "fingerprints": {
+    "srcRoot": "src",
+    "fallbackDir": "layout-fingerprints",
+    "present": true,
+    "unchanged": 12,
+    "missing": 0,
+    "changed": 0
+  },
+  "conventions": {
+    "meets": "0.2.0",
+    "behind": [
+      {
+        "since": "0.3.0",
+        "conventions": [
+          "bindingsDeclared",
+          "canvasFill"
+        ]
+      }
+    ],
+    "byTemplate": [
+      {
+        "templateId": "@one-a-day/basics/hello-world/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.2.2",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/harness/agent-timeline/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/dev/og-card/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/dev/bench-delta/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.2.2",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/dev/app-store-screenshot-frame/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.2.2",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/social/testimonial-proof-card/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "canvasFill"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/social/episode-audiogram/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/events/talk-timer/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/events/bird-walk-sightings/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.2.2",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/gaming/speedrun-pb-recap/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/gaming/crossword-grid-card/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": null,
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/sports/powerlifting-meet-recap/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      }
+    ],
+    "shippedAt": "0.3.0",
+    "lagOnly": true
+  }
+}
+
+===== exit 0 after 3301ms
+
+===== 2026-09-29T16:01:13.453Z $ m0saic make @one-a-day/gaming/crossword-grid-card/v1 --template-repo . --validate-only --quiet
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/gaming/crossword-grid-card/v1
+  output:      out.png
+  Building plan... done (0.2s)
+  plan built with size: 1080 x 1080
+  duration:      2s (60 frames @ 30fps)
+
+===== exit 0 after 1374ms
+
+===== 2026-09-29T16:01:14.831Z $ m0saic make @one-a-day/gaming/crossword-grid-card/v1 --template-repo . --tutorial --validate-only --quiet
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Rendering template:
+  template id: @one-a-day/gaming/crossword-grid-card/v1
+  output:      out.mp4
+  Building plan... done (0.8s)
+  plan built with size: 1080 x 1080
+  duration:      59s (1770 frames @ 30fps)
+
+===== exit 0 after 2414ms
+
+===== 2026-09-29T16:01:17.251Z $ node tools/check-freeze.mjs --update --tag 2026-09-29
+[check-freeze] ✎ minted frozen.manifest.json: 15 frozen files, 12 template folder(s), at 2026-09-29 (m0saic 0.3.0) (dd76bf4) — commit it.
+
+===== exit 0 after 1302ms

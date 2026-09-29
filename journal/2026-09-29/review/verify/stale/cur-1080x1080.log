@@ -1,0 +1,12 @@
+Rendering .mosaic:
+  kind:       mosaic_document
+  definition: C:\src\m0saic-production\one-a-day\journal\2026-09-29\review\verify\stale\cur-1080x1080.mosaic
+  output:     cur-1080x1080.png
+  m0 string:         (10,135 chars, too large to print)
+  source count:      38
+  children keys:     []
+  plan built with size: 1080 x 1080
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~2 s
+  Rendering in ffmpeg [0/1 |   0% | 0:00 elapsed | ETA 0:03]  Rendering in ffmpeg [1/1 | 100% | 0:00 elapsed | ETA 0:03].    Rendering in ffmpeg [1/1 | 100% | 0:00 elapsed | ETA 0:00 | 0.17x]... done (478 ms)
+✅ Render complete: cur-1080x1080.png

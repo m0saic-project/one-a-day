@@ -1,6 +1,6 @@
 {
   "templateId": "@one-a-day/gaming/crossword-grid-card/v1",
-  "at": "2026-09-29T13:49:36.933Z",
+  "at": "2026-09-29T15:32:18.969Z",
   "props": null,
   "build": {
     "code": 0
@@ -14,7 +14,7 @@
       "file": "renders\\landscape.png",
       "exitCode": 0,
       "degraded": false,
-      "bytes": 163245,
+      "bytes": 161998,
       "probe": {
         "width": 1920,
         "height": 1080,
@@ -28,7 +28,7 @@
       "file": "renders\\portrait.png",
       "exitCode": 0,
       "degraded": false,
-      "bytes": 164633,
+      "bytes": 163208,
       "probe": {
         "width": 1080,
         "height": 1920,
@@ -42,7 +42,7 @@
       "file": "renders\\square.png",
       "exitCode": 0,
       "degraded": false,
-      "bytes": 117922,
+      "bytes": 118217,
       "probe": {
         "width": 1080,
         "height": 1080,
@@ -111,7 +111,7 @@
     "file": "renders\\tutorial.mp4",
     "exitCode": 0,
     "degraded": false,
-    "bytes": 693313,
+    "bytes": 711785,
     "probe": {
       "width": 1280,
       "height": 720,

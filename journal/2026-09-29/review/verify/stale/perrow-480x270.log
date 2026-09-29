@@ -1,0 +1,13 @@
+Rendering .mosaic:
+  kind:       mosaic_document
+  definition: C:\src\m0saic-production\one-a-day\journal\2026-09-29\review\verify\stale\perrow-480x270.mosaic
+  output:     perrow-480x270.png
+  m0 string:         (13,312 chars, too large to print)
+  source count:      56
+  children keys:     []
+  plan built with size: 480 x 270
+  duration:      2s (60 frames @ 30fps)
+  [warn] OVERLAY_CHAIN_DEEP: Mosaic node "root" emits an overlay chain 34 deep (threshold 20) with inline masks riding it. Past ~25 nested overlays ffmpeg SILENTLY degrades inline masks — shapes collapse to their bounding box, glyph masks tofu; no error is raised. Tiles stayed off the grid sheet because their rects overlap. Consider splitting the layout into nested sub-mosaics, or removing per-cell blend/enable/opacity/position expressions so tiles can lower onto the xstack sheet.
+  Estimated render time: ~4 s
+  Rendering in ffmpeg [0/1 |   0% | 0:00 elapsed | ETA 0:04]  Rendering in ffmpeg [1/1 | 100% | 0:00 elapsed | ETA 0:04].    Rendering in ffmpeg [1/1 | 100% | 0:01 elapsed | ETA 0:00 | 0.19x]... done (586 ms)
+✅ Render complete: perrow-480x270.png

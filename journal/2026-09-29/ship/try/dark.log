@@ -1,0 +1,17 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (12 templates) from .
+Rendering template:
+  template id: @one-a-day/gaming/crossword-grid-card/v1
+  output:      journal/2026-09-29/ship/try/dark.png
+  Building plan...❌ Error running ffmpeg: Error: @one-a-day/gaming/crossword-grid-card/v1: themeColor #223355 is too dark for the ink letters over it (1.4:1, needs 4.5:1); pick a lighter highlighter colour.
+    at fail (C:\src\m0saic-production\one-a-day\dist\gaming\crossword-grid-card\v1\crossword-grid-card.js:107:11)
+    at normalizeCrossword (C:\src\m0saic-production\one-a-day\dist\gaming\crossword-grid-card\v1\crossword-grid-card.js:261:9)
+    at Object.render (C:\src\m0saic-production\one-a-day\dist\gaming\crossword-grid-card\v1\crossword-grid-card.js:830:15)
+    at Object.<anonymous> (C:\src\m0saic\packages\template-utils\dist\template\defineMosaicTemplate.js:232:46)
+    at Object.render (C:\src\m0saic\packages\template-utils\dist\template\defineMosaicTemplate.js:232:46)
+    at handleTemplateMake (C:\src\m0saic\packages\cli\dist\index.js:2891:87)
+    at async Command.parseAsync (C:\src\m0saic\node_modules\commander\lib\command.js:1092:5)

@@ -1,0 +1,42 @@
+
+===== 2026-09-29T14:38:52.087Z $ npm run new -- gaming/crossword-grid-card --title Crossword Grid Card
+
+> one-a-day@0.1.0 new
+> node tools/new-template.mjs gaming/crossword-grid-card --title Crossword Grid Card
+
+new-template: @one-a-day/gaming/crossword-grid-card/v1  (2026-09-29 · Crossword Grid Card)
+  wrote  src/gaming/crossword-grid-card/v1/crossword-grid-card.ts
+  wrote  src/gaming/crossword-grid-card/v1/crossword-grid-card.test.ts
+  wrote  src/gaming/registry.ts
+  wrote  src/gaming/index.ts
+
+Next:
+  npm run build && npm run previews && npm run build && npm run fingerprints:update && npm run verify
+  then edit src/gaming/crossword-grid-card/v1/crossword-grid-card.ts — the header comment is the lesson; crossword-grid-card.layout.m0 beside it is the layout fingerprint;
+  fill WHY (the why-tutorial: who, the observed problem, its sources, the solution, how to use it) — the build refuses a [fill me].
+
+===== exit 0 after 362ms
+
+===== 2026-09-29T14:38:52.451Z $ npm run build
+
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+
+[check-freeze] ✓ freeze (2026-09-29 (m0saic 0.3.0)): 14 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (12 templates, 7 packs, 11 with preview assets)
+[check-registry] ✓ 12 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✓ layout fingerprints: 12 unchanged, 0 missing, 0 changed.
+[check-registry] ✓ 12 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+[check-layout] ✓ 11 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+[check-why] ✓ 10 template(s) explain why they exist (0 warning(s); front door exempt).
+
+===== exit 0 after 15281ms
+
+===== 2026-09-29T14:39:11.297Z $ git apply --check --binary C:\src\m0saic-production\one-a-day\journal\2026-09-29\limited\tree.patch
+
+===== exit 0 after 52ms

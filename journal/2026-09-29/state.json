@@ -24,6 +24,16 @@
   "title": "Crossword Grid Card",
   "plan": "done",
   "scaffolded": true,
-  "decision": "no-ship",
-  "noShipReason": "build phase did not complete"
+  "decision": "ship",
+  "noShipReason": null,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
 }

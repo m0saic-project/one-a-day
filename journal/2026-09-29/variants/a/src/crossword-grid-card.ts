@@ -1,7 +1,7 @@
 import type { MosaicColor, MosaicDocument, MosaicEngineContext, MosaicSource } from "@m0saic/types";
 import { asTemplateId } from "@m0saic/types";
 import { toM0String } from "@m0saic/dsl-stdlib";
-import { bindProp, defineMosaicTemplate, definePropsSchema, makeColorTile, placeInsetPieces, tag } from "@m0saic/template-utils";
+import { bindProp, bindPropRange, bindProps, defineMosaicTemplate, definePropsSchema, makeColorTile, placeInsetPieces, tag } from "@m0saic/template-utils";
 import type { LayoutConstraint, RelationalConstraint } from "@m0saic/template-utils";
 import { textFitsMeasured, withLayoutIntent } from "../../../_shared/layout";
 import { budget, textCell, widthOf } from "../../../_shared/text";
@@ -18,9 +18,11 @@ import type { WhySpec } from "../../../_shared/why";
  * ONE CONCEPT: a lattice this big is drawn in LAYERS, not cells. The board is
  * a paper tile, a theme tile and an ink tile masked to "board minus paper
  * cells" (border, rules and blocks in one path), a ring tile, and one
- * multi-layer text source per row for the letters and one for the numbers
- * (each glyph placed by a pixel xExpr/yExpr). A 25x25 is ~60 frames; a
- * per-cell grid would be 1,500+, past the engine's 400-frame budget.
+ * multi-layer text source for all the letters and one for all the numbers
+ * (each glyph placed by a pixel xExpr/yExpr). Any size is under 40 frames and
+ * about 8 overlays deep. Per-cell grids would be 1,500+ frames at 25x25, past
+ * the engine's 400-frame budget; a text source per row stacks past the ~25
+ * overlays where the engine silently degrades inline masks.
  *
  * The rule that bites: equal cells come from ONE integer lattice,
  * `X_k = round(x0 + k * pitch)`, that every layer reads - the mask holes, the
@@ -230,6 +232,16 @@ function ascii(raw: unknown, field: string, max: number): string {
   return s;
 }
 
+/** WCAG contrast ratio of two #rrggbb colours. */
+function contrast(a: string, b: string): number {
+  const lum = (hex: string) => {
+    const [r, g, bl] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+    return 0.2126 * r + 0.7152 * g + 0.0722 * bl;
+  };
+  const [hi, lo] = [lum(a), lum(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+}
+
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 /** Weekday by calendar arithmetic (Sakamoto) - no clock, no Date. */
@@ -278,10 +290,16 @@ export function normalizeCrossword(props: CrosswordGridCardProps) {
   if (y < 1 || m < 1 || m > 12 || d < 1 || d > days[m - 1]) fail("date", `${p.date} is not a calendar date.`);
   if (typeof p.solved !== "boolean") fail("solved", "must be true or false.");
   if (typeof p.themeColor !== "string" || !HEX.test(p.themeColor)) fail("themeColor", `${JSON.stringify(p.themeColor)} must be #rrggbb.`);
+  const inkOnTheme = contrast(INK, p.themeColor);
+  if (inkOnTheme < 4.5) fail("themeColor", `${p.themeColor} is too dark for the ink letters over it (${inkOnTheme.toFixed(1)}:1, needs 4.5:1); pick a lighter highlighter colour.`);
   if (typeof p.debugLayout !== "boolean") fail("debugLayout", "must be true or false.");
 
-  const metaRest = `${weekday(y, m, d)} ${m}/${d}/${String(y % 100).padStart(2, "0")} | ${pz.cols}x${pz.rows} | ${p.solved ? "solution" : "puzzle"}`;
-  return { ...p, pz, numbers, entries, themes, circles, title, author, publication, meta: `${publication} | ${metaRest}`, metaRest, themeColor: p.themeColor as MosaicColor };
+  // Where each theme id sits in the RAW prop string, so its list cell can bind that token.
+  const themeSpans = [...(p.themeEntries as string).matchAll(/[^\s,]+/g)].map((t) => ({ start: t.index ?? 0, end: (t.index ?? 0) + t[0].length }));
+  const metaDate = `${weekday(y, m, d)} ${m}/${d}/${String(y % 100).padStart(2, "0")}`;
+  const metaTail = `${pz.cols}x${pz.rows} | ${p.solved ? "solution" : "puzzle"}`;
+  const metaRest = `${metaDate} | ${metaTail}`;
+  return { ...p, pz, numbers, entries, themes, themeSpans, circles, title, author, publication, meta: `${publication} | ${metaRest}`, metaRest, metaDate, metaTail, themeColor: p.themeColor as MosaicColor };
 }
 
 export type CrosswordNormalized = ReturnType<typeof normalizeCrossword>;
@@ -312,7 +330,8 @@ function wrap(text: string, px: number, maxW: number, bold: boolean): string[] {
   return lines;
 }
 
-export type CrosswordTextBox = { label: string; rect: CrosswordRect; text: string; px: number; width: number; bold: boolean; color: MosaicColor; hAlign: "left" | "right"; vAlign: "top" | "middle" | "bottom"; bind?: "title" | "author" | "publication" };
+/** A text cell; `bind` names the prop it shows, `token` the span of the raw prop string it shows (a theme id). */
+export type CrosswordTextBox = { label: string; rect: CrosswordRect; text: string; px: number; width: number; bold: boolean; color: MosaicColor; hAlign: "left" | "right"; vAlign: "top" | "middle" | "bottom"; bind?: "title" | "author" | "publication" | "date" | "themeEntries"; token?: { start: number; end: number } };
 
 /**
  * The largest size (maxPx down to floorPx, then on down to 6 so the contract
@@ -339,6 +358,10 @@ function fit(text: string, w: number, maxH: number, maxPx: number, floorPx: numb
   const lines = wrap(text, 6, budget(w), bold);
   return { lines, px: 6, width: Math.max(...lines.map((l) => widthOf(l, 6, bold))) };
 }
+
+/** One cell of the caption line: its text, its offset from the line's origin, its box width and its measured ink width. */
+type MetaCell = { text: string; bold: boolean; dx: number; dy: number; w: number; width: number };
+type MetaFit = { px: number; height: number; cells: [MetaCell, MetaCell, MetaCell] };
 
 /** A lead cell and a tail cell sharing one size: side by side (the tail may wrap in its own column), or stacked. */
 type Pair = { px: number; stacked: boolean; tail: string[]; leadW: number; tailX: number; height: number };
@@ -458,8 +481,46 @@ export function layoutCrosswordCard(p: CrosswordNormalized, W: number, H: number
   };
   const byline = (P: Pair, x: number, y: number, w: number) => pair(P, x, y, w, { label: "byline-by", text: "by", color: DIM, bold: false }, { label: "byline", color: INK, bind: "author" });
   const bylineFit = (w: number, maxH: number, maxPx: number) => pairFit("by", false, p.author, p.author, w, maxH, maxPx, floorPx, ["line", "wrap"]);
-  const meta = (P: Pair, x: number, y: number, w: number) => pair(P, x, y, w, { label: "meta-publication", text: p.publication, color: INK, bold: true, bind: "publication" }, { label: "meta", color: DIM });
-  const metaFit = (w: number, maxH: number, maxPx: number) => pairFit(p.publication, true, `| ${p.metaRest}`, p.metaRest, w, maxH, maxPx, floorPx, ["line", "stack"]);
+  /**
+   * The caption line as three cells - publication, date, the rest - so the two
+   * that show a prop are each its own handle. One line, or the date and the
+   * rest on a second line under the publication; the largest size that fits.
+   */
+  const metaFit = (w: number, maxH: number, maxPx: number): MetaFit => {
+    const at = (px: number, stacked: boolean, force: boolean): MetaFit | null => {
+      const lh = blockH(px, 1);
+      const date = stacked ? p.metaDate : `| ${p.metaDate}`, tail = `| ${p.metaTail}`;
+      const pubW = widthOf(p.publication, px, true), dateW = widthOf(date, px), tailW = widthOf(tail, px);
+      // Fit on the solved card's tail so the teaser's shorter "puzzle" lands at the same size and place.
+      const fitW = Math.max(tailW, widthOf(`| ${p.pz.cols}x${p.pz.rows} | solution`, px));
+      // The next cell starts one space after this one's ink, as the brief's single-spaced line reads;
+      // the boxes overlap by the fit's slack, which is transparent.
+      const step = (segW: number) => Math.round(segW + widthOf(" ", px));
+      const x1 = stacked ? 0 : step(pubW), dy = stacked ? lh : 0, x2 = x1 + step(dateW);
+      const height = stacked ? 2 * lh : lh;
+      if (!force && (pubW > budget(w) || w - x2 < 2 * px || fitW > budget(w - x2) || height > maxH)) return null;
+      return {
+        px,
+        height,
+        cells: [
+          { text: p.publication, bold: true, dx: 0, dy: 0, w: leadBoxW(pubW), width: pubW },
+          { text: date, bold: false, dx: x1, dy, w: leadBoxW(dateW), width: dateW },
+          { text: tail, bold: false, dx: x2, dy, w: Math.max(1, w - x2), width: tailW },
+        ],
+      };
+    };
+    for (const [lo, hi] of [[floorPx, Math.max(floorPx, Math.floor(maxPx))], [6, floorPx - 1]]) {
+      for (const stacked of [false, true]) for (let px = hi; px >= lo; px--) { const hit = at(px, stacked, false); if (hit) return hit; }
+    }
+    return at(6, true, true) as MetaFit;
+  };
+  const meta = (M: MetaFit, x: number, y: number) => {
+    const cell = (c: MetaCell, label: string, color: MosaicColor, bind?: CrosswordTextBox["bind"]) =>
+      texts.push({ label, rect: rect(x + c.dx, y + c.dy, c.w, blockH(M.px, 1)), text: c.text, px: M.px, width: c.width, bold: c.bold, color, hAlign: "left", vAlign: "top", ...(bind ? { bind } : {}) });
+    cell(M.cells[0], "meta-publication", INK, "publication");
+    cell(M.cells[1], "meta-date", DIM, "date");
+    cell(M.cells[2], "meta", DIM);
+  };
 
   /** The theme list as one block: heading + lines, `perCol` lines per sub-column. Returns its height. */
   const themeBlock = (x: number, y: number, w: number, h: number, maxPx: number, subCols: number, dryRun: boolean): number => {
@@ -476,6 +537,8 @@ export function layoutCrosswordCard(p: CrosswordNormalized, W: number, H: number
     while (px > 6 && (lineW(px) > budget(colW) || blockH(headPx(px), 1) + Math.round(px * 0.35) + perCol * pitchOf(px) > h)) px--;
     const hp = headPx(px), pitch = pitchOf(px);
     const total = blockH(hp, 1) + Math.round(px * 0.35) + perCol * pitch;
+    // Too small a canvas for the list even at 6 px: drop it (the tint still marks the entries) rather than overflow.
+    if (total > h) return 0;
     if (dryRun) return total;
     place("theme-heading", "THEME ANSWERS", x, y, w, blockH(hp, 1), hp, Math.min(hp, floorPx), [1], { bold: true, color: DIM });
     const idW = Math.max(...p.themes.map((u) => widthOf(idText(u), px)));
@@ -486,7 +549,7 @@ export function layoutCrosswordCard(p: CrosswordNormalized, W: number, H: number
       const sw = Math.round(px * 0.75);
       const swatch = rect(cx, ry + (pitch - sw) / 2, sw, sw);
       const idX = cx + sw + Math.round(px * 0.5);
-      const idBox: CrosswordTextBox = { label: `theme-id-${i}`, rect: rect(idX, ry, Math.ceil((idW + 3) / 0.94) + 1, pitch), text: t.id, px, width: widthOf(t.id, px), bold: false, color: DIM, hAlign: "left", vAlign: "middle" };
+      const idBox: CrosswordTextBox = { label: `theme-id-${i}`, rect: rect(idX, ry, Math.ceil((idW + 3) / 0.94) + 1, pitch), text: t.id, px, width: widthOf(t.id, px), bold: false, color: DIM, hAlign: "left", vAlign: "middle", bind: "themeEntries", token: p.themeSpans[i] };
       const ansX = idX + idW + Math.round(px * 0.6);
       const ansBox: CrosswordTextBox = { label: `theme-${i}`, rect: rect(ansX, ry, cx + colW - ansX, pitch), text: t.answer, px, width: widthOf(t.answer, px, true), bold: true, color: INK, hAlign: "left", vAlign: "middle" };
       texts.push(idBox, ansBox);
@@ -504,13 +567,17 @@ export function layoutCrosswordCard(p: CrosswordNormalized, W: number, H: number
     const top = Math.min(board.ink.y, margin + (H - 2 * margin) * 0.04), bottom = H - top;
     panel = rect(px0, top, W - margin - px0, bottom - top);
     const w = panel.w, x = panel.x;
-    const t = place("title", p.title, x, panel.y, w, panel.h * 0.3, S * 0.075, titleFloor, [2], { bold: true, vAlign: "top", bind: "title" });
+    const tf = fit(p.title, w, panel.h * 0.3, S * 0.075, titleFloor, [2], true);
     const bP = bylineFit(w, panel.h * 0.12, S * 0.036);
-    const by = t.rect.y + t.rect.h + Math.round(S * 0.008);
-    byline(bP, x, by, w);
     const mP = metaFit(w, panel.h * 0.1, S * 0.028);
     const metaH = mP.height;
-    meta(mP, x, panel.y + panel.h - metaH, w);
+    // No theme list (the PROP is empty, not merely hidden): the title block centres in the space above the caption line.
+    const groupH = blockH(tf.px, tf.lines.length) + Math.round(S * 0.008) + bP.height;
+    const ty = p.themes.length > 0 ? panel.y : panel.y + Math.max(0, (panel.h - metaH - gutter / 2 - groupH) / 2);
+    const t = place("title", p.title, x, ty, w, panel.h * 0.3, S * 0.075, titleFloor, [2], { bold: true, vAlign: "top", bind: "title" });
+    const by = t.rect.y + t.rect.h + Math.round(S * 0.008);
+    byline(bP, x, by, w);
+    meta(mP, x, panel.y + panel.h - metaH);
     // The list sits centred in the space between the title block and the caption line.
     const free0 = by + bP.height + gutter / 2, free1 = panel.y + panel.h - metaH - gutter / 2;
     const listH = themeBlock(x, free0, w, free1 - free0, S * 0.038, 1, true);
@@ -518,7 +585,7 @@ export function layoutCrosswordCard(p: CrosswordNormalized, W: number, H: number
   } else if (mode === "portrait") {
     const s = boardSizing(cols, rows, W - 2 * margin, (H - 2 * margin - 2 * gutter) * 0.6);
     const rest = H - 2 * margin - 2 * gutter - s.inkH;
-    const headH = Math.round(rest * 0.36);
+    const headH = Math.round(rest * (p.themes.length > 0 ? 0.36 : 0.5));
     board = boardAt(cols, rows, s, (W - s.inkW) / 2, margin + headH + gutter);
     panel = rect(margin, margin, W - 2 * margin, H - 2 * margin);
     const x = margin, w = W - 2 * margin;
@@ -534,16 +601,20 @@ export function layoutCrosswordCard(p: CrosswordNormalized, W: number, H: number
     const footY = board.ink.y + board.ink.h + gutter, footB = H - margin;
     const mP = metaFit(w, (footB - footY) * 0.2, S * 0.032);
     const metaH = mP.height;
-    meta(mP, x, footB - metaH, w);
+    meta(mP, x, p.themes.length > 0 ? footB - metaH : footY + Math.max(0, (footB - footY - metaH) / 2));
     const free1 = footB - metaH - gutter / 2;
     const listH = themeBlock(x, footY, w, free1 - footY, S * 0.042, 1, true);
     themeBlock(x, footY + Math.max(0, (free1 - footY - listH) / 2), w, free1 - footY, S * 0.042, 1, false);
   } else {
-    const s = boardSizing(cols, rows, W - 2 * margin, H * 0.72);
+    // The column split follows the PROP, not solved: the teaser keeps the solved card's geometry ("nothing else moves").
+    const leftW = (W - 2 * margin) * (p.themes.length > 0 ? 0.54 : 1);
+    // A title too long for one line at S/20 wraps to two, and the board gives up that second line's height.
+    const tp = Math.ceil(S / 20);
+    const twoLines = wrap(p.title, tp, budget(leftW), true).length > 1;
+    const s = boardSizing(cols, rows, W - 2 * margin, H * 0.72 - (twoLines ? blockH(tp, 2) - blockH(tp, 1) : 0));
     board = boardAt(cols, rows, s, (W - s.inkW) / 2, margin);
     const y0 = board.ink.y + board.ink.h + gutter;
     panel = rect(margin, y0, W - 2 * margin, H - margin - y0);
-    const leftW = panel.w * (showThemes ? 0.54 : 1);
     const x = panel.x;
     const mP = metaFit(leftW, panel.h * 0.3, S * 0.022);
     const metaH = mP.height;
@@ -553,7 +624,7 @@ export function layoutCrosswordCard(p: CrosswordNormalized, W: number, H: number
     const titleMax = panel.h - metaH - bylineH - 2 * gap;
     const t = place("title", p.title, x, panel.y, leftW, titleMax, S * 0.058, titleFloor, [2], { bold: true, vAlign: "top", bind: "title" });
     byline(bP, x, t.rect.y + t.rect.h + gap, leftW);
-    meta(mP, x, panel.y + panel.h - metaH, leftW);
+    meta(mP, x, panel.y + panel.h - metaH);
     if (showThemes) {
       const rx = panel.x + panel.w * 0.58, rw = panel.x + panel.w - rx;
       themeBlock(rx, panel.y, rw, panel.h, S * 0.03, p.themes.length > 4 ? 2 : 1, false);
@@ -566,7 +637,7 @@ export function layoutCrosswordCard(p: CrosswordNormalized, W: number, H: number
 
 const num = (v: number) => String(Math.round(v * 100) / 100);
 
-/** One svg text source holding many glyphs, each placed by a pixel offset inside `band`. */
+/** One svg text source holding many glyphs, each placed by a pixel offset inside its rect. */
 function glyphRow(label: string, glyphs: Array<{ text: string; x: number; y: number }>, px: number, bold: boolean): MosaicSource {
   return {
     type: "text",
@@ -613,7 +684,9 @@ export function drawCrosswordCard(p: CrosswordNormalized, W: number, H: number):
   }
   // 3. ink: the board minus every paper cell = the border, the rules and the blocks in one path.
   const holes = pz.cells.map((ch, i) => (ch === null ? "" : (() => { const q = local(B.hole(i)); return `M${q.x} ${q.y}v${q.h}h${q.w}v${-q.h}z`; })())).join("");
-  add(ink, 3, masked(INK, ink, `M0 0H${ink.w}V${ink.h}H0Z${holes}`, "board"));
+  // The board is the puzzle's handle: a double-click opens the grid first, then what marks it.
+  const marks = p.solved ? [{ propKey: "grid" }, { propKey: "themeEntries" }, { propKey: "circles" }, { propKey: "themeColor" }] : [{ propKey: "grid" }, { propKey: "circles" }];
+  add(ink, 3, bindProps(masked(INK, ink, `M0 0H${ink.w}V${ink.h}H0Z${holes}`, "board"), marks));
   // 4. rings, over the tint and under the letter.
   if (p.circles.length > 0) {
     const path = p.circles.map((i) => {
@@ -639,45 +712,46 @@ export function drawCrosswordCard(p: CrosswordNormalized, W: number, H: number):
       if (knock.theme.length > 0) add(ink, 6, masked(p.themeColor, ink, knock.theme.join(""), "number-knockout"));
     }
   }
-  // 7-8. numbers and letters: one source per row, glyphs placed on the same lattice.
-  for (let r = 0; r < pz.rows; r++) {
-    const band: CrosswordRect = { x: B.X[0], y: B.Y[r], w: B.X[pz.cols] - B.X[0], h: B.Y[r + 1] - B.Y[r] };
-    const nums: Array<{ text: string; x: number; y: number }> = [];
-    const lets: Array<{ text: string; x: number; y: number }> = [];
-    for (let c = 0; c < pz.cols; c++) {
-      const i = r * pz.cols + c, ch = pz.cells[i];
-      if (ch === null) continue;
-      const h = B.hole(i);
-      const n = p.numbers.get(i);
-      if (n !== undefined && B.numberPx > 0) {
-        nums.push({ text: String(n), x: h.x - band.x + Math.max(1, h.w * 0.07), y: Math.max(0, h.y - band.y + h.h * 0.06 - CAP_TOP_EM * B.numberPx) });
-      }
-      if (p.solved) {
-        lets.push({ text: ch, x: h.x - band.x + (h.w - widthOf(ch, B.letterPx, true)) / 2, y: Math.max(0, h.y - band.y + h.h * 0.57 - CAP_MID_EM * B.letterPx) });
-      }
+  // 7-8. numbers and letters: ONE source each over the lattice, every glyph placed on it. A source
+  // per row would stack 2 x rows overlays at the root, and past ~25 the engine drops inline masks.
+  const band: CrosswordRect = { x: B.X[0], y: B.Y[0], w: B.X[pz.cols] - B.X[0], h: B.Y[pz.rows] - B.Y[0] };
+  const nums: Array<{ text: string; x: number; y: number }> = [];
+  const lets: Array<{ text: string; x: number; y: number }> = [];
+  pz.cells.forEach((ch, i) => {
+    if (ch === null) return;
+    const h = B.hole(i);
+    const n = p.numbers.get(i);
+    if (n !== undefined && B.numberPx > 0) {
+      nums.push({ text: String(n), x: h.x - band.x + Math.max(1, h.w * 0.07), y: Math.max(0, h.y - band.y + h.h * 0.06 - CAP_TOP_EM * B.numberPx) });
     }
-    if (nums.length > 0) add(band, 7, glyphRow("cell-number", nums, B.numberPx, false));
-    if (lets.length > 0) add(band, 8, glyphRow("cell-letter", lets, B.letterPx, true));
-  }
+    if (p.solved) {
+      lets.push({ text: ch, x: h.x - band.x + (h.w - widthOf(ch, B.letterPx, true)) / 2, y: Math.max(0, h.y - band.y + h.h * 0.57 - CAP_MID_EM * B.letterPx) });
+    }
+  });
+  if (nums.length > 0) add(band, 7, glyphRow("cell-number", nums, B.numberPx, false));
+  if (lets.length > 0) add(band, 8, glyphRow("cell-letter", lets, B.letterPx, true));
   // The caption copy and the list swatches.
   for (const t of L.texts) {
     const src = tag(textCell({ text: t.text, fontSize: t.px, color: t.color, hAlign: t.hAlign, vAlign: t.vAlign, bold: t.bold, label: t.label }), t.label);
-    add(t.rect, 1, t.bind ? bindProp(src, t.bind) : src);
+    const raw = t.bind === "themeEntries" ? String(p.themeEntries) : "";
+    add(t.rect, 1, !t.bind ? src : t.token ? bindPropRange(src, t.bind, undefined, { start: 0, end: raw.length }, t.token) : bindProp(src, t.bind));
   }
-  for (const line of L.themeLines) add(line.swatch, 1, tag(makeColorTile(p.themeColor), "theme-swatch"));
+  for (const line of L.themeLines) add(line.swatch, 1, bindProp(tag(makeColorTile(p.themeColor), "theme-swatch"), "themeColor"));
 
   // The contract: every text fits (measured), the board keeps its shape and size.
   const constraints: LayoutConstraint[] = L.texts.map((t) => textFitsMeasured(t.label, t.text, t.px, t.width));
   if (p.solved) constraints.push(textFitsMeasured("cell-letter", "W", B.letterPx, widthOf("W", B.letterPx, true)));
-  if (B.numberPx > 0) {
+  if (B.numberPx > 0 && p.numbers.size > 0) {
     const widest = String(Math.max(...p.numbers.values()));
     constraints.push(textFitsMeasured("cell-number", widest, B.numberPx, widthOf(widest, B.numberPx)));
   }
-  constraints.push({ label: "board", aspect: pz.cols / pz.rows, ...(pz.cols === pz.rows ? { minWidthFrac: 0.45, minHeightFrac: 0.45 } : {}) });
+  // The designed shape: the lattice plus its border (a 25x3 is not 25/3 once the border is on), within 2%.
+  const shape = (pz.cols * B.pitch - B.rule + 2 * B.border) / (pz.rows * B.pitch - B.rule + 2 * B.border);
+  constraints.push({ label: "board", aspect: shape, aspectTolerance: 0.02 * Math.max(shape, 1 / shape), ...(pz.cols === pz.rows ? { minWidthFrac: 0.45, minHeightFrac: 0.45 } : {}) });
   if (L.themeLines.length > 0) constraints.push({ label: "theme-swatch", aspect: 1, aspectTolerance: 0.2 });
   const relations: RelationalConstraint[] = [];
-  const letterRows = pieces.filter((q) => q.source.editor?.label === "cell-letter").length;
-  if (letterRows >= 2) relations.push({ label: "cell-letter", equal: "size", tolerance: 0.02, tolerancePx: 1 } as RelationalConstraint);
+  // The cells are not rects (they are holes in one mask), so equal cells are the test's to assert, from the lattice lines.
+  if (L.themeLines.length >= 2) relations.push({ label: "theme-swatch", equal: "size", tolerance: 0.02, tolerancePx: 1 } as RelationalConstraint);
   return { pieces, layout: L, constraints, relations };
 }
 
@@ -698,7 +772,7 @@ const WHY: WhySpec = {
   "who": "Crossword bloggers who post the solved grid atop every write-up (Crossword Fiend, NYT to Universal) and indie constructors posting a weekly .puz",
   "problem": [
     "Every Crossword Fiend write-up opens with a picture of the solved grid, and each one is a screenshot or phone photo of whatever app the reviewer solved in: Screenshot-2026-09-22-213516.png, IMG_2411.jpeg, grid.png, wpsol092726.png. Size, style and app chrome change from grid to grid.",
-    "The caption under it is typed by hand (\"WSJ * 9/22/26 * Tues * \"Variety Pack\" * Zhoukin Burnikel * solution\"), and because the picture cannot mark the theme, every post retypes a separate \"THEME ANSWERS:\" list. The .puz file holding all of it sits on the same site.",
+    "The caption under it is typed by hand (\"WSJ * 9/22/26 * Tues * \"Variety Pack\" * Zhoukin Burnikel * solution * 20260922\"), and because the picture cannot mark the theme, every post retypes a separate \"THEME ANSWERS:\" list. The .puz file holding all of it sits on the same site.",
   ],
   "sources": [
     "https://crosswordfiend.com/2026/09/21/tuesday-september-22-2026/",
@@ -710,21 +784,21 @@ const WHY: WhySpec = {
     "https://github.com/viresh-ratnakar/exet"
   ],
   "solution": [
-    "Paste the solution rows from the puzzle file (puzpy's p.solution pastes as is). The card derives the clue numbers, reads each theme answer from the grid, tints it and lists it, and writes the caption line, so every grid on a blog looks the same. solved=false hides the letters for a new-puzzle teaser.",
-    "The decision that matters: the board is drawn as a few masked layers (paper, theme tint, ink with the paper cells cut out, rings) plus one text source per row, all on one integer lattice. A 25x25 stays far inside the engine's frame budget and every size from 3 to 25 renders the same way.",
+    "Paste the solution rows from the puzzle file (for a square grid, puzpy's p.solution pastes as is). The card derives the clue numbers, reads each theme answer from the grid, tints it and lists it, and writes the caption line, so every grid on a blog matches. solved=false hides the letters for a new-puzzle teaser.",
+    "The decision that matters: the board is a few masked layers (paper, theme tint, ink with the paper cells cut out, rings) plus one text source for every letter and one for every number, all on one integer lattice. A 25x25 takes no more layers than a 7x7 (8 at most), and every size from 3 to 25 renders the same way.",
   ],
   "usage": {
     "command": "m0saic make @one-a-day/gaming/crossword-grid-card/v1 --template-repo . -w 1080 -h 1080 -o grid.png",
     "try": [
-      "grid: the .puz solution string, or rows split by \"/\" (\"#\" or \".\" is a block)",
+      "grid: rows split by \"/\" (\"#\" or \".\" is a block); a square grid's unbroken .puz string also works",
       "themeEntries: \"17A 38A 61A\" - the ids your write-up already lists",
       "circles: \"14 15 16\" - 0-based cell indices, the .puz order",
-      "solved: false - the new-puzzle teaser, no letters, tint or answers"
+      "--props '{\"solved\":false}' - the new-puzzle teaser: no letters, tint or answers"
     ]
   },
   "caveats": [
     "No .puz parser: paste the solution rows. A rebus square shows its first letter (what the .puz solution string holds), and shaded squares are not drawn.",
-    "Grids 3 to 25 cells each way. Clue numbers are dropped below 6 px, so a 15x15 at 480x270 shows letters only.",
+    "Grids 3 to 25 cells each way; paste a non-square grid as rows split by \"/\". Clue numbers are dropped below 6 px, so a 15x15 at 480x270 shows letters only.",
     "A still card: no clue text and no fill-in animation yet."
   ],
   "timeline": {

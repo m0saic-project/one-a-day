@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (12 templates) from .
+Rendering template:
+  template id: @one-a-day/gaming/crossword-grid-card/v1
+  output:      C:/src/m0saic-production/one-a-day/journal/2026-09-29/review/stress/title40-1080x1080.png
+  Building plan... done (0.5s)
+  plan built with size: 1080 x 1080
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~1 s
+  Rendering in ffmpeg [0/1 |   0% | 0:00 elapsed | ETA 0:02]  Rendering in ffmpeg [1/1 | 100% | 0:00 elapsed | ETA 0:02].    Rendering in ffmpeg [1/1 | 100% | 0:01 elapsed | ETA 0:00 | 0.11x]... done (628 ms)
+✅ Template render complete: C:/src/m0saic-production/one-a-day/journal/2026-09-29/review/stress/title40-1080x1080.png

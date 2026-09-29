@@ -1,0 +1,13 @@
+Rendering .mosaic:
+  kind:       mosaic_document
+  definition: C:\src\m0saic-production\one-a-day\journal\2026-09-29\review\verify\stale\perrow-1080x1080.mosaic
+  output:     perrow-1080x1080.png
+  m0 string:         (21,607 chars, too large to print)
+  source count:      78
+  children keys:     []
+  plan built with size: 1080 x 1080
+  duration:      2s (60 frames @ 30fps)
+  [warn] OVERLAY_CHAIN_DEEP: Mosaic node "root" emits an overlay chain 38 deep (threshold 20) with inline masks riding it. Past ~25 nested overlays ffmpeg SILENTLY degrades inline masks — shapes collapse to their bounding box, glyph masks tofu; no error is raised. Tiles stayed off the grid sheet because their rects overlap. Consider splitting the layout into nested sub-mosaics, or removing per-cell blend/enable/opacity/position expressions so tiles can lower onto the xstack sheet.
+  Estimated render time: ~9 s
+  Rendering in ffmpeg [0/5 |   0% | 0:00 elapsed | ETA 0:09]  Rendering in ffmpeg [1/5 |  20% | 0:00 elapsed | ETA 0:09].    Rendering in ffmpeg [1/5 |  20% | 0:01 elapsed | ETA 0:08]..   Rendering in ffmpeg [1/5 |  20% | 0:01 elapsed | ETA 0:08]...  Rendering in ffmpeg [1/5 |   8% | 0:02 elapsed | ETA 0:15 | 0.39x]     Rendering in ffmpeg [1/5 |  24% | 0:02 elapsed | ETA 0:06 | 0.58x].    Rendering in ffmpeg [1/5 |  40% | 0:02 elapsed | ETA 0:03 | 0.65x]..   Rendering in ffmpeg [1/5 |  40% | 0:03 elapsed | ETA 0:03 | 0.65x]...  Rendering in ffmpeg [1/5 |  57% | 0:03 elapsed | ETA 0:02 | 0.68x]     Rendering in ffmpeg [1/5 |  75% | 0:04 elapsed | ETA 0:01 | 0.71x].    Rendering in ffmpeg [1/5 |  75% | 0:04 elapsed | ETA 0:01 | 0.71x]..   Rendering in ffmpeg [2/5 |  81% | 0:04 elapsed | ETA 0:01 | 0.59x]...  Rendering in ffmpeg [2/5 |  81% | 0:05 elapsed | ETA 0:01 | 0.59x]     Rendering in ffmpeg [3/5 |  83% | 0:06 elapsed | ETA 0:01 | 110.00x].    Rendering in ffmpeg [3/5 |  83% | 0:06 elapsed | ETA 0:01 | 110.00x]..   Rendering in ffmpeg [3/5 |  83% | 0:06 elapsed | ETA 0:01 | 110.00x]...  Rendering in ffmpeg [3/5 |  83% | 0:07 elapsed | ETA 0:01 | 110.00x]     Rendering in ffmpeg [3/5 |  89% | 0:07 elapsed | ETA 0:01 | 1.59x].    Rendering in ffmpeg [4/5 |  97% | 0:08 elapsed | ETA 0:00 | 3.01x]..   Rendering in ffmpeg [5/5 |  99% | 0:08 elapsed | ETA 0:00 | 0.67x]... done (7 s)
+✅ Render complete: perrow-1080x1080.png

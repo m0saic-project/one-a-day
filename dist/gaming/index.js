@@ -16,9 +16,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.gamingTemplates = void 0;
 const speedrun_pb_recap_1 = require("./speedrun-pb-recap/v1/speedrun-pb-recap");
+const crossword_grid_card_1 = require("./crossword-grid-card/v1/crossword-grid-card");
 /** Pack `gaming`, in registry order (mirrors ./registry.ts). */
 exports.gamingTemplates = [
     speedrun_pb_recap_1.SpeedrunPbRecapV1,
+    crossword_grid_card_1.CrosswordGridCardV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./speedrun-pb-recap/v1/speedrun-pb-recap"), exports);
+__exportStar(require("./crossword-grid-card/v1/crossword-grid-card"), exports);

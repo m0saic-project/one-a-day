@@ -199,6 +199,21 @@
       }
     },
     {
+      "slug": "crossword-grid-card",
+      "templateKey": "@one-a-day/gaming/crossword-grid-card/v1",
+      "title": "2026-09-29 · Crossword Grid Card",
+      "description": "Crossword Grid Card: a solved crossword grid drawn in a few layers on one integer lattice - derived clue numbers, circles, theme entries tinted and listed, the caption line; solved=false makes the teaser.",
+      "tags": [
+        "gaming",
+        "2026-09-29",
+        "day-010"
+      ],
+      "pack": "gaming",
+      "preview": {
+        "image": "assets/templates/@one-a-day__gaming__crossword-grid-card__v1/preview.png"
+      }
+    },
+    {
       "slug": "powerlifting-meet-recap",
       "templateKey": "@one-a-day/sports/powerlifting-meet-recap/v1",
       "title": "2026-09-27 · Powerlifting Meet Recap",

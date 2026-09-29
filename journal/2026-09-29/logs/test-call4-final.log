@@ -1,0 +1,341 @@
+
+> one-a-day@0.1.0 test
+> jest && node --test tools/check-freeze.test.mjs tools/robot-faces.test.mjs "pipeline/lib/*.test.mjs"
+
+
+Test Suites: 14 passed, 14 total
+Tests:       182 passed, 182 total
+Snapshots:   0 total
+Time:        46.567 s
+Ran all test suites.
+TAP version 13
+# Subtest: template id from a new folder; asset key encoding
+ok 1 - template id from a new folder; asset key encoding
+  ---
+  duration_ms: 1.8528
+  ...
+# Subtest: commit messages carry the day, the id, and the Agent/Model trailers
+ok 2 - commit messages carry the day, the id, and the Agent/Model trailers
+  ---
+  duration_ms: 0.7229
+  ...
+# Subtest: stream-log formats Claude and Codex events and drops noise
+ok 3 - stream-log formats Claude and Codex events and drops noise
+  ---
+  duration_ms: 1.7404
+  ...
+# Subtest: a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+ok 4 - a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+  ---
+  duration_ms: 3.92
+  ...
+# Subtest: protected files and folders are forbidden whatever the status
+ok 5 - protected files and folders are forbidden whatever the status
+  ---
+  duration_ms: 0.9969
+  ...
+# Subtest: editing or deleting an existing template folder is forbidden; a second new folder is counted
+ok 6 - editing or deleting an existing template folder is forbidden; a second new folder is counted
+  ---
+  duration_ms: 0.6074
+  ...
+# Subtest: another day's journal is forbidden, today's is allowed
+ok 7 - another day's journal is forbidden, today's is allowed
+  ---
+  duration_ms: 0.2973
+  ...
+# Subtest: stray render outputs at the repo root are scratch, not a scope violation (day 003)
+ok 8 - stray render outputs at the repo root are scratch, not a scope violation (day 003)
+  ---
+  duration_ms: 0.8434
+  ...
+# Subtest: a tracked file with a scratch-looking name is not scratch
+ok 9 - a tracked file with a scratch-looking name is not scratch
+  ---
+  duration_ms: 0.2721
+  ...
+# Subtest: runtime caches inside the day's journal are scratch; the rest of the journal is allowed
+ok 10 - runtime caches inside the day's journal are scratch; the rest of the journal is allowed
+  ---
+  duration_ms: 0.5296
+  ...
+# Subtest: a kept tree round-trips: the day's work outside the journal, tracked and untracked, binary included, and nothing else
+ok 11 - a kept tree round-trips: the day's work outside the journal, tracked and untracked, binary included, and nothing else
+  ---
+  duration_ms: 1216.0606
+  ...
+# Subtest: a tree with nothing to keep writes no patch
+ok 12 - a tree with nothing to keep writes no patch
+  ---
+  duration_ms: 257.9134
+  ...
+# Subtest: todayIso and isIsoDate
+ok 13 - todayIso and isIsoDate
+  ---
+  duration_ms: 2.0014
+  ...
+# Subtest: ensureDay creates the folder once; state and run patches merge
+ok 14 - ensureDay creates the folder once; state and run patches merge
+  ---
+  duration_ms: 17.0527
+  ...
+# Subtest: index rows upsert by date, stay sorted; day numbers count earlier rows
+ok 15 - index rows upsert by date, stay sorted; day numbers count earlier rows
+  ---
+  duration_ms: 13.4534
+  ...
+# Subtest: renderTemplate substitutes known keys and leaves unknown ones
+ok 16 - renderTemplate substitutes known keys and leaves unknown ones
+  ---
+  duration_ms: 0.5425
+  ...
+# Subtest: a rejected call is a hit on the five-hour window, with its reset time and the CLI's words
+ok 17 - a rejected call is a hit on the five-hour window, with its reset time and the CLI's words
+  ---
+  duration_ms: 3.3832
+  ...
+# Subtest: an allowed call is seen and not hit; a call that said nothing is not seen
+ok 18 - an allowed call is seen and not hit; a call that said nothing is not seen
+  ---
+  duration_ms: 1.0003
+  ...
+# Subtest: a 429 with no rate_limit_event is still a hit, with no reset time
+ok 19 - a 429 with no rate_limit_event is still a hit, with no reset time
+  ---
+  duration_ms: 0.2709
+  ...
+# Subtest: a seven-day rejection names its window
+ok 20 - a seven-day rejection names its window
+  ---
+  duration_ms: 0.1792
+  ...
+# Subtest: after a five-hour rejection: wait until the reset plus the grace, once or twice, never longer than the cap
+ok 21 - after a five-hour rejection: wait until the reset plus the grace, once or twice, never longer than the cap
+  ---
+  duration_ms: 1.0053
+  ...
+# Subtest: a reset that has already passed is a short wait, not a stop
+ok 22 - a reset that has already passed is a short wait, not a stop
+  ---
+  duration_ms: 0.2873
+  ...
+# Subtest: after a seven-day rejection, or one with no reset time: stop, and say why
+ok 23 - after a seven-day rejection, or one with no reset time: stop, and say why
+  ---
+  duration_ms: 0.5882
+  ...
+# Subtest: before a call: a nearly spent five-hour window is waited out; a rolled one, a healthy one, or an unknown one is not
+ok 24 - before a call: a nearly spent five-hour window is waited out; a rolled one, a healthy one, or an unknown one is not
+  ---
+  duration_ms: 0.4077
+  ...
+# Subtest: config fills in what it leaves out
+ok 25 - config fills in what it leaves out
+  ---
+  duration_ms: 0.5144
+  ...
+# Subtest: the words on the log
+ok 26 - the words on the log
+  ---
+  duration_ms: 0.9878
+  ...
+# Subtest: entries normalize: ids default, disabled sit out, bad rows drop
+ok 27 - entries normalize: ids default, disabled sit out, bad rows drop
+  ---
+  duration_ms: 5.2837
+  ...
+# Subtest: a weightless entry still draws, at weight 1
+ok 28 - a weightless entry still draws, at weight 1
+  ---
+  duration_ms: 0.2815
+  ...
+# Subtest: findRosterEntry pins a slot by id
+ok 29 - findRosterEntry pins a slot by id
+  ---
+  duration_ms: 0.381
+  ...
+# Subtest: lastPickFrom takes the latest dated row that ran an agent
+ok 30 - lastPickFrom takes the latest dated row that ran an agent
+  ---
+  duration_ms: 0.382
+  ...
+# Subtest: rank: other agent < same agent other slot < the same slot again
+ok 31 - rank: other agent < same agent other slot < the same slot again
+  ---
+  duration_ms: 0.2828
+  ...
+# Subtest: hard mode: yesterday's agent is ordered last but never dropped
+ok 32 - hard mode: yesterday's agent is ordered last but never dropped
+  ---
+  duration_ms: 1.3915
+  ...
+# Subtest: hard mode with one agent installed still yields a full order
+ok 33 - hard mode with one agent installed still yields a full order
+  ---
+  duration_ms: 0.5472
+  ...
+# Subtest: soft mode damps yesterday instead of excluding it — repeats stay possible
+ok 34 - soft mode damps yesterday instead of excluding it — repeats stay possible
+  ---
+  duration_ms: 5.6226
+  ...
+# Subtest: soft mode reports the declared weight, not the damped draw weight
+ok 35 - soft mode reports the declared weight, not the damped draw weight
+  ---
+  duration_ms: 0.7641
+  ...
+# Subtest: avoidRepeat false is a pure weighted draw over every slot
+ok 36 - avoidRepeat false is a pure weighted draw over every slot
+  ---
+  duration_ms: 3.2626
+  ...
+# Subtest: weights bend the draw the way they say
+ok 37 - weights bend the draw the way they say
+  ---
+  duration_ms: 3.0914
+  ...
+# Subtest: the same rng seed draws the same order — a resumed day keeps its agent
+ok 38 - the same rng seed draws the same order — a resumed day keeps its agent
+  ---
+  duration_ms: 0.3949
+  ...
+# Subtest: pickOrder reads the mode off config and the previous day off the index
+ok 39 - pickOrder reads the mode off config and the previous day off the index
+  ---
+  duration_ms: 0.3308
+  ...
+# Subtest: describeEntry says the slot, the model and whether ultracode is on
+ok 40 - describeEntry says the slot, the model and whether ultracode is on
+  ---
+  duration_ms: 0.1539
+  ...
+# Subtest: records Claude stream-json: spans with tool + target + timing, usage, cost, the phase name for a retry
+ok 41 - records Claude stream-json: spans with tool + target + timing, usage, cost, the phase name for a retry
+  ---
+  duration_ms: 5.3102
+  ...
+# Subtest: records Codex --json items and turn usage
+ok 42 - records Codex --json items and turn usage
+  ---
+  duration_ms: 0.71
+  ...
+# Subtest: appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape
+ok 43 - appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape
+  ---
+  duration_ms: 34.0078
+  ...
+# Subtest: cost: reported by the CLI wins; else an estimate from the dated price table; the timeline says which
+ok 44 - cost: reported by the CLI wins; else an estimate from the dated price table; the timeline says which
+  ---
+  duration_ms: 11.2128
+  ...
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# Subtest: seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+ok 45 - seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+  ---
+  duration_ms: 1.345
+  ...
+# Subtest: the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+ok 46 - the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+  ---
+  duration_ms: 40.6536
+  ...
+# Subtest: import scan ignores commented-out imports
+ok 47 - import scan ignores commented-out imports
+  ---
+  duration_ms: 0.3287
+  ...
+# Subtest: hashes are CRLF-agnostic
+ok 48 - hashes are CRLF-agnostic
+  ---
+  duration_ms: 1.25
+  ...
+# Subtest: a mint names its m0saic line and the line each template folder shipped at
+ok 49 - a mint names its m0saic line and the line each template folder shipped at
+  ---
+  duration_ms: 90.7763
+  ...
+# Subtest: checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+ok 50 - checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+  ---
+  duration_ms: 72.956
+  ...
+# Subtest: judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+ok 51 - judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+  ---
+  duration_ms: 1096.3114
+  ...
+# Subtest: faces are deterministic per (seed, index) and differ across indexes
+ok 52 - faces are deterministic per (seed, index) and differ across indexes
+  ---
+  duration_ms: 4.3451
+  ...
+# Subtest: 33 faces are 33 distinct, well-formed SVG documents
+ok 53 - 33 faces are 33 distinct, well-formed SVG documents
+  ---
+  duration_ms: 4.5132
+  ...
+# Subtest: data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+ok 54 - data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+  ---
+  duration_ms: 0.3453
+  ...
+1..54
+# tests 54
+# suites 0
+# pass 54
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1621.1915

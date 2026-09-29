@@ -1,5 +1,5 @@
 import { evaluateM0 } from "@m0saic/dsl-stdlib";
-import { getComplexityMetricsFast } from "@m0saic/dsl";
+import { getComplexityMetricsFast, parseM0StringComplete } from "@m0saic/dsl";
 import { latticeReport, resolvePropBindings } from "@m0saic/template-utils";
 
 import { asDocument, targetCtx } from "../../../__testutils__/render";
@@ -102,6 +102,7 @@ describe(ID, () => {
       [{ date: "2026-02-30" }, /date 2026-02-30 is not a calendar date/],
       [{ date: "9/29/26" }, /date must be YYYY-MM-DD/],
       [{ themeColor: "gold" }, /themeColor "gold" must be #rrggbb/],
+      [{ themeColor: "#1E3A8A" }, /themeColor #1E3A8A is too dark for the ink letters over it \(1\.\d:1, needs 4\.5:1\)/],
       [{ title: "" }, /title must have 1-40/],
       [{ author: "x".repeat(49) }, /author must have 1-48/],
       [{ publication: "Café" }, /publication must be printable ASCII/],
@@ -110,12 +111,32 @@ describe(ID, () => {
     for (const [props, re] of bad) await expect(render(props)).rejects.toThrow(re);
   });
 
-  it("binds the bare title, author and publication cells - the composite caption rest is never bound", async () => {
+  it("binds every prop that can carry a handle to the rect that shows it - the caption's derived rest is never bound", async () => {
     const doc = await render();
     const { byProp, rejected } = resolvePropBindings(doc, 1080, 1080, { propsSchema: CrosswordGridCardV1.propsSchema });
     expect(rejected).toEqual([]);
-    expect(Object.keys(byProp).sort()).toEqual(["author", "publication", "title"]);
-    expect(byProp.title).toHaveLength(1);
+    // The 0.3.0 roll call (bindingsDeclared): every non-boolean prop is reachable on the canvas at the defaults.
+    expect(Object.keys(byProp).sort()).toEqual(["author", "circles", "date", "grid", "publication", "themeColor", "themeEntries", "title"]);
+    for (const key of ["title", "author", "publication", "date", "grid", "circles"]) expect(byProp[key]).toHaveLength(1);
+    const bound = (key: string) => (doc.sources ?? []).filter((s) => {
+      const e = (s as { editor?: { binding?: { propKey: string }; bindings?: Array<{ propKey: string }> } }).editor;
+      return e?.binding?.propKey === key || (e?.bindings ?? []).some((b) => b.propKey === key);
+    }) as Array<{ editor: { label?: string; binding?: { focus?: { start: number; end: number } }; bindings?: Array<{ propKey: string }> } }>;
+    // The board opens the puzzle: the grid first, then what marks it.
+    expect(bound("grid").map((s) => s.editor.label)).toEqual(["board"]);
+    expect(bound("grid")[0].editor.bindings!.map((b) => b.propKey)).toEqual(["grid", "themeEntries", "circles", "themeColor"]);
+    // Each theme-list id is a handle on ITS token of the raw prop string.
+    const raw = CrosswordGridCardV1.defaultProps.themeEntries!;
+    const ids = bound("themeEntries").filter((s) => s.editor.label?.startsWith("theme-id-"));
+    expect(ids.map((s) => raw.slice(s.editor.binding!.focus!.start, s.editor.binding!.focus!.end))).toEqual(["9A", "12A"]);
+    expect(bound("themeColor").map((s) => s.editor.label).sort()).toEqual(["board", "theme-swatch", "theme-swatch"]);
+    // The date cell shows the date alone; the size and "solution" after it stay unbound.
+    expect(bound("date").map((s) => (s as unknown as { layers: Array<{ content: { text: string } }> }).layers[0].content.text)).toEqual(["| Tue 9/29/26"]);
+    const rest = (doc.sources ?? []).find((s) => (s as { editor?: { label?: string } }).editor?.label === "meta") as { editor: { binding?: unknown; bindings?: unknown } };
+    expect(rest.editor.binding ?? rest.editor.bindings).toBeUndefined();
+    // The teaser board offers only what it shows.
+    const teaser = await render({ solved: false });
+    expect(Object.keys(resolvePropBindings(teaser, 1080, 1080, { propsSchema: CrosswordGridCardV1.propsSchema }).byProp).sort()).toEqual(["author", "circles", "date", "grid", "publication", "title"]);
   });
 
   it("clears its safe minimum at its own hint and at the contract canvases", async () => {
@@ -136,7 +157,15 @@ describe(ID, () => {
     const drawn = texts(doc);
     for (const w of ["DOGSLED", "CATNAPS", "THEME ANSWERS"]) expect(drawn).not.toContain(w);
     expect(drawn.filter((t) => /^[A-Z]$/.test(t))).toEqual([]);
-    expect(drawn).toContain("| Tue 9/29/26 | 7x7 | puzzle");
+    expect(drawn).toEqual(expect.arrayContaining(["| Tue 9/29/26", "| 7x7 | puzzle"]));
+    // Nothing else moves: the caption keeps the solved card's rects at every canvas, for the defaults and the longest copy.
+    const maxCopy = STRESS.find(([name]) => name === "max-length copy")![1];
+    for (const over of [{}, maxCopy]) {
+      for (const [w, h] of [[1080, 1080], ...CONTRACT_CANVASES]) {
+        const rects = (solved: boolean) => layoutCrosswordCard(normalizeCrossword({ ...over, solved }), w, h).texts.filter((t) => !t.label.startsWith("theme")).map((t) => [t.label, t.rect.x, t.rect.y, t.rect.w, t.rect.h, t.px]);
+        expect(rects(false)).toEqual(rects(true));
+      }
+    }
   });
 
   it("draws the defaults: 41 letters, 19 numbers, 6 rings, both theme lines", async () => {
@@ -144,7 +173,7 @@ describe(ID, () => {
     const drawn = texts(doc);
     expect(drawn.filter((t) => /^[A-Z]$/.test(t))).toHaveLength(41);
     expect(drawn.filter((t) => /^\d+$/.test(t))).toHaveLength(19);
-    expect(drawn).toEqual(expect.arrayContaining(["Cats and Dogs", "by", "one-a-day agent", "THEME ANSWERS", "9A", "DOGSLED", "12A", "CATNAPS", "Demo Mini", "| Tue 9/29/26 | 7x7 | solution"]));
+    expect(drawn).toEqual(expect.arrayContaining(["Cats and Dogs", "by", "one-a-day agent", "THEME ANSWERS", "9A", "DOGSLED", "12A", "CATNAPS", "Demo Mini", "| Tue 9/29/26", "| 7x7 | solution"]));
     const rings = (doc.sources ?? []).find((s) => (s as { editor?: { label?: string } }).editor?.label === "rings") as { mask: { localPath: string } };
     expect(rings.mask.localPath.match(/M/g)).toHaveLength(12);
   });
@@ -194,6 +223,14 @@ describe(ID, () => {
     for (const [w, h] of CONTRACT_CANVASES) expect(at(synthetic(21, 21), w, h).letterPx).toBeGreaterThanOrEqual(6);
     const L = layoutCrosswordCard(normalizeCrossword({}), 1080, 1080);
     expect(L.texts.find((t) => t.label === "title")!.px).toBeGreaterThanOrEqual(1080 / 20);
+    // The square card wraps a long title to two lines before it shrinks; the board gives up one line's height.
+    const long = layoutCrosswordCard(normalizeCrossword({ title: "A Sunday-Size Stress Grid" }), 1080, 1080);
+    const lt = long.texts.find((t) => t.label === "title")!;
+    expect(lt.text.split("\n")).toHaveLength(2);
+    expect(lt.px).toBeGreaterThanOrEqual(1080 / 20);
+    expect(long.board.ink.h / 1080).toBeGreaterThan(0.64);
+    const max = layoutCrosswordCard(normalizeCrossword({ title: "A Title Long Enough To Need Two Lines Ok" }), 1080, 1080).texts;
+    for (const other of max.filter((t) => t.label !== "title")) expect(max.find((t) => t.label === "title")!.px).toBeGreaterThanOrEqual(other.px);
     for (const [w, h] of [[1920, 1080], [1080, 1920]]) {
       expect(layoutCrosswordCard(normalizeCrossword({}), w, h).texts.find((t) => t.label === "title")!.px).toBeGreaterThanOrEqual(Math.min(w, h) / 20);
     }
@@ -204,8 +241,32 @@ describe(ID, () => {
       const grid = synthetic(n, n);
       const doc = await render({ grid, themeEntries: n > 3 ? longThemes(grid) : "", circles: "" });
       expect(doc.sources!.length).toBeLessThan(400);
+      // One text source for every letter and one for every number: the engine's root overlay chain stays
+      // ~8 deep at any size (a source per row reached 37 at 21x21 and tripped OVERLAY_CHAIN_DEEP).
+      expect(labels(doc).filter((l) => l === "cell-letter" || l === "cell-number")).toEqual(["cell-number", "cell-letter"]);
       expect(getComplexityMetricsFast(String(doc.m0)).frameCount).toBeLessThan(400);
+      // The engine drops inline masks past ~25 overlay layers (COST_BUDGETS.overlayDepth is 20): rows never stack.
+      const parsed = parseM0StringComplete(String(doc.m0), 1080, 1080);
+      expect(parsed.ok).toBe(true);
+      if (parsed.ok) expect(Math.max(...parsed.ir.editorFrames.map((f) => Number(f.overlayDepth ?? 0)))).toBeLessThanOrEqual(20);
       expect(latticeReport([String(doc.m0)]).offenders).toEqual([]);
+    }
+  });
+
+  it("uses its space on purpose without a theme, and never overflows a canvas too small for the list", async () => {
+    // Landscape, themeless: the title block sits mid-column above the caption, not at the top over an empty band.
+    const L = layoutCrosswordCard(normalizeCrossword({ themeEntries: "" }), 1920, 1080);
+    const title = L.texts.find((t) => t.label === "title")!, meta = L.texts.find((t) => t.label === "meta")!;
+    expect(title.rect.y - L.panel.y).toBeGreaterThan((meta.rect.y - L.panel.y) * 0.25);
+    // Portrait, themeless: the caption line is centred in the band under the board, not pinned to the bottom.
+    const P = layoutCrosswordCard(normalizeCrossword({ themeEntries: "" }), 1080, 1920);
+    const pm = P.texts.find((t) => t.label === "meta")!;
+    expect(1920 - P.panel.y - (pm.rect.y + pm.rect.h)).toBeGreaterThan(100);
+    // A 300x300 card with 8 long answers drops the list (the tint still marks them) instead of throwing.
+    const grid = OPEN21;
+    for (const [w, h] of [[300, 300], [240, 240], [360, 300]]) {
+      const doc = await render({ grid, themeEntries: longThemes(grid), circles: "" }, w, h);
+      expect(labels(doc)).toContain("theme-tint");
     }
   });
 

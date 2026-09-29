@@ -1,0 +1,213 @@
+{
+  "date": "2026-09-29",
+  "pricedAt": "2026-09-29",
+  "dayRun": {
+    "agent": "claude",
+    "model": "claude-opus-5-5 (opus[1m], ultracode, effort xhigh)",
+    "slot": "claude-opus-ultracode",
+    "basis": "Dollars as Claude Code reported them per call (total_cost_usd, API list price at the time of the call); the run itself was on the founder's Claude plan. Tokens as the CLI's usage events summed them.",
+    "calls": [
+      {
+        "call": "scout",
+        "startedAt": "2026-09-29T13:04:59.351Z",
+        "durMs": 701073,
+        "status": "ok",
+        "toolCalls": 41,
+        "tokens": 8010625,
+        "cacheRead": 7675889,
+        "output": 659,
+        "usd": 9.8013298,
+        "basis": "reported"
+      },
+      {
+        "call": "plan",
+        "startedAt": "2026-09-29T13:16:40.469Z",
+        "durMs": 525743,
+        "status": "ok",
+        "toolCalls": 24,
+        "tokens": 4086662,
+        "cacheRead": 3827955,
+        "output": 362,
+        "usd": 6.462116600000003,
+        "basis": "reported"
+      },
+      {
+        "call": "build",
+        "startedAt": "2026-09-29T13:25:26.246Z",
+        "durMs": 1521702,
+        "status": "error",
+        "toolCalls": 80,
+        "tokens": 22637564,
+        "cacheRead": 22085760,
+        "output": 2066,
+        "usd": 6.442877399999998,
+        "basis": "reported"
+      },
+      {
+        "call": "build (2)",
+        "startedAt": "2026-09-29T13:50:47.970Z",
+        "durMs": 2278,
+        "status": "error",
+        "toolCalls": 0,
+        "tokens": 0,
+        "cacheRead": 0,
+        "output": 0,
+        "usd": 0,
+        "basis": "reported"
+      },
+      {
+        "call": "build (3)",
+        "startedAt": "2026-09-29T13:50:50.259Z",
+        "durMs": 2338,
+        "status": "error",
+        "toolCalls": 0,
+        "tokens": 0,
+        "cacheRead": 0,
+        "output": 0,
+        "usd": 0,
+        "basis": "reported"
+      },
+      {
+        "call": "build (4)",
+        "startedAt": "2026-09-29T14:42:11.893Z",
+        "durMs": 3118992,
+        "status": "error",
+        "toolCalls": 183,
+        "tokens": 82471601,
+        "cacheRead": 81507815,
+        "output": 5054,
+        "usd": 31.729169999999993,
+        "basis": "reported"
+      },
+      {
+        "call": "critique",
+        "startedAt": "2026-09-29T15:34:10.902Z",
+        "durMs": 331765,
+        "status": "ok",
+        "toolCalls": 39,
+        "tokens": 7896056,
+        "cacheRead": 7517286,
+        "output": 692,
+        "usd": 4.233544599999998,
+        "basis": "reported"
+      },
+      {
+        "call": "ship",
+        "startedAt": "2026-09-29T15:39:42.685Z",
+        "durMs": 1224116,
+        "status": "ok",
+        "toolCalls": 56,
+        "tokens": 13153686,
+        "cacheRead": 12810777,
+        "output": 1980,
+        "usd": 10.834106000000004,
+        "basis": "reported"
+      }
+    ],
+    "totals": {
+      "calls": 8,
+      "tokens": 138256194,
+      "usd": 69.5031,
+      "wallMs": 10507450,
+      "basis": "reported"
+    }
+  },
+  "session": {
+    "session": "23c3112d-75d6-48be-96b4-14ef7df69b1f",
+    "model": "claude-fable-5-1",
+    "modelsInTranscript": [
+      "claude-fable-5-1"
+    ],
+    "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "ratesUsdPerMillion": {
+      "input": 10,
+      "cacheWrite5m": 12.5,
+      "cacheWrite1h": 20,
+      "cacheRead": 0.25,
+      "output": 50
+    },
+    "webSearchUsdEach": 0.01,
+    "since": "2026-09-29T04:00:00.000Z",
+    "until": "2026-09-29T16:01:52.500Z",
+    "basis": "API-equivalent list-price estimate, not an invoice: the session ran on the founder's Claude plan. One record per API response (message.id), today's turns only (the session file also holds day 009's work). Not included: Claude Code's side requests that never reach the transcript (WebSearch, the small model that summarises WebFetch pages, session titling); the search fees are counted.",
+    "phases": [
+      {
+        "phase": "\"fix the label and commit the dashboard fixes\"",
+        "startedAt": "2026-09-29T13:03:58.921Z",
+        "durMs": 2283806,
+        "requests": 36,
+        "input": 72,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 450402,
+        "cacheRead": 15014946,
+        "output": 65887,
+        "webSearches": 0,
+        "usd": 16.0568,
+        "tokens": 15531307,
+        "toolCalls": 85
+      },
+      {
+        "phase": "\"session limit is at 90%. theres a chance the oneaday may get\"",
+        "startedAt": "2026-09-29T13:42:02.727Z",
+        "durMs": 664611,
+        "requests": 2,
+        "input": 4,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 2309,
+        "cacheRead": 968770,
+        "output": 2416,
+        "webSearches": 0,
+        "usd": 0.4092,
+        "tokens": 973499,
+        "toolCalls": 1
+      },
+      {
+        "phase": "\"yep limit was hit, and a no template result was pushed. i si\"",
+        "startedAt": "2026-09-29T13:53:07.338Z",
+        "durMs": 1156046,
+        "requests": 9,
+        "input": 258,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 529352,
+        "cacheRead": 3855063,
+        "output": 88812,
+        "webSearches": 0,
+        "usd": 15.994,
+        "tokens": 4473485,
+        "toolCalls": 62
+      },
+      {
+        "phase": "\"im headed off to the office. keep running until you finish t\"",
+        "startedAt": "2026-09-29T14:12:23.384Z",
+        "durMs": 6569116,
+        "requests": 47,
+        "input": 958,
+        "cacheWrite5m": 0,
+        "cacheWrite1h": 158737,
+        "cacheRead": 31242904,
+        "output": 92013,
+        "webSearches": 0,
+        "usd": 15.5957,
+        "tokens": 31494612,
+        "toolCalls": 103
+      }
+    ],
+    "totals": {
+      "requests": 94,
+      "input": 1292,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 1140800,
+      "cacheRead": 51081683,
+      "output": 249128,
+      "webSearches": 0,
+      "usd": 48.0557,
+      "tokens": 52472903,
+      "toolCalls": 251,
+      "wallMs": 10673579
+    }
+  },
+  "day": {
+    "usd": 117.5588,
+    "tokens": 190729097
+  }
+}

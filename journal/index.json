@@ -250,5 +250,33 @@
       "https://github.com/Sajmani/birdsync",
       "https://support.ebird.org/en/support/solutions/articles/48001201565"
     ]
+  },
+  {
+    "date": "2026-09-29",
+    "day": 10,
+    "agent": "claude",
+    "model": "claude-opus-5-5",
+    "rosterId": "claude-opus-ultracode",
+    "status": "no-ship",
+    "templateId": null,
+    "title": null,
+    "useCase": "Solved-grid share cards for crossword write-ups and new-puzzle posts, from the puzzle file's own fields: the grid, clue numbers, theme entries marked, and the caption line, instead of a screenshot of the solving app",
+    "tags": [
+      "crossword",
+      "puzzle",
+      "grid",
+      "puz",
+      "blog",
+      "share-card"
+    ],
+    "sources": [
+      "https://crosswordfiend.com/2026/09/21/tuesday-september-22-2026/",
+      "https://crosswordfiend.com/2026/09/24/friday-september-25-2026/",
+      "https://crosswordfiend.com/2026/09/26/sunday-september-27-2026/",
+      "https://crosswordfiend.com/download/",
+      "https://crosshare.org/crosswords/pJMezWuZ6oRSxfHehRTw/wanting-for-winter",
+      "https://github.com/alexdej/puzpy",
+      "https://github.com/viresh-ratnakar/exet"
+    ]
   }
 ]

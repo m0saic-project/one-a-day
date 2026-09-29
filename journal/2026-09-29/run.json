@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-29",
+  "day": 10,
+  "startedAt": "2026-09-29T13:00:01.765Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "opus[1m]",
+    "roster": {
+      "id": "claude-opus-ultracode",
+      "agent": "claude",
+      "model": "opus[1m]",
+      "weight": 4,
+      "why": "drawn"
+    },
+    "ultracode": true,
+    "effort": "xhigh",
+    "budgetUsd": 75,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-opus-5-5",
+    "corrected": null
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 701083,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 525771,
+      "done": true
+    },
+    "build": {
+      "calls": 3,
+      "lastExitCode": 1,
+      "timedOut": false,
+      "ms": 2344,
+      "done": false
+    }
+  },
+  "result": {
+    "status": "no-ship",
+    "templateId": null,
+    "reason": "build phase did not complete"
+  },
+  "gate": {
+    "reasons": [],
+    "at": "2026-09-29T13:50:53.107Z"
+  }
+}

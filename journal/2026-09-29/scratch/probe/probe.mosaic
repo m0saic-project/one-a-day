@@ -1,0 +1,11 @@
+{"kind":"mosaic_document","version":1,"m0":"2(1,1)","assets":{},"backgroundColor":"#ffffff",
+"sources":[
+ {"type":"text","rasterizer":"svg","renderMode":{"kind":"image"},"style":{"fontSize":60,"fontColor":"#111111"},
+  "layers":[
+   {"content":{"kind":"literal","text":"A"},"placement":{"hAlign":"left","vAlign":"top","xExpr":"20","yExpr":"20"}},
+   {"content":{"kind":"literal","text":"B"},"placement":{"hAlign":"left","vAlign":"top","xExpr":"200","yExpr":"100"}},
+   {"content":{"kind":"literal","text":"C"},"style":{"fontSize":30,"fontColor":"#cc0000"},"placement":{"hAlign":"left","vAlign":"top","xExpr":"400","yExpr":"300"}}
+  ]},
+ {"type":"text","rasterizer":"svg","renderMode":{"kind":"image"},"style":{"fontSize":40,"fontColor":"#0000cc"},
+  "layers":[{"content":{"kind":"literal","text":"right"}}]}
+]}

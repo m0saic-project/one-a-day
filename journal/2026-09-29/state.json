@@ -1,0 +1,29 @@
+{
+  "useCase": "Solved-grid share cards for crossword write-ups and new-puzzle posts, from the puzzle file's own fields: the grid, clue numbers, theme entries marked, and the caption line, instead of a screenshot of the solving app",
+  "who": "Crossword bloggers who post a solved grid atop every daily write-up (Crossword Fiend reviews NYT, LAT, WSJ, Universal and more) and indie constructors who publish weekly .puz/.ipuz puzzles on Substack and Crosshare",
+  "sources": [
+    "https://crosswordfiend.com/2026/09/21/tuesday-september-22-2026/",
+    "https://crosswordfiend.com/2026/09/24/friday-september-25-2026/",
+    "https://crosswordfiend.com/2026/09/26/sunday-september-27-2026/",
+    "https://crosswordfiend.com/download/",
+    "https://crosshare.org/crosswords/pJMezWuZ6oRSxfHehRTw/wanting-for-winter",
+    "https://github.com/alexdej/puzpy",
+    "https://github.com/viresh-ratnakar/exet"
+  ],
+  "tags": [
+    "crossword",
+    "puzzle",
+    "grid",
+    "puz",
+    "blog",
+    "share-card"
+  ],
+  "scout": "done",
+  "pack": "gaming",
+  "slug": "crossword-grid-card",
+  "title": "Crossword Grid Card",
+  "plan": "done",
+  "scaffolded": true,
+  "decision": "no-ship",
+  "noShipReason": "build phase did not complete"
+}

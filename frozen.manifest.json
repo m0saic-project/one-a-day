@@ -1,10 +1,24 @@
 {
-  "release": "2026-09-28",
-  "commit": "699a10d2cd3b199c2936f0e2ec56cff980b5613d",
-  "mintedAt": "2026-09-28T17:04:50.783Z",
+  "release": "0.3.0",
+  "tag": "2026-09-29",
+  "commit": "6925f35cf8b2561678d5359cfb474c49392d3ab8",
+  "mintedAt": "2026-09-29T14:28:47.792Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
+  "shipped": {
+    "src/basics/hello-world/v1": "0.2.2",
+    "src/dev/app-store-screenshot-frame/v1": "0.2.2",
+    "src/dev/bench-delta/v1": "0.2.2",
+    "src/dev/og-card/v1": "0.2.2",
+    "src/events/bird-walk-sightings/v1": "0.2.2",
+    "src/events/talk-timer/v1": "0.2.2",
+    "src/gaming/speedrun-pb-recap/v1": "0.2.2",
+    "src/harness/agent-timeline/v1": "0.2.2",
+    "src/social/episode-audiogram/v1": "0.2.2",
+    "src/social/testimonial-proof-card/v1": "0.2.2",
+    "src/sports/powerlifting-meet-recap/v1": "0.2.2"
+  },
   "files": {
     "src/_shared/layout.ts": "d5d516ba4155b7bd545c89b3d578ea642913adc4e658b81351fe21b65b94c449",
     "src/_shared/text.ts": "c69793e924ad346823183877f0d49a7de21026a5d817859625e0d53cdbccb495",

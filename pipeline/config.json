@@ -5,6 +5,14 @@
   "remote": "origin",
   "dayTimeoutMin": 270,
   "variantsMax": 3,
+  "limits": {
+    "$comment": "The account's session limit, as the agent CLI reports it (Claude Code streams the five-hour and seven-day windows on every call; Codex reports nothing, so a Codex day runs as before). A call the limit rejects does not count against the phase: the runner keeps the tree as journal/<date>/limited/tree.patch, waits for the window - never longer than waitMaxMin, which a five-hour window always fits and a seven-day one never does - and calls again, at most waitsPerDay times. waitAt: before a call, a five-hour window at or past this is waited out first, so the call is not cut halfway. sevenDayStopAt: preflight refuses the day when the seven-day window is past this, since a cut day could not wait for it. graceSec is added to every wait (the CLI's clock is not this machine's). Waits do not count against dayTimeoutMin, so the scheduler's own cap (ExecutionTimeLimit in schedule/one-a-day.task.xml) has to cover dayTimeoutMin + waitMaxMin.",
+    "waitAt": 0.9,
+    "waitMaxMin": 300,
+    "waitsPerDay": 2,
+    "graceSec": 90,
+    "sevenDayStopAt": 0.95
+  },
   "phases": [
     { "id": "scout",    "prompt": "10-scout.md",    "output": "10-scout.md",    "timeoutMin": 20, "maxCalls": 2 },
     { "id": "plan",     "prompt": "20-plan.md",     "output": "20-brief.md",    "timeoutMin": 15, "maxCalls": 2 },

@@ -135,3 +135,49 @@ export function commitAll(cwd, message) {
 export function push(cwd, remote, branch) {
   return git(["push", remote, `HEAD:${branch}`], cwd);
 }
+
+/* ── keeping a day's work when the day cannot go on ── */
+
+/**
+ * The day's uncommitted work as one patch the journal can carry: every
+ * allowed change outside the journal (the template, its wiring, dist, the
+ * manifest; never scratch), tracked and untracked alike, as `git diff
+ * --binary` against HEAD. Written when the session limit cuts a call, so the
+ * gate's revert throws nothing away and `run.mjs` can put it back on the next
+ * call. The index is left as it was found. Returns the paths kept.
+ */
+export function snapshotTree(cwd, file, { date }) {
+  const changes = classifyChanges(porcelain(cwd), { date });
+  const paths = changes.allowed.filter((e) => !e.path.startsWith("journal/")).map((e) => e.path);
+  if (!paths.length) return [];
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  git(["add", "-A", "--", ...paths], cwd);
+  try {
+    // Bytes, not a string: a binary hunk must round-trip exactly.
+    const patch = execFileSync("git", ["diff", "--cached", "--binary", "--no-color", "HEAD", "--", ...paths], { cwd, stdio: ["ignore", "pipe", "pipe"], maxBuffer: 256 * 1024 * 1024 });
+    fs.writeFileSync(file, patch);
+  } finally {
+    git(["reset", "-q", "--", ...paths], cwd);
+  }
+  return paths;
+}
+
+/** The paths a patch from `snapshotTree` touches. */
+export function patchPaths(file) {
+  const text = fs.readFileSync(file, "utf8");
+  return [...text.matchAll(/^diff --git a\/(.+?) b\//gm)].map((m) => m[1]);
+}
+
+/**
+ * Put a kept tree back: working tree only, so the restored files look
+ * exactly as the agent's own writes would (new ones untracked). A plain
+ * apply first; three-way when HEAD has moved underneath it.
+ */
+export function restoreTree(cwd, file) {
+  const paths = patchPaths(file);
+  try { git(["apply", "--binary", "--whitespace=nowarn", file], cwd); return { ok: true, paths, threeWay: false }; }
+  catch {
+    try { git(["apply", "--binary", "--3way", "--whitespace=nowarn", file], cwd); return { ok: true, paths, threeWay: true }; }
+    catch (e) { return { ok: false, paths, error: String(e.stderr ?? e.message).trim().split("\n")[0] || "git apply failed" }; }
+  }
+}

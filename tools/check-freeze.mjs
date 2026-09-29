@@ -31,6 +31,16 @@
 // No comment-stripping: a comment edit to a frozen file is a change here
 // (byte freeze, no tokenizer to drift; hashVersion 1).
 //
+// WHICH LINE. `release` is the m0saic line the mint ships at
+// (MAJOR.MINOR.PATCH, read off `m0saic --version` or passed as --release),
+// and `shipped` says which line EACH template folder shipped at. `m0saic
+// doctor` (0.3.0+) holds a shipped template to the conventions of its own
+// line — a rule added later is "lagging", never an error — and an unshipped
+// one to every current rule. A manifest whose release is not a line (this
+// repo's used to be the day's date) makes doctor treat the whole fleet as
+// unshipped, which is how day 010 met seven errors on frozen templates.
+// `tag` is the mint's own name: the day, for the runner.
+//
 // Exit 0 clean · 1 freeze violated · 2 the gate could not run (fails CLOSED).
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
@@ -40,6 +50,8 @@ import { fileURLToPath } from "node:url";
 
 export const FREEZE_MANIFEST_FILE = "frozen.manifest.json";
 export const FREEZE_HASH_VERSION = 1;
+/** A m0saic line, MAJOR.MINOR.PATCH: what `release` and every `shipped` entry must be. */
+export const LINE_RE = /^\d+\.\d+\.\d+$/;
 export const FROZEN_SEED_ROOTS = ["src"];
 export const NEVER_FROZEN_PREFIXES = ["src/__testutils__/"];
 /** Wiring a new template must touch these; they are never frozen even when a
@@ -65,6 +77,17 @@ export function hashBytes(buf) {
 
 const toPosix = (p) => p.split(path.sep).join("/");
 const isFreezableSource = (rel) => rel.endsWith(".ts") && !rel.endsWith(".test.ts") && !rel.endsWith(".d.ts");
+
+/**
+ * `src/<pack>/<slug>/vN` for a file inside a template folder — the key
+ * `shipped` uses, the same reading `m0saic doctor` makes. Shared helpers
+ * (`_shared`, any `_`-prefixed pack or slug) are not templates: null.
+ */
+export function templateFolderOf(rel) {
+  const m = /^src\/([^/]+)\/([^/]+)\/(v\d+)\//.exec(rel);
+  if (!m || m[1].startsWith("_") || m[2].startsWith("_")) return null;
+  return `src/${m[1]}/${m[2]}/${m[3]}`;
+}
 
 /** A frozen SEED: a shipped template file or a shared helper beside one. */
 export function isFrozenSeed(rel) {
@@ -140,18 +163,55 @@ export function readManifest(packageRoot) {
   return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 
-export function mintManifest(packageRoot, { tag, commit, note, excluded = [], now = new Date() }) {
+/**
+ * Mint from the tree. `line` is the m0saic line this mint ships at; `tag` is
+ * the mint's own name (the day). `shipped` carries the line each template
+ * folder shipped at: a folder the previous manifest already hashed keeps its
+ * line — from a manifest written before `shipped` existed, that manifest's
+ * `release` when it is a line, else `shippedBefore` — and a folder new to
+ * this mint shipped at `line`. A folder that was frozen but whose line nobody
+ * can name is refused: guessing it would hold shipped work to rules it never
+ * had, or excuse it from rules it did.
+ */
+export function mintManifest(packageRoot, { tag, line, commit, note, excluded = [], previous = null, shippedBefore = null, now = new Date() }) {
+  if (!LINE_RE.test(String(line ?? ""))) throw new Error(`the mint needs the m0saic line it ships at (MAJOR.MINOR.PATCH), got ${JSON.stringify(line)}`);
+  if (shippedBefore != null && !LINE_RE.test(String(shippedBefore))) throw new Error(`--shipped-before must be a m0saic line, got ${JSON.stringify(shippedBefore)}`);
   const files = {};
   for (const rel of collectFrozenFiles(packageRoot, excluded)) files[rel] = hashBytes(fs.readFileSync(path.join(packageRoot, rel)));
+  const before = new Set(Object.keys(previous?.files ?? {}).map(templateFolderOf).filter(Boolean));
+  const beforeLine = LINE_RE.test(String(previous?.release ?? "")) ? previous.release : shippedBefore;
+  const shipped = {};
+  for (const rel of Object.keys(files)) {
+    const folder = templateFolderOf(rel);
+    if (!folder || shipped[folder]) continue;
+    const kept = previous?.shipped?.[folder] ?? (before.has(folder) ? beforeLine : null);
+    if (before.has(folder) && !kept) throw new Error(`${folder} is already frozen but no manifest says which m0saic line it shipped at — pass --shipped-before <line> for the folders the old manifest hashed`);
+    shipped[folder] = kept ?? line;
+  }
   return {
-    release: tag,
+    release: line,
+    tag: tag ?? null,
     commit,
     mintedAt: now.toISOString(),
-    note: note || "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
+    note: note || "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it. `release` is the m0saic line of the newest mint and `shipped` the line each folder shipped at: doctor holds a template to the rules of its own line.",
     hashVersion: FREEZE_HASH_VERSION,
     excluded: [...excluded].sort(),
+    shipped,
     files,
   };
+}
+
+/** What the manifest calls itself on a log line: "2026-09-29 (m0saic 0.3.0)". */
+export function manifestLabel(manifest) {
+  return manifest.tag ? `${manifest.tag} (m0saic ${manifest.release})` : String(manifest.release);
+}
+
+/** The installed CLI's line, for a mint that was not told one. */
+export function detectLine() {
+  try {
+    const out = execFileSync("m0saic", ["--version"], { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], shell: process.platform === "win32", timeout: 20_000, env: { ...process.env, M0SAIC_NO_UPDATE_CHECK: "1", M0SAIC_TELEMETRY: process.env.M0SAIC_TELEMETRY ?? "ghost" } }).trim();
+    return LINE_RE.test(out) ? out : null;
+  } catch { return null; }
 }
 
 /** Working tree vs manifest. */
@@ -260,9 +320,17 @@ function main(argv) {
     let commit = "unknown";
     try { commit = git(["rev-parse", "HEAD"], packageRoot).trim(); } catch { /* not a checkout */ }
     const previous = readManifest(packageRoot);
-    const manifest = mintManifest(packageRoot, { tag, commit, excluded, note: previous?.note });
+    const line = val("--release") ?? detectLine();
+    if (!LINE_RE.test(String(line ?? ""))) {
+      console.error(`[check-freeze] ✗ which m0saic line does this mint ship at? \`m0saic --version\` gave ${JSON.stringify(line)} — pass --release <MAJOR.MINOR.PATCH>`);
+      return 2;
+    }
+    let manifest;
+    try { manifest = mintManifest(packageRoot, { tag, line, commit, excluded, note: previous?.note, previous, shippedBefore: val("--shipped-before") ?? null }); }
+    catch (e) { console.error(`[check-freeze] ✗ ${e.message}`); return 2; }
     fs.writeFileSync(path.join(packageRoot, FREEZE_MANIFEST_FILE), JSON.stringify(manifest, null, 2) + "\n");
-    console.log(`[check-freeze] ✎ minted ${FREEZE_MANIFEST_FILE}: ${Object.keys(manifest.files).length} frozen files at ${tag} (${commit.slice(0, 7)})${excluded.length ? `, excluded: ${excluded.join(", ")}` : ""} — commit it.`);
+    const folders = Object.keys(manifest.shipped).length;
+    console.log(`[check-freeze] ✎ minted ${FREEZE_MANIFEST_FILE}: ${Object.keys(manifest.files).length} frozen files, ${folders} template folder(s), at ${manifestLabel(manifest)} (${commit.slice(0, 7)})${excluded.length ? `, excluded: ${excluded.join(", ")}` : ""} — commit it.`);
     return 0;
   }
 
@@ -274,7 +342,7 @@ function main(argv) {
   const r = checkTree(packageRoot, manifest);
   if (r.hashVersionMismatch) { console.error(`[check-freeze] ✗ ${r.hashVersionMismatch} — re-mint at a release`); return 2; }
   if (!r.ok) {
-    console.error(`\n[check-freeze] ✗ FROZEN TEMPLATE MODIFIED — ${manifest.release} shipped these; someone holds their output.\n`);
+    console.error(`\n[check-freeze] ✗ FROZEN TEMPLATE MODIFIED — ${manifestLabel(manifest)} shipped these; someone holds their output.\n`);
     for (const f of r.changed) console.error(`    changed  ${f}`);
     for (const f of r.deleted) console.error(`    DELETED  ${f}  (removing shipped behaviour)`);
     console.error(`\n[check-freeze] A frozen file never changes — comments included. Copy the template into a NEW vN+1/ folder,`);
@@ -282,7 +350,7 @@ function main(argv) {
     console.error(`[check-freeze] (The runner freezes a shipped day with: node tools/check-freeze.mjs --update --tag <date>)\n`);
     return 1;
   }
-  console.log(`[check-freeze] ✓ freeze (${manifest.release}): ${r.unchanged.length} frozen files unchanged, ${r.unfrozen.length} not yet frozen (new work).`);
+  console.log(`[check-freeze] ✓ freeze (${manifestLabel(manifest)}): ${r.unchanged.length} frozen files unchanged, ${r.unfrozen.length} not yet frozen (new work).`);
   if (has("--require-complete") && r.unfrozen.length) {
     console.error(`\n[check-freeze] ✗ ${r.unfrozen.length} frozen-shaped file(s) are not in the manifest — a release must freeze what it ships:`);
     for (const f of r.unfrozen) console.error(`    unfrozen  ${f}`);

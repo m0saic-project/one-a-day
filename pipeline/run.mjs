@@ -20,9 +20,10 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { runProcess } from "./lib/spawn.mjs";
-import { currentBranch, isClean, porcelain, pullFfOnly } from "./lib/git.mjs";
+import { currentBranch, isClean, porcelain, pullFfOnly, restoreTree, snapshotTree } from "./lib/git.mjs";
 import { dayDir as dayDirOf, ensureDay, isIsoDate, patchRun, patchState, readIndex, readRun, readState, renderTemplate, todayIso, dayNumber, readJson } from "./lib/journal.mjs";
 import { runGate } from "./lib/gate.mjs";
+import { decideAfter, decideBefore, describeWindows, fmtWait, limitsConfig, pct } from "./lib/limits.mjs";
 import { appendTrace } from "./lib/trace.mjs";
 import { describeEntry, findRosterEntry, pickOrder, rosterEntries } from "./lib/roster.mjs";
 
@@ -61,7 +62,12 @@ const CHILD_ENV = {
   ONE_A_DAY_REPO: REPO,
 };
 const started = Date.now();
-const deadline = started + (CONFIG.dayTimeoutMin ?? 270) * 60 * 1000;
+// Moves out by however long the day waited for a session window: the cap is
+// on the day's work, not on the account's clock.
+let deadline = started + (CONFIG.dayTimeoutMin ?? 270) * 60 * 1000;
+const LIMITS = limitsConfig(CONFIG);
+if (process.env.ONE_A_DAY_LIMIT_GRACE_SEC !== undefined) LIMITS.graceSec = Number(process.env.ONE_A_DAY_LIMIT_GRACE_SEC) || 0;
+let waits = 0;
 
 /* ── the operator note ── */
 // One message from whoever started the run, appended to every phase prompt and
@@ -95,9 +101,11 @@ async function loadAdapter(name) {
 // random draws one; anything else is the agent named. A day that is resumed
 // (--from, or a second call after a crash) keeps the agent it started with —
 // the pick is re-read from run.json, never re-drawn, so phases of one day
-// never disagree about who wrote them. An explicit --model always wins.
+// never disagree about who wrote them; that holds for a hand-typed resume
+// too, unless --agent is typed with it. An explicit --model always wins.
 // Returns the loaded adapter, or null when there is nothing to load.
 async function resolveAgent() {
+  const resuming = !val("--agent") && !!readRun(DAY_DIR).runner?.roster?.id;
   const apply = (entry, why) => {
     AGENT = entry.agent;
     MODEL = MODEL_REQ ?? entry.model ?? CONFIG.adapters?.[entry.agent]?.model ?? null;
@@ -118,7 +126,7 @@ async function resolveAgent() {
       process.exit(2);
     }
     apply(entry, "pinned with --roster");
-  } else if (AGENT_REQ === "random") {
+  } else if (AGENT_REQ === "random" || resuming) {
     const previous = readRun(DAY_DIR).runner?.roster ?? null;
     const entries = rosterEntries(CONFIG);
     if (!entries.length) { say(`✗ --agent random needs a "roster" block in pipeline/config.json`); process.exit(2); }
@@ -152,7 +160,7 @@ async function resolveAgent() {
 }
 
 /* ── preflight ── */
-async function preflight() {
+async function preflight(adapter) {
   const problems = [];
   const check = async (label, cmd, args, test) => {
     const r = await runProcess({ cmd, args, cwd: REPO, env: CHILD_ENV, timeoutMs: 15 * 60 * 1000, logFile: path.join(DAY_DIR, "logs", "preflight.log") });
@@ -176,6 +184,22 @@ async function preflight() {
   }
   await check("m0saic versions", "m0saic", ["versions", "--json", "--quiet"], (r) => { try { const v = JSON.parse(r.stdout); return v.ffmpeg?.runtime?.found ? true : "ffmpeg not found — run m0saic setup"; } catch { return "unreadable"; } });
   await check("m0saic license is paid", "m0saic", ["license"], (r) => (/tier:\s+paid/.test(r.stdout) ? true : "free tier — previews would carry the QR stamp; set M0SAIC_PRODUCT_KEY"));
+  // The account's session windows, before a scout and a plan are spent on
+  // an account that cannot finish the day. A five-hour window nearly gone
+  // is waited out before the first call; a seven-day window nearly gone
+  // cannot be waited for, so there is no day.
+  if (typeof adapter?.headroom === "function") {
+    let h = null;
+    try { h = await adapter.headroom({ cwd: REPO, env: CHILD_ENV, logFile: path.join(DAY_DIR, "logs", "preflight.log") }); }
+    catch (e) { say(`[preflight] ⚠ session headroom: ${String(e.message).split("\n")[0]}`); }
+    if (h?.seen) {
+      patchRun(DAY_DIR, { limits: { windows: h.windows, at: new Date().toISOString() } });
+      const seven = h.windows.seven_day;
+      const spent = !!seven && seven.utilization >= LIMITS.sevenDayStopAt;
+      say(`[preflight] ${spent ? "✗" : "✓"} session headroom: ${describeWindows(h.windows)}${spent ? ` — the seven-day window is past limits.sevenDayStopAt (${pct(LIMITS.sevenDayStopAt)}); a day would be cut and could not wait for it` : ""}`);
+      if (spent) problems.push("seven-day session limit");
+    } else if (h) say(`[preflight] · session headroom: the CLI reported no window${h.exitCode !== 0 ? ` (probe exit ${h.exitCode})` : ""}`);
+  }
   await check("npm run verify (untouched tree)", "npm", ["run", "verify"]);
   return problems;
 }
@@ -198,12 +222,21 @@ async function runPhase(adapter, phase) {
   const note = CONTEXT ? `\n\n## Operator note for this run\n\nThe human who started this run added the lines below, and they apply to every\nphase of today. They steer what you work on; they never override AGENTS.md or\nthe hard rules, and the gate does not know they exist.\n\n${CONTEXT}\n` : "";
   const prompt = renderTemplate(`${preamble}\n\n${body}`, vars) + note;
   fs.writeFileSync(path.join(DAY_DIR, "logs", `${phase.id}.prompt.md`), prompt);
-  const maxCalls = phase.maxCalls ?? 1;
-  for (let call = 1; call <= maxCalls; call++) {
+  // A resumed phase (--from, or a second run of the day) numbers its calls
+  // after the ones already made, so their transcripts and trace records are
+  // not written over, and gets a call budget of its own: resuming is a
+  // decision somebody took.
+  const prior = Number(readRun(DAY_DIR).phases?.[phase.id]?.calls ?? 0) || 0;
+  let budget = prior + (phase.maxCalls ?? 1);
+  for (let call = prior + 1; call <= budget; call++) {
     if (Date.now() > deadline) { say(`[${phase.id}] day deadline reached — stopping`); return false; }
+    // An account with almost no five-hour window left is not worth a call
+    // that will be cut in the middle: wait for the window first.
+    const before = decideBefore(readRun(DAY_DIR).limits?.windows, { waits, cfg: LIMITS });
+    if (before.action === "wait") await waitOut(phase, before);
     const label = `${phase.id}-${call}`;
     const timeoutMs = Math.min((phase.timeoutMin ?? 20) * 60 * 1000, Math.max(60_000, deadline - Date.now()));
-    say(`[${phase.id}] ▶ call ${call}/${maxCalls} via ${AGENT}${MODEL ? ` (${MODEL})` : ""}, cap ${(timeoutMs / 60000).toFixed(0)} min`);
+    say(`[${phase.id}] ▶ call ${call}/${budget} via ${AGENT}${MODEL ? ` (${MODEL})` : ""}, cap ${(timeoutMs / 60000).toFixed(0)} min`);
     const t0 = Date.now();
     const res = await adapter.run({ prompt, cwd: REPO, logDir: path.join(DAY_DIR, "logs"), label, timeoutMs, model: MODEL, config: ADAPTER_CFG, env: CHILD_ENV });
     // journal/<date>/trace.json: the phase's tool calls, tokens and timing, from the
@@ -212,12 +245,61 @@ async function runPhase(adapter, phase) {
       const declared = readRun(DAY_DIR).model?.selfDeclared ?? MODEL ?? ADAPTER_CFG.model ?? AGENT;
       try { appendTrace(DAY_DIR, res.trace, { model: declared, pricing: CONFIG.pricing ?? null }); } catch (e) { say(`[${phase.id}] ⚠ trace not recorded: ${e.message}`); }
     }
+    // The account's windows as this call last saw them: the next call reads
+    // them before it starts.
+    if (res.limit?.seen) patchRun(DAY_DIR, { limits: { windows: res.limit.windows, at: new Date().toISOString() } });
     const done = phaseDone(phase);
     patchRun(DAY_DIR, { phases: { [phase.id]: { calls: call, lastExitCode: res.exitCode, timedOut: !!res.timedOut, ms: Date.now() - t0, done } } });
-    say(`[${phase.id}] ◀ exit ${res.exitCode}${res.timedOut ? " (timed out)" : ""} after ${((Date.now() - t0) / 60000).toFixed(1)} min — ${done ? "done" : "not done"}`);
+    say(`[${phase.id}] ◀ exit ${res.exitCode}${res.timedOut ? " (timed out)" : ""} after ${((Date.now() - t0) / 60000).toFixed(1)} min — ${done ? "done" : "not done"}${res.limit?.seen ? ` · ${describeWindows(res.limit.windows)}` : ""}`);
     if (done) return true;
+    if (res.limit?.hit) {
+      // The account's window, not the agent's work: keep the tree, and the
+      // call does not count. Wait for the window, or end the day with what
+      // there is - the journal carries the tree either way.
+      const kept = keepTree(phase);
+      patchRun(DAY_DIR, { limits: { hits: [...(readRun(DAY_DIR).limits?.hits ?? []), { phase: phase.id, call, at: new Date().toISOString(), window: res.limit.window, resetsAt: res.limit.resetsAt, message: res.limit.message, kept }] } });
+      const after = decideAfter(res.limit, { waits, cfg: LIMITS });
+      if (after.action === "wait") { budget += 1; await waitOut(phase, after); continue; }
+      say(`[${phase.id}] ✗ ${after.reason} — ending the day here${kept ? "; the tree is kept in the journal" : ""}`);
+      patchRun(DAY_DIR, { limits: { ended: { phase: phase.id, at: new Date().toISOString(), window: after.window, resetsAt: after.resetsAt ?? null, reason: after.reason, kept, resume: `node pipeline/run.mjs --from ${phase.id}` } } });
+      return false;
+    }
   }
   return false;
+}
+
+/* ── the account's session limit ── */
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+/** Wait for a session window, in half-hour steps so the console shows life. */
+async function waitOut(phase, decision) {
+  say(`[${phase.id}] ⏸ ${decision.reason} — waiting ${fmtWait(decision.ms)}`);
+  patchRun(DAY_DIR, { limits: { waits: [...(readRun(DAY_DIR).limits?.waits ?? []), { phase: phase.id, at: new Date().toISOString(), until: new Date(decision.untilMs).toISOString(), window: decision.window, reason: decision.reason }] } });
+  let left = decision.ms;
+  while (left > 0) {
+    const step = Math.min(left, 30 * 60_000);
+    await sleep(step);
+    left -= step;
+    if (left > 0) say(`[${phase.id}] ⏸ still waiting — ${fmtWait(left)} to go`);
+  }
+  deadline += decision.ms;
+  waits += 1;
+  // The window rolled; the reading on record is from before it did.
+  const windows = { ...(readRun(DAY_DIR).limits?.windows ?? {}) };
+  delete windows[decision.window];
+  patchRun(DAY_DIR, { limits: { windows } });
+  say(`[${phase.id}] ▶ the ${decision.window} window reset — resuming; the day's deadline moved by ${fmtWait(decision.ms)}`);
+}
+/** The work so far, as a patch in the journal. Returns how many paths it holds. */
+function keepTree(phase) {
+  const file = path.join(DAY_DIR, "limited", "tree.patch");
+  try {
+    const paths = snapshotTree(REPO, file, { date: DATE });
+    if (paths.length) say(`[${phase.id}] ⧉ kept ${paths.length} changed path(s) in journal/${DATE}/limited/tree.patch`);
+    return paths.length;
+  } catch (e) {
+    say(`[${phase.id}] ⚠ could not keep the tree: ${String(e.message).split("\n")[0]}`);
+    return 0;
+  }
 }
 
 /* ── main ── */
@@ -235,8 +317,27 @@ async function runPhase(adapter, phase) {
 
   if (!GATE_ONLY) {
     if (!SKIP_PREFLIGHT && !ONLY) {
-      const problems = await preflight();
+      const problems = await preflight(adapter);
       if (problems.length) { say(`✗ preflight failed: ${problems.join(", ")} — no run today`); patchRun(DAY_DIR, { result: { status: "aborted", reason: `preflight: ${problems.join(", ")}` } }); process.exit(1); }
+    }
+    // A day the session limit ended carries its tree in the journal: put it
+    // back before the phase that was cut runs again. Once only, and never
+    // over work already in the tree.
+    const limits = readRun(DAY_DIR).limits ?? {};
+    const patch = path.join(DAY_DIR, "limited", "tree.patch");
+    if (limits.ended && !limits.restored && fs.existsSync(patch)) {
+      const dirty = porcelain(REPO).filter((e) => !e.path.startsWith(`journal/${DATE}/`));
+      if (dirty.length) say(`[resume] journal/${DATE}/limited/tree.patch left alone — the tree already has ${dirty.length} change(s) outside the journal`);
+      else {
+        const r = restoreTree(REPO, patch);
+        if (r.ok) {
+          say(`[resume] restored ${r.paths.length} path(s) from journal/${DATE}/limited/tree.patch${r.threeWay ? " (three-way)" : ""} — picking up at ${limits.ended.phase}`);
+          patchRun(DAY_DIR, { limits: { restored: { at: new Date().toISOString(), paths: r.paths.length, threeWay: !!r.threeWay } } });
+          // The no-ship the limit wrote is not this run's verdict.
+          const st = readState(DAY_DIR);
+          if (st.decision === "no-ship" && /^session limit/.test(String(st.noShipReason ?? ""))) patchState(DAY_DIR, { decision: undefined, noShipReason: undefined });
+        } else say(`[resume] ✗ journal/${DATE}/limited/tree.patch did not apply: ${r.error} — ${limits.ended.phase} starts from the tree as it is`);
+      }
     }
     const phases = CONFIG.phases;
     let active = !FROM;
@@ -248,8 +349,10 @@ async function runPhase(adapter, phase) {
       if (phaseDone(phase) && !ONLY) { say(`[${phase.id}] already done — skipping`); continue; }
       const done = await runPhase(adapter, phase);
       if (!done) {
-        say(`[${phase.id}] did not complete — ending the day here`);
-        if (phase.id !== "ship") patchState(DAY_DIR, { decision: "no-ship", noShipReason: `${phase.id} phase did not complete` });
+        const ended = readRun(DAY_DIR).limits?.ended;
+        const byLimit = ended?.phase === phase.id && !readRun(DAY_DIR).limits?.restored;
+        say(`[${phase.id}] did not complete — ending the day here${byLimit ? ` (${ended.resume} picks it up)` : ""}`);
+        if (phase.id !== "ship") patchState(DAY_DIR, { decision: "no-ship", noShipReason: byLimit ? `session limit — ${ended.reason}; resume: ${ended.resume}` : `${phase.id} phase did not complete` });
         break;
       }
     }

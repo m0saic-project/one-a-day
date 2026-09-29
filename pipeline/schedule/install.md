@@ -47,6 +47,18 @@ Once, by hand, on the laptop that will run every day:
      machine has to be logged in at the trigger** — it will wake for it, but it
      will not run from a logged-out session.
 
+     The task's `ExecutionTimeLimit` is 12 hours: a day's work is capped at
+     `dayTimeoutMin` (4.5 h), and a run that meets the account's session limit
+     waits up to `limits.waitMaxMin` (5 h) for the window to come back (see
+     `pipeline/README.md`, "Session limits"). A task registered before that
+     was raised has the old 6-hour cap; raise it in place without touching the
+     rest of its settings:
+
+     ```powershell
+     $t = Get-ScheduledTask -TaskName "one-a-day"; $t.Settings.ExecutionTimeLimit = "PT12H"; Set-ScheduledTask -InputObject $t | Out-Null
+     (Get-ScheduledTask -TaskName "one-a-day").Settings.ExecutionTimeLimit
+     ```
+
    Both files ship with `ONE_A_DAY_AGENT=random` and a **09:00 daily** trigger,
    so the roster picks the day's agent and model. Set it to a single adapter
    name, or add `ONE_A_DAY_ROSTER=<slot>`, if you want the same one every day.

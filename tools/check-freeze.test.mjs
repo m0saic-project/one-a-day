@@ -6,7 +6,7 @@ import os from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import {
-  FREEZE_MANIFEST_FILE, checkTree, collectFrozenFiles, hashBytes, isFrozenSeed, judgeStaged, mintManifest, relativeImportSpecifiers,
+  FREEZE_MANIFEST_FILE, checkTree, collectFrozenFiles, hashBytes, isFrozenSeed, judgeStaged, manifestLabel, mintManifest, relativeImportSpecifiers, templateFolderOf,
 } from "./check-freeze.mjs";
 
 function pkg() {
@@ -56,9 +56,39 @@ test("hashes are CRLF-agnostic", () => {
   assert.equal(hashBytes(Buffer.from("a\r\nb\rc\n")), hashBytes(Buffer.from("a\nb\nc\n")));
 });
 
+test("a mint names its m0saic line and the line each template folder shipped at", () => {
+  const { root, w } = pkg();
+  assert.throws(() => mintManifest(root, { tag: "v1", commit: "abc" }), /needs the m0saic line/);
+  assert.throws(() => mintManifest(root, { tag: "v1", line: "2026-09-28", commit: "abc" }), /needs the m0saic line/);
+  const first = mintManifest(root, { tag: "2026-09-21", line: "0.2.2", commit: "abc", excluded: ["src/lab/"] });
+  assert.equal(first.release, "0.2.2");
+  assert.equal(first.tag, "2026-09-21");
+  // helpers (_shared, util) are hashed but are nobody's template folder
+  assert.deepEqual(first.shipped, { "src/basics/hello-world/v1": "0.2.2", "src/cards/hello/v1": "0.2.2" });
+  assert.equal(manifestLabel(first), "2026-09-21 (m0saic 0.2.2)");
+  // the next day, on a newer CLI: the old folders keep their line, the new one ships at the new line
+  w("src/cards/next/v1/next.ts", "export const n = 1;\n");
+  const second = mintManifest(root, { tag: "2026-09-29", line: "0.3.0", commit: "def", excluded: ["src/lab/"], previous: first });
+  assert.equal(second.release, "0.3.0");
+  assert.deepEqual(second.shipped, { "src/basics/hello-world/v1": "0.2.2", "src/cards/hello/v1": "0.2.2", "src/cards/next/v1": "0.3.0" });
+  // a manifest from before `shipped` existed, whose release was a date: the old folders need to be told their line
+  const dated = { ...first, release: "2026-09-21", shipped: undefined };
+  assert.throws(() => mintManifest(root, { tag: "2026-09-29", line: "0.3.0", commit: "def", excluded: ["src/lab/"], previous: dated }), /src\/basics\/hello-world\/v1 is already frozen but no manifest says/);
+  const migrated = mintManifest(root, { tag: "2026-09-29", line: "0.3.0", commit: "def", excluded: ["src/lab/"], previous: dated, shippedBefore: "0.2.2" });
+  assert.deepEqual(migrated.shipped, { "src/basics/hello-world/v1": "0.2.2", "src/cards/hello/v1": "0.2.2", "src/cards/next/v1": "0.3.0" });
+  // a manifest from before `shipped` existed whose release IS a line: that line is theirs
+  const lined = { ...first, shipped: undefined };
+  assert.deepEqual(mintManifest(root, { tag: "x", line: "0.3.0", commit: "def", excluded: ["src/lab/"], previous: lined }).shipped["src/cards/hello/v1"], "0.2.2");
+  assert.throws(() => mintManifest(root, { tag: "x", line: "0.3.0", commit: "def", previous: first, shippedBefore: "yesterday" }), /--shipped-before must be a m0saic line/);
+  assert.equal(templateFolderOf("src/cards/hello/v1/hello.ts"), "src/cards/hello/v1");
+  assert.equal(templateFolderOf("src/cards/_shared/theme.ts"), null);
+  assert.equal(templateFolderOf("src/_shared/layout.ts"), null);
+  assert.equal(templateFolderOf("src/util/base.ts"), null);
+});
+
 test("checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen", () => {
   const { root, w } = pkg();
-  const m = mintManifest(root, { tag: "v1", commit: "abc", excluded: ["src/lab/"] });
+  const m = mintManifest(root, { tag: "v1", line: "0.3.0", commit: "abc", excluded: ["src/lab/"] });
   assert.equal(Object.keys(m.files).length, 5);
   assert.equal(checkTree(root, m).ok, true);
   w("src/cards/hello/v1/hello.ts", '// a comment\nimport { helper } from "../../_shared/theme";\nexport const a = helper(1);\n');
@@ -78,7 +108,7 @@ test("judgeStaged: the index is judged against the manifest at HEAD; the manifes
   const git = (...a) => execFileSync("git", a, { cwd: root, encoding: "utf8", env: { ...process.env, GIT_AUTHOR_NAME: "t", GIT_AUTHOR_EMAIL: "t@t", GIT_COMMITTER_NAME: "t", GIT_COMMITTER_EMAIL: "t@t" } });
   git("init", "-q");
   git("config", "commit.gpgsign", "false");
-  const m = mintManifest(root, { tag: "v1", commit: "abc", excluded: ["src/lab/"] });
+  const m = mintManifest(root, { tag: "v1", line: "0.3.0", commit: "abc", excluded: ["src/lab/"] });
   fs.writeFileSync(path.join(root, FREEZE_MANIFEST_FILE), JSON.stringify(m, null, 2) + "\n");
   git("add", "-A");
   git("commit", "-q", "-m", "frozen");
@@ -96,7 +126,7 @@ test("judgeStaged: the index is judged against the manifest at HEAD; the manifes
   assert.equal(judgeStaged(root, "").code, 0);
   // blessing the edit by staging a re-minted manifest is refused
   w("src/cards/hello/v1/hello.ts", "export const a = 3;\n");
-  const remint = mintManifest(root, { tag: "v1", commit: "abc", excluded: m.excluded });
+  const remint = mintManifest(root, { tag: "v1", line: "0.3.0", commit: "abc", excluded: m.excluded, previous: m });
   fs.writeFileSync(path.join(root, FREEZE_MANIFEST_FILE), JSON.stringify(remint, null, 2) + "\n");
   git("add", "-A");
   v = judgeStaged(root, "");

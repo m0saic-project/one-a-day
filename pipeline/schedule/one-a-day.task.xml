@@ -15,7 +15,8 @@
   </Principals>
   <Settings>
     <AllowStartOnDemand>true</AllowStartOnDemand>
-    <ExecutionTimeLimit>PT6H</ExecutionTimeLimit>
+    <!-- dayTimeoutMin (270) plus the longest wait for a session window (limits.waitMaxMin, 300), with room. -->
+    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>
     <WakeToRun>true</WakeToRun>
     <StartWhenAvailable>true</StartWhenAvailable>
     <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>

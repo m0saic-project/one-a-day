@@ -115,7 +115,7 @@ const tutorial = STARTER ? `
     ],
     explore: [
       "Double-click the title on the preview - it is bound",
-      "Change Page color - the backdrop follows",
+      "Resize the preview - the title keeps its band",
     ],
   }),
 ` : "";
@@ -131,7 +131,6 @@ import {
   bindProp,
   defineMosaicTemplate,
   definePropsSchema,
-  makeColorTile,
   placeInsetPieces,
   svgLabel,
   tag,
@@ -148,25 +147,27 @@ ${tutorialImport}
  *
  * The rule that bites: the thing that will cost someone an afternoon.
  *
- * Scaffolded by tools/new-template.mjs — it passes every build-gate
- * convention as generated (typed props with defaults, a bound title,
- * fitted svg copy, deterministic geometry from ctx.target). Replace the
- * body; keep the shape.
+ * Scaffolded by tools/new-template.mjs — it passes every build-gate and
+ * doctor convention as generated (typed props with defaults, a bound title,
+ * fitted svg copy, deterministic geometry from ctx.target, the page colour
+ * as the document background and never a full-canvas rect, no prop that
+ * nothing on the canvas shows). Replace the body; keep the shape.
  */
 
 export type ${pascal(slug)}Props = {
   /** Headline - the rect that shows it is bound to it. */
   title?: string;
-  /** Backdrop (#rrggbb). */
-  pageColor?: string;
   /** Dev-only: check the layout contract and draw it over the card. */
   debugLayout?: boolean;
 };
 
 const ID = ${JSON.stringify(ID)};
-const HEX = /^#[0-9a-fA-F]{6}$/;
 const INK = "#eaeef2" as MosaicColor;
 const DIM = "#9aa7b4" as MosaicColor;
+/** The page: document.backgroundColor. A full-canvas colour rect would be a
+ *  click target over everything (doctor: canvasFill), and a colour PROP with
+ *  no rect to bind it to would need declaring (doctor: bindingsDeclared). */
+const PAGE = "#1c2833" as MosaicColor;
 const DEFAULT_TITLE = ${JSON.stringify(title)};
 
 const propsSchema = definePropsSchema<${pascal(slug)}Props>({
@@ -175,16 +176,6 @@ const propsSchema = definePropsSchema<${pascal(slug)}Props>({
     required: false,
     description: "Headline. The rect that shows it is bound to it, so Make's double-click edits it in place.",
     meta: { control: { placeholder: DEFAULT_TITLE }, ui: { label: "Title", order: 1 } },
-  },
-  pageColor: {
-    type: "string",
-    required: false,
-    description: "Backdrop as #rrggbb.",
-    meta: {
-      constraints: { isColor: true },
-      control: { colorPicker: true, defaultColor: "#1c2833" },
-      ui: { label: "Page color", order: 2 },
-    },
   },
   debugLayout: {
     type: "boolean",
@@ -238,7 +229,6 @@ export const ${exportName} = defineMosaicTemplate<${pascal(slug)}Props>({
   propsSchema,
   defaultProps: {
     title: DEFAULT_TITLE,
-    pageColor: "#1c2833",
     debugLayout: false,
   },
 
@@ -255,10 +245,6 @@ async function render(
     // The schema is documentation; render() is the gate.
     const title = props.title ?? DEFAULT_TITLE;
     if (typeof title !== "string") throw new Error(\`\${ID}: title must be a string.\`);
-    if (props.pageColor !== undefined && !HEX.test(props.pageColor)) {
-      throw new Error(\`\${ID}: pageColor \${JSON.stringify(props.pageColor)} must be #rrggbb.\`);
-    }
-    const page = (props.pageColor ?? "#1c2833") as MosaicColor;
     const { width: W, height: H } = ctx.target;
     const px = (fx: number, fy: number, fw: number, fh: number) => ({
       x: Math.round(fx * W),
@@ -271,9 +257,7 @@ async function render(
     const piece = (rect: { x: number; y: number; w: number; h: number }, importance: number, source: MosaicSource) =>
       pieces.push({ rect: { ...rect, importance }, source });
 
-    // Backdrop - the whole canvas, painted first.
-    piece(px(0, 0, 1, 1), 0, makeColorTile(page));
-
+    // No backdrop rect: the page is document.backgroundColor below.
     // The title rect is BOUND to the prop it shows (bind what you display).
     const head = px(0.06, 0.3, 0.88, 0.2);
     // Every text source is TAGGED (editor.label) so the layout contract can find it.
@@ -289,7 +273,7 @@ async function render(
       version: 1,
       m0: toM0String(placed.m0, ID),
       assets: {},
-      backgroundColor: page,
+      backgroundColor: PAGE,
       sources: placed.sources,
     };
     return withLayoutIntent(doc, ctx, { templateId: ID, constraints: layoutContract(), debug: props.debugLayout === true });
@@ -330,9 +314,9 @@ describe(${JSON.stringify(ID)}, () => {
     expect((await render({ debugLayout: true })).editor).toMatchObject({ layoutContract: { ok: true } });
   });
 
-  it("is deterministic and rejects a bad colour", async () => {
+  it("is deterministic and rejects a title that is not a string", async () => {
     expect(await render()).toEqual(await render());
-    await expect(render({ pageColor: "red" })).rejects.toThrow(/#rrggbb/);
+    await expect(render({ title: 42 as never })).rejects.toThrow(/must be a string/);
   });
 });
 `;

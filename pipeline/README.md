@@ -85,8 +85,42 @@ is paid, `npm run verify` green on the untouched tree. Any failure = no run.
 **Phases** (`config.json`): each is one fresh agent call with
 `prompts/_preamble.md` + `prompts/<phase>.md`; the agent marks itself done in
 `journal/<date>/state.json`; the runner re-calls up to `maxCalls` times inside
-`timeoutMin` each, and the whole day inside `dayTimeoutMin`. `ship` runs only
-when the critique set `decision=ship`.
+`timeoutMin` each, and the whole day inside `dayTimeoutMin` (time spent
+waiting for a session window does not count). `ship` runs only when the
+critique set `decision=ship`. A resumed phase (`--from`, or a second run of
+the same day) numbers its calls after the ones already made and gets a call
+budget of its own.
+
+**Session limits** (`lib/limits.mjs`, `config.json` `limits`): the account
+the agent CLI is logged into has a five-hour window and a seven-day one, and
+Claude Code reports both on every call. Day 010 (2026-09-29) hit the
+five-hour window 25 minutes into its build; the runner re-called the phase
+twice in five seconds, both rejected, and closed the day as a no-ship with
+the agent's work reverted. Now:
+
+- **a rejected call does not count.** The runner keeps the tree as
+  `journal/<date>/limited/tree.patch` (every allowed change outside the
+  journal, as one `git diff --binary`), waits for the window — a five-hour
+  window is never further than `waitMaxMin` — and calls again, at most
+  `waitsPerDay` times a day. The day's deadline moves out by the wait. The
+  console log says `⏸ … waiting 3h29m`, then a line every half hour.
+- **a window that cannot be waited for ends the day with the tree kept**: a
+  seven-day rejection, or a second rejection after the waits are spent. The
+  gate reverts the tree and commits the journal as usual, patch included, and
+  `run.json` `limits.ended` names the phase and the resume command:
+  `node pipeline/run.mjs --from <phase>`. That run keeps the day's roster
+  slot, applies the patch before the phase runs, and clears the no-ship the
+  limit wrote.
+- **a call that would be cut is not started.** Before every call, a
+  five-hour window at or past `waitAt` is waited out first. Preflight probes
+  the account with one word from haiku (`[preflight] ✓ session headroom:
+  five_hour 11% · seven_day 62%`) and refuses the day when the seven-day
+  window is past `sevenDayStopAt`.
+
+A Codex day reports no windows and runs as before. The scheduler's own cap
+has to cover a day plus its longest wait: `ExecutionTimeLimit` is 12 hours
+in `schedule/one-a-day.task.xml` (`schedule/install.md` says how to raise a
+task already registered).
 
 **Trace** (`lib/trace.mjs`): after every phase call the runner merges the
 adapter's record — tool calls with tool, target and timing, tokens, cost as
@@ -106,7 +140,10 @@ journal/<date>/trace.json`), the last page of its why-tutorial.
    preview assets were touched; `--validate-only` exits 0 (3 = error mosaic);
    `--tutorial --validate-only` exits 0 (the why-tutorial renders);
    `preview.png` is real; `50-ship.md` exists.
-5. `tools/check-freeze.mjs --update --tag <date>` freezes the new folder.
+5. `tools/check-freeze.mjs --update --tag <date>` freezes the new folder, at
+   the m0saic line the installed CLI reports (`release`; the manifest's
+   `shipped` keeps the line each folder shipped at, and doctor holds a
+   shipped template to the rules of its own line - see the tool's header).
 6. One commit `day NNN: <id> — <title>` with `Agent:` / `Model:` trailers; push.
 
 ## Environment
@@ -121,6 +158,7 @@ journal/<date>/trace.json`), the last page of its why-tutorial.
 | `M0SAIC_PRODUCT_KEY` | paid tier for the CLI on this machine — previews are minted clean. Free tier stamps a QR and re-encodes; preflight refuses |
 | `M0SAIC_TELEMETRY` | set to `ghost` by the runner unless you set it |
 | `M0SAIC_NO_UPDATE_CHECK` | set to `1` by the runner unless you set it |
+| `ONE_A_DAY_LIMIT_GRACE_SEC` | overrides `limits.graceSec` (the e2e sets it to 0 so a simulated window resets in a second) |
 
 The agent CLIs authenticate with your subscriptions on the machine (log in
 once, interactively). No API keys live in this repo.

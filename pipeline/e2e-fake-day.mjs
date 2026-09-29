@@ -6,6 +6,9 @@
 //   node pipeline/e2e-fake-day.mjs            a shipped day (default)
 //   node pipeline/e2e-fake-day.mjs no-ship    the critic says no → journal-only commit
 //   node pipeline/e2e-fake-day.mjs tamper     the agent edits AGENTS.md → reverted, day fails
+//   node pipeline/e2e-fake-day.mjs limited    the session limit cuts the build → the runner waits the window out, the day ships
+//   node pipeline/e2e-fake-day.mjs limited-resume
+//                                            a seven-day limit ends the day with the tree kept → `--from build` restores it and ships
 //   node pipeline/e2e-fake-day.mjs --keep     leave the temp clone on disk
 //
 // Needs the m0saic CLI (paid tier) and ffmpeg: it mints a real preview.
@@ -43,12 +46,27 @@ const date = "2026-01-15"; // a fixed day so ids are stable
 const runEnv = { ...env, ONE_A_DAY_AGENT: "fake", ONE_A_DAY_FAKE_PACK: "dev", ONE_A_DAY_FAKE_SLUG: "e2e-card" };
 if (mode === "no-ship") runEnv.ONE_A_DAY_FAKE_DECISION = "no-ship";
 if (mode === "tamper") runEnv.ONE_A_DAY_FAKE_OUT_OF_SCOPE = "1";
+// A simulated window resets in a second; no grace on top, or the wait is 91 s.
+if (mode === "limited") { runEnv.ONE_A_DAY_FAKE_LIMIT = "five_hour"; runEnv.ONE_A_DAY_LIMIT_GRACE_SEC = "0"; }
+if (mode === "limited-resume") { runEnv.ONE_A_DAY_FAKE_LIMIT = "seven_day"; runEnv.ONE_A_DAY_LIMIT_GRACE_SEC = "0"; }
 
-let exit = 0;
-try {
-  const out = execFileSync("node", ["pipeline/run.mjs", "--no-push", "--skip-preflight", "--date", date], { cwd: clone, env: runEnv, encoding: "utf8", stdio: ["ignore", "pipe", "inherit"] });
-  process.stdout.write(out);
-} catch (e) { exit = e.status ?? 1; process.stdout.write(e.stdout ?? ""); }
+const runDay = (args, env) => {
+  try {
+    const out = execFileSync("node", ["pipeline/run.mjs", "--no-push", "--skip-preflight", "--date", date, ...args], { cwd: clone, env, encoding: "utf8", stdio: ["ignore", "pipe", "inherit"] });
+    process.stdout.write(out);
+    return 0;
+  } catch (e) { process.stdout.write(e.stdout ?? ""); return e.status ?? 1; }
+};
+const readJson = (rel) => JSON.parse(fs.readFileSync(path.join(clone, rel), "utf8"));
+
+let exit = runDay([], runEnv);
+// The limited day ended; a person comes back after the window and resumes it.
+let first = null;
+if (mode === "limited-resume") {
+  first = { sha: sh("git", ["rev-parse", "HEAD"]).trim(), run: readJson(`journal/${date}/run.json`), state: readJson(`journal/${date}/state.json`), status: sh("git", ["status", "--porcelain"]).trim(), exit };
+  const { ONE_A_DAY_FAKE_LIMIT: _cut, ...resumeEnv } = runEnv;
+  exit = runDay(["--from", "build"], resumeEnv);
+}
 
 const after = sh("git", ["rev-parse", "HEAD"]).trim();
 const subject = sh("git", ["log", "-1", "--format=%s%n%b"]).trim();
@@ -82,5 +100,29 @@ if (mode === "ship") {
   if (run.result?.status !== "failed") fail(`result ${run.result?.status}`); else ok("result failed (scope violation)");
   if (changed.includes("AGENTS.md")) fail("AGENTS.md tamper was committed"); else ok("AGENTS.md tamper reverted");
   if (changed.some((p) => p.startsWith("src/"))) fail("template leaked on a failed day"); else ok("template discarded");
+} else if (mode === "limited") {
+  if (exit !== 0) fail(`runner exit ${exit}`);
+  if (run.result?.status !== "shipped") fail(`result ${run.result?.status}: ${run.result?.reason}`); else ok("result shipped, after the wait");
+  if ((run.limits?.hits ?? []).length !== 1) fail(`${(run.limits?.hits ?? []).length} hit(s) on record, expected 1`); else ok(`the hit is on record (${run.limits.hits[0].window}, kept ${run.limits.hits[0].kept} path(s))`);
+  if ((run.limits?.waits ?? []).length !== 1) fail(`${(run.limits?.waits ?? []).length} wait(s), expected 1`); else ok("the runner waited for the window once");
+  if (run.phases?.build?.calls !== 2) fail(`build calls ${run.phases?.build?.calls}, expected 2: the cut call must not count`); else ok("the cut call did not count against the phase");
+  if (!changed.includes(`journal/${date}/limited/tree.patch`)) fail("the kept tree was not committed with the journal"); else ok("the kept tree rode along in the journal");
+  if (!changed.includes("src/dev/e2e-card/v1/e2e-card.ts")) fail("template not committed"); else ok("template committed");
+  const trace = readJson(`journal/${date}/trace.json`);
+  const names = trace.phases.map((p) => p.name);
+  if (!names.includes("build") || !names.includes("build (2)")) fail(`trace phases ${names.join(", ")}: both build calls expected`); else ok("both build calls are on the timeline");
+} else if (mode === "limited-resume") {
+  if (first.run.result?.status !== "no-ship") fail(`first run ended ${first.run.result?.status}`); else ok("first run: no-ship");
+  if (!/^session limit/.test(String(first.state.noShipReason))) fail(`first run's reason: ${first.state.noShipReason}`); else ok(`first run: the reason names the limit (${first.run.limits?.ended?.window})`);
+  if (first.status) fail(`tree not clean after the limited day:\n${first.status}`); else ok("first run: tree clean, the work reverted");
+  const firstFiles = sh("git", ["show", "--stat=200", "--format=", first.sha]);
+  if (!firstFiles.includes(`journal/${date}/limited/tree.patch`)) fail("first run: the kept tree was not committed"); else ok("first run: the kept tree is in the journal commit");
+  if (/\bsrc\/dev\/e2e-card\//.test(firstFiles)) fail("first run: the template leaked into the no-ship commit");
+  if (exit !== 0) fail(`resume exit ${exit}`);
+  if (run.result?.status !== "shipped") fail(`resume ended ${run.result?.status}: ${run.result?.reason}`); else ok("resume: shipped");
+  if (!run.limits?.restored) fail("resume: the tree was not restored from the patch"); else ok(`resume: restored ${run.limits.restored.paths} path(s) from the patch`);
+  if (run.phases?.build?.calls !== 2) fail(`resume: build calls ${run.phases?.build?.calls}, expected 2 (numbered after the cut one)`); else ok("resume: the build call was numbered after the cut one");
+  if (!changed.includes("src/dev/e2e-card/v1/e2e-card.ts")) fail("resume: template not committed"); else ok("resume: template committed");
+  if (after === first.sha) fail("resume made no commit");
 }
 if (!KEEP) fs.rmSync(tmp, { recursive: true, force: true }); else console.log(`kept: ${clone}`);

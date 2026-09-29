@@ -44,6 +44,19 @@ export async function run({ prompt, cwd, logDir, label, env = {} }) {
       if (process.env.ONE_A_DAY_FAKE_OUT_OF_SCOPE) fs.writeFileSync(path.join(cwd, "AGENTS.md"), fs.readFileSync(path.join(cwd, "AGENTS.md"), "utf8") + "\n<!-- tampered -->\n");
       await sh("npm", ["run", "build"]);
       await sh("npm", ["run", "fingerprints:update"]);
+      // The account's session limit cutting the first build call, the way
+      // Claude Code reports it: the work is in the tree, the phase is not done,
+      // and the call ends with a rejection naming the window and its reset.
+      // five_hour resets in a second (the runner waits it out); seven_day
+      // resets in six days (the runner ends the day with the tree kept).
+      const cut = process.env.ONE_A_DAY_FAKE_LIMIT;
+      if (cut && label === "build-1") {
+        w("30-build.md", `# Build — ${date}\n\n(in progress - call 1)\n\nScaffolded; the session limit cut this call (fake).\n`);
+        const resetsAt = new Date(Date.now() + (cut === "seven_day" ? 6 * 86_400_000 : 1000)).toISOString();
+        const windows = { five_hour: { utilization: cut === "five_hour" ? 1.01 : 0.4, resetsAt }, seven_day: { utilization: cut === "seven_day" ? 1.0 : 0.05, resetsAt } };
+        fs.appendFileSync(log, `[fake] session limit (${cut}) — rejected\n`);
+        return { exitCode: 1, timedOut: false, ms: Date.now() - startedAt, transcript: null, log, trace: trace.finish({ exitCode: 1 }), limit: { seen: true, hit: true, window: cut, resetsAt, status: "rejected", windows, message: "You've hit your session limit (fake)" } };
+      }
       w("30-build.md", `# Build — ${date}\n\nVariant a: scaffold as generated (exit ${r.exitCode}).\n`);
       patchState(dayDir, { build: "done", variants: ["a"] });
     }

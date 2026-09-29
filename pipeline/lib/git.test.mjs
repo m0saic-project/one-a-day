@@ -1,6 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { classifyChanges, PROTECTED } from "./git.mjs";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { execFileSync } from "node:child_process";
+import { classifyChanges, patchPaths, porcelain, PROTECTED, restoreTree, snapshotTree } from "./git.mjs";
 
 const D = "2026-09-21";
 const e = (status, path) => ({ status, path });
@@ -77,4 +81,89 @@ test("runtime caches inside the day's journal are scratch; the rest of the journ
   for (const s of r.scratch) assert.match(s.reason, /runtime cache/);
   assert.deepEqual(r.allowed.map((a) => a.path), [`journal/${D}/variants/a/report.json`]);
   assert.equal(r.forbidden.length, 1, "another day's cache is still another day's journal");
+});
+
+test("a kept tree round-trips: the day's work outside the journal, tracked and untracked, binary included, and nothing else", () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "one-a-day-keep-"));
+  const env = { ...process.env, GIT_AUTHOR_NAME: "t", GIT_AUTHOR_EMAIL: "t@t", GIT_COMMITTER_NAME: "t", GIT_COMMITTER_EMAIL: "t@t" };
+  const g = (...a) => execFileSync("git", a, { cwd: tmp, env, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
+  const w = (rel, data) => { fs.mkdirSync(path.join(tmp, path.dirname(rel)), { recursive: true }); fs.writeFileSync(path.join(tmp, rel), data); };
+  try {
+    g("init", "-q", "-b", "main");
+    g("config", "commit.gpgsign", "false");
+    // As the repo itself: LF in the tree whatever the machine's autocrlf says.
+    w(".gitattributes", "* text=auto eol=lf\n");
+    w("src/dev/registry.ts", "export const templates = [];\n");
+    w("template-manifest.json", "{}\n");
+    w("dist/dev/index.js", "// old\n");
+    w(`journal/${D}/state.json`, "{}\n");
+    g("add", "-A");
+    g("commit", "-q", "-m", "scaffold");
+    // A day's work: a new template (text and a binary sidecar), the wiring
+    // edited, dist rebuilt, the journal written - plus a stray render at the
+    // root that is scratch, not work.
+    w("src/dev/card/v1/card.ts", "export const card = 1;\n");
+    w("src/dev/card/v1/card.png", Buffer.from([0x89, 0x50, 0x4e, 0x47, 0, 1, 2, 0xff, 0xfe, 0x0d, 0x0a, 0x1a]));
+    w("src/dev/registry.ts", "export const templates = [card];\n");
+    w("dist/dev/index.js", "// new\n");
+    w(`journal/${D}/30-build.md`, "# Build\n");
+    w("out.png", "junk");
+
+    const patch = path.join(tmp, "journal", D, "limited", "tree.patch");
+    const kept = snapshotTree(tmp, patch, { date: D });
+    assert.deepEqual(kept.sort(), ["dist/dev/index.js", "src/dev/card/v1/card.png", "src/dev/card/v1/card.ts", "src/dev/registry.ts"]);
+    assert.deepEqual(patchPaths(patch).sort(), kept.sort());
+    assert.equal(g("diff", "--cached", "--name-only").trim(), "", "the index is left as it was found");
+    assert.ok(porcelain(tmp).some((x) => x.status === "??" && x.path === "src/dev/card/v1/card.ts"), "the new file is still untracked");
+
+    // The gate's revert: tracked back to HEAD, untracked work deleted.
+    g("checkout", "HEAD", "--", "src/dev/registry.ts", "dist/dev/index.js");
+    fs.rmSync(path.join(tmp, "src/dev/card"), { recursive: true });
+    fs.rmSync(path.join(tmp, "out.png"));
+    assert.equal(fs.existsSync(path.join(tmp, "src/dev/card/v1/card.ts")), false);
+
+    const r = restoreTree(tmp, patch);
+    assert.equal(r.ok, true, r.error);
+    assert.equal(r.threeWay, false);
+    assert.equal(fs.readFileSync(path.join(tmp, "src/dev/card/v1/card.ts"), "utf8"), "export const card = 1;\n");
+    assert.deepEqual([...fs.readFileSync(path.join(tmp, "src/dev/card/v1/card.png"))], [0x89, 0x50, 0x4e, 0x47, 0, 1, 2, 0xff, 0xfe, 0x0d, 0x0a, 0x1a]);
+    assert.equal(fs.readFileSync(path.join(tmp, "src/dev/registry.ts"), "utf8"), "export const templates = [card];\n");
+    assert.equal(fs.readFileSync(path.join(tmp, "dist/dev/index.js"), "utf8"), "// new\n");
+    assert.equal(fs.existsSync(path.join(tmp, "out.png")), false, "scratch was never kept");
+    assert.equal(g("diff", "--cached", "--name-only").trim(), "", "restored into the working tree only");
+    assert.ok(porcelain(tmp).some((x) => x.status === "??" && x.path === "src/dev/card/v1/card.ts"), "restored work looks like the agent's own writes");
+
+    // Applied over HEAD that moved on (the journal-only commit a no-ship day makes): three-way.
+    g("checkout", "HEAD", "--", "src/dev/registry.ts", "dist/dev/index.js");
+    fs.rmSync(path.join(tmp, "src/dev/card"), { recursive: true });
+    g("add", "-A");
+    g("commit", "-q", "-m", "no-ship: journal only");
+    const again = restoreTree(tmp, patch);
+    assert.equal(again.ok, true, again.error);
+    assert.equal(fs.readFileSync(path.join(tmp, "src/dev/card/v1/card.ts"), "utf8"), "export const card = 1;\n");
+
+    assert.deepEqual(snapshotTree(tmp, path.join(tmp, "none.patch"), { date: "2000-01-01" }), snapshotTree(tmp, path.join(tmp, "none.patch"), { date: "2000-01-01" }));
+  } finally {
+    fs.rmSync(tmp, { recursive: true, force: true });
+  }
+});
+
+test("a tree with nothing to keep writes no patch", () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "one-a-day-keep-"));
+  const env = { ...process.env, GIT_AUTHOR_NAME: "t", GIT_AUTHOR_EMAIL: "t@t", GIT_COMMITTER_NAME: "t", GIT_COMMITTER_EMAIL: "t@t" };
+  const g = (...a) => execFileSync("git", a, { cwd: tmp, env, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
+  try {
+    g("init", "-q", "-b", "main");
+    g("config", "commit.gpgsign", "false");
+    fs.writeFileSync(path.join(tmp, "a.txt"), "a\n");
+    g("add", "-A");
+    g("commit", "-q", "-m", "one");
+    fs.mkdirSync(path.join(tmp, "journal", D), { recursive: true });
+    fs.writeFileSync(path.join(tmp, "journal", D, "state.json"), "{}\n");
+    const patch = path.join(tmp, "journal", D, "limited", "tree.patch");
+    assert.deepEqual(snapshotTree(tmp, patch, { date: D }), []);
+    assert.equal(fs.existsSync(patch), false);
+  } finally {
+    fs.rmSync(tmp, { recursive: true, force: true });
+  }
 });

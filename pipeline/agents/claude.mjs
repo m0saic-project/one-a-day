@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { runProcess } from "../lib/spawn.mjs";
 import { formatEvent } from "../lib/stream-log.mjs";
+import { createLimitWatcher } from "../lib/limits.mjs";
 import { createTraceRecorder } from "../lib/trace.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -30,6 +31,22 @@ export async function available() {
   return r.exitCode === 0 ? true : `claude CLI not runnable (${r.stderr.trim() || r.exitCode})`;
 }
 
+/**
+ * How much of the account's session windows is left, read off the smallest
+ * call the CLI will make: one word from the cheapest model, no tools. The
+ * windows are per account, not per model, so what haiku sees is what the
+ * day's model will get. About two cents.
+ */
+export async function headroom({ cwd, env = {}, logFile } = {}) {
+  const watcher = createLimitWatcher();
+  const r = await runProcess({
+    cmd: "claude", args: ["-p", "--model", "haiku", "--output-format", "stream-json", "--verbose", "--no-session-persistence"],
+    cwd, env, input: "Reply with exactly the word: ok", timeoutMs: 90_000, logFile,
+    onLine: (line, stream) => { if (stream === "stdout") watcher.onLine(line); },
+  });
+  return { ...watcher.finish(), exitCode: r.exitCode, timedOut: r.timedOut };
+}
+
 export async function run({ prompt, cwd, logDir, label, timeoutMs, model, config = {}, env = {} }) {
   const transcript = path.join(logDir, `${label}.jsonl`);
   const log = path.join(logDir, `${label}.log`);
@@ -37,6 +54,9 @@ export async function run({ prompt, cwd, logDir, label, timeoutMs, model, config
   // The trace: tool calls, tokens and timing from the stream itself (never self-reported).
   const m = /^(.*?)-(\d+)$/.exec(label);
   const trace = createTraceRecorder({ phase: m ? m[1] : label, call: m ? Number(m[2]) : 1 });
+  // The account's session limit, as the stream reports it: the runner waits
+  // for a window that rejected the call instead of calling again into it.
+  const limit = createLimitWatcher();
   const ultracode = config.ultracode === true;
   const args = [
     "-p",
@@ -53,9 +73,9 @@ export async function run({ prompt, cwd, logDir, label, timeoutMs, model, config
   const res = await runProcess({
     cmd: "claude", args, cwd, env, input: prompt, timeoutMs, logFile: log,
     onLine: (line, stream) => {
-      if (stream === "stdout") { raw.write(line + "\n"); trace.onLine(line); const f = formatEvent(line, label); if (f) fs.appendFileSync(log, f + "\n"); }
+      if (stream === "stdout") { raw.write(line + "\n"); trace.onLine(line); limit.onLine(line); const f = formatEvent(line, label); if (f) fs.appendFileSync(log, f + "\n"); }
     },
   });
   raw.end();
-  return { exitCode: res.exitCode, timedOut: res.timedOut, ms: res.ms, transcript, log, trace: trace.finish({ exitCode: res.exitCode, timedOut: res.timedOut }) };
+  return { exitCode: res.exitCode, timedOut: res.timedOut, ms: res.ms, transcript, log, trace: trace.finish({ exitCode: res.exitCode, timedOut: res.timedOut }), limit: limit.finish() };
 }

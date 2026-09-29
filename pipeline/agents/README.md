@@ -20,8 +20,18 @@ export async function run({
   config,     // adapters.<name> from pipeline/config.json, with the drawn roster
               // slot's `adapter` overrides merged over it
   env,        // extra env for the child (M0SAIC_TELEMETRY, ONE_A_DAY_*)
-}) → { exitCode, timedOut, ms, transcript, log, trace? }
+}) → { exitCode, timedOut, ms, transcript, log, trace?, limit? }
+export async function headroom({ cwd, env, logFile })   // optional: the account's session windows, from the cheapest call the CLI makes
 ```
+
+`limit` is the account's session limit as the CLI reported it during the
+call (`lib/limits.mjs` `createLimitWatcher`): `{ seen, hit, window,
+resetsAt, status, windows, message }`. A CLI that says nothing about limits
+returns `seen: false` or omits the field, and the runner treats its calls as
+it always did. `hit: true` is what makes the runner keep the tree and wait
+for the window instead of calling again (`pipeline/README.md`, "Session
+limits"). `headroom()` is what preflight uses to see the windows before the
+day spends anything.
 
 `trace` is the phase call's record from `pipeline/lib/trace.mjs`
 (`createTraceRecorder` fed every stdout line, then `finish()`): tool calls
@@ -54,8 +64,8 @@ the agent during the scout phase per `_preamble.md`). The human may set
 
 | File | CLI | Notes |
 |---|---|---|
-| `claude.mjs` | Claude Code (`claude -p`) | stream-json transcript; permission mode from config (`bypassPermissions` for an unattended laptop); `claude.settings.json` denies git push/commit/reset, npm publish, sudo |
-| `codex.mjs` | OpenAI Codex (`codex exec`) | `-s workspace-write`, `--json` events, `--skip-git-repo-check`; network for the scout phase via config override (verify the key name against your installed `codex --help`) |
+| `claude.mjs` | Claude Code (`claude -p`) | stream-json transcript; permission mode from config (`bypassPermissions` for an unattended laptop); `claude.settings.json` denies git push/commit/reset, npm publish, sudo; reports the session windows (`limit`, `headroom()`) |
+| `codex.mjs` | OpenAI Codex (`codex exec`) | `-s workspace-write`, `--json` events, `--skip-git-repo-check`; network for the scout phase via config override (verify the key name against your installed `codex --help`); reports no session windows yet |
 
 ### Config keys these two read
 

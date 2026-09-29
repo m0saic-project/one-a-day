@@ -108,7 +108,8 @@ if (unfrozenNow.length > 0) die(`frozen.manifest.json DROPS ${unfrozenNow.join("
 if (refrozen.length) say(`re-frozen against HEAD: ${refrozen.join(", ")}`);
 if (newlyFrozen.length) say(`newly frozen: ${newlyFrozen.join(", ")}`);
 const frozenCount = Object.keys(nowFrozen).length;
-const frozenTag = JSON.parse(fs.readFileSync(path.join(ROOT, "frozen.manifest.json"), "utf8")).release;
+const frozenNow = JSON.parse(fs.readFileSync(path.join(ROOT, "frozen.manifest.json"), "utf8"));
+const frozenTag = frozenNow.tag ? `${frozenNow.tag} (m0saic ${frozenNow.release})` : frozenNow.release;
 
 // ── 3 + 4. verify, doctor ──
 await step("npm run verify (build, every convention gate, lint, tests, loader contract, dependency policy)", "npm", ["run", "verify"]);

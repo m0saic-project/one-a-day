@@ -276,5 +276,29 @@
       "https://github.com/alexdej/puzpy",
       "https://github.com/viresh-ratnakar/exet"
     ]
+  },
+  {
+    "date": "2026-09-30",
+    "day": 11,
+    "agent": "unknown",
+    "model": null,
+    "rosterId": null,
+    "status": "no-ship",
+    "templateId": null,
+    "title": null,
+    "useCase": "Batchable homebrew serving cards from BeerXML recipe fields: name, style and ABV for keg tags and brew-club tastings.",
+    "tags": [
+      "homebrewing",
+      "beerxml",
+      "labels",
+      "community",
+      "print"
+    ],
+    "sources": [
+      "https://forum.homebrewersassociation.org/t/share-your-labels/40286",
+      "https://docs.brewfather.app/recipes/designer",
+      "https://www.beerxml.com/beerxml.htm",
+      "https://homebrewtalk.com/threads/creating-tap-handle-labels.296516/"
+    ]
   }
 ]

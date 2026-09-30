@@ -1,0 +1,24 @@
+{
+  "useCase": "Batchable homebrew serving cards from BeerXML recipe fields: name, style and ABV for keg tags and brew-club tastings.",
+  "who": "Homebrewers in the American Homebrewers Association forum and Homebrew Talk who make serving labels for keg changes, club meetings and tasting events.",
+  "sources": [
+    "https://forum.homebrewersassociation.org/t/share-your-labels/40286",
+    "https://docs.brewfather.app/recipes/designer",
+    "https://www.beerxml.com/beerxml.htm",
+    "https://homebrewtalk.com/threads/creating-tap-handle-labels.296516/"
+  ],
+  "tags": [
+    "homebrewing",
+    "beerxml",
+    "labels",
+    "community",
+    "print"
+  ],
+  "scout": "done",
+  "pack": "events",
+  "slug": "homebrew-serving-card",
+  "title": "Homebrew Serving Card",
+  "plan": "done",
+  "decision": "no-ship",
+  "noShipReason": "build phase did not complete"
+}

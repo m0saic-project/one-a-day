@@ -18,7 +18,10 @@ export function dayDir(repo, date) { return path.join(journalRoot(repo), date); 
 export function indexPath(repo) { return path.join(journalRoot(repo), "index.json"); }
 
 export function readJson(file, fallback = null) {
-  try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { return fallback; }
+  // An agent that rewrites run.json from Windows PowerShell 5.1 (`Set-Content
+  // -Encoding utf8`) leaves a UTF-8 BOM; JSON.parse rejects it and the day's
+  // record would silently restart from the fallback (day 011).
+  try { return JSON.parse(fs.readFileSync(file, "utf8").replace(/^﻿/, "")); } catch { return fallback; }
 }
 export function writeJson(file, obj) {
   fs.mkdirSync(path.dirname(file), { recursive: true });

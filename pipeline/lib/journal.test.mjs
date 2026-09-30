@@ -30,6 +30,20 @@ test("ensureDay creates the folder once; state and run patches merge", () => {
   assert.equal(r.phases.scout.calls, 1);
 });
 
+test("a run.json an agent rewrote with a UTF-8 BOM still reads and merges", () => {
+  const repo = tmp();
+  const a = ensureDay(repo, "2026-09-30");
+  patchRun(a.dir, { runner: { adapter: "codex" }, phases: { scout: { calls: 1 } } });
+  const file = path.join(a.dir, "run.json");
+  fs.writeFileSync(file, "﻿" + fs.readFileSync(file, "utf8"), "utf8"); // what Windows PowerShell 5.1 `Set-Content -Encoding utf8` leaves
+  assert.equal(readRun(a.dir).runner.adapter, "codex", "the BOM is stripped, not a reason to fall back to {}");
+  patchRun(a.dir, { phases: { build: { calls: 1 } } });
+  const r = readRun(a.dir);
+  assert.equal(r.runner.adapter, "codex");
+  assert.equal(r.phases.scout.calls, 1);
+  assert.equal(r.phases.build.calls, 1);
+});
+
 test("index rows upsert by date, stay sorted; day numbers count earlier rows", () => {
   const repo = tmp();
   fs.mkdirSync(path.join(repo, "journal"));

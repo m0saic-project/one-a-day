@@ -19,6 +19,10 @@ journal/**/renders/*.mp4
 journal/**/renders/*.mov
 journal/**/renders/*.webm
 
+# the clip tools/gen-previews.mjs renders as the source of a preview.gif: deleted once the
+# GIF is written; this covers a run that was killed in between
+assets/templates/**/.preview-gif-source.mp4
+
 # OS files
 .DS_Store
 Thumbs.db

@@ -7,9 +7,20 @@
  * via the m0saic CLI at 1920x1080. Ids listed in ANIMATED_PREVIEW_IDS also get
  * preview.mp4 (1920x1080, the template's own length) + poster.png.
  *
+ * Every VIDEO template also gets preview.gif: a short loop of its clip at its
+ * defaults, for the directory page (TEMPLATES.md) - GitHub plays a GIF inline
+ * and will not play a repo .mp4. The clip is rendered once at 640x360 (or the
+ * committed preview.mp4 is reused), sped up when it is longer than ten
+ * seconds so the whole clip fits the loop, and encoded by ffmpeg with its own
+ * palette. The manifest does not list it (hosts use image / video / poster);
+ * tools/gen-gallery.mjs finds it by name. A GIF that cannot be minted is a
+ * warning, never a failure: the browse card is the still, and a day does not
+ * fail over a directory thumbnail.
+ *
  * Budgets (SOFT, 2026-09-14): preview.png > 500 KB or preview.mp4 > 5 MB prints a
  * warning and keeps the file — devs want previews that look like the product, not
  * 360p thumbnails. Trim the default props only when a warning says so.
+ * preview.gif > 3 MB warns the same way.
  *
  * CLI resolution and Windows quoting: same rules as tools/smoke-render.mjs
  * (M0SAIC_CLI env override, shell spawn on win32).
@@ -17,14 +28,24 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 
+const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const IS_WIN = process.platform === "win32";
 const FORCE = process.argv.includes("--force");
 
 const PNG_BUDGET = 500 * 1024;
 const MP4_BUDGET = 5 * 1024 * 1024;
+const GIF_BUDGET = 3 * 1024 * 1024;
+/** The directory-page loop: 640 px wide, 12 fps, at most ten seconds. */
+const GIF_WIDTH = 640;
+const GIF_FPS = 12;
+const GIF_MAX_SEC = 10;
+/** The canvas the loop's source clip is rendered at: the smallest 16:9 contract
+ *  canvas at or above the GIF's width, the same shape as the browse card. */
+const GIF_CLIP_DIMS = ["640", "360"];
 
 /** Ids whose motion is the point — these also get preview.mp4 + poster.png. */
 const ANIMATED_PREVIEW_IDS = new Set([
@@ -150,6 +171,57 @@ function enforceBudget(file, budget, label) {
   return true;
 }
 
+/** The built template for an id (its outputHints say still or clip), or undefined. */
+let built = null;
+function builtTemplate(key) {
+  if (built === null) {
+    try { built = new Map((require("../dist/index.js").templates ?? []).map((t) => [String(t.id), t])); }
+    catch (err) { console.warn(`! dist/index.js did not load (${String(err && err.message).split("\n")[0]}) - no preview.gif will be minted.`); built = new Map(); }
+  }
+  return built.get(key);
+}
+
+/** A clip's length in seconds, read from ffmpeg's own banner; null when it cannot say. */
+function clipSeconds(video) {
+  const result = spawnSync(FFMPEG, ["-hide_banner", "-i", video], { stdio: "pipe", encoding: "utf8" });
+  const m = /Duration:\s*(\d+):(\d+):(\d+(?:\.\d+)?)/.exec(String(result.stderr ?? ""));
+  return m ? Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[3]) : null;
+}
+
+/**
+ * preview.gif for a video template: the whole default clip as one short loop.
+ * Source: the committed preview.mp4 when there is one, else a 640x360 render
+ * written beside the GIF and removed again (never left in the tree). Returns
+ * a line for the log, or null after printing why it could not be minted.
+ */
+function mintGif(key, dir, hintSeconds) {
+  const gif = path.join(dir, "preview.gif");
+  const committed = path.join(dir, "preview.mp4");
+  const scratch = path.join(dir, ".preview-gif-source.mp4");
+  try {
+    let clip = committed;
+    if (!fs.existsSync(committed)) {
+      const [w, h] = GIF_CLIP_DIMS;
+      if (!runCli(["make", key, "--template-repo", ROOT, "-w", w, "-h", h, "-o", scratch, "--quiet", ...(PREVIEW_OVERRIDES.get(key) ?? [])], `preview.gif source clip for ${key}`)) return null;
+      if (!fs.existsSync(scratch)) { console.warn(`! preview.gif for ${key}: the CLI exited 0 but wrote no clip.`); return null; }
+      clip = scratch;
+    }
+    const seconds = clipSeconds(clip) ?? hintSeconds;
+    if (!(seconds > 0)) { console.warn(`! preview.gif for ${key}: the clip's length is unknown.`); return null; }
+    // Longer than the loop: speed the WHOLE clip up rather than cut it, so the end state is in the loop.
+    const speed = Math.max(1, seconds / GIF_MAX_SEC);
+    const graph = `[0:v]setpts=PTS/${speed.toFixed(4)},fps=${GIF_FPS},scale=${GIF_WIDTH}:-2:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle`;
+    const result = spawnSync(FFMPEG, ["-y", "-hide_banner", "-loglevel", "error", "-i", clip, "-filter_complex", graph, "-loop", "0", gif], { stdio: "pipe", encoding: "utf8" });
+    if (result.error && result.error.code === "ENOENT") { console.warn(`! preview.gif for ${key}: ffmpeg not found ("${FFMPEG}"). Set M0SAIC_FFMPEG.`); return null; }
+    if (result.status !== 0 || !fs.existsSync(gif)) { console.warn(`! preview.gif for ${key}: ffmpeg failed.${result.stderr ? ` ${result.stderr.trim().split("\n")[0]}` : ""}`); fs.rmSync(gif, { force: true }); return null; }
+    const size = fs.statSync(gif).size;
+    if (size > GIF_BUDGET) console.warn(`! preview.gif for ${key}: ${(size / 1024).toFixed(0)} KB is over the ${(GIF_BUDGET / 1024).toFixed(0)} KB soft budget — kept.`);
+    return `${(size / 1024).toFixed(0)} KB, ${seconds.toFixed(1)} s of clip${speed > 1 ? ` at ${speed.toFixed(1)}x` : ""}${clip === committed ? ", from preview.mp4" : ""}`;
+  } finally {
+    fs.rmSync(scratch, { force: true });
+  }
+}
+
 const manifest = JSON.parse(
   fs.readFileSync(path.join(ROOT, "template-manifest.json"), "utf8"),
 );
@@ -157,6 +229,8 @@ const manifest = JSON.parse(
 let minted = 0;
 let skipped = 0;
 let failures = 0;
+let gifsMinted = 0;
+let gifsMissed = 0;
 
 for (const entry of manifest.templates ?? []) {
   const key = String(entry.templateKey);
@@ -246,8 +320,18 @@ for (const entry of manifest.templates ?? []) {
       if (!okPoster || !enforceBudget(poster, PNG_BUDGET, `poster.png for ${key}`)) failures += 1;
     }
   }
+
+  // The directory-page loop, for every template whose output is a clip.
+  const hints = builtTemplate(key)?.outputHints;
+  if (hints?.format?.kind === "video" && (!fs.existsSync(path.join(dir, "preview.gif")) || FORCE)) {
+    fs.mkdirSync(dir, { recursive: true });
+    const line = mintGif(key, dir, Number(hints.durationMs) / 1000);
+    if (line) { gifsMinted += 1; console.log(`  ok preview.gif ${key} (${line})`); }
+    else gifsMissed += 1;
+  }
 }
 
 console.log(`\ngen-previews: minted ${minted}, skipped ${skipped} existing, ${failures} failure(s)`);
+if (gifsMinted + gifsMissed > 0) console.log(`gen-previews: preview.gif - minted ${gifsMinted}${gifsMissed ? `, ${gifsMissed} could not be minted (a warning: the directory page falls back to the still)` : ""}`);
 console.log("gen-previews: re-run `npm run build` so the manifest picks up new preview paths.");
 if (failures > 0) process.exit(1);

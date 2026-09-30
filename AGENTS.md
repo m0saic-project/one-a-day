@@ -77,7 +77,8 @@ npm test               # jest (src/**/*.test.ts) + the pipeline's own tests
 npm run fingerprints:update             # after an intended layout change (commits <slug>.layout.m0 beside the template)
 node pipeline/render/render-variant.mjs @one-a-day/<pack>/<slug>/v1 journal/<date>/variants/a
                        # build + render landscape/portrait/square + stills + report.json + a copy of the source folder
-npm run previews       # mint the browse card (ship phase only; needs the CLI + paid tier)
+npm run previews       # mint the browse card (ship phase only; needs the CLI + paid tier);
+                       # a video template also gets preview.gif, the loop TEMPLATES.md plays
 npm run verify         # build + lint + jest + loader contract + dependency policy — the gate runs this
 m0saic doctor . --json # the same conventions from outside the build
 m0saic make @one-a-day/<pack>/<slug>/v1 --template-repo . --tutorial -w 1280 -h 720 -o why.mp4

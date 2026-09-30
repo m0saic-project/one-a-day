@@ -1,0 +1,21 @@
+{
+  "note": "Phase boundaries of the interactive session that finished day 011, UTC, written as each phase began. logs/session-trace.mjs bins the transcript's per-response usage by these marks and appends the phases to trace.json. The session's earlier work (diagnosing the no-ship, maintain 0a0fb74 and 92a346e) is before the first mark and is not part of the day's timeline.",
+  "marks": [
+    {
+      "phase": "build",
+      "call": 4,
+      "at": "2026-09-30T14:14:05.000Z",
+      "what": "read the hand-run playbook, Codex's scout and brief, the neighbours and the shared helpers; rewrote run.json and state.json; scaffold, template, test, variants a and b"
+    },
+    {
+      "phase": "critique",
+      "at": "2026-09-30T14:37:11.819Z",
+      "what": "stills, extra renders and reports of a and b scored against the brief's rubric and the critic's nine lines"
+    },
+    {
+      "phase": "ship",
+      "at": "2026-09-30T14:38:39.722Z",
+      "what": "the pick (a) back in place, previews, verify, doctor, the session's phases into trace.json and the frozen timeline into WHY, the pick re-rendered from the final source, the journal, the gate, the push"
+    }
+  ]
+}

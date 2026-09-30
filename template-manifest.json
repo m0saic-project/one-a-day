@@ -184,6 +184,21 @@
       }
     },
     {
+      "slug": "homebrew-serving-card",
+      "templateKey": "@one-a-day/events/homebrew-serving-card/v1",
+      "title": "2026-09-30 · Homebrew Serving Card",
+      "description": "Homebrew Serving Card: describe the ONE concept this template teaches, in one line, for the Templates page.",
+      "tags": [
+        "events",
+        "2026-09-30",
+        "day-011"
+      ],
+      "pack": "events",
+      "preview": {
+        "image": "assets/templates/@one-a-day__events__homebrew-serving-card__v1/preview.png"
+      }
+    },
+    {
       "slug": "speedrun-pb-recap",
       "templateKey": "@one-a-day/gaming/speedrun-pb-recap/v1",
       "title": "2026-09-26 · Speedrun PB Recap",

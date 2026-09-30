@@ -1,0 +1,74 @@
+{
+  "note": "WHY.timeline for day 011 as lib/trace.mjs prints it from trace.json after logs/session-trace.mjs appended the session's phases",
+  "until": "2026-09-30T14:43:21.029Z",
+  "timeline": {
+    "source": "runner",
+    "phases": [
+      {
+        "name": "scout",
+        "startMs": 0,
+        "durMs": 340832,
+        "calls": 18,
+        "tokens": 2313366,
+        "tools": "shell 11, web_search 6, edit 1"
+      },
+      {
+        "name": "plan",
+        "startMs": 340849,
+        "durMs": 372990,
+        "calls": 17,
+        "tokens": 2261524,
+        "tools": "shell 13, edit 2, web_search 2"
+      },
+      {
+        "name": "build",
+        "startMs": 713859,
+        "durMs": 70394,
+        "calls": 10,
+        "tools": "shell 10",
+        "status": "error"
+      },
+      {
+        "name": "build (2)",
+        "startMs": 784260,
+        "durMs": 2560,
+        "status": "error"
+      },
+      {
+        "name": "build (3)",
+        "startMs": 786825,
+        "durMs": 3290,
+        "status": "error"
+      },
+      {
+        "name": "build (4)",
+        "startMs": 4195773,
+        "durMs": 1386819,
+        "calls": 71,
+        "tokens": 8553427,
+        "costUsd": 10.66,
+        "tools": "Read 28, Bash 19, Edit 12"
+      },
+      {
+        "name": "critique",
+        "startMs": 5582592,
+        "durMs": 87903,
+        "calls": 7,
+        "tokens": 1027109,
+        "costUsd": 0.93,
+        "tools": "Read 3, Write 2, Bash 1"
+      },
+      {
+        "name": "ship",
+        "startMs": 5670495,
+        "durMs": 281307,
+        "calls": 11,
+        "tokens": 1800904,
+        "costUsd": 1.68,
+        "tools": "Bash 5, Write 3, Edit 2"
+      }
+    ],
+    "costBasis": "estimated",
+    "pricedAt": "2026-09-26"
+  }
+}

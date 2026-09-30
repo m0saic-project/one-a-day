@@ -22,4 +22,13 @@ export const eventsRegistry: StarterRegistryEntry[] = [
       "A visitor sightings sheet from one outing's normalized checklist rows: eight entries per page, preserving names, counts and X observations.",
     tags: ["events","2026-09-28","day-009","birding","checklist","print"],
   },
+  {
+    slug: "homebrew-serving-card",
+    templateId: "@one-a-day/events/homebrew-serving-card/v1",
+    exportName: "HomebrewServingCardV1",
+    title: "2026-09-30 · Homebrew Serving Card",
+    description:
+      "Homebrew Serving Card: describe the ONE concept this template teaches, in one line, for the Templates page.",
+    tags: ["events","2026-09-30","day-011"],
+  },
 ];

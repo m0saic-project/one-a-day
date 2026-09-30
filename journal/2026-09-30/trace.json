@@ -408,14 +408,117 @@
       "spans": [],
       "costEstimate": null,
       "startMs": 786825
+    },
+    {
+      "phase": "build",
+      "call": 4,
+      "name": "build (4)",
+      "startedAt": "2026-09-30T14:14:05.000Z",
+      "durMs": 1386819,
+      "exitCode": 0,
+      "timedOut": false,
+      "status": "ok",
+      "calls": 71,
+      "turns": 31,
+      "tokens": {
+        "input": 62,
+        "output": 93327,
+        "cacheRead": 8263608,
+        "cacheWrite": 196430,
+        "total": 8553427
+      },
+      "cost": null,
+      "tools": {
+        "Read": 28,
+        "Grep": 4,
+        "Bash": 19,
+        "Write": 8,
+        "Edit": 12
+      },
+      "spans": [],
+      "source": "interactive Claude Code session: tokens from its transcript, one usage per API response (logs/session-trace.mjs); dollars estimated at list prices",
+      "costEstimate": {
+        "usd": 10.6615,
+        "rate": "claude-fable-5-1",
+        "pricedAt": "2026-09-26"
+      },
+      "startMs": 4195773
+    },
+    {
+      "phase": "critique",
+      "call": 1,
+      "name": "critique",
+      "startedAt": "2026-09-30T14:37:11.819Z",
+      "durMs": 87903,
+      "exitCode": 0,
+      "timedOut": false,
+      "status": "ok",
+      "calls": 7,
+      "turns": 3,
+      "tokens": {
+        "input": 6,
+        "output": 7902,
+        "cacheRead": 1005235,
+        "cacheWrite": 13966,
+        "total": 1027109
+      },
+      "cost": null,
+      "tools": {
+        "Edit": 1,
+        "Read": 3,
+        "Write": 2,
+        "Bash": 1
+      },
+      "spans": [],
+      "source": "interactive Claude Code session: tokens from its transcript, one usage per API response (logs/session-trace.mjs); dollars estimated at list prices",
+      "costEstimate": {
+        "usd": 0.9258,
+        "rate": "claude-fable-5-1",
+        "pricedAt": "2026-09-26"
+      },
+      "startMs": 5582592
+    },
+    {
+      "phase": "ship",
+      "call": 1,
+      "name": "ship",
+      "startedAt": "2026-09-30T14:38:39.722Z",
+      "durMs": 281307,
+      "exitCode": 0,
+      "timedOut": false,
+      "status": "ok",
+      "calls": 11,
+      "turns": 5,
+      "tokens": {
+        "input": 10,
+        "output": 16699,
+        "cacheRead": 1763986,
+        "cacheWrite": 20209,
+        "total": 1800904
+      },
+      "cost": null,
+      "tools": {
+        "Bash": 5,
+        "Read": 1,
+        "Write": 3,
+        "Edit": 2
+      },
+      "spans": [],
+      "source": "interactive Claude Code session: tokens from its transcript, one usage per API response (logs/session-trace.mjs); dollars estimated at list prices",
+      "costEstimate": {
+        "usd": 1.6802,
+        "rate": "claude-fable-5-1",
+        "pricedAt": "2026-09-26"
+      },
+      "startMs": 5670495
     }
   ],
   "totals": {
-    "phases": 5,
-    "calls": 45,
-    "tokens": 4574890,
-    "costUsd": null,
-    "costBasis": null,
-    "wallMs": 790115
+    "phases": 8,
+    "calls": 134,
+    "tokens": 15956330,
+    "costUsd": 13.27,
+    "costBasis": "estimated",
+    "wallMs": 5951802
   }
 }

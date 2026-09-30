@@ -1,0 +1,68 @@
+{
+  "session": {
+    "requests": 64,
+    "tokens": 13620933,
+    "usd": 19.46
+  },
+  "model": "claude-fable-5-1",
+  "rates": {
+    "key": "claude-fable-5-1",
+    "input": 10,
+    "output": 50,
+    "cacheRead": 0.25,
+    "cacheWrite": 20,
+    "pricedAt": "2026-09-26"
+  },
+  "until": "2026-09-30T14:43:21.029Z",
+  "models": [
+    "claude-fable-5-1"
+  ],
+  "before": {
+    "requests": 25,
+    "tokens": 2239493,
+    "usd": 6.19,
+    "calls": 69
+  },
+  "phases": [
+    {
+      "name": "build (4)",
+      "min": 23.11,
+      "requests": 31,
+      "tokens": 8553427,
+      "usd": 10.66,
+      "calls": 71,
+      "cacheWrite5m": 0
+    },
+    {
+      "name": "critique",
+      "min": 1.47,
+      "requests": 3,
+      "tokens": 1027109,
+      "usd": 0.93,
+      "calls": 7,
+      "cacheWrite5m": 0
+    },
+    {
+      "name": "ship",
+      "min": 4.69,
+      "requests": 5,
+      "tokens": 1800904,
+      "usd": 1.68,
+      "calls": 11,
+      "cacheWrite5m": 0
+    }
+  ],
+  "day": {
+    "requests": 39,
+    "tokens": 11381440,
+    "usd": 13.27
+  },
+  "traceTotals": {
+    "phases": 8,
+    "calls": 134,
+    "tokens": 15956330,
+    "costUsd": 13.27,
+    "costBasis": "estimated",
+    "wallMs": 5951802
+  }
+}

@@ -280,19 +280,18 @@
   {
     "date": "2026-09-30",
     "day": 11,
-    "agent": "unknown",
-    "model": null,
+    "agent": "claude",
+    "model": "claude-fable-5-1",
     "rosterId": null,
-    "status": "no-ship",
-    "templateId": null,
-    "title": null,
+    "status": "shipped",
+    "templateId": "@one-a-day/events/homebrew-serving-card/v1",
+    "title": "2026-09-30 · Homebrew Serving Card",
+    "pack": "events",
     "useCase": "Batchable homebrew serving cards from BeerXML recipe fields: name, style and ABV for keg tags and brew-club tastings.",
     "tags": [
-      "homebrewing",
-      "beerxml",
-      "labels",
-      "community",
-      "print"
+      "events",
+      "2026-09-30",
+      "day-011"
     ],
     "sources": [
       "https://forum.homebrewersassociation.org/t/share-your-labels/40286",

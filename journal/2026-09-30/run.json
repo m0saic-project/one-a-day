@@ -1,5 +1,61 @@
 {
+  "date": "2026-09-30",
+  "day": 11,
+  "startedAt": "2026-09-30T13:00:01.000Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "claude-fable-5-1",
+    "roster": null,
+    "ultracode": false,
+    "effort": null,
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": true,
+    "m0saic": null,
+    "session": {
+      "kind": "interactive",
+      "harness": "Claude Code 2.1.285",
+      "cli": "m0saic 0.3.0",
+      "why": "the scheduled run drew the roster slot codex-astra-ultra (codex, gpt-6-astra, reasoning ultra). Scout and plan finished on it; 70 s into the build the Codex account hit its usage limit (a fresh five-hour window, drained in 13 minutes), the runner spent its two remaining build calls in six seconds and closed the day as no-ship 8cce9ea. The founder then had a Claude Code session (model Fable 5.1) build, critique and ship the template from Codex's brief. No roster slot was drawn for the session",
+      "handoff": {
+        "scoutAndPlan": {
+          "adapter": "codex",
+          "model": "gpt-6-astra",
+          "rosterId": "codex-astra-ultra",
+          "selfDeclared": "gpt-6"
+        },
+        "buildCritiqueShip": {
+          "adapter": "claude",
+          "model": "claude-fable-5-1"
+        }
+      },
+      "trace": "journal/2026-09-30/trace.json holds the runner's record of the Codex calls (scout, plan, build 1-3). The session's own phases (build 4, critique, ship) are appended to it by logs/session-trace.mjs through pipeline/lib/trace.mjs appendTrace: tokens measured from the session's transcript (one usage per API response), dollars estimated at the list prices in pipeline/config.json",
+      "reconstructed": "date, day, startedAt (from logs/runner.log) and phases.scout / phases.plan (from trace.json) were rewritten by hand: the Codex agent's PowerShell rewrite of this file left a UTF-8 BOM, the runner's reader fell back to an empty record, and every later patch rebuilt the file from nothing (fixed at maintain 92a346e)",
+      "gate": "pipeline/lib/gate.mjs runGate via logs/gate-run.mjs, the same arguments run.mjs passes, so run.json keeps this block"
+    }
+  },
+  "model": {
+    "selfDeclared": "claude-fable-5-1",
+    "corrected": null
+  },
   "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 340832,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 372990,
+      "done": true
+    },
     "build": {
       "calls": 3,
       "lastExitCode": 1,
@@ -9,12 +65,14 @@
     }
   },
   "result": {
-    "status": "no-ship",
-    "templateId": null,
-    "reason": "build phase did not complete"
+    "status": "shipped",
+    "templateId": "@one-a-day/events/homebrew-serving-card/v1",
+    "reason": null,
+    "title": "2026-09-30 · Homebrew Serving Card"
   },
   "gate": {
     "reasons": [],
-    "at": "2026-09-30T13:17:19.514Z"
+    "at": "2026-09-30T14:48:03.792Z",
+    "doctorWarnings": 4
   }
 }

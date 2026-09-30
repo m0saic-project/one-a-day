@@ -18,7 +18,7 @@ exports.socialRegistry = [
         templateId: "@one-a-day/social/episode-audiogram/v1",
         exportName: "EpisodeAudiogramV1",
         title: "2026-09-25 · Episode Audiogram",
-        description: "Episode Audiogram: describe the ONE concept this template teaches, in one line, for the Templates page.",
-        tags: ["social", "2026-09-25", "day-006"],
+        description: "An episode promo clip: cover, pull-quote, a waveform that lights up as the snippet plays, a counting timecode - and the audio file muxed in, so the render is the post.",
+        tags: ["social", "2026-09-25", "day-006", "podcast", "audiogram", "waveform", "audio", "clip", "video"],
     },
 ];

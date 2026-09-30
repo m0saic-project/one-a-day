@@ -26,7 +26,7 @@ exports.eventsRegistry = [
         templateId: "@one-a-day/events/homebrew-serving-card/v1",
         exportName: "HomebrewServingCardV1",
         title: "2026-09-30 · Homebrew Serving Card",
-        description: "Homebrew Serving Card: describe the ONE concept this template teaches, in one line, for the Templates page.",
-        tags: ["events", "2026-09-30", "day-011"],
+        description: "A low-ink serving card for one homebrew - name, style, strength, brewer - where the line under the number says whether it is an estimate, a batch value, or not supplied.",
+        tags: ["events", "2026-09-30", "day-011", "homebrewing", "labels", "print"],
     },
 ];

@@ -10,8 +10,8 @@ export const gamingRegistry: StarterRegistryEntry[] = [
     exportName: "SpeedrunPbRecapV1",
     title: "2026-09-26 · Speedrun PB Recap",
     description:
-      "Speedrun PB Recap: describe the ONE concept this template teaches, in one line, for the Templates page.",
-    tags: ["gaming","2026-09-26","day-007"],
+      "A speedrun PB recap clip from the splits file: the table fills in against the old PB in LiveSplit's delta colours, the timer fast-forwards the run, and the clip opens and closes on the result.",
+    tags: ["gaming","2026-09-26","day-007","speedrun","livesplit","splits","recap","video"],
   },
   {
     slug: "crossword-grid-card",

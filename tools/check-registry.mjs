@@ -113,6 +113,35 @@ if (count === 0 || errors1.length > 0) {
   printFindings("✗", errors1);
   finish(1);
 }
+// ── Repo level: the browse text is written, not scaffolded ─────────────────
+// tools/new-template.mjs seeds BOTH the template file and its pack registry
+// row with a placeholder description. The manifest - what a host's Templates
+// page and TEMPLATES.md show - is built from the ROW, so a day that writes
+// its description only in the template file ships the placeholder (four
+// hand-run days did, 2026-09-25 to 2026-09-30). A row left behind by a
+// template that has its own description is an error; a fresh scaffold, where
+// both are still the placeholder, passes with a warning (it builds as generated).
+{
+  const SCAFFOLD_DESCRIPTION = /describe the ONE concept this template teaches/;
+  let manifest = null;
+  try { manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "template-manifest.json"), "utf8")); } catch { /* no manifest yet: nothing to read */ }
+  const own = new Map((Array.isArray(templates) ? templates : []).map((t) => [String(t.id), String(t.description ?? "")]));
+  const rows = (manifest?.templates ?? []).filter((t) => SCAFFOLD_DESCRIPTION.test(String(t.description ?? "")));
+  const fix = "copy the template's one-line `description` into its row in src/<pack>/registry.ts (that row, not the template file, is what the manifest shows) and give the row the template's search tags after the pack, date and day.";
+  const finding = (t, severity, detail) => ({ templateId: t.templateKey, convention: "registryDescription", severity, violations: [{ key: "description", detail }], fix });
+  const stale = rows.filter((t) => own.has(t.templateKey) && !SCAFFOLD_DESCRIPTION.test(own.get(t.templateKey)))
+    .map((t) => finding(t, "error", `src/${t.pack}/registry.ts still carries the scaffold's placeholder description, but the template has its own: ${fix}`));
+  const fresh = rows.filter((t) => !stale.some((f) => f.templateId === t.templateKey))
+    .map((t) => finding(t, "warning", `neither the template nor its row in src/${t.pack}/registry.ts has a description yet (the scaffold's placeholder) - write both before the day ships.`));
+  report.warnings.push(...fresh);
+  for (const f of fresh) warn(`  ⚠ ${f.templateId} — registryDescription: ${f.violations[0].detail}`);
+  if (stale.length > 0) {
+    report.errors.push(...stale);
+    fail(`[check-registry] ✗ ${stale.length} registry row(s) were left with the scaffold's placeholder description:`);
+    printFindings("✗", stale);
+    finish(1);
+  }
+}
 const warnedKnobs = warnings1.reduce((n, f) => n + f.violations.length, 0);
 say(`[check-registry] ✓ ${count} templates — definition-time conventions hold` +
   (warnings1.length ? ` (${warnings1.length} template(s) carry ${warnedKnobs} warning knob(s): ${[...new Set(warnings1.map((f) => f.convention))].join(", ")})` : "") + ".");

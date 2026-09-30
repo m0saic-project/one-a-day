@@ -26,6 +26,13 @@ pixels on the pinned toolchain, forever. A template that turns out good gets
 polished by a human elsewhere and promoted to the official community library;
 this repo stays what it is.
 
+## The templates
+
+**[TEMPLATES.md](TEMPLATES.md)** is the directory: every template in the repo,
+newest first, with its preview, its id, and links to its source folder and to
+the journal of the day that made it. The build regenerates it, so it is never
+behind the manifest.
+
 ## Use the templates
 
 This is a **third-party** template repo: namespace `@one-a-day`, unsigned,

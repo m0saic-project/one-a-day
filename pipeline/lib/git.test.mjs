@@ -25,6 +25,12 @@ test("a clean shipped day: one new template folder, wiring, dist, manifest, prev
   assert.deepEqual(r.touchedAssetDirs, ["@one-a-day__dev__release-banner__v1"]);
 });
 
+test("the generated directory page is a day's to change, like the manifest; the README it is linked from is not", () => {
+  const r = classifyChanges([e("M", "TEMPLATES.md"), e("M", "template-manifest.json"), e("M", "README.md"), e("??", "GALLERY.md")], { date: D });
+  assert.deepEqual(r.allowed.map((a) => a.path), ["TEMPLATES.md", "template-manifest.json"]);
+  assert.deepEqual(r.forbidden.map((f) => f.path).sort(), ["GALLERY.md", "README.md"]);
+});
+
 test("protected files and folders are forbidden whatever the status", () => {
   const r = classifyChanges([
     e("M", "AGENTS.md"), e("M", "pipeline/config.json"), e("??", "tools/x.mjs"), e("M", ".github/workflows/ci.yml"),

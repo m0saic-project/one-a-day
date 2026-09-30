@@ -10,7 +10,7 @@ export const sportsRegistry: StarterRegistryEntry[] = [
     exportName: "PowerliftingMeetRecapV1",
     title: "2026-09-27 · Powerlifting Meet Recap",
     description:
-      "Powerlifting Meet Recap: describe the ONE concept this template teaches, in one line, for the Templates page.",
-    tags: ["sports","2026-09-27","day-008"],
+      "A powerlifting meet recap clip from the lifter's OpenPowerlifting row: nine attempts on a 3 x 3 board, solid green made, hollow red missed, the total counted up from the bests and drawn to scale.",
+    tags: ["sports","2026-09-27","day-008","powerlifting","meet","attempts","recap","video"],
   },
 ];

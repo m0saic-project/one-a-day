@@ -16,7 +16,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist template-manifest.json",
-    "build": "node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs",
+    "build": "node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/gen-gallery.mjs && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs",
     "conventions:sweep": "node tools/check-registry.mjs --sweep",
     "fingerprints:update": "node tools/check-registry.mjs --update-fingerprints",
     "new": "node tools/new-template.mjs",

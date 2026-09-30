@@ -139,11 +139,17 @@
       "slug": "episode-audiogram",
       "templateKey": "@one-a-day/social/episode-audiogram/v1",
       "title": "2026-09-25 · Episode Audiogram",
-      "description": "Episode Audiogram: describe the ONE concept this template teaches, in one line, for the Templates page.",
+      "description": "An episode promo clip: cover, pull-quote, a waveform that lights up as the snippet plays, a counting timecode - and the audio file muxed in, so the render is the post.",
       "tags": [
         "social",
         "2026-09-25",
-        "day-006"
+        "day-006",
+        "podcast",
+        "audiogram",
+        "waveform",
+        "audio",
+        "clip",
+        "video"
       ],
       "pack": "social",
       "preview": {
@@ -187,11 +193,14 @@
       "slug": "homebrew-serving-card",
       "templateKey": "@one-a-day/events/homebrew-serving-card/v1",
       "title": "2026-09-30 · Homebrew Serving Card",
-      "description": "Homebrew Serving Card: describe the ONE concept this template teaches, in one line, for the Templates page.",
+      "description": "A low-ink serving card for one homebrew - name, style, strength, brewer - where the line under the number says whether it is an estimate, a batch value, or not supplied.",
       "tags": [
         "events",
         "2026-09-30",
-        "day-011"
+        "day-011",
+        "homebrewing",
+        "labels",
+        "print"
       ],
       "pack": "events",
       "preview": {
@@ -202,11 +211,16 @@
       "slug": "speedrun-pb-recap",
       "templateKey": "@one-a-day/gaming/speedrun-pb-recap/v1",
       "title": "2026-09-26 · Speedrun PB Recap",
-      "description": "Speedrun PB Recap: describe the ONE concept this template teaches, in one line, for the Templates page.",
+      "description": "A speedrun PB recap clip from the splits file: the table fills in against the old PB in LiveSplit's delta colours, the timer fast-forwards the run, and the clip opens and closes on the result.",
       "tags": [
         "gaming",
         "2026-09-26",
-        "day-007"
+        "day-007",
+        "speedrun",
+        "livesplit",
+        "splits",
+        "recap",
+        "video"
       ],
       "pack": "gaming",
       "preview": {
@@ -232,11 +246,16 @@
       "slug": "powerlifting-meet-recap",
       "templateKey": "@one-a-day/sports/powerlifting-meet-recap/v1",
       "title": "2026-09-27 · Powerlifting Meet Recap",
-      "description": "Powerlifting Meet Recap: describe the ONE concept this template teaches, in one line, for the Templates page.",
+      "description": "A powerlifting meet recap clip from the lifter's OpenPowerlifting row: nine attempts on a 3 x 3 board, solid green made, hollow red missed, the total counted up from the bests and drawn to scale.",
       "tags": [
         "sports",
         "2026-09-27",
-        "day-008"
+        "day-008",
+        "powerlifting",
+        "meet",
+        "attempts",
+        "recap",
+        "video"
       ],
       "pack": "sports",
       "preview": {

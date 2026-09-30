@@ -12,7 +12,9 @@ day a fresh agent run scouts the web for a media workflow that needs support,
 plans a media solution, builds one template (variants allowed), critiques it,
 and ships the one that clears the gate. `journal/YYYY-MM-DD/` is the record of
 each day; `src/` is the shelf of templates; `dist/` + `template-manifest.json`
-are what Mosaic Desktop and the m0saic CLI load.
+are what Mosaic Desktop and the m0saic CLI load. `TEMPLATES.md` is the
+directory page people browse on GitHub; the build writes it from the manifest
+(`tools/gen-gallery.mjs`) - never edit it by hand.
 
 This is a **third-party** template repo: the namespace is `@one-a-day`, it is
 not signed, and hosts show it as `3P`. Nobody reviews a day before it ships
@@ -103,6 +105,13 @@ it as `degraded`; treat it as a failure.
    fail-fast validation in `render()`, `outputHints` with a `format`, and the
    layout contract (below): tag every source, declare what the geometry
    promises, return `withLayoutIntent(...)`.
+   Then the row the scaffold added to `src/<pack>/registry.ts`: its
+   `description` and `tags` are what the manifest, a host's Templates page and
+   `TEMPLATES.md` show - NOT the ones in the template file. Replace the
+   scaffold's placeholder description with your one line and add your search
+   tags after the pack, date and day (or pass `--description` to `npm run
+   new`). Once the template has its own description, the build refuses a row
+   that still carries the placeholder.
 3. Edit the test beside it to assert what the brief claims (bindings, floors,
    determinism, a validation error).
 4. Fill `WHY` — the why-tutorial spec (see the section below). The scaffold

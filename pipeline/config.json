@@ -29,18 +29,19 @@
     "avoidRepeat": "hard",
     "repeatPenalty": { "agent": 0.3, "slot": 0.1 },
     "$models": "claude: aliases fable|opus|sonnet (+[1m] for the 1M-context variant) and haiku. codex: model slugs from the account, best to cheapest - gpt-6-astra (most capable), gpt-5.6-terra (balanced), gpt-5.6-sol (workhorse), gpt-5.6-luna (fast and affordable), gpt-5.5 (previous generation). Codex reasoning levels: low|medium|high|xhigh|max|ultra.",
+    "$retired": "2026-09-30 (founder): every codex-* slot sits out (enabled: false) because OpenAI changed the usage limits on the Codex subscription ($20 Plus). Day 011 drained a fresh five-hour window in 13 minutes - scout, plan and 70 s of build at ultra - and the build failed 3/3 (journal/2026-09-30). Not a verdict on the models: the adapter, the pricing rows and the slots stay; flip enabled back to return one.",
     "entries": [
       { "id": "claude-opus-ultracode", "agent": "claude", "model": "opus[1m]",     "weight": 4, "adapter": { "ultracode": true, "effort": "xhigh", "budgetUsd": 75 } },
       { "id": "claude-opus",           "agent": "claude", "model": "opus[1m]",     "weight": 3, "adapter": { "effort": "high", "budgetUsd": 30 } },
       { "id": "claude-fable",          "agent": "claude", "model": "fable[1m]",    "weight": 3, "adapter": { "effort": "high", "budgetUsd": 30 } },
       { "id": "claude-sonnet",         "agent": "claude", "model": "sonnet[1m]",   "weight": 2, "adapter": { "effort": "high", "budgetUsd": 15 } },
       { "id": "claude-haiku",          "agent": "claude", "model": "haiku",        "weight": 1, "adapter": { "effort": "medium", "budgetUsd": 8 } },
-      { "id": "codex-astra-ultra",     "agent": "codex",  "model": "gpt-6-astra",  "weight": 4, "adapter": { "reasoningEffort": "ultra" } },
-      { "id": "codex-astra",           "agent": "codex",  "model": "gpt-6-astra",  "weight": 3, "adapter": { "reasoningEffort": "high" } },
-      { "id": "codex-terra",           "agent": "codex",  "model": "gpt-5.6-terra","weight": 3, "adapter": { "reasoningEffort": "high" } },
-      { "id": "codex-sol",             "agent": "codex",  "model": "gpt-5.6-sol",  "weight": 2, "adapter": { "reasoningEffort": "high" } },
-      { "id": "codex-luna",            "agent": "codex",  "model": "gpt-5.6-luna", "weight": 1, "adapter": { "reasoningEffort": "medium" } },
-      { "id": "codex-5.5",             "agent": "codex",  "model": "gpt-5.5",      "weight": 1, "adapter": { "reasoningEffort": "high" } }
+      { "id": "codex-astra-ultra",     "agent": "codex",  "model": "gpt-6-astra",  "weight": 4, "enabled": false, "adapter": { "reasoningEffort": "ultra" } },
+      { "id": "codex-astra",           "agent": "codex",  "model": "gpt-6-astra",  "weight": 3, "enabled": false, "adapter": { "reasoningEffort": "high" } },
+      { "id": "codex-terra",           "agent": "codex",  "model": "gpt-5.6-terra","weight": 3, "enabled": false, "adapter": { "reasoningEffort": "high" } },
+      { "id": "codex-sol",             "agent": "codex",  "model": "gpt-5.6-sol",  "weight": 2, "enabled": false, "adapter": { "reasoningEffort": "high" } },
+      { "id": "codex-luna",            "agent": "codex",  "model": "gpt-5.6-luna", "weight": 1, "enabled": false, "adapter": { "reasoningEffort": "medium" } },
+      { "id": "codex-5.5",             "agent": "codex",  "model": "gpt-5.5",      "weight": 1, "enabled": false, "adapter": { "reasoningEffort": "high" } }
     ]
   },
   "pricing": {

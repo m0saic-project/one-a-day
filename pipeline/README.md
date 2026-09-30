@@ -117,7 +117,13 @@ the agent's work reverted. Now:
   five_hour 11% · seven_day 62%`) and refuses the day when the seven-day
   window is past `sevenDayStopAt`.
 
-A Codex day reports no windows and runs as before. The scheduler's own cap
+A Codex day reports no windows and runs as before — the watcher does not read
+Codex's `{"type":"error"}` / `turn.failed` usage-limit events, so a Codex
+limit is three failed calls in a row, not a wait (day 011). **Since
+2026-09-30 every `codex-*` slot is `enabled: false`** (`config.json`
+`roster.$retired`): OpenAI changed the usage limits on the Codex subscription
+and day 011 drained a fresh five-hour window in 13 minutes. Flip `enabled` to
+bring a slot back. The scheduler's own cap
 has to cover a day plus its longest wait: `ExecutionTimeLimit` is 12 hours
 in `schedule/one-a-day.task.xml` (`schedule/install.md` says how to raise a
 task already registered).

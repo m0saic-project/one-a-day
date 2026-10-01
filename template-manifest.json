@@ -261,6 +261,25 @@
       "preview": {
         "image": "assets/templates/@one-a-day__sports__powerlifting-meet-recap__v1/preview.png"
       }
+    },
+    {
+      "slug": "swim-time-drop-card",
+      "templateKey": "@one-a-day/sports/swim-time-drop-card/v1",
+      "title": "2026-10-01 · Swim Time Drop Card",
+      "description": "A swim meet time-drop card for one swimmer: entry time against the time swum per event, the drop in seconds, a bar that prints the percent of the entry time it stands for, and the standard reached.",
+      "tags": [
+        "sports",
+        "2026-10-01",
+        "day-012",
+        "swimming",
+        "time-drop",
+        "meet-recap",
+        "club"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__swim-time-drop-card__v1/preview.png"
+      }
     }
   ],
   "packs": [

@@ -1,8 +1,8 @@
 {
   "release": "0.3.0",
-  "tag": "2026-09-30",
-  "commit": "92a346e8e881a16a3067f3b0a9d15406bf061775",
-  "mintedAt": "2026-09-30T14:48:03.752Z",
+  "tag": "2026-10-01",
+  "commit": "0aece9c2c7ef9e6c1caad6867d2bfdbc395e9707",
+  "mintedAt": "2026-10-01T14:20:48.295Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
@@ -19,7 +19,8 @@
     "src/harness/agent-timeline/v1": "0.2.2",
     "src/social/episode-audiogram/v1": "0.2.2",
     "src/social/testimonial-proof-card/v1": "0.2.2",
-    "src/sports/powerlifting-meet-recap/v1": "0.2.2"
+    "src/sports/powerlifting-meet-recap/v1": "0.2.2",
+    "src/sports/swim-time-drop-card/v1": "0.3.0"
   },
   "files": {
     "src/_shared/layout.ts": "d5d516ba4155b7bd545c89b3d578ea642913adc4e658b81351fe21b65b94c449",
@@ -37,6 +38,7 @@
     "src/harness/agent-timeline/v1/agent-timeline.ts": "954d27a85594e4a1cc8c698197e106f846cac859f35d2da3053c10d00a312be1",
     "src/social/episode-audiogram/v1/episode-audiogram.ts": "c42210ce18cf49019756328bcc76918a3be3b461f0909f9aa34715c9b158df64",
     "src/social/testimonial-proof-card/v1/testimonial-proof-card.ts": "ea57b396c56952f4639e7a5c62b9237c67bdf8afe96df495a5258398f3038503",
-    "src/sports/powerlifting-meet-recap/v1/powerlifting-meet-recap.ts": "21ed849d1eb8455011fe7c79060bc3ad53623c4bad81c070d7629a39accd9300"
+    "src/sports/powerlifting-meet-recap/v1/powerlifting-meet-recap.ts": "21ed849d1eb8455011fe7c79060bc3ad53623c4bad81c070d7629a39accd9300",
+    "src/sports/swim-time-drop-card/v1/swim-time-drop-card.ts": "72969697ecd6319d6127e4fd8bbdda163166b7d3d1ac8ec358226ecf0969d28b"
   }
 }

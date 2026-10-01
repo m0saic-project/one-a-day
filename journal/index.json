@@ -299,5 +299,34 @@
       "https://www.beerxml.com/beerxml.htm",
       "https://homebrewtalk.com/threads/creating-tap-handle-labels.296516/"
     ]
+  },
+  {
+    "date": "2026-10-01",
+    "day": 12,
+    "agent": "claude",
+    "model": "claude-fable-5.1",
+    "rosterId": "claude-fable",
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/swim-time-drop-card/v1",
+    "title": "2026-10-01 · Swim Time Drop Card",
+    "pack": "sports",
+    "useCase": "Swim meet time-drop cards from the meet results file: per event the entry time, the swum time, the drop and the standard reached, one card per swimmer per meet.",
+    "tags": [
+      "sports",
+      "2026-10-01",
+      "day-012",
+      "swimming",
+      "time-drop",
+      "meet-recap",
+      "club"
+    ],
+    "sources": [
+      "https://www.gomotionapp.com/team/wave/page/news/507024/fall-divisional-meet-recap",
+      "https://www.gomotionapp.com/team/catcc/page/news/570837/hvda-scy-bbbc-meet-recap",
+      "https://www.mavswim.org/page/celebrations/time-drops",
+      "https://hytek.active.com/user_guides_html/swmm6/exportresultstotm.htm",
+      "https://github.com/enagon-athletics/flipturn",
+      "https://github.com/anedav68/MediaHub"
+    ]
   }
 ]

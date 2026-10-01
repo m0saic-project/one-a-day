@@ -16,9 +16,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sportsTemplates = void 0;
 const powerlifting_meet_recap_1 = require("./powerlifting-meet-recap/v1/powerlifting-meet-recap");
+const swim_time_drop_card_1 = require("./swim-time-drop-card/v1/swim-time-drop-card");
 /** Pack `sports`, in registry order (mirrors ./registry.ts). */
 exports.sportsTemplates = [
     powerlifting_meet_recap_1.PowerliftingMeetRecapV1,
+    swim_time_drop_card_1.SwimTimeDropCardV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./powerlifting-meet-recap/v1/powerlifting-meet-recap"), exports);
+__exportStar(require("./swim-time-drop-card/v1/swim-time-drop-card"), exports);

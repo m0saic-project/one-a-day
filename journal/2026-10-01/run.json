@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-01",
+  "day": 12,
+  "startedAt": "2026-10-01T13:00:02.257Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "fable[1m]",
+    "roster": {
+      "id": "claude-fable",
+      "agent": "claude",
+      "model": "fable[1m]",
+      "weight": 3,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": "high",
+    "budgetUsd": 30,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-fable-5.1",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.78,
+        "resetsAt": "2026-10-01T18:00:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.34,
+        "resetsAt": "2026-10-06T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-01T14:18:12.944Z"
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 250046,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 240391,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": null,
+      "timedOut": true,
+      "ms": 3368936,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 166592,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 405175,
+      "done": true
+    }
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/swim-time-drop-card/v1",
+    "title": "2026-10-01 · Swim Time Drop Card",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 4,
+    "at": "2026-10-01T14:20:48.338Z"
+  }
+}

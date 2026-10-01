@@ -1,0 +1,37 @@
+{
+  "useCase": "Swim meet time-drop cards from the meet results file: per event the entry time, the swum time, the drop and the standard reached, one card per swimmer per meet.",
+  "who": "Age-group swim club coaches and parent volunteers who type a recap of best times, time drops and new cuts onto the club GoMotion/TeamUnify site after every meet.",
+  "sources": [
+    "https://www.gomotionapp.com/team/wave/page/news/507024/fall-divisional-meet-recap",
+    "https://www.gomotionapp.com/team/catcc/page/news/570837/hvda-scy-bbbc-meet-recap",
+    "https://www.mavswim.org/page/celebrations/time-drops",
+    "https://hytek.active.com/user_guides_html/swmm6/exportresultstotm.htm",
+    "https://github.com/enagon-athletics/flipturn",
+    "https://github.com/anedav68/MediaHub"
+  ],
+  "tags": [
+    "swimming",
+    "time-drop",
+    "meet-recap",
+    "hy3",
+    "sdif",
+    "club"
+  ],
+  "scout": "done",
+  "pack": "sports",
+  "slug": "swim-time-drop-card",
+  "title": "Swim Time Drop Card",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "c",
+  "build": "done",
+  "decision": "ship",
+  "pick": "c",
+  "critique": "done",
+  "ship": "done"
+}

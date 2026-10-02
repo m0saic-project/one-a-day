@@ -15,6 +15,7 @@ node pipeline/run.mjs --model <name>  # pass a model to the adapter (or ONE_A_DA
 node pipeline/run.mjs --context "..." # an operator note appended to every phase prompt (or --context-file)
 node pipeline/run.mjs --phase build   # run one phase only, no gate (re-runnable: phases read the journal)
 node pipeline/run.mjs --from critique # resume from a phase, then gate
+node pipeline/run.mjs --from revise   # take up a day the critic rejected: restore its tree, revise, judge again, gate
 node pipeline/run.mjs --gate-only     # no agent; gate the working tree as it is
 node pipeline/run.mjs --date 2026-09-21
 node pipeline/run.mjs --agent fake --no-push   # a canned day with no model (tests the machinery)
@@ -87,9 +88,51 @@ is paid, `npm run verify` green on the untouched tree. Any failure = no run.
 `journal/<date>/state.json`; the runner re-calls up to `maxCalls` times inside
 `timeoutMin` each, and the whole day inside `dayTimeoutMin` (time spent
 waiting for a session window does not count). `ship` runs only when the
-critique set `decision=ship`. A resumed phase (`--from`, or a second run of
+critique set `decision=ship`; a `no-ship` over work that exists sends the day
+back to the build first (see "Revision rounds"). A resumed phase (`--from`, or a second run of
 the same day) numbers its calls after the ones already made and gets a call
 budget of its own.
+
+**Revision rounds** (`lib/revise.mjs`, `config.json` `revise`): the critic's
+NO SHIP is a review, not the end of the day. Day 013 (2026-10-02) was closed
+22 minutes into a 270-minute day: the build had left out the bars the brief
+was about, the critic said so and named the fix, and nobody was called to
+make it. Now, when the critic rejects work that exists (`critique: "done"`,
+`decision: "no-ship"`, at least one variant):
+
+- **the verdict moves aside** as `journal/<date>/40-critique.r<n>.md`,
+  `state.json` gets `revision: n` and a row in `revisions`, and `build`,
+  `critique`, `decision`, `pick` and `noShipReason` are owed again;
+- **build is called again** with `prompts/35-revise.md` after its usual
+  prompt (`phases[].revisePrompt`): answer the verdict in the same id and
+  folder, look for what the verdict did not name, render into the next
+  variant letter, append a "Revision n" section to `30-build.md`;
+- **the critic looks again** (`prompts/45-recritique.md`): all nine lines on
+  the revised variant, each named defect checked against the new stills;
+- **ship follows a yes; another no opens the next round**, at most
+  `revise.maxRounds` a run (2; 0 turns the loop off). Calls are numbered
+  after the earlier ones (`build-2`, `critique-2`, on the timeline as
+  `build (2)`), the round's prompts are logged as `logs/<phase>.r<n>.prompt.md`,
+  and everything stays inside `dayTimeoutMin`.
+
+What does NOT open a round: a build that left no variant, a phase that ran
+out of calls, a session limit — those are not reviews. A round that does not
+complete ends the day like any phase that does not.
+
+A day that still ends rejected **keeps its tree** as
+`journal/<date>/rejected/tree.patch` (the gate reverts a no-ship day; before
+this the work survived only as the variants' source snapshots), and
+`run.json` `revise.resume` names the command:
+`node pipeline/run.mjs --date <date> --from revise`. That run restores the
+patch after preflight, opens the next round (at least one, whatever
+`maxRounds` says), and gates. It keeps the day's roster slot like any resume;
+`--context` is the place for what a person saw that the critic did not, and
+`--roster` / `--model` hand the round to a different model (the reviser then
+declares itself, and `WHY.agent` / `WHY.model` have to follow `run.json`).
+
+The loop is only as good as the critic, and the critic is the day's own
+model: day 013's first verdict (haiku judging haiku) found the missing bars
+and passed lap times printed as `2:030.123` beside them.
 
 **Session limits** (`lib/limits.mjs`, `config.json` `limits`): the account
 the agent CLI is logged into has a five-hour window and a seven-day one, and
@@ -140,7 +183,8 @@ journal/<date>/trace.json`), the last page of its why-tutorial.
 
 1. Scope guard — only today's allowed paths may differ from HEAD
    (`lib/git.mjs` `classifyChanges`). Anything else is reverted and the day fails.
-2. No-ship day — everything but the journal is reverted.
+2. No-ship day — everything but the journal is reverted (a day the critic
+   rejected has its tree in `journal/<date>/rejected/tree.patch` by then).
 3. `npm run verify`, `tools/check-freeze.mjs`, `m0saic doctor . --json` ok.
 4. Exactly one new `src/<pack>/<slug>/vN/` (never in `src/harness/`); it is in the manifest; only its
    preview assets were touched; `--validate-only` exits 0 (3 = error mosaic);

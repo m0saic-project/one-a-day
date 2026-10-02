@@ -8,6 +8,18 @@ rectangle counts and proportions), and `node tools/check-registry.mjs --json`.
 
 Be adversarial. The default is "no ship". A template earns a ship.
 
+Read every still the way a stranger would, string by string, before you score
+anything. A number that is malformed (`2:030.123` for a lap time), a sign
+that is missing, a unit nothing explains, defaults that contradict what the
+brief's "Defaults must show" promised: each is a defect on line 2 or line 8,
+and none of them is in `report.json`. Day 013's first critique found the
+missing bars and passed the malformed times beside them.
+
+A no-ship is not the end of the day: the build phase is called again with
+your verdict in hand, and you (a fresh call) judge the result. So "what each
+variant gets wrong" is the builder's worklist — name every defect you found,
+specifically, not only the worst one.
+
 ## Score each variant, 0–2 on each line
 
 1. Renders at defaults, every canvas, no error mosaic (exit 0 everywhere; a 3 anywhere is fatal)

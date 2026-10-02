@@ -38,8 +38,18 @@ export async function run({ prompt, cwd, logDir, label, env = {} }) {
     w("20-brief.md", `# Brief — ${date}\n\nPack: ${pack}. Slug: ${slug}. A static card. Canvas 1280x720.\n`);
     patchState(dayDir, { plan: "done", pack, slug });
   } else if (phase === "build") {
+    const revision = Number(readState(dayDir).revision) || 0;
     if (process.env.ONE_A_DAY_FAKE_BUILD === "skip") { w("30-build.md", "# Build\n\nnothing built (fake)\n"); patchState(dayDir, { build: "done" }); }
-    else {
+    else if (revision > 0) {
+      // A revision round: the template is in place (or was restored from the
+      // journal); answer the verdict the runner moved aside, in the next letter.
+      if (!/revision/i.test(prompt) || !fs.existsSync(path.join(dayDir, `40-critique.r${revision}.md`))) throw new Error(`fake: revision ${revision} was opened without its prompt section or its verdict`);
+      await sh("npm", ["run", "build"]);
+      const variants = readState(dayDir).variants ?? [];
+      const letter = String.fromCharCode(97 + variants.length);
+      fs.appendFileSync(path.join(dayDir, "30-build.md"), `\n## Revision ${revision} — variant ${letter}\n- The verdict said: fake said no\n- Changed: nothing (fake)\n`);
+      patchState(dayDir, { build: "done", variants: [...variants, letter], inPlace: letter });
+    } else {
       const r = await sh("node", ["tools/new-template.mjs", `${pack}/${slug}`, "--title", `Fake ${date}`]);
       if (process.env.ONE_A_DAY_FAKE_OUT_OF_SCOPE) fs.writeFileSync(path.join(cwd, "AGENTS.md"), fs.readFileSync(path.join(cwd, "AGENTS.md"), "utf8") + "\n<!-- tampered -->\n");
       await sh("npm", ["run", "build"]);
@@ -58,12 +68,16 @@ export async function run({ prompt, cwd, logDir, label, env = {} }) {
         return { exitCode: 1, timedOut: false, ms: Date.now() - startedAt, transcript: null, log, trace: trace.finish({ exitCode: 1 }), limit: { seen: true, hit: true, window: cut, resetsAt, status: "rejected", windows, message: "You've hit your session limit (fake)" } };
       }
       w("30-build.md", `# Build — ${date}\n\nVariant a: scaffold as generated (exit ${r.exitCode}).\n`);
-      patchState(dayDir, { build: "done", variants: ["a"] });
+      patchState(dayDir, { build: "done", variants: ["a"], inPlace: "a" });
     }
   } else if (phase === "critique") {
-    const decision = process.env.ONE_A_DAY_FAKE_DECISION ?? "ship";
-    w("40-critique.md", `# Critique — ${date}\n\nDecision: ${decision}.\n`);
-    patchState(dayDir, { critique: "done", decision, pick: "a", ...(decision === "no-ship" ? { noShipReason: "fake said no" } : {}) });
+    // ONE_A_DAY_FAKE_REJECT_ROUNDS=n: the critic says no until the build has
+    // answered it n times (state.json `revision`), then the usual decision.
+    const st = readState(dayDir);
+    const revision = Number(st.revision) || 0;
+    const decision = revision < Number(process.env.ONE_A_DAY_FAKE_REJECT_ROUNDS ?? 0) ? "no-ship" : process.env.ONE_A_DAY_FAKE_DECISION ?? "ship";
+    w("40-critique.md", `# Critique — ${date}\n\nDecision: ${decision}.${revision ? ` Revision ${revision}.` : ""}\n`);
+    patchState(dayDir, { critique: "done", decision, pick: decision === "ship" ? st.inPlace ?? "a" : null, ...(decision === "no-ship" ? { noShipReason: `fake said no${revision ? ` (after revision ${revision})` : ""}` } : {}) });
   } else if (phase === "ship") {
     await sh("npm", ["run", "build"]);
     await sh("node", ["tools/gen-previews.mjs"]);

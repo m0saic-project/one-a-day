@@ -123,8 +123,8 @@ const doctorLine = `doctor ok (${doctor.rendered} rendered, ${doctor.warnings?.l
 // ── 5. e2e ──
 let e2eLine = "e2e skipped";
 if (E2E) {
-  for (const mode of ["ship", "no-ship", "tamper"]) await step(`e2e fake day: ${mode}`, "node", ["pipeline/e2e-fake-day.mjs", mode]);
-  e2eLine = "e2e ship/no-ship/tamper ok";
+  for (const mode of ["ship", "no-ship", "tamper", "revise"]) await step(`e2e fake day: ${mode}`, "node", ["pipeline/e2e-fake-day.mjs", mode]);
+  e2eLine = "e2e ship/no-ship/tamper/revise ok";
 }
 
 // ── 6. the commit ──

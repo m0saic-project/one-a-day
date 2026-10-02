@@ -42,8 +42,16 @@ where you left off.
    `stills/tutorial-<n>.png` - six pages, the last is how the day was made),
    copies the source folder, and writes
    `report.json`. Exit 3 means an ERROR MOSAIC rendered — that variant is
-   broken however green the build was. Look at the stills if you can view
-   images; read `report.json` regardless.
+   broken however green the build was. Read `report.json`, then OPEN the
+   stills (`stills/landscape.png`, `portrait.png`, `square.png` and
+   `tutorial-3.png`) before you write a word about them: a green build says
+   nothing about what the picture shows. Go through them string by string
+   (every number well-formed, every sign there) and claim by claim: each
+   thing the header comment, the `description` and `WHY.solution` say the
+   template draws has to be IN the picture. Day 013's build promised delta
+   bars in all three, never opened a still, and shipped none; the critic
+   needed one look. If you cannot view images, say so in `30-build.md` and
+   check the same claims against `src/<slug>.layout.m0`.
    Run it as-is: never set `M0SAIC_ROOT` (a fresh root has no license or
    toolchain and every video render stalls), and always pass `-o` under
    `{{DAY_DIR}}/` when you call `m0saic make` yourself - a report with no

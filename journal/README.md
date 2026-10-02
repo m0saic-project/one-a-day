@@ -11,8 +11,10 @@ YYYY-MM-DD/
   10-scout.md       candidates with links, the pick, what was rejected
   20-brief.md       the spec: id, kind, canvas, props, beats, rubric, variants to try
   30-build.md       what each variant tried, what was hard
-  40-critique.md    scores per variant, SHIP <x> | NO SHIP
+  40-critique.md    scores per variant, SHIP <x> | NO SHIP — the last verdict of the day
+  40-critique.r<n>.md  an earlier NO SHIP: the verdict revision round n answered (30-build.md has a "Revision n" section for it)
   50-ship.md        what shipped, how to render it, weak spots, follow-ups
+  rejected/tree.patch  the tree of a day that ended rejected, kept so `node pipeline/run.mjs --date <date> --from revise` can take it up
   variants/<x>/     src/ (the variant's code), renders/ (stills committed, clips not), stills/ (canvases + tutorial-<n>.png, one per why-tutorial page), report.json
   logs/             <phase>-<n>.log (readable), <phase>-<n>.prompt.md, gate.log, runner.log; raw .jsonl transcripts are gitignored
 ```
@@ -20,5 +22,5 @@ YYYY-MM-DD/
 A day can end three ways (`run.json.result.status` and the commit subject):
 
 - `shipped` — one new template under `src/`, frozen from now on.
-- `no-ship` — the critic said no, or a phase did not complete. Only the journal lands.
+- `no-ship` — the critic said no and went on saying it after the build answered (`state.json` `revisions`), or a phase did not complete. Only the journal lands.
 - `failed` — the gate refused (scope violation, red verify, degraded render). Only the journal lands; `gate.reasons` says why.

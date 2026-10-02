@@ -16,10 +16,14 @@
   "phases": [
     { "id": "scout",    "prompt": "10-scout.md",    "output": "10-scout.md",    "timeoutMin": 20, "maxCalls": 2 },
     { "id": "plan",     "prompt": "20-plan.md",     "output": "20-brief.md",    "timeoutMin": 15, "maxCalls": 2 },
-    { "id": "build",    "prompt": "30-build.md",    "output": "30-build.md",    "timeoutMin": 45, "maxCalls": 3 },
-    { "id": "critique", "prompt": "40-critique.md", "output": "40-critique.md", "timeoutMin": 15, "maxCalls": 2 },
+    { "id": "build",    "prompt": "30-build.md",    "output": "30-build.md",    "timeoutMin": 45, "maxCalls": 3, "revisePrompt": "35-revise.md" },
+    { "id": "critique", "prompt": "40-critique.md", "output": "40-critique.md", "timeoutMin": 15, "maxCalls": 2, "revisePrompt": "45-recritique.md" },
     { "id": "ship",     "prompt": "50-ship.md",     "output": "50-ship.md",     "timeoutMin": 30, "maxCalls": 2, "onlyIf": "decision=ship" }
   ],
+  "revise": {
+    "$comment": "The critic's NO SHIP is a review, not the end of the day (lib/revise.mjs). When the critic rejects work that exists - critique done, decision no-ship, at least one variant - the verdict moves aside as journal/<date>/40-critique.r<n>.md, build is called again with phases[].revisePrompt appended (answer the verdict, in the same id and folder, rendered into the next variant letter), and the critic judges again with its own revisePrompt. At most maxRounds rounds a run; 0 turns it off and the first verdict stands, as it did until day 013 (2026-10-02), which was closed 22 minutes into a 270-minute day with the fix named in the critique. Rounds live inside dayTimeoutMin; each build call still has its own cap and budget. A day that ends rejected keeps its tree as journal/<date>/rejected/tree.patch, and `node pipeline/run.mjs --date <date> --from revise` takes it up again (at least one round, same roster slot unless --roster or --model says otherwise).",
+    "maxRounds": 2
+  },
   "packs": {
     "$comment": "Preferred pack vocabulary. The plan phase picks an existing pack when one fits; a new pack needs one sentence of justification and at most one new pack lands per day.",
     "vocabulary": ["social", "dev", "music", "education", "business", "science", "news", "personal", "ops", "community", "sports", "events", "health", "finance"]

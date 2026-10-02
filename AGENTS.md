@@ -59,6 +59,7 @@ journal/<date>/10-scout.md     candidates, evidence, the pick
 journal/<date>/20-brief.md     the spec the critic scores against
 journal/<date>/30-build.md     what each variant tried
 journal/<date>/40-critique.md  scores, SHIP <x> | NO SHIP
+journal/<date>/40-critique.r<n>.md  an earlier NO SHIP today; revision round n answers it (state.json `revision`)
 journal/<date>/50-ship.md      what shipped, the render one-liner, weak spots
 journal/<date>/variants/<x>/   src/ + renders/ + stills/ + report.json per variant
 journal/index.json             one row per day (the runner writes it) — read it to avoid repeats
@@ -66,6 +67,11 @@ journal/index.json             one row per day (the runner writes it) — read i
 
 Read the day's files before acting. Mark a phase done in `state.json` only when
 its output file is complete; the runner re-calls a phase until it sees the key.
+
+A critic's NO SHIP is a review, not the end of the day: the runner moves the
+verdict aside as `40-critique.r<n>.md`, sets `state.json.revision = n`, and
+calls the build again to answer it — same id, same folder, the next variant
+letter — and then the critic again. Your prompt says when you are in a round.
 
 ## The loop
 

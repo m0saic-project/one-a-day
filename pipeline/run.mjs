@@ -6,6 +6,7 @@
 //   node pipeline/run.mjs --no-push            same, commit stays local (dry run)
 //   node pipeline/run.mjs --phase build        one phase only (no gate)
 //   node pipeline/run.mjs --from critique      resume from a phase (then gate)
+//   node pipeline/run.mjs --from revise        take up a day the critic rejected: restore its tree, revise, judge again (then gate)
 //   node pipeline/run.mjs --gate-only          skip the agent, run the gate on the tree
 //   node pipeline/run.mjs --date 2026-09-21    a specific journal day
 //   node pipeline/run.mjs --agent codex        override pipeline/config.json / ONE_A_DAY_AGENT
@@ -24,6 +25,7 @@ import { currentBranch, isClean, porcelain, pullFfOnly, restoreTree, snapshotTre
 import { dayDir as dayDirOf, ensureDay, isIsoDate, patchRun, patchState, readIndex, readRun, readState, renderTemplate, todayIso, dayNumber, readJson } from "./lib/journal.mjs";
 import { runGate } from "./lib/gate.mjs";
 import { decideAfter, decideBefore, describeWindows, fmtWait, limitsConfig, pct } from "./lib/limits.mjs";
+import { openRevision, rejectedByCritic, reviseConfig, revisionOf, verdictFile } from "./lib/revise.mjs";
 import { appendTrace } from "./lib/trace.mjs";
 import { describeEntry, findRosterEntry, pickOrder, rosterEntries } from "./lib/roster.mjs";
 
@@ -39,6 +41,9 @@ const DATE = val("--date") ?? todayIso();
 if (!isIsoDate(DATE)) { console.error(`--date must be YYYY-MM-DD, got ${DATE}`); process.exit(2); }
 const ONLY = val("--phase");
 const FROM = val("--from");
+const PHASE_IDS = CONFIG.phases.map((p) => p.id);
+if (ONLY && !PHASE_IDS.includes(ONLY)) { console.error(`--phase must be one of ${PHASE_IDS.join(", ")}, got ${ONLY}`); process.exit(2); }
+if (FROM && FROM !== "revise" && !PHASE_IDS.includes(FROM)) { console.error(`--from must be one of ${[...PHASE_IDS, "revise"].join(", ")}, got ${FROM}`); process.exit(2); }
 const NO_PUSH = has("--no-push");
 const GATE_ONLY = has("--gate-only");
 const SKIP_PREFLIGHT = has("--skip-preflight");
@@ -68,6 +73,8 @@ let deadline = started + (CONFIG.dayTimeoutMin ?? 270) * 60 * 1000;
 const LIMITS = limitsConfig(CONFIG);
 if (process.env.ONE_A_DAY_LIMIT_GRACE_SEC !== undefined) LIMITS.graceSec = Number(process.env.ONE_A_DAY_LIMIT_GRACE_SEC) || 0;
 let waits = 0;
+const REVISE = reviseConfig(CONFIG);
+const REJECTED_PATCH = path.join(DAY_DIR, "rejected", "tree.patch");
 
 /* ── the operator note ── */
 // One message from whoever started the run, appended to every phase prompt and
@@ -217,11 +224,17 @@ function phaseApplies(phase) {
 }
 async function runPhase(adapter, phase) {
   const preamble = fs.readFileSync(path.join(PIPELINE, "prompts", "_preamble.md"), "utf8");
-  const body = fs.readFileSync(path.join(PIPELINE, "prompts", phase.prompt), "utf8");
-  const vars = { DATE, DAY_DIR: path.relative(REPO, DAY_DIR).split(path.sep).join("/"), REPO, PHASE: phase.id, OUTPUT: phase.output, DAY: String(dayNumber(REPO, DATE)), VARIANTS_MAX: String(CONFIG.variantsMax ?? 3), PACKS: (CONFIG.packs?.vocabulary ?? []).join(", "), AGENT: AGENT };
+  // A revision round (state.json `revision`, opened when the critic said no)
+  // is the same phase with the round's own section after it: the build
+  // answers the verdict, the critic takes a second look. Read off the state,
+  // not off this process, so a round a session limit cut resumes as a round.
+  const revision = revisionOf(readState(DAY_DIR));
+  const revising = revision > 0 && !!phase.revisePrompt;
+  const body = fs.readFileSync(path.join(PIPELINE, "prompts", phase.prompt), "utf8") + (revising ? `\n\n${fs.readFileSync(path.join(PIPELINE, "prompts", phase.revisePrompt), "utf8")}` : "");
+  const vars = { DATE, DAY_DIR: path.relative(REPO, DAY_DIR).split(path.sep).join("/"), REPO, PHASE: phase.id, OUTPUT: phase.output, DAY: String(dayNumber(REPO, DATE)), VARIANTS_MAX: String(CONFIG.variantsMax ?? 3), PACKS: (CONFIG.packs?.vocabulary ?? []).join(", "), AGENT: AGENT, REVISION: String(revision), REJECTED: verdictFile(revision) };
   const note = CONTEXT ? `\n\n## Operator note for this run\n\nThe human who started this run added the lines below, and they apply to every\nphase of today. They steer what you work on; they never override AGENTS.md or\nthe hard rules, and the gate does not know they exist.\n\n${CONTEXT}\n` : "";
   const prompt = renderTemplate(`${preamble}\n\n${body}`, vars) + note;
-  fs.writeFileSync(path.join(DAY_DIR, "logs", `${phase.id}.prompt.md`), prompt);
+  fs.writeFileSync(path.join(DAY_DIR, "logs", `${phase.id}${revising ? `.r${revision}` : ""}.prompt.md`), prompt);
   // A resumed phase (--from, or a second run of the day) numbers its calls
   // after the ones already made, so their transcripts and trace records are
   // not written over, and gets a call budget of its own: resuming is a
@@ -302,10 +315,64 @@ function keepTree(phase) {
   }
 }
 
+/* ── the phases, in order ── */
+/** Run the configured phases (from one, or only one). False when a phase did not complete: the day ends there. */
+async function runPhases(adapter, { from = null, only = null } = {}) {
+  let active = !from;
+  for (const phase of CONFIG.phases) {
+    if (only && phase.id !== only) continue;
+    if (from && phase.id === from) active = true;
+    if (!active) continue;
+    if (!phaseApplies(phase)) { say(`[${phase.id}] skipped (runs only when ${phase.onlyIf})`); continue; }
+    if (phaseDone(phase) && !only) { say(`[${phase.id}] already done — skipping`); continue; }
+    const done = await runPhase(adapter, phase);
+    if (!done) {
+      const ended = readRun(DAY_DIR).limits?.ended;
+      const byLimit = ended?.phase === phase.id && !readRun(DAY_DIR).limits?.restored;
+      say(`[${phase.id}] did not complete — ending the day here${byLimit ? ` (${ended.resume} picks it up)` : ""}`);
+      if (phase.id !== "ship") patchState(DAY_DIR, { decision: "no-ship", noShipReason: byLimit ? `session limit — ${ended.reason}; resume: ${ended.resume}` : `${phase.id} phase did not complete` });
+      return false;
+    }
+  }
+  return true;
+}
+
+/* ── a rejected day ── */
+/**
+ * The tree of a day that ends rejected, as a patch in the journal: the gate
+ * reverts a no-ship day, and without this the work survives only as the
+ * variants' source snapshots. `--from revise` puts it back.
+ */
+function keepRejected() {
+  try {
+    const paths = snapshotTree(REPO, REJECTED_PATCH, { date: DATE });
+    if (!paths.length) return 0;
+    const resume = `node pipeline/run.mjs --date ${DATE} --from revise`;
+    say(`[revise] ⧉ kept ${paths.length} changed path(s) in journal/${DATE}/rejected/tree.patch — ${resume} takes the day up again`);
+    patchRun(DAY_DIR, { revise: { kept: { paths: paths.length, at: new Date().toISOString() }, resume } });
+    return paths.length;
+  } catch (e) {
+    say(`[revise] ⚠ could not keep the tree: ${String(e.message).split("\n")[0]}`);
+    return 0;
+  }
+}
+/** `--from revise`: the rejected tree back in place before the round opens. Never over work already in the tree. */
+function restoreRejected() {
+  const dirty = porcelain(REPO).filter((e) => !e.path.startsWith(`journal/${DATE}/`));
+  if (dirty.length) { say(`[revise] the tree already has ${dirty.length} change(s) outside the journal — revising it as it is`); return true; }
+  if (!fs.existsSync(REJECTED_PATCH)) { say(`✗ nothing to revise: the tree is clean and journal/${DATE}/rejected/tree.patch does not exist`); return false; }
+  const r = restoreTree(REPO, REJECTED_PATCH);
+  if (!r.ok) { say(`✗ journal/${DATE}/rejected/tree.patch did not apply: ${r.error}`); return false; }
+  say(`[revise] restored ${r.paths.length} path(s) from journal/${DATE}/rejected/tree.patch${r.threeWay ? " (three-way)" : ""}`);
+  patchRun(DAY_DIR, { revise: { restored: { at: new Date().toISOString(), paths: r.paths.length, threeWay: !!r.threeWay } } });
+  return true;
+}
+
 /* ── main ── */
 (async () => {
   ensureDay(REPO, DATE);
   const day = dayNumber(REPO, DATE);
+  if (FROM === "revise" && !rejectedByCritic(DAY_DIR)) { say(`✗ --from revise takes up a day the critic rejected; journal/${DATE}/state.json is not one (critique done, decision no-ship, at least one variant)`); process.exit(2); }
   const adapter = await resolveAgent();
   say(`=== one-a-day · ${DATE} · day ${day} · agent ${AGENT}${MODEL ? ` (${MODEL})` : ""}${ROSTER_PICK ? ` · roster ${ROSTER_PICK.id}` : ""}${ADAPTER_CFG.ultracode ? " · ultracode" : ""} ===`);
   if (CONTEXT) {
@@ -339,26 +406,34 @@ function keepTree(phase) {
         } else say(`[resume] ✗ journal/${DATE}/limited/tree.patch did not apply: ${r.error} — ${limits.ended.phase} starts from the tree as it is`);
       }
     }
-    const phases = CONFIG.phases;
-    let active = !FROM;
-    for (const phase of phases) {
-      if (ONLY && phase.id !== ONLY) continue;
-      if (FROM && phase.id === FROM) active = true;
-      if (!active) continue;
-      if (!phaseApplies(phase)) { say(`[${phase.id}] skipped (${phase.onlyIf})`); continue; }
-      if (phaseDone(phase) && !ONLY) { say(`[${phase.id}] already done — skipping`); continue; }
-      const done = await runPhase(adapter, phase);
-      if (!done) {
-        const ended = readRun(DAY_DIR).limits?.ended;
-        const byLimit = ended?.phase === phase.id && !readRun(DAY_DIR).limits?.restored;
-        say(`[${phase.id}] did not complete — ending the day here${byLimit ? ` (${ended.resume} picks it up)` : ""}`);
-        if (phase.id !== "ship") patchState(DAY_DIR, { decision: "no-ship", noShipReason: byLimit ? `session limit — ${ended.reason}; resume: ${ended.resume}` : `${phase.id} phase did not complete` });
-        break;
-      }
-    }
+    let completed = true;
+    if (FROM === "revise") { if (!restoreRejected()) process.exit(2); }
+    else completed = await runPhases(adapter, { from: FROM, only: ONLY });
     if (ONLY) { say(`phase ${ONLY} finished (no gate with --phase)`); process.exit(0); }
+    // The critic said no over work that exists: that is a review. The build
+    // is called again with the verdict, the critic looks again, and only the
+    // last verdict is the day's - at most revise.maxRounds rounds a run (a
+    // run somebody started with --from revise gets at least one).
+    const roundsMax = FROM === "revise" ? Math.max(1, REVISE.maxRounds) : REVISE.maxRounds;
+    let rounds = 0;
+    while (completed && rejectedByCritic(DAY_DIR)) {
+      if (rounds >= roundsMax) { say(`[revise] ${rounds ? `rejected again after ${rounds} round(s) of ${roundsMax}` : "revise.maxRounds is 0"} — the verdict stands`); break; }
+      if (Date.now() > deadline) { say("[revise] day deadline reached — the verdict stands"); break; }
+      // A day that was closed before this run started (the scheduler replayed
+      // it, or somebody ran it again) has no work in the tree: the gate
+      // reverted it. It comes back from the journal, or there is no round.
+      if (rounds === 0 && FROM !== "revise" && !porcelain(REPO).some((e) => !e.path.startsWith("journal/")) && !restoreRejected()) break;
+      const opened = openRevision(DAY_DIR);
+      rounds += 1;
+      patchRun(DAY_DIR, { revise: { rounds: opened.round } });
+      say(`[revise] ↻ round ${opened.round} (${rounds}/${roundsMax} this run) — the critic said no-ship${opened.rejected ? `: ${String(opened.rejected).slice(0, 160)}` : ""}`);
+      say(`[revise] the verdict is kept as journal/${DATE}/${opened.verdict}; build answers it, then the critic looks again`);
+      completed = await runPhases(adapter, { from: "build" });
+    }
   }
 
+  // Still rejected: the gate is about to revert the tree. Keep it first.
+  if (rejectedByCritic(DAY_DIR)) keepRejected();
   const st = readState(DAY_DIR);
   if (st.decision === undefined) patchState(DAY_DIR, { decision: "no-ship", noShipReason: st.noShipReason ?? "no critique decision recorded" });
   say(`[gate] decision=${readState(DAY_DIR).decision}`);

@@ -38,7 +38,7 @@
     "day": "node pipeline/run.mjs",
     "day:dry": "node pipeline/run.mjs --no-push",
     "submit": "node tools/submit.mjs",
-    "test:pipeline:e2e": "node pipeline/e2e-fake-day.mjs && node pipeline/e2e-fake-day.mjs no-ship && node pipeline/e2e-fake-day.mjs tamper",
+    "test:pipeline:e2e": "node pipeline/e2e-fake-day.mjs && node pipeline/e2e-fake-day.mjs no-ship && node pipeline/e2e-fake-day.mjs tamper && node pipeline/e2e-fake-day.mjs revise",
     "bake:mark": "node tools/bake-mark.mjs"
   },
   "//dependencies": [

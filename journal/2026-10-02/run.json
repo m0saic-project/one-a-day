@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-02",
+  "day": 13,
+  "startedAt": "2026-10-02T13:00:01.888Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "haiku",
+    "roster": {
+      "id": "claude-haiku",
+      "agent": "claude",
+      "model": "haiku",
+      "weight": 1,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": "medium",
+    "budgetUsd": 8,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-haiku-4-5-20251001",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.06,
+        "resetsAt": "2026-10-02T17:20:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.36,
+        "resetsAt": "2026-10-06T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-02T13:22:05.008Z"
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 217262,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 63107,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 668556,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 102068,
+      "done": true
+    }
+  },
+  "result": {
+    "status": "no-ship",
+    "templateId": null,
+    "reason": "Core visual feature (proportional delta bars) promised in brief is missing; template renders only colored text deltas, not bar elements. Acceptance rubric requires visual bars; the stills prove they do not exist."
+  },
+  "gate": {
+    "reasons": [],
+    "at": "2026-10-02T13:22:05.287Z"
+  }
+}

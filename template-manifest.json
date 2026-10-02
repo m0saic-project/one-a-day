@@ -280,6 +280,25 @@
       "preview": {
         "image": "assets/templates/@one-a-day__sports__swim-time-drop-card__v1/preview.png"
       }
+    },
+    {
+      "slug": "lap-telemetry-card",
+      "templateKey": "@one-a-day/sports/lap-telemetry-card/v1",
+      "title": "2026-10-02 · Sim Racing Lap Card",
+      "description": "A sim racing lap card: track, lap time and delta vs PB, three sectors with times, PBs, and proportional delta bars (green for faster, red for slower), driver name, and top speed.",
+      "tags": [
+        "sports",
+        "2026-10-02",
+        "day-013",
+        "racing",
+        "telemetry",
+        "sector",
+        "delta"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__lap-telemetry-card__v1/preview.png"
+      }
     }
   ],
   "packs": [

@@ -1,30 +1,42 @@
 {
-    "date":  "2026-10-02",
-    "day":  13,
-    "scout":  "done",
-    "useCase":  "Sim racing drivers want to share lap telemetry achievements: sector times, deltas against PB, apex speeds as shareable cards.",
-    "who":  "Competitive sim racers in iRacing, Assetto Corsa, Le Mans Ultimate communities; platforms like SimTelemetry.site, YouTube channels, competitive leagues.",
-    "sources":  [
-                    "https://simtelemetry.site",
-                    "https://news.ycombinator.com/item?id=49045861"
-                ],
-    "tags":  [
-                 "gaming",
-                 "racing",
-                 "sim-racing",
-                 "telemetry",
-                 "competitive"
-             ],
-    "pack":  "sports",
-    "slug":  "lap-telemetry-card",
-    "title":  "Sim Racing Lap Card",
-    "plan":  "done",
-    "scaffolded": true,
-    "variants": ["a"],
-    "inPlace": "a",
-    "build": "done",
-    "decision": "no-ship",
-    "pick": null,
-    "noShipReason": "Core visual feature (proportional delta bars) promised in brief is missing; template renders only colored text deltas, not bar elements. Acceptance rubric requires visual bars; the stills prove they do not exist.",
-    "critique": "done"
+  "date": "2026-10-02",
+  "day": 13,
+  "scout": "done",
+  "build": "done",
+  "useCase": "Sim racing drivers want to share lap telemetry achievements: sector times, deltas against PB, apex speeds as shareable cards.",
+  "who": "Competitive sim racers in iRacing, Assetto Corsa, Le Mans Ultimate communities; platforms like SimTelemetry.site, YouTube channels, competitive leagues.",
+  "sources": [
+    "https://simtelemetry.site",
+    "https://news.ycombinator.com/item?id=49045861"
+  ],
+  "tags": [
+    "gaming",
+    "racing",
+    "sim-racing",
+    "telemetry",
+    "competitive"
+  ],
+  "pack": "sports",
+  "slug": "lap-telemetry-card",
+  "title": "Sim Racing Lap Card",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b"
+  ],
+  "inPlace": "b",
+  "revision": 1,
+  "revisions": [
+    {
+      "round": 1,
+      "at": "2026-10-02T17:24:06.508Z",
+      "rejected": "Core visual feature (proportional delta bars) promised in brief is missing; template renders only colored text deltas, not bar elements. Acceptance rubric requires visual bars; the stills prove they do not exist.",
+      "verdict": "40-critique.r1.md"
+    }
+  ],
+  "critique": "done",
+  "decision": "ship",
+  "pick": "b",
+  "ship": "done"
 }

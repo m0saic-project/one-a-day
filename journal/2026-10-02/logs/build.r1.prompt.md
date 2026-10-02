@@ -1,0 +1,284 @@
+# one-a-day — 2026-10-02 — phase: build
+
+You are the coding agent running one phase of today's **one-a-day** run, in the
+repo at `C:\src\m0saic-production\one-a-day`. Nobody is watching. Nobody can answer a question. You have
+one job this call, stated under "Your task" below, and you finish it by writing
+files. Then you stop.
+
+## Files are your only memory
+
+Every earlier phase today left its result in `journal/2026-10-02/`. Read what is
+there before you do anything:
+
+- `journal/2026-10-02/state.json` — the phase ledger. A phase is done when its key is
+  `"done"`. The critique phase also writes `decision` (`ship` | `no-ship`) and
+  `pick` (the variant letter).
+- `journal/2026-10-02/run.json` — who is running (the runner fills `runner.*`), and
+  `model.selfDeclared`, which YOU fill (below).
+- `journal/2026-10-02/10-scout.md`, `20-brief.md`, `30-build.md`, `40-critique.md`,
+  `50-ship.md` — the day's story, one file per phase.
+- `journal/2026-10-02/variants/<a|b|c>/` — each built variant: `src/` (its code),
+  `renders/`, `stills/`, `report.json`.
+
+When your task is complete, set `state.json.build = "done"` (merge, do not
+overwrite other keys) as the LAST thing you do. Never set it early: the runner
+re-calls this phase until it sees that key, and a half-written output marked
+done ships a half-written day.
+
+## Declare yourself
+
+The runner asked for `claude`. In your FIRST action this phase, write into
+`journal/2026-10-02/run.json` the key `model.selfDeclared` with the model you believe
+you are (e.g. `claude-fable-5.1`, `gpt-5-codex`, `kimi-k2`), merged into the
+existing JSON (keep every other key). If you cannot tell, write `"unknown"`. A
+human may later set `model.corrected`; never touch that key.
+
+## Read before you write
+
+`AGENTS.md` at the repo root is the contract for this repo: the loop, the
+checklist, the rules that fail silently. The reasoning behind it is in
+`node_modules/@m0saic/knowledge/README.md` (start there, then `docs/m0saic-thesis.md`,
+then `docs/README.md`, the router). For template work the pages that matter most are
+`docs/templates/philosophy-and-contract.md`, `docs/templates/construction-strategy.md`,
+`docs/templates/standalone-pack-authoring.md`,
+`docs/handbook/feasibility-precision-quantization.md` and `docs/runtime/cli-usage.md`.
+
+## Hard rules (the runner enforces every one of them after you; break one and the day is discarded)
+
+- Never `git commit`, `git push`, `git checkout`, `git reset`, `git tag`, `npm publish`.
+  The runner commits exactly once at the end of the day and pushes.
+- Never edit `pipeline/`, `tools/`, `AGENTS.md`, `CLAUDE.md`, `README.md`, `.github/`,
+  `package.json`, `dep-allowlist.json`, `frozen.manifest.json`, or any other day's
+  `journal/` folder. Never run `check-freeze --update`.
+- Never modify a template folder that already exists at HEAD (`src/<pack>/<slug>/vN/`
+  that is not today's). Shipped templates are frozen; a fix is a new `vN+1`.
+- Today produces AT MOST ONE new template folder under `src/`. Variants share its
+  id and folder; the last variant left in place is what the critic judges last.
+- No new dependencies. No downloaded media into the repo. No secrets, no wall-clock
+  reads, no `Math.random` in template code.
+- Write scratch only under `journal/2026-10-02/` (renders, notes, experiments).
+- If something is broken that you cannot fix inside this phase's scope, write what
+  you found into this phase's output file and stop WITHOUT marking the phase done.
+  A day that ships nothing is fine. A day that ships something wrong is not.
+
+## Writing for the journal
+
+The journal is public and is read by people and by tomorrow's agent. Short
+sections, real links, numbers only when they change a decision, honest about
+what is weak. Markdown, ASCII quotes, no marketing voice.
+
+---
+
+# Your task
+
+
+Build today's template from `journal/2026-10-02/20-brief.md`. This phase may be
+called more than once; `journal/2026-10-02/30-build.md` and `state.json` tell you
+where you left off.
+
+## The loop (from AGENTS.md — follow it exactly)
+
+1. Scaffold once: `npm run new -- <pack>/<slug> --title "<Title>"` writes the
+   template, its test, and the registry wiring, and passes every gate as
+   generated. If `state.json.scaffolded` is already `true`, skip this.
+   Then set `state.json.scaffolded = true`.
+2. Edit `src/<pack>/<slug>/v1/<slug>.ts` — the header comment states the one
+   idea; keep the shape (typed props with defaults, bound text, fitted copy,
+   geometry from `ctx.target`). Edit the test beside it to assert what the
+   brief claims.
+   Declare the layout contract the brief promised: `tag` every source,
+   build `constraints` (`textFitsMeasured` for copy you measured,
+   `textFitsAll(labels, { charWidthEm: TEXT_EM.prose })` for `svgLabel` copy;
+   `within` / `minWidthFrac` / `aspect` for the chrome), keep the
+   `debugLayout` knob, return `withLayoutIntent(...)` — the scaffold shows
+   the shape. The test's `sweepLayout` must pass for the copy that stresses
+   it (long, empty, every closed-set value); the build sweeps the defaults.
+   Fill `WHY` — the why-tutorial spec the scaffold pre-filled from the journal
+   (`renderTutorial: whyTutorial(WHY, render)`, src/_shared/why.ts). Keep
+   `day`, `date`, `agent`, `model` as written (they come from run.json and
+   the gate cross-checks them). Write `who`, `problem` (1-3 paragraphs, in the
+   evidence's own words — quote it), `sources` (only URLs you opened; the ones
+   in `10-scout.md`), `solution` (what this template does about it, and the
+   one design decision that matters), `usage.command` (the real one-liner at
+   the hinted canvas), `usage.try` (up to 4), `caveats` (honest, up to 3).
+   ASCII only; the build refuses a leftover `[fill me]`, a non-ASCII
+   character, or a bad URL. Leave `timeline` as the scaffold copied it from
+   `journal/<date>/trace.json` (the ship phase re-copies the finished one).
+3. `npm run build` — the conventions gate runs here. On a failure read
+   `node tools/check-registry.mjs --json`: every finding carries its `fix`.
+   Loop until clean. `npm test` for the unit tests.
+4. `npm run fingerprints:update` after a layout change (the sidecar
+   `<slug>.layout.m0` is committed with the template).
+5. Render and snapshot the variant:
+   `node pipeline/render/render-variant.mjs @one-a-day/<pack>/<slug>/v1 journal/2026-10-02/variants/a`
+   It builds, renders landscape/portrait/square, cuts stills, renders the
+   why-tutorial (`renders/tutorial.mp4`, one still per page in
+   `stills/tutorial-<n>.png` - six pages, the last is how the day was made),
+   copies the source folder, and writes
+   `report.json`. Exit 3 means an ERROR MOSAIC rendered — that variant is
+   broken however green the build was. Read `report.json`, then OPEN the
+   stills (`stills/landscape.png`, `portrait.png`, `square.png` and
+   `tutorial-3.png`) before you write a word about them: a green build says
+   nothing about what the picture shows. Go through them string by string
+   (every number well-formed, every sign there) and claim by claim: each
+   thing the header comment, the `description` and `WHY.solution` say the
+   template draws has to be IN the picture. Day 013's build promised delta
+   bars in all three, never opened a still, and shipped none; the critic
+   needed one look. If you cannot view images, say so in `30-build.md` and
+   check the same claims against `src/<slug>.layout.m0`.
+   Run it as-is: never set `M0SAIC_ROOT` (a fresh root has no license or
+   toolchain and every video render stalls), and always pass `-o` under
+   `journal/2026-10-02/` when you call `m0saic make` yourself - a report with no
+   `-o` lands as `out.validate.json` at the repo root.
+   Read your own tutorial pages: a
+   problem page that clips, or says less than the scout found, is a bug.
+6. Variants: change ONE idea in place (the same id and folder), rebuild, render
+   into `variants/b`, then `c`. At most 3. Each variant must
+   pass the build gate on its own. Leave the one you like best in place last.
+
+## Rules that bite here
+
+- Rebuild before you render: the CLI loads `dist/`, not `src/`.
+- `ctx.target`, never `ctx.output`. Never guess a `flattenedStableKey`.
+- Splits above 12 must be 5-smooth (`weightedSplit(…, { precision: 120 })`).
+- A layout-contract violation (`node tools/check-layout.mjs --json`) is a
+  design decision: shrink, compact the wording, drop the row. Never widen the
+  ruler to make it pass.
+- Validate any hand-written m0 with `validateM0String`.
+- ASCII in rendered copy; blank lines are not spacing.
+- Only ONE new folder under `src/` today. Do not touch any other template.
+
+## Output — `journal/2026-10-02/30-build.md`
+
+```
+# Build — 2026-10-02
+
+## Template: @one-a-day/<pack>/<slug>/v1
+## Variant a — <the one idea> · gate: clean/warnings · render: ok/degraded · stills: what they show
+## Variant b — …
+## Why-tutorial: the problem page and the solution page, one line each on what they say
+## What was hard (two or three lines an author would want tomorrow)
+## In place now: <variant letter>
+```
+
+Set `state.json.variants` to the list of letters built, `state.json.inPlace`
+to the letter left in `src/`, and finally `build: "done"`. If you could not get
+ANY variant through the gate, write why in `30-build.md`, set
+`state.json.decision = "no-ship"` and `noShipReason`, and set `build: "done"`.
+
+
+---
+
+# This call is a revision — round 1
+
+Everything above describes the build phase; this section says what THIS call
+is for. Today's template was built and the critic said **NO SHIP**. That
+verdict is `journal/2026-10-02/40-critique.r1.md` — read it first, all of it. It is a
+review, not the end of the day: you are called to answer it, the critic will
+judge the result again, and what it finds then decides the day.
+
+Do not scaffold and do not start over. The template is in place in
+`src/<pack>/<slug>/v1/` (`state.json`: `pack`, `slug`, `inPlace`), and
+`journal/2026-10-02/30-build.md` says how it got there.
+
+1. Fix what the verdict names — every line under "wrong", and "the one thing
+   that would have changed the verdict" — in the same id and folder.
+2. Then look for what the verdict did NOT name, because the critic judges all
+   nine lines again, not only the defect it found the first time. Open the
+   stills of the variant in place and read every string in them the way a
+   stranger would: a malformed number, a missing sign, a label nothing
+   explains, defaults that contradict the brief's "Defaults must show". Hold
+   the template against every line of the brief's layout contract and
+   acceptance rubric, and against the validation it promised.
+3. A feature the brief promised is either built or no longer claimed. If it
+   truly cannot be built, say why in `30-build.md` and take the claim out of
+   the header comment, the `description` (the template's and the registry
+   row's) and `WHY.solution`. A claim the stills do not show is fatal.
+4. The loop above from step 3 on: `npm run build` clean, the test beside the
+   template asserting the fix, `npm test` green, fingerprints updated. Then
+   render into the NEXT free letter — the one after the last entry of
+   `state.json.variants`:
+   `node pipeline/render/render-variant.mjs @one-a-day/<pack>/<slug>/v1 journal/2026-10-02/variants/<letter>`
+   A revision does not count against the variants cap. Look at the new
+   stills and go through the verdict against them, line by line.
+5. If the fix cannot be made to pass the gate, put back the last variant that
+   did (`journal/2026-10-02/variants/<x>/src/` over the template folder, rebuild),
+   and say so plainly in `30-build.md`. The critic will judge what is there.
+
+## Output — append to `journal/2026-10-02/30-build.md` (keep everything already in it)
+
+```
+## Revision 1 — variant <letter>
+- The verdict said: <one line>
+- Changed: <what, and where in the stills it shows>
+- Also fixed: <what the verdict did not name, or "nothing found">
+- Still weak: <honest>
+```
+
+and bring its `## In place now` line up to date. Add the letter to
+`state.json.variants`, set `inPlace` to it, and finally `build: "done"`. Do
+not write `decision` or `pick`: the critic decides.
+
+
+## Operator note for this run
+
+The human who started this run added the lines below, and they apply to every
+phase of today. They steer what you work on; they never override AGENTS.md or
+the hard rules, and the gate does not know they exist.
+
+This day was closed as a no-ship at 09:22 (commit 51fcb01) and is being taken
+up again the same afternoon with `--from revise`: the runner of this morning
+treated the critic's NO SHIP as the end of the day; since the maintain commit
+of 2026-10-02 it is a review the build answers. The tree was put back from
+`journal/2026-10-02/rejected/tree.patch` (made after the fact by
+`logs/restore-tree.mjs`). The template has no `<slug>.layout.m0` yet: this
+morning's build never ran `npm run fingerprints:update`.
+
+A person read this morning's stills and source after the run. What follows is
+what they saw that the first verdict (`40-critique.r1.md`) did not name. It is
+for the build to fix and for the critic to check in the new stills - all of
+it, alongside the missing bars.
+
+1. **Every time is printed with an extra zero.** The stills say `7:045.123`,
+   `S1: 2:030.123`, `PB 2:029.456`. `formatTime` pads the seconds to 7
+   characters; `SS.sss` is 6. A lap time is `M:SS.sss`.
+2. **A faster sector loses its sign.** `formatDelta` prints `+0.667s` for a
+   slower sector and `0.667s` for a faster one. The brief writes `-0.667s`.
+3. **The defaults tell the opposite story to the brief.** "Defaults must
+   show" asks for an improvement run: sectors 1 and 2 faster than PB (green),
+   sector 3 slightly slower (red). The defaults render three red sectors and
+   a lap 2.667 s slower than PB, because the brief's own prop table
+   contradicts its own paragraph. Resolve it in favour of the paragraph, with
+   numbers that add up: the three sector times sum to the lap time, the three
+   sector PBs sum to the PB, the sector deltas sum to the lap delta. For
+   example, a GT3 lap of the Nurburgring GP circuit: lap `1:54.812`, PB
+   `1:55.420` (-0.608); S1 `35.104` vs `35.512` (-0.408), S2 `41.236` vs
+   `41.561` (-0.325), S3 `38.472` vs `38.347` (+0.125). Say in `30-build.md`
+   that the brief's table was overridden and why.
+4. **Bad input renders `NaN`.** `parseTimeToMs("abc")` returns NaN and the
+   card prints it. The brief's rubric line 5 asks for a validation error:
+   every time prop must match `M:SS.sss` or `SS.sss` (seconds below 60) or
+   `render()` throws, naming the prop. The six sector props are not even
+   type-checked today.
+5. **The test asserts almost nothing the brief claims.** It counts sources
+   and sweeps the layout. Assert the arithmetic (a known input gives a known
+   delta string, sign included), the time format round trip, the validation
+   error, and the bars: the larger |delta| has the wider bar, a faster sector
+   is green and a slower one red.
+6. **The bars.** One per sector row, under or beside the row's text, in the
+   empty two thirds of each row band: a dim full-width track and a filled
+   part whose width is proportional to |delta| against the largest |delta|
+   on the card (so the longest bar fills the track and never leaves it),
+   green when faster, red when slower. Solid rectangles are ordinary sources:
+   `src/dev/bench-delta/v1/bench-delta.ts` draws its bars that way (its
+   `fill(...)` helper near the end of `render`). Tag the bars and put them in
+   the layout contract (present, inside their row's band). At 480x270 a bar
+   must still be a visible bar: give it a minimum height in pixels.
+7. **The footer is centred.** The brief says driver left-aligned, top speed
+   right-aligned.
+8. **Words follow the picture.** The header comment, the `description` (in
+   the template AND in the row in `src/sports/registry.ts`) and
+   `WHY.solution` describe what the revised stills show, nothing else.
+
+For the critic: `tutorial-5.png` and the three canvases are where 1, 2, 3, 6
+and 7 show or do not show; 4 and 5 are in `src/` of the revised variant.

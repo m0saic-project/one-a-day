@@ -1,0 +1,44 @@
+
+===== 2026-10-02T17:20:27.159Z $ npm run new -- sports/lap-telemetry-card --title Sim Racing Lap Card
+
+> one-a-day@0.1.0 new
+> node tools/new-template.mjs sports/lap-telemetry-card --title Sim Racing Lap Card
+
+new-template: @one-a-day/sports/lap-telemetry-card/v1  (2026-10-02 · Sim Racing Lap Card)
+  wrote  src/sports/lap-telemetry-card/v1/lap-telemetry-card.ts
+  wrote  src/sports/lap-telemetry-card/v1/lap-telemetry-card.test.ts
+  wrote  src/sports/registry.ts
+  wrote  src/sports/index.ts
+
+Next:
+  npm run build && npm run previews && npm run build && npm run fingerprints:update && npm run verify
+  then edit src/sports/lap-telemetry-card/v1/lap-telemetry-card.ts — the header comment is the lesson; lap-telemetry-card.layout.m0 beside it is the layout fingerprint;
+  write the description and the search tags into the template's row in src/sports/registry.ts too — that row, not the template file, is what the manifest and TEMPLATES.md show;
+  fill WHY (the why-tutorial: who, the observed problem, its sources, the solution, how to use it) — the build refuses a [fill me].
+
+===== exit 0 after 637ms
+
+===== 2026-10-02T17:20:27.799Z $ npm run build
+
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/gen-gallery.mjs && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+
+[check-freeze] ✓ freeze (2026-10-01 (m0saic 0.3.0)): 17 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (15 templates, 7 packs, 14 with preview assets)
+[gen-gallery] wrote TEMPLATES.md (13 daily template(s) in 2 month(s), 2 other).
+[check-registry] ✓ 15 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✓ layout fingerprints: 14 unchanged, 1 missing, 0 changed.
+[check-registry] ✓ 15 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+[check-layout] ✓ 14 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+[check-why] ✓ 13 template(s) explain why they exist (0 warning(s); front door exempt).
+
+===== exit 0 after 24980ms
+
+===== 2026-10-02T17:20:53.244Z $ git apply --check --binary C:\src\m0saic-production\one-a-day\journal\2026-10-02\rejected\tree.patch
+
+===== exit 0 after 69ms

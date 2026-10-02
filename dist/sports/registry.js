@@ -21,4 +21,12 @@ exports.sportsRegistry = [
         description: "A swim meet time-drop card for one swimmer: entry time against the time swum per event, the drop in seconds, a bar that prints the percent of the entry time it stands for, and the standard reached.",
         tags: ["sports", "2026-10-01", "day-012", "swimming", "time-drop", "meet-recap", "club"],
     },
+    {
+        slug: "lap-telemetry-card",
+        templateId: "@one-a-day/sports/lap-telemetry-card/v1",
+        exportName: "LapTelemetryCardV1",
+        title: "2026-10-02 · Sim Racing Lap Card",
+        description: "A sim racing lap card: track, lap time and delta vs PB, three sectors with times, PBs, and proportional delta bars (green for faster, red for slower), driver name, and top speed.",
+        tags: ["sports", "2026-10-02", "day-013", "racing", "telemetry", "sector", "delta"],
+    },
 ];

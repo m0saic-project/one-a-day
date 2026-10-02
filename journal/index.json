@@ -335,16 +335,19 @@
     "agent": "claude",
     "model": "claude-haiku-4-5-20251001",
     "rosterId": "claude-haiku",
-    "status": "no-ship",
-    "templateId": null,
-    "title": null,
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/lap-telemetry-card/v1",
+    "title": "2026-10-02 · Sim Racing Lap Card",
+    "pack": "sports",
     "useCase": "Sim racing drivers want to share lap telemetry achievements: sector times, deltas against PB, apex speeds as shareable cards.",
     "tags": [
-      "gaming",
+      "sports",
+      "2026-10-02",
+      "day-013",
       "racing",
-      "sim-racing",
       "telemetry",
-      "competitive"
+      "sector",
+      "delta"
     ],
     "sources": [
       "https://simtelemetry.site",

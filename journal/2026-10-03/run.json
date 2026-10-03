@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-03",
+  "day": 14,
+  "startedAt": "2026-10-03T13:00:02.190Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "opus[1m]",
+    "roster": {
+      "id": "claude-opus",
+      "agent": "claude",
+      "model": "opus[1m]",
+      "weight": 3,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": "high",
+    "budgetUsd": 30,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-opus-5-5",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.17,
+        "resetsAt": "2026-10-03T18:00:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.42,
+        "resetsAt": "2026-10-06T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-03T13:41:01.246Z"
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 187405,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 235961,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 1207652,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 272378,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 278518,
+      "done": true
+    }
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/community/qsl-card/v1",
+    "title": "2026-10-03 · Ham Radio QSL Card",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 4,
+    "at": "2026-10-03T13:43:23.248Z"
+  }
+}

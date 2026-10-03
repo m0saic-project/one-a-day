@@ -1,0 +1,38 @@
+{
+  "useCase": "QSL cards for ham radio contacts, one card per QSO, rendered from the ADIF log record (call, date, UTC, band/MHz, mode, RST, grid)",
+  "who": "Amateur radio operators confirming contacts with paper or e-mailed QSL cards, gathered around their loggers (World Radio League, Wavelog, Log4OM), eQSL/LoTW/QRZ and POTA/SOTA activator circles",
+  "sources": [
+    "https://community.worldradioleague.com/t/qsl-card-generator/13739",
+    "https://community.worldradioleague.com/t/qsl-card-generator/13739?page=2",
+    "https://community.worldradioleague.com/t/auto-qsl-card/",
+    "https://www.adif.org/316/ADIF_316.htm",
+    "https://github.com/s53zo/ADIF-to-QSL-label",
+    "https://cq.sk/en/adif-to-qsl-label/",
+    "https://docs.wavelog.org/user-guide/qsl/qsl-postcard-designer/",
+    "https://digiqsl.com/features",
+    "https://amateurradio.com/qsling-made-easy"
+  ],
+  "tags": [
+    "ham-radio",
+    "qsl",
+    "adif",
+    "card",
+    "still"
+  ],
+  "scout": "done",
+  "pack": "community",
+  "slug": "qsl-card",
+  "title": "Ham Radio QSL Card",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "c"
+  ],
+  "inPlace": "c",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

@@ -353,5 +353,37 @@
       "https://simtelemetry.site",
       "https://news.ycombinator.com/item?id=49045861"
     ]
+  },
+  {
+    "date": "2026-10-03",
+    "day": 14,
+    "agent": "claude",
+    "model": "claude-opus-5-5",
+    "rosterId": "claude-opus",
+    "status": "shipped",
+    "templateId": "@one-a-day/community/qsl-card/v1",
+    "title": "2026-10-03 · Ham Radio QSL Card",
+    "pack": "community",
+    "useCase": "QSL cards for ham radio contacts, one card per QSO, rendered from the ADIF log record (call, date, UTC, band/MHz, mode, RST, grid)",
+    "tags": [
+      "community",
+      "2026-10-03",
+      "day-014",
+      "ham-radio",
+      "qsl",
+      "adif",
+      "card"
+    ],
+    "sources": [
+      "https://community.worldradioleague.com/t/qsl-card-generator/13739",
+      "https://community.worldradioleague.com/t/qsl-card-generator/13739?page=2",
+      "https://community.worldradioleague.com/t/auto-qsl-card/",
+      "https://www.adif.org/316/ADIF_316.htm",
+      "https://github.com/s53zo/ADIF-to-QSL-label",
+      "https://cq.sk/en/adif-to-qsl-label/",
+      "https://docs.wavelog.org/user-guide/qsl/qsl-postcard-designer/",
+      "https://digiqsl.com/features",
+      "https://amateurradio.com/qsling-made-easy"
+    ]
   }
 ]

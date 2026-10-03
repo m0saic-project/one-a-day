@@ -66,4 +66,9 @@ exports.TEMPLATE_PACKS = [
         title: "Sports",
         description: "Sports: one line on what this pack teaches.",
     },
+    {
+        id: "community",
+        title: "Community",
+        description: "Cards a hobby community makes for its own members, filled from the records the hobby already keeps (a ham radio log, a club roster): one card per record, scripted.",
+    },
 ];

@@ -299,6 +299,25 @@
       "preview": {
         "image": "assets/templates/@one-a-day__sports__lap-telemetry-card__v1/preview.png"
       }
+    },
+    {
+      "slug": "qsl-card",
+      "templateKey": "@one-a-day/community/qsl-card/v1",
+      "title": "2026-10-03 · Ham Radio QSL Card",
+      "description": "A ham radio QSL card for one contact, from one ADIF log record: props named after the ADIF fields, the date and time printed the QSL way, BAND derived from FREQ. Paper and type only, no photo background in v1.",
+      "tags": [
+        "community",
+        "2026-10-03",
+        "day-014",
+        "ham-radio",
+        "qsl",
+        "adif",
+        "card"
+      ],
+      "pack": "community",
+      "preview": {
+        "image": "assets/templates/@one-a-day__community__qsl-card__v1/preview.png"
+      }
     }
   ],
   "packs": [
@@ -336,6 +355,11 @@
       "id": "sports",
       "title": "Sports",
       "description": "Sports: one line on what this pack teaches."
+    },
+    {
+      "id": "community",
+      "title": "Community",
+      "description": "Cards a hobby community makes for its own members, filled from the records the hobby already keeps (a ham radio log, a club roster): one card per record, scripted."
     }
   ]
 }

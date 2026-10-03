@@ -8,6 +8,7 @@ const registry_4 = require("./social/registry");
 const registry_5 = require("./events/registry");
 const registry_6 = require("./gaming/registry");
 const registry_7 = require("./sports/registry");
+const registry_8 = require("./community/registry");
 /**
  * Every template, chapter by chapter. Array order is display order — the
  * manifest generator flattens this verbatim into template-manifest.json
@@ -21,6 +22,7 @@ exports.CHAPTERS = [
     { pack: "events", entries: registry_5.eventsRegistry },
     { pack: "gaming", entries: registry_6.gamingRegistry },
     { pack: "sports", entries: registry_7.sportsRegistry },
+    { pack: "community", entries: registry_8.communityRegistry },
 ];
 /** Flat view over every chapter, in order. */
 exports.templateRegistry = exports.CHAPTERS.flatMap((chapter) => chapter.entries);

@@ -10,4 +10,5 @@ export * from "./social";
 export * from "./events";
 export * from "./gaming";
 export * from "./sports";
+export * from "./community";
 export { TEMPLATE_PACKS, TEMPLATE_REPO };

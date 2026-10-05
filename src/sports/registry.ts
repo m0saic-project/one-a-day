@@ -31,4 +31,13 @@ export const sportsRegistry: StarterRegistryEntry[] = [
       "A sim racing lap card: track, lap time and delta vs PB, three sectors with times, PBs, and proportional delta bars (green for faster, red for slower), driver name, and top speed.",
     tags: ["sports","2026-10-02","day-013","racing","telemetry","sector","delta"],
   },
+  {
+    slug: "cubing-average-card",
+    templateId: "@one-a-day/sports/cubing-average-card/v1",
+    exportName: "CubingAverageCardV1",
+    title: "2026-10-04 · Cubing Average Card",
+    description:
+      "A speedcubing average card: give 3, 5 or 12 solves and it works out the Mo3, Ao5 or Ao12, one bar per solve with the dropped best and worst in parentheses and hollow, the average as the headline, and the delta against the previous PB.",
+    tags: ["sports","2026-10-04","day-015","cubing","speedcubing","average","pb","cstimer"],
+  },
 ];

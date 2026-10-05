@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-04",
+  "day": 15,
+  "startedAt": "2026-10-05T05:36:15.171Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "sonnet[1m]",
+    "roster": {
+      "id": "claude-sonnet",
+      "agent": "claude",
+      "model": "sonnet[1m]",
+      "weight": 2,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": "high",
+    "budgetUsd": 15,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-sonnet-5-5",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.11,
+        "resetsAt": "2026-10-05T10:30:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.43,
+        "resetsAt": "2026-10-06T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-05T07:13:54.306Z"
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 162820,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 162808,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": null,
+      "timedOut": true,
+      "ms": 3262414,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 337828,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 1246911,
+      "done": true
+    }
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/cubing-average-card/v1",
+    "title": "2026-10-04 · Cubing Average Card",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 4,
+    "at": "2026-10-05T07:18:09.738Z"
+  }
+}

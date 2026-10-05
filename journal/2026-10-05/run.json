@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-05",
+  "day": 16,
+  "startedAt": "2026-10-05T13:00:03.190Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "fable[1m]",
+    "roster": {
+      "id": "claude-fable",
+      "agent": "claude",
+      "model": "fable[1m]",
+      "weight": 3,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": "high",
+    "budgetUsd": 30,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-fable-5.1",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.68,
+        "resetsAt": "2026-10-05T18:00:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.46,
+        "resetsAt": "2026-10-06T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-05T14:08:53.021Z"
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 236785,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 334021,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 1885780,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 519185,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 936816,
+      "done": true
+    }
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/music/radio-top-30-chart/v1",
+    "title": "2026-10-05 · Radio Top 30 Chart",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 4,
+    "at": "2026-10-05T14:11:33.135Z"
+  }
+}

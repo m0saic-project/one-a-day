@@ -1,0 +1,370 @@
+{
+  "ok": true,
+  "repo": {
+    "path": "C:\\src\\m0saic-production\\one-a-day",
+    "id": "@one-a-day",
+    "displayName": "One a Day",
+    "templates": 18
+  },
+  "mode": "gate",
+  "loadDiagnostics": [],
+  "rendered": 18,
+  "skipped": [],
+  "errors": [],
+  "warnings": [
+    {
+      "templateId": "@one-a-day/social/episode-audiogram/v1",
+      "convention": "bindingsCover",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" (default 30, drawn as \"30\") is drawn as text but no source binds it — wrap the source that shows it: bindProp(src, \"clipSec\")."
+        }
+      ],
+      "fix": "a prop drawn as text should be bound to the rect that shows it (bindProp(src, \"<key>\")) so Make's double-click edits it in place. Bind the rect that SHOWS the prop, even when its value is empty."
+    },
+    {
+      "templateId": "@one-a-day/events/talk-timer/v1",
+      "convention": "bindingsCover",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "finalSec",
+          "detail": "\"finalSec\" (default 30, drawn as \"30\") is drawn as text but no source binds it — wrap the source that shows it: bindProp(src, \"finalSec\")."
+        }
+      ],
+      "fix": "a prop drawn as text should be bound to the rect that shows it (bindProp(src, \"<key>\")) so Make's double-click edits it in place. Bind the rect that SHOWS the prop, even when its value is empty."
+    },
+    {
+      "templateId": "@one-a-day/gaming/speedrun-pb-recap/v1",
+      "convention": "bindingsCover",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" (default 20, drawn as \"20\") is drawn as text but no source binds it — wrap the source that shows it: bindProp(src, \"clipSec\")."
+        }
+      ],
+      "fix": "a prop drawn as text should be bound to the rect that shows it (bindProp(src, \"<key>\")) so Make's double-click edits it in place. Bind the rect that SHOWS the prop, even when its value is empty."
+    },
+    {
+      "templateId": "@one-a-day/sports/powerlifting-meet-recap/v1",
+      "convention": "bindingsCover",
+      "severity": "warning",
+      "violations": [
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" (default 12, drawn as \"12\") is drawn as text, but every rect that shows it already binds \"details\" — a composite line. Add this prop to that rect: bindProps(src, [… , { propKey: \"clipSec\" }]), or split the line so each prop has its own rect."
+        }
+      ],
+      "fix": "a prop drawn as text should be bound to the rect that shows it (bindProp(src, \"<key>\")) so Make's double-click edits it in place. Bind the rect that SHOWS the prop, even when its value is empty."
+    }
+  ],
+  "lagging": [
+    {
+      "templateId": "@one-a-day/harness/agent-timeline/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "phases",
+          "detail": "\"phases\" can carry a leaf handle but nothing binds it — bind the rect that shows it (bindProp(src, \"phases\")), or declare why it has none: bindings.unbound = { \"phases\": \"<reason>\" }."
+        },
+        {
+          "key": "accent",
+          "detail": "\"accent\" can carry a color handle but nothing binds it — bind the rect that shows it (bindProp(src, \"accent\")), or declare why it has none: bindings.unbound = { \"accent\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/dev/og-card/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "background",
+          "detail": "\"background\" can carry a color handle but nothing binds it — bind the rect that shows it (bindProp(src, \"background\")), or declare why it has none: bindings.unbound = { \"background\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/social/testimonial-proof-card/v1",
+      "convention": "canvasFill",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "source[0]",
+          "detail": "source 0 is a static #e8eee9 fill covering the whole 1080×1080 canvas — set document.backgroundColor instead and drop the source. A base rect is a click target over everything: in Make it is selected whenever the pointer is not on a smaller tile. (A template whose SUBJECT is that rect declares it: canvas.baseRect = \"<why>\". A template that must ship it because it is composed INTO another uses defaultProps.useNestedBackgroundColor = true instead.)"
+        }
+      ],
+      "fix": "fill the canvas with document.backgroundColor, never a full-canvas colour rect. A base rect is a click target that covers everything — it gets selected in Make any time the pointer is not on a smaller tile — and the document background does the same job with no rect at all. Only a STATIC, fully opaque, unshaped fill counts: a curtain wipe (overlay.enable / window), a scrim (overlay.alpha), a masked shape and a rounded card are all legitimate and never flagged. Two declared exceptions, and they mean different things: canvas.baseRect = \"<why>\" is the general one (the rect IS the subject — a lesson about full-rect nodes, a tutorial surface), and defaultProps.useNestedBackgroundColor = true is the narrow one (this template is COMPOSED INTO another, whose slot its own backgroundColor cannot fill). An empty baseRect reason is refused."
+    },
+    {
+      "templateId": "@one-a-day/social/episode-audiogram/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "wave",
+          "detail": "\"wave\" can carry a number element handle but nothing binds it — bind the rect that shows it (bindProp(src, \"wave\")), or declare why it has none: bindings.unbound = { \"wave\": \"<reason>\" }."
+        },
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"clipSec\")), or declare why it has none: bindings.unbound = { \"clipSec\": \"<reason>\" }."
+        },
+        {
+          "key": "audioSrc",
+          "detail": "\"audioSrc\" can carry a media element handle but nothing binds it — bind the rect that shows it (bindProp(src, \"audioSrc\")), or declare why it has none: bindings.unbound = { \"audioSrc\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/events/talk-timer/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "seconds",
+          "detail": "\"seconds\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"seconds\")), or declare why it has none: bindings.unbound = { \"seconds\": \"<reason>\" }."
+        },
+        {
+          "key": "warnSec",
+          "detail": "\"warnSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"warnSec\")), or declare why it has none: bindings.unbound = { \"warnSec\": \"<reason>\" }."
+        },
+        {
+          "key": "finalSec",
+          "detail": "\"finalSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"finalSec\")), or declare why it has none: bindings.unbound = { \"finalSec\": \"<reason>\" }."
+        },
+        {
+          "key": "holdSec",
+          "detail": "\"holdSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"holdSec\")), or declare why it has none: bindings.unbound = { \"holdSec\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/gaming/speedrun-pb-recap/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "lss",
+          "detail": "\"lss\" can carry a string handle but nothing binds it — bind the rect that shows it (bindProp(src, \"lss\")), or declare why it has none: bindings.unbound = { \"lss\": \"<reason>\" }."
+        },
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"clipSec\")), or declare why it has none: bindings.unbound = { \"clipSec\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    },
+    {
+      "templateId": "@one-a-day/sports/powerlifting-meet-recap/v1",
+      "convention": "bindingsDeclared",
+      "severity": "error",
+      "violations": [
+        {
+          "key": "csv",
+          "detail": "\"csv\" can carry a string handle but nothing binds it — bind the rect that shows it (bindProp(src, \"csv\")), or declare why it has none: bindings.unbound = { \"csv\": \"<reason>\" }."
+        },
+        {
+          "key": "row",
+          "detail": "\"row\" can carry a string handle but nothing binds it — bind the rect that shows it (bindProp(src, \"row\")), or declare why it has none: bindings.unbound = { \"row\": \"<reason>\" }."
+        },
+        {
+          "key": "clipSec",
+          "detail": "\"clipSec\" can carry a number handle but nothing binds it — bind the rect that shows it (bindProp(src, \"clipSec\")), or declare why it has none: bindings.unbound = { \"clipSec\": \"<reason>\" }."
+        }
+      ],
+      "fix": "every prop that CAN carry a canvas handle is either bound on the rect that shows it (bindProp / bindProps / bindPropPath / bindPropRect) or named in template.bindings.unbound with the reason it has none ({ fps: \"timing\" }). The accountable props are free-text and colour strings, numbers, media, one element of a basic list, one leaf of json / list / array, and a regions-picker rect; booleans, closed sets, group containers, the m0 family, code and hidden / human props are never canvas things. A declaration naming an unknown prop, or one that is actually bound, is itself a violation — a stale entry is worse than none. Templates hashed in frozen.manifest.json are exempt."
+    }
+  ],
+  "notes": [
+    {
+      "templateId": "@one-a-day/dev/og-card/v1",
+      "note": "latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it"
+    }
+  ],
+  "fingerprints": {
+    "srcRoot": "src",
+    "fallbackDir": "layout-fingerprints",
+    "present": true,
+    "unchanged": 18,
+    "missing": 0,
+    "changed": 0
+  },
+  "conventions": {
+    "meets": "0.2.0",
+    "behind": [
+      {
+        "since": "0.3.0",
+        "conventions": [
+          "bindingsDeclared",
+          "canvasFill"
+        ]
+      }
+    ],
+    "byTemplate": [
+      {
+        "templateId": "@one-a-day/basics/hello-world/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.2.2",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/harness/agent-timeline/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/dev/og-card/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/dev/bench-delta/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.2.2",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/dev/app-store-screenshot-frame/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.2.2",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/social/testimonial-proof-card/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "canvasFill"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/social/episode-audiogram/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/events/talk-timer/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/events/bird-walk-sightings/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.2.2",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/events/homebrew-serving-card/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.3.0",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/gaming/speedrun-pb-recap/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/gaming/crossword-grid-card/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.3.0",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/sports/powerlifting-meet-recap/v1",
+        "meets": "0.2.0",
+        "behind": [
+          "0.3.0"
+        ],
+        "shippedAt": "0.2.2",
+        "lagging": [
+          "bindingsDeclared"
+        ]
+      },
+      {
+        "templateId": "@one-a-day/sports/swim-time-drop-card/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.3.0",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/sports/lap-telemetry-card/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.3.0",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/sports/cubing-average-card/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.3.0",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/community/qsl-card/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": "0.3.0",
+        "lagging": []
+      },
+      {
+        "templateId": "@one-a-day/music/radio-top-30-chart/v1",
+        "meets": "0.3.0",
+        "behind": [],
+        "shippedAt": null,
+        "lagging": []
+      }
+    ],
+    "shippedAt": "0.3.0",
+    "lagOnly": true
+  }
+}

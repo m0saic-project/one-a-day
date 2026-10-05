@@ -338,6 +338,26 @@
       "preview": {
         "image": "assets/templates/@one-a-day__community__qsl-card__v1/preview.png"
       }
+    },
+    {
+      "slug": "radio-top-30-chart",
+      "templateKey": "@one-a-day/music/radio-top-30-chart/v1",
+      "title": "2026-10-05 · Radio Top 30 Chart",
+      "description": "A radio station's weekly chart card from a list of lines (Artist | Title | Label | last week): the station, a computed TOP 30, the week, and thirty equal two-line rows with rank and movement markers, 3 x 10 on a wide canvas and 2 x 15 on a square or story; long titles shrink by rule or are refused, never clipped.",
+      "tags": [
+        "music",
+        "2026-10-05",
+        "day-016",
+        "radio",
+        "college-radio",
+        "chart",
+        "top-30",
+        "nacc"
+      ],
+      "pack": "music",
+      "preview": {
+        "image": "assets/templates/@one-a-day__music__radio-top-30-chart__v1/preview.png"
+      }
     }
   ],
   "packs": [
@@ -380,6 +400,11 @@
       "id": "community",
       "title": "Community",
       "description": "Cards a hobby community makes for its own members, filled from the records the hobby already keeps (a ham radio log, a club roster): one card per record, scripted."
+    },
+    {
+      "id": "music",
+      "title": "Music",
+      "description": "Station charts and other music artifacts, made from the rows the person already keeps (a weekly Top 30 as reported to NACC): the list goes in, the card comes out, and long names are fitted by rule or refused, never clipped."
     }
   ]
 }

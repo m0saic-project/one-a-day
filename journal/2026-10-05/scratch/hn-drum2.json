@@ -1,0 +1,71 @@
+{
+  "query": "drum machine pattern",
+  "days": 2000,
+  "count": 8,
+  "results": [
+    {
+      "title": "Show HN: I built one of the most advanced web-based drum/beat sequencers",
+      "url": "https://maximecb.github.io/groovie/#a_96_bar_berlin_techno_arrangement/FdAnck8QxEjUoejHv1EvwfEK6CeBmwopEcII9JpEroPEWkq1BNYCSCCGuJfjJXg-IlIsCRaIxHSJy3kypqJbIWInFCJnoAKRACYV6k66nWHiLAkKcUOiNHoJYx8spdj6AiiApQ4MYQYiORhGkyyR7YlJspwJJsWUzW0gmxi1h5BQCgiABSWcUtGvoirKXQx6x8gkTVroJyQDVpJIPpIGD0lvoyQHMeHgCKIFK8SfJ5dlnnng",
+      "hn": "https://news.ycombinator.com/item?id=49182903",
+      "points": 4,
+      "comments": 2,
+      "createdAt": "2026-08-05T13:50:46Z"
+    },
+    {
+      "title": "Show HN: A local-first genomic analysis toolkit",
+      "url": "https://github.com/emrecolako/savior/",
+      "hn": "https://news.ycombinator.com/item?id=47391797",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-15T20:55:57Z"
+    },
+    {
+      "title": "Show HN: Beats, a web-based drum machine",
+      "url": "https://beats.lasagna.pizza",
+      "hn": "https://news.ycombinator.com/item?id=46672181",
+      "points": 160,
+      "comments": 48,
+      "createdAt": "2026-01-18T21:10:08Z"
+    },
+    {
+      "title": "Show HN: Impulse Cycler – Transient Motion Resynthesizer",
+      "url": "https://aftertone.co/impulse-cycler/",
+      "hn": "https://news.ycombinator.com/item?id=46544432",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-08T18:17:37Z"
+    },
+    {
+      "title": "Show HN: I made a generative online drum machine with ClojureScript",
+      "url": "https://dopeloop.ai/beat-maker/",
+      "hn": "https://news.ycombinator.com/item?id=45220069",
+      "points": 202,
+      "comments": 55,
+      "createdAt": "2025-09-12T08:44:15Z"
+    },
+    {
+      "title": "Show HN: Hand-controlled arpeggiator, drum machine, and audio reactive visuals",
+      "url": "https://twitter.com/measure_plan/status/1933544128287228123",
+      "hn": "https://news.ycombinator.com/item?id=44269693",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2025-06-13T15:56:30Z"
+    },
+    {
+      "title": "Show HN: The simplest drum pattern composing algorithm I could come up with",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=32924082",
+      "points": 11,
+      "comments": 11,
+      "createdAt": "2022-09-21T12:33:07Z"
+    },
+    {
+      "title": "Launch HN: Iollo (YC S22) – At-home metabolomics test to extend healthy lifespan",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=32333417",
+      "points": 167,
+      "comments": 144,
+      "createdAt": "2022-08-03T15:56:41Z"
+    }
+  ]
+}

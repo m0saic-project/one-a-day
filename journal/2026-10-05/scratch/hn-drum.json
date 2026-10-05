@@ -1,0 +1,103 @@
+{
+  "query": "drum patterns",
+  "days": 2000,
+  "count": 12,
+  "results": [
+    {
+      "title": "Show HN: I built one of the most advanced web-based drum/beat sequencers",
+      "url": "https://maximecb.github.io/groovie/#a_96_bar_berlin_techno_arrangement/FdAnck8QxEjUoejHv1EvwfEK6CeBmwopEcII9JpEroPEWkq1BNYCSCCGuJfjJXg-IlIsCRaIxHSJy3kypqJbIWInFCJnoAKRACYV6k66nWHiLAkKcUOiNHoJYx8spdj6AiiApQ4MYQYiORhGkyyR7YlJspwJJsWUzW0gmxi1h5BQCgiABSWcUtGvoirKXQx6x8gkTVroJyQDVpJIPpIGD0lvoyQHMeHgCKIFK8SfJ5dlnnng",
+      "hn": "https://news.ycombinator.com/item?id=49182903",
+      "points": 4,
+      "comments": 2,
+      "createdAt": "2026-08-05T13:50:46Z"
+    },
+    {
+      "title": "Show HN: Mpump – browser groovebox where grooves are shareable links",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=47587257",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-03-31T13:41:04Z"
+    },
+    {
+      "title": "Show HN: A local-first genomic analysis toolkit",
+      "url": "https://github.com/emrecolako/savior/",
+      "hn": "https://news.ycombinator.com/item?id=47391797",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2026-03-15T20:55:57Z"
+    },
+    {
+      "title": "Show HN: Beats, a web-based drum machine",
+      "url": "https://beats.lasagna.pizza",
+      "hn": "https://news.ycombinator.com/item?id=46672181",
+      "points": 160,
+      "comments": 48,
+      "createdAt": "2026-01-18T21:10:08Z"
+    },
+    {
+      "title": "Show HN: Impulse Cycler – Transient Motion Resynthesizer",
+      "url": "https://aftertone.co/impulse-cycler/",
+      "hn": "https://news.ycombinator.com/item?id=46544432",
+      "points": 2,
+      "comments": 0,
+      "createdAt": "2026-01-08T18:17:37Z"
+    },
+    {
+      "title": "Show HN: AI music and auto-charting and custom rhythm minigame sandbox",
+      "url": "https://rhythm-seodang-web.vercel.app/",
+      "hn": "https://news.ycombinator.com/item?id=46143358",
+      "points": 7,
+      "comments": 0,
+      "createdAt": "2025-12-04T03:08:35Z"
+    },
+    {
+      "title": "Show HN: Beatstoch – BPM-aware stochastic drum MIDI generator",
+      "url": "https://james-see.github.io/beatstoch/",
+      "hn": "https://news.ycombinator.com/item?id=45549718",
+      "points": 1,
+      "comments": 0,
+      "createdAt": "2025-10-11T15:04:34Z"
+    },
+    {
+      "title": "Show HN: I made a generative online drum machine with ClojureScript",
+      "url": "https://dopeloop.ai/beat-maker/",
+      "hn": "https://news.ycombinator.com/item?id=45220069",
+      "points": 202,
+      "comments": 55,
+      "createdAt": "2025-09-12T08:44:15Z"
+    },
+    {
+      "title": "Show HN: Hand-controlled arpeggiator, drum machine, and audio reactive visuals",
+      "url": "https://twitter.com/measure_plan/status/1933544128287228123",
+      "hn": "https://news.ycombinator.com/item?id=44269693",
+      "points": 1,
+      "comments": 1,
+      "createdAt": "2025-06-13T15:56:30Z"
+    },
+    {
+      "title": "Show HN: I built a website for sharing drum patterns",
+      "url": "http://drumpatterns.onether.com",
+      "hn": "https://news.ycombinator.com/item?id=43452629",
+      "points": 495,
+      "comments": 189,
+      "createdAt": "2025-03-23T13:05:21Z"
+    },
+    {
+      "title": "Show HN: Psychedelic animation generator; (p)art of your next trip",
+      "url": "https://collidingscopes.github.io/liquid-shape-distortions/",
+      "hn": "https://news.ycombinator.com/item?id=43358264",
+      "points": 166,
+      "comments": 61,
+      "createdAt": "2025-03-13T23:26:56Z"
+    },
+    {
+      "title": "Suno (AI generated music service) – my experience so far (long)",
+      "url": null,
+      "hn": "https://news.ycombinator.com/item?id=42110763",
+      "points": 3,
+      "comments": 2,
+      "createdAt": "2024-11-11T21:54:36Z"
+    }
+  ]
+}

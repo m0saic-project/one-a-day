@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (18 templates) from .
+Rendering template:
+  template id: @one-a-day/music/radio-top-30-chart/v1
+  output:      journal/2026-10-05/scratch/ship/why.mp4
+  Building plan... done (0.6s)
+  plan built with size: 1080 x 1080
+  duration:      59s (1770 frames @ 30fps)
+  [warn] OVERLAY_CHAIN_DEEP: Mosaic node "root" emits an overlay chain 32 deep (threshold 20) with inline masks riding it. Past ~25 nested overlays ffmpeg SILENTLY degrades inline masks — shapes collapse to their bounding box, glyph masks tofu; no error is raised. Tiles stayed off the grid sheet because their rects overlap. Consider splitting the layout into nested sub-mosaics, or removing per-cell blend/enable/opacity/position expressions so tiles can lower onto the xstack sheet.
+Validation passed
+  [warn] OVERLAY_CHAIN_DEEP: Mosaic node "root" emits an overlay chain 32 deep (threshold 20) with inline masks riding it. Past ~25 nested overlays ffmpeg SILENTLY degrades inline masks — shapes collapse to their bounding box, glyph masks tofu; no error is raised. Tiles stayed off the grid sheet because their rects overlap. Consider splitting the layout into nested sub-mosaics, or removing per-cell blend/enable/opacity/position expressions so tiles can lower onto the xstack sheet.

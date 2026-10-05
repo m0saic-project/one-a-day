@@ -411,5 +411,38 @@
       "https://www.speedsolving.com/threads/oh-race-d-yescubing-and-cubelite.95050/",
       "https://www.speedsolving.com/threads/new-speedsolving-timer.97451/"
     ]
+  },
+  {
+    "date": "2026-10-05",
+    "day": 16,
+    "agent": "claude",
+    "model": "claude-fable-5.1",
+    "rosterId": "claude-fable",
+    "status": "shipped",
+    "templateId": "@one-a-day/music/radio-top-30-chart/v1",
+    "title": "2026-10-05 · Radio Top 30 Chart",
+    "pack": "music",
+    "useCase": "College radio weekly Top 30 chart card from the rows a music director already reports to NACC: rank, artist, title, label, with the station call sign and week-of date",
+    "tags": [
+      "music",
+      "2026-10-05",
+      "day-016",
+      "radio",
+      "college-radio",
+      "chart",
+      "top-30",
+      "nacc"
+    ],
+    "sources": [
+      "https://create.richmond.edu/parsons/tag/slippers/",
+      "https://kwva.uoregon.edu/charts?page=4",
+      "https://www.wusc.fm/article/2021/08/top-30-chart-08-24-21",
+      "https://www.wusc.fm/article/2021/11/our-weekly-top-30-chart-11-02-21",
+      "https://wuvt.vt.edu/article/music-article",
+      "https://naccchart.com/reporting-guidelines",
+      "https://naccchart.com/faq",
+      "https://en.wikipedia.org/wiki/North_American_College_and_Community_Radio_Chart",
+      "https://spinitron.com/"
+    ]
   }
 ]

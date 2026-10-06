@@ -13,4 +13,13 @@ export const communityRegistry: StarterRegistryEntry[] = [
       "A ham radio QSL card for one contact, from one ADIF log record: props named after the ADIF fields, the date and time printed the QSL way, BAND derived from FREQ. Paper and type only, no photo background in v1.",
     tags: ["community", "2026-10-03", "day-014", "ham-radio", "qsl", "adif", "card"],
   },
+  {
+    slug: "weekly-run-report",
+    templateId: "@one-a-day/community/weekly-run-report/v1",
+    exportName: "WeeklyRunReportV1",
+    title: "2026-10-06 · Weekly 5k Run Report",
+    description:
+      "The weekly results card a volunteer-run Saturday 5k posts after every run: event, run number and date, finishers and volunteers as the two headline numbers, new PBs, first timers, visitors and first-time volunteers under them, and the milestone clubs reached. Numbers are typed in, never fetched.",
+    tags: ["community", "2026-10-06", "day-017", "running", "5k", "volunteers", "weekly", "stats", "results"],
+  },
 ];

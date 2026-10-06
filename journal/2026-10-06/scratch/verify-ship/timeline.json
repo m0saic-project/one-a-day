@@ -1,0 +1,71 @@
+{
+  "source": "runner",
+  "phases": [
+    {
+      "name": "scout",
+      "startMs": 0,
+      "durMs": 466482,
+      "calls": 17,
+      "tokens": 3309053,
+      "costUsd": 5.64,
+      "tools": "Bash 12, Monitor 1, Read 1"
+    },
+    {
+      "name": "plan",
+      "startMs": 466502,
+      "durMs": 675483,
+      "calls": 10,
+      "tokens": 1000484,
+      "costUsd": 11.62,
+      "tools": "Bash 8, ScheduleWakeup 1, Workflow 1"
+    },
+    {
+      "name": "plan (2)",
+      "startMs": 1142018,
+      "durMs": 231866,
+      "calls": 13,
+      "tokens": 1550217,
+      "costUsd": 1.05,
+      "tools": "Bash 12, Write 1"
+    },
+    {
+      "name": "build",
+      "startMs": 1373900,
+      "durMs": 5705970,
+      "calls": 190,
+      "tokens": 118929674,
+      "costUsd": 28.58,
+      "tools": "Bash 121, Read 47, Write 13",
+      "status": "error"
+    },
+    {
+      "name": "build (2)",
+      "startMs": 17049833,
+      "durMs": 1243536,
+      "calls": 79,
+      "tokens": 17429496,
+      "costUsd": 4.57,
+      "tools": "Bash 56, Read 18, ToolSearch 2"
+    },
+    {
+      "name": "critique",
+      "startMs": 18293399,
+      "durMs": 987429,
+      "calls": 57,
+      "tokens": 10376564,
+      "costUsd": 16.61,
+      "tools": "Read 41, Bash 14, ScheduleWakeup 1",
+      "status": "error"
+    },
+    {
+      "name": "critique (2)",
+      "startMs": 19280840,
+      "durMs": 297565,
+      "calls": 51,
+      "tokens": 5522930,
+      "costUsd": 1.94,
+      "tools": "Bash 25, Read 24, Agent 1"
+    }
+  ],
+  "costBasis": "reported"
+}

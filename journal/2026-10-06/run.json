@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-06",
+  "day": 17,
+  "startedAt": "2026-10-06T15:35:30.455Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "opus[1m]",
+    "roster": {
+      "id": "claude-opus-ultracode",
+      "agent": "claude",
+      "model": "opus[1m]",
+      "weight": 4,
+      "why": "resumed — the slot this day started on"
+    },
+    "ultracode": true,
+    "effort": "xhigh",
+    "budgetUsd": 75,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-opus-5-5",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.59,
+        "resetsAt": "2026-10-07T01:30:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.08,
+        "resetsAt": "2026-10-13T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-06T21:44:47.830Z",
+    "hits": [
+      {
+        "phase": "build",
+        "call": 1,
+        "at": "2026-10-06T17:45:20.685Z",
+        "window": "five_hour",
+        "resetsAt": "2026-10-06T20:30:00.000Z",
+        "message": "You've hit your session limit · resets 1:30pm (America/Los_Angeles)",
+        "kept": 12
+      }
+    ],
+    "waits": [
+      {
+        "phase": "build",
+        "at": "2026-10-06T17:45:20.696Z",
+        "until": "2026-10-06T20:31:30.000Z",
+        "window": "five_hour",
+        "reason": "session limit (five_hour at 100%) resets 13:30"
+      }
+    ]
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 466487,
+      "done": true
+    },
+    "plan": {
+      "calls": 2,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 231870,
+      "done": true
+    },
+    "build": {
+      "calls": 2,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 1243549,
+      "done": true
+    },
+    "critique": {
+      "calls": 2,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 297572,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": null,
+      "timedOut": true,
+      "ms": 1869107,
+      "done": false
+    }
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/community/weekly-run-report/v1",
+    "title": "2026-10-06 · Weekly 5k Run Report",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 4,
+    "at": "2026-10-06T21:50:42.794Z"
+  }
+}

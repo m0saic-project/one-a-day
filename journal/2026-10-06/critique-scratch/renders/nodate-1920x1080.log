@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (19 templates) from .
+Rendering template:
+  template id: @one-a-day/community/weekly-run-report/v1
+  output:      journal/2026-10-06/critique-scratch/renders/nodate-1920x1080.png
+  Building plan... done (0.5s)
+  plan built with size: 1920 x 1080
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~1 s
+  Rendering in ffmpeg [00/21 |   0% | 0:00 elapsed | ETA 0:02]  Rendering in ffmpeg [03/21 |   9% | 0:00 elapsed | ETA 0:03 | 230.00x].    Rendering in ffmpeg [06/21 |  24% | 0:01 elapsed | ETA 0:02 | 20.60x]..   Rendering in ffmpeg [10/21 |  42% | 0:01 elapsed | ETA 0:02 | 24.70x]...  Rendering in ffmpeg [13/21 |  54% | 0:02 elapsed | ETA 0:01 | 164.00x]     Rendering in ffmpeg [17/21 |  71% | 0:02 elapsed | ETA 0:01 | 231.00x].    Rendering in ffmpeg [20/21 |  86% | 0:02 elapsed | ETA 0:00 | 22.80x]..   Rendering in ffmpeg [21/21 | 100% | 0:03 elapsed | ETA 0:00 | 0.20x]... done (2 s)
+✅ Template render complete: journal/2026-10-06/critique-scratch/renders/nodate-1920x1080.png

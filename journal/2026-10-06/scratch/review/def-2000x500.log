@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (19 templates) from .
+Rendering template:
+  template id: @one-a-day/community/weekly-run-report/v1
+  output:      journal/2026-10-06/scratch/review/def-2000x500.png
+  Building plan... done (3.4s)
+  plan built with size: 2000 x 500
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~1 s
+  Rendering in ffmpeg [00/21 |   0% | 0:00 elapsed | ETA 0:01]  Rendering in ffmpeg [01/21 |   4% | 0:00 elapsed | ETA 0:01].    Rendering in ffmpeg [03/21 |   9% | 0:01 elapsed | ETA 0:07 | 109.00x]..   Rendering in ffmpeg [05/21 |  18% | 0:01 elapsed | ETA 0:05 | 126.00x]...  Rendering in ffmpeg [07/21 |  27% | 0:02 elapsed | ETA 0:04 | 120.00x]     Rendering in ffmpeg [09/21 |  36% | 0:02 elapsed | ETA 0:03 | 86.90x].    Rendering in ffmpeg [11/21 |  45% | 0:02 elapsed | ETA 0:03 | 92.70x]..   Rendering in ffmpeg [13/21 |  54% | 0:03 elapsed | ETA 0:02 | 165.00x]...  Rendering in ffmpeg [15/21 |  63% | 0:03 elapsed | ETA 0:02 | 83.80x]     Rendering in ffmpeg [17/21 |  72% | 0:04 elapsed | ETA 0:01 | 66.00x].    Rendering in ffmpeg [18/21 |  78% | 0:04 elapsed | ETA 0:01 | 14.90x]..   Rendering in ffmpeg [21/21 |  90% | 0:05 elapsed | ETA 0:00 | 55.40x]...  Rendering in ffmpeg [21/21 | 100% | 0:05 elapsed | ETA 0:00 | 0.28x]... done (4 s)
+✅ Template render complete: journal/2026-10-06/scratch/review/def-2000x500.png

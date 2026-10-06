@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (19 templates) from .
+Rendering template:
+  template id: @one-a-day/community/weekly-run-report/v1
+  output:      journal/2026-10-06/variants/a/extra/empty-1920x1080.png
+  Building plan... done (0.7s)
+  plan built with size: 1920 x 1080
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~1 s
+  Rendering in ffmpeg [00/13 |   0% | 0:00 elapsed | ETA 0:01]  Rendering in ffmpeg [01/13 |   7% | 0:00 elapsed | ETA 0:01].    Rendering in ffmpeg [01/13 |   7% | 0:01 elapsed | ETA 0:01]..   Rendering in ffmpeg [03/13 |  14% | 0:01 elapsed | ETA 0:07 | 24.70x]...  Rendering in ffmpeg [03/13 |  14% | 0:02 elapsed | ETA 0:07 | 24.70x]     Rendering in ffmpeg [03/13 |  14% | 0:02 elapsed | ETA 0:07 | 24.70x].    Rendering in ffmpeg [04/13 |  23% | 0:03 elapsed | ETA 0:08 | 2.38x]..   Rendering in ffmpeg [05/13 |  28% | 0:03 elapsed | ETA 0:07 | 19.80x]...  Rendering in ffmpeg [05/13 |  28% | 0:03 elapsed | ETA 0:07 | 19.80x]     Rendering in ffmpeg [06/13 |  37% | 0:04 elapsed | ETA 0:06 | 3.14x].    Rendering in ffmpeg [07/13 |  41% | 0:04 elapsed | ETA 0:05 | 19.00x]..   Rendering in ffmpeg [07/13 |  41% | 0:05 elapsed | ETA 0:05 | 19.00x]...  Rendering in ffmpeg [09/13 |  56% | 0:05 elapsed | ETA 0:04 | 35.50x]     Rendering in ffmpeg [09/13 |  56% | 0:05 elapsed | ETA 0:04 | 35.50x].    Rendering in ffmpeg [11/13 |  69% | 0:06 elapsed | ETA 0:02 | 32.30x]..   Rendering in ffmpeg [11/13 |  69% | 0:06 elapsed | ETA 0:02 | 32.30x]...  Rendering in ffmpeg [13/13 |  83% | 0:07 elapsed | ETA 0:01 | 34.20x]     Rendering in ffmpeg [13/13 |  83% | 0:07 elapsed | ETA 0:01 | 34.20x].    Rendering in ffmpeg [13/13 |  83% | 0:07 elapsed | ETA 0:01 | 34.20x]..   Rendering in ffmpeg [13/13 |  83% | 0:08 elapsed | ETA 0:01 | 34.20x]...  Rendering in ffmpeg [13/13 | 100% | 0:08 elapsed | ETA 0:00 | 0.03x]... done (7 s)
+✅ Template render complete: journal/2026-10-06/variants/a/extra/empty-1920x1080.png

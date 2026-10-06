@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (19 templates) from .
+Rendering template:
+  template id: @one-a-day/community/weekly-run-report/v1
+  output:      journal/2026-10-06/critique-scratch/renders/defaults-2160x3840.png
+  Building plan... done (0.8s)
+  plan built with size: 2160 x 3840
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~5 s
+  Rendering in ffmpeg [00/21 |   0% | 0:00 elapsed | ETA 0:05]  Rendering in ffmpeg [01/21 |   4% | 0:00 elapsed | ETA 0:05].    Rendering in ffmpeg [03/21 |  11% | 0:01 elapsed | ETA 0:05 | 108.00x]..   Rendering in ffmpeg [04/21 |  20% | 0:01 elapsed | ETA 0:04 | 5.39x]...  Rendering in ffmpeg [05/21 |  29% | 0:02 elapsed | ETA 0:04 | 7.89x]     Rendering in ffmpeg [07/21 |  31% | 0:02 elapsed | ETA 0:04 | 176.00x].    Rendering in ffmpeg [09/21 |  40% | 0:02 elapsed | ETA 0:03 | 155.00x]..   Rendering in ffmpeg [11/21 |  49% | 0:03 elapsed | ETA 0:03 | 116.00x]...  Rendering in ffmpeg [13/21 |  58% | 0:03 elapsed | ETA 0:02 | 93.50x]     Rendering in ffmpeg [15/21 |  64% | 0:04 elapsed | ETA 0:02 | 169.00x].    Rendering in ffmpeg [17/21 |  71% | 0:04 elapsed | ETA 0:02 | 154.00x]..   Rendering in ffmpeg [19/21 |  81% | 0:04 elapsed | ETA 0:01 | 13.00x]...  Rendering in ffmpeg [21/21 |  83% | 0:05 elapsed | ETA 0:01 | 138.00x]     Rendering in ffmpeg [21/21 | 100% | 0:05 elapsed | ETA 0:00 | 0.08x]... done (5 s)
+✅ Template render complete: journal/2026-10-06/critique-scratch/renders/defaults-2160x3840.png

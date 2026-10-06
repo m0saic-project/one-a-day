@@ -1,0 +1,15 @@
+ M TEMPLATES.md
+ M dist/community/index.d.ts
+ M dist/community/index.js
+ M dist/community/registry.js
+ M dist/index.d.ts
+ M dist/repo.d.ts
+ M dist/repo.js
+ M src/community/index.ts
+ M src/community/registry.ts
+ M src/repo.ts
+ M template-manifest.json
+?? assets/templates/@one-a-day__community__weekly-run-report__v1/
+?? dist/community/weekly-run-report/
+?? journal/2026-10-06/
+?? src/community/weekly-run-report/

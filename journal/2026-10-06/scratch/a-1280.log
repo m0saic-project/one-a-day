@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (19 templates) from .
+Rendering template:
+  template id: @one-a-day/community/weekly-run-report/v1
+  output:      journal/2026-10-06/scratch/a-1280.png
+  Building plan... done (2.9s)
+  plan built with size: 1280 x 720
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~1 s
+  Rendering in ffmpeg [00/21 |   0% | 0:00 elapsed | ETA 0:02]  Rendering in ffmpeg [03/21 |   9% | 0:00 elapsed | ETA 0:04 | 159.00x].    Rendering in ffmpeg [05/21 |  18% | 0:01 elapsed | ETA 0:03 | 239.00x]..   Rendering in ffmpeg [09/21 |  37% | 0:01 elapsed | ETA 0:02 | 234.00x]...  Rendering in ffmpeg [12/21 |  52% | 0:02 elapsed | ETA 0:01 | 27.60x]     Rendering in ffmpeg [15/21 |  70% | 0:02 elapsed | ETA 0:01 | 35.80x].    Rendering in ffmpeg [19/21 |  81% | 0:02 elapsed | ETA 0:01 | 265.00x]..   Rendering in ffmpeg [21/21 | 100% | 0:03 elapsed | ETA 0:00 | 0.29x]... done (2 s)
+✅ Template render complete: journal/2026-10-06/scratch/a-1280.png

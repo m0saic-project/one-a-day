@@ -1,0 +1,17 @@
+ten 1920x1080 exit=0 0 warn-lines
+ten 1080x1080 exit=0 0 warn-lines
+ten 1080x1920 exit=0 0 warn-lines
+ten 1280x720 exit=0 0 warn-lines
+ten 640x360 exit=0 0 warn-lines
+empty 1080x1080 exit=0 0 warn-lines
+empty 1920x1080 exit=0 0 warn-lines
+long 1080x1920 exit=0 0 warn-lines
+long 1080x1080 exit=0 0 warn-lines
+long 1920x1080 exit=0 0 warn-lines
+maxed 1080x1080 exit=0 0 warn-lines
+maxed 480x270 exit=0 0 warn-lines
+defaults 1080x1080 exit=0
+defaults 3840x2160 exit=0
+defaults 640x360 exit=0
+defaults 480x270 exit=0
+done

@@ -1,0 +1,108 @@
+{
+ "n": 3,
+ "milestones": "6xR25, 4xR50, 3xR100",
+ "perAspect": [
+  {
+   "aspect": "16:9",
+   "firstOk": "427x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "9:16",
+   "firstOk": "240x427",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1:1",
+   "firstOk": "291x291",
+   "lastFail": "288x288",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "4:5",
+   "firstOk": "240x300",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "5:4",
+   "firstOk": "330x264",
+   "lastFail": "326x261",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "191:100",
+   "firstOk": "458x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "3:1",
+   "firstOk": "720x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "4:3",
+   "firstOk": "320x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "3:4",
+   "firstOk": "240x320",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "2:1",
+   "firstOk": "480x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "13:10",
+   "firstOk": "312x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "129:100",
+   "firstOk": "333x258",
+   "lastFail": "329x255",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "8:10",
+   "firstOk": "240x300",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "79:100",
+   "firstOk": "240x304",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1200:628",
+   "firstOk": "459x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1080:566",
+   "firstOk": "458x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1242:2208",
+   "firstOk": "240x427",
+   "lastFail": null,
+   "failsAfterOk": []
+  }
+ ]
+}

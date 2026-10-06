@@ -15,7 +15,9 @@ import { asRepoId, asTemplateId } from "@m0saic/types";
  * gate in this repo (manifest generator, contract check, dep policy,
  * scaffolder) — it is the one identity field.
  */
-export const TEMPLATE_REPO: MosaicTemplateRepoDescriptor = {
+// `conventions` is a 0.3.1 descriptor field; the @m0saic/types this repo
+// builds against (0.2.x) does not declare it yet, hence the intersection.
+export const TEMPLATE_REPO: MosaicTemplateRepoDescriptor & { conventions?: string } = {
   repoId: asRepoId("@one-a-day"),
   displayName: "One a Day",
   schemaVersion: 1,
@@ -27,6 +29,13 @@ export const TEMPLATE_REPO: MosaicTemplateRepoDescriptor = {
   // The front door — the template a newcomer renders first (the hello-world
   // convention): the canonical card with this repo's subline.
   helloWorld: asTemplateId("@one-a-day/basics/hello-world/v1"),
+  // The template-convention line this repo targets (m0saic 0.3.1 field): the
+  // checks hold its templates to the rules up to it; newer rules are advice
+  // until it moves. 0.3.0 is the line this repo's build enforces and freezes
+  // at (frozen.manifest.json `release`). 0.3.1's catalogSidecar needs a build
+  // step that gathers <name>.catalog.json into template-catalog.json, which
+  // tools/ does not have yet; move this to "0.3.1" once it does.
+  conventions: "0.3.0",
 };
 
 /**

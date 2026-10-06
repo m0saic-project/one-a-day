@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (19 templates) from .
+Rendering template:
+  template id: @one-a-day/community/weekly-run-report/v1
+  output:      journal/2026-10-06/variants/a/extra/long-1080x1920.png
+  Building plan... done (2.3s)
+  plan built with size: 1080 x 1920
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~2 s
+  Rendering in ffmpeg [00/25 |   0% | 0:00 elapsed | ETA 0:02]  Rendering in ffmpeg [01/25 |   4% | 0:00 elapsed | ETA 0:02].    Rendering in ffmpeg [02/25 |   5% | 0:01 elapsed | ETA 0:12 | 4.80x]..   Rendering in ffmpeg [03/25 |   8% | 0:01 elapsed | ETA 0:10 | 47.70x]...  Rendering in ffmpeg [04/25 |  14% | 0:02 elapsed | ETA 0:09 | 5.46x]     Rendering in ffmpeg [05/25 |  16% | 0:02 elapsed | ETA 0:08 | 45.90x].    Rendering in ffmpeg [06/25 |  24% | 0:02 elapsed | ETA 0:07 | 48.00x]..   Rendering in ffmpeg [07/25 |  24% | 0:03 elapsed | ETA 0:07 | 48.00x]...  Rendering in ffmpeg [09/25 |  32% | 0:03 elapsed | ETA 0:07 | 46.90x]     Rendering in ffmpeg [09/25 |  32% | 0:04 elapsed | ETA 0:07 | 46.90x].    Rendering in ffmpeg [11/25 |  39% | 0:04 elapsed | ETA 0:06 | 39.50x]..   Rendering in ffmpeg [11/25 |  39% | 0:04 elapsed | ETA 0:06 | 39.50x]...  Rendering in ffmpeg [13/25 |  47% | 0:05 elapsed | ETA 0:05 | 40.20x]     Rendering in ffmpeg [13/25 |  47% | 0:05 elapsed | ETA 0:05 | 40.20x].    Rendering in ffmpeg [15/25 |  54% | 0:06 elapsed | ETA 0:05 | 55.60x]..   Rendering in ffmpeg [15/25 |  59% | 0:06 elapsed | ETA 0:04 | 4.40x]...  Rendering in ffmpeg [17/25 |  61% | 0:07 elapsed | ETA 0:04 | 30.40x]     Rendering in ffmpeg [18/25 |  66% | 0:07 elapsed | ETA 0:03 | 5.07x].    Rendering in ffmpeg [19/25 |  68% | 0:07 elapsed | ETA 0:03 | 37.80x]..   Rendering in ffmpeg [20/25 |  73% | 0:08 elapsed | ETA 0:03 | 4.27x]...  Rendering in ffmpeg [21/25 |  75% | 0:08 elapsed | ETA 0:02 | 38.70x]     Rendering in ffmpeg [22/25 |  80% | 0:09 elapsed | ETA 0:02 | 4.57x].    Rendering in ffmpeg [23/25 |  82% | 0:09 elapsed | ETA 0:02 | 48.00x]..   Rendering in ffmpeg [25/25 |  89% | 0:09 elapsed | ETA 0:01 | 48.70x]...  Rendering in ffmpeg [25/25 |  89% | 0:10 elapsed | ETA 0:01 | 48.70x]     Rendering in ffmpeg [25/25 |  89% | 0:10 elapsed | ETA 0:01 | 48.70x].    Rendering in ffmpeg [25/25 |  89% | 0:11 elapsed | ETA 0:01 | 48.70x]..   Rendering in ffmpeg [25/25 |  89% | 0:11 elapsed | ETA 0:01 | 48.70x]...  Rendering in ffmpeg [25/25 | 100% | 0:11 elapsed | ETA 0:00 | 0.02x]... done (11 s)
+✅ Template render complete: journal/2026-10-06/variants/a/extra/long-1080x1920.png

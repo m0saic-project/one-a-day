@@ -1,0 +1,1 @@
+Only in dist/basics/hello-world/v1: assets

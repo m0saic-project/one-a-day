@@ -1,0 +1,34 @@
+{
+  "useCase": "Weekly parkrun event-summary card from the numbers the run director already has: event and run number, date, finishers, new PBs, first timers, visitors, volunteers and milestone clubs, one card per Saturday",
+  "who": "parkrun event teams - run directors and the volunteers who write the weekly run report - posting each Saturday's results summary to the event's Facebook page and results/news pages",
+  "sources": [
+    "https://github.com/ear1grey/parkrun-event-summary",
+    "https://github.com/johnsyweb/eventuate",
+    "https://greasyfork.org/scripts/534157-eventuate",
+    "https://github.com/rwkura/parkrun-milestones"
+  ],
+  "tags": [
+    "parkrun",
+    "running",
+    "volunteers",
+    "weekly",
+    "stats",
+    "community"
+  ],
+  "scout": "done",
+  "pack": "community",
+  "slug": "weekly-run-report",
+  "title": "Weekly 5k Run Report",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done"
+}

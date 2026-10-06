@@ -1,0 +1,6 @@
+Test Suites: 1 passed, 1 total
+Tests:       14 passed, 14 total
+Snapshots:   0 total
+Time:        34.937 s, estimated 64 s
+Ran all test suites matching src/community/weekly-run-report.
+exit=0

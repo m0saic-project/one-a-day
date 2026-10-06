@@ -1,0 +1,15 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (19 templates) from .
+Rendering template:
+  template id: @one-a-day/community/weekly-run-report/v1
+  output:      journal/2026-10-06/critique-scratch/renders/acc-purple-1080x1080.png
+  Building plan... done (0.5s)
+  plan built with size: 1080 x 1080
+  duration:      2s (60 frames @ 30fps)
+  Estimated render time: ~1 s
+  Rendering in ffmpeg [00/21 |   0% | 0:00 elapsed | ETA 0:02]  Rendering in ffmpeg [03/21 |   9% | 0:00 elapsed | ETA 0:03 | 170.00x].    Rendering in ffmpeg [07/21 |  27% | 0:01 elapsed | ETA 0:02 | 157.00x]..   Rendering in ffmpeg [11/21 |  51% | 0:01 elapsed | ETA 0:01 | 22.80x]...  Rendering in ffmpeg [16/21 |  69% | 0:02 elapsed | ETA 0:01 | 27.40x]     Rendering in ffmpeg [20/21 |  87% | 0:02 elapsed | ETA 0:00 | 21.50x].    Rendering in ffmpeg [21/21 | 100% | 0:02 elapsed | ETA 0:00 | 0.22x]... done (2 s)
+✅ Template render complete: journal/2026-10-06/critique-scratch/renders/acc-purple-1080x1080.png

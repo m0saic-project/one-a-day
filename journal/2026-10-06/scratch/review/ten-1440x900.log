@@ -1,0 +1,19 @@
+[33m⚠  Loading third-party template code from:
+     .
+   This code is not written or reviewed by m0saic and runs with your
+   access to files, network, and programs. m0saic LLC is not responsible
+   for third-party template code. Only load repos you trust.[0m
+Loaded template repo "One a Day" (19 templates) from .
+Rendering template:
+  template id: @one-a-day/community/weekly-run-report/v1
+  output:      journal/2026-10-06/scratch/review/ten-1440x900.png
+  Building plan...❌ Error running ffmpeg: Error: @one-a-day/community/weekly-run-report/v1: milestones cannot be fitted on 1440x900 above the 13px readability floor: shorten it or render a larger canvas.
+    at fail (C:\src\m0saic-production\one-a-day\dist\community\weekly-run-report\v1\weekly-run-report.js:128:36)
+    at unfit (C:\src\m0saic-production\one-a-day\dist\community\weekly-run-report\v1\weekly-run-report.js:364:43)
+    at layoutWeeklyRunReport (C:\src\m0saic-production\one-a-day\dist\community\weekly-run-report\v1\weekly-run-report.js:613:13)
+    at settleLayout (C:\src\m0saic-production\one-a-day\dist\community\weekly-run-report\v1\weekly-run-report.js:659:13)
+    at Object.render (C:\src\m0saic-production\one-a-day\dist\community\weekly-run-report\v1\weekly-run-report.js:762:19)
+    at Object.<anonymous> (C:\src\m0saic\packages\template-utils\dist\template\defineMosaicTemplate.js:246:46)
+    at Object.render (C:\src\m0saic\packages\template-utils\dist\template\defineMosaicTemplate.js:246:46)
+    at handleTemplateMake (C:\src\m0saic\packages\cli\dist\index.js:2891:87)
+    at async Command.parseAsync (C:\src\m0saic\node_modules\commander\lib\command.js:1092:5)

@@ -10,7 +10,8 @@
     "assets": {
       "templatesDir": "assets/templates"
     },
-    "helloWorld": "@one-a-day/basics/hello-world/v1"
+    "helloWorld": "@one-a-day/basics/hello-world/v1",
+    "conventions": "0.3.0"
   },
   "entryModule": "./dist/index.js",
   "templates": [
@@ -337,6 +338,27 @@
       "pack": "community",
       "preview": {
         "image": "assets/templates/@one-a-day__community__qsl-card__v1/preview.png"
+      }
+    },
+    {
+      "slug": "weekly-run-report",
+      "templateKey": "@one-a-day/community/weekly-run-report/v1",
+      "title": "2026-10-06 · Weekly 5k Run Report",
+      "description": "The weekly results card a volunteer-run Saturday 5k posts after every run: event, run number and date, finishers and volunteers as the two headline numbers, new PBs, first timers, visitors and first-time volunteers under them, and the milestone clubs reached. Numbers are typed in, never fetched.",
+      "tags": [
+        "community",
+        "2026-10-06",
+        "day-017",
+        "running",
+        "5k",
+        "volunteers",
+        "weekly",
+        "stats",
+        "results"
+      ],
+      "pack": "community",
+      "preview": {
+        "image": "assets/templates/@one-a-day__community__weekly-run-report__v1/preview.png"
       }
     },
     {

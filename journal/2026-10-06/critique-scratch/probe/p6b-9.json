@@ -1,0 +1,176 @@
+{
+ "n": 9,
+ "milestones": "6xR25, 4xR50, 3xR100, 2xR250, 1xR500, 1xR1000, 5xV25, 3xV50, 2xV100",
+ "perAspect": [
+  {
+   "aspect": "16:9",
+   "firstOk": "597x336",
+   "lastFail": "592x333",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "9:16",
+   "firstOk": "276x491",
+   "lastFail": "273x485",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1:1",
+   "firstOk": "336x336",
+   "lastFail": "366x366",
+   "failsAfterOk": [
+    "366x366: milestones cannot be fitted on 366x366 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "4:5",
+   "firstOk": "276x345",
+   "lastFail": "390x488",
+   "failsAfterOk": [
+    "279x349: milestones cannot be fitted on 279x349 above the 6px readability floor: shorten it or render a larger canvas.",
+    "282x353: milestones cannot be fitted on 282x353 above the 6px readability floor: shorten it or render a larger canvas.",
+    "291x364: milestones cannot be fitted on 291x364 above the 6px readability floor: shorten it or render a larger canvas.",
+    "294x368: milestones cannot be fitted on 294x368 above the 6px readability floor: shorten it or render a larger canvas.",
+    "303x379: milestones cannot be fitted on 303x379 above the 6px readability floor: shorten it or render a larger canvas.",
+    "306x383: milestones cannot be fitted on 306x383 above the 6px readability floor: shorten it or render a larger canvas.",
+    "315x394: milestones cannot be fitted on 315x394 above the 6px readability floor: shorten it or render a larger canvas.",
+    "318x398: milestones cannot be fitted on 318x398 above the 6px readability floor: shorten it or render a larger canvas.",
+    "327x409: milestones cannot be fitted on 327x409 above the 6px readability floor: shorten it or render a larger canvas.",
+    "330x413: milestones cannot be fitted on 330x413 above the 6px readability floor: shorten it or render a larger canvas.",
+    "339x424: milestones cannot be fitted on 339x424 above the 6px readability floor: shorten it or render a larger canvas.",
+    "342x428: milestones cannot be fitted on 342x428 above the 6px readability floor: shorten it or render a larger canvas.",
+    "351x439: milestones cannot be fitted on 351x439 above the 6px readability floor: shorten it or render a larger canvas.",
+    "354x443: milestones cannot be fitted on 354x443 above the 6px readability floor: shorten it or render a larger canvas.",
+    "363x454: milestones cannot be fitted on 363x454 above the 6px readability floor: shorten it or render a larger canvas.",
+    "366x458: milestones cannot be fitted on 366x458 above the 6px readability floor: shorten it or render a larger canvas.",
+    "387x484: milestones cannot be fitted on 387x484 above the 6px readability floor: shorten it or render a larger canvas.",
+    "390x488: milestones cannot be fitted on 390x488 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "5:4",
+   "firstOk": "461x369",
+   "lastFail": "510x408",
+   "failsAfterOk": [
+    "465x372: milestones cannot be fitted on 465x372 above the 6px readability floor: shorten it or render a larger canvas.",
+    "473x378: milestones cannot be fitted on 473x378 above the 6px readability floor: shorten it or render a larger canvas.",
+    "480x384: milestones cannot be fitted on 480x384 above the 6px readability floor: shorten it or render a larger canvas.",
+    "495x396: milestones cannot be fitted on 495x396 above the 6px readability floor: shorten it or render a larger canvas.",
+    "503x402: milestones cannot be fitted on 503x402 above the 6px readability floor: shorten it or render a larger canvas.",
+    "510x408: milestones cannot be fitted on 510x408 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "191:100",
+   "firstOk": "602x315",
+   "lastFail": "596x312",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "3:1",
+   "firstOk": "720x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "4:3",
+   "firstOk": "448x336",
+   "lastFail": "488x366",
+   "failsAfterOk": [
+    "488x366: milestones cannot be fitted on 488x366 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "3:4",
+   "firstOk": "360x480",
+   "lastFail": "366x488",
+   "failsAfterOk": [
+    "366x488: milestones cannot be fitted on 366x488 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "2:1",
+   "firstOk": "576x288",
+   "lastFail": "570x285",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "13:10",
+   "firstOk": "441x339",
+   "lastFail": "499x384",
+   "failsAfterOk": [
+    "452x348: milestones cannot be fitted on 452x348 above the 6px readability floor: shorten it or render a larger canvas.",
+    "456x351: milestones cannot be fitted on 456x351 above the 6px readability floor: shorten it or render a larger canvas.",
+    "460x354: milestones cannot be fitted on 460x354 above the 6px readability floor: shorten it or render a larger canvas.",
+    "464x357: milestones cannot be fitted on 464x357 above the 6px readability floor: shorten it or render a larger canvas.",
+    "476x366: milestones cannot be fitted on 476x366 above the 6px readability floor: shorten it or render a larger canvas.",
+    "491x378: milestones cannot be fitted on 491x378 above the 6px readability floor: shorten it or render a larger canvas.",
+    "499x384: milestones cannot be fitted on 499x384 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "129:100",
+   "firstOk": "484x375",
+   "lastFail": "495x384",
+   "failsAfterOk": [
+    "488x378: milestones cannot be fitted on 488x378 above the 6px readability floor: shorten it or render a larger canvas.",
+    "495x384: milestones cannot be fitted on 495x384 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "8:10",
+   "firstOk": "276x345",
+   "lastFail": "390x488",
+   "failsAfterOk": [
+    "279x349: milestones cannot be fitted on 279x349 above the 6px readability floor: shorten it or render a larger canvas.",
+    "282x353: milestones cannot be fitted on 282x353 above the 6px readability floor: shorten it or render a larger canvas.",
+    "291x364: milestones cannot be fitted on 291x364 above the 6px readability floor: shorten it or render a larger canvas.",
+    "294x368: milestones cannot be fitted on 294x368 above the 6px readability floor: shorten it or render a larger canvas.",
+    "303x379: milestones cannot be fitted on 303x379 above the 6px readability floor: shorten it or render a larger canvas.",
+    "306x383: milestones cannot be fitted on 306x383 above the 6px readability floor: shorten it or render a larger canvas.",
+    "315x394: milestones cannot be fitted on 315x394 above the 6px readability floor: shorten it or render a larger canvas.",
+    "318x398: milestones cannot be fitted on 318x398 above the 6px readability floor: shorten it or render a larger canvas.",
+    "327x409: milestones cannot be fitted on 327x409 above the 6px readability floor: shorten it or render a larger canvas.",
+    "330x413: milestones cannot be fitted on 330x413 above the 6px readability floor: shorten it or render a larger canvas.",
+    "339x424: milestones cannot be fitted on 339x424 above the 6px readability floor: shorten it or render a larger canvas.",
+    "342x428: milestones cannot be fitted on 342x428 above the 6px readability floor: shorten it or render a larger canvas.",
+    "351x439: milestones cannot be fitted on 351x439 above the 6px readability floor: shorten it or render a larger canvas.",
+    "354x443: milestones cannot be fitted on 354x443 above the 6px readability floor: shorten it or render a larger canvas.",
+    "363x454: milestones cannot be fitted on 363x454 above the 6px readability floor: shorten it or render a larger canvas.",
+    "366x458: milestones cannot be fitted on 366x458 above the 6px readability floor: shorten it or render a larger canvas.",
+    "387x484: milestones cannot be fitted on 387x484 above the 6px readability floor: shorten it or render a larger canvas.",
+    "390x488: milestones cannot be fitted on 390x488 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "79:100",
+   "firstOk": "363x459",
+   "lastFail": "390x494",
+   "failsAfterOk": [
+    "378x478: milestones cannot be fitted on 378x478 above the 6px readability floor: shorten it or render a larger canvas.",
+    "381x482: milestones cannot be fitted on 381x482 above the 6px readability floor: shorten it or render a larger canvas.",
+    "384x486: milestones cannot be fitted on 384x486 above the 6px readability floor: shorten it or render a larger canvas.",
+    "387x490: milestones cannot be fitted on 387x490 above the 6px readability floor: shorten it or render a larger canvas.",
+    "390x494: milestones cannot be fitted on 390x494 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "1200:628",
+   "firstOk": "602x315",
+   "lastFail": "596x312",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1080:566",
+   "firstOk": "601x315",
+   "lastFail": "595x312",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1242:2208",
+   "firstOk": "276x491",
+   "lastFail": "273x485",
+   "failsAfterOk": []
+  }
+ ]
+}

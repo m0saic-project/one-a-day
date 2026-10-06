@@ -1,0 +1,8 @@
+
+> one-a-day@0.1.0 previews
+> node tools/gen-previews.mjs
+
+  ok preview @one-a-day/community/weekly-run-report/v1
+
+gen-previews: minted 1, skipped 18 existing, 0 failure(s)
+gen-previews: re-run `npm run build` so the manifest picks up new preview paths.

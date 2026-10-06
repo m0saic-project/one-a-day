@@ -1,0 +1,129 @@
+{
+ "n": 6,
+ "milestones": "6xR25, 4xR50, 3xR100, 2xR250, 1xR500, 1xR1000",
+ "perAspect": [
+  {
+   "aspect": "16:9",
+   "firstOk": "427x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "9:16",
+   "firstOk": "240x427",
+   "lastFail": "243x432",
+   "failsAfterOk": [
+    "243x432: milestones cannot be fitted on 243x432 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "1:1",
+   "firstOk": "291x291",
+   "lastFail": "288x288",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "4:5",
+   "firstOk": "240x300",
+   "lastFail": "258x323",
+   "failsAfterOk": [
+    "243x304: milestones cannot be fitted on 243x304 above the 6px readability floor: shorten it or render a larger canvas.",
+    "246x308: milestones cannot be fitted on 246x308 above the 6px readability floor: shorten it or render a larger canvas.",
+    "255x319: milestones cannot be fitted on 255x319 above the 6px readability floor: shorten it or render a larger canvas.",
+    "258x323: milestones cannot be fitted on 258x323 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "5:4",
+   "firstOk": "330x264",
+   "lastFail": "326x261",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "191:100",
+   "firstOk": "458x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "3:1",
+   "firstOk": "720x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "4:3",
+   "firstOk": "376x282",
+   "lastFail": "372x279",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "3:4",
+   "firstOk": "264x352",
+   "lastFail": "261x348",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "2:1",
+   "firstOk": "480x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "13:10",
+   "firstOk": "335x258",
+   "lastFail": "371x285",
+   "failsAfterOk": [
+    "351x270: milestones cannot be fitted on 351x270 above the 6px readability floor: shorten it or render a larger canvas.",
+    "355x273: milestones cannot be fitted on 355x273 above the 6px readability floor: shorten it or render a larger canvas.",
+    "359x276: milestones cannot be fitted on 359x276 above the 6px readability floor: shorten it or render a larger canvas.",
+    "363x279: milestones cannot be fitted on 363x279 above the 6px readability floor: shorten it or render a larger canvas.",
+    "367x282: milestones cannot be fitted on 367x282 above the 6px readability floor: shorten it or render a larger canvas.",
+    "371x285: milestones cannot be fitted on 371x285 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "129:100",
+   "firstOk": "333x258",
+   "lastFail": "329x255",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "8:10",
+   "firstOk": "240x300",
+   "lastFail": "258x323",
+   "failsAfterOk": [
+    "243x304: milestones cannot be fitted on 243x304 above the 6px readability floor: shorten it or render a larger canvas.",
+    "246x308: milestones cannot be fitted on 246x308 above the 6px readability floor: shorten it or render a larger canvas.",
+    "255x319: milestones cannot be fitted on 255x319 above the 6px readability floor: shorten it or render a larger canvas.",
+    "258x323: milestones cannot be fitted on 258x323 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  },
+  {
+   "aspect": "79:100",
+   "firstOk": "264x334",
+   "lastFail": "261x330",
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1200:628",
+   "firstOk": "459x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1080:566",
+   "firstOk": "458x240",
+   "lastFail": null,
+   "failsAfterOk": []
+  },
+  {
+   "aspect": "1242:2208",
+   "firstOk": "240x427",
+   "lastFail": "243x432",
+   "failsAfterOk": [
+    "243x432: milestones cannot be fitted on 243x432 above the 6px readability floor: shorten it or render a larger canvas."
+   ]
+  }
+ ]
+}

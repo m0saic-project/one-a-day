@@ -1,0 +1,821 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WeeklyRunReportV1 = exports.MILESTONE_CLUBS = exports.COUNT_KEYS = void 0;
+exports.formatCount = formatCount;
+exports.formatRunDate = formatRunDate;
+exports.parseMilestones = parseMilestones;
+exports.parseCounts = parseCounts;
+exports.contrast = contrast;
+exports.normalizeWeeklyRunReport = normalizeWeeklyRunReport;
+exports.layoutWeeklyRunReport = layoutWeeklyRunReport;
+exports.settleLayout = settleLayout;
+const types_1 = require("@m0saic/types");
+const dsl_stdlib_1 = require("@m0saic/dsl-stdlib");
+const template_utils_1 = require("@m0saic/template-utils");
+const layout_1 = require("C:/src/m0saic-production/one-a-day/dist/_shared/layout.js");
+const text_1 = require("C:/src/m0saic-production/one-a-day/dist/_shared/text.js");
+const why_1 = require("C:/src/m0saic-production/one-a-day/dist/_shared/why.js");
+const ID = "@one-a-day/community/weekly-run-report/v1";
+/**
+ * The page: document.backgroundColor, never a full-canvas rect (doctor: canvasFill).
+ * A night page: event feeds are full of photos, and a dark card stands out among them.
+ */
+const PAPER = "#14211a";
+const INK = "#eef2ee";
+/** The dark ink, for text on a light fill (the accent badges). */
+const DARK_INK = "#14211a";
+/** Labels and captions: 8:1 on the tiles, so they survive a phone feed. */
+const DIM = "#b4beb7";
+/**
+ * The tiles and the band the numbers sit on: a NEUTRAL dark grey. Each tile is a
+ * child document, rendered through a 4:2:0 intermediate, and a tinted fill lost
+ * its tint in the last partial macroblock; a neutral one comes out flat.
+ */
+const TILE = "#2c2c2c";
+/** Volunteer-club badges: a neutral fill, so the two kinds differ by fill AND caption word. */
+const VOLUNTEER_FILL = "#5a5a5a";
+/** The same green family, lightened to keep 4.5:1 on the dark tiles. */
+const DEFAULT_ACCENT = "#3fae74";
+// An invented event and an invented week (the footer says so): nothing here
+// is anybody's results page.
+const DEFAULT_COUNTS = { finishers: 214, newPbs: 38, firstTimers: 27, visitors: 19, volunteers: 31, firstTimeVolunteers: 4 };
+const DEFAULTS = {
+    eventName: "Willowmere Park 5k",
+    runNumber: 312,
+    date: "2026-10-03",
+    counts: DEFAULT_COUNTS,
+    milestones: "4xR25, 3xR50, 1xR100, 2xV25",
+    footer: "Sample week: event and numbers are invented",
+    accent: DEFAULT_ACCENT,
+    debugLayout: false,
+};
+/** The six counts in the order the results page and runstats list them. */
+exports.COUNT_KEYS = ["finishers", "volunteers", "newPbs", "firstTimers", "visitors", "firstTimeVolunteers"];
+const HERO_KEYS = ["finishers", "volunteers"];
+const STAT_KEYS = ["newPbs", "firstTimers", "visitors", "firstTimeVolunteers"];
+/** Fixed copy, broken in advance: the two-line form is used when the one-line form would cost size. */
+const TILE_LABEL = {
+    finishers: { one: "finishers", two: ["finishers"] },
+    volunteers: { one: "volunteers", two: ["volunteers"] },
+    newPbs: { one: "new PBs", two: ["new PBs"] },
+    firstTimers: { one: "first timers", two: ["first timers"] },
+    visitors: { one: "visitors", two: ["visitors"] },
+    firstTimeVolunteers: { one: "first-time volunteers", two: ["first-time", "volunteers"] },
+};
+exports.MILESTONE_CLUBS = [25, 50, 100, 250, 500, 1000];
+const MAX_BADGES = 10;
+/** The parent's placement basis: finer than the default 120, so the snapped tiles have more 5-smooth sizes to choose from. */
+const PARENT_BASIS = 360;
+const MAX_COUNT = 9999;
+const BAND_TITLE = "MILESTONE CLUBS";
+const EMPTY_WEEK = "No milestone clubs this week";
+const propsSchema = (0, template_utils_1.definePropsSchema)({
+    eventName: {
+        type: "string",
+        required: false,
+        description: "The event's name, drawn in capitals in the header. 1-40 characters of printable ASCII or accented Latin letters. A long name shrinks to 70% and then takes two lines; it is never cut.",
+        meta: { control: { placeholder: DEFAULTS.eventName }, ui: { label: "Event name", order: 1, primary: true } },
+    },
+    runNumber: {
+        type: "number",
+        required: false,
+        description: "The event's run number (the results page's #), a whole number 1-9999, printed as #312.",
+        meta: { constraints: { min: 1, max: MAX_COUNT }, control: { placeholder: String(DEFAULTS.runNumber) }, ui: { label: "Run number", order: 2 } },
+    },
+    date: {
+        type: "string",
+        required: false,
+        description: 'The run date as YYYY-MM-DD, a real calendar day, printed as "SAT 03 OCT 2026". The weekday is worked out from the date, so a junior or special run on another day prints its own weekday. Empty removes the date.',
+        meta: { control: { placeholder: DEFAULTS.date }, ui: { label: "Date (YYYY-MM-DD)", order: 3 } },
+    },
+    counts: {
+        type: "json",
+        required: false,
+        description: 'The six counts from the results page, typed in, never fetched: {"finishers":214,"newPbs":38,"firstTimers":27,"visitors":19,"volunteers":31,"firstTimeVolunteers":4}. All six keys, whole numbers 0-9999, finishers at least 1; newPbs, firstTimers and visitors at most finishers; firstTimeVolunteers at most volunteers. An unknown or missing key is refused by name. 1204 prints as 1,204.',
+        meta: {
+            constraints: {
+                jsonSchema: {
+                    type: "object",
+                    additionalProperties: false,
+                    required: [...exports.COUNT_KEYS],
+                    properties: Object.fromEntries(exports.COUNT_KEYS.map((k) => [k, { type: "integer", minimum: 0, maximum: MAX_COUNT }])),
+                },
+            },
+            ui: { label: "Counts", order: 4, primary: true },
+        },
+    },
+    milestones: {
+        type: "string",
+        required: false,
+        description: 'The milestone clubs reached this week, as parkrun-runstats prints them plus V for volunteer clubs: "4xR25, 3xR50, 1xR100, 2xV25" (count x R or V, club 25, 50, 100, 250, 500 or 1000; count 1-999). Up to 10 entries, each club and kind once; run clubs are shown first, then volunteer clubs, each ascending. Empty shows "No milestone clubs this week" and keeps the band.',
+        meta: { control: { placeholder: "empty week" }, ui: { label: "Milestones", order: 5 } },
+    },
+    footer: {
+        type: "string",
+        required: false,
+        description: "The bottom line: a thank-you, the event's page, the next run. Up to 70 characters of printable ASCII or accented Latin letters. Empty removes it and the space goes back to the card.",
+        meta: { control: { placeholder: "none" }, ui: { label: "Footer", order: 6 } },
+    },
+    accent: {
+        type: "string",
+        required: false,
+        description: "The one accent, as #rrggbb: run-club badges, the header rule and the two headline numbers. An accent with less than 4.5:1 contrast on the dark tiles keeps the fills and leaves the numbers in ink. Empty falls back to the default green.",
+        meta: { constraints: { isColor: true }, control: { colorPicker: true, defaultColor: DEFAULT_ACCENT }, ui: { label: "Accent", order: 7 } },
+    },
+    debugLayout: {
+        type: "boolean",
+        required: false,
+        description: "Dev-only: check the layout contract (every text fits its box, the header on top, two equal headline tiles, four equal stat tiles, the milestone band across the bottom) and draw it over the card.",
+        meta: { ui: { label: "Debug layout", order: 99 } },
+    },
+});
+/* ── the week: pure, exported, and what the test asserts ── */
+function fail(field, rule) { throw new Error(`${ID}: ${field} ${rule}`); }
+/** Printable ASCII plus Latin-1 and Latin Extended-A letters: what the bundled font draws. */
+const DRAWN = /^[\x20-\x7eÀ-ÖØ-öø-ſ]*$/;
+function drawn(value, field, max, allowEmpty) {
+    if (typeof value !== "string")
+        fail(field, "must be a string.");
+    const s = value.trim();
+    if (!allowEmpty && s === "")
+        fail(field, "must not be empty.");
+    const bad = [...s].find((ch) => !DRAWN.test(ch));
+    if (bad !== undefined)
+        fail(field, `${JSON.stringify(s)} has the character ${JSON.stringify(bad)} (U+${bad.codePointAt(0).toString(16).toUpperCase().padStart(4, "0")}), which the card's font is not known to draw: use printable ASCII and accented Latin letters.`);
+    if (s.length > max)
+        fail(field, `${JSON.stringify(s)} is ${s.length} characters; the card fits at most ${max}.`);
+    return s;
+}
+/** 1204 -> "1,204": ASCII digits and a thousands comma, never "1.2k". */
+function formatCount(n) {
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+const WEEKDAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+/** "2026-10-03" -> "SAT 03 OCT 2026"; null when it is not a real calendar day. The weekday comes from the date, never a clock. */
+function formatRunDate(text) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(text);
+    if (!m)
+        return null;
+    const y = Number(m[1]), mo = Number(m[2]), d = Number(m[3]);
+    const leap = (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
+    const days = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (y < 1900 || mo < 1 || mo > 12 || d < 1 || d > days[mo - 1])
+        return null;
+    // Sakamoto's day-of-week: 0 = Sunday.
+    const t = [0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4];
+    const yy = mo < 3 ? y - 1 : y;
+    const dow = (yy + Math.floor(yy / 4) - Math.floor(yy / 100) + Math.floor(yy / 400) + t[mo - 1] + d) % 7;
+    return `${WEEKDAYS[dow]} ${m[3]} ${MONTHS[mo - 1]} ${m[1]}`;
+}
+/** "4xR25, 1xV50" -> badges in card order (run clubs, then volunteer clubs, each ascending). Throws naming the bad entry. */
+function parseMilestones(text) {
+    const entries = text.split(",").map((e) => e.trim()).filter((e) => e !== "");
+    if (entries.length > MAX_BADGES)
+        fail("milestones", `has ${entries.length} entries; at most ${MAX_BADGES} fit one card.`);
+    const seen = new Set();
+    const out = entries.map((entry) => {
+        const m = /^(\d{1,3})\s*[xX]\s*([RrVv])\s*(\d{1,5})$/.exec(entry);
+        if (!m)
+            fail("milestones", `entry ${JSON.stringify(entry)} is not <count>x<R|V><club>, e.g. "4xR25" (4 runners reached the 25 club) or "2xV25" (2 volunteers).`);
+        const count = Number(m[1]), kind = m[2].toUpperCase(), club = Number(m[3]);
+        if (!exports.MILESTONE_CLUBS.includes(club))
+            fail("milestones", `'${kind}${m[3]}' is not a club (${exports.MILESTONE_CLUBS.join(", ")}).`);
+        if (count < 1)
+            fail("milestones", `entry ${JSON.stringify(entry)} has a count of 0; leave the club out instead.`);
+        const key = `${kind}${club}`;
+        if (seen.has(key))
+            fail("milestones", `${key} appears twice; give each club one entry with its total count.`);
+        seen.add(key);
+        const noun = kind === "R" ? "runner" : "volunteer";
+        return { kind, club, count, caption: `${count} ${noun}${count === 1 ? "" : "s"}` };
+    });
+    return out.sort((a, b) => (a.kind === b.kind ? a.club - b.club : a.kind === "R" ? -1 : 1));
+}
+/** The counts object: exactly the six keys, whole numbers, and the sanity checks a results page always passes. */
+function parseCounts(value) {
+    if (typeof value !== "object" || value === null || Array.isArray(value))
+        fail("counts", `must be an object with the keys ${exports.COUNT_KEYS.join(", ")}.`);
+    const obj = value;
+    for (const k of Object.keys(obj)) {
+        if (!exports.COUNT_KEYS.includes(k))
+            fail("counts", `has an unknown key '${k}'; use ${exports.COUNT_KEYS.join(", ")}.`);
+    }
+    const out = {};
+    for (const k of exports.COUNT_KEYS) {
+        if (!(k in obj))
+            fail("counts", `is missing '${k}'; give all six counts (${exports.COUNT_KEYS.join(", ")}). The card never invents a number.`);
+        const v = obj[k];
+        if (typeof v !== "number" || !Number.isInteger(v) || v < 0 || v > MAX_COUNT)
+            fail(`counts.${k}`, `must be a whole number from 0 to ${MAX_COUNT}, got ${JSON.stringify(v)}.`);
+        out[k] = v;
+    }
+    if (out.finishers < 1)
+        fail("counts.finishers", "must be at least 1: a run with no finishers has no results to report.");
+    for (const k of ["newPbs", "firstTimers", "visitors"]) {
+        if (out[k] > out.finishers)
+            fail(`counts.${k}`, `is ${out[k]}, more than the ${out.finishers} finishers.`);
+    }
+    if (out.firstTimeVolunteers > out.volunteers)
+        fail("counts.firstTimeVolunteers", `is ${out.firstTimeVolunteers}, more than the ${out.volunteers} volunteers.`);
+    return out;
+}
+function luminance(hex) {
+    const c = (i) => { const v = parseInt(hex.slice(i, i + 2), 16) / 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+    return 0.2126 * c(1) + 0.7152 * c(3) + 0.0722 * c(5);
+}
+function contrast(a, b) {
+    const la = luminance(a), lb = luminance(b);
+    return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+}
+/** The readable ink on a filled badge: white or the dark ink, whichever contrasts more. */
+function onColor(fill) {
+    return (contrast(fill, "#ffffff") >= contrast(fill, DARK_INK) ? "#ffffff" : DARK_INK);
+}
+/** The schema is documentation; this is the gate. Only `undefined` takes a default. */
+function normalizeWeeklyRunReport(props) {
+    const p = { ...DEFAULTS, ...Object.fromEntries(Object.entries(props ?? {}).filter(([, v]) => v !== undefined)) };
+    const eventName = drawn(p.eventName, "eventName", 40, false);
+    const title = eventName.toUpperCase();
+    if (!DRAWN.test(title))
+        fail("eventName", `${JSON.stringify(eventName)} has a letter whose capital the card's font is not known to draw.`);
+    const runNumber = p.runNumber;
+    if (typeof runNumber !== "number" || !Number.isInteger(runNumber) || runNumber < 1 || runNumber > MAX_COUNT)
+        fail("runNumber", `must be a whole number from 1 to ${MAX_COUNT}, got ${JSON.stringify(runNumber)}.`);
+    if (typeof p.date !== "string")
+        fail("date", "must be a string.");
+    const dateText = p.date.trim();
+    const date = dateText === "" ? "" : formatRunDate(dateText);
+    if (date === null)
+        fail("date", `${JSON.stringify(dateText)} is not a date: YYYY-MM-DD, a real calendar day (e.g. "2026-10-03").`);
+    const counts = parseCounts(p.counts);
+    if (typeof p.milestones !== "string")
+        fail("milestones", "must be a string.");
+    const milestones = parseMilestones(p.milestones);
+    const footer = drawn(p.footer, "footer", 70, true);
+    if (typeof p.accent !== "string")
+        fail("accent", "must be a string.");
+    const accentText = p.accent.trim() === "" ? DEFAULT_ACCENT : p.accent.trim();
+    if (!/^#[0-9a-fA-F]{6}$/.test(accentText))
+        fail("accent", `${JSON.stringify(accentText)} must be #rrggbb.`);
+    if (typeof p.debugLayout !== "boolean")
+        fail("debugLayout", "must be a boolean.");
+    const accent = accentText.toLowerCase();
+    // The headline numbers take the accent only while it reads on the tile.
+    const heroInk = (contrast(accent, TILE) >= 4.5 ? accent : INK);
+    return { title, eventName, runNumber, runText: `#${runNumber}`, date, counts, milestones, footer, accent, heroInk, debugLayout: p.debugLayout };
+}
+/** The largest 5-smooth number (2^a 3^b 5^c) at or below `n`. */
+function smoothDown(n) {
+    for (let v = Math.max(1, Math.floor(n)); v >= 1; v--) {
+        let k = v;
+        for (const f of [2, 3, 5])
+            while (k % f === 0)
+                k /= f;
+        if (k === 1)
+            return v;
+    }
+    return 1;
+}
+/**
+ * Equal rects for a group of equal slots, each ON the parent lattice with
+ * 5-smooth sides, centred on its slot and never larger than it. `slack` is how
+ * far a rect may lean into the gap around its slot to reach a lattice line, so
+ * an unlucky slot start does not cost a whole smooth step.
+ * Why: each tile is a child document. A child on a rough canvas fails
+ * `latticeSmooth`, and a child ref off the lattice gets a recovery inset that
+ * the layout checker's flatten does not apply, so it would judge the tiles
+ * unequal although the engine draws them equal.
+ */
+function snapGroup(slots, pitch, slack) {
+    const span = (pos, len, step) => {
+        const lo = Math.ceil((pos - slack) / step) * step, hi = Math.floor((pos + len + slack) / step) * step;
+        return { lo, hi, steps: Math.floor(Math.min(len, hi - lo) / step) };
+    };
+    const kx = smoothDown(Math.min(...slots.map((r) => span(r.x, r.w, pitch.x).steps)));
+    const ky = smoothDown(Math.min(...slots.map((r) => span(r.y, r.h, pitch.y).steps)));
+    const place = (pos, len, size, step) => {
+        const { lo, hi } = span(pos, len, step);
+        const centred = Math.round((pos + len / 2 - size / 2) / step) * step;
+        return Math.max(lo, Math.min(hi - size, centred));
+    };
+    return slots.map((r) => {
+        const w = kx * pitch.x, h = ky * pitch.y;
+        return { x: place(r.x, r.w, w, pitch.x), y: place(r.y, r.h, h, pitch.y), w, h };
+    });
+}
+/** The cell width a line needs at `px` under the fit rule (`cell * 0.94 - 2px`). */
+function need(text, px, bold) {
+    return Math.ceil(((0, text_1.widthOf)(text, px, bold) + 2) / 0.94) + 1;
+}
+/** One line in a cell: the largest whole size up to `maxPx` that fits the cell's budget. */
+function fitPx(line, cellW, maxPx, bold) {
+    const top = Math.max(1, Math.floor(maxPx)), room = (0, text_1.budget)(cellW), w = (0, text_1.widthOf)(line, top, bold);
+    let px = w <= room ? top : Math.max(1, Math.floor((top * room) / w));
+    while (px > 1 && (0, text_1.widthOf)(line, px, bold) > room)
+        px--;
+    return px;
+}
+/** The line box a size needs (the font's ascent + descent with a little air). */
+const lineH = (px) => Math.ceil(px * 1.22);
+/** Split a name at the space nearest its middle; null when it has no space. */
+function splitTwo(text) {
+    const spaces = [...text].map((ch, i) => (ch === " " ? i : -1)).filter((i) => i > 0);
+    if (spaces.length === 0)
+        return null;
+    const mid = text.length / 2;
+    const at = spaces.reduce((best, i) => (Math.abs(i - mid) < Math.abs(best - mid) ? i : best), spaces[0]);
+    return [text.slice(0, at).trim(), text.slice(at + 1).trim()];
+}
+/**
+ * Every rect of the card for one canvas. Pure: same props, canvas and pitch,
+ * same rects. `pitch` is the parent's placement lattice (render finds it, see
+ * `settleLayout`); tiles and badges snap to it.
+ */
+function layoutWeeklyRunReport(props, W, H, pitch = { x: 1, y: 1 }) {
+    const p = normalizeWeeklyRunReport(props);
+    const S = Math.min(H, 0.75 * W);
+    const shape = W * 10 >= H * 13 ? "wide" : W * 10 >= H * 8 ? "square" : "tall";
+    const floor = Math.max(6, Math.round(S * 0.022));
+    /** Badge copy may go smaller than the page floor: it is short and sits on its own tile. */
+    const small = Math.max(6, Math.round(S * 0.014));
+    const unfit = (field, min = floor) => fail(field, `cannot be fitted on ${W}x${H} above the ${min}px readability floor: shorten it or render a larger canvas.`);
+    const m = Math.round(S * 0.05), gap = Math.max(2, Math.round(S * 0.025));
+    const CW = W - 2 * m, top = m, CH = H - 2 * m;
+    // Square tiles: a rounded corner inside a child shows the child canvas, whose cream encodes a shade off the page.
+    const tileRadius = 0, badgeRadius = 0.18;
+    const cells = [];
+    const tiles = [];
+    const groups = [];
+    const line = (label, rect, text, px, o = {}) => {
+        if (px < (o.min ?? floor))
+            unfit(o.field ?? label, o.min ?? floor);
+        cells.push({ label, rect, text, px, width: (0, text_1.widthOf)(text, px, o.bold === true), bold: o.bold === true, align: o.align ?? "left", color: o.color ?? INK, bind: o.bind ?? null, over: o.over === true, group: o.group });
+    };
+    // ── bands: the footer is sized by its line, the rest share the height by weight ──
+    const footerDesign = Math.max(floor, Math.round(S * 0.028));
+    const footerPx = p.footer === "" ? 0 : Math.min(footerDesign, fitPx(p.footer, CW, footerDesign, false));
+    if (p.footer !== "" && footerPx < floor)
+        unfit("footer");
+    const footerH = p.footer === "" ? 0 : lineH(footerDesign);
+    const weights = shape === "wide" ? [0.16, 0.58, 0.26] : shape === "square" ? [0.16, 0.29, 0.25, 0.3] : [0.11, 0.28, 0.39, 0.22];
+    const bandCount = weights.length + (p.footer === "" ? 0 : 1);
+    let gapY = gap;
+    const avail = CH - footerH - (bandCount - 1) * gapY;
+    const sumW = weights.reduce((a, b) => a + b, 0);
+    const hs = weights.map((w) => Math.floor((avail * w) / sumW));
+    hs[hs.length - 1] += avail - hs.reduce((a, b) => a + b, 0);
+    // Tiles never become slabs: a tile at most 1.3x as tall as it is wide; the slack goes to the gaps.
+    const halfW = Math.floor((CW - gap) / 2);
+    if (shape === "tall") {
+        let slack = 0;
+        const heroCap = Math.floor(halfW * 1.3);
+        if (hs[1] > heroCap) {
+            slack += hs[1] - heroCap;
+            hs[1] = heroCap;
+        }
+        const statCap = 2 * Math.floor(halfW * 1.3) + gap;
+        if (hs[2] > statCap) {
+            slack += hs[2] - statCap;
+            hs[2] = statCap;
+        }
+        gapY += Math.floor(slack / (bandCount - 1));
+    }
+    // ── header: the event name in capitals, the run number and date, the accent rule ──
+    const headerY = top, headerH = hs[0];
+    const ruleH = Math.max(2, Math.round(S * 0.006));
+    const runDesign = Math.max(floor, Math.min(Math.round(headerH * 0.2), Math.round(S * 0.038)));
+    const sepGap = (px) => Math.round(px * 0.55);
+    const sepW = (px) => Math.max(1, Math.round(px * 0.09));
+    // The separator sits on the drawn widths, so it is centred between "#312" and the date.
+    const runTextW = (px) => Math.ceil((0, text_1.widthOf)(p.runText, px, true));
+    const runLineW = (px) => (p.date === "" ? need(p.runText, px, true) : runTextW(px) + 2 * sepGap(px) + sepW(px) + need(p.date, px, false));
+    const runPx = Math.min(runDesign, (() => { let px = runDesign; while (px > 1 && runLineW(px) > CW)
+        px--; return px; })());
+    if (runPx < floor)
+        unfit("date");
+    const runH = lineH(runPx);
+    const nameRoom = headerH - ruleH - runH - Math.round(headerH * 0.08);
+    const nameDesign = Math.min(Math.floor(nameRoom / 1.22), Math.round(S * 0.075));
+    // Wide: the run line shares the name's line when both fit at full size.
+    const nameDesignWide = Math.min(Math.floor((headerH - ruleH - Math.round(headerH * 0.12)) / 1.22 * 0.62), Math.round(S * 0.075));
+    let nameLines = [p.title];
+    let namePx = fitPx(p.title, CW, nameDesign, true);
+    let runBeside = false;
+    if (shape === "wide") {
+        const besidePx = fitPx(p.title, CW - runLineW(runPx) - 2 * gap, nameDesignWide, true);
+        if (besidePx >= Math.round(nameDesignWide * 0.85)) {
+            runBeside = true;
+            namePx = besidePx;
+        }
+    }
+    if (!runBeside && namePx < Math.round(nameDesign * 0.7)) {
+        // Reflow before shrinking further: two lines, split at the space nearest the middle.
+        const two = splitTwo(p.title);
+        if (two) {
+            const twoPx = Math.min(Math.floor(nameRoom / (2 * 1.22)), fitPx(two[0], CW, nameDesign, true), fitPx(two[1], CW, nameDesign, true));
+            if (twoPx > namePx) {
+                nameLines = two;
+                namePx = twoPx;
+            }
+        }
+    }
+    if (namePx < floor)
+        unfit("eventName");
+    {
+        const nh = lineH(namePx);
+        if (runBeside) {
+            const y = headerY + Math.round((headerH - ruleH - nh) / 2);
+            line("event-name", { x: m, y, w: need(p.title, namePx, true), h: nh }, p.title, namePx, { bold: true, bind: { prop: "eventName" }, field: "eventName" });
+            runLine(m + CW - runLineW(runPx), headerY + Math.round((headerH - ruleH - runH) / 2), "right");
+        }
+        else {
+            const blockH = nameLines.length * nh + runH;
+            const y0 = headerY + Math.max(0, Math.round((headerH - ruleH - blockH) / 2 - headerH * 0.02));
+            nameLines.forEach((t, i) => line(nameLines.length === 1 ? "event-name" : `event-name-${i + 1}`, { x: m, y: y0 + i * nh, w: need(t, namePx, true), h: nh }, t, namePx, { bold: true, bind: { prop: "eventName" }, field: "eventName" }));
+            runLine(m, y0 + nameLines.length * nh, "left");
+        }
+        tiles.push({ label: "header-rule", rect: { x: m, y: headerY + headerH - ruleH, w: CW, h: ruleH }, color: p.accent, radius: 0, bind: "accent" });
+    }
+    /** "#312 | SAT 03 OCT 2026" from `x`; "right" ends the date flush with the rule (the wide header). */
+    function runLine(x, y, align) {
+        const rw = need(p.runText, runPx, true);
+        if (p.date === "") {
+            line("run-number", { x, y, w: rw, h: runH }, p.runText, runPx, { bold: true, align, color: DIM, bind: { prop: "runNumber" }, field: "runNumber" });
+            return;
+        }
+        const dw = need(p.date, runPx, false), sh = Math.round(runPx * 0.9), sy = y + Math.round((runH - sh) / 2);
+        if (align === "left") {
+            line("run-number", { x, y, w: rw, h: runH }, p.runText, runPx, { bold: true, color: DIM, bind: { prop: "runNumber" }, field: "runNumber" });
+            const sx = x + runTextW(runPx) + sepGap(runPx);
+            tiles.push({ label: "run-sep", rect: { x: sx, y: sy, w: sepW(runPx), h: sh }, color: DIM, radius: 0 });
+            line("run-date", { x: sx + sepW(runPx) + sepGap(runPx), y, w: dw, h: runH }, p.date, runPx, { color: DIM, bind: { prop: "date" }, field: "date" });
+            return;
+        }
+        // Right: laid out from the rule's end, each cell right-aligned so its fit slack falls on the left.
+        const end = m + CW;
+        line("run-date", { x: end - dw, y, w: dw, h: runH }, p.date, runPx, { align: "right", color: DIM, bind: { prop: "date" }, field: "date" });
+        const sx = end - Math.ceil((0, text_1.widthOf)(p.date, runPx, false)) - sepGap(runPx) - sepW(runPx);
+        tiles.push({ label: "run-sep", rect: { x: sx, y: sy, w: sepW(runPx), h: sh }, color: DIM, radius: 0 });
+        line("run-number", { x: sx - sepGap(runPx) - rw, y, w: rw, h: runH }, p.runText, runPx, { bold: true, align: "right", color: DIM, bind: { prop: "runNumber" }, field: "runNumber" });
+    }
+    // ── the six tiles: rects first, then one shared label size, then the numbers ──
+    const heroRects = [];
+    const statRects = [];
+    let y = headerY + headerH + gapY;
+    let bandY, bandH;
+    if (shape === "wide") {
+        const midH = hs[1], rowH = Math.floor((midH - gap) / 2);
+        const leftW = Math.round(CW * 0.36), rightX = m + leftW + gap, rightW = CW - leftW - gap, colW = Math.floor((rightW - gap) / 2);
+        heroRects.push({ x: m, y, w: leftW, h: rowH }, { x: m, y: y + rowH + gap, w: leftW, h: rowH });
+        for (let i = 0; i < 4; i++)
+            statRects.push({ x: rightX + (i % 2) * (colW + gap), y: y + Math.floor(i / 2) * (rowH + gap), w: colW, h: rowH });
+        y += midH + gapY;
+        bandY = y;
+        bandH = hs[2];
+    }
+    else {
+        heroRects.push({ x: m, y, w: halfW, h: hs[1] }, { x: m + halfW + gap, y, w: halfW, h: hs[1] });
+        y += hs[1] + gapY;
+        if (shape === "square") {
+            const sw = Math.floor((CW - 3 * gap) / 4);
+            for (let i = 0; i < 4; i++)
+                statRects.push({ x: m + i * (sw + gap), y, w: sw, h: hs[2] });
+        }
+        else {
+            const rowH = Math.floor((hs[2] - gap) / 2);
+            for (let i = 0; i < 4; i++)
+                statRects.push({ x: m + (i % 2) * (halfW + gap), y: y + Math.floor(i / 2) * (rowH + gap), w: halfW, h: rowH });
+        }
+        y += hs[2] + gapY;
+        bandY = y;
+        bandH = hs[3];
+    }
+    heroRects.splice(0, 2, ...snapGroup(heroRects, pitch, Math.floor(gap / 2)));
+    statRects.splice(0, 4, ...snapGroup(statRects, pitch, Math.floor(gap / 2)));
+    const padOf = (r) => Math.max(2, Math.round(Math.min(r.w, r.h) * 0.08));
+    const inner = (r) => { const pd = padOf(r); return { x: r.x + pd, y: r.y + pd, w: r.w - 2 * pd, h: r.h - 2 * pd }; };
+    const heroIn = inner(heroRects[0]), statIn = inner(statRects[0]);
+    const labelCap = Math.round(S * 0.034);
+    // The stat labels take one line when it costs no size, else the long one breaks in two.
+    const statLabelOne = Math.min(labelCap, Math.floor((statIn.h * 0.26) / 1.22), ...STAT_KEYS.map((k) => fitPx(TILE_LABEL[k].one, statIn.w, labelCap, false)));
+    const statLabelTwo = Math.min(labelCap, Math.floor((statIn.h * 0.3) / (2 * 1.22)), ...STAT_KEYS.flatMap((k) => TILE_LABEL[k].two.map((t) => fitPx(t, statIn.w, labelCap, false))));
+    const twoLineLabels = statLabelTwo > statLabelOne;
+    const heroLabelPx = Math.min(labelCap, Math.floor((heroIn.h * 0.24) / 1.22), ...HERO_KEYS.map((k) => fitPx(TILE_LABEL[k].one, heroIn.w, labelCap, false)));
+    // All six tile labels share one size: the smallest any tile allows.
+    const labelPx = Math.min(heroLabelPx, twoLineLabels ? statLabelTwo : statLabelOne);
+    if (labelPx < floor)
+        unfit("the tile labels");
+    const statLines = twoLineLabels ? 2 : 1;
+    const labelGap = Math.round(labelPx * 0.25);
+    const value = (k) => formatCount(p.counts[k]);
+    const heroValueRoom = heroIn.h - labelGap - lineH(labelPx);
+    const heroPx = Math.min(Math.round(S * 0.26), Math.floor(heroValueRoom / 1.22), ...HERO_KEYS.map((k) => fitPx(value(k), heroIn.w, S, true)));
+    const statValueRoom = statIn.h - labelGap - statLines * lineH(labelPx);
+    // Hierarchy by construction: a stat number is never more than 1/1.6 of a headline number.
+    const statPx = Math.min(Math.round(S * 0.16), Math.floor(statValueRoom / 1.22), Math.floor(heroPx / 1.6), ...STAT_KEYS.map((k) => fitPx(value(k), statIn.w, S, true)));
+    if (statPx < floor)
+        unfit("counts");
+    const tileText = (k, r, px, lines, reserve, color, label) => {
+        const group = `tile-${k}`;
+        groups.push({ key: group, label, rect: r });
+        tiles.push({ label, rect: r, color: TILE, radius: tileRadius, group });
+        const ri = inner(r);
+        const blockH = lineH(px) + labelGap + reserve * lineH(labelPx);
+        const y0 = ri.y + Math.round((ri.h - blockH) / 2);
+        line(`value-${k}`, { x: ri.x, y: y0, w: ri.w, h: lineH(px) }, value(k), px, { bold: true, align: "center", color, bind: { prop: "counts", key: k }, over: true, field: `counts.${k}`, group });
+        lines.forEach((t, i) => line(lines.length === 1 ? `label-${k}` : `label-${k}-${i + 1}`, { x: ri.x, y: y0 + lineH(px) + labelGap + i * lineH(labelPx), w: ri.w, h: lineH(labelPx) }, t, labelPx, { align: "center", color: DIM, over: true, field: "the tile labels", group }));
+    };
+    HERO_KEYS.forEach((k, i) => tileText(k, heroRects[i], heroPx, [TILE_LABEL[k].one], 1, p.heroInk, "hero-tile"));
+    STAT_KEYS.forEach((k, i) => tileText(k, statRects[i], statPx, twoLineLabels ? TILE_LABEL[k].two : [TILE_LABEL[k].one], statLines, INK, "stat-tile"));
+    // ── the milestone band: always there; badges, or the one line for an empty week ──
+    const band = { x: m, y: bandY, w: CW, h: bandH };
+    tiles.push({ label: "milestone-band", rect: band, color: TILE, radius: Math.min(tileRadius, 0.06), bind: "milestones" });
+    const bp = Math.max(2, Math.round(Math.min(band.h, band.w) * 0.08));
+    const titlePx = Math.max(floor, Math.min(labelPx, fitPx(BAND_TITLE, CW, labelPx, true)));
+    let area;
+    if (shape === "wide") {
+        const tw = need(BAND_TITLE, titlePx, true);
+        line("band-title", { x: band.x + bp, y: band.y + Math.round((band.h - lineH(titlePx)) / 2), w: tw, h: lineH(titlePx) }, BAND_TITLE, titlePx, { bold: true, color: DIM, over: true, field: "the band title" });
+        area = { x: band.x + bp + tw + gap, y: band.y + bp, w: band.w - 2 * bp - tw - gap, h: band.h - 2 * bp };
+    }
+    else {
+        line("band-title", { x: band.x + bp, y: band.y + bp, w: need(BAND_TITLE, titlePx, true), h: lineH(titlePx) }, BAND_TITLE, titlePx, { bold: true, color: DIM, over: true, field: "the band title" });
+        const ay = band.y + bp + lineH(titlePx) + Math.round(bp * 0.5);
+        area = { x: band.x + bp, y: ay, w: band.w - 2 * bp, h: band.y + band.h - bp - ay };
+    }
+    const badges = [];
+    let badgePx = 0, captionPx = 0;
+    if (p.milestones.length === 0) {
+        const px = Math.min(Math.round(labelPx * 1.1), fitPx(EMPTY_WEEK, area.w, Math.round(labelPx * 1.1), false));
+        const eh = lineH(px);
+        line("milestone-empty", { x: area.x, y: area.y + Math.round((area.h - eh) / 2), w: area.w, h: eh }, EMPTY_WEEK, px, { align: "center", color: DIM, over: true, field: "the empty-week line" });
+    }
+    else {
+        const n = p.milestones.length;
+        const rowGap = Math.max(2, Math.round(gap * 0.6));
+        /** One arrangement: badge size and type for `rowsN` rows of `slots` equal slots. */
+        const arrange = (rowsN, slots) => {
+            const slotW = Math.floor(area.w / slots);
+            const rowH = Math.floor((area.h - (rowsN.length - 1) * rowGap) / rowsN.length);
+            const bw = Math.max(1, Math.min(slotW - Math.max(2, Math.round(gap * 0.6)), Math.round(rowH * 1.7)));
+            const bh = Math.max(1, Math.min(rowH, bw));
+            const ip = Math.max(1, Math.round(bh * 0.07));
+            const badgePx = Math.min(Math.floor((bh * 0.52) / 1.22), ...p.milestones.map((b) => fitPx(String(b.club), bw - 2 * ip, S, true)));
+            const captionPx = Math.min(labelPx, Math.floor((bh * 0.26) / 1.22), ...p.milestones.map((b) => fitPx(b.caption, bw - 2 * ip, S, false)));
+            return { rowsN, slotW, bw, bh, ip, badgePx, captionPx };
+        };
+        // Five slots a row whatever the count, so a badge is the same size in a 1-club and a 5-club week.
+        // Six to ten clubs: two rows (ceil/floor), or - on a wide band - one row of n when that draws them larger.
+        const options = n <= 5 ? [arrange([n], 5)] : [arrange([Math.ceil(n / 2), Math.floor(n / 2)], 5), ...(shape === "wide" ? [arrange([n], n)] : [])];
+        const A = options.reduce((best, o) => (o.captionPx > best.captionPx || (o.captionPx === best.captionPx && o.badgePx > best.badgePx) ? o : best), options[0]);
+        const { rowsN, slotW, bw, bh } = A;
+        const totalH = rowsN.length * bh + (rowsN.length - 1) * rowGap;
+        // The badge slots, then the same snap as the tiles (equal, on the lattice, 5-smooth),
+        // and the type sized again for the snapped badge.
+        const slotsOf = [];
+        rowsN.forEach((count, r) => {
+            const rowY = area.y + Math.round((area.h - totalH) / 2) + r * (bh + rowGap);
+            const x0 = area.x + Math.round((area.w - count * slotW) / 2);
+            for (let i = 0; i < count; i++)
+                slotsOf.push({ x: x0 + i * slotW + Math.round((slotW - bw) / 2), y: rowY, w: bw, h: bh });
+        });
+        const snapped = snapGroup(slotsOf, pitch, Math.floor(rowGap / 2));
+        const sw = snapped[0].w, sh = snapped[0].h, ip = Math.max(1, Math.round(sh * 0.07));
+        badgePx = Math.min(Math.floor((sh * 0.52) / 1.22), ...p.milestones.map((b) => fitPx(String(b.club), sw - 2 * ip, S, true)));
+        captionPx = Math.min(labelPx, Math.floor((sh * 0.26) / 1.22), ...p.milestones.map((b) => fitPx(b.caption, sw - 2 * ip, S, false)));
+        if (captionPx < small || badgePx < small)
+            unfit("milestones", small);
+        const blockH = lineH(badgePx) + lineH(captionPx);
+        let k = 0;
+        rowsN.forEach((count) => {
+            for (let i = 0; i < count; i++, k++) {
+                const b = p.milestones[k];
+                const rect = snapped[k];
+                const fill = (b.kind === "R" ? p.accent : VOLUNTEER_FILL);
+                const group = `badge-${k + 1}`;
+                badges.push({ rect, kind: b.kind });
+                groups.push({ key: group, label: "badge", rect });
+                tiles.push({ label: "badge", rect, color: fill, radius: badgeRadius, group });
+                const ink = onColor(fill);
+                const by = rect.y + Math.round((rect.h - blockH) / 2);
+                line(`badge-club-${k + 1}`, { x: rect.x + ip, y: by, w: rect.w - 2 * ip, h: lineH(badgePx) }, String(b.club), badgePx, { bold: true, align: "center", color: ink, over: true, field: "milestones", min: small, group });
+                line(`badge-caption-${k + 1}`, { x: rect.x + ip, y: by + lineH(badgePx), w: rect.w - 2 * ip, h: lineH(captionPx) }, b.caption, captionPx, { align: "center", color: ink, over: true, field: "milestones", min: small, group });
+            }
+        });
+    }
+    // ── footer: one line at the bottom, shrunk alone to the floor ──
+    if (p.footer !== "") {
+        const fy = top + CH - footerH;
+        line("footer", { x: m, y: fy + Math.round((footerH - lineH(footerPx)) / 2), w: need(p.footer, footerPx, false), h: lineH(footerPx) }, p.footer, footerPx, { color: DIM, bind: { prop: "footer" }, field: "footer" });
+    }
+    return { p, shape, floor, small, cells, tiles, groups, heroRects, statRects, band, badges, namePx, nameLines, runBeside, heroPx, statPx, labelPx, twoLineLabels, badgePx, captionPx };
+}
+/**
+ * The layout on its own lattice: lay out once, find the pitch the parent's
+ * placement will use (set by the thin rule and separator, not by the tiles),
+ * lay out again snapped to it, and repeat until the pitch holds (one pass in
+ * practice). The child refs then land on the lattice with no recovery inset.
+ */
+function settleLayout(props, W, H) {
+    const dummy = (0, template_utils_1.makeColorTile)(INK);
+    const pitchOf = (L) => (0, template_utils_1.placeInsetPieces)({
+        rootW: W, rootH: H, basis: PARENT_BASIS,
+        pieces: [...L.tiles.filter((t) => t.group === undefined).map((t) => t.rect), ...L.cells.filter((c) => c.group === undefined).map((c) => c.rect), ...L.groups.map((g) => g.rect)]
+            .map((r) => ({ rect: { ...r, importance: 1 }, source: dummy })),
+    }).pitch;
+    let pitch = { x: 1, y: 1 };
+    let L = layoutWeeklyRunReport(props, W, H, pitch);
+    for (let pass = 0; pass < 4; pass++) {
+        const next = pitchOf(L);
+        if (next.x === pitch.x && next.y === pitch.y)
+            break;
+        pitch = next;
+        L = layoutWeeklyRunReport(props, W, H, pitch);
+    }
+    return { L, pitch };
+}
+/**
+ * Why this template exists - rendered by `renderTutorial` (the why-tutorial
+ * convention, src/_shared/why.ts): the run, the problem with the sources the
+ * agent opened, the solution, how to use it, then the template itself.
+ */
+const WHY = {
+    "day": 17,
+    "date": "2026-10-06",
+    "agent": "claude",
+    "model": "claude-opus-5-5",
+    "id": "@one-a-day/community/weekly-run-report/v1",
+    "title": "Weekly 5k Run Report",
+    "who": "parkrun event teams: run directors and the volunteers who write the weekly run report for the event's Facebook page and results news",
+    "problem": [
+        "Every Saturday each free, timed 5k gets the same numbers: finishers, new PBs, first timers, visitors, volunteers, milestone clubs. ear1grey saw \"a really cool infographic at my local parkrun, that was generated using a PowerPoint slide\" and adds: \"The process of getting the data into Powerpoint is quite cumbersome\".",
+        "Volunteers built tools to get the numbers out. Eventuate was written \"while volunteering as a Run Director at Brimbank parkrun, to celebrate our community on the Facebook page\"; parkrun-runstats \"prints the stats of the latest run in list format\". Both stop at text; the one infographic lives inside the results page."
+    ],
+    "sources": [
+        "https://github.com/ear1grey/parkrun-event-summary",
+        "https://github.com/johnsyweb/eventuate",
+        "https://greasyfork.org/scripts/534157-eventuate",
+        "https://github.com/rwkura/parkrun-milestones"
+    ],
+    "solution": [
+        "One card per event per week, from numbers typed in, never fetched. The props mirror the runstats list: six counts and a milestones line in its own syntax (4xR25, plus V for volunteer clubs). It prints what was typed: 1,204 with a comma, the weekday from the date, no derived stats.",
+        "The decision that matters: two numbers carry the week. Finishers and volunteers get the two big tiles; the other four are smaller tiles, their numbers capped at 1/1.6 of the headline size. The milestone band never moves: an empty week says so and keeps the shape. No parkrun name, logo or colours."
+    ],
+    "usage": {
+        "command": "m0saic make @one-a-day/community/weekly-run-report/v1 --template-repo . -w 1080 -h 1080 --props @week.json -o week-312.png",
+        "try": [
+            "week.json: {\"eventName\":\"Your Park 5k\",\"runNumber\":313,\"counts\":{...},\"milestones\":\"2xR25, 1xV50\"}",
+            "-w 1080 -h 1920 for a story, -w 1920 -h 1080 for the results page; the tiles reflow, the numbers stay",
+            "milestones \"\": the band stays and says No milestone clubs this week; 6-10 clubs make smaller badges",
+            "footer \"\" removes the sample line; accent \"#7a3b8f\" for your own colour (numbers stay ink if it reads poorly)"
+        ]
+    },
+    "timeline": {
+        "source": "runner",
+        "phases": [
+            {
+                "name": "scout",
+                "startMs": 0,
+                "durMs": 466482,
+                "calls": 17,
+                "tokens": 3309053,
+                "costUsd": 5.64,
+                "tools": "Bash 12, Monitor 1, Read 1"
+            },
+            {
+                "name": "plan",
+                "startMs": 466502,
+                "durMs": 675483,
+                "calls": 10,
+                "tokens": 1000484,
+                "costUsd": 11.62,
+                "tools": "Bash 8, ScheduleWakeup 1, Workflow 1"
+            },
+            {
+                "name": "plan (2)",
+                "startMs": 1142018,
+                "durMs": 231866,
+                "calls": 13,
+                "tokens": 1550217,
+                "costUsd": 1.05,
+                "tools": "Bash 12, Write 1"
+            }
+        ],
+        "costBasis": "reported"
+    },
+    "caveats": [
+        "No importer: the run director retypes six numbers and the milestones line each week, and counts is JSON. The V prefix for volunteer clubs is this card's extension of the runstats line.",
+        "From six clubs the badges get smaller (two rows, or one long row on a wide card); ten clubs need 1280x720 or larger and are refused on the 640x360 and 480x270 thumbnails.",
+        "No parkrun marks by design, so at defaults it looks like any 5k's weekly summary. The PowerPoint originals it replaces were described to us, not seen."
+    ]
+};
+exports.WeeklyRunReportV1 = (0, template_utils_1.defineMosaicTemplate)({
+    id: (0, types_1.asTemplateId)(ID),
+    label: "2026-10-06 · Weekly 5k Run Report",
+    version: 1,
+    description: "The weekly results card a volunteer-run Saturday 5k posts after every run: event, run number and date, finishers and volunteers as the two headline numbers, new PBs, first timers, visitors and first-time volunteers under them, and the milestone clubs reached. Numbers are typed in, never fetched.",
+    capabilities: { tier: "core" },
+    tags: ["community", "2026-10-06", "day-017", "running", "5k", "volunteers", "weekly", "stats", "results"],
+    outputHints: {
+        width: 1080,
+        height: 1080,
+        fps: 30,
+        durationMs: 2000,
+        format: { kind: "image", container: "png" },
+        note: "Still PNG, one card per event per week. 1080x1080 for the feed; 1080x1920 (story) and 1920x1080 (results page) reflow the tiles. Ten milestone clubs need 1280x720 or larger.",
+    },
+    propsSchema,
+    defaultProps: DEFAULTS,
+    render,
+    renderTutorial: (0, why_1.whyTutorial)(WHY, render),
+});
+exports.default = exports.WeeklyRunReportV1;
+async function render(props, ctx) {
+    const { width: W, height: H } = ctx.target;
+    const { L } = settleLayout(props, W, H);
+    const pieces = [];
+    const constraints = [];
+    // Text over a fill never lowers onto the engine's grid sheet: every such pair
+    // is one more link in the overlay chain, and past ~25 the glyph masks degrade
+    // silently. So each tile and each badge is a CHILD document (its fill and its
+    // text, 3-4 deep), and the parent's pieces barely overlap.
+    const groupOf = new Map(L.groups.map((g) => [g.key, { g, cell: g.rect, pieces: [] }]));
+    const push = (group, rect, importance, source) => {
+        if (group === undefined) {
+            pieces.push({ rect: { ...rect, importance }, source });
+            return;
+        }
+        const owner = groupOf.get(group);
+        owner.pieces.push({ rect: { ...rect, x: rect.x - owner.cell.x, y: rect.y - owner.cell.y, importance }, source });
+    };
+    for (const t of L.tiles) {
+        const tile = (0, template_utils_1.tag)({ ...(0, template_utils_1.makeColorTile)(t.color, t.radius > 0 ? { effects: { rounding: { cornerStyle: "rounded", borderRadius: t.radius } } } : {}) }, t.label);
+        // The header rule shows `accent`; the band is the rect that shows `milestones`.
+        push(t.group, t.rect, 1, t.bind ? (0, template_utils_1.bindProp)(tile, t.bind) : tile);
+    }
+    for (const c of L.cells) {
+        let cell = (0, template_utils_1.tag)((0, text_1.textCell)({ text: c.text, fontSize: c.px, color: c.color, hAlign: c.align, bold: c.bold, label: c.label }), c.label);
+        // A text rect is BOUND to the prop it shows; each count to its own key of `counts`. Fixed copy is not.
+        if (c.bind?.prop === "counts")
+            cell = (0, template_utils_1.bindPropPath)(cell, "counts", [c.bind.key], "number");
+        else if (c.bind)
+            cell = (0, template_utils_1.bindProp)(cell, c.bind.prop);
+        push(c.group, c.rect, c.over ? 3 : 2, cell);
+        constraints.push((0, layout_1.textFitsMeasured)(c.label, c.text, c.px, c.width));
+    }
+    const children = {};
+    for (const { g, cell, pieces: own } of groupOf.values()) {
+        const placedChild = (0, template_utils_1.placeInsetPieces)({ rootW: cell.w, rootH: cell.h, pieces: own });
+        children[g.key] = {
+            kind: "mosaic_document",
+            version: 1,
+            m0: (0, dsl_stdlib_1.toM0String)(placedChild.m0, ID),
+            assets: {},
+            size: { width: cell.w, height: cell.h },
+            fps: ctx.target.fps,
+            durationMs: 2000,
+            // A still's child has no alpha: its own canvas shows behind a rounded corner. Badges sit on
+            // the band's white, so theirs is white; tiles fill their whole canvas, so theirs never shows.
+            backgroundColor: (g.label === "badge" ? TILE : PAPER),
+            sources: placedChild.sources,
+            editor: { label: g.key },
+        };
+        pieces.push({ rect: { ...cell, importance: 2 }, source: (0, template_utils_1.tag)({ type: "mosaic", ref: g.key, placement: { fit: "contain" } }, g.key) });
+    }
+    // What the geometry promises: every text fits (above); the header on top;
+    // two equal headline tiles and four equal stat tiles; the milestone band
+    // across the lower card every week, its badges equal and inside it; the
+    // footer at the bottom when there is one.
+    const nameLabel = L.nameLines.length === 1 ? "event-name" : "event-name-1";
+    constraints.push({ label: nameLabel, within: { yFrac: [0, 0.25] } });
+    constraints.push({ label: "header-rule", minWidthFrac: 0.85 });
+    constraints.push({ label: "hero-tile", within: { yFrac: [0.1, 0.8] } });
+    constraints.push({ label: "stat-tile", minWidthFrac: 0.15 });
+    for (const k of exports.COUNT_KEYS)
+        constraints.push({ label: `value-${k}` });
+    constraints.push({ label: "milestone-band", within: { yFrac: [0.55, 1] }, minWidthFrac: 0.85 });
+    if (L.badges.length > 0)
+        constraints.push({ label: "badge", within: { yFrac: [L.band.y / H, (L.band.y + L.band.h) / H] } });
+    else
+        constraints.push({ label: "milestone-empty" });
+    if (L.cells.some((c) => c.label === "footer"))
+        constraints.push({ label: "footer", within: { yFrac: [0.9, 1] } });
+    const relations = [
+        { label: "hero-tile", equal: "size", tolerancePx: 2 },
+        { label: "stat-tile", equal: "size", tolerancePx: 2 },
+    ];
+    if (L.badges.length >= 2)
+        relations.push({ label: "badge", equal: "size", tolerancePx: 2 });
+    const placed = (0, template_utils_1.placeInsetPieces)({ rootW: W, rootH: H, pieces, basis: PARENT_BASIS });
+    const doc = {
+        kind: "mosaic_document",
+        version: 1,
+        m0: (0, dsl_stdlib_1.toM0String)(placed.m0, ID),
+        assets: {},
+        backgroundColor: PAPER,
+        sources: placed.sources,
+        children,
+    };
+    return (0, layout_1.withLayoutIntent)(doc, ctx, { templateId: ID, constraints, relations, debug: props.debugLayout === true });
+}

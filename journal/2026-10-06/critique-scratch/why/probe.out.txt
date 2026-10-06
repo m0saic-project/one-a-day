@@ -1,0 +1,98 @@
+--- 480x270, clubs 1..10, caption digits 1/2/3 ---
+n=1 digits=1 defcounts             480x270 OK rows=[1] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=1 digits=2 defcounts             480x270 OK rows=[1] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=1 digits=3 bigcounts             480x270 OK rows=[1] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=2 digits=1 defcounts             480x270 OK rows=[2] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=2 digits=2 defcounts             480x270 OK rows=[2] badge=64x48 club=16px cap=8px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=2 digits=3 bigcounts             480x270 OK rows=[2] badge=64x48 club=16px cap=7px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=3 digits=1 defcounts             480x270 OK rows=[3] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=3 digits=2 bigcounts             480x270 OK rows=[3] badge=64x48 club=16px cap=8px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=3 digits=3 bigcounts             480x270 OK rows=[3] badge=64x48 club=16px cap=7px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=4 digits=1 defcounts             480x270 OK rows=[4] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=4 digits=2 bigcounts             480x270 OK rows=[4] badge=64x48 club=16px cap=8px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=4 digits=3 bigcounts             480x270 OK rows=[4] badge=64x48 club=16px cap=7px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=5 digits=1 defcounts             480x270 OK rows=[5] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=5 digits=2 bigcounts             480x270 OK rows=[5] badge=64x48 club=16px cap=8px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=5 digits=3 bigcounts             480x270 OK rows=[5] badge=64x48 club=16px cap=7px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=6 digits=1 defcounts             480x270 OK rows=[6] badge=54x48 club=16px cap=8px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=6 digits=2 bigcounts             480x270 OK rows=[6] badge=54x48 club=16px cap=7px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=6 digits=3 bigcounts             480x270 OK rows=[6] badge=54x48 club=16px cap=6px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=7 digits=1 defcounts             480x270 OK rows=[7] badge=45x45 club=16px cap=6px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=7 digits=2 bigcounts             480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=7 digits=3 bigcounts             480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=8 digits=1 defcounts             480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=8 digits=2 bigcounts             480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=8 digits=3 bigcounts             480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=9 digits=1 defcounts             480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=9 digits=2 bigcounts             480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=9 digits=3 bigcounts             480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=10 digits=1 defcounts            480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=10 digits=2 bigcounts            480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=10 digits=3 bigcounts            480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+--- 480x270, default counts, 2-digit run captions only (valid under 214 finishers) ---
+n=5 12xR* defcounts                480x270 OK rows=[5] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=6 12xR* defcounts                480x270 OK rows=[6] badge=54x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+--- contract canvases, 10 clubs, 3-digit captions (BIG counts) ---
+n=10 digits=3                      1920x1080 OK rows=[5,5] badge=144x81 club=34px cap=18px small=15 floor=24 hero=109 stat=68 ratio=1.603
+n=10 digits=2                      1920x1080 OK rows=[5,5] badge=144x81 club=34px cap=19px small=15 floor=24 hero=109 stat=68 ratio=1.603
+n=6 digits=3                       1920x1080 OK rows=[3,3] badge=144x81 club=34px cap=18px small=15 floor=24 hero=109 stat=68 ratio=1.603
+n=10 digits=3                      1280x720 OK rows=[5,5] badge=90x54 club=23px cap=11px small=10 floor=16 hero=73 stat=45 ratio=1.622
+n=10 digits=2                      1280x720 OK rows=[5,5] badge=90x54 club=23px cap=12px small=10 floor=16 hero=73 stat=45 ratio=1.622
+n=6 digits=3                       1280x720 OK rows=[3,3] badge=90x54 club=23px cap=11px small=10 floor=16 hero=73 stat=45 ratio=1.622
+n=10 digits=3                      1080x1920 OK rows=[5,5] badge=162x128 club=54px cap=20px small=11 floor=18 hero=150 stat=93 ratio=1.613
+n=10 digits=2                      1080x1920 OK rows=[5,5] badge=162x128 club=54px cap=22px small=11 floor=18 hero=150 stat=93 ratio=1.613
+n=6 digits=3                       1080x1920 OK rows=[3,3] badge=162x128 club=54px cap=20px small=11 floor=18 hero=150 stat=93 ratio=1.613
+n=10 digits=3                      1080x1080 OK rows=[5,5] badge=150x81 club=34px cap=19px small=11 floor=18 hero=140 stat=87 ratio=1.609
+n=10 digits=2                      1080x1080 OK rows=[5,5] badge=150x81 club=34px cap=19px small=11 floor=18 hero=140 stat=87 ratio=1.609
+n=6 digits=3                       1080x1080 OK rows=[3,3] badge=150x81 club=34px cap=19px small=11 floor=18 hero=140 stat=87 ratio=1.609
+n=10 digits=3                      3840x2160 OK rows=[5,5] badge=270x162 club=69px cap=35px small=30 floor=48 hero=221 stat=138 ratio=1.601
+n=10 digits=2                      3840x2160 OK rows=[5,5] badge=270x162 club=69px cap=38px small=30 floor=48 hero=221 stat=138 ratio=1.601
+n=6 digits=3                       3840x2160 OK rows=[3,3] badge=270x162 club=69px cap=35px small=30 floor=48 hero=221 stat=138 ratio=1.601
+n=10 digits=3                      640x360 REFUSED milestones cannot be fitted on 640x360 above the 6px readability floor: shorten it or render a larger canvas.
+n=10 digits=2                      640x360 OK rows=[5,5] badge=48x27 club=11px cap=6px small=6 floor=8 hero=36 stat=22 ratio=1.636
+n=6 digits=3                       640x360 OK rows=[6] badge=72x60 club=22px cap=8px small=6 floor=8 hero=36 stat=22 ratio=1.636
+n=10 digits=3                      480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=10 digits=2                      480x270 REFUSED milestones cannot be fitted on 480x270 above the 6px readability floor: shorten it or render a larger canvas.
+n=6 digits=3                       480x270 OK rows=[6] badge=54x48 club=16px cap=6px small=6 floor=6 hero=27 stat=16 ratio=1.688
+--- defaults and empty week ---
+defaults                           1080x1080 OK rows=[4] badge=162x162 club=69px cap=22px small=11 floor=18 hero=140 stat=87 ratio=1.609
+milestones ""                      1080x1080 OK rows=[] badge=- club=0px cap=0px small=11 floor=18 hero=140 stat=87 ratio=1.609 empty="No milestone clubs this week" band={"x":41,"y":722,"w":998,"h":268}
+n=6 digits=1                       1080x1080 OK rows=[3,3] badge=150x81 club=34px cap=19px small=11 floor=18 hero=140 stat=87 ratio=1.609
+n=4 digits=1                       1080x1080 OK rows=[4] badge=162x162 club=69px cap=22px small=11 floor=18 hero=140 stat=87 ratio=1.609
+defaults                           1920x1080 OK rows=[4] badge=256x180 club=68px cap=37px small=15 floor=24 hero=109 stat=68 ratio=1.603
+milestones ""                      1920x1080 OK rows=[] badge=- club=0px cap=0px small=15 floor=24 hero=109 stat=68 ratio=1.603 empty="No milestone clubs this week" band={"x":54,"y":739,"w":1812,"h":223}
+n=6 digits=1                       1920x1080 OK rows=[3,3] badge=144x81 club=34px cap=19px small=15 floor=24 hero=109 stat=68 ratio=1.603
+n=4 digits=1                       1920x1080 OK rows=[4] badge=256x180 club=68px cap=37px small=15 floor=24 hero=109 stat=68 ratio=1.603
+defaults                           1080x1920 OK rows=[4] badge=162x160 club=68px cap=23px small=11 floor=18 hero=211 stat=130 ratio=1.623
+milestones ""                      1080x1920 OK rows=[] badge=- club=0px cap=0px small=11 floor=18 hero=211 stat=130 ratio=1.623 empty="No milestone clubs this week" band={"x":41,"y":1449,"w":998,"h":381}
+n=6 digits=1                       1080x1920 OK rows=[3,3] badge=162x128 club=54px cap=26px small=11 floor=18 hero=211 stat=130 ratio=1.623
+n=4 digits=1                       1080x1920 OK rows=[4] badge=162x160 club=68px cap=26px small=11 floor=18 hero=211 stat=130 ratio=1.623
+defaults                           480x270 OK rows=[4] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+milestones ""                      480x270 OK rows=[] badge=- club=0px cap=0px small=6 floor=6 hero=27 stat=16 ratio=1.688 empty="No milestone clubs this week" band={"x":14,"y":183,"w":452,"h":56}
+n=6 digits=1                       480x270 OK rows=[6] badge=54x48 club=16px cap=8px small=6 floor=6 hero=27 stat=16 ratio=1.688
+n=4 digits=1                       480x270 OK rows=[4] badge=64x48 club=16px cap=9px small=6 floor=6 hero=27 stat=16 ratio=1.688
+--- real parkrun clubs the card may refuse ---
+1xR10                    REFUSED milestones 'R10' is not a club (25, 50, 100, 250, 500, 1000).
+1xV10                    REFUSED milestones 'V10' is not a club (25, 50, 100, 250, 500, 1000).
+1xR200                   REFUSED milestones 'R200' is not a club (25, 50, 100, 250, 500, 1000).
+2xR300                   REFUSED milestones 'R300' is not a club (25, 50, 100, 250, 500, 1000).
+1xR400                   REFUSED milestones 'R400' is not a club (25, 50, 100, 250, 500, 1000).
+1xV200                   REFUSED milestones 'V200' is not a club (25, 50, 100, 250, 500, 1000).
+1xR11                    REFUSED milestones 'R11' is not a club (25, 50, 100, 250, 500, 1000).
+1xR21                    REFUSED milestones 'R21' is not a club (25, 50, 100, 250, 500, 1000).
+4xR25, 1xR200, 2xV25     REFUSED milestones 'R200' is not a club (25, 50, 100, 250, 500, 1000).
+--- runstats line verbatim (from rwkura README) ---
+4xR25, 4xR50, 1xR100     -> R25:4 runners | R50:4 runners | R100:1 runner
+2xV25, 1xV50             -> V25:2 volunteers | V50:1 volunteer
+--- the Use-it page week.json, with real-looking counts and no milestones key ---
+milestones rendered: 25 4 runners | 50 3 runners | 100 1 runner | 25 2 volunteers
+date: SAT 10 OCT 2026 run: #313 footer: ""
+--- accent #7a3b8f ---
+accent #7a3b8f heroInk #7a3b8f contrast vs #fbfbfb 7.12
+#3e3e78 contrast vs tile 9.37 heroInk #3e3e78
+#ffa300 contrast vs tile 1.93 heroInk #1b1f1c
+#2b233d contrast vs tile 14.39 heroInk #2b233d
+#4d3691 contrast vs tile 9.01 heroInk #4d3691
+#1f7a4d contrast vs tile 5.14 heroInk #1f7a4d
+--- counts as literal {...} placeholder ---
+REFUSED counts is not valid JSON: "{...}".

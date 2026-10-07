@@ -1,0 +1,50 @@
+{
+  "scout": "done",
+  "useCase": "Chess game recap cards from PGN files: opening name, result, rating change, one card per game or tournament milestone",
+  "who": "Chess players on Lichess and Chess.com share their games in forums, blogs, and Discord; communities around game analysis and rating progression",
+  "sources": [
+    "https://github.com/philphilphil/blunderbase",
+    "https://github.com/brumar/chess-postmortem-skills",
+    "https://news.ycombinator.com/item?id=49857528",
+    "https://lichess.org"
+  ],
+  "tags": [
+    "chess",
+    "pgn",
+    "lichess",
+    "game-analysis",
+    "rating-progression",
+    "gaming"
+  ],
+  "pack": "sports",
+  "slug": "chess-game-recap",
+  "title": "2026-10-07 · Chess Game Recap",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "c",
+  "revision": 2,
+  "revisions": [
+    {
+      "round": 1,
+      "at": "2026-10-07T13:21:48.740Z",
+      "rejected": "Missing colored result icon; brief and acceptance rubric require color-coded win/loss/draw indicator (green/red/gray square or circle) but render shows text label only",
+      "verdict": "40-critique.r1.md"
+    },
+    {
+      "round": 2,
+      "at": "2026-10-07T13:32:51.617Z",
+      "rejected": "Revision adds color-coding but omits the requested colored icon shape specified in brief and acceptance rubric; only label rendered, not icon + label",
+      "verdict": "40-critique.r2.md"
+    }
+  ],
+  "build": "done",
+  "decision": "ship",
+  "pick": "c",
+  "critique": "done",
+  "ship": "done"
+}

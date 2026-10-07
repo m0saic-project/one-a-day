@@ -473,5 +473,33 @@
       "https://greasyfork.org/scripts/534157-eventuate",
       "https://github.com/rwkura/parkrun-milestones"
     ]
+  },
+  {
+    "date": "2026-10-07",
+    "day": 18,
+    "agent": "claude",
+    "model": "claude-haiku-4-5-20251001",
+    "rosterId": "claude-haiku",
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/chess-game-recap/v1",
+    "title": "2026-10-07 · Chess Game Recap",
+    "pack": "sports",
+    "useCase": "Chess game recap cards from PGN files: opening name, result, rating change, one card per game or tournament milestone",
+    "tags": [
+      "sports",
+      "2026-10-07",
+      "day-018",
+      "chess",
+      "pgn",
+      "lichess",
+      "game-analysis",
+      "rating-progression"
+    ],
+    "sources": [
+      "https://github.com/philphilphil/blunderbase",
+      "https://github.com/brumar/chess-postmortem-skills",
+      "https://news.ycombinator.com/item?id=49857528",
+      "https://lichess.org"
+    ]
   }
 ]

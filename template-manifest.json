@@ -322,6 +322,26 @@
       }
     },
     {
+      "slug": "chess-game-recap",
+      "templateKey": "@one-a-day/sports/chess-game-recap/v1",
+      "title": "2026-10-07 · Chess Game Recap",
+      "description": "Chess game recap card: opening, result, time control, and rating change rendered as a shareable card that scales beautifully across all devices.",
+      "tags": [
+        "sports",
+        "2026-10-07",
+        "day-018",
+        "chess",
+        "pgn",
+        "lichess",
+        "game-analysis",
+        "rating-progression"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__chess-game-recap__v1/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

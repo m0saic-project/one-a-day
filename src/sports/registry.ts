@@ -40,4 +40,13 @@ export const sportsRegistry: StarterRegistryEntry[] = [
       "A speedcubing average card: give 3, 5 or 12 solves and it works out the Mo3, Ao5 or Ao12, one bar per solve with the dropped best and worst in parentheses and hollow, the average as the headline, and the delta against the previous PB.",
     tags: ["sports","2026-10-04","day-015","cubing","speedcubing","average","pb","cstimer"],
   },
+  {
+    slug: "chess-game-recap",
+    templateId: "@one-a-day/sports/chess-game-recap/v1",
+    exportName: "ChessGameRecapV1",
+    title: "2026-10-07 · Chess Game Recap",
+    description:
+      "Chess game recap card: opening, result, time control, and rating change rendered as a shareable card that scales beautifully across all devices.",
+    tags: ["sports","2026-10-07","day-018","chess","pgn","lichess","game-analysis","rating-progression"],
+  },
 ];

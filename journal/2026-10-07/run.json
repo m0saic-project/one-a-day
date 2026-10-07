@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-07",
+  "day": 18,
+  "startedAt": "2026-10-07T13:00:03.431Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "haiku",
+    "roster": {
+      "id": "claude-haiku",
+      "agent": "claude",
+      "model": "haiku",
+      "weight": 1,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": "medium",
+    "budgetUsd": 8,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-haiku-4-5-20251001",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.08,
+        "resetsAt": "2026-10-07T18:00:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.29,
+        "resetsAt": "2026-10-13T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-07T13:52:34.749Z"
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 220185,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 60878,
+      "done": true
+    },
+    "build": {
+      "calls": 3,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 365547,
+      "done": true
+    },
+    "critique": {
+      "calls": 3,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 118492,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 699049,
+      "done": true
+    }
+  },
+  "revise": {
+    "rounds": 2
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/chess-game-recap/v1",
+    "title": "2026-10-07 · Chess Game Recap",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 4,
+    "at": "2026-10-07T13:55:26.471Z"
+  }
+}

@@ -22,6 +22,9 @@
  *      equals the template's own default render), then "how it was made"
  *      (the harness timeline) last — and every step's m0 validates and
  *      keeps its page's layout contract.
+ *      A founder-directed follow-up (vN, N >= 2, with its own
+ *      journal/<date>/vN/run.json - tools/record-dir.mjs) is held to ITS
+ *      run.json and trace.json; the day number and date stay the day's.
  *   4. `WHY.timeline` agrees with `journal/<date>/trace.json` when the runner
  *      wrote one: every phase named is in the trace and its duration is
  *      within 25% (the ship phase is exempt - it is still running when the
@@ -40,6 +43,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
+import { recordDirFor } from "./record-dir.mjs";
 
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -111,8 +115,9 @@ for (const t of templates) {
   else {
     const expectedDay = dayNumberFor(spec.date);
     if (spec.day !== expectedDay) journalIssue(id, "day", `WHY.day is ${spec.day}; journal/index.json makes ${spec.date} day ${expectedDay}`);
-    const run = readJson(path.join(dayDir, "run.json"), null);
-    if (!run) warn(id, "run", `journal/${spec.date}/run.json is missing - agent / model could not be cross-checked`);
+    const record = recordDirFor(ROOT, id, spec.date);
+    const run = readJson(path.join(record.dir, "run.json"), null);
+    if (!run) warn(id, "run", `${record.rel}/run.json is missing - agent / model could not be cross-checked`);
     else {
       const adapter = run.runner && run.runner.adapter ? String(run.runner.adapter) : null;
       const model = run.model && run.model.selfDeclared ? String(run.model.selfDeclared) : null;
@@ -121,10 +126,10 @@ for (const t of templates) {
       if (!model) warn(id, "model", `run.json has no model.selfDeclared yet; WHY.model ${JSON.stringify(spec.model)} is unverified`);
     }
     // ── the timeline against the runner's trace ──
-    const trace = readJson(path.join(dayDir, "trace.json"), null);
+    const trace = readJson(path.join(record.dir, "trace.json"), null);
     const tl = spec.timeline;
     if (trace && Array.isArray(trace.phases) && tl) {
-      if (tl.source !== "runner") journalIssue(id, "timeline-source", `WHY.timeline.source is ${JSON.stringify(tl.source)} but journal/${spec.date}/trace.json exists - copy the runner's numbers`);
+      if (tl.source !== "runner") journalIssue(id, "timeline-source", `WHY.timeline.source is ${JSON.stringify(tl.source)} but ${record.rel}/trace.json exists - copy the runner's numbers`);
       const byName = new Map(trace.phases.map((ph) => [String(ph.name), ph]));
       for (const ph of tl.phases) {
         const rec = byName.get(String(ph.name));
@@ -134,13 +139,15 @@ for (const t of templates) {
         if (ref > 0 && Math.abs(ph.durMs - ref) > 0.25 * ref) journalIssue(id, "timeline-duration", `WHY.timeline ${ph.name} lasts ${ph.durMs} ms; trace.json says ${ref} ms`);
       }
     } else if (tl && tl.source === "runner") {
-      warn(id, "timeline-source", `WHY.timeline.source is "runner" but journal/${spec.date}/trace.json is missing - unverified`);
+      warn(id, "timeline-source", `WHY.timeline.source is "runner" but ${record.rel}/trace.json is missing - unverified`);
     }
-    const scout = path.join(dayDir, "10-scout.md");
-    if (fs.existsSync(scout)) {
-      const text = fs.readFileSync(scout, "utf8");
+    // A follow-up may carry its own evidence; it cites the day's scout as well.
+    const scouts = [path.join(record.dir, "10-scout.md"), path.join(dayDir, "10-scout.md")].filter((f) => fs.existsSync(f));
+    const scout = scouts[0];
+    if (scout) {
+      const text = scouts.map((f) => fs.readFileSync(f, "utf8")).join("\n");
       const uncited = spec.sources.filter((u) => !text.includes(u));
-      if (uncited.length) warn(id, "sources", `${uncited.length} WHY source(s) do not appear in journal/${spec.date}/10-scout.md: ${uncited.slice(0, 3).join(", ")}${uncited.length > 3 ? ", ..." : ""}`);
+      if (uncited.length) warn(id, "sources", `${uncited.length} WHY source(s) do not appear in ${scouts.map((f) => path.relative(ROOT, f).split(path.sep).join("/")).join(" or ")}: ${uncited.slice(0, 3).join(", ")}${uncited.length > 3 ? ", ..." : ""}`);
     }
   }
   if (spec.id !== id) error(id, "id", `WHY.id is ${JSON.stringify(spec.id)}`);

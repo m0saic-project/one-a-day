@@ -5,6 +5,15 @@ import { SwimTimeDropCardV1 } from "./swim-time-drop-card/v1/swim-time-drop-card
 import { LapTelemetryCardV1 } from "./lap-telemetry-card/v1/lap-telemetry-card";
 import { CubingAverageCardV1 } from "./cubing-average-card/v1/cubing-average-card";
 import { ChessGameRecapV1 } from "./chess-game-recap/v1/chess-game-recap";
+import { ChessGameRecapV2 } from "./chess-game-recap/v2/chess-game-recap";
+
+/**
+ * Deprecation without editing a frozen file: a shipped vN never changes, so
+ * the flag goes on the copy this pack hands to hosts (`templates`), which is
+ * what Mosaic Desktop, the CLI and the manifest read.
+ */
+const retired = <T extends object>(t: T, replacement: string, since: string, reason: string): T =>
+  ({ ...t, deprecated: { replacement, since, reason } }) as T;
 
 /** Pack `sports`, in registry order (mirrors ./registry.ts). */
 export const sportsTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
@@ -12,7 +21,13 @@ export const sportsTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
   SwimTimeDropCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   LapTelemetryCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   CubingAverageCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
-  ChessGameRecapV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
+  retired(
+    ChessGameRecapV1,
+    "@one-a-day/sports/chess-game-recap/v2",
+    "2026-10-07",
+    "v1 (claude-haiku) shows six typed fields and no board; v2 reads the PGN, replays the game and plays its key moments.",
+  ) as unknown as MosaicTemplate<MosaicTemplateProps>,
+  ChessGameRecapV2 as unknown as MosaicTemplate<MosaicTemplateProps>,
 ];
 
 // `export *` ONLY — see the note in src/index.ts.
@@ -21,3 +36,4 @@ export * from "./swim-time-drop-card/v1/swim-time-drop-card";
 export * from "./lap-telemetry-card/v1/lap-telemetry-card";
 export * from "./cubing-average-card/v1/cubing-average-card";
 export * from "./chess-game-recap/v1/chess-game-recap";
+export * from "./chess-game-recap/v2/chess-game-recap";

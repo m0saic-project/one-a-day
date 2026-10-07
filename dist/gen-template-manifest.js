@@ -46,7 +46,7 @@ exports.buildStarterManifest = buildStarterManifest;
  *   - every registry row's templateId parses as <repoId>/<pack>/<slug>/vN
  *     (repoId from src/repo.ts — the ONE place a fork renames itself),
  *     with the pack declared in TEMPLATE_PACKS and a real src/<pack>/<slug>/vN/;
- *   - slugs unique per pack; templateIds and exportNames globally unique;
+ *   - a slug + version unique per pack; templateIds and exportNames globally unique;
  *   - the registry and the exported `templates[]` agree EXACTLY — a template
  *     can't ship unregistered, and a registry row can't outlive its template;
  *   - preview assets referenced (explicitly or by convention) must exist.
@@ -169,7 +169,9 @@ function buildStarterManifest() {
         assert(packIds.has(packId), `Entry "${entry.templateId}" pack "${packId}" is not declared in TEMPLATE_PACKS`);
         const srcDir = `src/${packId}/${entry.slug}/v${major}`;
         assert(fs.existsSync(path.join(ROOT, srcDir)), `Entry "${entry.templateId}" has no source folder "${srcDir}/"`);
-        const slugKey = `${packId}/${entry.slug}`;
+        // One slug may carry several versions (a fix is a new vN+1 beside the
+        // frozen vN - AGENTS.md); the same slug AND version twice is the error.
+        const slugKey = `${packId}/${entry.slug}/v${major}`;
         assert(!seenSlugKeys.has(slugKey), `Duplicate pack-scoped slug: "${slugKey}"`);
         seenSlugKeys.add(slugKey);
         assert(!seenTemplateIds.has(entry.templateId), `Duplicate templateId: "${entry.templateId}"`);

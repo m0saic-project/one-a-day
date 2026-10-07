@@ -90,6 +90,17 @@ The model name in `run.json` is **self-declared** by the agent. A human may
 add `model.corrected`. Commit trailers (`Agent:` / `Model:`) print the
 self-declared value.
 
+**Founder-directed follow-ups.** The daily run stays headless, and a day's
+template stays exactly as the day made it. When a day finds an idea worth
+more than the day's agent gave it, the founder can send a stronger agent at
+the same idea: the result is that template's next version (`v2` beside the
+frozen `v1`, which is deprecated in its favour, never edited), recorded in
+its own `journal/YYYY-MM-DD/vN/` folder with the same files as a day (brief,
+build, critique, ship note, a `run.json` saying who made it and why, its own
+timeline). It keeps the day's date and number - it is that day's idea - and
+`TEMPLATES.md` marks it "founder-directed follow-up". The first:
+[`journal/2026-10-07/v2/`](journal/2026-10-07/v2/), the chess game recap.
+
 ## Trust
 
 - This repo is not reviewed by a person before it ships. The gate is code.

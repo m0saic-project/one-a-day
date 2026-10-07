@@ -1,0 +1,32 @@
+{
+  "session": "8b37ae25-d129-46d4-8c75-3c69d3901003",
+  "model": "claude-opus-5-5",
+  "note": "Phase marks for the founder-directed v2 of day 018's chess-game-recap, run in one interactive Claude Code session. The first mark is backdated to the founder's message that asked for v2 (the session had diagnosed v1 before that).",
+  "marks": [
+    {
+      "phase": "direct",
+      "at": "2026-10-07T14:58:45.284Z",
+      "what": "the founder asks for v2 today; session disables claude-haiku (5e2c793) and puts three creative questions (format, default game, v1)"
+    },
+    {
+      "phase": "plan",
+      "at": "2026-10-07T15:06:58.346Z",
+      "what": "write the v2 brief: animated key moments from a PGN, Opera Game default, v1 deprecated (founder's three answers)"
+    },
+    {
+      "phase": "build",
+      "at": "2026-10-07T15:12:35.311Z",
+      "what": "chess engine (PGN + SAN replay), piece art, template, layout, renders"
+    },
+    {
+      "phase": "critique",
+      "at": "2026-10-07T15:36:52.363Z",
+      "what": "independent critic subagent scores variants a and b against the brief's rubric from stills and frames"
+    },
+    {
+      "phase": "ship",
+      "at": "2026-10-07T15:39:54.027Z",
+      "what": "answer the critic's should-fix items (captions in phase with the marker, graph legend), render c, previews, ship note, timeline, submit"
+    }
+  ]
+}

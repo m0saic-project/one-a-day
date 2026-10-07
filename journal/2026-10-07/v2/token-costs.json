@@ -1,0 +1,83 @@
+{
+  "session": {
+    "requests": 161,
+    "tokens": 38224143,
+    "usd": 15
+  },
+  "model": "claude-opus-5-5",
+  "rates": {
+    "key": "claude-opus-5-5",
+    "input": 4,
+    "output": 20,
+    "cacheRead": 0.2,
+    "cacheWrite": 8,
+    "pricedAt": "2026-09-26"
+  },
+  "until": "2026-10-07T15:41:00.258Z",
+  "models": [
+    "claude-opus-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "subagentRequests": 12,
+  "before": {
+    "requests": 14,
+    "tokens": 859211,
+    "usd": 0.67,
+    "calls": 14
+  },
+  "phases": [
+    {
+      "name": "direct",
+      "min": 8.22,
+      "requests": 24,
+      "tokens": 2926899,
+      "usd": 1.66,
+      "calls": 30
+    },
+    {
+      "name": "plan",
+      "min": 5.62,
+      "requests": 28,
+      "tokens": 4987894,
+      "usd": 2,
+      "calls": 28
+    },
+    {
+      "name": "build",
+      "min": 24.28,
+      "requests": 69,
+      "tokens": 22800724,
+      "usd": 8.72,
+      "calls": 84
+    },
+    {
+      "name": "critique",
+      "min": 3.03,
+      "requests": 21,
+      "tokens": 4518107,
+      "usd": 1.39,
+      "calls": 33
+    },
+    {
+      "name": "ship",
+      "min": 1.1,
+      "requests": 5,
+      "tokens": 2131308,
+      "usd": 0.56,
+      "calls": 8
+    }
+  ],
+  "v2": {
+    "requests": 147,
+    "tokens": 37364932,
+    "usd": 14.32
+  },
+  "traceTotals": {
+    "phases": 5,
+    "calls": 183,
+    "tokens": 37364932,
+    "costUsd": 14.32,
+    "costBasis": "estimated",
+    "wallMs": 2534974
+  }
+}

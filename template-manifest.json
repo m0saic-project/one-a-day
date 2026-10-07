@@ -342,6 +342,27 @@
       }
     },
     {
+      "slug": "chess-game-recap",
+      "templateKey": "@one-a-day/sports/chess-game-recap/v2",
+      "title": "2026-10-07 · Chess Game Recap",
+      "description": "A chess game told in its key moments, from the PGN: every move replayed and checked, the four or five that decided it played on the board with the piece sliding to its square, named in SAN with a plain-words line, over a material (or eval) graph.",
+      "tags": [
+        "sports",
+        "2026-10-07",
+        "day-018",
+        "chess",
+        "pgn",
+        "lichess",
+        "chess.com",
+        "replay",
+        "video"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__chess-game-recap__v2/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

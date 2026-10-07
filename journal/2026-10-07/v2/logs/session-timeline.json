@@ -1,0 +1,56 @@
+{
+  "note": "WHY.timeline for chess-game-recap/v2 as lib/trace.mjs prints it from v2/trace.json",
+  "until": "2026-10-07T15:41:00.258Z",
+  "timeline": {
+    "source": "runner",
+    "phases": [
+      {
+        "name": "direct",
+        "startMs": 0,
+        "durMs": 493062,
+        "calls": 30,
+        "tokens": 2926899,
+        "costUsd": 1.66,
+        "tools": "Bash 25, Edit 3, AskUserQuestion 1"
+      },
+      {
+        "name": "plan",
+        "startMs": 493062,
+        "durMs": 336965,
+        "calls": 28,
+        "tokens": 4987894,
+        "costUsd": 2,
+        "tools": "Bash 25, Write 2, Read 1"
+      },
+      {
+        "name": "build",
+        "startMs": 830027,
+        "durMs": 1457052,
+        "calls": 84,
+        "tokens": 22800724,
+        "costUsd": 8.72,
+        "tools": "Bash 54, Write 12, Read 11"
+      },
+      {
+        "name": "critique",
+        "startMs": 2287079,
+        "durMs": 181664,
+        "calls": 33,
+        "tokens": 4518107,
+        "costUsd": 1.39,
+        "tools": "Read 15, Bash 12, Write 2"
+      },
+      {
+        "name": "ship",
+        "startMs": 2468743,
+        "durMs": 66231,
+        "calls": 8,
+        "tokens": 2131308,
+        "costUsd": 0.56,
+        "tools": "Bash 4, Edit 3, Read 1"
+      }
+    ],
+    "costBasis": "estimated",
+    "pricedAt": "2026-09-26"
+  }
+}

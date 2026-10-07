@@ -49,4 +49,13 @@ export const sportsRegistry: StarterRegistryEntry[] = [
       "Chess game recap card: opening, result, time control, and rating change rendered as a shareable card that scales beautifully across all devices.",
     tags: ["sports","2026-10-07","day-018","chess","pgn","lichess","game-analysis","rating-progression"],
   },
+  {
+    slug: "chess-game-recap",
+    templateId: "@one-a-day/sports/chess-game-recap/v2",
+    exportName: "ChessGameRecapV2",
+    title: "2026-10-07 · Chess Game Recap",
+    description:
+      "A chess game told in its key moments, from the PGN: every move replayed and checked, the four or five that decided it played on the board with the piece sliding to its square, named in SAN with a plain-words line, over a material (or eval) graph.",
+    tags: ["sports","2026-10-07","day-018","chess","pgn","lichess","chess.com","replay","video"],
+  },
 ];

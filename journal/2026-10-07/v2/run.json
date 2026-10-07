@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-07",
+  "day": 18,
+  "followUp": {
+    "of": "@one-a-day/sports/chess-game-recap/v1",
+    "id": "@one-a-day/sports/chess-game-recap/v2",
+    "directedBy": "founder",
+    "why": "The founder reviewed day 018's v1 (claude-haiku: six typed fields, a coloured square, no board) and asked for a v2 the same day: the idea was worth a stronger build. His three calls: animated key moments (not a still, not a full replay), the Opera Game as the default, v1 deprecated in favour of v2.",
+    "note": "Not a day run. The day's runner record (journal/2026-10-07/run.json, trace.json) is the Haiku run and stays as it was; this folder is the follow-up's own record (tools/record-dir.mjs)."
+  },
+  "startedAt": "2026-10-07T14:58:45.284Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": null,
+    "roster": null,
+    "ultracode": false,
+    "effort": null,
+    "context": "interactive Claude Code session (not pipeline/run.mjs); the founder's direction in the conversation",
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "session": {
+      "id": "8b37ae25-d129-46d4-8c75-3c69d3901003",
+      "kind": "interactive",
+      "phases": "logs/phase-marks.json (direct, plan, build, critique, ship), costed from the session transcript by logs/session-trace.mjs"
+    }
+  },
+  "model": {
+    "selfDeclared": "claude-opus-5-5",
+    "corrected": null
+  }
+}

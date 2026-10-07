@@ -166,7 +166,10 @@ limit is three failed calls in a row, not a wait (day 011). **Since
 2026-09-30 every `codex-*` slot is `enabled: false`** (`config.json`
 `roster.$retired`): OpenAI changed the usage limits on the Codex subscription
 and day 011 drained a fresh five-hour window in 13 minutes. Flip `enabled` to
-bring a slot back. The scheduler's own cap
+bring a slot back. **Since 2026-10-07 `claude-haiku` sits out as well**, as a
+quality floor: both Haiku days (013, 018) shipped thin work its own critic
+passed, and a Sonnet day costs about $3 more. The preflight's one-word
+headroom probe still uses haiku; that is not a roster slot. The scheduler's own cap
 has to cover a day plus its longest wait: `ExecutionTimeLimit` is 12 hours
 in `schedule/one-a-day.task.xml` (`schedule/install.md` says how to raise a
 task already registered).

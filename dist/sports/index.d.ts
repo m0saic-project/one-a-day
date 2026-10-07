@@ -7,3 +7,4 @@ export * from "./lap-telemetry-card/v1/lap-telemetry-card";
 export * from "./cubing-average-card/v1/cubing-average-card";
 export * from "./chess-game-recap/v1/chess-game-recap";
 export * from "./chess-game-recap/v2/chess-game-recap";
+export * from "./chess-game-recap/v3/chess-game-recap";

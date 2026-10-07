@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-07",
+  "day": 18,
+  "followUp": {
+    "of": "@one-a-day/sports/chess-game-recap/v2",
+    "id": "@one-a-day/sports/chess-game-recap/v3",
+    "directedBy": "founder",
+    "why": "The founder looked at v2 in Make: the board was a stack of whole-board SVG images, nothing a person could click into. He asked for a platform prop (desktop / square / mobile) and explicit geometry - every square and every piece its own rect - accepting it might cost render time, and noted nothing was editable on the canvas.",
+    "note": "Not a day run. v2 (journal/2026-10-07/v2/) shipped at 98e0177 the same morning; this folder is v3's own record (tools/record-dir.mjs)."
+  },
+  "startedAt": "2026-10-07T17:08:44.427Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": null,
+    "roster": null,
+    "ultracode": false,
+    "effort": null,
+    "context": "interactive Claude Code session (not pipeline/run.mjs); the founder's direction in the conversation",
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "session": {
+      "id": "8b37ae25-d129-46d4-8c75-3c69d3901003",
+      "kind": "interactive",
+      "phases": "logs/phase-marks.json (direct, build, critique, ship), costed from the session transcript by logs/session-trace.mjs"
+    }
+  },
+  "model": {
+    "selfDeclared": "claude-opus-5-5",
+    "corrected": null
+  }
+}

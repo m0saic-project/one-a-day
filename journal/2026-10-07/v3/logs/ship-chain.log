@@ -1,0 +1,55 @@
+
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/gen-gallery.mjs && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+
+[check-freeze] ✓ freeze (2026-10-07 (m0saic 0.3.2)): 27 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (22 templates, 9 packs, 21 with preview assets)
+[gen-gallery] unchanged TEMPLATES.md (20 daily template(s) in 2 month(s), 2 other).
+[check-registry] ✓ 22 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✓ layout fingerprints: 21 unchanged, 1 missing, 0 changed.
+[check-registry] ✓ 22 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+[check-layout] ✓ 21 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+[check-why] ✓ 20 template(s) explain why they exist (0 warning(s); front door exempt).
+
+> one-a-day@0.1.0 previews
+> node tools/gen-previews.mjs
+
+  ok preview @one-a-day/sports/chess-game-recap/v3
+  ok preview.gif @one-a-day/sports/chess-game-recap/v3 (291 KB, 15.4 s of clip at 1.5x)
+
+gen-previews: minted 1, skipped 21 existing, 0 failure(s)
+gen-previews: preview.gif - minted 1
+gen-previews: re-run `npm run build` so the manifest picks up new preview paths.
+
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/gen-gallery.mjs && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+
+[check-freeze] ✓ freeze (2026-10-07 (m0saic 0.3.2)): 27 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (22 templates, 9 packs, 22 with preview assets)
+[gen-gallery] wrote TEMPLATES.md (20 daily template(s) in 2 month(s), 2 other).
+[check-registry] ✓ 22 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✓ layout fingerprints: 21 unchanged, 1 missing, 0 changed.
+[check-registry] ✓ 22 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+[check-layout] ✓ 21 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+[check-why] ✓ 20 template(s) explain why they exist (0 warning(s); front door exempt).
+
+> one-a-day@0.1.0 fingerprints:update
+> node tools/check-registry.mjs --update-fingerprints
+
+[check-registry] ✓ 22 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✎ layout fingerprints: 1 written, 21 unchanged → <template folder>/<slug>.layout.m0 (commit them).
+[check-registry] ✓ 22 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).

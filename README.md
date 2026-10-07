@@ -99,7 +99,9 @@ its own `journal/YYYY-MM-DD/vN/` folder with the same files as a day (brief,
 build, critique, ship note, a `run.json` saying who made it and why, its own
 timeline). It keeps the day's date and number - it is that day's idea - and
 `TEMPLATES.md` marks it "founder-directed follow-up". The first:
-[`journal/2026-10-07/v2/`](journal/2026-10-07/v2/), the chess game recap.
+[`journal/2026-10-07/v2/`](journal/2026-10-07/v2/), the chess game recap,
+and [`v3/`](journal/2026-10-07/v3/) the same day - rebuilt cell by cell
+(every square and piece its own rect) with a platform knob.
 
 ## Trust
 

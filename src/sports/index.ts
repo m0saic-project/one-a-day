@@ -6,6 +6,7 @@ import { LapTelemetryCardV1 } from "./lap-telemetry-card/v1/lap-telemetry-card";
 import { CubingAverageCardV1 } from "./cubing-average-card/v1/cubing-average-card";
 import { ChessGameRecapV1 } from "./chess-game-recap/v1/chess-game-recap";
 import { ChessGameRecapV2 } from "./chess-game-recap/v2/chess-game-recap";
+import { ChessGameRecapV3 } from "./chess-game-recap/v3/chess-game-recap";
 
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
@@ -23,11 +24,17 @@ export const sportsTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
   CubingAverageCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   retired(
     ChessGameRecapV1,
-    "@one-a-day/sports/chess-game-recap/v2",
+    "@one-a-day/sports/chess-game-recap/v3",
     "2026-10-07",
-    "v1 (claude-haiku) shows six typed fields and no board; v2 reads the PGN, replays the game and plays its key moments.",
+    "v1 (claude-haiku) shows six typed fields and no board; v2 and v3 read the PGN, replay the game and play its key moments.",
   ) as unknown as MosaicTemplate<MosaicTemplateProps>,
-  ChessGameRecapV2 as unknown as MosaicTemplate<MosaicTemplateProps>,
+  retired(
+    ChessGameRecapV2,
+    "@one-a-day/sports/chess-game-recap/v3",
+    "2026-10-07",
+    "v2 draws each board as one whole-board image; v3 builds it cell by cell (64 squares, every piece its own rect) and adds a platform knob.",
+  ) as unknown as MosaicTemplate<MosaicTemplateProps>,
+  ChessGameRecapV3 as unknown as MosaicTemplate<MosaicTemplateProps>,
 ];
 
 // `export *` ONLY — see the note in src/index.ts.
@@ -37,3 +44,4 @@ export * from "./lap-telemetry-card/v1/lap-telemetry-card";
 export * from "./cubing-average-card/v1/cubing-average-card";
 export * from "./chess-game-recap/v1/chess-game-recap";
 export * from "./chess-game-recap/v2/chess-game-recap";
+export * from "./chess-game-recap/v3/chess-game-recap";

@@ -58,4 +58,13 @@ export const sportsRegistry: StarterRegistryEntry[] = [
       "A chess game told in its key moments, from the PGN: every move replayed and checked, the four or five that decided it played on the board with the piece sliding to its square, named in SAN with a plain-words line, over a material (or eval) graph.",
     tags: ["sports","2026-10-07","day-018","chess","pgn","lichess","chess.com","replay","video"],
   },
+  {
+    slug: "chess-game-recap",
+    templateId: "@one-a-day/sports/chess-game-recap/v3",
+    exportName: "ChessGameRecapV3",
+    title: "2026-10-07 · Chess Game Recap",
+    description:
+      "A chess game told in its key moments, from the PGN, built cell by cell: 64 square cells, every piece its own rect, the moving piece sliding to its square, a bar per ply on the material graph; a platform knob for desktop, square or mobile.",
+    tags: ["sports","2026-10-07","day-018","chess","pgn","lichess","chess.com","replay","video"],
+  },
 ];

@@ -1,0 +1,146 @@
+{
+  "startedAt": "2026-10-07T17:08:44.427Z",
+  "phases": [
+    {
+      "phase": "direct",
+      "call": 1,
+      "name": "direct",
+      "startedAt": "2026-10-07T17:08:44.427Z",
+      "durMs": 156016,
+      "exitCode": 0,
+      "timedOut": false,
+      "status": "ok",
+      "calls": 4,
+      "turns": 4,
+      "tokens": {
+        "input": 8,
+        "output": 12961,
+        "cacheRead": 1436436,
+        "cacheWrite": 446064,
+        "total": 1895469
+      },
+      "cost": null,
+      "tools": {
+        "Bash": 4
+      },
+      "spans": [],
+      "source": "interactive Claude Code session: tokens from its transcript, one usage per API response (logs/session-trace.mjs); dollars estimated at list prices",
+      "costEstimate": {
+        "usd": 4.1151,
+        "rate": "claude-opus-5-5",
+        "pricedAt": "2026-09-26"
+      },
+      "startMs": 0
+    },
+    {
+      "phase": "build",
+      "call": 1,
+      "name": "build",
+      "startedAt": "2026-10-07T17:11:20.443Z",
+      "durMs": 995084,
+      "exitCode": 0,
+      "timedOut": false,
+      "status": "ok",
+      "calls": 32,
+      "turns": 24,
+      "tokens": {
+        "input": 48,
+        "output": 46652,
+        "cacheRead": 12356419,
+        "cacheWrite": 66278,
+        "total": 12469397
+      },
+      "cost": null,
+      "tools": {
+        "Read": 5,
+        "Write": 5,
+        "Bash": 19,
+        "Edit": 2,
+        "Agent": 1
+      },
+      "spans": [],
+      "source": "interactive Claude Code session: tokens from its transcript, one usage per API response (logs/session-trace.mjs); dollars estimated at list prices",
+      "costEstimate": {
+        "usd": 3.9347,
+        "rate": "claude-opus-5-5",
+        "pricedAt": "2026-09-26"
+      },
+      "startMs": 156016
+    },
+    {
+      "phase": "critique",
+      "call": 1,
+      "name": "critique",
+      "startedAt": "2026-10-07T17:27:55.527Z",
+      "durMs": 141029,
+      "exitCode": 0,
+      "timedOut": false,
+      "status": "ok",
+      "calls": 24,
+      "turns": 13,
+      "tokens": {
+        "input": 26,
+        "output": 3624,
+        "cacheRead": 2111944,
+        "cacheWrite": 75970,
+        "total": 2191564
+      },
+      "cost": null,
+      "tools": {
+        "Bash": 9,
+        "Read": 13,
+        "Write": 1,
+        "SubagentHandback": 1
+      },
+      "spans": [],
+      "source": "interactive Claude Code session: tokens from its transcript, one usage per API response (logs/session-trace.mjs); dollars estimated at list prices",
+      "costEstimate": {
+        "usd": 0.6941,
+        "rate": "claude-sonnet-5 + claude-opus-5-5",
+        "pricedAt": "2026-09-26"
+      },
+      "startMs": 1151100
+    },
+    {
+      "phase": "ship",
+      "call": 1,
+      "name": "ship",
+      "startedAt": "2026-10-07T17:30:16.556Z",
+      "durMs": 40821,
+      "exitCode": 0,
+      "timedOut": false,
+      "status": "ok",
+      "calls": 9,
+      "turns": 7,
+      "tokens": {
+        "input": 14,
+        "output": 3713,
+        "cacheRead": 3851044,
+        "cacheWrite": 5240,
+        "total": 3860011
+      },
+      "cost": null,
+      "tools": {
+        "Bash": 6,
+        "Edit": 2,
+        "Read": 1
+      },
+      "spans": [],
+      "source": "interactive Claude Code session: tokens from its transcript, one usage per API response (logs/session-trace.mjs); dollars estimated at list prices",
+      "costEstimate": {
+        "usd": 0.8864,
+        "rate": "claude-opus-5-5",
+        "pricedAt": "2026-09-26"
+      },
+      "startMs": 1292129
+    }
+  ],
+  "totals": {
+    "phases": 4,
+    "calls": 69,
+    "tokens": 20416441,
+    "costUsd": 9.63,
+    "costBasis": "estimated",
+    "wallMs": 1332950
+  }
+}

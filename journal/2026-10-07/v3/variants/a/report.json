@@ -1,0 +1,153 @@
+{
+  "templateId": "@one-a-day/sports/chess-game-recap/v3",
+  "at": "2026-10-07T17:22:40.075Z",
+  "props": null,
+  "build": null,
+  "kind": "video",
+  "renders": [
+    {
+      "canvas": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "file": "renders\\landscape.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 284033,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 15.4
+      }
+    },
+    {
+      "canvas": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "file": "renders\\portrait.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 266783,
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "h264",
+        "durationSec": 15.4
+      }
+    },
+    {
+      "canvas": "square",
+      "width": 1080,
+      "height": 1080,
+      "file": "renders\\square.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 200488,
+      "probe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 15.4
+      }
+    }
+  ],
+  "stills": [
+    {
+      "canvas": "landscape",
+      "at": 1.54,
+      "file": "stills\\landscape-10.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 7.7,
+      "file": "stills\\landscape-50.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 13.86,
+      "file": "stills\\landscape-90.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 1.54,
+      "file": "stills\\portrait-10.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 7.7,
+      "file": "stills\\portrait-50.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 13.86,
+      "file": "stills\\portrait-90.png"
+    },
+    {
+      "canvas": "square",
+      "at": 1.54,
+      "file": "stills\\square-10.png"
+    },
+    {
+      "canvas": "square",
+      "at": 7.7,
+      "file": "stills\\square-50.png"
+    },
+    {
+      "canvas": "square",
+      "at": 13.86,
+      "file": "stills\\square-90.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 3.5,
+      "file": "stills\\tutorial-1.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 14,
+      "file": "stills\\tutorial-2.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 27,
+      "file": "stills\\tutorial-3.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 38,
+      "file": "stills\\tutorial-4.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 50.7,
+      "file": "stills\\tutorial-5.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 63.4,
+      "file": "stills\\tutorial-6.png"
+    }
+  ],
+  "srcSnapshot": "src/",
+  "ok": true,
+  "degraded": false,
+  "validate": {
+    "code": 0,
+    "degraded": false
+  },
+  "tutorial": {
+    "canvas": "tutorial",
+    "width": 1280,
+    "height": 720,
+    "file": "renders\\tutorial.mp4",
+    "exitCode": 0,
+    "degraded": false,
+    "bytes": 834964,
+    "probe": {
+      "width": 1280,
+      "height": 720,
+      "codec": "h264",
+      "durationSec": 68.4
+    }
+  }
+}

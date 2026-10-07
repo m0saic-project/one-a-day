@@ -1,0 +1,27 @@
+{
+  "session": "8b37ae25-d129-46d4-8c75-3c69d3901003",
+  "model": "claude-opus-5-5",
+  "note": "Phase marks for the founder-directed v3 of chess-game-recap (platform knob + explicit per-square geometry), same interactive session as v2. The first mark is the founder message that asked for it.",
+  "marks": [
+    {
+      "phase": "direct",
+      "at": "2026-10-07T17:08:44.427Z",
+      "what": "the founder asks for a platform prop (desktop/square/mobile) and explicit geometry: every square and piece its own rect, not full-board SVG overlay stacks"
+    },
+    {
+      "phase": "build",
+      "at": "2026-10-07T17:11:20.443Z",
+      "what": "v3 template: platform knob, 64 square cells, per-piece rects, sliding piece rects, bar-rect graph, name overrides"
+    },
+    {
+      "phase": "critique",
+      "at": "2026-10-07T17:27:55.527Z",
+      "what": "independent critic subagent checks v3 variant a: per-square truth over time, slides, exact cells, platform knob, overrides"
+    },
+    {
+      "phase": "ship",
+      "at": "2026-10-07T17:30:16.556Z",
+      "what": "timeline, previews, fingerprint, ship note, submit"
+    }
+  ]
+}

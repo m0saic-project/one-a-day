@@ -21,6 +21,7 @@ const lap_telemetry_card_1 = require("./lap-telemetry-card/v1/lap-telemetry-card
 const cubing_average_card_1 = require("./cubing-average-card/v1/cubing-average-card");
 const chess_game_recap_1 = require("./chess-game-recap/v1/chess-game-recap");
 const chess_game_recap_2 = require("./chess-game-recap/v2/chess-game-recap");
+const chess_game_recap_3 = require("./chess-game-recap/v3/chess-game-recap");
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
  * the flag goes on the copy this pack hands to hosts (`templates`), which is
@@ -33,8 +34,9 @@ exports.sportsTemplates = [
     swim_time_drop_card_1.SwimTimeDropCardV1,
     lap_telemetry_card_1.LapTelemetryCardV1,
     cubing_average_card_1.CubingAverageCardV1,
-    retired(chess_game_recap_1.ChessGameRecapV1, "@one-a-day/sports/chess-game-recap/v2", "2026-10-07", "v1 (claude-haiku) shows six typed fields and no board; v2 reads the PGN, replays the game and plays its key moments."),
-    chess_game_recap_2.ChessGameRecapV2,
+    retired(chess_game_recap_1.ChessGameRecapV1, "@one-a-day/sports/chess-game-recap/v3", "2026-10-07", "v1 (claude-haiku) shows six typed fields and no board; v2 and v3 read the PGN, replay the game and play its key moments."),
+    retired(chess_game_recap_2.ChessGameRecapV2, "@one-a-day/sports/chess-game-recap/v3", "2026-10-07", "v2 draws each board as one whole-board image; v3 builds it cell by cell (64 squares, every piece its own rect) and adds a platform knob."),
+    chess_game_recap_3.ChessGameRecapV3,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./powerlifting-meet-recap/v1/powerlifting-meet-recap"), exports);
@@ -43,3 +45,4 @@ __exportStar(require("./lap-telemetry-card/v1/lap-telemetry-card"), exports);
 __exportStar(require("./cubing-average-card/v1/cubing-average-card"), exports);
 __exportStar(require("./chess-game-recap/v1/chess-game-recap"), exports);
 __exportStar(require("./chess-game-recap/v2/chess-game-recap"), exports);
+__exportStar(require("./chess-game-recap/v3/chess-game-recap"), exports);

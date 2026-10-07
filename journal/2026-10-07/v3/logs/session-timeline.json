@@ -1,0 +1,47 @@
+{
+  "note": "WHY.timeline for chess-game-recap/v3 as lib/trace.mjs prints it from v3/trace.json",
+  "until": "2026-10-07T17:30:57.377Z",
+  "timeline": {
+    "source": "runner",
+    "phases": [
+      {
+        "name": "direct",
+        "startMs": 0,
+        "durMs": 156016,
+        "calls": 4,
+        "tokens": 1895469,
+        "costUsd": 4.12,
+        "tools": "Bash 4"
+      },
+      {
+        "name": "build",
+        "startMs": 156016,
+        "durMs": 995084,
+        "calls": 32,
+        "tokens": 12469397,
+        "costUsd": 3.93,
+        "tools": "Bash 19, Read 5, Write 5"
+      },
+      {
+        "name": "critique",
+        "startMs": 1151100,
+        "durMs": 141029,
+        "calls": 24,
+        "tokens": 2191564,
+        "costUsd": 0.69,
+        "tools": "Read 13, Bash 9, SubagentHandback 1"
+      },
+      {
+        "name": "ship",
+        "startMs": 1292129,
+        "durMs": 40821,
+        "calls": 9,
+        "tokens": 3860011,
+        "costUsd": 0.89,
+        "tools": "Bash 6, Edit 2, Read 1"
+      }
+    ],
+    "costBasis": "estimated",
+    "pricedAt": "2026-09-26"
+  }
+}

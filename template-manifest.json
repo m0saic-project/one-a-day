@@ -363,6 +363,27 @@
       }
     },
     {
+      "slug": "chess-game-recap",
+      "templateKey": "@one-a-day/sports/chess-game-recap/v3",
+      "title": "2026-10-07 · Chess Game Recap",
+      "description": "A chess game told in its key moments, from the PGN, built cell by cell: 64 square cells, every piece its own rect, the moving piece sliding to its square, a bar per ply on the material graph; a platform knob for desktop, square or mobile.",
+      "tags": [
+        "sports",
+        "2026-10-07",
+        "day-018",
+        "chess",
+        "pgn",
+        "lichess",
+        "chess.com",
+        "replay",
+        "video"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__chess-game-recap__v3/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

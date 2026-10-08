@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-08",
+  "day": 19,
+  "startedAt": "2026-10-08T14:09:54.974Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "sonnet[1m]",
+    "roster": {
+      "id": "claude-sonnet",
+      "agent": "claude",
+      "model": "sonnet[1m]",
+      "weight": 2,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": "high",
+    "budgetUsd": 15,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "claude-sonnet-5-5",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.13,
+        "resetsAt": "2026-10-08T19:00:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.44,
+        "resetsAt": "2026-10-13T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-08T15:10:45.517Z"
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 262208,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 96854,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 2048714,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 112248,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 808040,
+      "done": true
+    }
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/science/astro-integration-summary/v1",
+    "title": "2026-10-08 · Astro Integration Summary",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 5,
+    "at": "2026-10-08T15:13:58.178Z"
+  }
+}

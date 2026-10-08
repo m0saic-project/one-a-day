@@ -85,4 +85,9 @@ exports.TEMPLATE_PACKS = [
         title: "Music",
         description: "Station charts and other music artifacts, made from the rows the person already keeps (a weekly Top 30 as reported to NACC): the list goes in, the card comes out, and long names are fitted by rule or refused, never clipped.",
     },
+    {
+        id: "science",
+        title: "Science",
+        description: "Science: one line on what this pack teaches.",
+    },
 ];

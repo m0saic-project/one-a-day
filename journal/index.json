@@ -501,5 +501,35 @@
       "https://news.ycombinator.com/item?id=49857528",
       "https://lichess.org"
     ]
+  },
+  {
+    "date": "2026-10-08",
+    "day": 19,
+    "agent": "claude",
+    "model": "claude-sonnet-5-5",
+    "rosterId": "claude-sonnet",
+    "status": "shipped",
+    "templateId": "@one-a-day/science/astro-integration-summary/v1",
+    "title": "2026-10-08 · Astro Integration Summary",
+    "pack": "science",
+    "useCase": "Astrophotography integration summary: per-filter hours stacking up night by night, from the NINA Session Metadata CSVs",
+    "tags": [
+      "science",
+      "2026-10-08",
+      "day-019",
+      "astrophotography",
+      "nina",
+      "integration",
+      "filters",
+      "acquisition",
+      "video"
+    ],
+    "sources": [
+      "https://github.com/tcpalmer/nina.plugin.sessionmetadata",
+      "https://www.ideviceapps.de/NINAImageAnalysisHandbook/",
+      "https://scopetrader.com/nina-log-analyzer/",
+      "https://skycenter.arizona.edu/astrophotography/m57-ring-nebula",
+      "https://sdspacegrant.sdsmt.edu/PacmanNebula-RichardWalker.htm"
+    ]
   }
 ]

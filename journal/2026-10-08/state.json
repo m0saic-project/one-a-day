@@ -1,0 +1,35 @@
+{
+  "useCase": "Astrophotography integration summary: per-filter hours stacking up night by night, from the NINA Session Metadata CSVs",
+  "who": "Deep-sky astrophotographers who run unattended N.I.N.A. imaging nights and post finished images with their acquisition numbers (AstroBin, the NINA Discord, observatory galleries)",
+  "sources": [
+    "https://github.com/tcpalmer/nina.plugin.sessionmetadata",
+    "https://www.ideviceapps.de/NINAImageAnalysisHandbook/",
+    "https://scopetrader.com/nina-log-analyzer/",
+    "https://skycenter.arizona.edu/astrophotography/m57-ring-nebula",
+    "https://sdspacegrant.sdsmt.edu/PacmanNebula-RichardWalker.htm"
+  ],
+  "tags": [
+    "astrophotography",
+    "nina",
+    "integration",
+    "filters",
+    "session",
+    "acquisition"
+  ],
+  "scout": "done",
+  "pack": "science",
+  "slug": "astro-integration-summary",
+  "title": "Astro Integration Summary",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

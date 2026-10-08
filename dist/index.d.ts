@@ -14,4 +14,5 @@ export * from "./gaming";
 export * from "./sports";
 export * from "./community";
 export * from "./music";
+export * from "./science";
 export { TEMPLATE_PACKS, TEMPLATE_REPO };

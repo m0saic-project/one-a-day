@@ -564,5 +564,32 @@
       "https://dnapainter.com/blog/dna-painter-dimensions-a-new-way-to-showcase-your-ancestral-line/",
       "https://www.familysearch.org/help/helpcenter/article/how-do-i-use-the-fan-chart-view-in-family-tree"
     ]
+  },
+  {
+    "date": "2026-10-10",
+    "day": 21,
+    "agent": "opencode",
+    "model": "glm-5.3",
+    "rosterId": "go-glm-5.3",
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/golf-round-scorecard/v1",
+    "title": "2026-10-10 · Golf Round Scorecard",
+    "pack": "sports",
+    "useCase": "Golf round recap cards from the numbers every golfer writes on a paper scorecard: hole-by-hole par and strokes for the front and back nine, Out/In/Total and to-par, one clean deterministic card per round instead of a photo of the crumpled paper",
+    "tags": [
+      "sports",
+      "2026-10-10",
+      "day-021",
+      "golf",
+      "scorecard",
+      "round",
+      "birdie",
+      "ace"
+    ],
+    "sources": [
+      "https://thegrint.com/range/post/scorecard-picture-service-use",
+      "https://thegrint.com/range/post/scorephoto-giveaway",
+      "https://www.golfgamebook.com/golf-scorecard"
+    ]
   }
 ]

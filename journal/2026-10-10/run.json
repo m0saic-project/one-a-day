@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-10",
+  "day": 21,
+  "startedAt": "2026-10-10T13:16:00.000Z",
+  "runner": {
+    "adapter": "opencode",
+    "modelFlag": "opencode-go/glm-5.3",
+    "roster": {
+      "id": "go-glm-5.3",
+      "agent": "opencode",
+      "model": "opencode-go/glm-5.3",
+      "weight": 4,
+      "why": "resumed — the slot this day started on"
+    },
+    "ultracode": false,
+    "effort": null,
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null,
+    "note": "The scheduled 09:09 run died at the roster draw (no usable agent CLI) and the task is disabled for 10/11; this session replaces it. One opencode call ran every phase, so there is no adapter event stream and no trace.json - WHY.timeline is self-reported."
+  },
+  "model": {
+    "selfDeclared": "glm-5.3",
+    "corrected": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/golf-round-scorecard/v1",
+    "title": "2026-10-10 · Golf Round Scorecard",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 5,
+    "at": "2026-10-10T17:02:17.989Z"
+  }
+}

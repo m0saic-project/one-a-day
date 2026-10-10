@@ -1,0 +1,28 @@
+{
+  "useCase": "Golf round recap cards from the numbers every golfer writes on a paper scorecard: hole-by-hole par and strokes for the front and back nine, Out/In/Total and to-par, one clean deterministic card per round instead of a photo of the crumpled paper",
+  "who": "Golfers who keep a paper scorecard and post their rounds - r/golf and the golf forums (GolfWRX, MyGolfSpy), where the crumpled-scorecard photo is the standard post",
+  "sources": [
+    "https://thegrint.com/range/post/scorecard-picture-service-use",
+    "https://thegrint.com/range/post/scorephoto-giveaway",
+    "https://www.golfgamebook.com/golf-scorecard"
+  ],
+  "tags": [
+    "golf",
+    "scorecard",
+    "round",
+    "card"
+  ],
+  "pack": "sports",
+  "slug": "golf-round-scorecard",
+  "title": "Golf Round Scorecard",
+  "scout": "done",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": ["a", "b"],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

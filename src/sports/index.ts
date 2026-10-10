@@ -7,6 +7,7 @@ import { CubingAverageCardV1 } from "./cubing-average-card/v1/cubing-average-car
 import { ChessGameRecapV1 } from "./chess-game-recap/v1/chess-game-recap";
 import { ChessGameRecapV2 } from "./chess-game-recap/v2/chess-game-recap";
 import { ChessGameRecapV3 } from "./chess-game-recap/v3/chess-game-recap";
+import { GolfRoundScorecardV1 } from "./golf-round-scorecard/v1/golf-round-scorecard";
 
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
@@ -35,6 +36,7 @@ export const sportsTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
     "v2 draws each board as one whole-board image; v3 builds it cell by cell (64 squares, every piece its own rect) and adds a platform knob.",
   ) as unknown as MosaicTemplate<MosaicTemplateProps>,
   ChessGameRecapV3 as unknown as MosaicTemplate<MosaicTemplateProps>,
+  GolfRoundScorecardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
 ];
 
 // `export *` ONLY — see the note in src/index.ts.
@@ -45,3 +47,4 @@ export * from "./cubing-average-card/v1/cubing-average-card";
 export * from "./chess-game-recap/v1/chess-game-recap";
 export * from "./chess-game-recap/v2/chess-game-recap";
 export * from "./chess-game-recap/v3/chess-game-recap";
+export * from "./golf-round-scorecard/v1/golf-round-scorecard";

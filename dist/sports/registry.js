@@ -61,4 +61,12 @@ exports.sportsRegistry = [
         description: "A chess game told in its key moments, from the PGN, built cell by cell: 64 square cells, every piece its own rect, the moving piece sliding to its square, a bar per ply on the material graph; a platform knob for desktop, square or mobile.",
         tags: ["sports", "2026-10-07", "day-018", "chess", "pgn", "lichess", "chess.com", "replay", "video"],
     },
+    {
+        slug: "golf-round-scorecard",
+        templateId: "@one-a-day/sports/golf-round-scorecard/v1",
+        exportName: "GolfRoundScorecardV1",
+        title: "2026-10-10 · Golf Round Scorecard",
+        description: "A golf round scorecard card: give 9 or 18 pars and scores and it draws the hole, par and score strips with OUT/IN/TOTAL - and the paper card's own marks, a ring one under par, a square one over, doubles for two or more, a filled ring for an ace.",
+        tags: ["sports", "2026-10-10", "day-021", "golf", "scorecard", "round", "birdie", "ace"],
+    },
 ];

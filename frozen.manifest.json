@@ -1,8 +1,8 @@
 {
   "release": "0.3.2",
-  "tag": "2026-10-09",
-  "commit": "65bcd0de4b1ac29acfa9d9c6613defed10afe200",
-  "mintedAt": "2026-10-10T02:18:35.797Z",
+  "tag": "2026-10-10",
+  "commit": "f875a615201c37ac660f3657f42ab2e25331e20e",
+  "mintedAt": "2026-10-10T17:02:17.928Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
@@ -28,6 +28,7 @@
     "src/sports/chess-game-recap/v2": "0.3.2",
     "src/sports/chess-game-recap/v3": "0.3.2",
     "src/sports/cubing-average-card/v1": "0.3.0",
+    "src/sports/golf-round-scorecard/v1": "0.3.2",
     "src/sports/lap-telemetry-card/v1": "0.3.0",
     "src/sports/powerlifting-meet-recap/v1": "0.2.2",
     "src/sports/swim-time-drop-card/v1": "0.3.0"
@@ -60,6 +61,7 @@
     "src/sports/chess-game-recap/v2/story.ts": "9b436da744b6e07eceb854fa286daf57299b4c316f9bd9ab6b7620694ddedc43",
     "src/sports/chess-game-recap/v3/chess-game-recap.ts": "105234bcdcbc1c83fdc18239caeae8764c8e1ece55fce850c370ade146a3f3c3",
     "src/sports/cubing-average-card/v1/cubing-average-card.ts": "e42c6be97bbcfb244d9fdb9a175d581e65440be671dcf4655e32aa260ef5f001",
+    "src/sports/golf-round-scorecard/v1/golf-round-scorecard.ts": "7ddda8d23d5dbdc7730b67ce4a8753c3ab9a3e353d33e614c3baec201eea0876",
     "src/sports/lap-telemetry-card/v1/lap-telemetry-card.ts": "4f053150280f4a01527405439ae8cb6a16c7dd57ab6af5360037511596c1febd",
     "src/sports/powerlifting-meet-recap/v1/powerlifting-meet-recap.ts": "21ed849d1eb8455011fe7c79060bc3ad53623c4bad81c070d7629a39accd9300",
     "src/sports/swim-time-drop-card/v1/swim-time-drop-card.ts": "72969697ecd6319d6127e4fd8bbdda163166b7d3d1ac8ec358226ecf0969d28b"

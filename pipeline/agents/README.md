@@ -66,8 +66,9 @@ the agent during the scout phase per `_preamble.md`). The human may set
 |---|---|---|
 | `claude.mjs` | Claude Code (`claude -p`) | stream-json transcript; permission mode from config (`bypassPermissions` for an unattended laptop); `claude.settings.json` denies git push/commit/reset, npm publish, sudo; reports the session windows (`limit`, `headroom()`) |
 | `codex.mjs` | OpenAI Codex (`codex exec`) | `-s workspace-write`, `--json` events, `--skip-git-repo-check`; network for the scout phase via config override (verify the key name against your installed `codex --help`); reports no session windows yet |
+| `opencode.mjs` | OpenCode (`opencode run --format json`) | one CLI, many providers: the model is `provider/model` and the roster rides OpenCode Go (`opencode-go/<model>`, one subscription across Kimi, GLM, DeepSeek, Qwen, MiMo, MiniMax, Grok, GPT); prompt on stdin; `--auto` with the deny list in `opencode.json` (same list as Claude's) handed over through `OPENCODE_CONFIG`; "logged in" = at least one credential in `~/.local/share/opencode/auth.json`, and a slot whose provider has none ends the call in the log without spending; Go's per-model dollar limits come back as a rejection with no reset time, so the runner keeps the tree and ends the day (tomorrow draws another slot) |
 
-### Config keys these two read
+### Config keys these adapters read
 
 | Key | Adapter | Effect |
 |---|---|---|
@@ -78,6 +79,10 @@ the agent during the scout phase per `_preamble.md`). The human may set
 | `sandbox` | codex | `-s` (default `workspace-write`) |
 | `networkConfig` | codex | `-c <key=value>` for sandbox network access (the key name moves between versions) |
 | `reasoningEffort` | codex | `-c model_reasoning_effort=<level>`: `low · medium · high · xhigh · max · ultra`. Models carry their own default and some ship at `low`, so ask for depth explicitly |
+| `auto` | opencode | `--auto`: approve every permission `opencode.json` does not deny (default true; the day is unattended) |
+| `pure` | opencode | `--pure`: run without user-installed plugins (default true) |
+| `variant` | opencode | `--variant <level>`: provider-specific reasoning effort (`high`, `max`, …); off unless the slot sets it, since not every Go model takes one |
+| `agent` | opencode | `--agent <name>`: an OpenCode agent; default is its `build` agent |
 
 A roster slot's `adapter` block is merged over `adapters.<name>` before the call,
 so one CLI can appear several times at different depths and budgets.

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "$comment": "The runner's OpenCode config, passed through OPENCODE_CONFIG by agents/opencode.mjs. Same deny list as claude.settings.json: the agent never pushes, commits, tags, resets or publishes, and never edits the pipeline, the tools, AGENTS.md or the freeze. OpenCode takes the LAST matching rule, so the catch-all comes first. Edit patterns carry both separators because the paths are absolute on Windows.",
+  "share": "disabled",
+  "permission": {
+    "*": "allow",
+    "question": "deny",
+    "bash": {
+      "*": "allow",
+      "git push": "deny",
+      "git push *": "deny",
+      "git commit": "deny",
+      "git commit *": "deny",
+      "git merge": "deny",
+      "git merge *": "deny",
+      "git rebase": "deny",
+      "git rebase *": "deny",
+      "git reset": "deny",
+      "git reset *": "deny",
+      "git checkout": "deny",
+      "git checkout *": "deny",
+      "git switch": "deny",
+      "git switch *": "deny",
+      "git tag": "deny",
+      "git tag *": "deny",
+      "git branch -D *": "deny",
+      "git clean": "deny",
+      "git clean *": "deny",
+      "npm publish": "deny",
+      "npm publish *": "deny",
+      "sudo": "deny",
+      "sudo *": "deny",
+      "rm -rf /*": "deny",
+      "rm -rf ~*": "deny",
+      "node tools/check-freeze.mjs --update*": "deny"
+    },
+    "edit": {
+      "*": "allow",
+      "*/pipeline/*": "deny",
+      "*\\pipeline\\*": "deny",
+      "*/tools/*": "deny",
+      "*\\tools\\*": "deny",
+      "*/.github/*": "deny",
+      "*\\.github\\*": "deny",
+      "*AGENTS.md": "deny",
+      "*frozen.manifest.json": "deny"
+    }
+  }
+}

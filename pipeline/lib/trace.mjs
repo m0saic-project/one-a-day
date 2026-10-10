@@ -9,8 +9,10 @@
 //                       prints WHY.timeline as JSON, ready to paste
 //
 // Shapes it understands: Claude Code stream-json (assistant.message.usage,
-// tool_use / tool_result blocks, the final result event) and Codex --json
-// (item.* events, turn.completed usage). Anything else records wall time only.
+// tool_use / tool_result blocks, the final result event), OpenCode --format
+// json (tool_use parts with their own clock, step_finish tokens) and Codex
+// --json (item.* events, turn.completed usage). Anything else records wall
+// time only.
 import fs from "node:fs";
 import path from "node:path";
 
@@ -82,6 +84,41 @@ export function createTraceRecorder({ phase, call = 1, startedAt = Date.now(), n
           tokens.cacheRead += Number(u.cache_read_input_tokens ?? 0);
           tokens.cacheWrite += Number(u.cache_creation_input_tokens ?? 0);
         }
+        return;
+      }
+      // ── OpenCode --format json (part events) ──
+      // A tool part arrives once it is finished (completed or error), with its
+      // own clock, so the span opens and closes on the one line.
+      if (o.type === "tool_use" && o.part?.type === "tool") {
+        const p = o.part;
+        const st = p.state ?? {};
+        const i = st.input ?? {};
+        const id = p.callID ?? p.id ?? `tool-${spans.length}`;
+        if (!open.has(id)) openSpan(id, p.tool, i.command ?? i.filePath ?? i.file_path ?? i.pattern ?? i.query ?? i.url ?? i.description ?? i.path ?? st.title ?? "");
+        const span = open.get(id);
+        const t0 = Number(st.time?.start);
+        const t1 = Number(st.time?.end);
+        if (span && Number.isFinite(t0) && Number.isFinite(t1)) {
+          span.startMs = Math.max(0, t0 - startedAt);
+          span.durMs = Math.max(0, t1 - t0);
+          if (st.status === "error") { span.status = "error"; errors += 1; }
+          open.delete(id);
+        } else closeSpan(id, st.status === "error");
+        return;
+      }
+      // One step per model turn; reasoning tokens are billed as output. A cost
+      // of 0 is a subscription (OpenCode Go) saying nothing, so the estimate
+      // from config.json `pricing` stands in for it.
+      if (o.type === "step_finish" && o.part?.tokens) {
+        turns += 1;
+        sawUsage = true;
+        const t = o.part.tokens;
+        tokens.input += Number(t.input ?? 0);
+        tokens.output += Number(t.output ?? 0) + Number(t.reasoning ?? 0);
+        tokens.cacheRead += Number(t.cache?.read ?? 0);
+        tokens.cacheWrite += Number(t.cache?.write ?? 0);
+        const c = Number(o.part.cost);
+        if (Number.isFinite(c) && c > 0) cost = (cost ?? 0) + c;
         return;
       }
       // ── Codex --json (best effort) ──

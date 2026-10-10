@@ -29,6 +29,10 @@ so the scheduler does not name an agent: it runs `--agent random` and
 runner walks the draw order taking the first CLI that is **installed and logged
 in** — an agent that is not on this machine costs a log line, not the day.
 
+Since 2026-10-10 every enabled slot is `agent: opencode` on an OpenCode Go model
+(`opencode-go/<model>`): one subscription, one CLI, a different lab most days.
+The `claude-*` and `codex-*` slots are kept with `enabled: false`.
+
 ```
 roster.entries[].id       slot name; --roster <id> pins it
               .agent      which adapter in agents/

@@ -51,6 +51,30 @@ test("records Codex --json items and turn usage", () => {
   assert.equal(r.tokens.total, 18);
 });
 
+test("records OpenCode --format json: finished tool parts on their own clock, step_finish tokens with reasoning as output, cost only when non-zero", () => {
+  const rec = createTraceRecorder({ phase: "build", startedAt: 1000, now: () => 9000 });
+  rec.onLine(JSON.stringify({ type: "step_start", part: { type: "step-start" } }));
+  rec.onLine(JSON.stringify({ type: "tool_use", part: { type: "tool", callID: "c1", tool: "bash", state: { status: "completed", input: { command: "npm run build" }, output: "", title: "npm run build", time: { start: 1500, end: 2100 } } } }));
+  rec.onLine(JSON.stringify({ type: "tool_use", part: { type: "tool", callID: "c2", tool: "edit", state: { status: "error", input: { filePath: "src/x.ts" }, error: "boom", time: { start: 2200, end: 2300 } } } }));
+  rec.onLine(JSON.stringify({ type: "step_finish", part: { type: "step-finish", reason: "tool-calls", cost: 0, tokens: { input: 100, output: 20, reasoning: 5, cache: { read: 40, write: 10 } } } }));
+  rec.onLine(JSON.stringify({ type: "step_finish", part: { type: "step-finish", reason: "stop", cost: 0, tokens: { input: 50, output: 10, reasoning: 0, cache: { read: 0, write: 0 } } } }));
+  rec.onLine(JSON.stringify({ type: "error", error: { name: "UnknownError", data: { message: "x" } } }));
+  const r = rec.finish({ exitCode: 0 });
+  assert.equal(r.calls, 2);
+  assert.deepEqual(r.tools, { bash: 1, edit: 1 });
+  assert.equal(r.spans[0].target, "npm run build");
+  assert.equal(r.spans[0].startMs, 500);
+  assert.equal(r.spans[0].durMs, 600);
+  assert.equal(r.spans[1].status, "error");
+  assert.equal(r.toolErrors, 1);
+  assert.deepEqual(r.tokens, { input: 150, output: 35, cacheRead: 40, cacheWrite: 10, total: 235 });
+  assert.equal(r.cost, null);
+  assert.equal(r.turns, 2);
+  const paid = createTraceRecorder({ phase: "scout" });
+  paid.onLine(JSON.stringify({ type: "step_finish", part: { type: "step-finish", reason: "stop", cost: 0.031, tokens: { input: 1, output: 1, reasoning: 0, cache: { read: 0, write: 0 } } } }));
+  assert.equal(paid.finish().cost, 0.031);
+});
+
 test("appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape", () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "trace-"));
   const rec = (phase, call, startedAt, ms, tools) => ({ phase, call, name: call > 1 ? `${phase} (${call})` : phase, startedAt: new Date(startedAt).toISOString(), durMs: ms, exitCode: 0, timedOut: false, status: "ok", calls: Object.values(tools).reduce((a, b) => a + b, 0), toolErrors: 0, turns: 1, tokens: { input: 1, output: 1, cacheRead: 0, cacheWrite: 0, total: 2 }, cost: 0.1, tools, spans: [] });

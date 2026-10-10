@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // stream-log — turn an agent's JSONL event stream into a readable activity
-// feed. Knows Claude Code's stream-json and Codex's --json shapes; anything
-// else is passed through untouched (one line per event, truncated).
+// feed. Knows Claude Code's stream-json, OpenCode's --format json and Codex's
+// --json shapes; anything else is passed through untouched (one line per
+// event, truncated).
 //
 //   claude -p ... --output-format stream-json | node pipeline/lib/stream-log.mjs scout
 import readline from "node:readline";
@@ -43,6 +44,25 @@ export function formatEvent(raw, label = "") {
     const cost = Number(o.total_cost_usd ?? 0);
     return `[${ts()}] ${tag}✅ END ${o.is_error ? "ERROR" : "ok"}  cost=$${cost.toFixed(2)}  turns=${o.num_turns ?? "?"}`;
   }
+  // ── OpenCode --format json (part events) ──
+  if (o.part && typeof o.part === "object") {
+    const p = o.part;
+    if (o.type === "text") return short(p.text) ? `[${ts()}] ${tag}💬 ${short(p.text, 220)}` : null;
+    if (o.type === "tool_use") {
+      const st = p.state ?? {};
+      const i = st.input ?? {};
+      const hint = i.command ?? i.filePath ?? i.file_path ?? i.pattern ?? i.query ?? i.url ?? i.description ?? i.path ?? st.title ?? "";
+      const head = `[${ts()}] ${tag}🔧 ${p.tool}: ${short(hint, 140)}`;
+      return st.status === "error" ? `${head}\n[${ts()}] ${tag}⚠ tool error: ${short(st.error, 160)}` : head;
+    }
+    if (o.type === "step_finish") {
+      if (!p.reason || p.reason === "tool-calls") return null;
+      const t = p.tokens ?? {};
+      return `[${ts()}] ${tag}✅ END ${p.reason}  tokens in=${t.input ?? 0} out=${t.output ?? 0} cached=${t.cache?.read ?? 0}${Number(p.cost) > 0 ? `  cost=$${Number(p.cost).toFixed(2)}` : ""}`;
+    }
+    return null;
+  }
+  if (o.type === "error" && o.error && typeof o.error === "object") return `[${ts()}] ${tag}⚠ ${short(o.error.name ?? "error", 40)}: ${short(o.error.data?.message ?? o.error.message ?? JSON.stringify(o.error.data ?? o.error), 200)}`;
   // ── Codex --json events (best effort) ──
   if (typeof o.type === "string" && o.type.startsWith("item.")) {
     const it = o.item ?? {};

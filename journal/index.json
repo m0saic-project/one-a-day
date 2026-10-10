@@ -531,5 +531,38 @@
       "https://skycenter.arizona.edu/astrophotography/m57-ring-nebula",
       "https://sdspacegrant.sdsmt.edu/PacmanNebula-RichardWalker.htm"
     ]
+  },
+  {
+    "date": "2026-10-09",
+    "day": 20,
+    "agent": "claude",
+    "model": "claude-fable-5-1",
+    "rosterId": "claude-opus-ultracode",
+    "status": "shipped",
+    "templateId": "@one-a-day/community/ancestor-birthplace-chart/v1",
+    "title": "2026-10-09 · Ancestor Birthplace Chart",
+    "pack": "community",
+    "useCase": "Ancestor birthplace chart (#MyColorfulAncestry): a 5-generation pedigree from GEDCOM fields, each ancestor cell coloured by birth state or country with a legend, the chart genealogists build and colour by hand in Excel",
+    "tags": [
+      "community",
+      "2026-10-09",
+      "day-020",
+      "genealogy",
+      "gedcom",
+      "pedigree",
+      "ancestry",
+      "birthplace",
+      "family-tree",
+      "video"
+    ],
+    "sources": [
+      "https://www.geneamusings.com/2016/03/saturday-night-genealogy-fun-ancestral.html",
+      "https://cherylltoneyholley.com/2016/04/01/the-mycolorfulancestry-craze/",
+      "https://dna-explained.com/2016/03/25/migration-pedigree-chart/",
+      "https://gedcom.io/specifications/FamilySearchGEDCOMv7.html",
+      "https://www.amyjohnsoncrow.com/52-ancestors-in-52-weeks/",
+      "https://dnapainter.com/blog/dna-painter-dimensions-a-new-way-to-showcase-your-ancestral-line/",
+      "https://www.familysearch.org/help/helpcenter/article/how-do-i-use-the-fan-chart-view-in-family-tree"
+    ]
   }
 ]

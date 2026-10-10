@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`@one-a-day/community/ancestor-birthplace-chart/v1 shows name, year and place in every generation at 1920x1080, and degrades by tier, never by clipping, at 480x270 1`] = `
+[
+  "1920x1080: name-year-place / name-year-place / name-year-place / name-year-place / name-year-place",
+  "1280x720: name-year-place / name-year-place / name-year-place / name-year-place / name-year-place",
+  "1080x1920: name-year-place / name-year-place / name-year-place / name-year-place / name-year-place",
+  "1080x1080: name-year-place / name-year-place / name-year-place / name-year-place / name-year-place",
+  "3840x2160: name-year-place / name-year-place / name-year-place / name-year-place / name-year-place",
+  "640x360: name-year-place / name-year-place / name-year-place / name / name",
+  "480x270: name-year-place / name-year-place / name-year-place / name / name",
+]
+`;

@@ -1,0 +1,200 @@
+{
+  "templateId": "@one-a-day/community/ancestor-birthplace-chart/v1",
+  "at": "2026-10-10T00:35:33.705Z",
+  "props": null,
+  "build": {
+    "code": 0
+  },
+  "kind": "video",
+  "renders": [
+    {
+      "canvas": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "file": "renders\\landscape.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 448508,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 16
+      },
+      "ms": 442935
+    },
+    {
+      "canvas": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "file": "renders\\portrait.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 377349,
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "h264",
+        "durationSec": 16
+      },
+      "ms": 496415
+    },
+    {
+      "canvas": "square",
+      "width": 1080,
+      "height": 1080,
+      "file": "renders\\square.mp4",
+      "exitCode": 0,
+      "degraded": false,
+      "bytes": 326951,
+      "probe": {
+        "width": 1080,
+        "height": 1080,
+        "codec": "h264",
+        "durationSec": 16
+      },
+      "ms": 361088
+    }
+  ],
+  "stills": [
+    {
+      "canvas": "landscape",
+      "at": 1.6,
+      "file": "stills\\landscape-10.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 8,
+      "file": "stills\\landscape-50.png"
+    },
+    {
+      "canvas": "landscape",
+      "at": 14.4,
+      "file": "stills\\landscape-90.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 1.6,
+      "file": "stills\\portrait-10.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 8,
+      "file": "stills\\portrait-50.png"
+    },
+    {
+      "canvas": "portrait",
+      "at": 14.4,
+      "file": "stills\\portrait-90.png"
+    },
+    {
+      "canvas": "square",
+      "at": 1.6,
+      "file": "stills\\square-10.png"
+    },
+    {
+      "canvas": "square",
+      "at": 8,
+      "file": "stills\\square-50.png"
+    },
+    {
+      "canvas": "square",
+      "at": 14.4,
+      "file": "stills\\square-90.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 3.5,
+      "file": "stills\\tutorial-1.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 14,
+      "file": "stills\\tutorial-2.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 27,
+      "file": "stills\\tutorial-3.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 38,
+      "file": "stills\\tutorial-4.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 51,
+      "file": "stills\\tutorial-5.png"
+    },
+    {
+      "canvas": "tutorial",
+      "at": 64,
+      "file": "stills\\tutorial-6.png"
+    }
+  ],
+  "srcSnapshot": "src/",
+  "ok": true,
+  "degraded": false,
+  "split": {
+    "runner": "journal/2026-10-09/logs/render-variant-split.mjs",
+    "steps": [
+      {
+        "step": "build",
+        "at": "2026-10-10T00:44:13.882Z",
+        "code": 0,
+        "validate": 0,
+        "kind": "video",
+        "ms": 420202
+      },
+      {
+        "step": "landscape",
+        "at": "2026-10-10T00:52:22.906Z",
+        "exit": 0,
+        "ms": 455953
+      },
+      {
+        "step": "portrait",
+        "at": "2026-10-10T01:01:52.793Z",
+        "exit": 0,
+        "ms": 503333
+      },
+      {
+        "step": "square",
+        "at": "2026-10-10T01:08:40.062Z",
+        "exit": 0,
+        "ms": 365964
+      },
+      {
+        "step": "tutorial",
+        "at": "2026-10-10T01:20:08.790Z",
+        "exit": 0,
+        "ms": 626923
+      },
+      {
+        "step": "snapshot",
+        "at": "2026-10-10T01:20:20.713Z"
+      }
+    ]
+  },
+  "validate": {
+    "code": 0,
+    "degraded": false
+  },
+  "tutorial": {
+    "canvas": "tutorial",
+    "width": 1280,
+    "height": 720,
+    "file": "renders\\tutorial.mp4",
+    "exitCode": 0,
+    "degraded": false,
+    "bytes": 949392,
+    "probe": {
+      "width": 1280,
+      "height": 720,
+      "codec": "h264",
+      "durationSec": 69
+    },
+    "ms": 615287
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "useCase": "Ancestor birthplace chart (#MyColorfulAncestry): a 5-generation pedigree from GEDCOM fields, each ancestor cell coloured by birth state or country with a legend, the chart genealogists build and colour by hand in Excel",
+  "who": "Hobby genealogists and family historians who post ancestor charts in Facebook genealogy groups and on genealogy blogs (Genea-Musings, DNAeXplained, the weekly #52Ancestors prompt), working from the GEDCOM file their genealogy program exports",
+  "sources": [
+    "https://www.geneamusings.com/2016/03/saturday-night-genealogy-fun-ancestral.html",
+    "https://cherylltoneyholley.com/2016/04/01/the-mycolorfulancestry-craze/",
+    "https://dna-explained.com/2016/03/25/migration-pedigree-chart/",
+    "https://gedcom.io/specifications/FamilySearchGEDCOMv7.html",
+    "https://www.amyjohnsoncrow.com/52-ancestors-in-52-weeks/",
+    "https://dnapainter.com/blog/dna-painter-dimensions-a-new-way-to-showcase-your-ancestral-line/",
+    "https://www.familysearch.org/help/helpcenter/article/how-do-i-use-the-fan-chart-view-in-family-tree"
+  ],
+  "tags": [
+    "genealogy",
+    "gedcom",
+    "pedigree",
+    "ancestry",
+    "birthplace",
+    "family-tree"
+  ],
+  "scout": "done",
+  "pack": "community",
+  "slug": "ancestor-birthplace-chart",
+  "title": "Ancestor Birthplace Chart",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": ["a"],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

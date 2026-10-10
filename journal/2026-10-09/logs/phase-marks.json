@@ -1,0 +1,28 @@
+{
+  "session": "debf1069-a698-4c04-a8c6-6e36e0634dd6",
+  "model": "claude-fable-5-1",
+  "note": "Phase marks for the interactive Claude Code session (Fable 5.1) that took over day 020 after the runner's first build call died on a network error (ENOTFOUND) and the runner parked for the five-hour window. The founder asked for the day to be taken over and for a VIDEO template. The runner's scout and plan (Opus 5.5 ultracode) stand; the session's phases are appended to trace.json by logs/session-trace.mjs.",
+  "marks": [
+    {
+      "phase": "direct",
+      "at": "2026-10-09T19:32:13.000Z",
+      "what": "the founder: take over the one-a-day template today, prefer a video; the session reads the journal, finds the orphan runner waiting for its window"
+    },
+    {
+      "phase": "build",
+      "call": 2,
+      "at": "2026-10-09T19:35:03.000Z",
+      "what": "runner stopped (taskkill 24684); the scout's pick kept, the brief's still turned into a clip: the pedigree colours in generation by generation"
+    },
+    {
+      "phase": "critique",
+      "at": "2026-10-10T01:21:58.841Z",
+      "what": "independent Sonnet critic subagent judges variant a against the brief as amended: stills at three canvases, the tutorial pages, the source and tests"
+    },
+    {
+      "phase": "ship",
+      "at": "2026-10-10T01:27:29.223Z",
+      "what": "previews, build, fingerprints, verify, doctor, timeline paste, ship note, gate"
+    }
+  ]
+}

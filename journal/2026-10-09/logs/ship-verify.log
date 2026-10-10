@@ -1,0 +1,38 @@
+pasted 7 phases (scout, plan, build, direct, build (2), critique, ship), costBasis estimated
+964-      {
+965:        "name": "ship",
+966-        "startMs": 36959103,
+967-        "durMs": 869834,
+968-        "calls": 4,
+969-        "tokens": 1313748,
+970-        "costUsd": 0.67,
+971-        "tools": "Bash 3, Read 1"
+> one-a-day@0.1.0 verify
+> npm run build && npm run lint && npm test && npm run test:contract && npm run check:deps
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/gen-gallery.mjs && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+[check-freeze] ✓ freeze (2026-10-08 (m0saic 0.3.2)): 29 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (24 templates, 10 packs, 24 with preview assets)
+[gen-gallery] unchanged TEMPLATES.md (22 daily template(s) in 2 month(s), 2 other).
+[check-registry] ✓ 24 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✓ layout fingerprints: 24 unchanged, 0 missing, 0 changed.
+[check-registry] ✓ 24 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+[check-layout] ✓ 23 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+[check-why] ✓ 22 template(s) explain why they exist (0 warning(s); front door exempt).
+> one-a-day@0.1.0 lint
+> eslint .
+C:\src\m0saic-production\one-a-day\src\community\ancestor-birthplace-chart\v1\ancestor-birthplace-chart.test.ts
+  156:13  error  'gen' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+✖ 1 problem (1 error, 0 warnings)
+
+real	6m6.680s
+user	0m1.352s
+sys	0m4.099s
+verify exit 1
+
+[exited with code 0]

@@ -22,4 +22,13 @@ export const communityRegistry: StarterRegistryEntry[] = [
       "The weekly results card a volunteer-run Saturday 5k posts after every run: event, run number and date, finishers and volunteers as the two headline numbers, new PBs, first timers, visitors and first-time volunteers under them, and the milestone clubs reached. Numbers are typed in, never fetched.",
     tags: ["community", "2026-10-06", "day-017", "running", "5k", "volunteers", "weekly", "stats", "results"],
   },
+  {
+    slug: "ancestor-birthplace-chart",
+    templateId: "@one-a-day/community/ancestor-birthplace-chart/v1",
+    exportName: "AncestorBirthplaceChartV1",
+    title: "2026-10-09 · Ancestor Birthplace Chart",
+    description:
+      "The #MyColorfulAncestry spreadsheet chart as a clip: five generations from pasted rows or a GEDCOM, every cell coloured by birth state or country, landing generation by generation over a counted legend.",
+    tags: ["community", "2026-10-09", "day-020", "genealogy", "gedcom", "pedigree", "ancestry", "birthplace", "family-tree", "video"],
+  },
 ];

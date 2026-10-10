@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-09",
+  "day": 20,
+  "startedAt": "2026-10-09T13:00:02.576Z",
+  "runner": {
+    "adapter": "claude",
+    "modelFlag": "opus[1m]",
+    "roster": {
+      "id": "claude-opus-ultracode",
+      "agent": "claude",
+      "model": "opus[1m]",
+      "weight": 4,
+      "why": "drawn"
+    },
+    "ultracode": true,
+    "effort": "xhigh",
+    "budgetUsd": 75,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": true,
+    "m0saic": null,
+    "session": {
+      "kind": "interactive",
+      "harness": "Claude Code",
+      "model": "claude-fable-5-1",
+      "why": "the scheduled run drew claude-opus-ultracode, waited 2h07m for the five-hour window before scouting, then scouted and planned (Opus 5.5). Its first build call died 23.8 min in on a network error (API Error: Can't reach the API server - ENOTFOUND, $17.36, the scaffold written and nothing else) and the runner parked for the next window (13:10 PT). The scheduler's PT6H cap had already killed the PowerShell wrapper at noon; the runner survived as an orphan. At 12:32 PT the founder asked for the day to be taken over in a Claude Code session and for a VIDEO template (most recent days shipped stills). The session stopped the orphan runner (taskkill 24684 at 12:35 PT), kept the scout's pick and the brief, and turned the brief's still into a clip (20-brief.md, takeover addendum). No roster slot was drawn for the session",
+      "handoff": {
+        "scoutAndPlan": {
+          "adapter": "claude",
+          "model": "claude-opus-5-5",
+          "rosterId": "claude-opus-ultracode",
+          "selfDeclared": "claude-opus-5.5"
+        },
+        "buildCritiqueShip": {
+          "adapter": "claude",
+          "model": "claude-fable-5-1"
+        }
+      },
+      "trace": "journal/2026-10-09/trace.json holds the runner's record (scout, plan, build call 1 - error). The session's own phases (build call 2, critique, ship) are appended to it by logs/session-trace.mjs through pipeline/lib/trace.mjs appendTrace: tokens measured from the session's transcript (one usage per API response), dollars estimated at the list prices in pipeline/config.json",
+      "gate": "pipeline/lib/gate.mjs runGate via logs/gate-run.mjs with --no-push, the same arguments run.mjs passes; the session pushes by hand"
+    }
+  },
+  "model": {
+    "selfDeclared": "claude-fable-5-1",
+    "corrected": null
+  },
+  "limits": {
+    "windows": {
+      "five_hour": {
+        "utilization": 0.97,
+        "resetsAt": "2026-10-09T20:10:00.000Z"
+      },
+      "seven_day": {
+        "utilization": 0.6,
+        "resetsAt": "2026-10-13T08:00:00.000Z"
+      }
+    },
+    "at": "2026-10-09T15:51:42.118Z",
+    "waits": [
+      {
+        "phase": "scout",
+        "at": "2026-10-09T13:04:17.286Z",
+        "until": "2026-10-09T15:11:30.000Z",
+        "window": "five_hour",
+        "reason": "session window nearly spent (five_hour at 100%) resets 08:10"
+      },
+      {
+        "phase": "build",
+        "at": "2026-10-09T15:51:42.131Z",
+        "until": "2026-10-09T20:11:30.000Z",
+        "window": "five_hour",
+        "reason": "session window nearly spent (five_hour at 97%) resets 13:10"
+      }
+    ]
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 507967,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 478811,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": 1,
+      "timedOut": false,
+      "ms": 1425150,
+      "done": false
+    }
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/community/ancestor-birthplace-chart/v1",
+    "title": "2026-10-09 · Ancestor Birthplace Chart",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 5,
+    "at": "2026-10-10T02:18:36.208Z"
+  }
+}

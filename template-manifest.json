@@ -424,6 +424,28 @@
       }
     },
     {
+      "slug": "ancestor-birthplace-chart",
+      "templateKey": "@one-a-day/community/ancestor-birthplace-chart/v1",
+      "title": "2026-10-09 · Ancestor Birthplace Chart",
+      "description": "The #MyColorfulAncestry spreadsheet chart as a clip: five generations from pasted rows or a GEDCOM, every cell coloured by birth state or country, landing generation by generation over a counted legend.",
+      "tags": [
+        "community",
+        "2026-10-09",
+        "day-020",
+        "genealogy",
+        "gedcom",
+        "pedigree",
+        "ancestry",
+        "birthplace",
+        "family-tree",
+        "video"
+      ],
+      "pack": "community",
+      "preview": {
+        "image": "assets/templates/@one-a-day__community__ancestor-birthplace-chart__v1/preview.png"
+      }
+    },
+    {
       "slug": "radio-top-30-chart",
       "templateKey": "@one-a-day/music/radio-top-30-chart/v1",
       "title": "2026-10-05 · Radio Top 30 Chart",

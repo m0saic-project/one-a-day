@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-11",
+  "day": 22,
+  "startedAt": "2026-10-11T01:52:00.000Z",
+  "runner": {
+    "adapter": "opencode",
+    "modelFlag": "opencode-go/kimi-k3",
+    "roster": {
+      "id": "go-kimi-k3",
+      "agent": "opencode",
+      "model": "opencode-go/kimi-k3",
+      "weight": 4,
+      "why": "pinned with --roster"
+    },
+    "noPush": false,
+    "note": "Manual day: the operator is travelling on 10/11 and the scheduled task is disabled; the autonomous run died at the roster draw again (opencode auth.json holds no credential on this machine). Every phase was driven by hand in one opencode console session (same pattern as day 021): no adapter event stream, no trace.json - WHY.timeline is self-reported. Gated via `node pipeline/run.mjs --date 2026-10-11 --gate-only --roster go-kimi-k3`.",
+    "ultracode": false,
+    "effort": null,
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "kimi-k3",
+    "corrected": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/personal/reading-goal-recap/v1",
+    "title": "2026-10-11 · Reading Goal Recap",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 5,
+    "at": "2026-10-11T10:15:32.326Z"
+  }
+}

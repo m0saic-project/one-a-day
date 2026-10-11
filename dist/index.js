@@ -28,6 +28,7 @@ const sports_1 = require("./sports");
 const community_1 = require("./community");
 const music_1 = require("./music");
 const science_1 = require("./science");
+const personal_1 = require("./personal");
 /** The two exports every Mosaic host requires from a template repo. */
 exports.repo = repo_1.TEMPLATE_REPO;
 exports.templates = [
@@ -41,6 +42,7 @@ exports.templates = [
     ...community_1.communityTemplates,
     ...music_1.musicTemplates,
     ...science_1.scienceTemplates,
+    ...personal_1.personalTemplates,
 ];
 // Library re-exports for anyone importing this repo as code. `export *`
 // ONLY for template modules — never pair `export * from "./x"` with a
@@ -55,3 +57,4 @@ __exportStar(require("./sports"), exports);
 __exportStar(require("./community"), exports);
 __exportStar(require("./music"), exports);
 __exportStar(require("./science"), exports);
+__exportStar(require("./personal"), exports);

@@ -15,4 +15,5 @@ export * from "./sports";
 export * from "./community";
 export * from "./music";
 export * from "./science";
+export * from "./personal";
 export { TEMPLATE_PACKS, TEMPLATE_REPO };

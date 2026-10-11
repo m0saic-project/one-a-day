@@ -1,0 +1,30 @@
+{
+  "useCase": "Monthly reading wrap-up cards from the numbers book bloggers and reading-challenge readers hand-compute from the Goodreads export: books finished, pages read, average rating, and pace against the yearly goal",
+  "who": "Book bloggers and the 52book reading-challenge crowd who post monthly wrap-ups and track the Goodreads Reading Challenge (books read vs yearly goal) by hand",
+  "sources": [
+    "https://leahs-books.com/2022/11/05/monthly-wrap-up-october-2022/",
+    "http://kamislibrarythoughts.blogspot.com/2022/11/october-stats.html",
+    "https://booksense.app/tools/goodreads-stats"
+  ],
+  "tags": [
+    "reading",
+    "books",
+    "wrap-up",
+    "goodreads",
+    "challenge",
+    "monthly"
+  ],
+  "scout": "done",
+  "pack": "personal",
+  "slug": "reading-goal-recap",
+  "title": "Reading Goal Recap",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": ["a", "b"],
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "inPlace": "a",
+  "ship": "done"
+}

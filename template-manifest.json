@@ -505,6 +505,27 @@
       "preview": {
         "image": "assets/templates/@one-a-day__science__astro-integration-summary__v1/preview.png"
       }
+    },
+    {
+      "slug": "reading-goal-recap",
+      "templateKey": "@one-a-day/personal/reading-goal-recap/v1",
+      "title": "2026-10-11 · Reading Goal Recap",
+      "description": "A monthly reading wrap-up card from the Goodreads export's own numbers: books, pages and average rating as stat tiles, and the year's challenge goal as a progress bar with the pace tick drawn - the '16 behind schedule (88/125)' line, computed, not typed.",
+      "tags": [
+        "personal",
+        "2026-10-11",
+        "day-022",
+        "reading",
+        "books",
+        "wrap-up",
+        "goodreads",
+        "challenge",
+        "monthly"
+      ],
+      "pack": "personal",
+      "preview": {
+        "image": "assets/templates/@one-a-day__personal__reading-goal-recap__v1/preview.png"
+      }
     }
   ],
   "packs": [
@@ -557,6 +578,11 @@
       "id": "science",
       "title": "Science",
       "description": "Science: one line on what this pack teaches."
+    },
+    {
+      "id": "personal",
+      "title": "Personal",
+      "description": "Personal: one line on what this pack teaches."
     }
   ]
 }

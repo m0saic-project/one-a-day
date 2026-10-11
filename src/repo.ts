@@ -103,4 +103,10 @@ export const TEMPLATE_PACKS: MosaicTemplatePackDescriptor[] = [
     description:
       "Science: one line on what this pack teaches.",
   },
+  {
+    id: "personal",
+    title: "Personal",
+    description:
+      "Personal: one line on what this pack teaches.",
+  },
 ];

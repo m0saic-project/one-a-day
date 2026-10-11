@@ -591,5 +591,33 @@
       "https://thegrint.com/range/post/scorephoto-giveaway",
       "https://www.golfgamebook.com/golf-scorecard"
     ]
+  },
+  {
+    "date": "2026-10-11",
+    "day": 22,
+    "agent": "opencode",
+    "model": "kimi-k3",
+    "rosterId": "go-kimi-k3",
+    "status": "shipped",
+    "templateId": "@one-a-day/personal/reading-goal-recap/v1",
+    "title": "2026-10-11 · Reading Goal Recap",
+    "pack": "personal",
+    "useCase": "Monthly reading wrap-up cards from the numbers book bloggers and reading-challenge readers hand-compute from the Goodreads export: books finished, pages read, average rating, and pace against the yearly goal",
+    "tags": [
+      "personal",
+      "2026-10-11",
+      "day-022",
+      "reading",
+      "books",
+      "wrap-up",
+      "goodreads",
+      "challenge",
+      "monthly"
+    ],
+    "sources": [
+      "https://leahs-books.com/2022/11/05/monthly-wrap-up-october-2022/",
+      "http://kamislibrarythoughts.blogspot.com/2022/11/october-stats.html",
+      "https://booksense.app/tools/goodreads-stats"
+    ]
   }
 ]

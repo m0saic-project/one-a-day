@@ -8,6 +8,7 @@ import { ChessGameRecapV1 } from "./chess-game-recap/v1/chess-game-recap";
 import { ChessGameRecapV2 } from "./chess-game-recap/v2/chess-game-recap";
 import { ChessGameRecapV3 } from "./chess-game-recap/v3/chess-game-recap";
 import { GolfRoundScorecardV1 } from "./golf-round-scorecard/v1/golf-round-scorecard";
+import { ClimbingSendPyramidV1 } from "./climbing-send-pyramid/v1/climbing-send-pyramid";
 
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
@@ -37,6 +38,7 @@ export const sportsTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
   ) as unknown as MosaicTemplate<MosaicTemplateProps>,
   ChessGameRecapV3 as unknown as MosaicTemplate<MosaicTemplateProps>,
   GolfRoundScorecardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
+  ClimbingSendPyramidV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
 ];
 
 // `export *` ONLY — see the note in src/index.ts.
@@ -48,3 +50,4 @@ export * from "./chess-game-recap/v1/chess-game-recap";
 export * from "./chess-game-recap/v2/chess-game-recap";
 export * from "./chess-game-recap/v3/chess-game-recap";
 export * from "./golf-round-scorecard/v1/golf-round-scorecard";
+export * from "./climbing-send-pyramid/v1/climbing-send-pyramid";

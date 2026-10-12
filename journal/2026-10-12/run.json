@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-12",
+  "day": 23,
+  "startedAt": "2026-10-12T12:00:00.000Z",
+  "runner": {
+    "adapter": "opencode",
+    "modelFlag": "opencode-go/grok-4.7",
+    "roster": {
+      "id": "go-grok-4.7",
+      "agent": "opencode",
+      "model": "opencode-go/grok-4.7",
+      "weight": 2,
+      "why": "pinned with --roster"
+    },
+    "noPush": false,
+    "note": "Manual day in one opencode session (same pattern as day 022). No adapter event stream, no trace.json.",
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "ultracode": false,
+    "effort": null,
+    "budgetUsd": null,
+    "context": null,
+    "node": "v22.14.0",
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "grok-4.7",
+    "corrected": null
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/climbing-send-pyramid/v1",
+    "title": "2026-10-12 · Climbing Send Pyramid",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 5,
+    "at": "2026-10-12T18:59:53.723Z"
+  }
+}

@@ -23,6 +23,7 @@ const chess_game_recap_1 = require("./chess-game-recap/v1/chess-game-recap");
 const chess_game_recap_2 = require("./chess-game-recap/v2/chess-game-recap");
 const chess_game_recap_3 = require("./chess-game-recap/v3/chess-game-recap");
 const golf_round_scorecard_1 = require("./golf-round-scorecard/v1/golf-round-scorecard");
+const climbing_send_pyramid_1 = require("./climbing-send-pyramid/v1/climbing-send-pyramid");
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
  * the flag goes on the copy this pack hands to hosts (`templates`), which is
@@ -39,6 +40,7 @@ exports.sportsTemplates = [
     retired(chess_game_recap_2.ChessGameRecapV2, "@one-a-day/sports/chess-game-recap/v3", "2026-10-07", "v2 draws each board as one whole-board image; v3 builds it cell by cell (64 squares, every piece its own rect) and adds a platform knob."),
     chess_game_recap_3.ChessGameRecapV3,
     golf_round_scorecard_1.GolfRoundScorecardV1,
+    climbing_send_pyramid_1.ClimbingSendPyramidV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./powerlifting-meet-recap/v1/powerlifting-meet-recap"), exports);
@@ -49,3 +51,4 @@ __exportStar(require("./chess-game-recap/v1/chess-game-recap"), exports);
 __exportStar(require("./chess-game-recap/v2/chess-game-recap"), exports);
 __exportStar(require("./chess-game-recap/v3/chess-game-recap"), exports);
 __exportStar(require("./golf-round-scorecard/v1/golf-round-scorecard"), exports);
+__exportStar(require("./climbing-send-pyramid/v1/climbing-send-pyramid"), exports);

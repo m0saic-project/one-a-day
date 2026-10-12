@@ -404,6 +404,26 @@
       }
     },
     {
+      "slug": "climbing-send-pyramid",
+      "templateKey": "@one-a-day/sports/climbing-send-pyramid/v1",
+      "title": "2026-10-12 · Climbing Send Pyramid",
+      "description": "A climbing send pyramid from a tick list: one centered bar per grade, width the clean-send count, a cap for the flash or onsight share, hardest on top.",
+      "tags": [
+        "sports",
+        "2026-10-12",
+        "day-023",
+        "climbing",
+        "pyramid",
+        "ticks",
+        "grades",
+        "mountain-project"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__climbing-send-pyramid__v1/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

@@ -1,0 +1,24 @@
+{
+  "useCase": "Climbing send-pyramid cards from a Mountain Project tick export: one bar per grade, width the send count, flashes marked inside the bar, hardest on top",
+  "who": "Outdoor climbers who export a Mountain Project tick CSV and want the grade pyramid as a card instead of a dashboard screenshot",
+  "sources": [
+    "https://www.mountainproject.com/help/27/overview-of-mountain-project-features",
+    "https://www.mountainproject.com/forum/topic/200258880/visualize-your-mp-tick-pyramid",
+    "https://chenyang.co/climbing-dashboard/",
+    "https://www.sendsage.ai/"
+  ],
+  "tags": ["climbing", "pyramid", "ticks", "grades", "mountain-project"],
+  "scout": "done",
+  "pack": "sports",
+  "slug": "climbing-send-pyramid",
+  "title": "Climbing Send Pyramid",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": ["a"],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

@@ -69,4 +69,12 @@ exports.sportsRegistry = [
         description: "A golf round scorecard card: give 9 or 18 pars and scores and it draws the hole, par and score strips with OUT/IN/TOTAL - and the paper card's own marks, a ring one under par, a square one over, doubles for two or more, a filled ring for an ace.",
         tags: ["sports", "2026-10-10", "day-021", "golf", "scorecard", "round", "birdie", "ace"],
     },
+    {
+        slug: "climbing-send-pyramid",
+        templateId: "@one-a-day/sports/climbing-send-pyramid/v1",
+        exportName: "ClimbingSendPyramidV1",
+        title: "2026-10-12 · Climbing Send Pyramid",
+        description: "A climbing send pyramid from a tick list: one centered bar per grade, width the clean-send count, a cap for the flash or onsight share, hardest on top.",
+        tags: ["sports", "2026-10-12", "day-023", "climbing", "pyramid", "ticks", "grades", "mountain-project"],
+    },
 ];

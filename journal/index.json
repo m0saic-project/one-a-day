@@ -619,5 +619,33 @@
       "http://kamislibrarythoughts.blogspot.com/2022/11/october-stats.html",
       "https://booksense.app/tools/goodreads-stats"
     ]
+  },
+  {
+    "date": "2026-10-12",
+    "day": 23,
+    "agent": "opencode",
+    "model": "grok-4.7",
+    "rosterId": "go-grok-4.7",
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/climbing-send-pyramid/v1",
+    "title": "2026-10-12 · Climbing Send Pyramid",
+    "pack": "sports",
+    "useCase": "Climbing send-pyramid cards from a Mountain Project tick export: one bar per grade, width the send count, flashes marked inside the bar, hardest on top",
+    "tags": [
+      "sports",
+      "2026-10-12",
+      "day-023",
+      "climbing",
+      "pyramid",
+      "ticks",
+      "grades",
+      "mountain-project"
+    ],
+    "sources": [
+      "https://www.mountainproject.com/help/27/overview-of-mountain-project-features",
+      "https://www.mountainproject.com/forum/topic/200258880/visualize-your-mp-tick-pyramid",
+      "https://chenyang.co/climbing-dashboard/",
+      "https://www.sendsage.ai/"
+    ]
   }
 ]

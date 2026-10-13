@@ -647,5 +647,32 @@
       "https://chenyang.co/climbing-dashboard/",
       "https://www.sendsage.ai/"
     ]
+  },
+  {
+    "date": "2026-10-13",
+    "day": 24,
+    "agent": "opencode",
+    "model": "qwen3.8-flash",
+    "rosterId": "go-qwen3.8-max",
+    "status": "failed",
+    "templateId": null,
+    "title": null,
+    "useCase": "Monthly VATSIM pilot log recap cards from the phpVMS PIREP rows a virtual-airline pilot already files: flights, hours, distance, avg landing, the month as rows, next hour milestone",
+    "tags": [
+      "vatsim",
+      "logbook",
+      "pirep",
+      "flight-hours",
+      "virtual-airline",
+      "monthly"
+    ],
+    "sources": [
+      "https://deltavirtual.org/users/13",
+      "https://forum.vatsim.net/t/hours-on-the-ground/4768",
+      "https://stats.vatsim.net/",
+      "https://aviodeck.app/features/vatsim-pilots",
+      "https://www.reddit.com/r/VATSIM/comments/1pazqke/vatsim_pilot_hours_statistics",
+      "https://www.facebook.com/groups/608473926761307/posts/1976861463255873"
+    ]
   }
 ]

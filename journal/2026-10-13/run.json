@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-13",
+  "day": 24,
+  "model": {
+    "selfDeclared": "qwen3.8-flash",
+    "corrected": null
+  },
+  "runner": {
+    "adapter": "opencode",
+    "modelFlag": "opencode-go/qwen3.8-max",
+    "note": "Manual day in one opencode session (same pattern as days 021-023). The headless runner could not start the day: agents/opencode.mjs available() probes the legacy auth.json, which is empty since OpenCode moved credentials to its account DB - the roster draw refused every slot. No adapter event stream, no trace.json - WHY.timeline is self-reported. Gated via node pipeline/run.mjs --date 2026-10-13 --gate-only --roster go-qwen3.8-max.",
+    "roster": {
+      "id": "go-qwen3.8-max",
+      "agent": "opencode",
+      "model": "opencode-go/qwen3.8-max",
+      "weight": 3,
+      "why": "pinned with --roster"
+    },
+    "ultracode": false,
+    "effort": null,
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "startedAt": "2026-10-13T07:23:00.000Z",
+  "result": {
+    "status": "failed",
+    "templateId": null,
+    "reason": "m0saic doctor: 1 error(s)"
+  },
+  "gate": {
+    "reasons": [
+      "m0saic doctor: 1 error(s)"
+    ],
+    "at": "2026-10-13T14:34:09.751Z"
+  }
+}

@@ -5,15 +5,15 @@
   "exitCode": 0,
   "renderStatus": "ok",
   "run": {
-    "id": "850e14fa-c746-4ae6-b873-71842652b805",
-    "startedAtIso": "2026-10-13T14:10:21.445Z",
-    "finishedAtIso": "2026-10-13T14:10:29.345Z",
-    "elapsedMs": 7900,
-    "estimatedMs": 10150,
+    "id": "d6cd1668-7bf2-4a4c-b051-20be7351edff",
+    "startedAtIso": "2026-10-13T14:51:27.243Z",
+    "finishedAtIso": "2026-10-13T14:51:35.216Z",
+    "elapsedMs": 7973,
+    "estimatedMs": 10345,
     "costModelVersion": 3,
-    "machineFactor": 1.3902205177372962,
+    "machineFactor": 1.4169291877824957,
     "setupFactor": 0.3333333333333333,
-    "slopeFactor": 1.6394990450492275
+    "slopeFactor": 1.6724954116765898
   },
   "versions": {
     "cli": {

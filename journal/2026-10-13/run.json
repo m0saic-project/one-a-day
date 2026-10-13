@@ -28,14 +28,14 @@
   },
   "startedAt": "2026-10-13T07:23:00.000Z",
   "result": {
-    "status": "failed",
-    "templateId": null,
-    "reason": "m0saic doctor: 1 error(s)"
+    "status": "shipped",
+    "templateId": "@one-a-day/gaming/vatsim-monthly-log/v1",
+    "reason": null,
+    "title": "2026-10-13 · VATSIM Monthly Log"
   },
   "gate": {
-    "reasons": [
-      "m0saic doctor: 1 error(s)"
-    ],
-    "at": "2026-10-13T14:34:09.751Z"
+    "reasons": [],
+    "at": "2026-10-13T15:05:00.310Z",
+    "doctorWarnings": 5
   }
 }

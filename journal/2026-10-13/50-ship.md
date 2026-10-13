@@ -50,6 +50,21 @@ the contract. The why-tutorial: same command with `--tutorial`.
 - `careerHours` is last-month's number typed by hand; if it is wrong, the
   bar is wrong (it is the one figure the card cannot derive).
 
+## The failed first gate (round 1)
+
+`npm run build`, `check-registry`, `check-layout`, `check-why` and `verify`
+all passed while `m0saic doctor` - which the gate also runs - failed: the
+numeric prop `careerHours` was neither bound to a rect nor declared
+unbound (convention `bindingsDeclared`). The build-gate checks here do not
+cover that convention, so the day died at the very last deterministic step;
+the gate reverted the tree and committed the journal alone (ce53851).
+Restored the day from `variants/a/src/` + the registry/index rows, added the
+`bindings.unbound` declaration with its reason (the bar shows careerHours
+PLUS the month's computed hours - no rect shows the raw figure), re-ran
+previews/fingerprints/verify and the gate, and the doctor now holds. The
+variant's source snapshot and stills were re-rendered after the fix, so the
+first gate commit's "no template" row is corrected by this second one.
+
 ## Follow-ups (noted, not today's work)
 
 - The `pipeline/agents/opencode.mjs` credential probe is stale on this

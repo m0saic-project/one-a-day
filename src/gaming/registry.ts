@@ -22,4 +22,13 @@ export const gamingRegistry: StarterRegistryEntry[] = [
       "Crossword Grid Card: a solved crossword grid drawn in a few layers on one integer lattice - derived clue numbers, circles, theme entries tinted and listed, the caption line; solved=false makes the teaser.",
     tags: ["gaming","2026-09-29","day-010"],
   },
+  {
+    slug: "vatsim-monthly-log",
+    templateId: "@one-a-day/gaming/vatsim-monthly-log/v1",
+    exportName: "VatsimMonthlyLogV1",
+    title: "2026-10-13 · VATSIM Monthly Log",
+    description:
+      "A virtual airline's month as one ops-log card from the PIREP rows themselves: the pilot and month, four tiles, the dated table (date, flight, sector, type, block, fpm, score) and a career-milestone bar - flights, hours, longest and average all computed from the rows, nothing typed twice.",
+    tags: ["gaming","2026-10-13","day-024","vatsim","logbook","pirep","flight-hours","virtual-airline","monthly"],
+  },
 ];

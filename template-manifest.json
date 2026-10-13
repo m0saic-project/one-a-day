@@ -244,6 +244,27 @@
       }
     },
     {
+      "slug": "vatsim-monthly-log",
+      "templateKey": "@one-a-day/gaming/vatsim-monthly-log/v1",
+      "title": "2026-10-13 · VATSIM Monthly Log",
+      "description": "A virtual airline's month as one ops-log card from the PIREP rows themselves: the pilot and month, four tiles, the dated table (date, flight, sector, type, block, fpm, score) and a career-milestone bar - flights, hours, longest and average all computed from the rows, nothing typed twice.",
+      "tags": [
+        "gaming",
+        "2026-10-13",
+        "day-024",
+        "vatsim",
+        "logbook",
+        "pirep",
+        "flight-hours",
+        "virtual-airline",
+        "monthly"
+      ],
+      "pack": "gaming",
+      "preview": {
+        "image": "assets/templates/@one-a-day__gaming__vatsim-monthly-log__v1/preview.png"
+      }
+    },
+    {
       "slug": "powerlifting-meet-recap",
       "templateKey": "@one-a-day/sports/powerlifting-meet-recap/v1",
       "title": "2026-09-27 · Powerlifting Meet Recap",

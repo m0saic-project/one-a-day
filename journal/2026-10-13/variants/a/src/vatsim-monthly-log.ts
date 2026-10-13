@@ -72,11 +72,9 @@ const THEMES = {
   light: { bg: "#f3f1ea", row: "#fffdf8", ink: "#17202a", dim: "#5f6b76" },
 } as const;
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] as const;
-
 // An invented September for an invented virtual airline, in the phpVMS log
-// shape: the 6:38 leg is the long-haul of the month, the 02:38 overnight is
-// the longest row a "DL1701/C.PF" style designator can carry here.
+// shape: the 7:42 KIAH-MMGL is the long-haul of the month; two rows carry
+// "--" for score to show the placeholder the card keeps out of the average.
 const DEFAULT_ROWS = [
   "01 Sep | UA332 | KIAH-MMGL | A319 | 07:42 | -182 | 100",
   "02 Sep | DL620 | MMUN-KJFK | A319 | 03:49 | -194 | 100",
@@ -229,7 +227,7 @@ export function normalizeVatsimLog(props: VatsimMonthlyLogProps) {
   const rows = p.rows.map((r, i) => parseVatsimLogRow(r, i));
 
   const minutesTotal = rows.reduce((s, r) => s + r.hours * 60 + r.minutes, 0);
-  const longest = rows.reduce((m, r, i) => (r.hours * 60 + r.minutes > m.hours * 60 + m.minutes ? r : m), rows[0]);
+  const longest = rows.reduce((m, r) => (r.hours * 60 + r.minutes > m.hours * 60 + m.minutes ? r : m), rows[0]);
   const vsValues = rows.map((r) => r.vs).filter((v): v is number => v !== null);
   const avgVs = vsValues.length ? Math.round(vsValues.reduce((s, v) => s + v, 0) / vsValues.length) : null;
   const hours = minutesTotal / 60;
@@ -486,12 +484,22 @@ const WHY: WhySpec = {
   }
 };
 
+/** Props with no rect to bind, and why (m0saic doctor's `bindingsDeclared`; the template type this repo builds against predates the field, so it is spread in). */
+const UNBOUND = {
+  bindings: {
+    unbound: {
+      careerHours: "summand: the milestone bar and its caption show careerHours PLUS the month's computed hours; no rect shows the raw figure, and binding it would let a double-click print a number that contradicts the bar",
+    },
+  },
+};
+
 export const VatsimMonthlyLogV1 = defineMosaicTemplate<VatsimMonthlyLogProps>({
   id: asTemplateId(ID),
   label: "2026-10-13 · VATSIM Monthly Log",
   version: 1,
   description: "A virtual airline's month as one ops-log card from the PIREP rows themselves: the pilot and month, four tiles, the dated table (date, flight, sector, type, block, fpm, score) and a career-milestone bar - flights, hours, longest and average all computed from the rows, nothing typed twice.",
   capabilities: { tier: "core" },
+  ...UNBOUND,
   tags: ["gaming", "2026-10-13", "day-024", "vatsim", "logbook", "pirep", "flight-hours", "virtual-airline", "monthly"],
 
   outputHints: {

@@ -17,11 +17,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.gamingTemplates = void 0;
 const speedrun_pb_recap_1 = require("./speedrun-pb-recap/v1/speedrun-pb-recap");
 const crossword_grid_card_1 = require("./crossword-grid-card/v1/crossword-grid-card");
+const vatsim_monthly_log_1 = require("./vatsim-monthly-log/v1/vatsim-monthly-log");
 /** Pack `gaming`, in registry order (mirrors ./registry.ts). */
 exports.gamingTemplates = [
     speedrun_pb_recap_1.SpeedrunPbRecapV1,
     crossword_grid_card_1.CrosswordGridCardV1,
+    vatsim_monthly_log_1.VatsimMonthlyLogV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./speedrun-pb-recap/v1/speedrun-pb-recap"), exports);
 __exportStar(require("./crossword-grid-card/v1/crossword-grid-card"), exports);
+__exportStar(require("./vatsim-monthly-log/v1/vatsim-monthly-log"), exports);

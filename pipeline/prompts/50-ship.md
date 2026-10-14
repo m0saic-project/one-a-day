@@ -42,7 +42,14 @@ Why it exists (the tutorial): m0saic make @one-a-day/<pack>/<slug>/v1 --template
 
 ## Weak spots (honest; a human polish pass starts here)
 ## Follow-ups (what v2 would do)
+## Tokens and costs
+Summarize the observed usage in trace.json and 60-token-costs.md. Distinguish
+reported dollars from dated estimates and disclose any missing usage.
+Link to 60-token-costs.md for the runner's final totals: it is refreshed after
+this ship call ends, so the current snapshot cannot include this call yet.
+OpenCode Go allowance usage is not an additional per-run invoice.
 ```
 
 6. Set `state.json.ship = "done"`. Do not commit. The runner runs the gate,
-   freezes the folder, commits once, pushes.
+   freezes the folder, commits once, pushes. GitHub CI then mints the release
+   bundle after policy and build pass.

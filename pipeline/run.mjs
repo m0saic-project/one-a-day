@@ -255,7 +255,7 @@ async function runPhase(adapter, phase) {
     // journal/<date>/trace.json: the phase's tool calls, tokens and timing, from the
     // agent CLI's own stream — the ship phase copies it into WHY.timeline.
     if (res.trace) {
-      const declared = readRun(DAY_DIR).model?.selfDeclared ?? MODEL ?? ADAPTER_CFG.model ?? AGENT;
+      const declared = MODEL ?? ADAPTER_CFG.model ?? readRun(DAY_DIR).model?.selfDeclared ?? AGENT;
       try { appendTrace(DAY_DIR, res.trace, { model: declared, pricing: CONFIG.pricing ?? null }); } catch (e) { say(`[${phase.id}] ⚠ trace not recorded: ${e.message}`); }
     }
     // The account's windows as this call last saw them: the next call reads

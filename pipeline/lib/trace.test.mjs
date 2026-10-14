@@ -115,3 +115,40 @@ test("cost: reported by the CLI wins; else an estimate from the dated price tabl
   assert.equal(tl.costBasis, "estimated"); // mixed: one phase estimated
   fs.rmSync(dir, { recursive: true, force: true });
 });
+
+test("missing usage stays unknown; the audit includes the completed ship call and replaces retries", (t) => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "usage-audit-"));
+  t.after(() => fs.rmSync(dir, { recursive: true, force: true }));
+  const pricing = { perMillion: { "opencode-go/model": { input: 1, output: 2, cacheRead: 0.1, cacheWrite: null, pricedAt: "2026-10-14", source: "https://opencode.ai/docs/go/" } } };
+  const model = "opencode-go/model";
+  appendTrace(dir, createTraceRecorder({ phase: "scout", startedAt: 0, now: () => 100 }).finish(), { model, pricing });
+  const ship = createTraceRecorder({ phase: "ship", startedAt: 200, now: () => 400 });
+  ship.onLine(JSON.stringify({ type: "step_finish", part: { cost: 0, tokens: { input: 1000, output: 100, reasoning: 20, cache: { read: 500 } } } }));
+  appendTrace(dir, ship.finish(), { model, pricing });
+  appendTrace(dir, ship.finish(), { model, pricing });
+  const audit = JSON.parse(fs.readFileSync(path.join(dir, "token-costs.json"), "utf8"));
+  assert.equal(audit.phases.length, 2);
+  assert.equal(audit.phases[0].tokens, null);
+  assert.equal(audit.phases[0].cost, null);
+  assert.equal(audit.phases[1].tokens.total, 1620);
+  assert.equal(audit.phases[1].cost.usd, 0.0013);
+  assert.equal(audit.totals.missingTokenPhases, 1);
+  assert.equal(audit.totals.missingCostPhases, 1);
+  assert.match(fs.readFileSync(path.join(dir, "60-token-costs.md"), "utf8"), /ship.*1620/);
+});
+
+test("partial OpenCode costs do not masquerade as a complete reported total", () => {
+  const rec = createTraceRecorder();
+  for (const cost of [0.25, 0]) rec.onLine(JSON.stringify({ type: "step_finish", part: { cost, tokens: { input: 10, output: 5 } } }));
+  assert.equal(rec.finish().cost, null);
+  assert.equal(rec.finish().partialReportedCostUsd, 0.25);
+});
+
+test("provider-specific longest price match wins; unsupported token prices are unknown", () => {
+  const pricing = { perMillion: {
+    model: { input: 99 },
+    "opencode-go/model": { input: 2, output: 5, cacheRead: 0.2, cacheWrite: null },
+  } };
+  assert.equal(estimateCost({ input: 1e6 }, "opencode-go/model", pricing).usd, 2);
+  assert.equal(estimateCost({ input: 1, cacheWrite: 1 }, "opencode-go/model", pricing), null);
+});

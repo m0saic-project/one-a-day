@@ -186,6 +186,23 @@ the CLI reported it (Claude Code) or estimated from `config.json` `pricing`
 template's `WHY.timeline` (`node pipeline/lib/trace.mjs --timeline
 journal/<date>/trace.json`), the last page of its why-tutorial.
 
+The runner also rewrites `token-costs.json` and `60-token-costs.md` after
+each agent call, including the completed ship call and all retries. These
+are the final usage audit; the frozen tutorial necessarily stops before the
+ship call finishes. Missing usage/cost is marked unknown, and dollar totals
+are subtotals when any calls lack a price. The actual selected model takes
+precedence over a model's self-declared name for pricing. Provider-specific
+OpenCode Go rates use the longest matching key and dated official prices;
+peak/long-context fallback rates are explicitly conservative. Go dollars
+represent allowance usage, not a separate invoice or allocated subscription fee.
+
+On this Windows production machine, `../ops/schedule/run-one-a-day.ps1`
+is the Task Scheduler entry point. It selects the Eastern journal date,
+clears inherited model/roster pins, runs the random roster, and then waits
+up to one hour for CI to publish all three assets for that exact commit.
+The dashboard records `RELEASED` only after that verification. Install it
+with `../ops/schedule/install-one-a-day.ps1`; see the ops README.
+
 **Gate** (`lib/gate.mjs`, deterministic):
 
 1. Scope guard — only today's allowed paths may differ from HEAD

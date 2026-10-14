@@ -29,6 +29,7 @@ export function createTraceRecorder({ phase, call = 1, startedAt = Date.now(), n
   let turns = 0;
   let errors = 0;
   let sawUsage = false;
+  let incompleteCost = false;
 
   const openSpan = (id, tool, target) => {
     const span = { tool: short(tool, 40), target: short(target, 80), startMs: Math.max(0, now() - startedAt), durMs: 0 };
@@ -79,6 +80,7 @@ export function createTraceRecorder({ phase, call = 1, startedAt = Date.now(), n
         if (Number.isFinite(Number(o.num_turns))) turns = Math.max(turns, Number(o.num_turns));
         const u = o.usage;
         if (u && !sawUsage) {
+          sawUsage = true;
           tokens.input += Number(u.input_tokens ?? 0);
           tokens.output += Number(u.output_tokens ?? 0);
           tokens.cacheRead += Number(u.cache_read_input_tokens ?? 0);
@@ -119,6 +121,7 @@ export function createTraceRecorder({ phase, call = 1, startedAt = Date.now(), n
         tokens.cacheWrite += Number(t.cache?.write ?? 0);
         const c = Number(o.part.cost);
         if (Number.isFinite(c) && c > 0) cost = (cost ?? 0) + c;
+        else incompleteCost = true;
         return;
       }
       // ── Codex --json (best effort) ──
@@ -135,7 +138,7 @@ export function createTraceRecorder({ phase, call = 1, startedAt = Date.now(), n
       if (o.type === "turn.completed" || o.type === "thread.completed") {
         turns += 1;
         const u = o.usage;
-        if (u) { tokens.input += Number(u.input_tokens ?? 0); tokens.output += Number(u.output_tokens ?? 0); tokens.cacheRead += Number(u.cached_input_tokens ?? 0); }
+        if (u) { sawUsage = true; tokens.input += Number(u.input_tokens ?? 0); tokens.output += Number(u.output_tokens ?? 0); tokens.cacheRead += Number(u.cached_input_tokens ?? 0); }
       }
     },
     finish({ exitCode = 0, timedOut = false } = {}) {
@@ -155,7 +158,9 @@ export function createTraceRecorder({ phase, call = 1, startedAt = Date.now(), n
         toolErrors: errors,
         turns,
         tokens: { ...tokens, total },
-        cost,
+        tokensRecorded: sawUsage,
+        cost: incompleteCost ? null : cost,
+        ...(incompleteCost && cost != null ? { partialReportedCostUsd: cost } : {}),
         tools,
         spans,
       };
@@ -172,9 +177,11 @@ export function createTraceRecorder({ phase, call = 1, startedAt = Date.now(), n
 export function estimateCost(tokens, model, pricing) {
   const table = pricing?.perMillion ?? {};
   const name = String(model ?? "").toLowerCase();
-  const key = Object.keys(table).find((k) => name.includes(k.toLowerCase()));
+  const key = Object.keys(table).sort((a, b) => b.length - a.length).find((k) => name.includes(k.toLowerCase()));
   if (!key || !tokens) return null;
   const r = table[key];
+  // A nonzero token category with no price is unknown, not free.
+  if (["input", "output", "cacheRead", "cacheWrite"].some((k) => Number(tokens[k] ?? 0) > 0 && !Number.isFinite(r[k]))) return null;
   const usd = (Number(tokens.input ?? 0) * (r.input ?? 0) + Number(tokens.output ?? 0) * (r.output ?? 0) + Number(tokens.cacheRead ?? 0) * (r.cacheRead ?? 0) + Number(tokens.cacheWrite ?? 0) * (r.cacheWrite ?? 0)) / 1e6;
   return { usd: Math.round(usd * 10000) / 10000, rate: key, pricedAt: r.pricedAt ?? pricing?.pricedAt ?? null };
 }
@@ -200,7 +207,8 @@ export function appendTrace(dayDir, record, { model = null, pricing = null } = {
   const trace = readTrace(dayDir);
   const phases = (Array.isArray(trace.phases) ? trace.phases : []).filter((p) => !(p.phase === record.phase && p.call === record.call));
   const withCost = { ...record };
-  if (withCost.cost == null) {
+  withCost.model = model;
+  if (withCost.cost == null && withCost.tokensRecorded !== false) {
     const est = estimateCost(withCost.tokens, model, pricing);
     withCost.costEstimate = est ? { usd: est.usd, rate: est.rate, pricedAt: est.pricedAt } : null;
   }
@@ -211,6 +219,7 @@ export function appendTrace(dayDir, record, { model = null, pricing = null } = {
   const next = { startedAt: new Date(t0).toISOString(), phases, totals: totalsOf(phases) };
   fs.mkdirSync(dayDir, { recursive: true });
   fs.writeFileSync(tracePath(dayDir), JSON.stringify(next, null, 2) + "\n");
+  writeUsageReport(dayDir, next, pricing);
   return next;
 }
 
@@ -226,7 +235,32 @@ export function totalsOf(phases) {
   const last = phases.reduce((m, p) => Math.max(m, (p.startMs ?? 0) + (p.durMs ?? 0)), 0);
   const costs = phases.map(costOf).filter(Boolean);
   const basis = costs.length === 0 ? null : costs.every((c) => c.basis === "reported") ? "reported" : "estimated";
-  return { phases: phases.length, calls: sum((p) => p.calls), tokens: sum((p) => p.tokens?.total), costUsd: costs.length ? Math.round(costs.reduce((a, c) => a + c.usd, 0) * 100) / 100 : null, costBasis: basis, wallMs: last };
+  return { phases: phases.length, calls: sum((p) => p.calls), tokens: sum((p) => p.tokens?.total), costUsd: costs.length ? Math.round(costs.reduce((a, c) => a + c.usd, 0) * 100) / 100 : null, costBasis: basis, missingTokenPhases: phases.filter((p) => p.tokensRecorded === false || (p.tokensRecorded == null && !p.tokens?.total)).length, missingCostPhases: phases.length - costs.length, wallMs: last };
+}
+
+/** Updated after every completed call, including ship and retries; no model guesses. */
+export function writeUsageReport(dayDir, trace, pricing) {
+  const scope = "Recorded daily agent calls, including retries and the ship call once it finishes. Excludes maintenance, CLI metadata/title calls, unreported child sessions, CI, and rendering. The frozen tutorial is a snapshot from before the ship call completes.";
+  const note = "OpenCode Go dollars describe reported usage or an estimated draw against plan allowances, not an additional per-run invoice. Missing usage is unknown, never zero. Estimates use dated rates; subscription fees are not allocated to individual runs.";
+  const phases = trace.phases.map((p) => ({
+    name: p.name ?? p.phase, model: p.model ?? null,
+    tokens: p.tokensRecorded === false ? null : p.tokens ?? null,
+    cost: costOf(p),
+    rate: p.costEstimate?.rate ?? null,
+    pricingSource: pricing?.perMillion?.[p.costEstimate?.rate]?.source ?? null,
+    pricingNote: pricing?.perMillion?.[p.costEstimate?.rate]?.note ?? null,
+  }));
+  const report = { scope, note, totals: trace.totals, phases };
+  fs.writeFileSync(path.join(dayDir, "token-costs.json"), JSON.stringify(report, null, 2) + "\n");
+  const rows = phases.map((p) => `| ${p.name} | ${p.model ?? "unknown"} | ${p.tokens?.total ?? "unknown"} | ${p.cost ? `$${p.cost.usd.toFixed(4)} (${p.cost.basis})` : "unknown"} | ${p.cost?.pricedAt ?? "-"} |`);
+  const rates = [...new Set(phases.filter((p) => p.pricingSource).map((p) => `- ${p.rate}: ${p.pricingSource}${p.pricingNote ? ` - ${p.pricingNote}` : ""}`))];
+  const total = trace.totals;
+  fs.writeFileSync(path.join(dayDir, "60-token-costs.md"), [
+    "# Tokens and costs", "", scope, "", note, "",
+    `Observed tokens: ${total.tokens}. Known cost subtotal: ${total.costUsd == null ? "unknown" : `$${total.costUsd.toFixed(2)} (${total.costBasis})`}.`,
+    `Calls missing token usage: ${total.missingTokenPhases}. Calls missing cost: ${total.missingCostPhases}.`, "",
+    "| Call | Model | Tokens | USD | Pricing date |", "| --- | --- | ---: | --- | --- |", ...rows, "", ...rates, "",
+  ].join("\n"));
 }
 
 /** The WHY.timeline shape (the harness agent-timeline's phases), from a trace. */

@@ -29,4 +29,12 @@ exports.gamingRegistry = [
         description: "A virtual airline's month as one ops-log card from the PIREP rows themselves: the pilot and month, four tiles, the dated table (date, flight, sector, type, block, fpm, score) and a career-milestone bar - flights, hours, longest and average all computed from the rows, nothing typed twice.",
         tags: ["gaming", "2026-10-13", "day-024", "vatsim", "logbook", "pirep", "flight-hours", "virtual-airline", "monthly"],
     },
+    {
+        slug: "tenxten-challenge-card",
+        templateId: "@one-a-day/gaming/tenxten-challenge-card/v1",
+        exportName: "TenxtenChallengeCardV1",
+        title: "2026-10-14 · 10x10 Challenge Card",
+        description: "The yearly 10x10 board game challenge as a progress card: ten games x ten plays as a pip grid - per-game fill, the plays and games-done totals and the year pace computed from the list, never typed.",
+        tags: ["gaming", "2026-10-14", "day-025", "board-games", "10x10", "challenge", "progress", "plays", "bgg"],
+    },
 ];

@@ -1,0 +1,36 @@
+{
+  "useCase": "Yearly 10x10 board game challenge progress cards: the 10-game list as a 10x10 pip grid with per-game play counts, completion stats and pace, from the plays a challenger already logs on BGG or BG Stats",
+  "who": "Board gamers running the yearly 10x10 challenge (BGG forums, geeklists and the challenge guild, r/boardgames and r/soloboardgaming, hobby blogs) who log plays on BGG or the BG Stats app and post progress updates through the year",
+  "sources": [
+    "https://thebrokentoken.com/products/10x10-challenge-board-kit",
+    "https://boardgamestash.com/learn/10x10-board-game-challenge",
+    "https://leminal.space/post/3028676",
+    "https://honestmeeple.co.uk/10x10-challenge-2020",
+    "https://www.varianthex.com/blog/2020/07/02/10x10x5-challenge-part-one",
+    "https://github.com/naxhh/tenXtenTrackerApp"
+  ],
+  "tags": [
+    "board-games",
+    "10x10",
+    "challenge",
+    "progress",
+    "plays"
+  ],
+  "pack": "gaming",
+  "slug": "tenxten-challenge-card",
+  "title": "10x10 Challenge Card",
+  "scout": "done",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

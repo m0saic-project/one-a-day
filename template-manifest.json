@@ -265,6 +265,27 @@
       }
     },
     {
+      "slug": "tenxten-challenge-card",
+      "templateKey": "@one-a-day/gaming/tenxten-challenge-card/v1",
+      "title": "2026-10-14 · 10x10 Challenge Card",
+      "description": "The yearly 10x10 board game challenge as a progress card: ten games x ten plays as a pip grid - per-game fill, the plays and games-done totals and the year pace computed from the list, never typed.",
+      "tags": [
+        "gaming",
+        "2026-10-14",
+        "day-025",
+        "board-games",
+        "10x10",
+        "challenge",
+        "progress",
+        "plays",
+        "bgg"
+      ],
+      "pack": "gaming",
+      "preview": {
+        "image": "assets/templates/@one-a-day__gaming__tenxten-challenge-card__v1/preview.png"
+      }
+    },
+    {
       "slug": "powerlifting-meet-recap",
       "templateKey": "@one-a-day/sports/powerlifting-meet-recap/v1",
       "title": "2026-09-27 · Powerlifting Meet Recap",

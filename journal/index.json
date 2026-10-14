@@ -678,5 +678,36 @@
       "https://www.reddit.com/r/VATSIM/comments/1pazqke/vatsim_pilot_hours_statistics",
       "https://www.facebook.com/groups/608473926761307/posts/1976861463255873"
     ]
+  },
+  {
+    "date": "2026-10-14",
+    "day": 25,
+    "agent": "opencode",
+    "model": "glm-5.3",
+    "rosterId": "go-glm-5.3",
+    "status": "shipped",
+    "templateId": "@one-a-day/gaming/tenxten-challenge-card/v1",
+    "title": "2026-10-14 · 10x10 Challenge Card",
+    "pack": "gaming",
+    "useCase": "Yearly 10x10 board game challenge progress cards: the 10-game list as a 10x10 pip grid with per-game play counts, completion stats and pace, from the plays a challenger already logs on BGG or BG Stats",
+    "tags": [
+      "gaming",
+      "2026-10-14",
+      "day-025",
+      "board-games",
+      "10x10",
+      "challenge",
+      "progress",
+      "plays",
+      "bgg"
+    ],
+    "sources": [
+      "https://thebrokentoken.com/products/10x10-challenge-board-kit",
+      "https://boardgamestash.com/learn/10x10-board-game-challenge",
+      "https://leminal.space/post/3028676",
+      "https://honestmeeple.co.uk/10x10-challenge-2020",
+      "https://www.varianthex.com/blog/2020/07/02/10x10x5-challenge-part-one",
+      "https://github.com/naxhh/tenXtenTrackerApp"
+    ]
   }
 ]

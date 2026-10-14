@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { createGoLimitWatcher, credentialedProviders } from "./opencode.mjs";
+import { createGoLimitWatcher, credentialedProviders, hasConsoleOrganization } from "./opencode.mjs";
 
 test("credentialedProviders: the provider ids in auth.json, none when the file is missing or broken", () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "oc-auth-"));
@@ -13,6 +13,13 @@ test("credentialedProviders: the provider ids in auth.json, none when the file i
   assert.deepEqual(credentialedProviders(file), []);
   fs.writeFileSync(file, JSON.stringify({ "opencode-go": { type: "api", key: "x" }, openrouter: { type: "api", key: "y" } }));
   assert.deepEqual(credentialedProviders(file), ["opencode-go", "openrouter"]);
+});
+
+test("hasConsoleOrganization recognizes the OpenCode 1.18 console-login row but not help or missing auth", () => {
+  assert.equal(hasConsoleOrganization("● Personal  user@example.com  https://opencode.ai/console  org_01ABC"), true);
+  assert.equal(hasConsoleOrganization("\u001b[92m●\u001b[0m Personal  user@example.com  https://opencode.ai/console  org_01ABC"), true);
+  assert.equal(hasConsoleOrganization("0 credentials"), false);
+  assert.equal(hasConsoleOrganization("https://opencode.ai/console"), false);
 });
 
 test("createGoLimitWatcher: a limit-shaped error event is a hit with no reset time; other errors and parts are not", () => {

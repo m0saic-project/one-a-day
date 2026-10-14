@@ -94,12 +94,12 @@ const CONTEXT = (() => {
 })();
 
 /* ── adapter ── */
-async function loadAdapter(name) {
+async function loadAdapter(name, options = {}) {
   const file = path.join(PIPELINE, "agents", `${name}.mjs`);
   if (!fs.existsSync(file)) throw new Error(`no adapter pipeline/agents/${name}.mjs`);
   const mod = await import(pathToFileURL(file).href);
   if (typeof mod.run !== "function") throw new Error(`adapter ${name} exports no run()`);
-  if (typeof mod.available === "function") { const why = await mod.available(); if (why !== true) throw new Error(`adapter ${name} unavailable: ${why}`); }
+  if (typeof mod.available === "function") { const why = await mod.available(options); if (why !== true) throw new Error(`adapter ${name} unavailable: ${why}`); }
   return mod;
 }
 
@@ -149,7 +149,7 @@ async function resolveAgent() {
       say(`[roster] draw order: ${order.map((e) => e.id).join(" → ")}`);
       for (const entry of order) {
         try {
-          const mod = await loadAdapter(entry.agent);
+          const mod = await loadAdapter(entry.agent, { model: MODEL_REQ ?? entry.model ?? CONFIG.adapters?.[entry.agent]?.model ?? null });
           apply(entry, order[0].id === entry.id ? "drawn" : "drawn after skipping an unavailable agent");
           say(`[roster] ✓ ${describeEntry(entry)}`);
           return mod;
@@ -163,7 +163,7 @@ async function resolveAgent() {
   }
 
   if (GATE_ONLY) return null;
-  try { return await loadAdapter(AGENT); } catch (e) { say(`✗ ${e.message}`); process.exit(2); }
+  try { return await loadAdapter(AGENT, { model: MODEL }); } catch (e) { say(`✗ ${e.message}`); process.exit(2); }
 }
 
 /* ── preflight ── */

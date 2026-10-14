@@ -16,6 +16,7 @@ import { createTraceRecorder } from "../lib/trace.mjs";
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const CONFIG = path.join(HERE, "opencode.json");
 const AUTH = path.join(os.homedir(), ".local", "share", "opencode", "auth.json");
+const ANSI_RE = /\u001b\[[0-?]*[ -/]*[@-~]/g;
 
 /** Provider ids with a stored credential (`opencode auth login`). The free `opencode/*` models need none. */
 export function credentialedProviders(file = AUTH) {
@@ -25,12 +26,24 @@ export function credentialedProviders(file = AUTH) {
   } catch { return []; }
 }
 
+/** OpenCode 1.18 console device login is stored in opencode.db, not auth.json. */
+export function hasConsoleOrganization(output) {
+  const plain = String(output ?? "").replace(ANSI_RE, "");
+  return /https:\/\/opencode\.ai\/console\s+org_[A-Za-z0-9]+/i.test(plain);
+}
+
+async function consoleAccountAvailable() {
+  const r = await runProcess({ cmd: "opencode", args: ["console", "orgs"], timeoutMs: 20_000 });
+  return r.exitCode === 0 && hasConsoleOrganization(r.stdout);
+}
+
 /** "Installed and logged in", the roster's rule: the binary runs and at least one provider has a credential. */
-export async function available() {
+export async function available({ model } = {}) {
   const r = await runProcess({ cmd: "opencode", args: ["--version"], timeoutMs: 20_000 });
   if (r.exitCode !== 0) return `opencode CLI not runnable (${r.stderr.trim() || r.exitCode})`;
-  if (!credentialedProviders().length) return "opencode has no provider credentials - run `opencode auth login` (OpenCode Go) on this machine";
-  return true;
+  if (credentialedProviders().length) return true;
+  if (String(model ?? "").startsWith("opencode-go/") && await consoleAccountAvailable()) return true;
+  return "opencode has no provider credentials or active console organization - connect OpenCode Go or run `opencode console login` on this machine";
 }
 
 const LIMIT_RE = /rate.?limit|usage limit|limit (?:reached|exceeded|hit)|quota|too many requests|\b429\b|insufficient (?:balance|credits)/i;
@@ -70,7 +83,9 @@ export async function run({ prompt, cwd, logDir, label, timeoutMs, model, config
   // A slot on a provider this machine has no key for is a configuration
   // mistake, not a model failure: say so in the log and spend nothing.
   const provider = String(model ?? "").includes("/") ? String(model).split("/")[0] : null;
-  if (provider && provider !== "opencode" && !credentialedProviders().includes(provider)) {
+  const hasCredential = provider === "opencode" || !provider || credentialedProviders().includes(provider) ||
+    (provider === "opencode-go" && await consoleAccountAvailable());
+  if (!hasCredential) {
     const why = `[${label}] no credential for provider "${provider}" - run: opencode auth login`;
     fs.appendFileSync(log, why + "\n");
     return { exitCode: 1, timedOut: false, ms: 0, transcript: null, log, trace: trace.finish({ exitCode: 1 }), limit: limit.finish() };

@@ -34,7 +34,8 @@ export function hasConsoleOrganization(output) {
 
 async function consoleAccountAvailable() {
   const r = await runProcess({ cmd: "opencode", args: ["console", "orgs"], timeoutMs: 20_000 });
-  return r.exitCode === 0 && hasConsoleOrganization(r.stdout);
+  // The TUI-style org list is written to stderr when run without a terminal.
+  return r.exitCode === 0 && hasConsoleOrganization(`${r.stdout}\n${r.stderr}`);
 }
 
 /** "Installed and logged in", the roster's rule: the binary runs and at least one provider has a credential. */

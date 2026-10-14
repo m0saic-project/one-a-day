@@ -9,6 +9,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   policy:
     strategy:
@@ -31,6 +34,8 @@ jobs:
         # A glob, not the bare directory: Node 22 rejects `pipeline/lib/` as a
         # test target on some platforms and the whole folder is skipped silently.
         run: node --test tools/check-freeze.test.mjs "pipeline/lib/*.test.mjs"
+      - name: Release bundle contract
+        run: node --test tools/pack-bundle.test.mjs
 
   build:
     runs-on: ubuntu-latest
@@ -47,3 +52,45 @@ jobs:
       - run: npm run lint
       - run: npx jest
       - run: node tools/contract-check.mjs --deep
+
+  release:
+    needs: [policy, build]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # Serialize publishing so releases cannot overwrite each other's assets.
+    concurrency:
+      group: template-releases
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Pack the verified commit
+        id: bundle
+        shell: bash
+        run: |
+          tag="v$(git show -s --format=%cs HEAD | tr '-' '.').${GITHUB_RUN_NUMBER}"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          npm run bundle -- --tag "$tag"
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.bundle.outputs.tag }}
+        shell: bash
+        run: |
+          # A rerun of a completed release is a no-op; upload all assets to a
+          # draft first, so latest never points at a half-uploaded bundle.
+          if gh release view "$TAG" --json isDraft --jq '.isDraft' > "$RUNNER_TEMP/release-draft"; then
+            if [ "$(cat "$RUNNER_TEMP/release-draft")" = false ]; then
+              exit 0
+            fi
+          else
+            gh release create "$TAG" --target "$GITHUB_SHA" --draft \
+              --title "One a Day $TAG" \
+              --notes "Unsigned third-party template bundle. runtime.tgz contains the built templates and runtime assets; previews.tgz contains gallery previews; bundle.json records their SHA-256 hashes and sizes. Source and daily journals remain in the repository."
+          fi
+          gh release upload "$TAG" bundle/bundle.json bundle/runtime.tgz bundle/previews.tgz --clobber
+          gh release edit "$TAG" --draft=false

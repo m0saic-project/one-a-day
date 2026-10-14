@@ -258,6 +258,21 @@ orientation; the detail is the journal.
 
 ## Scope
 
+### Publishing finished work
+
+The daily runner's successful gate commits and pushes the new template.
+GitHub CI then publishes `bundle.json`, `runtime.tgz`, and `previews.tgz`
+after both policy and build pass. Daily agents finish the ship phase and
+leave committing and pushing to the runner as usual.
+
+For user-directed work outside a daily run, agents may use
+`npm run release -- "<summary>"` to verify, commit, and push finished work
+for publication. This is `submit --push`: it runs the maintenance ritual
+and refuses to run inside a daily phase. For a commit-only request, use
+`npm run submit -- "<summary>"` instead. Release publication is asynchronous;
+a successful local command confirms the push, while GitHub CI reports
+whether the bundle was published.
+
 Do not restructure packs, renumber titles, or delete templates. Do not "improve"
 yesterday's template. Do not touch the pipeline to make today easier — write what
 was hard into `30-build.md`; the humans who maintain `pipeline/` read it.

@@ -1,5 +1,6 @@
 # dependencies
 node_modules
+/bundle/
 
 # NOTE: dist/ and template-manifest.json are COMMITTED on purpose — hosts
 # load dist/index.js straight from a clone (there is no src/ load path), and

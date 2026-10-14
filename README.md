@@ -48,6 +48,17 @@ clone, Add source → the folder, `git pull` + **Refresh repos** each day.
 
 **CLI.**
 
+For a small download, get `runtime.tgz` from the
+[latest release](https://github.com/m0saic-project/one-a-day/releases/latest)
+and extract it into an empty folder. Pass that folder to `--template-repo`.
+Extract `previews.tgz` into the same folder if you also want gallery previews.
+`bundle.json` records both archives' SHA-256 hashes and sizes, using the same
+bundle convention as community templates. The runtime includes `dist/`, its
+media assets, the manifest, package metadata, and license notices. Source,
+journals, and Git history stay in the repository.
+
+For source and the daily journals, clone the repository:
+
 ```
 git clone https://github.com/m0saic-project/one-a-day
 m0saic list-templates --template-repo ./one-a-day --json
@@ -117,6 +128,40 @@ and [`v3/`](journal/2026-10-07/v3/) the same day - rebuilt cell by cell
   story; `dist/` is its build.
 
 ## Run it yourself
+
+### Release bundles
+
+Every push to `main` that passes both CI jobs publishes a GitHub release with
+`bundle.json`, `runtime.tgz`, and `previews.tgz`. Tags use the commit date and
+GitHub run number (`vYYYY.MM.DD.N`). Assets are uploaded to a draft before it
+is published; rerunning an already published release leaves it intact.
+Bundles remain unsigned third-party templates.
+
+Agents working outside the daily runner can publish finished work with:
+
+```sh
+npm run release -- "Add the new template"
+```
+
+This runs the maintenance checks (build, conventions, lint, tests, loader,
+dependencies, freeze, and doctor), commits the work, and pushes to `main`.
+GitHub CI then publishes the release bundle after its checks pass; the local
+command finishing means the push succeeded, not that CI has finished.
+It requires Git push credentials and installed authoring dependencies.
+The daily runner already commits and pushes after its gate, so daily agents
+finish the ship phase normally and do not call this command themselves.
+Use `npm run submit -- "summary"` to check and commit without pushing.
+
+To inspect a bundle locally, run `npm run bundle`, or
+`node tools/pack-bundle.mjs --unsigned --tag v2026.10.13.1` to set a tag.
+This packages the build currently on disk without installing dependencies or rebuilding;
+run `npm run verify` first when changing source. Output goes to the ignored
+`bundle/` folder. `npm run test:bundle` checks extraction, hashes, runtime loading,
+excluded files, and reproducibility. The builder and `verify-release.mjs` hash
+helper were copied together from community templates in m0saic-monorepo commit
+`bbb141e96844a5a6638df94f22c2f8910d8ca2d5`; keep them in sync when updating the format.
+
+### Daily pipeline
 
 The pipeline is agent-agnostic and lives in [`pipeline/`](pipeline/README.md).
 Point it at your own coding-agent CLI, set the environment (`M0SAIC_PRODUCT_KEY`

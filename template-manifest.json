@@ -286,6 +286,25 @@
       }
     },
     {
+      "slug": "osu-scorepost-card",
+      "templateKey": "@one-a-day/gaming/osu-scorepost-card/v1",
+      "title": "2026-10-15 · osu! Scorepost Card",
+      "description": "An osu! result-screen card from the API score object: beatmap header, rank badge, four stat tiles, hit counts and mods - rendered for r/osugame or Discord without remote art.",
+      "tags": [
+        "gaming",
+        "2026-10-15",
+        "day-026",
+        "osu",
+        "scorepost",
+        "rhythm-game",
+        "card"
+      ],
+      "pack": "gaming",
+      "preview": {
+        "image": "assets/templates/@one-a-day__gaming__osu-scorepost-card__v1/preview.png"
+      }
+    },
+    {
       "slug": "powerlifting-meet-recap",
       "templateKey": "@one-a-day/sports/powerlifting-meet-recap/v1",
       "title": "2026-09-27 · Powerlifting Meet Recap",

@@ -709,5 +709,34 @@
       "https://www.varianthex.com/blog/2020/07/02/10x10x5-challenge-part-one",
       "https://github.com/naxhh/tenXtenTrackerApp"
     ]
+  },
+  {
+    "date": "2026-10-15",
+    "day": 26,
+    "agent": "opencode",
+    "model": "opencode-go/kimi-k2.7-code",
+    "rosterId": "go-kimi-k2.7-code",
+    "status": "shipped",
+    "templateId": "@one-a-day/gaming/osu-scorepost-card/v1",
+    "title": "2026-10-15 · osu! Scorepost Card",
+    "pack": "gaming",
+    "useCase": "osu! scorepost cards from the official API score object: a rendered result-screen card for r/osugame, one per notable play",
+    "tags": [
+      "gaming",
+      "2026-10-15",
+      "day-026",
+      "osu",
+      "scorepost",
+      "rhythm-game",
+      "card"
+    ],
+    "sources": [
+      "https://osuscorepost.wesleyxie.com/how_to_use",
+      "https://github.com/NoelleTGS/osu-scorepost-generator",
+      "https://www.reddit.com/r/osugame/wiki/scoreposting",
+      "https://github.com/ppy/osu/discussions/30685",
+      "https://github.com/solstice23/osu-stats-signature",
+      "https://github.com/saddexed/osu-stats-card"
+    ]
   }
 ]

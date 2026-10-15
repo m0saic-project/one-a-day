@@ -1,0 +1,44 @@
+{
+  "scout": "done",
+  "plan": "done",
+  "scaffolded": true,
+  "pack": "gaming",
+  "slug": "osu-scorepost-card",
+  "title": "osu! Scorepost Card",
+  "useCase": "osu! scorepost cards from the official API score object: a rendered result-screen card for r/osugame, one per notable play",
+  "who": "osu! players on r/osugame and Discord who post score screenshots",
+  "sources": [
+    "https://osuscorepost.wesleyxie.com/how_to_use",
+    "https://github.com/NoelleTGS/osu-scorepost-generator",
+    "https://www.reddit.com/r/osugame/wiki/scoreposting",
+    "https://github.com/ppy/osu/discussions/30685",
+    "https://github.com/solstice23/osu-stats-signature",
+    "https://github.com/saddexed/osu-stats-card"
+  ],
+  "tags": [
+    "osu",
+    "scorepost",
+    "rhythm-game",
+    "gaming",
+    "card"
+  ],
+  "variants": [
+    "a",
+    "b"
+  ],
+  "inPlace": "b",
+  "build": "done",
+  "critique": "done",
+  "ship": "done",
+  "decision": "ship",
+  "pick": "b",
+  "revision": 1,
+  "revisions": [
+    {
+      "round": 1,
+      "at": "2026-10-15T14:03:34.106Z",
+      "rejected": "WHY.timeline omits the build phase and tutorial-6 shows wrong totals; layout-contract loops under-promise and key prop rects are unbound.",
+      "verdict": "40-critique.r1.md"
+    }
+  ]
+}

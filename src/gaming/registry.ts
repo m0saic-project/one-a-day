@@ -40,4 +40,13 @@ export const gamingRegistry: StarterRegistryEntry[] = [
       "The yearly 10x10 board game challenge as a progress card: ten games x ten plays as a pip grid - per-game fill, the plays and games-done totals and the year pace computed from the list, never typed.",
     tags: ["gaming","2026-10-14","day-025","board-games","10x10","challenge","progress","plays","bgg"],
   },
+  {
+    slug: "osu-scorepost-card",
+    templateId: "@one-a-day/gaming/osu-scorepost-card/v1",
+    exportName: "OsuScorepostCardV1",
+    title: "2026-10-15 · osu! Scorepost Card",
+    description:
+      "An osu! result-screen card from the API score object: beatmap header, rank badge, four stat tiles, hit counts and mods - rendered for r/osugame or Discord without remote art.",
+    tags: ["gaming","2026-10-15","day-026","osu","scorepost","rhythm-game","card"],
+  },
 ];

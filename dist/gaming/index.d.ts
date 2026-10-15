@@ -5,3 +5,4 @@ export * from "./speedrun-pb-recap/v1/speedrun-pb-recap";
 export * from "./crossword-grid-card/v1/crossword-grid-card";
 export * from "./vatsim-monthly-log/v1/vatsim-monthly-log";
 export * from "./tenxten-challenge-card/v1/tenxten-challenge-card";
+export * from "./osu-scorepost-card/v1/osu-scorepost-card";

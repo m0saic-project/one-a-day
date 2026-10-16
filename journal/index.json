@@ -738,5 +738,35 @@
       "https://github.com/solstice23/osu-stats-signature",
       "https://github.com/saddexed/osu-stats-card"
     ]
+  },
+  {
+    "date": "2026-10-16",
+    "day": 27,
+    "agent": "opencode",
+    "model": "mimo-v2.6-pro",
+    "rosterId": "go-mimo-v2.6-pro",
+    "status": "shipped",
+    "templateId": "@one-a-day/gaming/commander-deck-spotlight/v1",
+    "title": "2026-10-16 · Commander Deck Spotlight Card",
+    "pack": "gaming",
+    "useCase": "Commander/TCG deck spotlight cards from the Moxfield/Archidekt decklist text export: deck name, commander, mana curve, color identity and highlight cards as one digestible share image for game-night chats, rate-my-deck posts and tournament coverage",
+    "tags": [
+      "gaming",
+      "2026-10-16",
+      "day-027",
+      "mtg",
+      "commander",
+      "edh",
+      "decklist",
+      "deck-tech",
+      "share-card"
+    ],
+    "sources": [
+      "https://mythichub.com/blog/turn-a-boring-decklist-into-an-awesome-image",
+      "https://mythichub.com/deck-spotlight",
+      "https://archidekt.com/faq",
+      "https://overpower.topdeck.gg/blog/visual-deck-display-20250626",
+      "https://github.com/YohannBethoule/DeckPassport"
+    ]
   }
 ]

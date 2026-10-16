@@ -1,0 +1,35 @@
+{
+  "useCase": "Commander/TCG deck spotlight cards from the Moxfield/Archidekt decklist text export: deck name, commander, mana curve, color identity and highlight cards as one digestible share image for game-night chats, rate-my-deck posts and tournament coverage",
+  "who": "Magic: The Gathering Commander/EDH players on r/EDH, deck-building Facebook groups and playgroup chats, who share decklists exported from Moxfield, Archidekt or ManaBox",
+  "sources": [
+    "https://mythichub.com/blog/turn-a-boring-decklist-into-an-awesome-image",
+    "https://mythichub.com/deck-spotlight",
+    "https://archidekt.com/faq",
+    "https://overpower.topdeck.gg/blog/visual-deck-display-20250626",
+    "https://github.com/YohannBethoule/DeckPassport"
+  ],
+  "tags": [
+    "mtg",
+    "commander",
+    "decklist",
+    "deck-tech",
+    "share-card",
+    "gaming"
+  ],
+  "scout": "done",
+  "pack": "gaming",
+  "slug": "commander-deck-spotlight",
+  "title": "Commander Deck Spotlight Card",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

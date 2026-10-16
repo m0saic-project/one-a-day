@@ -1,0 +1,106 @@
+{
+  "scope": "Recorded daily agent calls, including retries and the ship call once it finishes. Excludes maintenance, CLI metadata/title calls, unreported child sessions, CI, and rendering. The frozen tutorial is a snapshot from before the ship call completes.",
+  "note": "OpenCode Go dollars describe reported usage or an estimated draw against plan allowances, not an additional per-run invoice. Missing usage is unknown, never zero. Estimates use dated rates; subscription fees are not allocated to individual runs.",
+  "totals": {
+    "phases": 5,
+    "calls": 229,
+    "tokens": 15569088,
+    "costUsd": 0.45,
+    "costBasis": "reported",
+    "missingTokenPhases": 0,
+    "missingCostPhases": 0,
+    "wallMs": 7564475
+  },
+  "phases": [
+    {
+      "name": "scout",
+      "model": "opencode-go/mimo-v2.6-pro",
+      "tokens": {
+        "input": 84805,
+        "output": 19268,
+        "cacheRead": 729344,
+        "cacheWrite": 0,
+        "total": 833417
+      },
+      "cost": {
+        "usd": 0.056297206999999995,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "plan",
+      "model": "opencode-go/mimo-v2.6-pro",
+      "tokens": {
+        "input": 56924,
+        "output": 16841,
+        "cacheRead": 627328,
+        "cacheWrite": 0,
+        "total": 701093
+      },
+      "cost": {
+        "usd": 0.041687674,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "build",
+      "model": "opencode-go/mimo-v2.6-pro",
+      "tokens": {
+        "input": 253254,
+        "output": 114424,
+        "cacheRead": 10891776,
+        "cacheWrite": 0,
+        "total": 11259454
+      },
+      "cost": {
+        "usd": 0.24919705799999994,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "critique",
+      "model": "opencode-go/mimo-v2.6-pro",
+      "tokens": {
+        "input": 76889,
+        "output": 27812,
+        "cacheRead": 1441152,
+        "cacheWrite": 0,
+        "total": 1545853
+      },
+      "cost": {
+        "usd": 0.062867331,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "ship",
+      "model": "opencode-go/mimo-v2.6-pro",
+      "tokens": {
+        "input": 55343,
+        "output": 10664,
+        "cacheRead": 1163264,
+        "cacheWrite": 0,
+        "total": 1229271
+      },
+      "cost": {
+        "usd": 0.037568717,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    }
+  ]
+}

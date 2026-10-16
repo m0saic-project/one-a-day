@@ -305,6 +305,27 @@
       }
     },
     {
+      "slug": "commander-deck-spotlight",
+      "templateKey": "@one-a-day/gaming/commander-deck-spotlight/v1",
+      "title": "2026-10-16 · Commander Deck Spotlight Card",
+      "description": "A Magic Commander/EDH deck as one share card from the decklist fields themselves: kicker, bracket and record pills, deck name, commander line with WUBRG mana chips, an eight-bar mana curve with derived AVG MV and spell count, 3-6 highlight rows and the plan one-liner.",
+      "tags": [
+        "gaming",
+        "2026-10-16",
+        "day-027",
+        "mtg",
+        "commander",
+        "edh",
+        "decklist",
+        "deck-tech",
+        "share-card"
+      ],
+      "pack": "gaming",
+      "preview": {
+        "image": "assets/templates/@one-a-day__gaming__commander-deck-spotlight__v1/preview.png"
+      }
+    },
+    {
       "slug": "powerlifting-meet-recap",
       "templateKey": "@one-a-day/sports/powerlifting-meet-recap/v1",
       "title": "2026-09-27 · Powerlifting Meet Recap",

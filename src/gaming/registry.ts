@@ -49,4 +49,13 @@ export const gamingRegistry: StarterRegistryEntry[] = [
       "An osu! result-screen card from the API score object: beatmap header, rank badge, four stat tiles, hit counts and mods - rendered for r/osugame or Discord without remote art.",
     tags: ["gaming","2026-10-15","day-026","osu","scorepost","rhythm-game","card"],
   },
+  {
+    slug: "commander-deck-spotlight",
+    templateId: "@one-a-day/gaming/commander-deck-spotlight/v1",
+    exportName: "CommanderDeckSpotlightV1",
+    title: "2026-10-16 · Commander Deck Spotlight Card",
+    description:
+      "A Magic Commander/EDH deck as one share card from the decklist fields themselves: kicker, bracket and record pills, deck name, commander line with WUBRG mana chips, an eight-bar mana curve with derived AVG MV and spell count, 3-6 highlight rows and the plan one-liner.",
+    tags: ["gaming","2026-10-16","day-027","mtg","commander","edh","decklist","deck-tech","share-card"],
+  },
 ];

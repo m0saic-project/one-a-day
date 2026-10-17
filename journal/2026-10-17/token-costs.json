@@ -1,0 +1,106 @@
+{
+  "scope": "Recorded daily agent calls, including retries and the ship call once it finishes. Excludes maintenance, CLI metadata/title calls, unreported child sessions, CI, and rendering. The frozen tutorial is a snapshot from before the ship call completes.",
+  "note": "OpenCode Go dollars describe reported usage or an estimated draw against plan allowances, not an additional per-run invoice. Missing usage is unknown, never zero. Estimates use dated rates; subscription fees are not allocated to individual runs.",
+  "totals": {
+    "phases": 5,
+    "calls": 243,
+    "tokens": 22554244,
+    "costUsd": 7.99,
+    "costBasis": "reported",
+    "missingTokenPhases": 0,
+    "missingCostPhases": 0,
+    "wallMs": 5783777
+  },
+  "phases": [
+    {
+      "name": "scout",
+      "model": "opencode-go/glm-5.3",
+      "tokens": {
+        "input": 100316,
+        "output": 25270,
+        "cacheRead": 687797,
+        "cacheWrite": 0,
+        "total": 813383
+      },
+      "cost": {
+        "usd": 0.43045762,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "plan",
+      "model": "opencode-go/glm-5.3",
+      "tokens": {
+        "input": 146130,
+        "output": 25780,
+        "cacheRead": 323963,
+        "cacheWrite": 0,
+        "total": 495873
+      },
+      "cost": {
+        "usd": 0.40224438,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "build",
+      "model": "opencode-go/glm-5.3",
+      "tokens": {
+        "input": 655040,
+        "output": 126479,
+        "cacheRead": 17442738,
+        "cacheWrite": 0,
+        "total": 18224257
+      },
+      "cost": {
+        "usd": 6.008675479999998,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "critique",
+      "model": "opencode-go/glm-5.3",
+      "tokens": {
+        "input": 107760,
+        "output": 22401,
+        "cacheRead": 1502613,
+        "cacheWrite": 0,
+        "total": 1632774
+      },
+      "cost": {
+        "usd": 0.64010778,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "ship",
+      "model": "opencode-go/glm-5.3",
+      "tokens": {
+        "input": 82909,
+        "output": 13516,
+        "cacheRead": 1291532,
+        "cacheWrite": 0,
+        "total": 1387957
+      },
+      "cost": {
+        "usd": 0.51134132,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    }
+  ]
+}

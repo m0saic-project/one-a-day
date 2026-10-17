@@ -85,4 +85,13 @@ export const sportsRegistry: StarterRegistryEntry[] = [
       "A climbing send pyramid from a tick list: one centered bar per grade, width the clean-send count, a cap for the flash or onsight share, hardest on top.",
     tags: ["sports","2026-10-12","day-023","climbing","pyramid","ticks","grades","mountain-project"],
   },
+  {
+    slug: "erg-pb-card",
+    templateId: "@one-a-day/sports/erg-pb-card/v1",
+    exportName: "ErgPbCardV1",
+    title: "2026-10-17 · Erg PB Card",
+    description:
+      "An indoor-rowing PR card from a PM5 result: the /500m split as the hero figure on a 1:00-3:00 pace track, the piece's time or metres beside it, stroke rate, watts and drag as cells, and the season-ranking percentile chip the rower supplies.",
+    tags: ["sports","2026-10-17","day-028","rowing","erg","concept2","split","pb","pm5","percentile"],
+  },
 ];

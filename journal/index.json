@@ -768,5 +768,36 @@
       "https://overpower.topdeck.gg/blog/visual-deck-display-20250626",
       "https://github.com/YohannBethoule/DeckPassport"
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "day": 28,
+    "agent": "opencode",
+    "model": "glm-5.3",
+    "rosterId": "go-glm-5.3",
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/erg-pb-card/v1",
+    "title": "2026-10-17 · Erg PB Card",
+    "pack": "sports",
+    "useCase": "Concept2 erg PR share cards for the indoor-rowing community: one clean card per piece (time, /500m split, spm, watts) or the whole PB ladder from 500m to marathon with a world-ranking percentile chip, from PM5/Logbook numbers every rower already has",
+    "tags": [
+      "sports",
+      "2026-10-17",
+      "day-028",
+      "rowing",
+      "erg",
+      "concept2",
+      "split",
+      "pb",
+      "pm5",
+      "percentile"
+    ],
+    "sources": [
+      "https://www.c2forum.com/viewtopic.php?t=156093",
+      "https://log.concept2.com/rankings/2026/rower/2000",
+      "https://www.concept2.com/logbook",
+      "https://www.concept2.nl/en/service/software/concept2-utility/how-to-use/transferring-results-to-spreadsheet",
+      "https://www.c2forum.com/viewtopic.php?t=202783"
+    ]
   }
 ]

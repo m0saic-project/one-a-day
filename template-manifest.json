@@ -506,6 +506,28 @@
       }
     },
     {
+      "slug": "erg-pb-card",
+      "templateKey": "@one-a-day/sports/erg-pb-card/v1",
+      "title": "2026-10-17 · Erg PB Card",
+      "description": "An indoor-rowing PR card from a PM5 result: the /500m split as the hero figure on a 1:00-3:00 pace track, the piece's time or metres beside it, stroke rate, watts and drag as cells, and the season-ranking percentile chip the rower supplies.",
+      "tags": [
+        "sports",
+        "2026-10-17",
+        "day-028",
+        "rowing",
+        "erg",
+        "concept2",
+        "split",
+        "pb",
+        "pm5",
+        "percentile"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__erg-pb-card__v1/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

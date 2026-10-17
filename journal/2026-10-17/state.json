@@ -1,0 +1,35 @@
+{
+  "useCase": "Concept2 erg PR share cards for the indoor-rowing community: one clean card per piece (time, /500m split, spm, watts) or the whole PB ladder from 500m to marathon with a world-ranking percentile chip, from PM5/Logbook numbers every rower already has",
+  "who": "Indoor rowers - club and masters rowers, CrossFitters and home-erg owners - on c2forum.com, the Concept2 Online Logbook and r/Rowing's weekly erg screen threads",
+  "sources": [
+    "https://www.c2forum.com/viewtopic.php?t=156093",
+    "https://log.concept2.com/rankings/2026/rower/2000",
+    "https://www.concept2.com/logbook",
+    "https://www.concept2.nl/en/service/software/concept2-utility/how-to-use/transferring-results-to-spreadsheet",
+    "https://www.c2forum.com/viewtopic.php?t=202783"
+  ],
+  "tags": [
+    "rowing",
+    "erg",
+    "concept2",
+    "pb",
+    "split",
+    "card"
+  ],
+  "scout": "done",
+  "pack": "sports",
+  "slug": "erg-pb-card",
+  "title": "Erg PB Card",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

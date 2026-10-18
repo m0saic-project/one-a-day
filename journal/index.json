@@ -799,5 +799,33 @@
       "https://www.concept2.nl/en/service/software/concept2-utility/how-to-use/transferring-results-to-spreadsheet",
       "https://www.c2forum.com/viewtopic.php?t=202783"
     ]
+  },
+  {
+    "date": "2026-10-18",
+    "day": 29,
+    "agent": "opencode",
+    "model": "kimi-k2.7-code",
+    "rosterId": "go-kimi-k2.7-code",
+    "status": "shipped",
+    "templateId": "@one-a-day/gaming/wh40k-roster-card/v1",
+    "title": "2026-10-18 · WH40k Roster Share Card",
+    "pack": "gaming",
+    "useCase": "BattleScribe army roster share cards for Warhammer 40k players: a clean summary of faction, detachment, points and units from the .ros/.rosz file, for 'rate my list' posts and tournament check-in.",
+    "tags": [
+      "gaming",
+      "2026-10-18",
+      "day-029",
+      "warhammer-40k",
+      "battlescribe",
+      "roster",
+      "army-list",
+      "share-card"
+    ],
+    "sources": [
+      "https://www.goonhammer.com/buttscribe-printed-materials-for-you-and-others/",
+      "https://www.reddit.com/r/WarhammerCompetitive/comments/1r447pt/best_appsite_for_building_lists_to_share_for/",
+      "https://www.reddit.com/r/WarhammerCompetitive/comments/1h83ytt/new_listbuilding_subreddit/",
+      "https://www.reddit.com/r/WarhammerCompetitive/comments/i3pj79/i_am_currently_working_on_a_prototype_app_to/"
+    ]
   }
 ]

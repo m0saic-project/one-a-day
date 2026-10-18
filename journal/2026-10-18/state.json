@@ -1,0 +1,51 @@
+{
+  "scout": "done",
+  "useCase": "BattleScribe army roster share cards for Warhammer 40k players: a clean summary of faction, detachment, points and units from the .ros/.rosz file, for 'rate my list' posts and tournament check-in.",
+  "who": "Warhammer 40,000 competitive players on r/WarhammerCompetitive, r/WarhammerListBuilding and faction Discords",
+  "sources": [
+    "https://www.goonhammer.com/buttscribe-printed-materials-for-you-and-others/",
+    "https://www.reddit.com/r/WarhammerCompetitive/comments/1r447pt/best_appsite_for_building_lists_to_share_for/",
+    "https://www.reddit.com/r/WarhammerCompetitive/comments/1h83ytt/new_listbuilding_subreddit/",
+    "https://www.reddit.com/r/WarhammerCompetitive/comments/i3pj79/i_am_currently_working_on_a_prototype_app_to/"
+  ],
+  "tags": [
+    "warhammer-40k",
+    "battlescribe",
+    "roster",
+    "army-list",
+    "share-card"
+  ],
+  "pack": "gaming",
+  "slug": "wh40k-roster-card",
+  "title": "WH40k Roster Share Card",
+  "plan": "done",
+  "build": "done",
+  "critique": "done",
+  "ship": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c",
+    "d"
+  ],
+  "inPlace": "d",
+  "decision": "ship",
+  "pick": "d",
+  "noShipReason": null,
+  "revision": 2,
+  "revisions": [
+    {
+      "round": 1,
+      "at": "2026-10-18T14:55:39.541Z",
+      "rejected": "Why-tutorial page 6 omits the build phase and understates cost/tokens by >10x; default pointsUsed (815) also mismatches brief (1995).",
+      "verdict": "40-critique.r1.md"
+    },
+    {
+      "round": 2,
+      "at": "2026-10-18T15:24:56.067Z",
+      "rejected": "The why-tutorial 'how it was made' page still omits the revision build phase; WHY.timeline has four phases while trace.json has five, so the cost/token/call/wall-time totals are wrong.",
+      "verdict": "40-critique.r2.md"
+    }
+  ]
+}

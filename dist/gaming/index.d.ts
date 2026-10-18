@@ -7,3 +7,4 @@ export * from "./vatsim-monthly-log/v1/vatsim-monthly-log";
 export * from "./tenxten-challenge-card/v1/tenxten-challenge-card";
 export * from "./osu-scorepost-card/v1/osu-scorepost-card";
 export * from "./commander-deck-spotlight/v1/commander-deck-spotlight";
+export * from "./wh40k-roster-card/v1/wh40k-roster-card";

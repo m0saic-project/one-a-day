@@ -6,6 +6,7 @@ import { VatsimMonthlyLogV1 } from "./vatsim-monthly-log/v1/vatsim-monthly-log";
 import { TenxtenChallengeCardV1 } from "./tenxten-challenge-card/v1/tenxten-challenge-card";
 import { OsuScorepostCardV1 } from "./osu-scorepost-card/v1/osu-scorepost-card";
 import { CommanderDeckSpotlightV1 } from "./commander-deck-spotlight/v1/commander-deck-spotlight";
+import { Wh40kRosterCardV1 } from "./wh40k-roster-card/v1/wh40k-roster-card";
 
 /** Pack `gaming`, in registry order (mirrors ./registry.ts). */
 export const gamingTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
@@ -15,6 +16,7 @@ export const gamingTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
   TenxtenChallengeCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   OsuScorepostCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   CommanderDeckSpotlightV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
+  Wh40kRosterCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
 ];
 
 // `export *` ONLY — see the note in src/index.ts.
@@ -24,3 +26,4 @@ export * from "./vatsim-monthly-log/v1/vatsim-monthly-log";
 export * from "./tenxten-challenge-card/v1/tenxten-challenge-card";
 export * from "./osu-scorepost-card/v1/osu-scorepost-card";
 export * from "./commander-deck-spotlight/v1/commander-deck-spotlight";
+export * from "./wh40k-roster-card/v1/wh40k-roster-card";

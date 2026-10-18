@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-18",
+  "day": 29,
+  "startedAt": "2026-10-18T13:00:07.504Z",
+  "runner": {
+    "adapter": "opencode",
+    "modelFlag": "opencode-go/kimi-k2.7-code",
+    "roster": {
+      "id": "go-kimi-k2.7-code",
+      "agent": "opencode",
+      "model": "opencode-go/kimi-k2.7-code",
+      "weight": 2,
+      "why": "drawn"
+    },
+    "ultracode": false,
+    "effort": null,
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "kimi-k2.7-code",
+    "corrected": null
+  },
+  "phases": {
+    "scout": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 218183,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 125372,
+      "done": true
+    },
+    "build": {
+      "calls": 3,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 1581071,
+      "done": true
+    },
+    "critique": {
+      "calls": 3,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 200629,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 1310811,
+      "done": true
+    }
+  },
+  "revise": {
+    "rounds": 2
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/gaming/wh40k-roster-card/v1",
+    "title": "2026-10-18 · WH40k Roster Share Card",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 6,
+    "at": "2026-10-18T16:26:19.481Z"
+  }
+}

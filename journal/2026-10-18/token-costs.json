@@ -1,0 +1,178 @@
+{
+  "scope": "Recorded daily agent calls, including retries and the ship call once it finishes. Excludes maintenance, CLI metadata/title calls, unreported child sessions, CI, and rendering. The frozen tutorial is a snapshot from before the ship call completes.",
+  "note": "OpenCode Go dollars describe reported usage or an estimated draw against plan allowances, not an additional per-run invoice. Missing usage is unknown, never zero. Estimates use dated rates; subscription fees are not allocated to individual runs.",
+  "totals": {
+    "phases": 9,
+    "calls": 373,
+    "tokens": 22090066,
+    "costUsd": 6.14,
+    "costBasis": "reported",
+    "missingTokenPhases": 0,
+    "missingCostPhases": 0,
+    "wallMs": 10990353
+  },
+  "phases": [
+    {
+      "name": "scout",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 96114,
+        "output": 7654,
+        "cacheRead": 685312,
+        "cacheWrite": 0,
+        "total": 789080
+      },
+      "cost": {
+        "usd": 0.25213357999999997,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "plan",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 48597,
+        "output": 5040,
+        "cacheRead": 294400,
+        "cacheWrite": 0,
+        "total": 348037
+      },
+      "cost": {
+        "usd": 0.12226315,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "build",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 884836,
+        "output": 75308,
+        "cacheRead": 12417443,
+        "cacheWrite": 0,
+        "total": 13377587
+      },
+      "cost": {
+        "usd": 3.5011403699999994,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "critique",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 86134,
+        "output": 8417,
+        "cacheRead": 796520,
+        "cacheWrite": 0,
+        "total": 891071
+      },
+      "cost": {
+        "usd": 0.26683409999999996,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "build (2)",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 178592,
+        "output": 13833,
+        "cacheRead": 2433889,
+        "cacheWrite": 0,
+        "total": 2626314
+      },
+      "cost": {
+        "usd": 0.68743331,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "critique (2)",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 78042,
+        "output": 10703,
+        "cacheRead": 646507,
+        "cacheWrite": 0,
+        "total": 735252
+      },
+      "cost": {
+        "usd": 0.23978823,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "build (3)",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 227754,
+        "output": 6353,
+        "cacheRead": 1405666,
+        "cacheWrite": 0,
+        "total": 1639773
+      },
+      "cost": {
+        "usd": 0.5088548399999999,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "critique (3)",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 84566,
+        "output": 7405,
+        "cacheRead": 449280,
+        "cacheWrite": 0,
+        "total": 541251
+      },
+      "cost": {
+        "usd": 0.19532090000000002,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "ship",
+      "model": "opencode-go/kimi-k2.7-code",
+      "tokens": {
+        "input": 160912,
+        "output": 7107,
+        "cacheRead": 973682,
+        "cacheWrite": 0,
+        "total": 1141701
+      },
+      "cost": {
+        "usd": 0.3662939799999999,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    }
+  ]
+}

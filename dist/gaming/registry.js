@@ -53,4 +53,12 @@ exports.gamingRegistry = [
         description: "A Magic Commander/EDH deck as one share card from the decklist fields themselves: kicker, bracket and record pills, deck name, commander line with WUBRG mana chips, an eight-bar mana curve with derived AVG MV and spell count, 3-6 highlight rows and the plan one-liner.",
         tags: ["gaming", "2026-10-16", "day-027", "mtg", "commander", "edh", "decklist", "deck-tech", "share-card"],
     },
+    {
+        slug: "wh40k-roster-card",
+        templateId: "@one-a-day/gaming/wh40k-roster-card/v1",
+        exportName: "Wh40kRosterCardV1",
+        title: "2026-10-18 · WH40k Roster Share Card",
+        description: "A Warhammer 40,000 BattleScribe roster as one share card: army name, faction, detachment, points pill and unit rows with category badges, model counts and optional enhancement/warlord chips - no art or rules.",
+        tags: ["gaming", "2026-10-18", "day-029", "warhammer-40k", "battlescribe", "roster", "army-list", "share-card"],
+    },
 ];

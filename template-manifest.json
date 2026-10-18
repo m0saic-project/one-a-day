@@ -326,6 +326,26 @@
       }
     },
     {
+      "slug": "wh40k-roster-card",
+      "templateKey": "@one-a-day/gaming/wh40k-roster-card/v1",
+      "title": "2026-10-18 · WH40k Roster Share Card",
+      "description": "A Warhammer 40,000 BattleScribe roster as one share card: army name, faction, detachment, points pill and unit rows with category badges, model counts and optional enhancement/warlord chips - no art or rules.",
+      "tags": [
+        "gaming",
+        "2026-10-18",
+        "day-029",
+        "warhammer-40k",
+        "battlescribe",
+        "roster",
+        "army-list",
+        "share-card"
+      ],
+      "pack": "gaming",
+      "preview": {
+        "image": "assets/templates/@one-a-day__gaming__wh40k-roster-card__v1/preview.png"
+      }
+    },
+    {
       "slug": "powerlifting-meet-recap",
       "templateKey": "@one-a-day/sports/powerlifting-meet-recap/v1",
       "title": "2026-09-27 · Powerlifting Meet Recap",

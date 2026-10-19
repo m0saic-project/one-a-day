@@ -1,0 +1,31 @@
+{
+  "useCase": "HYROX race split cards from the official results workout summary: finish time, division rank, and the eight run-plus-station pairs, instead of a screenshot of the timing table",
+  "who": "HYROX athletes posting a race-day graphic from the official results page (results.hyrox.com) and the HYROX app",
+  "sources": [
+    "https://pacepost.app/guides/how-to-post-hyrox-results-on-instagram/",
+    "https://sweatlas-hybrid.com/hyrox-result",
+    "https://roxlyfe.com/leaderboard-explained/",
+    "https://results.hyrox.com/season-5/?content=detail&fpid=list&pid=list&idp=JGDMS4JI63FAA&lang=EN_CAP&event=H_JGDMS4JI466"
+  ],
+  "tags": [
+    "hyrox",
+    "race",
+    "splits",
+    "stations",
+    "recap",
+    "card"
+  ],
+  "scout": "done",
+  "pack": "sports",
+  "slug": "hyrox-split-card",
+  "title": "HYROX Split Card",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": ["a"],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

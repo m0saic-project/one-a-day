@@ -1,8 +1,8 @@
 {
   "release": "0.3.2",
-  "tag": "2026-10-18",
-  "commit": "9e1bc3985f2b54f991b4b7fd5aba30b666128a08",
-  "mintedAt": "2026-10-18T16:26:19.315Z",
+  "tag": "2026-10-19",
+  "commit": "77b33074687b0af0ffed788463760a7a99f54fa5",
+  "mintedAt": "2026-10-19T14:14:47.558Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
@@ -37,6 +37,7 @@
     "src/sports/cubing-average-card/v1": "0.3.0",
     "src/sports/erg-pb-card/v1": "0.3.2",
     "src/sports/golf-round-scorecard/v1": "0.3.2",
+    "src/sports/hyrox-split-card/v1": "0.3.2",
     "src/sports/lap-telemetry-card/v1": "0.3.0",
     "src/sports/powerlifting-meet-recap/v1": "0.2.2",
     "src/sports/swim-time-drop-card/v1": "0.3.0"
@@ -78,6 +79,7 @@
     "src/sports/cubing-average-card/v1/cubing-average-card.ts": "e42c6be97bbcfb244d9fdb9a175d581e65440be671dcf4655e32aa260ef5f001",
     "src/sports/erg-pb-card/v1/erg-pb-card.ts": "41f4ba732a5b84691b49cbc452321c90ec6b743b5142eae9193d3e354a4d1eb9",
     "src/sports/golf-round-scorecard/v1/golf-round-scorecard.ts": "7ddda8d23d5dbdc7730b67ce4a8753c3ab9a3e353d33e614c3baec201eea0876",
+    "src/sports/hyrox-split-card/v1/hyrox-split-card.ts": "66fed330a40d51040f3b797940157dbfa4aeaa19c79346cddc88a478dabd2e96",
     "src/sports/lap-telemetry-card/v1/lap-telemetry-card.ts": "4f053150280f4a01527405439ae8cb6a16c7dd57ab6af5360037511596c1febd",
     "src/sports/powerlifting-meet-recap/v1/powerlifting-meet-recap.ts": "21ed849d1eb8455011fe7c79060bc3ad53623c4bad81c070d7629a39accd9300",
     "src/sports/swim-time-drop-card/v1/swim-time-drop-card.ts": "72969697ecd6319d6127e4fd8bbdda163166b7d3d1ac8ec358226ecf0969d28b"

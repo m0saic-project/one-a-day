@@ -827,5 +827,34 @@
       "https://www.reddit.com/r/WarhammerCompetitive/comments/1h83ytt/new_listbuilding_subreddit/",
       "https://www.reddit.com/r/WarhammerCompetitive/comments/i3pj79/i_am_currently_working_on_a_prototype_app_to/"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "day": 30,
+    "agent": "opencode",
+    "model": "grok-4.7",
+    "rosterId": "go-grok-4.7",
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/hyrox-split-card/v1",
+    "title": "2026-10-19 · HYROX Split Card",
+    "pack": "sports",
+    "useCase": "HYROX race split cards from the official results workout summary: finish time, division rank, and the eight run-plus-station pairs, instead of a screenshot of the timing table",
+    "tags": [
+      "sports",
+      "2026-10-19",
+      "day-030",
+      "hyrox",
+      "race",
+      "splits",
+      "stations",
+      "recap",
+      "card"
+    ],
+    "sources": [
+      "https://pacepost.app/guides/how-to-post-hyrox-results-on-instagram/",
+      "https://sweatlas-hybrid.com/hyrox-result",
+      "https://roxlyfe.com/leaderboard-explained/",
+      "https://results.hyrox.com/season-5/?content=detail&fpid=list&pid=list&idp=JGDMS4JI63FAA&lang=EN_CAP&event=H_JGDMS4JI466"
+    ]
   }
 ]

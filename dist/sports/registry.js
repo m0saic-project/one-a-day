@@ -85,4 +85,12 @@ exports.sportsRegistry = [
         description: "An indoor-rowing PR card from a PM5 result: the /500m split as the hero figure on a 1:00-3:00 pace track, the piece's time or metres beside it, stroke rate, watts and drag as cells, and the season-ranking percentile chip the rower supplies.",
         tags: ["sports", "2026-10-17", "day-028", "rowing", "erg", "concept2", "split", "pb", "pm5", "percentile"],
     },
+    {
+        slug: "hyrox-split-card",
+        templateId: "@one-a-day/sports/hyrox-split-card/v1",
+        exportName: "HyroxSplitCardV1",
+        title: "2026-10-19 · HYROX Split Card",
+        description: "A race-day split card from the workout summary: finish time and division rank as the header, eight run-and-station pairs as a tape whose length is the split, and roxzone, run total and best lap as entered.",
+        tags: ["sports", "2026-10-19", "day-030", "hyrox", "race", "splits", "stations", "recap", "card"],
+    },
 ];

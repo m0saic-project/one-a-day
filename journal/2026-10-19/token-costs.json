@@ -1,0 +1,106 @@
+{
+  "scope": "Recorded daily agent calls, including retries and the ship call once it finishes. Excludes maintenance, CLI metadata/title calls, unreported child sessions, CI, and rendering. The frozen tutorial is a snapshot from before the ship call completes.",
+  "note": "OpenCode Go dollars describe reported usage or an estimated draw against plan allowances, not an additional per-run invoice. Missing usage is unknown, never zero. Estimates use dated rates; subscription fees are not allocated to individual runs.",
+  "totals": {
+    "phases": 5,
+    "calls": 271,
+    "tokens": 11813175,
+    "costUsd": 7.89,
+    "costBasis": "reported",
+    "missingTokenPhases": 0,
+    "missingCostPhases": 0,
+    "wallMs": 3382463
+  },
+  "phases": [
+    {
+      "name": "scout",
+      "model": "opencode-go/grok-4.7",
+      "tokens": {
+        "input": 153095,
+        "output": 19688,
+        "cacheRead": 844928,
+        "cacheWrite": 0,
+        "total": 1017711
+      },
+      "cost": {
+        "usd": 0.8467819999999999,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "plan",
+      "model": "opencode-go/grok-4.7",
+      "tokens": {
+        "input": 97930,
+        "output": 24526,
+        "cacheRead": 567296,
+        "cacheWrite": 0,
+        "total": 689752
+      },
+      "cost": {
+        "usd": 0.6266640000000001,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "build",
+      "model": "opencode-go/grok-4.7",
+      "tokens": {
+        "input": 210495,
+        "output": 81116,
+        "cacheRead": 7500672,
+        "cacheWrite": 0,
+        "total": 7792283
+      },
+      "cost": {
+        "usd": 4.658022000000001,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "critique",
+      "model": "opencode-go/grok-4.7",
+      "tokens": {
+        "input": 91450,
+        "output": 21012,
+        "cacheRead": 998144,
+        "cacheWrite": 0,
+        "total": 1110606
+      },
+      "cost": {
+        "usd": 0.8080439999999999,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "ship",
+      "model": "opencode-go/grok-4.7",
+      "tokens": {
+        "input": 186203,
+        "output": 12076,
+        "cacheRead": 1004544,
+        "cacheWrite": 0,
+        "total": 1202823
+      },
+      "cost": {
+        "usd": 0.9471339999999999,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    }
+  ]
+}

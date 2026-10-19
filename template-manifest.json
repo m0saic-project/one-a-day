@@ -548,6 +548,27 @@
       }
     },
     {
+      "slug": "hyrox-split-card",
+      "templateKey": "@one-a-day/sports/hyrox-split-card/v1",
+      "title": "2026-10-19 · HYROX Split Card",
+      "description": "A race-day split card from the workout summary: finish time and division rank as the header, eight run-and-station pairs as a tape whose length is the split, and roxzone, run total and best lap as entered.",
+      "tags": [
+        "sports",
+        "2026-10-19",
+        "day-030",
+        "hyrox",
+        "race",
+        "splits",
+        "stations",
+        "recap",
+        "card"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__hyrox-split-card__v1/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

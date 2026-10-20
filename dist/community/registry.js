@@ -29,4 +29,12 @@ exports.communityRegistry = [
         description: "The #MyColorfulAncestry spreadsheet chart as a clip: five generations from pasted rows or a GEDCOM, every cell coloured by birth state or country, landing generation by generation over a counted legend.",
         tags: ["community", "2026-10-09", "day-020", "genealogy", "gedcom", "pedigree", "ancestry", "birthplace", "family-tree", "video"],
     },
+    {
+        slug: "geocache-milestone-card",
+        templateId: "@one-a-day/community/geocache-milestone-card/v1",
+        exportName: "GeocacheMilestoneCardV1",
+        title: "2026-10-20 · Geocache Milestone Card",
+        description: "A geocaching milestone card for one find count: the count as the hero, the Project-GC milestone and ordinal derived from it (never typed), the cache-type mix as a full-width bar, and FTF / difficulty / terrain tiles. Numbers typed in, never fetched.",
+        tags: ["community", "2026-10-20", "day-031", "geocaching", "milestone", "gpx", "stats", "ftf", "share-card"],
+    },
 ];

@@ -10,7 +10,7 @@
       "agent": "opencode",
       "model": "opencode-go/deepseek-v4-pro",
       "weight": 2,
-      "why": "drawn"
+      "why": "resumed — the slot this day started on"
     },
     "ultracode": false,
     "effort": null,
@@ -23,25 +23,55 @@
     "m0saic": null
   },
   "model": {
-    "selfDeclared": null,
+    "selfDeclared": "deepseek-v4-pro",
     "corrected": null
   },
   "phases": {
     "scout": {
-      "calls": 2,
-      "lastExitCode": 1,
+      "calls": 3,
+      "lastExitCode": 0,
       "timedOut": false,
-      "ms": 74478,
-      "done": false
+      "ms": 147933,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 121512,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 2248619,
+      "done": true
+    },
+    "critique": {
+      "calls": 2,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 183005,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 1066315,
+      "done": true
     }
   },
   "result": {
-    "status": "no-ship",
-    "templateId": null,
-    "reason": "scout phase did not complete"
+    "status": "shipped",
+    "templateId": "@one-a-day/community/geocache-milestone-card/v1",
+    "reason": null,
+    "title": "2026-10-20 · Geocache Milestone Card"
   },
   "gate": {
     "reasons": [],
-    "at": "2026-10-20T13:16:22.432Z"
+    "at": "2026-10-20T21:40:34.698Z",
+    "doctorWarnings": 6
   }
 }

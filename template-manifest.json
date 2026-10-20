@@ -631,6 +631,27 @@
       }
     },
     {
+      "slug": "geocache-milestone-card",
+      "templateKey": "@one-a-day/community/geocache-milestone-card/v1",
+      "title": "2026-10-20 · Geocache Milestone Card",
+      "description": "A geocaching milestone card for one find count: the count as the hero, the Project-GC milestone and ordinal derived from it (never typed), the cache-type mix as a full-width bar, and FTF / difficulty / terrain tiles. Numbers typed in, never fetched.",
+      "tags": [
+        "community",
+        "2026-10-20",
+        "day-031",
+        "geocaching",
+        "milestone",
+        "gpx",
+        "stats",
+        "ftf",
+        "share-card"
+      ],
+      "pack": "community",
+      "preview": {
+        "image": "assets/templates/@one-a-day__community__geocache-milestone-card__v1/preview.png"
+      }
+    },
+    {
       "slug": "radio-top-30-chart",
       "templateKey": "@one-a-day/music/radio-top-30-chart/v1",
       "title": "2026-10-05 · Radio Top 30 Chart",

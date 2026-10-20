@@ -1,0 +1,6 @@
+
+===== 2026-10-20T21:13:40.903Z $ opencode run --format json --title critique-1 --auto --pure --model opencode-go/deepseek-v4-pro
+{"type":"error","timestamp":1792530892434,"sessionID":"ses_ea4d64b05ffexIcOxHolI7wFgp","error":{"name":"APIError","data":{"message":"Upstream request failed: Endpoint is unavailable.","statusCode":503,"isRetryable":true,"responseHeaders":{"cf-placement":"remote-IAD","cf-ray":"a4db08dcc9f30f85-EWR","connection":"keep-alive","content-length":"95","content-type":"application/json","date":"Tue, 20 Oct 2026 21:14:52 GMT","server":"cloudflare","x-opencode-log-id":"01a15b2a-c617-79ba-88fd-05d8d41f7dea"},"responseBody":"{\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: Endpoint is unavailable.\"}}","metadata":{"url":"https://opencode.ai/inference/go/openai/v1/chat/completions"}}}}
+[17:14:52] critique-1 ⚠ APIError: Upstream request failed: Endpoint is unavailable.
+
+===== exit 1 after 72057ms

@@ -861,13 +861,30 @@
     "date": "2026-10-20",
     "day": 31,
     "agent": "opencode",
-    "model": null,
+    "model": "deepseek-v4-pro",
     "rosterId": "go-deepseek-v4-pro",
-    "status": "no-ship",
-    "templateId": null,
-    "title": null,
-    "useCase": null,
-    "tags": [],
-    "sources": []
+    "status": "shipped",
+    "templateId": "@one-a-day/community/geocache-milestone-card/v1",
+    "title": "2026-10-20 · Geocache Milestone Card",
+    "pack": "community",
+    "useCase": "Geocaching milestone and profile-stat share cards from the My Finds pocket-query GPX: find count, the milestone reached, cache-type mix, FTFs, and difficulty/terrain, one clean card per milestone or year",
+    "tags": [
+      "community",
+      "2026-10-20",
+      "day-031",
+      "geocaching",
+      "milestone",
+      "gpx",
+      "stats",
+      "ftf",
+      "share-card"
+    ],
+    "sources": [
+      "https://www.cachesleuth.com/tools/profilestats",
+      "https://project-gc.com/w/Milestones_tab",
+      "https://www.geocaching.com/blog/2025/05/celebrating-25-years-of-geocaching-milestones",
+      "https://www.geocaching.com/help/index.php?id=118&pg=kb.page",
+      "https://www.yogosc.org/announcements/congratulations-to-geohiker55-on-1000-finds"
+    ]
   }
 ]

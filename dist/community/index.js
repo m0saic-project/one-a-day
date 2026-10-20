@@ -18,13 +18,16 @@ exports.communityTemplates = void 0;
 const qsl_card_1 = require("./qsl-card/v1/qsl-card");
 const weekly_run_report_1 = require("./weekly-run-report/v1/weekly-run-report");
 const ancestor_birthplace_chart_1 = require("./ancestor-birthplace-chart/v1/ancestor-birthplace-chart");
+const geocache_milestone_card_1 = require("./geocache-milestone-card/v1/geocache-milestone-card");
 /** Pack `community`, in registry order (mirrors ./registry.ts). */
 exports.communityTemplates = [
     qsl_card_1.QslCardV1,
     weekly_run_report_1.WeeklyRunReportV1,
     ancestor_birthplace_chart_1.AncestorBirthplaceChartV1,
+    geocache_milestone_card_1.GeocacheMilestoneCardV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./qsl-card/v1/qsl-card"), exports);
 __exportStar(require("./weekly-run-report/v1/weekly-run-report"), exports);
 __exportStar(require("./ancestor-birthplace-chart/v1/ancestor-birthplace-chart"), exports);
+__exportStar(require("./geocache-milestone-card/v1/geocache-milestone-card"), exports);

@@ -2,14 +2,14 @@
   "scope": "Recorded daily agent calls, including retries and the ship call once it finishes. Excludes maintenance, CLI metadata/title calls, unreported child sessions, CI, and rendering. The frozen tutorial is a snapshot from before the ship call completes.",
   "note": "OpenCode Go dollars describe reported usage or an estimated draw against plan allowances, not an additional per-run invoice. Missing usage is unknown, never zero. Estimates use dated rates; subscription fees are not allocated to individual runs.",
   "totals": {
-    "phases": 2,
-    "calls": 0,
-    "tokens": 0,
-    "costUsd": null,
-    "costBasis": null,
-    "missingTokenPhases": 2,
-    "missingCostPhases": 2,
-    "wallMs": 151995
+    "phases": 8,
+    "calls": 210,
+    "tokens": 24355312,
+    "costUsd": 1.5,
+    "costBasis": "reported",
+    "missingTokenPhases": 3,
+    "missingCostPhases": 3,
+    "wallMs": 30111947
   },
   "phases": [
     {
@@ -26,6 +26,105 @@
       "model": "opencode-go/deepseek-v4-pro",
       "tokens": null,
       "cost": null,
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "scout (3)",
+      "model": "opencode-go/deepseek-v4-pro",
+      "tokens": {
+        "input": 62945,
+        "output": 9260,
+        "cacheRead": 504576,
+        "cacheWrite": 0,
+        "total": 576781
+      },
+      "cost": {
+        "usd": 0.070979172,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "plan",
+      "model": "opencode-go/deepseek-v4-pro",
+      "tokens": {
+        "input": 94333,
+        "output": 12720,
+        "cacheRead": 373120,
+        "cacheWrite": 0,
+        "total": 480173
+      },
+      "cost": {
+        "usd": 0.09565401999999999,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "build",
+      "model": "opencode-go/deepseek-v4-pro",
+      "tokens": {
+        "input": 503847,
+        "output": 117783,
+        "cacheRead": 19484928,
+        "cacheWrite": 0,
+        "total": 20106558
+      },
+      "cost": {
+        "usd": 0.994417776,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "critique",
+      "model": "opencode-go/deepseek-v4-pro",
+      "tokens": null,
+      "cost": null,
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "critique (2)",
+      "model": "opencode-go/deepseek-v4-pro",
+      "tokens": {
+        "input": 158120,
+        "output": 15402,
+        "cacheRead": 709760,
+        "cacheWrite": 0,
+        "total": 883282
+      },
+      "cost": {
+        "usd": 0.15046988,
+        "basis": "reported"
+      },
+      "rate": null,
+      "pricingSource": null,
+      "pricingNote": null
+    },
+    {
+      "name": "ship",
+      "model": "opencode-go/deepseek-v4-pro",
+      "tokens": {
+        "input": 168184,
+        "output": 13486,
+        "cacheRead": 2126848,
+        "cacheWrite": 0,
+        "total": 2308518
+      },
+      "cost": {
+        "usd": 0.184494376,
+        "basis": "reported"
+      },
       "rate": null,
       "pricingSource": null,
       "pricingNote": null

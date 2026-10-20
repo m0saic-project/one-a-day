@@ -856,5 +856,18 @@
       "https://roxlyfe.com/leaderboard-explained/",
       "https://results.hyrox.com/season-5/?content=detail&fpid=list&pid=list&idp=JGDMS4JI63FAA&lang=EN_CAP&event=H_JGDMS4JI466"
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "day": 31,
+    "agent": "opencode",
+    "model": null,
+    "rosterId": "go-deepseek-v4-pro",
+    "status": "no-ship",
+    "templateId": null,
+    "title": null,
+    "useCase": null,
+    "tags": [],
+    "sources": []
   }
 ]

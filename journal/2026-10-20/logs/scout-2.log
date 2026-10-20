@@ -1,0 +1,6 @@
+
+===== 2026-10-20T13:15:08.749Z $ opencode run --format json --title scout-2 --auto --pure --model opencode-go/deepseek-v4-pro
+[09:16:21] scout-2 ⚠ APIError: Upstream request failed: This Go model requires Global regions. Select Global in your workspace's Privacy settings to use it.
+{"type":"error","timestamp":1792502181708,"sessionID":"ses_ea68c67d9ffeyn19ReQXFoYAyR","error":{"name":"APIError","data":{"message":"Upstream request failed: This Go model requires Global regions. Select Global in your workspace's Privacy settings to use it.","statusCode":400,"isRetryable":false,"responseHeaders":{"cf-placement":"remote-IAD","cf-ray":"a4d84beb88834332-EWR","connection":"keep-alive","content-length":"171","content-type":"application/json","date":"Tue, 20 Oct 2026 13:16:21 GMT","server":"cloudflare","x-opencode-log-id":"01a15974-af55-778c-b62e-85600fbfe1df"},"responseBody":"{\"error\":{\"type\":\"server_error\",\"message\":\"Upstream request failed: This Go model requires Global regions. Select Global in your workspace's Privacy settings to use it.\"}}","metadata":{"url":"https://opencode.ai/inference/go/openai/v1/chat/completions"}}}}
+
+===== exit 1 after 73588ms

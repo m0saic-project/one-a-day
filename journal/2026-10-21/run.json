@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-21",
+  "day": 32,
+  "startedAt": "2026-10-21T13:01:56.457Z",
+  "runner": {
+    "adapter": "opencode",
+    "modelFlag": "opencode-go/glm-5.3",
+    "roster": {
+      "id": "go-glm-5.3",
+      "agent": "opencode",
+      "model": "opencode-go/glm-5.3",
+      "weight": 4,
+      "why": "resumed — the slot this day started on"
+    },
+    "ultracode": false,
+    "effort": null,
+    "budgetUsd": null,
+    "context": null,
+    "host": "MobileDesktop",
+    "platform": "win32",
+    "node": "v22.14.0",
+    "noPush": false,
+    "m0saic": null
+  },
+  "model": {
+    "selfDeclared": "glm-5.3",
+    "corrected": null
+  },
+  "result": {
+    "status": "failed",
+    "reason": "npm run verify exited null (timed out)",
+    "templateId": null
+  },
+  "gate": {
+    "reasons": [
+      "npm run verify exited null (timed out)"
+    ],
+    "at": "2026-10-21T19:42:11.039Z"
+  }
+}

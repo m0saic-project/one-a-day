@@ -886,5 +886,28 @@
       "https://www.geocaching.com/help/index.php?id=118&pg=kb.page",
       "https://www.yogosc.org/announcements/congratulations-to-geohiker55-on-1000-finds"
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "day": 32,
+    "agent": "opencode",
+    "model": "glm-5.3",
+    "rosterId": "go-glm-5.3",
+    "status": "failed",
+    "templateId": null,
+    "title": null,
+    "useCase": "Typing-test personal-best share cards from the Monkeytype result object: the hero wpm, the NEW PB badge and +N delta computed against pb (never typed), raw/acc/consistency tiles, and the per-second chartData.wpm as a full-width bar row, one deterministic card per result",
+    "tags": [
+      "monkeytype",
+      "typing",
+      "wpm",
+      "personal-best",
+      "result-card"
+    ],
+    "sources": [
+      "https://github.com/monkeytypegame/monkeytype",
+      "https://api.monkeytype.com/docs",
+      "https://github.com/conner-mcnicholas/MonkeyTypeLeaderboard"
+    ]
   }
 ]

@@ -436,3 +436,443 @@ check-deps: CURRICULUM.md not present yet — skipping curriculum lint
 check-deps: clean (dependencies, imports, packs, curriculum, notices)
 
 ===== exit SIGTERM after 1388062ms (TIMED OUT)
+
+===== 2026-10-21T19:50:00.354Z $ npm run verify
+
+> one-a-day@0.1.0 verify
+> npm run build && npm run lint && npm test && npm run test:bundle && npm run test:contract && npm run check:deps
+
+
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/gen-gallery.mjs && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+
+[check-freeze] ✓ freeze (2026-10-20 (m0saic 0.3.2)): 41 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (36 templates, 11 packs, 36 with preview assets)
+[gen-gallery] wrote TEMPLATES.md (34 daily template(s) in 2 month(s), 2 other).
+[check-registry] ✓ 36 templates — definition-time conventions hold.
+  ⚠ @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200×630 declared physical (lattice.canvas) — a rough axis is not reported; the counts it explains are charged to it
+[check-registry] ⚠ 1 render-time warning(s) (record posture — fix when you touch the template):
+  ⚠ @one-a-day/social/episode-audiogram/v1 — costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 — the engine drops inline masks past ~25 overlay layers; nest a child document instead.
+[check-registry] ✓ layout fingerprints: 36 unchanged, 0 missing, 0 changed.
+[check-registry] ✓ 36 templates rendered at their defaults — render-time conventions hold (0 skipped: inputs required).
+[check-layout] ✓ 35 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+[check-why] ✓ 34 template(s) explain why they exist (0 warning(s); front door exempt).
+
+> one-a-day@0.1.0 lint
+> eslint .
+
+
+> one-a-day@0.1.0 test
+> jest && node --test tools/check-freeze.test.mjs tools/robot-faces.test.mjs "pipeline/lib/*.test.mjs" "pipeline/agents/*.test.mjs"
+
+
+[timeout] 1200000ms — SIGTERM
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
+
+Test Suites: 39 passed, 39 total
+Tests:       587 passed, 587 total
+Snapshots:   1 passed, 1 total
+Time:        1005.225 s
+Ran all test suites.
+TAP version 13
+# Subtest: credentialedProviders: the provider ids in auth.json, none when the file is missing or broken
+ok 1 - credentialedProviders: the provider ids in auth.json, none when the file is missing or broken
+  ---
+  duration_ms: 41.9702
+  ...
+# Subtest: hasConsoleOrganization recognizes the OpenCode 1.18 console-login row but not help or missing auth
+ok 2 - hasConsoleOrganization recognizes the OpenCode 1.18 console-login row but not help or missing auth
+  ---
+  duration_ms: 10.1414
+  ...
+# Subtest: createGoLimitWatcher: a limit-shaped error event is a hit with no reset time; other errors and parts are not
+ok 3 - createGoLimitWatcher: a limit-shaped error event is a hit with no reset time; other errors and parts are not
+  ---
+  duration_ms: 7.3332
+  ...
+# Subtest: template id from a new folder; asset key encoding
+ok 4 - template id from a new folder; asset key encoding
+  ---
+  duration_ms: 12.8655
+  ...
+# Subtest: commit messages carry the day, the id, and the Agent/Model trailers
+ok 5 - commit messages carry the day, the id, and the Agent/Model trailers
+  ---
+  duration_ms: 5.2833
+  ...
+# Subtest: stream-log formats Claude and Codex events and drops noise
+ok 6 - stream-log formats Claude and Codex events and drops noise
+  ---
+  duration_ms: 20.5609
+  ...
+# Subtest: a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+ok 7 - a clean shipped day: one new template folder, wiring, dist, manifest, previews, journal
+  ---
+  duration_ms: 25.34
+  ...
+# Subtest: the generated directory page is a day's to change, like the manifest; the README it is linked from is not
+ok 8 - the generated directory page is a day's to change, like the manifest; the README it is linked from is not
+  ---
+  duration_ms: 5.558
+  ...
+# Subtest: protected files and folders are forbidden whatever the status
+ok 9 - protected files and folders are forbidden whatever the status
+  ---
+  duration_ms: 4.5082
+  ...
+# Subtest: editing or deleting an existing template folder is forbidden; a second new folder is counted
+ok 10 - editing or deleting an existing template folder is forbidden; a second new folder is counted
+  ---
+  duration_ms: 4.529
+  ...
+# Subtest: another day's journal is forbidden, today's is allowed
+ok 11 - another day's journal is forbidden, today's is allowed
+  ---
+  duration_ms: 2.0993
+  ...
+# Subtest: stray render outputs at the repo root are scratch, not a scope violation (day 003)
+ok 12 - stray render outputs at the repo root are scratch, not a scope violation (day 003)
+  ---
+  duration_ms: 2.9374
+  ...
+# Subtest: a tracked file with a scratch-looking name is not scratch
+ok 13 - a tracked file with a scratch-looking name is not scratch
+  ---
+  duration_ms: 2.4243
+  ...
+# Subtest: runtime caches inside the day's journal are scratch; the rest of the journal is allowed
+ok 14 - runtime caches inside the day's journal are scratch; the rest of the journal is allowed
+  ---
+  duration_ms: 2.5126
+  ...
+# Subtest: a kept tree round-trips: the day's work outside the journal, tracked and untracked, binary included, and nothing else
+ok 15 - a kept tree round-trips: the day's work outside the journal, tracked and untracked, binary included, and nothing else
+  ---
+  duration_ms: 8629.3313
+  ...
+# Subtest: a tree with nothing to keep writes no patch
+ok 16 - a tree with nothing to keep writes no patch
+  ---
+  duration_ms: 1505.8077
+  ...
+# Subtest: todayIso and isIsoDate
+ok 17 - todayIso and isIsoDate
+  ---
+  duration_ms: 16.6261
+  ...
+# Subtest: ensureDay creates the folder once; state and run patches merge
+ok 18 - ensureDay creates the folder once; state and run patches merge
+  ---
+  duration_ms: 202.8565
+  ...
+# Subtest: a run.json an agent rewrote with a UTF-8 BOM still reads and merges
+ok 19 - a run.json an agent rewrote with a UTF-8 BOM still reads and merges
+  ---
+  duration_ms: 90.1664
+  ...
+# Subtest: index rows upsert by date, stay sorted; day numbers count earlier rows
+ok 20 - index rows upsert by date, stay sorted; day numbers count earlier rows
+  ---
+  duration_ms: 82.5368
+  ...
+# Subtest: renderTemplate substitutes known keys and leaves unknown ones
+ok 21 - renderTemplate substitutes known keys and leaves unknown ones
+  ---
+  duration_ms: 6.4977
+  ...
+# Subtest: a rejected call is a hit on the five-hour window, with its reset time and the CLI's words
+ok 22 - a rejected call is a hit on the five-hour window, with its reset time and the CLI's words
+  ---
+  duration_ms: 29.997
+  ...
+# Subtest: an allowed call is seen and not hit; a call that said nothing is not seen
+ok 23 - an allowed call is seen and not hit; a call that said nothing is not seen
+  ---
+  duration_ms: 9.7975
+  ...
+# Subtest: a 429 with no rate_limit_event is still a hit, with no reset time
+ok 24 - a 429 with no rate_limit_event is still a hit, with no reset time
+  ---
+  duration_ms: 2.814
+  ...
+# Subtest: a seven-day rejection names its window
+ok 25 - a seven-day rejection names its window
+  ---
+  duration_ms: 2.8424
+  ...
+# Subtest: after a five-hour rejection: wait until the reset plus the grace, once or twice, never longer than the cap
+ok 26 - after a five-hour rejection: wait until the reset plus the grace, once or twice, never longer than the cap
+  ---
+  duration_ms: 8.5406
+  ...
+# Subtest: a reset that has already passed is a short wait, not a stop
+ok 27 - a reset that has already passed is a short wait, not a stop
+  ---
+  duration_ms: 1.8845
+  ...
+# Subtest: after a seven-day rejection, or one with no reset time: stop, and say why
+ok 28 - after a seven-day rejection, or one with no reset time: stop, and say why
+  ---
+  duration_ms: 4.1591
+  ...
+# Subtest: before a call: a nearly spent five-hour window is waited out; a rolled one, a healthy one, or an unknown one is not
+ok 29 - before a call: a nearly spent five-hour window is waited out; a rolled one, a healthy one, or an unknown one is not
+  ---
+  duration_ms: 7.4835
+  ...
+# Subtest: config fills in what it leaves out
+ok 30 - config fills in what it leaves out
+  ---
+  duration_ms: 4.678
+  ...
+# Subtest: the words on the log
+ok 31 - the words on the log
+  ---
+  duration_ms: 5.9832
+  ...
+# Subtest: only a critic's no-ship over work that exists is worth a round
+ok 32 - only a critic's no-ship over work that exists is worth a round
+  ---
+  duration_ms: 100.0975
+  ...
+# Subtest: a builder that forgot state.variants is read off the variants folder
+ok 33 - a builder that forgot state.variants is read off the variants folder
+  ---
+  duration_ms: 154.4285
+  ...
+# Subtest: opening a round moves the verdict aside and owes build and critique again
+ok 34 - opening a round moves the verdict aside and owes build and critique again
+  ---
+  duration_ms: 106.2095
+  ...
+# Subtest: rounds count up across runs: a resumed day opens the next one
+ok 35 - rounds count up across runs: a resumed day opens the next one
+  ---
+  duration_ms: 147.6749
+  ...
+# Subtest: config and state are read defensively
+ok 36 - config and state are read defensively
+  ---
+  duration_ms: 5.5306
+  ...
+# Subtest: entries normalize: ids default, disabled sit out, bad rows drop
+ok 37 - entries normalize: ids default, disabled sit out, bad rows drop
+  ---
+  duration_ms: 41.6439
+  ...
+# Subtest: a weightless entry still draws, at weight 1
+ok 38 - a weightless entry still draws, at weight 1
+  ---
+  duration_ms: 2.1
+  ...
+# Subtest: findRosterEntry pins a slot by id
+ok 39 - findRosterEntry pins a slot by id
+  ---
+  duration_ms: 2.9523
+  ...
+# Subtest: lastPickFrom takes the latest dated row that ran an agent
+ok 40 - lastPickFrom takes the latest dated row that ran an agent
+  ---
+  duration_ms: 3.3268
+  ...
+# Subtest: rank: other agent < same agent other slot < the same slot again
+ok 41 - rank: other agent < same agent other slot < the same slot again
+  ---
+  duration_ms: 3.0973
+  ...
+# Subtest: hard mode: yesterday's agent is ordered last but never dropped
+ok 42 - hard mode: yesterday's agent is ordered last but never dropped
+  ---
+  duration_ms: 9.5843
+  ...
+# Subtest: hard mode with one agent installed still yields a full order
+ok 43 - hard mode with one agent installed still yields a full order
+  ---
+  duration_ms: 2.7954
+  ...
+# Subtest: soft mode damps yesterday instead of excluding it — repeats stay possible
+ok 44 - soft mode damps yesterday instead of excluding it — repeats stay possible
+  ---
+  duration_ms: 42.5402
+  ...
+# Subtest: soft mode reports the declared weight, not the damped draw weight
+ok 45 - soft mode reports the declared weight, not the damped draw weight
+  ---
+  duration_ms: 4.1428
+  ...
+# Subtest: avoidRepeat false is a pure weighted draw over every slot
+ok 46 - avoidRepeat false is a pure weighted draw over every slot
+  ---
+  duration_ms: 37.9199
+  ...
+# Subtest: weights bend the draw the way they say
+ok 47 - weights bend the draw the way they say
+  ---
+  duration_ms: 23.311
+  ...
+# Subtest: the same rng seed draws the same order — a resumed day keeps its agent
+ok 48 - the same rng seed draws the same order — a resumed day keeps its agent
+  ---
+  duration_ms: 2.3389
+  ...
+# Subtest: pickOrder reads the mode off config and the previous day off the index
+ok 49 - pickOrder reads the mode off config and the previous day off the index
+  ---
+  duration_ms: 2.7669
+  ...
+# Subtest: describeEntry says the slot, the model and whether ultracode is on
+ok 50 - describeEntry says the slot, the model and whether ultracode is on
+  ---
+  duration_ms: 1.576
+  ...
+# Subtest: records Claude stream-json: spans with tool + target + timing, usage, cost, the phase name for a retry
+ok 51 - records Claude stream-json: spans with tool + target + timing, usage, cost, the phase name for a retry
+  ---
+  duration_ms: 36.9536
+  ...
+# Subtest: records Codex --json items and turn usage
+ok 52 - records Codex --json items and turn usage
+  ---
+  duration_ms: 3.7885
+  ...
+# Subtest: records OpenCode --format json: finished tool parts on their own clock, step_finish tokens with reasoning as output, cost only when non-zero
+ok 53 - records OpenCode --format json: finished tool parts on their own clock, step_finish tokens with reasoning as output, cost only when non-zero
+  ---
+  duration_ms: 6.4514
+  ...
+# Subtest: appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape
+ok 54 - appendTrace merges phase calls into trace.json with startMs from the first phase; timelineFromTrace is the WHY shape
+  ---
+  duration_ms: 323.7572
+  ...
+# Subtest: cost: reported by the CLI wins; else an estimate from the dated price table; the timeline says which
+ok 55 - cost: reported by the CLI wins; else an estimate from the dated price table; the timeline says which
+  ---
+  duration_ms: 80.3428
+  ...
+# Subtest: missing usage stays unknown; the audit includes the completed ship call and replaces retries
+ok 56 - missing usage stays unknown; the audit includes the completed ship call and replaces retries
+  ---
+  duration_ms: 111.7022
+  ...
+# Subtest: partial OpenCode costs do not masquerade as a complete reported total
+ok 57 - partial OpenCode costs do not masquerade as a complete reported total
+  ---
+  duration_ms: 3.5641
+  ...
+# Subtest: provider-specific longest price match wins; unsupported token prices are unknown
+ok 58 - provider-specific longest price match wins; unsupported token prices are unknown
+  ---
+  duration_ms: 3.5748
+  ...
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/__testutils__/render.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/basics/hello-world/v1/hello-world.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/_shared/theme.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/uses-repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/index.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/registry.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/lab/flow/v1/flow.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/repo.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/util/base.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v2/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'frozen.manifest.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'src/cards/hello/v1/hello.ts', LF will be replaced by CRLF the next time Git touches it
+# Subtest: seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+ok 59 - seeds are vN / _shared .ts files under src/, never tests, registries or testutils
+  ---
+  duration_ms: 14.4919
+  ...
+# Subtest: the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+ok 60 - the frozen set is seeds + their import closure, minus __testutils__ and excluded packs
+  ---
+  duration_ms: 263.7484
+  ...
+# Subtest: import scan ignores commented-out imports
+ok 61 - import scan ignores commented-out imports
+  ---
+  duration_ms: 1.4024
+  ...
+# Subtest: hashes are CRLF-agnostic
+ok 62 - hashes are CRLF-agnostic
+  ---
+  duration_ms: 8.1857
+  ...
+# Subtest: a mint names its m0saic line and the line each template folder shipped at
+ok 63 - a mint names its m0saic line and the line each template folder shipped at
+  ---
+  duration_ms: 659.9399
+  ...
+# Subtest: checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+ok 64 - checkTree: unchanged passes, a byte edit (even a comment) fails, a deletion fails, new work is unfrozen
+  ---
+  duration_ms: 461.158
+  ...
+# Subtest: judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+ok 65 - judgeStaged: the index is judged against the manifest at HEAD; the manifest is additive-only
+  ---
+  duration_ms: 6820.9425
+  ...
+# Subtest: faces are deterministic per (seed, index) and differ across indexes
+ok 66 - faces are deterministic per (seed, index) and differ across indexes
+  ---
+  duration_ms: 22.608
+  ...
+# Subtest: 33 faces are 33 distinct, well-formed SVG documents
+ok 67 - 33 faces are 33 distinct, well-formed SVG documents
+  ---
+  duration_ms: 59.4716
+  ...
+# Subtest: data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+ok 68 - data URIs are URL-encoded plain SVG (no base64, no ;utf8 param — the engine's parser rule)
+  ---
+  duration_ms: 2.0436
+  ...
+1..68
+# tests 68
+# suites 0
+# pass 68
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11381.6972
+
+> one-a-day@0.1.0 test:bundle
+> node --test tools/pack-bundle.test.mjs
+
+TAP version 13
+# Subtest: unsigned bundle extracts as a loadable repo, excludes authoring files, and is reproducible
+ok 1 - unsigned bundle extracts as a loadable repo, excludes authoring files, and is reproducible
+  ---
+  duration_ms: 1060.086
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1621.3028
+
+> one-a-day@0.1.0 test:contract
+> node tools/contract-check.mjs
+
+contract-check: clean — 36 template(s), CJS entry, manifest agrees
+
+> one-a-day@0.1.0 check:deps
+> node tools/check-deps.mjs
+
+check-deps: CURRICULUM.md not present yet — skipping curriculum lint
+check-deps: clean (dependencies, imports, packs, curriculum, notices)
+
+===== exit SIGTERM after 1455533ms (TIMED OUT)

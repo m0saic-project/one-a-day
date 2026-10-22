@@ -27,14 +27,14 @@
     "corrected": null
   },
   "result": {
-    "status": "failed",
-    "reason": "npm run verify exited null (timed out)",
-    "templateId": null
+    "status": "shipped",
+    "reason": null,
+    "templateId": "@one-a-day/gaming/typing-pb-card/v1",
+    "title": "2026-10-21 · Typing PB Card"
   },
   "gate": {
-    "reasons": [
-      "npm run verify exited null (timed out)"
-    ],
-    "at": "2026-10-21T21:09:57.105Z"
+    "reasons": [],
+    "at": "2026-10-22T03:14:05.647Z",
+    "doctorWarnings": 6
   }
 }

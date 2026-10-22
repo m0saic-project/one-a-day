@@ -61,4 +61,12 @@ exports.gamingRegistry = [
         description: "A Warhammer 40,000 BattleScribe roster as one share card: army name, faction, detachment, points pill and unit rows with category badges, model counts and optional enhancement/warlord chips - no art or rules.",
         tags: ["gaming", "2026-10-18", "day-029", "warhammer-40k", "battlescribe", "roster", "army-list", "share-card"],
     },
+    {
+        slug: "typing-pb-card",
+        templateId: "@one-a-day/gaming/typing-pb-card/v1",
+        exportName: "TypingPbCardV1",
+        title: "2026-10-21 · Typing PB Card",
+        description: "A typing-test result card from the Monkeytype result object: the hero wpm with the NEW PB badge and +N delta computed against pb (never typed), raw/acc/consistency tiles, and the per-second chartData.wpm as a full-width bar row.",
+        tags: ["gaming", "2026-10-21", "day-032", "monkeytype", "typing", "wpm", "personal-best", "result-card"],
+    },
 ];

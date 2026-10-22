@@ -1,9 +1,10 @@
 {
-  "$comment": "The daily run. Edited by humans only — the agent never touches pipeline/. Times are wall-clock caps per agent call; a phase is re-called until it marks itself done in journal/<date>/state.json or runs out of calls.",
+  "$comment": "The daily run. Edited by humans only — the agent never touches pipeline/. Times are wall-clock caps per agent call; a phase is re-called until it marks itself done in journal/<date>/state.json or runs out of calls. verifyTimeoutMin caps every `npm run verify` (preflight, gate, npm run submit): the suite renders every template, so it grows by one template a day - on 2026-10-21 it took 21-56 min on the laptop and the old 15/20-min caps failed day 032 at preflight and at three gates, every check green.",
   "agent": "random",
   "branch": "main",
   "remote": "origin",
   "dayTimeoutMin": 270,
+  "verifyTimeoutMin": 90,
   "variantsMax": 3,
   "limits": {
     "$comment": "The account's session limit, as the agent CLI reports it (Claude Code streams the five-hour and seven-day windows on every call; Codex reports nothing, so a Codex day runs as before). A call the limit rejects does not count against the phase: the runner keeps the tree as journal/<date>/limited/tree.patch, waits for the window - never longer than waitMaxMin, which a five-hour window always fits and a seven-day one never does - and calls again, at most waitsPerDay times. waitAt: before a call, a five-hour window at or past this is waited out first, so the call is not cut halfway. sevenDayStopAt: preflight refuses the day when the seven-day window is past this, since a cut day could not wait for it. graceSec is added to every wait (the CLI's clock is not this machine's). Waits do not count against dayTimeoutMin, so the scheduler's own cap (ExecutionTimeLimit in schedule/one-a-day.task.xml) has to cover dayTimeoutMin + waitMaxMin.",

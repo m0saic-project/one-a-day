@@ -36,7 +36,7 @@ export function commitMessage({ day, templateId, title, agent, model, reason }) 
 /**
  * @returns {Promise<{ok:boolean,status:"shipped"|"no-ship"|"failed",templateId:string|null,reasons:string[],sha:string|null}>}
  */
-export async function runGate({ repo, date, dayDir, noPush = false, remote = "origin", branch = "main", env = {}, say = console.log }) {
+export async function runGate({ repo, date, dayDir, noPush = false, remote = "origin", branch = "main", env = {}, verifyTimeoutMin = 90, say = console.log }) {
   const logFile = path.join(dayDir, "logs", "gate.log");
   const reasons = [];
   const fail = (r) => { reasons.push(r); say(`[gate] ✗ ${r}`); };
@@ -102,7 +102,7 @@ export async function runGate({ repo, date, dayDir, noPush = false, remote = "or
   ok(`one new template: ${templateId}`);
 
   // ── 4. verify + freeze + doctor ──
-  let r = await run("npm", ["run", "verify"]);
+  let r = await run("npm", ["run", "verify"], { timeoutMs: verifyTimeoutMin * 60 * 1000 });
   if (r.exitCode !== 0) { fail(`npm run verify exited ${r.exitCode}${r.timedOut ? " (timed out)" : ""}`); return finishFailed(); }
   ok("npm run verify");
   r = await run("node", ["tools/check-freeze.mjs"]);

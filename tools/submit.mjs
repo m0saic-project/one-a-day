@@ -56,8 +56,8 @@ const ENV = { M0SAIC_TELEMETRY: process.env.M0SAIC_TELEMETRY ?? "ghost", M0SAIC_
 const say = (m) => console.log(`[submit] ${m}`);
 const die = (m, code = 1) => { console.error(`[submit] ✗ ${m}`); process.exit(code); };
 const run = (cmd, args, extra = {}) => runProcess({ cmd, args, cwd: ROOT, env: ENV, timeoutMs: 30 * 60 * 1000, ...extra });
-const step = async (label, cmd, args, judge) => {
-  const r = await run(cmd, args);
+const step = async (label, cmd, args, judge, extra) => {
+  const r = await run(cmd, args, extra);
   const verdict = judge ? judge(r) : r.exitCode === 0 ? true : `exit ${r.exitCode}`;
   if (verdict !== true) {
     console.error((r.stdout + r.stderr).trim().split("\n").slice(-30).join("\n"));
@@ -112,7 +112,7 @@ const frozenNow = JSON.parse(fs.readFileSync(path.join(ROOT, "frozen.manifest.js
 const frozenTag = frozenNow.tag ? `${frozenNow.tag} (m0saic ${frozenNow.release})` : frozenNow.release;
 
 // ── 3 + 4. verify, doctor ──
-await step("npm run verify (build, every convention gate, lint, tests, loader contract, dependency policy)", "npm", ["run", "verify"]);
+await step("npm run verify (build, every convention gate, lint, tests, loader contract, dependency policy)", "npm", ["run", "verify"], undefined, { timeoutMs: (CONFIG.verifyTimeoutMin ?? 90) * 60 * 1000 });
 let doctor = null;
 await step("m0saic doctor . --json", "m0saic", ["doctor", ".", "--json"], (r) => {
   try { doctor = JSON.parse(r.stdout); } catch { return `unreadable report (exit ${r.exitCode})`; }

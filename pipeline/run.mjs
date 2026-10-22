@@ -169,8 +169,8 @@ async function resolveAgent() {
 /* ── preflight ── */
 async function preflight(adapter) {
   const problems = [];
-  const check = async (label, cmd, args, test) => {
-    const r = await runProcess({ cmd, args, cwd: REPO, env: CHILD_ENV, timeoutMs: 15 * 60 * 1000, logFile: path.join(DAY_DIR, "logs", "preflight.log") });
+  const check = async (label, cmd, args, test, timeoutMin = 15) => {
+    const r = await runProcess({ cmd, args, cwd: REPO, env: CHILD_ENV, timeoutMs: timeoutMin * 60 * 1000, logFile: path.join(DAY_DIR, "logs", "preflight.log") });
     const verdict = test ? test(r) : r.exitCode === 0;
     say(`[preflight] ${verdict === true ? "✓" : "✗"} ${label}${verdict === true ? "" : ` — ${typeof verdict === "string" ? verdict : `exit ${r.exitCode}`}`}`);
     if (verdict !== true) problems.push(label);
@@ -207,7 +207,7 @@ async function preflight(adapter) {
       if (spent) problems.push("seven-day session limit");
     } else if (h) say(`[preflight] · session headroom: the CLI reported no window${h.exitCode !== 0 ? ` (probe exit ${h.exitCode})` : ""}`);
   }
-  await check("npm run verify (untouched tree)", "npm", ["run", "verify"]);
+  await check("npm run verify (untouched tree)", "npm", ["run", "verify"], undefined, CONFIG.verifyTimeoutMin ?? 90);
   return problems;
 }
 
@@ -437,7 +437,7 @@ function restoreRejected() {
   const st = readState(DAY_DIR);
   if (st.decision === undefined) patchState(DAY_DIR, { decision: "no-ship", noShipReason: st.noShipReason ?? "no critique decision recorded" });
   say(`[gate] decision=${readState(DAY_DIR).decision}`);
-  const result = await runGate({ repo: REPO, date: DATE, dayDir: DAY_DIR, noPush: NO_PUSH, remote: CONFIG.remote, branch: CONFIG.branch, env: CHILD_ENV, say });
+  const result = await runGate({ repo: REPO, date: DATE, dayDir: DAY_DIR, noPush: NO_PUSH, remote: CONFIG.remote, branch: CONFIG.branch, env: CHILD_ENV, verifyTimeoutMin: CONFIG.verifyTimeoutMin ?? 90, say });
   say(`=== ${result.status.toUpperCase()}${result.templateId ? ` ${result.templateId}` : ""}${result.sha ? ` @ ${result.sha.slice(0, 7)}` : ""} — ${((Date.now() - started) / 60000).toFixed(1)} min ===`);
   process.exit(result.ok ? 0 : 1);
 })().catch((e) => { say(`✗ runner crashed: ${e.stack ?? e}`); process.exit(2); });

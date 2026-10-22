@@ -1,0 +1,34 @@
+{
+  "scout": "done",
+  "plan": "done",
+  "pack": "sports",
+  "slug": "frc-event-recap",
+  "title": "FRC Event Recap",
+  "useCase": "FRC event recap cards from The Blue Alliance team-event fields: team number, event, week, qual rank, W-L-T record, alliance selection, playoff finish, awards and district points - one deterministic card per event for the recap posts team media students already write",
+  "who": "FIRST Robotics Competition team members (media/outreach students) and mentors, on Chief Delphi and team social accounts, with The Blue Alliance as their shared record",
+  "sources": [
+    "https://www.chiefdelphi.com/t/release-frc-rewind-a-visual-season-recap-for-every-frc-team/522858",
+    "https://www.thebluealliance.com/team/9128/2026",
+    "https://www.chiefdelphi.com/t/frc-team-1710-2026-build-thread-open-alliance/507939?page=4"
+  ],
+  "tags": [
+    "frc",
+    "robotics",
+    "recap",
+    "blue-alliance",
+    "event",
+    "card"
+  ],
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

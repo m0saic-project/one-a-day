@@ -103,4 +103,13 @@ export const sportsRegistry: StarterRegistryEntry[] = [
       "A race-day split card from the workout summary: finish time and division rank as the header, eight run-and-station pairs as a tape whose length is the split, and roxzone, run total and best lap as entered.",
     tags: ["sports","2026-10-19","day-030","hyrox","race","splits","stations","recap","card"],
   },
+  {
+    slug: "frc-event-recap",
+    templateId: "@one-a-day/sports/frc-event-recap/v1",
+    exportName: "FrcEventRecapV1",
+    title: "2026-10-22 · FRC Event Recap",
+    description:
+      "An FRC event recap card from The Blue Alliance team-event fields: team number, event and week, qual rank of N teams, the W-L-T record, alliance-selection and playoff chips, up to three award lines, and district points in the footer.",
+    tags: ["sports","2026-10-22","day-033","frc","robotics","recap","blue-alliance","event","card"],
+  },
 ];

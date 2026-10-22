@@ -12,3 +12,4 @@ export * from "./golf-round-scorecard/v1/golf-round-scorecard";
 export * from "./climbing-send-pyramid/v1/climbing-send-pyramid";
 export * from "./erg-pb-card/v1/erg-pb-card";
 export * from "./hyrox-split-card/v1/hyrox-split-card";
+export * from "./frc-event-recap/v1/frc-event-recap";

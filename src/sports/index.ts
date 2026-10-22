@@ -11,6 +11,7 @@ import { GolfRoundScorecardV1 } from "./golf-round-scorecard/v1/golf-round-score
 import { ClimbingSendPyramidV1 } from "./climbing-send-pyramid/v1/climbing-send-pyramid";
 import { ErgPbCardV1 } from "./erg-pb-card/v1/erg-pb-card";
 import { HyroxSplitCardV1 } from "./hyrox-split-card/v1/hyrox-split-card";
+import { FrcEventRecapV1 } from "./frc-event-recap/v1/frc-event-recap";
 
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
@@ -43,6 +44,7 @@ export const sportsTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
   ClimbingSendPyramidV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   ErgPbCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   HyroxSplitCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
+  FrcEventRecapV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
 ];
 
 // `export *` ONLY — see the note in src/index.ts.
@@ -57,3 +59,4 @@ export * from "./golf-round-scorecard/v1/golf-round-scorecard";
 export * from "./climbing-send-pyramid/v1/climbing-send-pyramid";
 export * from "./erg-pb-card/v1/erg-pb-card";
 export * from "./hyrox-split-card/v1/hyrox-split-card";
+export * from "./frc-event-recap/v1/frc-event-recap";

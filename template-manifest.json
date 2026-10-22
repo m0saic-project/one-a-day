@@ -589,6 +589,27 @@
       }
     },
     {
+      "slug": "frc-event-recap",
+      "templateKey": "@one-a-day/sports/frc-event-recap/v1",
+      "title": "2026-10-22 · FRC Event Recap",
+      "description": "An FRC event recap card from The Blue Alliance team-event fields: team number, event and week, qual rank of N teams, the W-L-T record, alliance-selection and playoff chips, up to three award lines, and district points in the footer.",
+      "tags": [
+        "sports",
+        "2026-10-22",
+        "day-033",
+        "frc",
+        "robotics",
+        "recap",
+        "blue-alliance",
+        "event",
+        "card"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__frc-event-recap__v1/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

@@ -913,5 +913,33 @@
       "https://api.monkeytype.com/docs",
       "https://github.com/conner-mcnicholas/MonkeyTypeLeaderboard"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "day": 33,
+    "agent": "unknown",
+    "model": "kimi-k3",
+    "rosterId": null,
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/frc-event-recap/v1",
+    "title": "2026-10-22 · FRC Event Recap",
+    "pack": "sports",
+    "useCase": "FRC event recap cards from The Blue Alliance team-event fields: team number, event, week, qual rank, W-L-T record, alliance selection, playoff finish, awards and district points - one deterministic card per event for the recap posts team media students already write",
+    "tags": [
+      "sports",
+      "2026-10-22",
+      "day-033",
+      "frc",
+      "robotics",
+      "recap",
+      "blue-alliance",
+      "event",
+      "card"
+    ],
+    "sources": [
+      "https://www.chiefdelphi.com/t/release-frc-rewind-a-visual-season-recap-for-every-frc-team/522858",
+      "https://www.thebluealliance.com/team/9128/2026",
+      "https://www.chiefdelphi.com/t/frc-team-1710-2026-build-thread-open-alliance/507939?page=4"
+    ]
   }
 ]

@@ -1,0 +1,46 @@
+{
+  "phases": {
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 276240,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": null,
+      "timedOut": true,
+      "ms": 4147452,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 477515,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": null,
+      "timedOut": true,
+      "ms": 3011370,
+      "done": true
+    }
+  },
+  "model": {
+    "selfDeclared": "kimi-k3"
+  },
+  "result": {
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/frc-event-recap/v1",
+    "title": "2026-10-22 · FRC Event Recap",
+    "reason": null
+  },
+  "gate": {
+    "reasons": [],
+    "doctorWarnings": 6,
+    "at": "2026-10-22T15:46:01.134Z"
+  }
+}

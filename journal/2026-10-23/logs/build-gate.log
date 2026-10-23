@@ -1,0 +1,26 @@
+﻿
+> one-a-day@0.1.0 build
+> node tools/check-freeze.mjs && tsc -p tsconfig.build.json && node tools/copy-assets.mjs && node dist/gen-template-manifest.js && node tools/gen-gallery.mjs && node tools/check-registry.mjs && node tools/check-layout.mjs && node tools/check-why.mjs
+
+[check-freeze] Γ£ô freeze (2026-10-22 (m0saic 0.4.0)): 43 frozen files unchanged, 1 not yet frozen (new work).
+copy-assets: mirrored 1 asset file(s) from src -> dist
+[gen-template-manifest] wrote template-manifest.json (38 templates, 11 packs, 37 with preview assets)
+[gen-gallery] wrote TEMPLATES.md (36 daily template(s) in 2 month(s), 2 other).
+[check-registry] Γ£ô 38 templates ΓÇö definition-time conventions hold.
+node.exe :   ΓÜá @one-a-day/dev/og-card/v1: latticeSmooth: hinted canvas 1200├ù630 declared physical (lattice.canvas) 
+ΓÇö a rough axis is not reported; the counts it explains are charged to it
+At C:\Program Files\nodejs\npm.ps1:29 char:3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  ΓÜá @one-a-da...e charged to it:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[check-registry] ΓÜá 1 render-time warning(s) (record posture ΓÇö fix when you touch the template):
+  ΓÜá @one-a-day/social/episode-audiogram/v1 ΓÇö costBudget: overlayDepth
+      overlayDepth 59 exceeds the budget of 20 ΓÇö the engine drops inline masks past ~25 overlay layers; nest a child 
+document instead.
+[check-registry] Γ£ô layout fingerprints: 37 unchanged, 1 missing, 0 changed.
+[check-registry] Γ£ô 38 templates rendered at their defaults ΓÇö render-time conventions hold (0 skipped: inputs required).
+[check-layout] Γ£ô 37 template(s) keep their layout contract at 7 canvases (0 skipped: inputs required; front door exempt).
+  ΓÜá @one-a-day/sports/disc-bag-matrix/v1 ΓÇö run: journal/2026-10-23/run.json is missing - agent / model could not be cross-checked
+[check-why] Γ£ô 36 template(s) explain why they exist (1 warning(s); front door exempt).

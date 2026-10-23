@@ -610,6 +610,26 @@
       }
     },
     {
+      "slug": "disc-bag-matrix",
+      "templateKey": "@one-a-day/sports/disc-bag-matrix/v1",
+      "title": "2026-10-23 · Disc Bag Matrix",
+      "description": "A disc golf bag matrix from the four flight numbers every disc carries: each disc slots itself into the speed x stability grid, chips stack name + numbers in their slot, tinted empty slots keep the holes in the bag readable, and the footer counts the slots filled.",
+      "tags": [
+        "sports",
+        "2026-10-23",
+        "day-034",
+        "disc-golf",
+        "bag-chart",
+        "flight-numbers",
+        "stability-matrix",
+        "share-card"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__disc-bag-matrix__v1/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

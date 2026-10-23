@@ -101,4 +101,12 @@ exports.sportsRegistry = [
         description: "An FRC event recap card from The Blue Alliance team-event fields: team number, event and week, qual rank of N teams, the W-L-T record, alliance-selection and playoff chips, up to three award lines, and district points in the footer.",
         tags: ["sports", "2026-10-22", "day-033", "frc", "robotics", "recap", "blue-alliance", "event", "card"],
     },
+    {
+        slug: "disc-bag-matrix",
+        templateId: "@one-a-day/sports/disc-bag-matrix/v1",
+        exportName: "DiscBagMatrixV1",
+        title: "2026-10-23 · Disc Bag Matrix",
+        description: "A disc golf bag matrix from the four flight numbers every disc carries: each disc slots itself into the speed x stability grid, chips stack name + numbers in their slot, tinted empty slots keep the holes in the bag readable, and the footer counts the slots filled.",
+        tags: ["sports", "2026-10-23", "day-034", "disc-golf", "bag-chart", "flight-numbers", "stability-matrix", "share-card"],
+    },
 ];

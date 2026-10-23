@@ -12,6 +12,7 @@ import { ClimbingSendPyramidV1 } from "./climbing-send-pyramid/v1/climbing-send-
 import { ErgPbCardV1 } from "./erg-pb-card/v1/erg-pb-card";
 import { HyroxSplitCardV1 } from "./hyrox-split-card/v1/hyrox-split-card";
 import { FrcEventRecapV1 } from "./frc-event-recap/v1/frc-event-recap";
+import { DiscBagMatrixV1 } from "./disc-bag-matrix/v1/disc-bag-matrix";
 
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
@@ -45,6 +46,7 @@ export const sportsTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
   ErgPbCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   HyroxSplitCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   FrcEventRecapV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
+  DiscBagMatrixV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
 ];
 
 // `export *` ONLY — see the note in src/index.ts.
@@ -60,3 +62,4 @@ export * from "./climbing-send-pyramid/v1/climbing-send-pyramid";
 export * from "./erg-pb-card/v1/erg-pb-card";
 export * from "./hyrox-split-card/v1/hyrox-split-card";
 export * from "./frc-event-recap/v1/frc-event-recap";
+export * from "./disc-bag-matrix/v1/disc-bag-matrix";

@@ -941,5 +941,35 @@
       "https://www.thebluealliance.com/team/9128/2026",
       "https://www.chiefdelphi.com/t/frc-team-1710-2026-build-thread-open-alliance/507939?page=4"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "day": 34,
+    "agent": "opencode",
+    "model": "mimo-v2.6-pro",
+    "rosterId": "go-mimo-v2.6-pro",
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/disc-bag-matrix/v1",
+    "title": "2026-10-23 · Disc Bag Matrix",
+    "pack": "sports",
+    "useCase": "Disc golf bag charts: the speed x stability matrix of a player's discs from the four flight numbers (speed/glide/turn/fade) every disc already carries - the chart behind every 'rate my bag' post, rendered deterministically instead of screenshotted from a bag site",
+    "tags": [
+      "sports",
+      "2026-10-23",
+      "day-034",
+      "disc-golf",
+      "bag-chart",
+      "flight-numbers",
+      "stability-matrix",
+      "share-card"
+    ],
+    "sources": [
+      "https://discfield.com/bag-check",
+      "https://tadisc.com/",
+      "https://www.reddit.com/r/discgolf/comments/1s9o3c7/bag_check/",
+      "https://www.reddit.com/r/mydiscbag/comments/12ratod/how_does_my_bag_look_any_holes/",
+      "https://www.reddit.com/r/discgolf/comments/kunimh/i_created_a_spreadsheet_for_my_inventory/",
+      "https://www.reddit.com/r/discgolf/comments/18g11z9/spreadsheet_of_disc_flight_numbers/"
+    ]
   }
 ]

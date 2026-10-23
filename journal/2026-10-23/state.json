@@ -1,0 +1,36 @@
+{
+  "useCase": "Disc golf bag charts: the speed x stability matrix of a player's discs from the four flight numbers (speed/glide/turn/fade) every disc already carries - the chart behind every 'rate my bag' post, rendered deterministically instead of screenshotted from a bag site",
+  "who": "Disc golfers on r/discgolf and r/mydiscbag, plus UDisc leagues and disc shop socials, who post 'rate my bag' / 'bag check' chart screenshots and hand-built spreadsheet plots",
+  "sources": [
+    "https://discfield.com/bag-check",
+    "https://tadisc.com/",
+    "https://www.reddit.com/r/discgolf/comments/1s9o3c7/bag_check/",
+    "https://www.reddit.com/r/mydiscbag/comments/12ratod/how_does_my_bag_look_any_holes/",
+    "https://www.reddit.com/r/discgolf/comments/kunimh/i_created_a_spreadsheet_for_my_inventory/",
+    "https://www.reddit.com/r/discgolf/comments/18g11z9/spreadsheet_of_disc_flight_numbers/"
+  ],
+  "tags": [
+    "disc-golf",
+    "bag-chart",
+    "flight-numbers",
+    "stability-matrix",
+    "share-card"
+  ],
+  "scout": "done",
+  "pack": "sports",
+  "slug": "disc-bag-matrix",
+  "title": "Disc Golf Bag Matrix",
+  "plan": "done",
+  "scaffolded": true,
+  "variants": [
+    "a",
+    "b",
+    "c"
+  ],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
+}

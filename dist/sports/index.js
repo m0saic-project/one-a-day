@@ -27,6 +27,7 @@ const climbing_send_pyramid_1 = require("./climbing-send-pyramid/v1/climbing-sen
 const erg_pb_card_1 = require("./erg-pb-card/v1/erg-pb-card");
 const hyrox_split_card_1 = require("./hyrox-split-card/v1/hyrox-split-card");
 const frc_event_recap_1 = require("./frc-event-recap/v1/frc-event-recap");
+const disc_bag_matrix_1 = require("./disc-bag-matrix/v1/disc-bag-matrix");
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
  * the flag goes on the copy this pack hands to hosts (`templates`), which is
@@ -47,6 +48,7 @@ exports.sportsTemplates = [
     erg_pb_card_1.ErgPbCardV1,
     hyrox_split_card_1.HyroxSplitCardV1,
     frc_event_recap_1.FrcEventRecapV1,
+    disc_bag_matrix_1.DiscBagMatrixV1,
 ];
 // `export *` ONLY — see the note in src/index.ts.
 __exportStar(require("./powerlifting-meet-recap/v1/powerlifting-meet-recap"), exports);
@@ -61,3 +63,4 @@ __exportStar(require("./climbing-send-pyramid/v1/climbing-send-pyramid"), export
 __exportStar(require("./erg-pb-card/v1/erg-pb-card"), exports);
 __exportStar(require("./hyrox-split-card/v1/hyrox-split-card"), exports);
 __exportStar(require("./frc-event-recap/v1/frc-event-recap"), exports);
+__exportStar(require("./disc-bag-matrix/v1/disc-bag-matrix"), exports);

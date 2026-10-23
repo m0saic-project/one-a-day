@@ -1,0 +1,6 @@
+﻿ok  landscape 1920x1080 ΓåÆ renders\landscape.png (exit 0)
+ok  portrait 1080x1920 ΓåÆ renders\portrait.png (exit 0)
+ok  square 1080x1080 ΓåÆ renders\square.png (exit 0)
+ok  tutorial 1280x720 ΓåÆ renders\tutorial.mp4 (exit 0)
+
+render-variant: ok ΓÇö 3 render(s), 9 still(s) ΓåÆ journal\2026-10-23\variants\a/report.json

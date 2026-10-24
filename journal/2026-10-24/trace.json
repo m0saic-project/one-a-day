@@ -1,0 +1,67 @@
+{
+  "startedAt": "2026-10-24T13:13:18.679Z",
+  "phases": [
+    {
+      "phase": "scout",
+      "call": 1,
+      "name": "scout",
+      "startedAt": "2026-10-24T13:13:18.679Z",
+      "durMs": 2168,
+      "exitCode": 1,
+      "timedOut": false,
+      "status": "error",
+      "calls": 0,
+      "toolErrors": 0,
+      "turns": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      },
+      "tokensRecorded": false,
+      "cost": null,
+      "tools": {},
+      "spans": [],
+      "model": "opencode-go/deepseek-v4-pro",
+      "startMs": 0
+    },
+    {
+      "phase": "scout",
+      "call": 2,
+      "name": "scout (2)",
+      "startedAt": "2026-10-24T13:13:20.864Z",
+      "durMs": 1688,
+      "exitCode": 1,
+      "timedOut": false,
+      "status": "error",
+      "calls": 0,
+      "toolErrors": 0,
+      "turns": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0
+      },
+      "tokensRecorded": false,
+      "cost": null,
+      "tools": {},
+      "spans": [],
+      "model": "opencode-go/deepseek-v4-pro",
+      "startMs": 2185
+    }
+  ],
+  "totals": {
+    "phases": 2,
+    "calls": 0,
+    "tokens": 0,
+    "costUsd": null,
+    "costBasis": null,
+    "missingTokenPhases": 2,
+    "missingCostPhases": 2,
+    "wallMs": 3873
+  }
+}

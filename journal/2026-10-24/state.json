@@ -1,4 +1,32 @@
 {
-  "decision": "no-ship",
-  "noShipReason": "scout phase did not complete"
+  "useCase": "Orienteering race split-analysis card: control-by-control split times, time lost per leg, and finish stats from one IOF XML / WinSplits result row - the shareable version of the graphical split analysis every orienteer reads after a race",
+  "who": "Orienteers who post and analyze their control split times after every race, on Attackpoint and club/WinSplits result pages",
+  "sources": [
+    "https://attackpoint.org/",
+    "http://obasen.orientering.se/winsplits/online/en/help_table.asp?databaseId=101857&categoryId=0",
+    "https://orienteering.sport/iof/it/data-standard-3-0",
+    "https://news.worldofo.com/2026/07/11/woc-2026-knock-out-sprint-maps-and-results",
+    "https://orienteeringusa.org/2026/04/junior-nationals-and-flying-pig-xxviii-event-recap/"
+  ],
+  "tags": [
+    "orienteering",
+    "splits",
+    "time-loss",
+    "iof-xml",
+    "attackpoint",
+    "race-analysis"
+  ],
+  "scout": "done",
+  "scaffolded": true,
+  "pack": "sports",
+  "slug": "orienteering-split-analysis",
+  "title": "Orienteering Split Analysis",
+  "plan": "done",
+  "variants": ["a", "b"],
+  "inPlace": "a",
+  "build": "done",
+  "decision": "ship",
+  "pick": "a",
+  "critique": "done",
+  "ship": "done"
 }

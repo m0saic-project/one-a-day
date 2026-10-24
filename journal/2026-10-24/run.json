@@ -10,7 +10,7 @@
       "agent": "opencode",
       "model": "opencode-go/deepseek-v4-pro",
       "weight": 2,
-      "why": "drawn"
+      "why": "resumed — the slot this day started on"
     },
     "ultracode": false,
     "effort": null,
@@ -23,25 +23,55 @@
     "m0saic": null
   },
   "model": {
-    "selfDeclared": null,
+    "selfDeclared": "deepseek-v4-pro",
     "corrected": null
   },
   "phases": {
     "scout": {
-      "calls": 2,
-      "lastExitCode": 1,
+      "calls": 3,
+      "lastExitCode": 0,
       "timedOut": false,
-      "ms": 1725,
-      "done": false
+      "ms": 132994,
+      "done": true
+    },
+    "plan": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 133087,
+      "done": true
+    },
+    "build": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 2426157,
+      "done": true
+    },
+    "critique": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 572629,
+      "done": true
+    },
+    "ship": {
+      "calls": 1,
+      "lastExitCode": 0,
+      "timedOut": false,
+      "ms": 634338,
+      "done": true
     }
   },
   "result": {
-    "status": "no-ship",
-    "templateId": null,
-    "reason": "scout phase did not complete"
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/orienteering-split-analysis/v1",
+    "reason": null,
+    "title": "2026-10-24 · Orienteering Split Analysis"
   },
   "gate": {
     "reasons": [],
-    "at": "2026-10-24T13:13:22.716Z"
+    "at": "2026-10-24T16:44:06.084Z",
+    "doctorWarnings": 6
   }
 }

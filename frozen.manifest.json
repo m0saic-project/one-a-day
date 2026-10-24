@@ -1,8 +1,8 @@
 {
   "release": "0.4.0",
-  "tag": "2026-10-23",
-  "commit": "6f2edc709ca83a3942adc453e30fdc5289ecf39d",
-  "mintedAt": "2026-10-23T17:50:11.848Z",
+  "tag": "2026-10-24",
+  "commit": "99fdbf59ba89fcb07324383097f77972d3442956",
+  "mintedAt": "2026-10-24T16:44:05.921Z",
   "note": "Frozen once shipped. A template committed to main never changes again — comments included (byte hashes). A fix is a new vN+1 folder; deprecate the old one and point `deprecated.replacement` at the new id. See AGENTS.md. The daily runner appends to this file after each shipped day; agents never touch it.",
   "hashVersion": 1,
   "excluded": [],
@@ -43,6 +43,7 @@
     "src/sports/golf-round-scorecard/v1": "0.3.2",
     "src/sports/hyrox-split-card/v1": "0.3.2",
     "src/sports/lap-telemetry-card/v1": "0.3.0",
+    "src/sports/orienteering-split-analysis/v1": "0.4.0",
     "src/sports/powerlifting-meet-recap/v1": "0.2.2",
     "src/sports/swim-time-drop-card/v1": "0.3.0"
   },
@@ -89,6 +90,7 @@
     "src/sports/golf-round-scorecard/v1/golf-round-scorecard.ts": "7ddda8d23d5dbdc7730b67ce4a8753c3ab9a3e353d33e614c3baec201eea0876",
     "src/sports/hyrox-split-card/v1/hyrox-split-card.ts": "66fed330a40d51040f3b797940157dbfa4aeaa19c79346cddc88a478dabd2e96",
     "src/sports/lap-telemetry-card/v1/lap-telemetry-card.ts": "4f053150280f4a01527405439ae8cb6a16c7dd57ab6af5360037511596c1febd",
+    "src/sports/orienteering-split-analysis/v1/orienteering-split-analysis.ts": "d6b341e49f10ca93d312c1c2730cc61b4b70f3ef53aec2f22edb3e445d014e44",
     "src/sports/powerlifting-meet-recap/v1/powerlifting-meet-recap.ts": "21ed849d1eb8455011fe7c79060bc3ad53623c4bad81c070d7629a39accd9300",
     "src/sports/swim-time-drop-card/v1/swim-time-drop-card.ts": "72969697ecd6319d6127e4fd8bbdda163166b7d3d1ac8ec358226ecf0969d28b"
   }

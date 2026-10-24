@@ -14,3 +14,4 @@ export * from "./erg-pb-card/v1/erg-pb-card";
 export * from "./hyrox-split-card/v1/hyrox-split-card";
 export * from "./frc-event-recap/v1/frc-event-recap";
 export * from "./disc-bag-matrix/v1/disc-bag-matrix";
+export * from "./orienteering-split-analysis/v1/orienteering-split-analysis";

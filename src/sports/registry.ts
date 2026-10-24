@@ -121,4 +121,13 @@ export const sportsRegistry: StarterRegistryEntry[] = [
       "A disc golf bag matrix from the four flight numbers every disc carries: each disc slots itself into the speed x stability grid, chips stack name + numbers in their slot, tinted empty slots keep the holes in the bag readable, and the footer counts the slots filled.",
     tags: ["sports","2026-10-23","day-034","disc-golf","bag-chart","flight-numbers","stability-matrix","share-card"],
   },
+  {
+    slug: "orienteering-split-analysis",
+    templateId: "@one-a-day/sports/orienteering-split-analysis/v1",
+    exportName: "OrienteeringSplitAnalysisV1",
+    title: "2026-10-24 · Orienteering Split Analysis",
+    description:
+      "An orienteering race split-analysis card from one IOF XML 3.0 result row: control-by-control splits as a tape whose length is the leg, mistake legs pink with their time loss signed, finish time as the hero, and time-without-mistakes, total loss and best leg computed from the entered numbers.",
+    tags: ["sports","2026-10-24","day-035","orienteering","splits","time-loss","iof-xml","attackpoint","race-analysis"],
+  },
 ];

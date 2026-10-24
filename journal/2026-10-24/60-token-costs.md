@@ -4,11 +4,16 @@ Recorded daily agent calls, including retries and the ship call once it finishes
 
 OpenCode Go dollars describe reported usage or an estimated draw against plan allowances, not an additional per-run invoice. Missing usage is unknown, never zero. Estimates use dated rates; subscription fees are not allocated to individual runs.
 
-Observed tokens: 0. Known cost subtotal: unknown.
+Observed tokens: 18941234. Known cost subtotal: $1.14 (reported).
 Calls missing token usage: 2. Calls missing cost: 2.
 
 | Call | Model | Tokens | USD | Pricing date |
 | --- | --- | ---: | --- | --- |
 | scout | opencode-go/deepseek-v4-pro | unknown | unknown | - |
 | scout (2) | opencode-go/deepseek-v4-pro | unknown | unknown | - |
+| scout (3) | opencode-go/deepseek-v4-pro | 593418 | $0.0734 (reported) | - |
+| plan | opencode-go/deepseek-v4-pro | 524097 | $0.0773 (reported) | - |
+| build | opencode-go/deepseek-v4-pro | 14516739 | $0.6042 (reported) | - |
+| critique | opencode-go/deepseek-v4-pro | 1956612 | $0.2378 (reported) | - |
+| ship | opencode-go/deepseek-v4-pro | 1350368 | $0.1429 (reported) | - |
 

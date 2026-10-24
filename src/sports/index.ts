@@ -13,6 +13,7 @@ import { ErgPbCardV1 } from "./erg-pb-card/v1/erg-pb-card";
 import { HyroxSplitCardV1 } from "./hyrox-split-card/v1/hyrox-split-card";
 import { FrcEventRecapV1 } from "./frc-event-recap/v1/frc-event-recap";
 import { DiscBagMatrixV1 } from "./disc-bag-matrix/v1/disc-bag-matrix";
+import { OrienteeringSplitAnalysisV1 } from "./orienteering-split-analysis/v1/orienteering-split-analysis";
 
 /**
  * Deprecation without editing a frozen file: a shipped vN never changes, so
@@ -47,6 +48,7 @@ export const sportsTemplates: MosaicTemplate<MosaicTemplateProps>[] = [
   HyroxSplitCardV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   FrcEventRecapV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
   DiscBagMatrixV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
+  OrienteeringSplitAnalysisV1 as unknown as MosaicTemplate<MosaicTemplateProps>,
 ];
 
 // `export *` ONLY — see the note in src/index.ts.
@@ -63,3 +65,4 @@ export * from "./erg-pb-card/v1/erg-pb-card";
 export * from "./hyrox-split-card/v1/hyrox-split-card";
 export * from "./frc-event-recap/v1/frc-event-recap";
 export * from "./disc-bag-matrix/v1/disc-bag-matrix";
+export * from "./orienteering-split-analysis/v1/orienteering-split-analysis";

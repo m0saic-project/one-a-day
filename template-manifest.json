@@ -630,6 +630,27 @@
       }
     },
     {
+      "slug": "orienteering-split-analysis",
+      "templateKey": "@one-a-day/sports/orienteering-split-analysis/v1",
+      "title": "2026-10-24 · Orienteering Split Analysis",
+      "description": "An orienteering race split-analysis card from one IOF XML 3.0 result row: control-by-control splits as a tape whose length is the leg, mistake legs pink with their time loss signed, finish time as the hero, and time-without-mistakes, total loss and best leg computed from the entered numbers.",
+      "tags": [
+        "sports",
+        "2026-10-24",
+        "day-035",
+        "orienteering",
+        "splits",
+        "time-loss",
+        "iof-xml",
+        "attackpoint",
+        "race-analysis"
+      ],
+      "pack": "sports",
+      "preview": {
+        "image": "assets/templates/@one-a-day__sports__orienteering-split-analysis__v1/preview.png"
+      }
+    },
+    {
       "slug": "qsl-card",
       "templateKey": "@one-a-day/community/qsl-card/v1",
       "title": "2026-10-03 · Ham Radio QSL Card",

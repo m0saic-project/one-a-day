@@ -976,13 +976,30 @@
     "date": "2026-10-24",
     "day": 35,
     "agent": "opencode",
-    "model": null,
+    "model": "deepseek-v4-pro",
     "rosterId": "go-deepseek-v4-pro",
-    "status": "no-ship",
-    "templateId": null,
-    "title": null,
-    "useCase": null,
-    "tags": [],
-    "sources": []
+    "status": "shipped",
+    "templateId": "@one-a-day/sports/orienteering-split-analysis/v1",
+    "title": "2026-10-24 · Orienteering Split Analysis",
+    "pack": "sports",
+    "useCase": "Orienteering race split-analysis card: control-by-control split times, time lost per leg, and finish stats from one IOF XML / WinSplits result row - the shareable version of the graphical split analysis every orienteer reads after a race",
+    "tags": [
+      "sports",
+      "2026-10-24",
+      "day-035",
+      "orienteering",
+      "splits",
+      "time-loss",
+      "iof-xml",
+      "attackpoint",
+      "race-analysis"
+    ],
+    "sources": [
+      "https://attackpoint.org/",
+      "http://obasen.orientering.se/winsplits/online/en/help_table.asp?databaseId=101857&categoryId=0",
+      "https://orienteering.sport/iof/it/data-standard-3-0",
+      "https://news.worldofo.com/2026/07/11/woc-2026-knock-out-sprint-maps-and-results",
+      "https://orienteeringusa.org/2026/04/junior-nationals-and-flying-pig-xxviii-event-recap/"
+    ]
   }
 ]
